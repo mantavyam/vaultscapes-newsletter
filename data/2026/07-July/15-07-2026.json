@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "date": "15-07-2026",
+  "iso_date": "2026-07-15",
+  "subject": "Anthropic funds $10M CAD in Claude credits across 8 Canadian research",
+  "intro": "Two moves today that rhyme: Anthropic funds Canadian researchers with no strings attached, and Prime Intellect ships a modular RL stack so anyone can train agents on 6 GPUs. The pattern? The frontier is being deliberately opened up, not locked down. Meanwhile, a paper drops on AI models that self-improve while \"sleeping.\" We're watching the full stack get rebuilt, from training infra to memory, in real time.",
+  "read_time": "6 min 35 sec",
+  "summary": [
+    {
+      "category": "Top Repo",
+      "headline": "PrismML open-sources a 27B model that fits on a phone at just 3.9 GB",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic commits $10M CAD to fund AI research across Canada",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Developer builds AR glasses interface to control and visualize robot sensor data in 3D",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Repo",
+      "headline": "PrismML open-sources a 27B model that fits on a phone at just 3.9 GB",
+      "likes": 3264,
+      "body": "Bonsai 27B just dropped, and it does something that wasn't possible before: runs a full 27-billion-parameter AI model on your phone. Here's the size problem it solved. A normal 27B model needs 54GB of memory . Even a compressed version sits around 18GB. Way too big for any phone. PrismML squeezed it down by reducing how precisely each number inside the model is stored, trading tiny amounts of accuracy for massive size savings. Why does size matter so much? Because phones only give apps a slice of their memory. At 3.9GB, this model actually fits with room to spare. You can now run private, offline AI agents locally. No cloud. No API costs per step. Your files never leave your device. It's fully open-source under Apache 2.0, available on Hugging Face now.",
+      "bullets": [
+        "Ternary variant: 5.9GB -- laptop-ready, keeps 95% of full performance",
+        "1-bit variant: 3.9GB -- phone-ready, keeps 90% of full performance",
+        "Multimodal: reads images and text",
+        "Handles coding, reasoning, tool use, and multi-step agent workflows"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784088149911-304jhq.png",
+      "read_more_url": "https://github.com/PrismML-Eng/Bonsai-demo"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic commits $10M CAD to fund AI research across Canada",
+      "likes": 2185,
+      "body": "Anthropic just dropped $10 million CAD in Claude credits across eight Canadian research institutions. No strings attached. Anthropic confirmed it won't control research directions or findings. So who gets the money? Eight institutions , each receiving $1 million in Claude API credits: There's a startup angle too. Amii, Mila, and Vector are joining the Anthropic for Startups program, meaning hundreds of affiliated startups each get at least $5,000 USD in API credits. If you're building something connected to these institutes, that's free Claude access worth applying for.",
+      "bullets": [
+        "Amii, Mila, and Vector Institute (Canada's three national AI hubs) for safety and reinforcement learning research",
+        "CHEO and CAMH for children's health and mental health AI, including predictive treatment models",
+        "Université Laval to study how AI handles Quebec French and Indigenous languages",
+        "University of Saskatchewan for agriculture, public health, and quantum computing",
+        "University of Toronto to distribute credits through a peer-reviewed process"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784088255940-qbnfqm.png",
+      "read_more_url": "https://www.anthropic.com/news/canadian-ai-research"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Developer builds AR glasses interface to control and visualize robot sensor data in 3D",
+      "likes": 2036,
+      "body": "What if you could see a robot's eyes through your own? That's exactly what this open-source project pulls off. It connects Snap Spectacles AR glasses to a Unitree Go2 robot dog, letting you visualize and control it in real space. Here's the core idea: the robot's LiDAR sensor (a laser that maps the surrounding environment in 3D, like sonar but with light) streams live point clouds directly into your AR view. You see what the robot sees, overlaid on the real world in front of you. What this opens up: The repo is MIT-licensed, built in Python and TypeScript, and runs on a regular MacBook. Clone it, run ./setup.sh, and you're in.",
+      "bullets": [
+        "Send navigation goals by tapping a floor point in AR, no joystick needed",
+        "Watch the robot's planned path appear as a live overlay in your glasses",
+        "Emergency stop the robot with a single gesture",
+        "Works without a physical robot via replay mode for offline dev"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784088168824-wurt6i.png",
+      "read_more_url": "https://github.com/V4C38/spectacles-dimensional-os"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Free 110-page book teaches reinforcement learning from basics to DQN, PPO, and AlphaGo",
+      "stat": {
+        "type": "likes",
+        "value": 1957
+      },
+      "url": "https://github.com/alxndrTL/little-book-rl"
+    },
+    {
+      "rank": 2,
+      "headline": "New open-source tool turns books, podcasts, and videos into callable AI skills",
+      "stat": {
+        "type": "stars",
+        "value": 2899
+      },
+      "url": "https://github.com/kangarooking/cangjie-skill"
+    },
+    {
+      "rank": 3,
+      "headline": "New training method lets LLMs consolidate memories and self-improve while 'sleeping'",
+      "stat": {
+        "type": "likes",
+        "value": 587
+      },
+      "url": "https://arxiv.org/abs/2606.03979"
+    },
+    {
+      "rank": 4,
+      "headline": "Nvidia releases a 1B multilingual embedding model built for RAG across 34 languages",
+      "stat": {
+        "type": "downloads",
+        "value": 20957
+      },
+      "url": "https://huggingface.co/nvidia/Nemotron-3-Embed-1B-BF16"
+    },
+    {
+      "rank": 5,
+      "headline": "GLM 5.2 Mixture of Experts model runs fully on CPU with no GPU needed",
+      "stat": {
+        "type": "likes",
+        "value": 1828
+      },
+      "url": "https://huggingface.co/jlnsrk/GLM-5.2-colibri-int4"
+    }
+  ]
+}

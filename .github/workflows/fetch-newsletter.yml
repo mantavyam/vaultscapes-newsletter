@@ -1,0 +1,59 @@
+name: Fetch AlphaSignal Newsletter
+
+on:
+  schedule:
+    # AlphaSignal sends ~14:30 UTC on weekdays. Two windows; the second is a
+    # retry that no-ops (via state/processed.json) if the first succeeded.
+    - cron: '0 15 * * 1-5'
+    - cron: '0 18 * * 1-5'
+  workflow_dispatch: {}   # manual run for testing / backfill
+
+concurrency:
+  group: newsletter-fetch
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests (parser regression gate)
+        run: python -m pytest tests/ -q
+
+      - name: Fetch, clean, parse, publish
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          # Raw URLs in index.json are derived from the repo the action runs
+          # in (GITHUB_REPOSITORY) unless FEED_GITHUB_REPO is set explicitly.
+          FEED_GITHUB_BRANCH: ${{ github.ref_name }}
+        run: python scripts/run_pipeline.py
+
+      - name: Commit & push feed data
+        # always(): on format drift the pipeline exits non-zero (job stays red,
+        # GitHub notifies the owner) but the quarantined HTML evidence still
+        # gets committed for post-mortem.
+        if: always()
+        run: |
+          git config user.name "newsletter-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ state/
+          [ -d quarantine ] && git add quarantine/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "feed: $(date -u +%d-%m-%Y) update"
+            git push
+          fi

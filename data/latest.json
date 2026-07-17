@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "date": "16-07-2026",
+  "iso_date": "2026-07-16",
+  "subject": "Thinking Machines Inkling 🎙️, OpenAI GPT-Red Security 🛡️, PrismML 27B",
+  "intro": "Open weights are having a moment. Mira Murati's crew drops Inkling with native audio, vision and text in one clean architecture. No glue code. Meanwhile, Ant's Ring-2.5-1T-Zero trains a trillion-parameter reasoner with zero human annotations and it just... figures things out. The pattern is clear: the open ecosystem is closing the gap fast. And OpenAI quietly ships an AI that attacks its own models 6x more effectively than humans. Security as a feature, not an afterthought. We're here for it.",
+  "read_time": "6 min 47 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Thinking Machines releases Inkling, an open-weight model that reasons across text , audio, and images",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI's automated red-teaming tool cuts prompt injection failures 6x",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "PrismML ships open-source 27B model that fits on a phone at 3.9 GB",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Thinking Machines releases Inkling, an open-weight model that reasons across text, audio, and images",
+      "likes": 10384,
+      "body": "Thinking Machines Lab just dropped Inkling , their first open-weights model, and it handles text, images, and audio natively in one architecture. No duct-taped components. One model, all three inputs. Here is what makes it interesting to work with: You can fine-tune it today on Tinker, grab the weights on Hugging Face, or just play in the Inkling Playground. An Inkling-Small version is also previewed for lighter workloads.",
+      "bullets": [
+        "975B total parameters, 41B active per task, so it is big but not slow",
+        "1 million token context window , trained on 45 trillion tokens across text, image, audio, and video",
+        "Top open-weights audio scores on VoiceBench, MMAU, and AudioMC, it can transcribe, follow spoken instructions, and reason over recordings",
+        "Controllable thinking effort , dial reasoning up or down to trade speed for accuracy, reaching the same score with a fraction of the tokens",
+        "Apache 2.0 license, download it, modify it, run it on-premises"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784174680659-ulxc2o.png",
+      "read_more_url": "https://thinkingmachines.ai/news/introducing-inkling/"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "OpenAI's automated red-teaming tool cuts prompt injection failures 6x",
+      "likes": 7673,
+      "body": "OpenAI just shipped GPT-Red , an AI that attacks its own models to find security holes before you ever use them. Here's the core idea. A prompt injection is when someone sneaks malicious instructions into an AI's input to hijack its behavior. Think of it like tricking a self-driving car by painting fake road signs. In one real test, GPT-Red manipulated an autonomous vending machine agent into lowering prices, ordering discounted inventory, and canceling another customer's order. The clever part is how GPT-Red learns. It uses self-play, where GPT-Red is rewarded for successfully breaking defender models, while those defenders train to resist. This forces GPT-Red to constantly evolve and discover more sophisticated attacks. The results are hard to ignore: This means every model you build on top of OpenAI's stack gets these defenses baked in automatically.",
+      "bullets": [
+        "GPT-Red found success on 84% of attack scenarios vs. 13% for human testers",
+        "GPT-5.6 Sol now has 6x fewer failures on the hardest prompt injection benchmark",
+        "GPT-Red independently discovered a novel \"fake chain of thought\" attack class before human researchers"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784174735450-eooews.png",
+      "read_more_url": "https://openai.com/index/unlocking-self-improvement-gpt-red/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "PrismML ships open-source 27B model that fits on a phone at 3.9 GB",
+      "likes": 7394,
+      "body": "A 27B model normally needs 54GB of memory in standard precision. Even a compressed 4-bit version sits around 18GB, too big for a phone or most laptops. So 27B-class AI has always lived in the cloud. Until now. PrismML just released Bonsai 27B , the first 27B model that fits on a phone. It comes in two flavors: It handles images too, so you can feed it screenshots or documents directly on-device. The big unlock: multi-step AI agents that reason, call tools, and loop through tasks can now run fully local. Your private files never leave the device. No cloud round trips. No per-token costs piling up. Both variants are open-source under Apache 2.0 , available now on Hugging Face with llama.cpp and MLX support.",
+      "bullets": [
+        "Ternary (5.9GB) : laptop-ready, retains 95% of full-precision performance across 15 benchmarks including math, coding, and tool use",
+        "1-bit (3.9GB) : phone-ready, retains 90% of full-precision, runs at ~10.8 tok/s on iPhone with 672 tokens per 1% battery"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784174779962-sts7ge.png",
+      "read_more_url": "https://www.theinformation.com/articles/khosla-backed-startup-claims-breakthrough-largest-ever-ai-model-iphone"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenAI Codex completes a 9-hour coding task after hitting the usage limit",
+      "stat": {
+        "type": "likes",
+        "value": 3403
+      },
+      "url": "https://github.com/Da7-Tech/mind"
+    },
+    {
+      "rank": 2,
+      "headline": "OpenAI releases CLIP, a model that matches images to text with zero labeled training data",
+      "stat": {
+        "type": "stars",
+        "value": 33995
+      },
+      "url": "https://github.com/openai/CLIP"
+    },
+    {
+      "rank": 3,
+      "headline": "Ant Ling trains a 1-trillion parameter reasoning model with zero human annotations",
+      "stat": {
+        "type": "likes",
+        "value": 492
+      },
+      "url": "https://arxiv.org/abs/2607.12395"
+    },
+    {
+      "rank": 4,
+      "headline": "Nvidia releases quantized 1B embedding model supporting 34 languages for RAG",
+      "stat": {
+        "type": "downloads",
+        "value": 2689
+      },
+      "url": "https://huggingface.co/nvidia/Nemotron-3-Embed-1B-NVFP4"
+    },
+    {
+      "rank": 5,
+      "headline": "HyperFrames open-source tool generates videos from HTML, CSS, and JS",
+      "stat": {
+        "type": "likes",
+        "value": 1983
+      },
+      "url": "https://github.com/heygen-com/hyperframes"
+    }
+  ]
+}

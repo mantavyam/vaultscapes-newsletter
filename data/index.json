@@ -1,0 +1,45 @@
+{
+  "updated_at": "2026-07-17T05:45:52Z",
+  "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/latest.json",
+  "issues": [
+    {
+      "date": "16-07-2026",
+      "iso_date": "2026-07-16",
+      "subject": "Thinking Machines Inkling 🎙️, OpenAI GPT-Red Security 🛡️, PrismML 27B",
+      "path": "data/2026/07-July/16-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/16-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/html/16-07-2026.html",
+      "headlines": [
+        "Thinking Machines releases Inkling, an open-weight model that reasons across text, audio, and images",
+        "OpenAI's automated red-teaming tool cuts prompt injection failures 6x",
+        "PrismML ships open-source 27B model that fits on a phone at 3.9 GB"
+      ]
+    },
+    {
+      "date": "15-07-2026",
+      "iso_date": "2026-07-15",
+      "subject": "Anthropic funds $10M CAD in Claude credits across 8 Canadian research",
+      "path": "data/2026/07-July/15-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/15-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/html/15-07-2026.html",
+      "headlines": [
+        "PrismML open-sources a 27B model that fits on a phone at just 3.9 GB",
+        "Anthropic commits $10M CAD to fund AI research across Canada",
+        "Developer builds AR glasses interface to control and visualize robot sensor data in 3D"
+      ]
+    },
+    {
+      "date": "14-07-2026",
+      "iso_date": "2026-07-14",
+      "subject": "Anthropic Values Study 📊, Blender MCP + GPT-4o 3D Render 🎨, Tsinghua 8",
+      "path": "data/2026/07-July/14-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/14-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/html/14-07-2026.html",
+      "headlines": [
+        "GPT-4o in Cursor lets a Blender beginner render a 3D scene without touching the app",
+        "Anthropic maps how Claude's values shift across models and languages in 300K conversations",
+        "Open-source tool runs a 744B model on a 25GB machine with no GPU"
+      ]
+    }
+  ]
+}

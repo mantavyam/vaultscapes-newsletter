@@ -1,0 +1,10 @@
+# credentials — never commit
+.env
+
+# local working files (venv, downloaded emails, extracted html)
+work/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/

@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "date": "14-07-2026",
+  "iso_date": "2026-07-14",
+  "subject": "Anthropic Values Study 📊, Blender MCP + GPT-4o 3D Render 🎨, Tsinghua 8",
+  "intro": "Today is an Anthropic day. They shipped multiplayer Artifacts and published a 300K-conversation study showing Claude has a different personality depending on which model you pick or language you type in. Opus pushes back. Sonnet agrees. Russian gets rigor. Hindi gets warmth. They admit they don't know why. Meanwhile, Tsinghua showed a smarter task graph beats raw scale: an 8B model outperforming GPT-4 with no extra training. The pattern? Architecture beats size, and behavior is harder to control than we think.",
+  "read_time": "6 min 55 sec",
+  "summary": [
+    {
+      "category": "Top Repo",
+      "headline": "GPT-4o in Cursor lets a Blender beginner render a 3D scene without touching the app",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic maps how Claude's values shift across models and languages in 300K conversations",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Open-source tool runs a 744B model on a 25GB machine with no GPU",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Repo",
+      "headline": "GPT-4o in Cursor lets a Blender beginner render a 3D scene without touching the app",
+      "likes": 6185,
+      "body": "Someone just used GPT-5.6 Sol in Cursor to build and render a realistic floating MacBook in Blender. Zero Blender experience. Just a text prompt. That's the story. Here's what's actually happening under the hood: Blender MCP is an open-source plugin that acts as a bridge, letting your AI coding assistant talk directly to Blender and control it like a puppet. You type what you want, the AI writes and runs the Blender commands for you. What you can do with it: To try it: install the addon in Blender, then add the MCP server config to Cursor or Claude Desktop. That's it. GPT-5.6 Sol is now in Cursor's model picker, and it's built to persist through long multi-step agent tasks without stopping early.",
+      "bullets": [
+        "Create, modify, and delete 3D objects using plain English",
+        "Apply materials, colors, and lighting through prompts",
+        "Pull in free assets from Poly Haven (textures, HDRIs, models)",
+        "Generate 3D models from text via Hyper3D"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784001764408-9uhvan.png",
+      "read_more_url": "https://github.com/ahujasid/blender-mcp"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic maps how Claude's values shift across models and languages in 300K conversations",
+      "likes": 3666,
+      "body": "Anthropic just published something genuinely interesting: Claude does not behave the same way in every conversation. The model you pick and the language you type in both quietly shape how it responds. They analyzed 309,815 real conversations across three models and the top 20 languages on Claude.ai. To make sense of 3,300+ values, they compressed everything into four behavioral axes : Sonnet 4.6 leans warm, brief, and agreeable. Opus 4.7 leans cautious, rigorous, and will challenge your assumptions unprompted. Language matters too: Hindi and Arabic get warmer replies, Russian gets more analytical pushback. Anthropic admits they do not yet know why this happens or whether it is even desirable. The goal is to use this framework to catch unintended behavior shifts in future models before they ship.",
+      "bullets": [
+        "Deference vs. Caution -- does it agree with you, or push back to flag risks?",
+        "Warmth vs. Rigor -- feelings first, or precision first?",
+        "Depth vs. Brevity -- long explanation or straight to the point?",
+        "Candor vs. Execution -- admits uncertainty, or just gets the job done?"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784001917417-ieotc0.png",
+      "read_more_url": "https://www.anthropic.com/research/claude-values-models-languages"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Open-source tool runs a 744B model on a 25GB machine with no GPU",
+      "likes": 2242,
+      "body": "You know that rule saying big AI models need big, expensive hardware? Colibri just broke it. This open-source tool runs GLM-5.2, a 744 billion parameter model , on a regular laptop with only 25GB of RAM and no GPU . How? GLM-5.2 is a \"Mixture of Experts\" model, meaning it only activates a small slice of itself per response, roughly 40B out of 744B parameters. Colibri keeps the always-needed core in RAM and streams the rest from your hard drive on demand, like buffering a video instead of downloading it first. Here is what this unlocks for you: Speed is the honest tradeoff: cold starts hit roughly 0.05 to 0.1 tokens per second , limited by disk read speed. A fast NVMe drive pushes that to 1 token per second or more. Slow, but free.",
+      "bullets": [
+        "Run a frontier-class AI model locally, no cloud bill, no GPU required",
+        "OpenAI-compatible API so your existing code just works",
+        "Conversations persist across restarts with zero re-processing",
+        "The cache learns your usage and gets faster over time"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784001789733-ya5ldm.png",
+      "read_more_url": "https://github.com/JustVugg/colibri"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenAI's Codex open-source fork hits 60K GitHub stars",
+      "stat": {
+        "type": "likes",
+        "value": 2022
+      },
+      "url": "https://github.com/openinterpreter/openinterpreter"
+    },
+    {
+      "rank": 2,
+      "headline": "Prefect ships open-source Python framework for building resilient data pipelines",
+      "stat": {
+        "type": "stars",
+        "value": 23314
+      },
+      "url": "https://github.com/PrefectHQ/prefect"
+    },
+    {
+      "rank": 3,
+      "headline": "Tsinghua's task graph method makes 8B Llama beat GPT-4 on agent benchmarks",
+      "stat": {
+        "type": "likes",
+        "value": 1048
+      },
+      "url": "https://arxiv.org/abs/2607.01942"
+    },
+    {
+      "rank": 4,
+      "headline": "Qwen3.6 35B MoE model gets quantized GGUF build for AMD Radeon on-device use",
+      "stat": {
+        "type": "downloads",
+        "value": 879
+      },
+      "url": "https://huggingface.co/0xSero/Qwen3.6-35B-GGUF"
+    },
+    {
+      "rank": 5,
+      "headline": "Anthropic ships multiplayer editing and public sharing to Claude Artifacts",
+      "stat": {
+        "type": "likes",
+        "value": 1998
+      },
+      "url": "https://x.com/ClaudeDevs/status/2076789349145092230"
+    }
+  ]
+}
