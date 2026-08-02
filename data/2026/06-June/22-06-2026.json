@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "type": "digest",
   "date": "22-06-2026",
   "iso_date": "2026-06-22",
   "subject": "🔓 Nous Research Blank Slate: build agents with zero default tools",

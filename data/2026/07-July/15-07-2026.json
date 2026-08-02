@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "type": "digest",
   "date": "15-07-2026",
   "iso_date": "2026-07-15",
   "subject": "Anthropic funds $10M CAD in Claude credits across 8 Canadian research",

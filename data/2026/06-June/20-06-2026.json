@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "type": "digest",
   "date": "20-06-2026",
   "iso_date": "2026-06-20",
   "subject": "Unsloth GLM-5.2 2-bit quant 🦙, OpenAI GPT-5.5 Instant doctor training",

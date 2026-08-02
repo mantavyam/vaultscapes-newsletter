@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "type": "digest",
   "date": "25-06-2026",
   "iso_date": "2026-06-25",
   "subject": "OpenAI built its own chip in 9 months—here's what changes for API cost",
@@ -76,7 +77,7 @@
         "type": "likes",
         "value": 5514
       },
-      "url": "https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&cid=b8b9b48be1c42017&lid=fbDCUxigfxdpdkPN&mid=d59dfec7-00ab-43e1-ac9d-d8c329726adc"
+      "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/skills"
     },
     {
       "rank": 2,

@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "type": "digest",
   "date": "19-06-2026",
   "iso_date": "2026-06-19",
   "subject": "Midjourney skips imaging giants: 500K sensors, 60-sec body scan, $few",

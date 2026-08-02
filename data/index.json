@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T15:57:46Z",
+  "updated_at": "2026-08-02T17:28:36Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
     {
@@ -228,10 +228,11 @@
     {
       "date": "16-07-2026",
       "iso_date": "2026-07-16",
+      "type": "digest",
       "subject": "Thinking Machines Inkling 🎙️, OpenAI GPT-Red Security 🛡️, PrismML 27B",
       "path": "data/2026/07-July/16-07-2026.json",
-      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/16-07-2026.json",
-      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/html/16-07-2026.html",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/16-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/16-07-2026.html",
       "headlines": [
         "Thinking Machines releases Inkling, an open-weight model that reasons across text, audio, and images",
         "OpenAI's automated red-teaming tool cuts prompt injection failures 6x",
@@ -241,10 +242,11 @@
     {
       "date": "15-07-2026",
       "iso_date": "2026-07-15",
+      "type": "digest",
       "subject": "Anthropic funds $10M CAD in Claude credits across 8 Canadian research",
       "path": "data/2026/07-July/15-07-2026.json",
-      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/15-07-2026.json",
-      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/html/15-07-2026.html",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/15-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/15-07-2026.html",
       "headlines": [
         "PrismML open-sources a 27B model that fits on a phone at just 3.9 GB",
         "Anthropic commits $10M CAD to fund AI research across Canada",
@@ -254,10 +256,11 @@
     {
       "date": "14-07-2026",
       "iso_date": "2026-07-14",
+      "type": "digest",
       "subject": "Anthropic Values Study 📊, Blender MCP + GPT-4o 3D Render 🎨, Tsinghua 8",
       "path": "data/2026/07-July/14-07-2026.json",
-      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/14-07-2026.json",
-      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/2026/07-July/html/14-07-2026.html",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/14-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/14-07-2026.html",
       "headlines": [
         "GPT-4o in Cursor lets a Blender beginner render a 3D scene without touching the app",
         "Anthropic maps how Claude's values shift across models and languages in 300K conversations",
@@ -410,6 +413,7 @@
     {
       "date": "29-06-2026",
       "iso_date": "2026-06-29",
+      "type": "digest",
       "subject": "Anthropic Mythos 5 back for 100 orgs while Fable 5 stays locked",
       "path": "data/2026/06-June/29-06-2026.json",
       "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/29-06-2026.json",
@@ -454,6 +458,7 @@
     {
       "date": "26-06-2026",
       "iso_date": "2026-06-26",
+      "type": "digest",
       "subject": "Qwen AgentWorld 🌍, Nous Research Pet Sprites 🐾, xAI Grok T3 Editor 💻",
       "path": "data/2026/06-June/26-06-2026.json",
       "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/26-06-2026.json",
@@ -467,6 +472,7 @@
     {
       "date": "25-06-2026",
       "iso_date": "2026-06-25",
+      "type": "digest",
       "subject": "OpenAI built its own chip in 9 months—here's what changes for API cost",
       "path": "data/2026/06-June/25-06-2026.json",
       "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/25-06-2026.json",
@@ -480,6 +486,7 @@
     {
       "date": "24-06-2026",
       "iso_date": "2026-06-24",
+      "type": "digest",
       "subject": "🔌 Sakana Fugu auto-routes AI models via one API endpoint",
       "path": "data/2026/06-June/24-06-2026.json",
       "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/24-06-2026.json",
@@ -493,6 +500,7 @@
     {
       "date": "23-06-2026",
       "iso_date": "2026-06-23",
+      "type": "digest",
       "subject": "SpaceX paid $60B for Cursor — here's what developers actually get",
       "path": "data/2026/06-June/23-06-2026.json",
       "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/23-06-2026.json",
@@ -506,6 +514,7 @@
     {
       "date": "22-06-2026",
       "iso_date": "2026-06-22",
+      "type": "digest",
       "subject": "🔓 Nous Research Blank Slate: build agents with zero default tools",
       "path": "data/2026/06-June/22-06-2026.json",
       "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/22-06-2026.json",
@@ -537,6 +546,7 @@
     {
       "date": "20-06-2026",
       "iso_date": "2026-06-20",
+      "type": "digest",
       "subject": "Unsloth GLM-5.2 2-bit quant 🦙, OpenAI GPT-5.5 Instant doctor training",
       "path": "data/2026/06-June/20-06-2026.json",
       "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/20-06-2026.json",
@@ -550,6 +560,7 @@
     {
       "date": "19-06-2026",
       "iso_date": "2026-06-19",
+      "type": "digest",
       "subject": "Midjourney skips imaging giants: 500K sensors, 60-sec body scan, $few",
       "path": "data/2026/06-June/19-06-2026.json",
       "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/19-06-2026.json",

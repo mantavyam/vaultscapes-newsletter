@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "type": "digest",
   "date": "23-06-2026",
   "iso_date": "2026-06-23",
   "subject": "SpaceX paid $60B for Cursor — here's what developers actually get",

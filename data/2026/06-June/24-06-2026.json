@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "type": "digest",
   "date": "24-06-2026",
   "iso_date": "2026-06-24",
   "subject": "🔌 Sakana Fugu auto-routes AI models via one API endpoint",
