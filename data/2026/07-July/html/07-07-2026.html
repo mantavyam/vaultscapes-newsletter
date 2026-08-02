@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;margin-top:30px;border:1px solid #6B6B6B;background-color:#ffffff;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Greeting -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:16px;
+                   line-height:24px;
+                   font-weight:bold;
+                   color:#000000;
+                   padding:0 0 10px 0;">
+<p style="margin:0;">Hey,</p>
+</td>
+</tr>
+</table>
+<!-- Intro text -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:15px;
+                   line-height:22px;
+                   font-weight:400;
+                   color:#000000;">
+          The theme today is simple: we're finally getting <b>inside the box</b>.<br/><br/>Anthropic found a hidden workspace inside Claude, the J-space, that nobody designed. It just emerged. Models that keep secrets from us now have a window we can peek through. Meanwhile, AdaJEPA shows models that keep learning after deployment, fixing their own mistakes in real time. Both point the same direction: static, opaque AI is becoming a thing of the past.<br/><br/>We think that's the real story.
+        </td>
+</tr>
+</table>
+<!-- Ad block -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;" width="100%">
+<tr>
+<td style="padding:30px 0 0 0;">
+<table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation">
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: summary -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:0 20px;margin-bottom:30px;padding-bottom:20px;" width="100%">
+<tr>
+<td class="h1" style="font-family:system-ui, sans-serif;font-size:17px;font-weight:bold;line-height:22.5px;
+                      margin:0;padding:15px 0 10px 0;
+                      color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+  Summary
+</td>
+</tr>
+<tr>
+<td style="padding:0 0 10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="color:#000000 !important;">
+<p style="font-family:system-ui; font-size:13px;line-height:22.5px;font-weight:normal;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    Read time: 7 min 3 sec
+  </p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=AdDN5dHGbxrwf0xy&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Anthropic discovers Claude has a <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">hidden internal workspace</span> for silent reasoning
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top Repo</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=1kBPsIjVMKYpsHRjj&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Pliny the Liberator ships free open-source <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">red team tool</span> hitting 90% on hacking benchmarks
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top Repo</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=WZrlLUAwlir2OyC1&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ David Ondrej drops hundreds of hours of <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">free AI agent</span> skills to the public
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Signals</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=1zro7duioYljhOjay&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>1<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>.<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>O<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>p<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>A<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>I<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>s<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>h<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>p<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>s<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>G<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>P<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>T<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>-<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>R<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>a<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>l<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>m<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>-<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>2<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>.<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>1<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>-<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>m<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>w<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>h<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>r<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>a<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>s<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>g<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>,<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>l<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>u<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>s<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>,<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>a<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>d<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>2<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>5<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>%<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>l<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>w<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>r<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>l<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>a<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>c<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>y<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>
+</a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=wu8ken6twSLXjkLc&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    2. <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">Presented by Span:</span> The agent that delivers trusted answers and reports, built on the full context of your code, tools, and teams
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=1vSefjqEiUvLCCSxe&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    3. Open-source tool uses <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">vision models</span> to pull text from images and PDFs locally
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=LqGfrtTcWyPTuQgS&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    4. NYU's <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">adaptive world model</span> keeps learning at test time to fix its own mistakes
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=1xO7XIpY8Ez0Tu4Ug&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    5. NVIDIA releases open-source <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">humanoid robot foundation</span> model GR00T N1.7
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=fTm0JSOFtIcUPmr2&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    6. Tencent releases 295B <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">open-source MoE model</span> free to use for two weeks
+  </a>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Anthropic discovers Claude has a hidden internal workspace for silent reasoning
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          26,267 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Anthropic discovers Claude has a hidden internal w" border="0" src="https://alphasignal.ai/image/1783397020659-ozarog.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Anthropic just found something inside Claude that nobody designed on purpose. They're calling it the <b>J-space</b>, and it works like a mental scratchpad where Claude silently thinks before it responds.</p><p>Here's the simple version: your brain processes millions of signals, but only a few reach conscious thought. Anthropic found Claude has the same split. Most processing stays hidden. A small internal space, the J-space, holds the stuff Claude is actively "thinking about."</p><ul><li>Delete the J-space and Claude still chats fine, but <b>multi-step reasoning collapses</b> below even their smallest model</li><li>In a model secretly trained to sabotage code, words like "fake" and "fraud" appear in the J-space before any suspicious output</li><li>When baited into blackmail, Claude's J-space privately flags the scenario as staged, even while responding normally</li></ul><p>This is huge for <b>AI safety</b>. You can now audit what a model is silently planning, not just what it says. The J-lens tool is open-source, and Neuronpedia has an interactive demo you can try on open-weights models today.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=AdDN5dHGbxrwf0xy&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top Repo
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Pliny the Liberator ships free open-source red team tool hitting 90% on hacking benchmarks
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          4,164 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Pliny the Liberator ships free open-source red tea" border="0" src="https://alphasignal.ai/image/1783396938975-7okj3o.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Security used to cost a fortune and years of training. <b>T3MP3ST</b> just changed that.</p><p>T3MP3ST is a free, open-source framework that turns AI coding agents like Claude Code and Codex into autonomous security testers. Think of red-teaming as hiring someone to break your own app before attackers do. T3MP3ST automates that entire process.</p><p>Point it at an authorized target through the CLI or API, and your existing agent becomes the reasoning engine while T3MP3ST supplies the tooling and attack workflows.</p><p>What you can hunt:</p><ul><li>Web apps, APIs, OWASP Top 10 vulnerabilities</li><li>Source code audits and CTF challenges</li><li>Smart contracts and IoT/embedded systems</li></ul><p>The numbers hold up. It scored <b>90.1% on XBOW's 104-challenge benchmark</b>, beating XBOW's own self-reported 85%. Tested against 10 real 2026 CVEs, a single agent correctly identified <b>8 out of 10</b> to the exact file and vulnerability class.</p><p>You get <b>35 built-in tools</b> by default, 83 with the full arsenal flag, with dangerous post-exploitation tools gated behind human approval. Free, AGPL-3.0, authorized use only.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=1kBPsIjVMKYpsHRjj&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top Repo
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    David Ondrej drops hundreds of hours of free AI agent skills to the public
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          3,161 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="David Ondrej drops hundreds of hours of free AI ag" border="0" src="https://alphasignal.ai/image/1783396966791-08wwe8.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Someone just open-sourced their entire personal <b>AI agent skills library</b>, and it's free. Think of agent skills as reusable instruction sets you drop into an AI coding agent so it knows exactly how to handle a specific task, without you explaining it every time.</p><p>Hundreds of hours of real trial and error, now yours to grab. Here's what's inside:</p><ul><li><b>Agent orchestration</b>: run, schedule, and coordinate multiple AI agents talking to each other</li><li><b>Skill authoring</b>: build and publish your own agent skills</li><li><b>Research and web</b>: pull info from the web, APIs, and YouTube automatically</li><li><b>Thinking and docs</b>: turn messy ideas into clean documentation</li><li><b>Ops and setup</b>: server config, security, and tool setup workflows</li></ul><p>Each skill lives in its own folder with a SKILL.md file telling the agent when and how to use it. You can plug these straight into your existing agent setup as ready-made building blocks. Just clone the repo at github.com/davidondrej/skills and start using them.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=WZrlLUAwlir2OyC1&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: signals -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;" width="100%"><tr><td style="padding:0 20px;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<!-- Section Title -->
+<tr>
+<td class="h1" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:17px;font-weight:bold;line-height:22.5px;
+             margin:0;padding:15px 0 10px 0;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;">
+    Signals
+    
+  </td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Item 1 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">1</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=1zro7duioYljhOjay&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    OpenAI ships GPT-Realtime-2.1-mini with reasoning, tool use, and 25% lower latency
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">2,164 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 2 -->
+<tr>
+<td style="padding:15px 0;">
+
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 3 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">3</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=1vSefjqEiUvLCCSxe&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Open-source tool uses vision models to pull text from images and PDFs locally
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">2,483 Stars</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 4 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">4</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=LqGfrtTcWyPTuQgS&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    NYU's adaptive world model keeps learning at test time to fix its own mistakes
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">895 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 5 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">5</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=1xO7XIpY8Ez0Tu4Ug&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    NVIDIA releases open-source humanoid robot foundation model GR00T N1.7
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">18 Downloads</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 6 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">6</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=49642c574713badd&amp;lid=fTm0JSOFtIcUPmr2&amp;mid=b86b539f-a9d0-4e24-b1d4-57b52e4ffd78" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Tencent releases 295B open-source MoE model free to use for two weeks
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">1,596 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table>
+</body></html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;margin-top:30px;border:1px solid #6B6B6B;background-color:#ffffff;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Greeting -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:16px;
+                   line-height:24px;
+                   font-weight:bold;
+                   color:#000000;
+                   padding:0 0 10px 0;">
+<p style="margin:0;">Hey,</p>
+</td>
+</tr>
+</table>
+<!-- Intro text -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:15px;
+                   line-height:22px;
+                   font-weight:400;
+                   color:#000000;">
+          Open source is eating AI infrastructure. OpenAI ships a security CLI before they even announce it (Hacker News beat them to it), Fish Audio turns a GitHub side project into $21M ARR in 12 months, and a robotics paper wraps a reasoning loop around frozen motor skills to jump from 16% to 97% accuracy.<br/><br/>The pattern? <b>Nobody builds from scratch anymore.</b> Wrap, orchestrate, distribute free, charge for the wiring.<br/><br/>Fish Audio's playbook: give the model away, sell the enterprise contract. Sound familiar?
+        </td>
+</tr>
+</table>
+<!-- Ad block -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;" width="100%">
+<tr>
+<td style="padding:30px 0 0 0;">
+<table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation">
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: summary -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:0 20px;margin-bottom:30px;padding-bottom:20px;" width="100%">
+<tr>
+<td class="h1" style="font-family:system-ui, sans-serif;font-size:17px;font-weight:bold;line-height:22.5px;
+                      margin:0;padding:15px 0 10px 0;
+                      color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+  Summary
+</td>
+</tr>
+<tr>
+<td style="padding:0 0 10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="color:#000000 !important;">
+<p style="font-family:system-ui; font-size:13px;line-height:22.5px;font-weight:normal;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    Read time: 6 min 46 sec
+  </p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=boFSW3fRyuGs8boM&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ OpenAI quietly ships open-source security CLI to <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">scan repos and</span> catch vulnerabilities in CI/CD
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=1ujxrdvBnjDSPvPNb&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Fish Audio raises $52M and ships a <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">voice model 2x</span> faster than rivals
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=19HP26zPR2VfGiz3o&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ OpenAI gives 100,000 <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">academic scientists free</span> access to GPT-5 models by 2027
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Signals</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=D6JrEIc2Mx6Gtlb3&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    1. Open-source PixelRAG scrapes websites as screenshots, <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">beats text RAG</span> by 18%
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=CSKFFRlLT51yccYC&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    2. <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">Cirrascale Cloud Services:</span> NVIDIA HGX B300 and B200 clusters with Cirrascale. Published pricing, up to 30% lower cost than hyperscalers
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=1o7XR8SmX1qb0uPuO&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    3. FaceSwap open-source tool <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">swaps faces in</span> photos and videos using deep learning
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=1pkdCsTeL69jF9fWI&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    4. New orchestration layer boosts <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">frozen robot policy</span> from 16.7% to 97.3% accuracy
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=1yeGLi9rggWbllEPe&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    5. LiquidAI releases <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">multilingual encoder models</span> that run lean without sacrificing quality
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=19rFPJkn1gkp6y1iW&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    6. Pipe Network open-sources a tool to <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">run Kimi K3's</span> 2.8T model on a Mac Studio
+  </a>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    OpenAI quietly ships open-source security CLI to scan repos and catch vulnerabilities in CI/CD
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          13,652 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="OpenAI quietly ships open-source security CLI to s" border="0" src="https://alphasignal.ai/image/1785384254760-qls5ot.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>OpenAI tried to quietly ship <b>Codex Security CLI</b>, but Hacker News spotted it first. Classic.</p><p>So what is it? It's a free, open-source tool that uses AI to automatically find security holes in your code, confirm they're real, and suggest fixes. Unlike old-school scanners that just match patterns, it uses AI to understand how your code actually behaves in context, then proposes patches you can review and apply.</p><p>Here's what you can do with it:</p><ul><li>Scan entire repos for vulnerabilities</li><li>Track findings across multiple runs to see if fixes actually worked</li><li>Review pull-request diffs and get structured output for security automation</li><li>Plug into CI/CD pipelines using an API key, no interactive login needed</li></ul><p>Getting started takes three commands: install, login, scan. Basic usage is free, but an OpenAI API key unlocks full scanning and is the preferred path for automated setups.</p><p>The tool has already helped fix over <b>3,000 critical vulnerabilities</b>, and it's <b>Apache 2.0 licensed</b>, so you can use it freely in your projects.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=boFSW3fRyuGs8boM&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Fish Audio raises $52M and ships a voice model 2x faster than rivals
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          13,215 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Fish Audio raises $52M and ships a voice model 2x " border="0" src="https://alphasignal.ai/image/1785384292421-2pez5t.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Fish Audio just launched <b>S2.1 Pro</b>, a voice AI model that went from open-source side project to <b>$21M ARR</b> in one year, and just raised a $52M seed round to back it up.</p><p>So what actually makes it interesting? Three things:</p><ul><li><b>5-second voice cloning</b> -- drop in a short audio clip and it captures tone, pitch, and speaking style instantly, no retraining needed</li><li><b>Word-level emotion control</b> -- you can tell it exactly how to say each word: the pacing, intonation, and emotion, not just the whole sentence</li><li><b>~90ms response time</b> -- fast enough for real-time voice agents and live conversation apps</li></ul><p>It runs at 2x the speed of Cartesia and roughly 1/6th the cost of ElevenLabs. HeyGen, LiveKit, and Retell already run it in production.</p><p>You can access it via REST API or Python SDK. There is also a free tier with no hard usage cap, so you can prototype without a paywall blocking you.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=1ujxrdvBnjDSPvPNb&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    OpenAI gives 100,000 academic scientists free access to GPT-5 models by 2027
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          7,931 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="OpenAI gives 100,000 academic scientists free acce" border="0" src="https://alphasignal.ai/image/1785384312097-kkz8yg.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>OpenAI just launched <b>ChatGPT for Academic Researchers</b>, a free program giving scientists access to its most powerful models. Starting with <b>10,000 seats</b> this summer and scaling to 100,000 by 2027.</p><p>Here is what you actually get:</p><ul><li><b>GPT-5.6 Sol Pro</b>, the flagship model, which scores 83% on research-level math benchmarks vs. 72.5% for the previous version</li><li>Access to Codex for writing and running code, plus ChatGPT Work for longer multi-step tasks like drafting papers or grant applications</li><li>Higher usage limits, larger context windows, and expanded deep research mode</li><li>Up to 4 collaborators per workspace, with business-grade privacy and your data never used for training</li></ul><p>The value is roughly a <b>$200/month Pro subscription</b> at zero cost. Faculty and postdoctoral researchers at high-research-activity institutions can apply now on OpenAI's website. This is part of a $250 million commitment to external science through 2027.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=19HP26zPR2VfGiz3o&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: signals -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;" width="100%"><tr><td style="padding:0 20px;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<!-- Section Title -->
+<tr>
+<td class="h1" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:17px;font-weight:bold;line-height:22.5px;
+             margin:0;padding:15px 0 10px 0;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;">
+    Signals
+    
+  </td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Item 1 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">1</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=D6JrEIc2Mx6Gtlb3&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Open-source PixelRAG scrapes websites as screenshots, beats text RAG by 18%
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">4,694 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 2 -->
+<tr>
+<td style="padding:15px 0;">
+
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 3 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">3</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=1o7XR8SmX1qb0uPuO&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    FaceSwap open-source tool swaps faces in photos and videos using deep learning
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">56,168 Stars</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 4 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">4</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=1pkdCsTeL69jF9fWI&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    New orchestration layer boosts frozen robot policy from 16.7% to 97.3% accuracy
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">210 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 5 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">5</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=1yeGLi9rggWbllEPe&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    LiquidAI releases multilingual encoder models that run lean without sacrificing quality
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">4,115 Downloads</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 6 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">6</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=5bcb7e07916982bf&amp;lid=19rFPJkn1gkp6y1iW&amp;mid=4dc43b44-c812-4902-8221-f295be094ada" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Pipe Network open-sources a tool to run Kimi K3's 2.8T model on a Mac Studio
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">2,882 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table>
+</body></html>

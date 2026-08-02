@@ -1,7 +1,230 @@
 {
-  "updated_at": "2026-07-17T05:45:52Z",
-  "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-news-feed/main/data/latest.json",
+  "updated_at": "2026-08-02T15:57:46Z",
+  "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "02-08-2026",
+      "iso_date": "2026-08-02",
+      "type": "article",
+      "subject": "⚙️ How Moonshot engineered a 2.8T behemoth to run in production",
+      "path": "data/2026/08-August/02-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/02-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/02-08-2026.html",
+      "headlines": [
+        "Kimi K3 recap: By the numbers and where it shines",
+        "LatentMoE: Taming expert routing",
+        "Hybrid attention: Smashing the KV cache wall",
+        "Quantization: Shrinking the footprint via QAT",
+        "Honorable mentions: The accuracy preservers"
+      ],
+      "title": "Why Kimi K3's architecture is a masterclass in AI efficiency",
+      "kicker": "Sunday Deep Dive"
+    },
+    {
+      "date": "01-08-2026",
+      "iso_date": "2026-08-01",
+      "type": "article",
+      "subject": "🔍 The missing layer in AI coding: runtime validation",
+      "path": "data/2026/08-August/01-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/01-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/01-08-2026.html",
+      "headlines": [
+        "The ceiling of static analysis",
+        "TREX runtime validation and proof of work",
+        "Under the hood: the semantic code graph and continuous learning",
+        "The central validation layer: Greptile CLI and the `/greploop`",
+        "Real-world impact"
+      ],
+      "title": "Why AI code review needs proof, not predictions",
+      "kicker": "Technical Deep Dive"
+    },
+    {
+      "date": "31-07-2026",
+      "iso_date": "2026-07-31",
+      "type": "digest",
+      "subject": "🔓 Anthropic Claude hacked real systems in 141K safety test sessions",
+      "path": "data/2026/07-July/31-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/31-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/31-07-2026.html",
+      "headlines": [
+        "Anthropic reveals Claude accidentally hacked three real organizations during safety tests",
+        "Google DeepMind releases Gemini Robotics 2 to give humanoids full-body control",
+        "Free open-source tool turns one photo and audio into minutes-long talking video"
+      ]
+    },
+    {
+      "date": "30-07-2026",
+      "iso_date": "2026-07-30",
+      "type": "digest",
+      "subject": "OpenAI Codex CLI 🔐, Fish Audio S2.1 Pro 🎙️, GPT-5 Academic Access 🎓",
+      "path": "data/2026/07-July/30-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/30-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/30-07-2026.html",
+      "headlines": [
+        "OpenAI quietly ships open-source security CLI to scan repos and catch vulnerabilities in CI/CD",
+        "Fish Audio raises $52M and ships a voice model 2x faster than rivals",
+        "OpenAI gives 100,000 academic scientists free access to GPT-5 models by 2027"
+      ]
+    },
+    {
+      "date": "29-07-2026",
+      "iso_date": "2026-07-29",
+      "type": "digest",
+      "subject": "Claude autonomously broke post-quantum encryption experts missed for 2",
+      "path": "data/2026/07-July/29-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/29-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/29-07-2026.html",
+      "headlines": [
+        "MCP goes stateless in its biggest update yet, unlocking serverless deployment",
+        "Anthropic's Claude autonomously cracks encryption schemes in under a week",
+        "Cursor launches ₹649/month plan with cloud agents and Grok 4.5 for India"
+      ]
+    },
+    {
+      "date": "28-07-2026",
+      "iso_date": "2026-07-28",
+      "type": "digest",
+      "subject": "SSI secures $5B NVIDIA deal 💰, Kimi K3 ships 2.8T params 🧠, OptMem add",
+      "path": "data/2026/07-July/28-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/28-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/28-07-2026.html",
+      "headlines": [
+        "NVIDIA invests in SSI to 10x its compute within 12 months",
+        "Moonshot AI ships Kimi K3 with a non-commercial license that locks out big companies",
+        "Developer ships plug-and-play infinite memory prompt for any AI agent"
+      ]
+    },
+    {
+      "date": "27-07-2026",
+      "iso_date": "2026-07-27",
+      "type": "digest",
+      "subject": "ChatGPT Work Agent login access 🔐, Claude Opus 5 FPS game 🎮, Nvidia mo",
+      "path": "data/2026/07-July/27-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/27-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/27-07-2026.html",
+      "headlines": [
+        "Claude Opus 5 builds a complete game from scratch in one shot",
+        "OpenAI's ChatGPT Work agent can now log into password-protected websites",
+        "Open-source AI companion runs locally, plays games and chats with 30+ LLM backends"
+      ]
+    },
+    {
+      "date": "26-07-2026",
+      "iso_date": "2026-07-26",
+      "type": "article",
+      "subject": "🧠 How tabular foundation models solve LLM blind spots",
+      "path": "data/2026/07-July/26-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/26-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/26-07-2026.html",
+      "headlines": [
+        "From slow ML cycles to the LLM mismatch",
+        "The tabular foundation model landscape",
+        "The pragmatic reality check"
+      ],
+      "title": "Why tabular foundation models are a huge unlock for enterprise AI",
+      "kicker": "Sunday Deep Dive"
+    },
+    {
+      "date": "24-07-2026",
+      "iso_date": "2026-07-24",
+      "type": "digest",
+      "subject": "ChatGPT Voice Agents 🤖, Claude Opus Voice Mode 🎙️, Claude Managed Agen",
+      "path": "data/2026/07-July/24-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/24-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/24-07-2026.html",
+      "headlines": [
+        "OpenAI brings ChatGPT voice control to desktop so you can run agents hands-free",
+        "Anthropic upgrades Claude voice mode with Opus, tool access, and more languages",
+        "Anthropic ships Claude Managed Agents update with effort controls and 500 skills per session"
+      ]
+    },
+    {
+      "date": "23-07-2026",
+      "iso_date": "2026-07-23",
+      "type": "digest",
+      "subject": "Anthropic Security Plugin 🛡️, Cursor Model Router 💰, Claude Agents 500",
+      "path": "data/2026/07-July/23-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/23-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/23-07-2026.html",
+      "headlines": [
+        "Anthropic ships Claude Code security plugin that scans your code for vulnerabilities",
+        "Cursor ships smart model router that cuts AI coding costs by 60%",
+        "Anthropic ships effort controls, 500 skills, and webhooks to Claude Managed Agents"
+      ]
+    },
+    {
+      "date": "22-07-2026",
+      "iso_date": "2026-07-22",
+      "type": "digest",
+      "subject": "Claude Skill Recording 🎬, OpenAI ExploitGym Sandbox Breach ⚠️, IMO 202",
+      "path": "data/2026/07-July/22-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/22-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/22-07-2026.html",
+      "headlines": [
+        "Anthropic lets Claude learn new skills by watching you work",
+        "OpenAI models breached Hugging Face production systems during benchmark testing",
+        "Claude, GPT, and Kimi all score perfect 42/42 on IMO 2026 math problems"
+      ]
+    },
+    {
+      "date": "21-07-2026",
+      "iso_date": "2026-07-21",
+      "type": "digest",
+      "subject": "One question fingerprints any LLM — Cursor cut agent costs from $10K t",
+      "path": "data/2026/07-July/21-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/21-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/21-07-2026.html",
+      "headlines": [
+        "Dev rebuilds Palantir's million-dollar war room and releases it free on GitHub",
+        "Cursor's agent team rebuilt SQLite in Rust from its 835-page manual, passing 100% of tests",
+        "Baidu releases free open-source OCR model that reads 100-page PDFs in one pass"
+      ]
+    },
+    {
+      "date": "20-07-2026",
+      "iso_date": "2026-07-20",
+      "type": "digest",
+      "subject": "LocalAI depth-anything 🎥, Baidu Unlimited-OCR 3B 📄, Cline K3 vs Fable",
+      "path": "data/2026/07-July/20-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/20-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/20-07-2026.html",
+      "headlines": [
+        "Open-source tool turns any phone video into a walkable 3D world at 60fps locally",
+        "Baidu releases a tiny 3B open-source OCR model that reads 100-page PDFs in one pass",
+        "Cline pits Kimi K3 against Fable on a real bug , one is 3.4x faster, the other 2.3x cheaper"
+      ]
+    },
+    {
+      "date": "19-07-2026",
+      "iso_date": "2026-07-19",
+      "type": "article",
+      "subject": "🧠 Inside the pragmatic AI engineer’s new secret weapon",
+      "path": "data/2026/07-July/19-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/19-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/19-07-2026.html",
+      "headlines": [
+        "Under the hood: Architecture, efficiency, and benchmarks",
+        "The \"interaction model\" paradigm in practice",
+        "The ecosystem powerplay",
+        "The rise of pragmatic engineering"
+      ],
+      "title": "Why Inkling is the pragmatic AI engineer’s new secret weapon",
+      "kicker": "Sunday Deep Dive"
+    },
+    {
+      "date": "18-07-2026",
+      "iso_date": "2026-07-18",
+      "type": "digest",
+      "subject": "Moonshot's 2.8T model decodes 6.3x faster at 1M token context",
+      "path": "data/2026/07-July/18-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/18-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/18-07-2026.html",
+      "headlines": [
+        "Kimi drops 2.8T-parameter model with 6.3x faster decoding, beats Claude and GPT-5",
+        "China open-sources a real-time 3D scene reconstruction model that runs at 20 FPS",
+        "Claude Code artifacts now pull live data via MCP connectors on demand"
+      ]
+    },
     {
       "date": "16-07-2026",
       "iso_date": "2026-07-16",
@@ -39,6 +262,302 @@
         "GPT-4o in Cursor lets a Blender beginner render a 3D scene without touching the app",
         "Anthropic maps how Claude's values shift across models and languages in 300K conversations",
         "Open-source tool runs a 744B model on a 25GB machine with no GPU"
+      ]
+    },
+    {
+      "date": "13-07-2026",
+      "iso_date": "2026-07-13",
+      "type": "digest",
+      "subject": "64 parallel subagents just ended a 50-year math standoff — here's the",
+      "path": "data/2026/07-July/13-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/13-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/13-07-2026.html",
+      "headlines": [
+        "OpenAI's GPT-5.6 Sol cracks a 50-year-old math conjecture in under one hour",
+        "Cursor ships searchable agent history and side chats for parallel conversations",
+        "Google AI Studio lets deployed apps claim a permanent custom domain"
+      ]
+    },
+    {
+      "date": "12-07-2026",
+      "iso_date": "2026-07-12",
+      "type": "article",
+      "subject": "🤖 The missing middleware: Why AI at scale requires model routers",
+      "path": "data/2026/07-July/12-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/12-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/12-07-2026.html",
+      "headlines": [
+        "The architecture of a model router",
+        "The managed router ecosystem: Commercial options",
+        "The open source and self-hosted frontier",
+        "The reality check: Limitations, step 0, and the smart AI stack"
+      ],
+      "title": "Stop routing everything to the frontier: The engineering case for multi-model routers",
+      "kicker": "Sunday Deep Dive"
+    },
+    {
+      "date": "10-07-2026",
+      "iso_date": "2026-07-10",
+      "type": "digest",
+      "subject": "ChatGPT Work Agent 🏗️, Claude Reflect Dashboard 🧘, SWE-1.7 at $1.97/ta",
+      "path": "data/2026/07-July/10-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/10-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/10-07-2026.html",
+      "headlines": [
+        "OpenAI ships ChatGPT Work, a GPT-5.6 agent that runs full workflows for hours",
+        "Anthropic adds monthly usage dashboard to Claude with break nudges and quiet hours",
+        "Cognition releases SWE-1.7, a coding model hitting frontier scores at $1.97 per task"
+      ]
+    },
+    {
+      "date": "09-07-2026",
+      "iso_date": "2026-07-09",
+      "type": "digest",
+      "subject": "OpenAI GPT-Live 🎙️, Anthropic Claude 96% at 46% cost 💰, SWE-Bench brok",
+      "path": "data/2026/07-July/09-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/09-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/09-07-2026.html",
+      "headlines": [
+        "Anthropic's Claude Managed Agents hits 96% top model performance at 46% of the cost",
+        "OpenAI ships GPT-Live, a full-duplex voice model that talks and listens at once",
+        "OpenAI finds 30% of SWE-Bench Pro tasks broken, pulls its recommendation"
+      ]
+    },
+    {
+      "date": "08-07-2026",
+      "iso_date": "2026-07-08",
+      "type": "digest",
+      "subject": "Anthropic cuts frontier AI costs in half without sacrificing performan",
+      "path": "data/2026/07-July/08-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/08-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/08-07-2026.html",
+      "headlines": [
+        "Anthropic's Claude agent trick hits 96% top model performance at half the cost",
+        "Anthropic brings Claude background tasks to mobile so work continues without you",
+        "Anthropic offers open-source maintainers 6 months of free Claude Max"
+      ]
+    },
+    {
+      "date": "07-07-2026",
+      "iso_date": "2026-07-07",
+      "type": "digest",
+      "subject": "🔍 Anthropic's J-space exposes Claude's hidden reasoning layer",
+      "path": "data/2026/07-July/07-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/07-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/07-07-2026.html",
+      "headlines": [
+        "Anthropic discovers Claude has a hidden internal workspace for silent reasoning",
+        "Pliny the Liberator ships free open-source red team tool hitting 90% on hacking benchmarks",
+        "David Ondrej drops hundreds of hours of free AI agent skills to the public"
+      ]
+    },
+    {
+      "date": "06-07-2026",
+      "iso_date": "2026-07-06",
+      "type": "digest",
+      "subject": "GitHub Copilot adds Kimi K2 🤖, Claude auto-applies for jobs 💼, pxpipe",
+      "path": "data/2026/07-July/06-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/06-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/06-07-2026.html",
+      "headlines": [
+        "Dev turns a reMarkable tablet into a Harry Potter-style AI diary",
+        "Open-source tool uses Claude to auto-apply for jobs, hits 3.5k GitHub stars",
+        "Hack cuts Claude Code costs 70% by feeding context as images to OCR"
+      ]
+    },
+    {
+      "date": "03-07-2026",
+      "iso_date": "2026-07-03",
+      "type": "digest",
+      "subject": "Anthropic's Claude Science runs 60+ databases: researchers report 10x",
+      "path": "data/2026/07-July/03-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/03-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/03-07-2026.html",
+      "headlines": [
+        "Anthropic brings Claude Fable 5 back globally with tighter cybersecurity blocks",
+        "Anthropic launches Claude Science app with 60+ research databases and live code",
+        "NVIDIA splits a 30B model in two to generate text 2.42x faster with 98.7% quality"
+      ]
+    },
+    {
+      "date": "02-07-2026",
+      "iso_date": "2026-07-02",
+      "type": "digest",
+      "subject": "Anthropic Claude Sonnet 5: flagship reasoning at 40% of Opus cost",
+      "path": "data/2026/07-July/02-07-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/02-07-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/07-July/html/02-07-2026.html",
+      "headlines": [
+        "Anthropic brings back Claude's Fable 5 model after US government security review",
+        "Anthropic ships Claude Sonnet 5 with near Opus-level reasoning at lower cost",
+        "Anthropic ships five new Claude Managed Agents features including per-session config overrides"
+      ]
+    },
+    {
+      "date": "30-06-2026",
+      "iso_date": "2026-06-30",
+      "type": "digest",
+      "subject": "🧠 Meta Brain2Qwerty v2 hits 78% word accuracy, no surgery needed",
+      "path": "data/2026/06-June/30-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/30-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/30-06-2026.html",
+      "headlines": [
+        "Meta releases open-source brain-to-text decoder hitting 78% word accuracy",
+        "Cursor ships iOS app so you can run and control coding agents from your phone",
+        "10 open-source GitHub tools that scrape any website for free"
+      ]
+    },
+    {
+      "date": "29-06-2026",
+      "iso_date": "2026-06-29",
+      "subject": "Anthropic Mythos 5 back for 100 orgs while Fable 5 stays locked",
+      "path": "data/2026/06-June/29-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/29-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/29-06-2026.html",
+      "headlines": [
+        "OpenAI previews GPT-5.6 family with three models spanning speed, cost, and power",
+        "Anthropic restores its top cybersecurity model to US critical infrastructure operators",
+        "Nous Research ships gated model blends that beat Claude and GPT-5.5 on benchmarks"
+      ]
+    },
+    {
+      "date": "28-06-2026",
+      "iso_date": "2026-06-28",
+      "type": "article",
+      "subject": "🧠 How GLM-5.2 triggered a new DeepSeek moment for agentic coding",
+      "path": "data/2026/06-June/28-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/28-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/28-06-2026.html",
+      "headlines": [
+        "Under the hood of GLM-5.2",
+        "The big deal: agentic coding in practice",
+        "The reality check: where closed models still win",
+        "The routing playbook"
+      ],
+      "title": "A new milestone for open-weight coding agents: the GLM-5.2 reality check",
+      "kicker": "Sunday Deep Dive"
+    },
+    {
+      "date": "27-06-2026",
+      "iso_date": "2026-06-27",
+      "type": "article",
+      "subject": "🎙️ Speak to your IDE, skip the keyboard",
+      "path": "data/2026/06-June/27-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/27-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/27-06-2026.html",
+      "headlines": [
+        "Why your keyboard is the new bottleneck for AI agents (and how to solve it)"
+      ],
+      "title": "Why your keyboard is the new bottleneck for AI agents (and how to solve it)",
+      "kicker": "Technical Deep Dive"
+    },
+    {
+      "date": "26-06-2026",
+      "iso_date": "2026-06-26",
+      "subject": "Qwen AgentWorld 🌍, Nous Research Pet Sprites 🐾, xAI Grok T3 Editor 💻",
+      "path": "data/2026/06-June/26-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/26-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/26-06-2026.html",
+      "headlines": [
+        "Qwen releases open-source world model that simulates 7 agent environments, beating GPT and Claude",
+        "Nous Research adds animated pets to AI agents with 3,000 sprite options",
+        "xAI integrates Grok into T3 code editor via SuperGrok and X subscriptions"
+      ]
+    },
+    {
+      "date": "25-06-2026",
+      "iso_date": "2026-06-25",
+      "subject": "OpenAI built its own chip in 9 months—here's what changes for API cost",
+      "path": "data/2026/06-June/25-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/25-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/25-06-2026.html",
+      "headlines": [
+        "OpenAI reveals its first custom AI chip built with Broadcom",
+        "OpenAI upgrades GPT-5.5 Instant with smarter intent and better recommendations",
+        "Mistral releases OCR 4 with 72% win rate across 600+ real-world documents"
+      ]
+    },
+    {
+      "date": "24-06-2026",
+      "iso_date": "2026-06-24",
+      "subject": "🔌 Sakana Fugu auto-routes AI models via one API endpoint",
+      "path": "data/2026/06-June/24-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/24-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/24-06-2026.html",
+      "headlines": [
+        "Sakana AI ships a multi-agent orchestration model designed to bypass export controls",
+        "Anthropic ships Claude as a Slack teammate that writes and merges your code",
+        "GLM-5.2 beats Claude Opus at real bug fixes for half the cost"
+      ]
+    },
+    {
+      "date": "23-06-2026",
+      "iso_date": "2026-06-23",
+      "subject": "SpaceX paid $60B for Cursor — here's what developers actually get",
+      "path": "data/2026/06-June/23-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/23-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/23-06-2026.html",
+      "headlines": [
+        "OpenAI launches GPT-5.5-Cyber to scan, patch, and fix vulnerable code at scale",
+        "Cursor announces three new features including a model trained with SpaceX",
+        "GLM 5.2 tops open-source coding leaderboard, beating Kimi K2 by 17%"
+      ]
+    },
+    {
+      "date": "22-06-2026",
+      "iso_date": "2026-06-22",
+      "subject": "🔓 Nous Research Blank Slate: build agents with zero default tools",
+      "path": "data/2026/06-June/22-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/22-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/22-06-2026.html",
+      "headlines": [
+        "UC Berkeley releases 2.2 million U.S. local laws as a searchable open dataset",
+        "Nous Research ships blank slate mode so you can build agents from scratch",
+        "Nous Research ships Hermes Agent v0.17.0 with expanded reach capabilities"
+      ]
+    },
+    {
+      "date": "21-06-2026",
+      "iso_date": "2026-06-21",
+      "type": "article",
+      "subject": "⚙️ How your agents can write and optimize their own skills",
+      "path": "data/2026/06-June/21-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/21-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/21-06-2026.html",
+      "headlines": [
+        "The fundamental challenge of skill optimization",
+        "SkillOpt: a structured text-space optimizer",
+        "GEPA",
+        "EvoSkill",
+        "Trade-offs, costs, and practical considerations"
+      ],
+      "title": "How your agents can write and optimize their own skills",
+      "kicker": "Sunday Deep Dive"
+    },
+    {
+      "date": "20-06-2026",
+      "iso_date": "2026-06-20",
+      "subject": "Unsloth GLM-5.2 2-bit quant 🦙, OpenAI GPT-5.5 Instant doctor training",
+      "path": "data/2026/06-June/20-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/20-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/20-06-2026.html",
+      "headlines": [
+        "Unsloth shrinks GLM-5.2 by 84% so it runs locally on a 256GB Mac",
+        "AgentDeck plugin turns Stream Deck+ into a Claude Code control panel",
+        "Anthropic study of 400K Claude Code sessions shows task value grew 27% in six months"
+      ]
+    },
+    {
+      "date": "19-06-2026",
+      "iso_date": "2026-06-19",
+      "subject": "Midjourney skips imaging giants: 500K sensors, 60-sec body scan, $few",
+      "path": "data/2026/06-June/19-06-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/19-06-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/06-June/html/19-06-2026.html",
+      "headlines": [
+        "Midjourney launches a new medical imaging division",
+        "OpenCut is a free open-source video editor with 55K GitHub stars and no watermarks",
+        "Anthropic launches Claude Design to build UIs using your real design system"
       ]
     }
   ]

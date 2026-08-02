@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "date": "26-06-2026",
+  "iso_date": "2026-06-26",
+  "subject": "Qwen AgentWorld 🌍, Nous Research Pet Sprites 🐾, xAI Grok T3 Editor 💻",
+  "intro": "Agents are eating themselves. Qwen builds a world model so agents can train without touching real environments. Meta builds an agent that writes its own training data. The loop is closing fast. What we're watching is AI infrastructure turning recursive. Less human input, more compute doing the heavy lifting at every layer of the stack. The pet sprites are cute though. We respect it.",
+  "read_time": "6 min 24 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Qwen releases open-source world model that simulates 7 agent environments, beating GPT and Claude",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Nous Research adds animated pets to AI agents with 3,000 sprite options",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "xAI integrates Grok into T3 code editor via SuperGrok and X subscriptions",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Qwen releases open-source world model that simulates 7 agent environments, beating GPT and Claude",
+      "likes": 5326,
+      "body": "AI agents have gotten good at deciding what to do . But nobody trained them to understand how environments actually respond. Qwen just flipped that. Qwen-AgentWorld is a model trained from scratch to simulate environments, not just act in them. Think of it like a flight simulator for AI agents. Instead of spinning up real terminals, browsers, or Android devices, the model predicts exactly what those environments would return after any action. Why does that matter? Real environments are expensive, slow, and hard to control. This gives you an unlimited, cheap, tweakable sandbox to train and test agents against. The 35B open-weight model is on HuggingFace under Apache 2.0. You can run it with vLLM or SGLang today.",
+      "bullets": [
+        "Covers 7 domains in one model: MCP, Search, Terminal, SWE, Web, OS, Android",
+        "Sim RL beats real RL: 50.3% vs 45.6% F1 on live search tasks",
+        "Just predicting environments transfers to agent tasks with zero extra training",
+        "Tops AgentWorldBench, beating GPT-5.4 and Claude Opus 4.8"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782446618510-1vvt0k.png",
+      "read_more_url": "https://huggingface.co/collections/Qwen/qwen-agentworld"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Nous Research adds animated pets to AI agents with 3,000 sprite options",
+      "likes": 4218,
+      "body": "Your AI agent just got a buddy. Hermes agents can now have an animated pet sprite that lives in your interface and reacts to what your agent is actually doing in real time. Think of it like a mood ring for your agent. The pet changes its animation based on the agent's current state: This works in both the visual GUI and the text-based terminal interface. You get nearly 3,000 pets to pick from in the petdex gallery. You can also submit your own custom sprite if none of the existing ones fit your vibe. It sounds silly, but it actually gives you a quick visual read on what your agent is doing without staring at logs.",
+      "bullets": [
+        "Idle: pet chills out",
+        "Running a tool: pet gets active",
+        "Thinking: pet looks focused",
+        "Waiting, finishing, or failing: each gets its own reaction"
+      ],
+      "image_url": "https://alphasignal.ai/image/1776647823920-9z8qyt.png",
+      "read_more_url": "https://x.com/NousResearch/status/2069577310055846267"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "xAI integrates Grok into T3 code editor via SuperGrok and X subscriptions",
+      "likes": 3700,
+      "body": "If you already pay for SuperGrok or X Premium+, you just unlocked a free upgrade for your coding workflow. T3code is a free, open-source desktop app that gives you a visual dashboard to manage AI coding agents. Think of it as a control center where you can plan, build, test, and deploy using AI, without living in a terminal. Until now, Grok was missing from that lineup. That just changed. To get started, just open T3code, go to settings, and connect your X or SuperGrok credentials. That's it. The big unlock here: Grok Build , xAI's autonomous coding agent, is now inside a GUI. You get the power of an agentic coding tool without touching the command line.",
+      "bullets": [
+        "Connect your existing SuperGrok or X subscription, no API key needed",
+        "Use Grok as a full coding agent alongside Claude, Codex, and Cursor",
+        "Run diffs, commits, and long-running tasks visually",
+        "Zero extra payment if you already subscribe"
+      ],
+      "image_url": "https://alphasignal.ai/image/1776647823920-9z8qyt.png",
+      "read_more_url": "https://x.com/SpaceXAI/status/2070195830192320600"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Anthropic gives Claude its own identity and credentials for team channels",
+      "stat": {
+        "type": "likes",
+        "value": 3475
+      },
+      "url": "https://claude.com/blog/agent-identity-access-model"
+    },
+    {
+      "rank": 2,
+      "headline": "Claude-powered investing tool claims 69% returns beating S&P 500 by 46 points",
+      "stat": {
+        "type": "stars",
+        "value": 1752
+      },
+      "url": "https://github.com/xbtlin/ai-berkshire"
+    },
+    {
+      "rank": 3,
+      "headline": "Meta's Jason Weston releases Autodata, an agent that builds its own training data",
+      "stat": {
+        "type": "likes",
+        "value": 583
+      },
+      "url": "https://arxiv.org/abs/2606.25996"
+    },
+    {
+      "rank": 4,
+      "headline": "Zyphra finds all LLMs eventually lose the ability to learn new things",
+      "stat": {
+        "type": "likes",
+        "value": 508
+      },
+      "url": "https://arxiv.org/abs/2606.24752"
+    },
+    {
+      "rank": 5,
+      "headline": "OpenCode goes fully open source",
+      "stat": {
+        "type": "likes",
+        "value": 2913
+      },
+      "url": "https://github.com/anomalyco/opencode"
+    }
+  ]
+}

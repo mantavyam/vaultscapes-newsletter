@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;margin-top:30px;border:1px solid #6B6B6B;background-color:#ffffff;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Greeting -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:16px;
+                   line-height:24px;
+                   font-weight:bold;
+                   color:#000000;
+                   padding:0 0 10px 0;">
+<p style="margin:0;">Hey,</p>
+</td>
+</tr>
+</table>
+<!-- Intro text -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:15px;
+                   line-height:22px;
+                   font-weight:400;
+                   color:#000000;">
+          Two big data drops today, and they tell the same story from different angles.<br/><br/>Anthropic's 400K session study confirms what we suspected: <b>domain expertise now beats coding skill</b>. Lawyers and managers succeed at nearly the same rate as engineers. Meanwhile, OpenAI trained GPT-5.5 Instant with 600 doctors to cut health hallucinations 71%. Doctors as training signal, not just end users.<br/><br/>The pattern is clear: AI is absorbing specialist knowledge and redistributing it. Your moat is shrinking.
+        </td>
+</tr>
+</table>
+<!-- Ad block -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;" width="100%">
+<tr>
+<td style="padding:30px 0 0 0;">
+<table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation">
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: summary -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:0 20px;margin-bottom:30px;padding-bottom:20px;" width="100%">
+<tr>
+<td class="h1" style="font-family:system-ui, sans-serif;font-size:17px;font-weight:bold;line-height:22.5px;
+                      margin:0;padding:15px 0 10px 0;
+                      color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+  Summary
+</td>
+</tr>
+<tr>
+<td style="padding:0 0 10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="color:#000000 !important;">
+<p style="font-family:system-ui; font-size:13px;line-height:22.5px;font-weight:normal;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    Read time: 7 min 15 sec
+  </p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top Repo</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=OJJK86PPj7MTVotB&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Unsloth shrinks GLM-5.2 by 84% so it <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">runs locally</span> on a 256GB Mac
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top Repo</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=1uRBtEqgw6OFHi7B6&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ AgentDeck plugin turns Stream Deck+ into a <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">Claude Code control</span> panel
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=38i0dUHSxcedCGUq&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Anthropic study of 400K <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">Claude Code sessions</span> shows task value grew 27% in six months
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Signals</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=1bTKp8OzuORkaieW7&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    1. OpenAI trains GPT-5.5 Instant with 600 doctors to match <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">frontier health models</span>
+</a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=RPiP7vif0PlOiMF3&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    2. <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">Presented by Slack:</span> Teams reclaim up to 35% of their time with Slack automation. See 30 real-world ways to get started
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=1CECuKjpF9KB7J0ql&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    3. Microsoft opens <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">free 12-week</span>, 24-lesson AI course for beginners
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=1AVt9LT92FiVsY75I&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    4. UC Berkeley method turns everyday human videos into <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">robot hand training</span> data
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=11ar7d5IRc32OQwDR&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    5. Ostris shrinks Ideogram 4's 9B unconditional model into a <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">lightweight LoRA</span>
+</a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=NwZpM0CY4Se5G5Yj&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    6. Matt Pocock ships <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">AI coding skills</span> toolkit with 63% lower token costs
+  </a>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top Repo
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Unsloth shrinks GLM-5.2 by 84% so it runs locally on a 256GB Mac
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          5,769 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Unsloth shrinks GLM-5.2 by 84% so it runs locally " border="0" src="https://alphasignal.ai/image/1781887495013-j9rm3z.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>A 1.51TB AI model running on your laptop sounds impossible. It kind of is. But Unsloth just made it a lot less impossible.</p><p><b>GLM-5.2</b> is Z.ai's newest open model, and it's a big one: 744 billion parameters, MIT licensed, with a <b>1M token context window</b> (think: entire codebases at once). The catch? The full model weighs 1.51TB. Nobody has that lying around.</p><p>Unsloth's fix: quantization. That means shrinking the model by storing numbers less precisely, like compressing a photo. The <b>2-bit version drops to 238GB</b>, retaining ~82% accuracy. Important layers stay at higher precision so quality doesn't collapse.</p><p>What you actually need to run it:</p><ul><li>A 256GB Mac (M3/M4 Ultra) for single-box setup</li><li>Or a 24GB GPU plus 256GB RAM with memory offloading</li><li>Tools: llama.cpp, LM Studio, or Unsloth Studio</li></ul><p>This opens up private, offline coding agents and long-context tasks that previously required a cloud API. No usage fees, no rate limits, no data leaving your machine.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=OJJK86PPj7MTVotB&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top Repo
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    AgentDeck plugin turns Stream Deck+ into a Claude Code control panel
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          5,125 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="AgentDeck plugin turns Stream Deck+ into a Claude " border="0" src="https://alphasignal.ai/image/1781887499672-jdxng6.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Tired of tab-switching every time Claude Code needs your input? Someone just turned a <b>Stream Deck+</b> into a physical control panel for AI coding sessions, and it's exactly as cool as it sounds.</p><p>The setup uses <b>AgentDeck</b>, an open-source plugin that hooks into Claude Code's event system. Claude Code fires off signals whenever something happens in your session. AgentDeck catches those signals and pushes live status updates to the physical buttons and dials on your Stream Deck+.</p><p>What you can actually do with it:</p><ul><li>See which sessions are running, waiting for input, idle, or errored, all on physical buttons</li><li><b>Approve or deny permission requests</b> with a single button press, no keyboard needed</li><li>Monitor token usage and session cost per button</li><li>Manage multiple Claude Code sessions simultaneously from one surface</li></ul><p>To try it: grab the repo at <b>github.com/asheshgoplani/agent-deck</b> and run the install script. Currently Stream Deck+ only.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=1uRBtEqgw6OFHi7B6&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Anthropic study of 400K Claude Code sessions shows task value grew 27% in six months
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          5,081 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Anthropic study of 400K Claude Code sessions shows" border="0" src="https://alphasignal.ai/image/1781887527522-ziten0.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Anthropic just dropped a study on <b>400,000 Claude Code sessions</b> from 235,000 users, and the findings are worth knowing.</p><p>Here's what the data actually shows:</p><ul><li><b>You don't need to be a software engineer.</b> Every major occupation succeeded at coding tasks within 7 percentage points of software engineers. Lawyers, finance folks, managers -- all roughly the same success rate.</li><li><b>Sessions are getting more valuable.</b> Compared against freelance marketplace rates, the average session grew <b>27% in monetary value</b> from October to April. People are tackling harder, pricier work.</li><li><b>The work split is clear.</b> You handle ~70% of planning decisions. Claude handles ~80% of execution.</li><li><b>Expertise still matters.</b> Novices hit verified success 15% of the time. Intermediate and expert users land between 28-33%. The gap between intermediate and expert is small though -- being decent at a domain is enough.</li><li>Use cases are shifting. Code-fixing sessions dropped from 33% to 19%, while software operation grew from 14% to 21%.</li></ul><p>The big takeaway: Claude Code is becoming a tool for anyone with domain knowledge, not just people who can code.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=38i0dUHSxcedCGUq&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: signals -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;" width="100%"><tr><td style="padding:0 20px;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<!-- Section Title -->
+<tr>
+<td class="h1" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:17px;font-weight:bold;line-height:22.5px;
+             margin:0;padding:15px 0 10px 0;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;">
+    Signals
+    
+  </td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Item 1 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">1</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=1bTKp8OzuORkaieW7&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    OpenAI trains GPT-5.5 Instant with 600 doctors to match frontier health models
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">4,633 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 2 -->
+<tr>
+<td style="padding:15px 0;">
+
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 3 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">3</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=1CECuKjpF9KB7J0ql&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Microsoft opens free 12-week, 24-lesson AI course for beginners
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">48,214 Stars</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 4 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">4</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=1AVt9LT92FiVsY75I&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    UC Berkeley method turns everyday human videos into robot hand training data
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">506 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 5 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">5</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=11ar7d5IRc32OQwDR&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Ostris shrinks Ideogram 4's 9B unconditional model into a lightweight LoRA
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">305 Downloads</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 6 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">6</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b5138d299a112d42&amp;lid=NwZpM0CY4Se5G5Yj&amp;mid=67d15237-d8f7-44e1-bb01-735bbc17ddf5" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Matt Pocock ships AI coding skills toolkit with 63% lower token costs
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">4,416 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table>
+</body></html>

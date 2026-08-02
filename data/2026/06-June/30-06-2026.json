@@ -1,0 +1,121 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "30-06-2026",
+  "iso_date": "2026-06-30",
+  "subject": "🧠 Meta Brain2Qwerty v2 hits 78% word accuracy, no surgery needed",
+  "intro": "The theme today is democratization . Not the buzzword kind. The real kind. Meta reads your brain without surgery. MegaTrain trains 120B models on a single GPU. Cursor lets you ship code from your phone. Three very different headlines, one pattern: the expensive, exclusive, and complex is getting cheaper, smaller, and more accessible. Fast. We're watching the walls come down in real time.",
+  "read_time": "6 min 45 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Meta releases open-source brain-to-text decoder hitting 78% word accuracy",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Cursor ships iOS app so you can run and control coding agents from your phone",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "10 open-source GitHub tools that scrape any website for free",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Meta releases open-source brain-to-text decoder hitting 78% word accuracy",
+      "likes": 12736,
+      "body": "Your brain is basically a noisy electrical storm. Getting useful language out of that chaos is really hard. That's exactly what Brain2Qwerty v2 tackles. Researchers trained it on 22,000 sentences from 9 volunteers, each wearing an MEG device (a helmet that reads magnetic signals from your brain) while typing for 10 hours. The system watches those brain signals and tries to figure out what words you intended to type. The big jump from v1: it now decodes whole words and meaning, not just individual characters. It combines deep learning on raw brain signals with fine-tuned language models to clean up the noise. The full training code for both versions is now public, so you can build on it directly.",
+      "bullets": [
+        "61% average word accuracy across all participants",
+        "78% word accuracy for the top participant",
+        "50%+ of sentences decoded with one word error or less",
+        "Performance improves as you feed it more data"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782792228220-weiz2v.png",
+      "read_more_url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Cursor ships iOS app so you can run and control coding agents from your phone",
+      "likes": 11309,
+      "body": "Your laptop no longer needs to be open for code to get written. Cursor just launched a native iOS app , and it flips what a mobile coding tool even means. It is not a tiny code editor on your phone. It is a control center for AI agents doing the work while you are away from your desk. Here is what you can actually do: Cloud agents run inside isolated virtual machines, so they can test and verify their own work. You can also hand off a session from local to cloud mid-task, then pull it back before merging. Available now in public beta on all paid plans, with 75% off Composer 2.5 runs in the app.",
+      "bullets": [
+        "Pick a repo, describe a task by voice or slash command, and launch a cloud agent that keeps running even with your laptop closed",
+        "Use Remote Control to steer agents already running on your local machine, straight from your phone",
+        "Get lock screen Live Activity updates when an agent finishes or needs your input",
+        "Review diffs and merge PRs directly from the app"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782792258378-rg8jdv.png",
+      "read_more_url": "https://apps.apple.com/us/app/cursor/id6767085653"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "10 open-source GitHub tools that scrape any website for free",
+      "likes": 5241,
+      "body": "Web scraping used to mean paying $2,000/month for enterprise tools or begging for API access. That era is over. A viral thread just mapped out 10 open-source repos that give you the same power for free. Here is what the stack covers: Together these let you build AI training datasets and RAG pipelines without touching a paid API.",
+      "bullets": [
+        "Firecrawl - Point it at any site, it crawls every page, renders JavaScript, and returns clean structured data your AI can read instantly. 130k stars.",
+        "browser-use - An AI agent that controls a real browser like a human. Clicks, scrolls, logs in, fills forms. Built by two ETH Zurich researchers, now at 100k stars . Reaches pages simple scrapers cannot.",
+        "Crawl4AI - Converts any site to clean markdown ready for LLMs. No API keys, no accounts, no per-page fees. Apache 2.0.",
+        "Microsoft MarkItDown - Converts PDFs, Office docs, and images into clean markdown. Entire data pipelines are built around this.",
+        "Crawlee - Full scraping framework with proxy rotation, auto-retries, and anti-detection built in. The stack scraping companies charge thousands for."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782792129204-vnd1tm.png",
+      "read_more_url": "https://github.com/browser-use/browser-use"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Anthropic brings Claude Opus 4.8 to Azure with native billing and prompt caching",
+      "stat": {
+        "type": "likes",
+        "value": 3811
+      },
+      "url": "https://claude.com/blog/claude-in-microsoft-foundry"
+    },
+    {
+      "rank": 2,
+      "headline": "Open-source tool runs full AI-powered penetration tests from plain text commands",
+      "stat": {
+        "type": "stars",
+        "value": 1085
+      },
+      "url": "https://github.com/Unclecheng-li/VulnClaw"
+    },
+    {
+      "rank": 3,
+      "headline": "MegaTrain trains 120B models on a single GPU by storing weights in CPU memory",
+      "stat": {
+        "type": "likes",
+        "value": 1136
+      },
+      "url": "https://arxiv.org/abs/2604.05091"
+    },
+    {
+      "rank": 4,
+      "headline": "JetSpec hits 9.64x speed boost on Qwen3 models with smarter speculative decoding",
+      "stat": {
+        "type": "likes",
+        "value": 629
+      },
+      "url": "https://arxiv.org/abs/2606.18394"
+    },
+    {
+      "rank": 5,
+      "headline": "DeepSeek's new decoding trick boosts LLM throughput by up to 400%",
+      "stat": {
+        "type": "likes",
+        "value": 3471
+      },
+      "url": "https://github.com/deepseek-ai/DeepSpec"
+    }
+  ]
+}

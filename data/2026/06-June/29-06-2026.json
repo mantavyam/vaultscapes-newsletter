@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "date": "29-06-2026",
+  "iso_date": "2026-06-29",
+  "subject": "Anthropic Mythos 5 back for 100 orgs while Fable 5 stays locked",
+  "intro": "The US government is now a de facto gatekeeper for frontier AI. Both OpenAI and Anthropic launched their most powerful models this week, and both got the same answer: not so fast. GPT-5.6 Sol, Terra, Luna. Claude Mythos 5 back for ~100 orgs. The pattern is clear: the more capable the model, the more Washington wants a seat at the table. We're watching a new access tier being invented in real time. Not free, not paywalled. Government-walled.",
+  "read_time": "6 min 44 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "OpenAI previews GPT-5.6 family with three models spanning speed, cost, and power",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic restores its top cybersecurity model to US critical infrastructure operators",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Nous Research ships gated model blends that beat Claude and GPT-5.5 on benchmarks",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "OpenAI previews GPT-5.6 family with three models spanning speed, cost, and power",
+      "likes": 60511,
+      "body": "OpenAI just dropped a new model family: GPT-5.6 Sol, Terra, and Luna . Three models, one for every budget and use case. Here is what each one is for: Sol topped Terminal-Bench 2.1 , a test for complex command-line workflows requiring planning and tool use. It also excels at vulnerability research and cybersecurity tasks. One catch: the U.S. government asked OpenAI to limit the rollout to roughly 20 trusted partner organizations for now. Broader API and ChatGPT access is coming in the next few weeks.",
+      "bullets": [
+        "Sol is the flagship. Best for hard problems: complex coding, security research, long multi-step tasks. Priced at $5 input / $30 output per 1M tokens.",
+        "Terra matches GPT-5.5 quality at 2x lower cost ($2.50/$15). Swap it in for your current GPT-5.5 workloads and save money immediately.",
+        "Luna is the cheapest at $1/$6. Built for high-volume, fast tasks like summarization and routine automation."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782705903090-0bmo9g.png",
+      "read_more_url": "https://openai.com/index/previewing-gpt-5-6-sol/"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic restores its top cybersecurity model to US critical infrastructure operators",
+      "likes": 30123,
+      "body": "Anthropic's two most powerful AI models got pulled offline two weeks ago under a US government directive. Here's where things stand now. Claude Mythos 5 is Anthropic's strongest cybersecurity model. It can autonomously find software vulnerabilities at a scale that genuinely spooked the government. Think: thousands of high-severity flaws across every major OS and browser, including a 27-year-old OpenBSD bug and chained Linux kernel exploits. That power is exactly why it got locked down. The concern: bad actors could use it to attack systems just as fast as defenders use it to protect them. Now, Mythos 5 is partially back. Access is authorized for roughly 100 trusted US organizations , primarily cybersecurity companies and critical infrastructure providers. Anthropic is actively negotiating to bring Fable 5 back for general use. No access yet for most of us, but the door is opening.",
+      "bullets": [
+        "Project Glasswing members like Apple, Google, Cisco, Nvidia, and Microsoft are cleared to resume access.",
+        "API users and international customers are still limited to older Claude models.",
+        "Fable 5 , the general-use version, remains offline for everyone else."
+      ],
+      "image_url": "https://alphasignal.ai/image/1776647823920-9z8qyt.png",
+      "read_more_url": "https://x.com/AnthropicAI/status/2070665903440871779"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Nous Research ships gated model blends that beat Claude and GPT-5.5 on benchmarks",
+      "likes": 7118,
+      "body": "The best AI models are locked behind waitlists. Most of us can't touch them. Hermes Agent just built a workaround. It's called Mixture of Agents (MoA) : instead of one model answering your question, several models tackle it at once. Each one responds independently. Then a final \"aggregator\" model reads all those answers and writes one clean output. Multiple brains, one response. Numbers from their internal benchmark: To use it: run hermes model and pick a MoA preset, or trigger it inline with /moa. Your preset shows up like any normal model. Memory, tool calls, and long sessions all still work. You can also swap presets per task using slash commands. No gated access required.",
+      "bullets": [
+        "8% better than Claude Opus 4.8 running solo",
+        "11% better than GPT-5.5 running solo",
+        "A two-model combo scored 82% vs 76% for Opus alone"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782706000243-n2wgve.png",
+      "read_more_url": "https://x.com/NousResearch/status/2070610321278988385"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenAI ships Codex app update with faster scrolling and smarter navigation",
+      "stat": {
+        "type": "likes",
+        "value": 4872
+      },
+      "url": "https://x.com/OpenAIDevs/status/2070922791529091376"
+    },
+    {
+      "rank": 2,
+      "headline": "NumPy remains the go-to open-source math library powering Python science",
+      "stat": {
+        "type": "stars",
+        "value": 32385
+      },
+      "url": "https://github.com/numpy/numpy"
+    },
+    {
+      "rank": 3,
+      "headline": "New free book covers the full stack of building agentic AI systems",
+      "stat": {
+        "type": "likes",
+        "value": 1739
+      },
+      "url": "https://arxiv.org/abs/2606.24937"
+    },
+    {
+      "rank": 4,
+      "headline": "Study finds LLMs recycle the same 11 words in 88% of generated stories",
+      "stat": {
+        "type": "likes",
+        "value": 1182
+      },
+      "url": "https://arxiv.org/abs/2605.26492"
+    },
+    {
+      "rank": 5,
+      "headline": "Codebase-memory indexes the Linux kernel in 3 minutes, cutting agent tool calls by 2x",
+      "stat": {
+        "type": "likes",
+        "value": 4370
+      },
+      "url": "https://github.com/DeusData/codebase-memory-mcp"
+    }
+  ]
+}

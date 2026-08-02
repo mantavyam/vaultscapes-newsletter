@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;margin-top:30px;border:1px solid #6B6B6B;background-color:#ffffff;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Greeting -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:16px;
+                   line-height:24px;
+                   font-weight:bold;
+                   color:#000000;
+                   padding:0 0 10px 0;">
+<p style="margin:0;">Hey,</p>
+</td>
+</tr>
+</table>
+<!-- Intro text -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:15px;
+                   line-height:22px;
+                   font-weight:400;
+                   color:#000000;">
+          The real AI arms race right now isn't about who has the biggest model. It's about who can afford to run it.<br/><br/>Anthropic just showed us the playbook: use your frontier model as a brain, not a workhorse. Let cheaper models do the heavy lifting. 96% performance at half the cost is not a compromise, it's just good engineering. Google's Gemma 4 is pushing the same direction from below.<br/><br/>Powerful AI is getting commoditized fast. The moat is efficiency.
+        </td>
+</tr>
+</table>
+<!-- Ad block -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;" width="100%">
+<tr>
+<td style="padding:30px 0 0 0;">
+<table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation">
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: summary -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:0 20px;margin-bottom:30px;padding-bottom:20px;" width="100%">
+<tr>
+<td class="h1" style="font-family:system-ui, sans-serif;font-size:17px;font-weight:bold;line-height:22.5px;
+                      margin:0;padding:15px 0 10px 0;
+                      color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+  Summary
+</td>
+</tr>
+<tr>
+<td style="padding:0 0 10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="color:#000000 !important;">
+<p style="font-family:system-ui; font-size:13px;line-height:22.5px;font-weight:normal;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    Read time: 8 min 2 sec
+  </p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=9X5KWo89N3GpIljx&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Anthropic's Claude agent trick hits 96% top model performance at <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">half the cost</span>
+</a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=1hRvYzl5jZXHN63KW&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Anthropic brings Claude <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">background tasks</span> to mobile so work continues without you
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=Cw0jYQAXkbBlcvB1&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Anthropic offers <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">open-source maintainers</span> 6 months of free Claude Max
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Signals</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=1dZCL3O2lrwxcjnLX&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    1. Stanford builds <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">Git-style version control</span> for live AI agent runs
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=lhTyFxKbbzzy5SEI&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    2. <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">Presented by Granola:</span> AI meeting notes for devs who'd rather be coding. Granola captures, transcribes, and organizes everything
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=1bmcyPM2lrCV1aaKq&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    3. Microsoft's Guidance library lets you <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">control LLM output</span> with regex and loops
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=Dvw7eSmUfwUS49kj&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    4. Google releases Gemma 4 <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">open-weight models</span> from 2B to 31B with built-in reasoning
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=4yXQzThYbSjE6UMs&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    5. Zyphra releases Zamba2-1.2B, a <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">tiny hybrid chat</span> model you can run locally
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=2FFcfWb2hDkBbmIg&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    6. Chinese lab drops open-source tool that turns one photo and audio into a <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">talking avatar</span>
+</a>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Anthropic's Claude agent trick hits 96% top model performance at half the cost
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          19,437 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Anthropic's Claude agent trick hits 96% top model " border="0" src="https://alphasignal.ai/image/1783483443161-hcvbgt.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Fable 5 is Anthropic's most powerful model, but it's also the priciest. Running everything through it is a fast way to burn your budget. So Anthropic shared two smart patterns to get near-Fable quality at a fraction of the cost.</p><p><b>Pattern 1: Fable as Advisor.</b> Sonnet 5 does all the heavy lifting. It only calls Fable 5 once per task when it needs guidance. Result? <b>92% of Fable's performance at 63% of the cost</b> on coding benchmarks.</p><p><b>Pattern 2: Fable as Orchestrator.</b> Fable plans the task and breaks it into pieces. Sonnet 5 workers execute each piece. Most tokens are billed at the cheaper Sonnet rate. On research tasks, this hit <b>96% of Fable's performance at 46% of the cost.</b></p><p>Both patterns are supported natively in Claude Managed Agents. Each sub-agent keeps its own cache, so repeated context isn't paid for twice. You can set this up by pinning models in subagent definitions using the <b>model field</b> in Claude Code.</p><p>This opens up running complex, multi-step AI pipelines at production scale without the frontier model bill.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=9X5KWo89N3GpIljx&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Anthropic brings Claude background tasks to mobile so work continues without you
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          16,654 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Anthropic brings Claude background tasks to mobile" border="0" src="https://alphasignal.ai/image/1783483464393-ggr41n.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p><b>Claude Cowork</b> just went cross-device. It used to live only on your desktop. Now it runs on web and mobile too, meaning tasks you kick off at your desk keep running after you close your laptop.</p><p>Here is what actually changes for you:</p><ul><li><b>Tasks run without you.</b> Close the laptop, Claude keeps going. No device needs to stay online.</li><li><b>Scheduled tasks work overnight.</b> Set a 6am client brief, and Claude pulls email threads, builds the doc, and leaves a draft ready for your review.</li><li>When Claude hits a decision only you can make, it pings your phone instead of stopping.</li><li>Chat and Cowork now share one tab on web and desktop, so your projects and files live in one place.</li><li><b>Doubled usage limits</b> are extended through August 5, so you can throw bigger tasks at it.</li></ul><p>Beta rolls out to Max plan first. To try it, just start a task the same way you start a conversation.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=1hRvYzl5jZXHN63KW&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Anthropic offers open-source maintainers 6 months of free Claude Max
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          10,857 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Anthropic offers open-source maintainers 6 months " border="0" src="https://alphasignal.ai/image/1783483505915-znasfb.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>If you maintain an open source project, Anthropic just handed you something real. <b>Claude for Open Source</b> gives qualifying maintainers six months of free Claude Max 20x, which normally runs <b>$200/month</b> ($1,200 total value).</p><p>So what is Max 20x exactly? Think of it as 20 times more usage than the standard $20 Pro plan. You stop hitting that wall mid-afternoon where Claude says "slow down." You get priority access during peak hours, full Claude Code access in your terminal, and roughly 900 messages per session window.</p><p>What does this actually unlock for you?</p><ul><li>Run full agentic refactoring loops across large repos without getting cut off</li><li>Review and triage issues at scale using Extended Thinking mode</li><li>Keep Claude Code running all day without rationing prompts</li></ul><p>To qualify, your project needs <b>5,000+ GitHub stars</b> or 1M+ monthly npm downloads, with recent commits or PR activity. Maintainers, core contributors, and anyone keeping a critical package alive are all eligible. Apply at claude.com/contact-sales/claude-for-oss. Note: this does not include API access.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=Cw0jYQAXkbBlcvB1&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: signals -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;" width="100%"><tr><td style="padding:0 20px;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<!-- Section Title -->
+<tr>
+<td class="h1" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:17px;font-weight:bold;line-height:22.5px;
+             margin:0;padding:15px 0 10px 0;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;">
+    Signals
+    
+  </td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Item 1 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">1</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=1dZCL3O2lrwxcjnLX&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Stanford builds Git-style version control for live AI agent runs
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">3,023 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 2 -->
+<tr>
+<td style="padding:15px 0;">
+
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 3 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">3</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=1bmcyPM2lrCV1aaKq&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Microsoft's Guidance library lets you control LLM output with regex and loops
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">21,612 Stars</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 4 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">4</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=Dvw7eSmUfwUS49kj&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Google releases Gemma 4 open-weight models from 2B to 31B with built-in reasoning
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">903 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 5 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">5</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=4yXQzThYbSjE6UMs&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Zyphra releases Zamba2-1.2B, a tiny hybrid chat model you can run locally
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">408,000 Downloads</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 6 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">6</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=03ad367948c9cbf4&amp;lid=2FFcfWb2hDkBbmIg&amp;mid=64615062-80e1-4f58-b447-81981d138a26" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Chinese lab drops open-source tool that turns one photo and audio into a talking avatar
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">2,924 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table>
+</body></html>

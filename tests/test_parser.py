@@ -23,7 +23,8 @@ def doc():
 
 
 def test_metadata(doc):
-    assert doc["version"] == 1
+    assert doc["version"] == 2
+    assert doc["type"] == "digest"
     assert doc["date"] == "14-07-2026"          # Date header 14:33 UTC -> 20:03 IST same day
     assert doc["iso_date"] == "2026-07-14"
     assert doc["read_time"] == "6 min 55 sec"

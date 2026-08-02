@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "date": "20-06-2026",
+  "iso_date": "2026-06-20",
+  "subject": "Unsloth GLM-5.2 2-bit quant 🦙, OpenAI GPT-5.5 Instant doctor training",
+  "intro": "Two big data drops today, and they tell the same story from different angles. Anthropic's 400K session study confirms what we suspected: domain expertise now beats coding skill . Lawyers and managers succeed at nearly the same rate as engineers. Meanwhile, OpenAI trained GPT-5.5 Instant with 600 doctors to cut health hallucinations 71%. Doctors as training signal, not just end users. The pattern is clear: AI is absorbing specialist knowledge and redistributing it. Your moat is shrinking.",
+  "read_time": "7 min 15 sec",
+  "summary": [
+    {
+      "category": "Top Repo",
+      "headline": "Unsloth shrinks GLM-5.2 by 84% so it runs locally on a 256GB Mac",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "AgentDeck plugin turns Stream Deck+ into a Claude Code control panel",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic study of 400K Claude Code sessions shows task value grew 27% in six months",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Repo",
+      "headline": "Unsloth shrinks GLM-5.2 by 84% so it runs locally on a 256GB Mac",
+      "likes": 5769,
+      "body": "A 1.51TB AI model running on your laptop sounds impossible. It kind of is. But Unsloth just made it a lot less impossible. GLM-5.2 is Z.ai's newest open model, and it's a big one: 744 billion parameters, MIT licensed, with a 1M token context window (think: entire codebases at once). The catch? The full model weighs 1.51TB. Nobody has that lying around. Unsloth's fix: quantization. That means shrinking the model by storing numbers less precisely, like compressing a photo. The 2-bit version drops to 238GB , retaining ~82% accuracy. Important layers stay at higher precision so quality doesn't collapse. What you actually need to run it: This opens up private, offline coding agents and long-context tasks that previously required a cloud API. No usage fees, no rate limits, no data leaving your machine.",
+      "bullets": [
+        "A 256GB Mac (M3/M4 Ultra) for single-box setup",
+        "Or a 24GB GPU plus 256GB RAM with memory offloading",
+        "Tools: llama.cpp, LM Studio, or Unsloth Studio"
+      ],
+      "image_url": "https://alphasignal.ai/image/1781887495013-j9rm3z.png",
+      "read_more_url": "https://github.com/unslothai/unsloth"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "AgentDeck plugin turns Stream Deck+ into a Claude Code control panel",
+      "likes": 5125,
+      "body": "Tired of tab-switching every time Claude Code needs your input? Someone just turned a Stream Deck+ into a physical control panel for AI coding sessions, and it's exactly as cool as it sounds. The setup uses AgentDeck , an open-source plugin that hooks into Claude Code's event system. Claude Code fires off signals whenever something happens in your session. AgentDeck catches those signals and pushes live status updates to the physical buttons and dials on your Stream Deck+. What you can actually do with it: To try it: grab the repo at github.com/asheshgoplani/agent-deck and run the install script. Currently Stream Deck+ only.",
+      "bullets": [
+        "See which sessions are running, waiting for input, idle, or errored, all on physical buttons",
+        "Approve or deny permission requests with a single button press, no keyboard needed",
+        "Monitor token usage and session cost per button",
+        "Manage multiple Claude Code sessions simultaneously from one surface"
+      ],
+      "image_url": "https://alphasignal.ai/image/1781887499672-jdxng6.png",
+      "read_more_url": "https://github.com/asheshgoplani/agent-deck"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Anthropic study of 400K Claude Code sessions shows task value grew 27% in six months",
+      "likes": 5081,
+      "body": "Anthropic just dropped a study on 400,000 Claude Code sessions from 235,000 users, and the findings are worth knowing. Here's what the data actually shows: The big takeaway: Claude Code is becoming a tool for anyone with domain knowledge, not just people who can code.",
+      "bullets": [
+        "You don't need to be a software engineer. Every major occupation succeeded at coding tasks within 7 percentage points of software engineers. Lawyers, finance folks, managers -- all roughly the same success rate.",
+        "Sessions are getting more valuable. Compared against freelance marketplace rates, the average session grew 27% in monetary value from October to April. People are tackling harder, pricier work.",
+        "The work split is clear. You handle ~70% of planning decisions. Claude handles ~80% of execution.",
+        "Expertise still matters. Novices hit verified success 15% of the time. Intermediate and expert users land between 28-33%. The gap between intermediate and expert is small though -- being decent at a domain is enough.",
+        "Use cases are shifting. Code-fixing sessions dropped from 33% to 19%, while software operation grew from 14% to 21%."
+      ],
+      "image_url": "https://alphasignal.ai/image/1781887527522-ziten0.png",
+      "read_more_url": "https://www.anthropic.com/research/claude-code-expertise"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenAI trains GPT-5.5 Instant with 600 doctors to match frontier health models",
+      "stat": {
+        "type": "likes",
+        "value": 4633
+      },
+      "url": "https://openai.com/index/improving-health-intelligence-in-chatgpt/"
+    },
+    {
+      "rank": 2,
+      "headline": "Microsoft opens free 12-week, 24-lesson AI course for beginners",
+      "stat": {
+        "type": "stars",
+        "value": 48214
+      },
+      "url": "https://github.com/microsoft/AI-For-Beginners"
+    },
+    {
+      "rank": 3,
+      "headline": "UC Berkeley method turns everyday human videos into robot hand training data",
+      "stat": {
+        "type": "likes",
+        "value": 506
+      },
+      "url": "https://arxiv.org/abs/2606.19333"
+    },
+    {
+      "rank": 4,
+      "headline": "Ostris shrinks Ideogram 4's 9B unconditional model into a lightweight LoRA",
+      "stat": {
+        "type": "downloads",
+        "value": 305
+      },
+      "url": "https://huggingface.co/ostris/ideogram_4_unconditional_lora"
+    },
+    {
+      "rank": 5,
+      "headline": "Matt Pocock ships AI coding skills toolkit with 63% lower token costs",
+      "stat": {
+        "type": "likes",
+        "value": 4416
+      },
+      "url": "https://github.com/mattpocock/skills"
+    }
+  ]
+}

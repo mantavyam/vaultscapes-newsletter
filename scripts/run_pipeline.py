@@ -29,12 +29,19 @@ from utils.helpers import ROOT, LinkResolver, load_env
 QUARANTINE_DIR = ROOT / "quarantine"
 
 
-def process_eml(path: Path, resolver: LinkResolver) -> None:
+def process_eml(path: Path, resolver: LinkResolver) -> bool:
+    """Publish one issue. Returns False when the email was skipped."""
     payload = cleaner.load_eml(path)
     print(f"processing: {payload.subject[:70]} ({payload.message_id})")
     try:
         cleaned = cleaner.clean(payload.html)
         payload_json = feed_parser.parse(payload, cleaned, resolver)
+    except cleaner.NotADigestError as exc:
+        # Sponsored one-offs share the sender but carry no digest content.
+        # Record them so they aren't re-fetched, and move on.
+        print(f"  skipped: {exc}")
+        publish.mark_processed(payload.message_id)
+        return False
     except cleaner.FormatDriftError:
         stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
         QUARANTINE_DIR.mkdir(parents=True, exist_ok=True)
@@ -46,6 +53,7 @@ def process_eml(path: Path, resolver: LinkResolver) -> None:
     publish.publish_issue(
         payload_json, cleaned.cleaned_html, payload.message_id, payload.date_header
     )
+    return True
 
 
 def main() -> int:
@@ -75,9 +83,9 @@ def main() -> int:
             print("No new newsletter emails — nothing to do.")
             return 0
 
-    for path in paths:
-        process_eml(path, resolver)
-    print(f"done: {len(paths)} issue(s) published")
+    published = sum(process_eml(path, resolver) for path in paths)
+    skipped = len(paths) - published
+    print(f"done: {published} issue(s) published, {skipped} skipped")
     return 0
 
 

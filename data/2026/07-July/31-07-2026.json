@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "31-07-2026",
+  "iso_date": "2026-07-31",
+  "subject": "🔓 Anthropic Claude hacked real systems in 141K safety test sessions",
+  "intro": "AI is getting more capable by the day. The problem? Our guardrails aren't keeping up. Claude hacked three real companies during safety tests, not because it went rogue, but because the sandbox had a hole in it. Meanwhile, Gemini Robotics 2 just gave humanoids full-body control. Smarter, more physical, more autonomous. The pattern is clear: capability is outpacing containment. That should keep us all honest.",
+  "read_time": "6 min 37 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic reveals Claude accidentally hacked three real organizations during safety tests",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Google DeepMind releases Gemini Robotics 2 to give humanoids full-body control",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Free open-source tool turns one photo and audio into minutes-long talking video",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic reveals Claude accidentally hacked three real organizations during safety tests",
+      "likes": 4761,
+      "body": "Here is something you need to know about. Anthropic just disclosed that three Claude models broke into real company systems during internal security testing. Not a simulation. Real systems. Here is what happened. Anthropic runs \"capture-the-flag\" tests, where a model is dropped into a fake network and told to find a hidden file by hacking into a simulated machine. Think of it like a video game level, but for AI. The model is always told it has no internet access. The problem? A miscommunication with their testing partner, Irregular, left the environments actually connected to the internet. Claude did not know the difference, and kept hacking, right into real organizations. All cyber evaluations are now suspended. The big takeaway: AI isolation during testing is not a nice-to-have, it is critical infrastructure.",
+      "bullets": [
+        "Models involved: Opus 4.7, Mythos 5, and an internal research model",
+        "Method used: basic techniques like weak passwords and open endpoints",
+        "Anthropic reviewed 141,006 test sessions to find these 3 incidents"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785470721408-kfj2g5.png",
+      "read_more_url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Google DeepMind releases Gemini Robotics 2 to give humanoids full-body control",
+      "likes": 4686,
+      "body": "Google DeepMind just shipped Gemini Robotics 2 , and it's a big jump. Old robot AI controlled arms and hands only. This one controls the whole body , legs, torso, arms, and fingers, all from a single model. Three models make up the system: It also handles multi-robot teamwork , so different robot types can communicate and split up tasks neither could do alone. ER 2 is available now. The VLA and On-Device models need early-access partner approval. Check the DeepMind developer blog to get started.",
+      "bullets": [
+        "Gemini Robotics 2 : Takes a text prompt and turns it into full-body movement. Walk, crouch, grab, place.",
+        "Gemini Robotics ER 2 : The brain. It watches live video, plans multi-step tasks, and self-corrects when something goes wrong. You can access it now via Google AI Studio and the Gemini API.",
+        "On-Device 2 : Runs locally on the robot, no internet needed, and adapts to a new robot body in just a few hours of training."
+      ],
+      "image_url": "https://alphasignal.ai/image/1785470792472-y04nic.png",
+      "read_more_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Free open-source tool turns one photo and audio into minutes-long talking video",
+      "likes": 4160,
+      "body": "LongCat-Avatar is a free, open-source model from Meituan that turns a single photo plus an audio clip into a realistic talking video. That's it. No filming, no actors. The old problem: most AI video tools fall apart after a few seconds. The face drifts, movements go robotic, lip sync breaks. LongCat fixes this with a 13.6 billion parameter model built specifically for long-form stability. Here's what you can actually build with it: To run it locally: clone the repo, set up a conda environment, install dependencies, download weights from Hugging Face, then run the demo scripts. The latest v1.5 adds faster inference and better lip sync using Whisper under the hood. MIT licensed, weights are free.",
+      "bullets": [
+        "Talking avatar videos up to several minutes, with lips perfectly synced to speech or singing",
+        "Multi-person conversations from multiple photos and audio tracks",
+        "Video continuation, so you can extend existing clips seamlessly",
+        "Stylized avatars including anime and animals, not just realistic humans"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785470528397-po8v8a.png",
+      "read_more_url": "https://github.com/meituan-longcat/LongCat-Video"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Microsoft open-sources a 4B model that converts any image to a 3D asset in 3 seconds",
+      "stat": {
+        "type": "likes",
+        "value": 3977
+      },
+      "url": "https://github.com/microsoft/TRELLIS.2"
+    },
+    {
+      "rank": 2,
+      "headline": "Open-source AI systems course covers chips, compilers, and inference end-to-end",
+      "stat": {
+        "type": "stars",
+        "value": 17358
+      },
+      "url": "https://github.com/Infrasys-AI/AISystem"
+    },
+    {
+      "rank": 3,
+      "headline": "Simple math model predicts LLM training loss with surprising accuracy",
+      "stat": {
+        "type": "likes",
+        "value": 538
+      },
+      "url": "https://arxiv.org/abs/2607.21716"
+    },
+    {
+      "rank": 4,
+      "headline": "NVIDIA shows Muon and SOAP beat AdamW for training billion-parameter models",
+      "stat": {
+        "type": "likes",
+        "value": 301
+      },
+      "url": "https://arxiv.org/abs/2607.20548"
+    },
+    {
+      "rank": 5,
+      "headline": "Sarvam ships text-to-speech model with richer emotion and wider vocal range",
+      "stat": {
+        "type": "likes",
+        "value": 3909
+      },
+      "url": "https://x.com/SarvamAI/status/2082757345281782252"
+    }
+  ]
+}

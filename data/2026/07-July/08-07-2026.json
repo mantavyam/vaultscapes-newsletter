@@ -1,0 +1,115 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "08-07-2026",
+  "iso_date": "2026-07-08",
+  "subject": "Anthropic cuts frontier AI costs in half without sacrificing performan",
+  "intro": "The real AI arms race right now isn't about who has the biggest model. It's about who can afford to run it. Anthropic just showed us the playbook: use your frontier model as a brain, not a workhorse. Let cheaper models do the heavy lifting. 96% performance at half the cost is not a compromise, it's just good engineering. Google's Gemma 4 is pushing the same direction from below. Powerful AI is getting commoditized fast. The moat is efficiency.",
+  "read_time": "8 min 2 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic's Claude agent trick hits 96% top model performance at half the cost",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic brings Claude background tasks to mobile so work continues without you",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic offers open-source maintainers 6 months of free Claude Max",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic's Claude agent trick hits 96% top model performance at half the cost",
+      "likes": 19437,
+      "body": "Fable 5 is Anthropic's most powerful model, but it's also the priciest. Running everything through it is a fast way to burn your budget. So Anthropic shared two smart patterns to get near-Fable quality at a fraction of the cost. Pattern 1: Fable as Advisor. Sonnet 5 does all the heavy lifting. It only calls Fable 5 once per task when it needs guidance. Result? 92% of Fable's performance at 63% of the cost on coding benchmarks. Pattern 2: Fable as Orchestrator. Fable plans the task and breaks it into pieces. Sonnet 5 workers execute each piece. Most tokens are billed at the cheaper Sonnet rate. On research tasks, this hit 96% of Fable's performance at 46% of the cost. Both patterns are supported natively in Claude Managed Agents. Each sub-agent keeps its own cache, so repeated context isn't paid for twice. You can set this up by pinning models in subagent definitions using the model field in Claude Code. This opens up running complex, multi-step AI pipelines at production scale without the frontier model bill.",
+      "bullets": [],
+      "image_url": "https://alphasignal.ai/image/1783483443161-hcvbgt.png",
+      "read_more_url": "https://github.com/anthropics/claude-cookbooks/blob/main/managed_agents/CMA_plan_big_execute_small.ipynb"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic brings Claude background tasks to mobile so work continues without you",
+      "likes": 16654,
+      "body": "Claude Cowork just went cross-device. It used to live only on your desktop. Now it runs on web and mobile too, meaning tasks you kick off at your desk keep running after you close your laptop. Here is what actually changes for you: Beta rolls out to Max plan first. To try it, just start a task the same way you start a conversation.",
+      "bullets": [
+        "Tasks run without you. Close the laptop, Claude keeps going. No device needs to stay online.",
+        "Scheduled tasks work overnight. Set a 6am client brief, and Claude pulls email threads, builds the doc, and leaves a draft ready for your review.",
+        "When Claude hits a decision only you can make, it pings your phone instead of stopping.",
+        "Chat and Cowork now share one tab on web and desktop, so your projects and files live in one place.",
+        "Doubled usage limits are extended through August 5, so you can throw bigger tasks at it."
+      ],
+      "image_url": "https://alphasignal.ai/image/1783483464393-ggr41n.png",
+      "read_more_url": "https://claude.com/blog/cowork-web-mobile/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Anthropic offers open-source maintainers 6 months of free Claude Max",
+      "likes": 10857,
+      "body": "If you maintain an open source project, Anthropic just handed you something real. Claude for Open Source gives qualifying maintainers six months of free Claude Max 20x, which normally runs $200/month ($1,200 total value). So what is Max 20x exactly? Think of it as 20 times more usage than the standard $20 Pro plan. You stop hitting that wall mid-afternoon where Claude says \"slow down.\" You get priority access during peak hours, full Claude Code access in your terminal, and roughly 900 messages per session window. What does this actually unlock for you? To qualify, your project needs 5,000+ GitHub stars or 1M+ monthly npm downloads, with recent commits or PR activity. Maintainers, core contributors, and anyone keeping a critical package alive are all eligible. Apply at claude.com/contact-sales/claude-for-oss. Note: this does not include API access.",
+      "bullets": [
+        "Run full agentic refactoring loops across large repos without getting cut off",
+        "Review and triage issues at scale using Extended Thinking mode",
+        "Keep Claude Code running all day without rationing prompts"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783483505915-znasfb.png",
+      "read_more_url": "https://claude.com/contact-sales/claude-for-oss"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Stanford builds Git-style version control for live AI agent runs",
+      "stat": {
+        "type": "likes",
+        "value": 3023
+      },
+      "url": "https://github.com/shepherd-agents/shepherd"
+    },
+    {
+      "rank": 2,
+      "headline": "Microsoft's Guidance library lets you control LLM output with regex and loops",
+      "stat": {
+        "type": "stars",
+        "value": 21612
+      },
+      "url": "https://github.com/guidance-ai/guidance"
+    },
+    {
+      "rank": 3,
+      "headline": "Google releases Gemma 4 open-weight models from 2B to 31B with built-in reasoning",
+      "stat": {
+        "type": "likes",
+        "value": 903
+      },
+      "url": "https://arxiv.org/abs/2607.02770"
+    },
+    {
+      "rank": 4,
+      "headline": "Zyphra releases Zamba2-1.2B, a tiny hybrid chat model you can run locally",
+      "stat": {
+        "type": "downloads",
+        "value": 408000
+      },
+      "url": "https://huggingface.co/Zyphra/Zamba2-1.2B-instruct"
+    },
+    {
+      "rank": 5,
+      "headline": "Chinese lab drops open-source tool that turns one photo and audio into a talking avatar",
+      "stat": {
+        "type": "likes",
+        "value": 2924
+      },
+      "url": "https://github.com/meituan-longcat/LongCat-Video"
+    }
+  ]
+}

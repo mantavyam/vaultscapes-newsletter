@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "date": "22-06-2026",
+  "iso_date": "2026-06-22",
+  "subject": "🔓 Nous Research Blank Slate: build agents with zero default tools",
+  "intro": "The theme today is control . Who has it, who gives it up, and who's quietly engineering around the people trying to take it away. Nous Research lets you build agents from a blank slate. Sakana ships a model that routes around export controls by swapping vendors on the fly. Both are saying the same thing: lock-in is the enemy. We think that's the real story right now.",
+  "read_time": "5 min 31 sec",
+  "summary": [
+    {
+      "category": "Top Paper",
+      "headline": "UC Berkeley releases 2.2 million U.S. local laws as a searchable open dataset",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Nous Research ships blank slate mode so you can build agents from scratch",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Nous Research ships Hermes Agent v0.17.0 with expanded reach capabilities",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Paper",
+      "headline": "UC Berkeley releases 2.2 million U.S. local laws as a searchable open dataset",
+      "likes": 6534,
+      "body": "Local laws are technically public. But they were buried in PDFs across thousands of city websites, impossible to search or use in code. That was the problem. Researchers just fixed it. LOCUS is a dataset of 2.2 million U.S. local laws scraped from 9,239 cities and counties, covering zoning, housing, noise, business licensing, and more. It covers the majority of the U.S. population. To handle all the messy PDF formats, they ran everything through LightOnOCR-2-1B, a small AI model that reads document images and outputs clean text. All 7 million pages, processed at $0.30 per 1,000 pages vs. $1.50 on AWS Textract. They also trained classifiers to score each law on four axes: You can grab the dataset and models on Hugging Face under LocalLaws/LOCUS-v1 to build legal search tools, compliance checkers, or policy analysis apps.",
+      "bullets": [
+        "Paternalism: how much it controls behavior",
+        "Opacity: how hard it is to understand",
+        "Enforcement discretion: how much leeway officials get",
+        "Salience: how much it actually matters"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782100907138-2xjbee.png",
+      "read_more_url": "https://arxiv.org/abs/2606.19334"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Nous Research ships blank slate mode so you can build agents from scratch",
+      "likes": 3025,
+      "body": "Hermes Agent just added a third setup mode called Blank Slate , and it flips the usual approach on its head. Most agent tools dump everything on you by default. Blank Slate does the opposite. You start with just a provider, a model, file operations, and a terminal. Everything else, including web, browser, code execution, vision, memory, and MCP servers, starts off. The big deal here is control that actually sticks. Nothing you did not choose ever loads, not even after hermes update . No surprise tools sneaking back in after an upgrade. What this opens up: To try it: run hermes setup and pick Blank Slate. Build up from there.",
+      "bullets": [
+        "Security-sensitive setups where you want zero network access unless you explicitly add it.",
+        "Reproducible team configs where every machine runs the exact same toolset and updates never drift it.",
+        "Add things back anytime with hermes tools, hermes skills opt-in --sync, or hermes setup agent."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782101304293-v8zsrh.png",
+      "read_more_url": "https://hermes-agent.nousresearch.com/docs/getting-started/quickstart"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Nous Research ships Hermes Agent v0.17.0 with expanded reach capabilities",
+      "likes": 2943,
+      "body": "Hermes Agent just dropped v0.17.0 , and the theme is simple: reach. Last version put it on your desktop. This one asks how far it can actually go. The answer? Pretty far. Here is what landed: This release had 1,475 commits and 245 contributors. To get it, just run hermes update.",
+      "bullets": [
+        "iMessage support via Photon Spectrum. No Mac relay needed. Run hermes photon login, do a quick OAuth, done.",
+        "Background subagents . You can now fire off a task and keep chatting. The result drops back into your conversation when it finishes, instead of freezing everything.",
+        "Automation Blueprints : schedule tasks in plain English. No cron syntax. Just answer a few questions and it sets up the job.",
+        "Cursor's Composer coding model is now accessible through your xAI Grok subscription, no extra API key.",
+        "WhatsApp Business Cloud API, Raft agent network support, and a much deeper desktop app."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782101025377-vp05yb.png",
+      "read_more_url": "https://github.com/NousResearch/hermes-agent"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "New open-source tool generates alien languages that GPT and Claude can code in better than English",
+      "stat": {
+        "type": "likes",
+        "value": 2852
+      },
+      "url": "https://github.com/elder-plinius/GLOSSOPETRAE"
+    },
+    {
+      "rank": 2,
+      "headline": "Stanford releases open-source tool that researches any topic and writes cited reports",
+      "stat": {
+        "type": "stars",
+        "value": 29052
+      },
+      "url": "https://github.com/stanford-oval/storm"
+    },
+    {
+      "rank": 3,
+      "headline": "All five major LLMs show pro-female hiring bias even on Japanese resumes",
+      "stat": {
+        "type": "likes",
+        "value": 598
+      },
+      "url": "https://arxiv.org/abs/2606.18649"
+    },
+    {
+      "rank": 4,
+      "headline": "New critic-free training method beats GRPO on hard math benchmarks by 18%",
+      "stat": {
+        "type": "likes",
+        "value": 276
+      },
+      "url": "https://arxiv.org/abs/2606.20008"
+    },
+    {
+      "rank": 5,
+      "headline": "10 open-source GitHub tools that replace software you're paying for",
+      "stat": {
+        "type": "likes",
+        "value": 2685
+      },
+      "url": "https://github.com/gethomepage/homepage"
+    }
+  ]
+}

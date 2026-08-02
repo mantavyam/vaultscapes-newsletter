@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "02-07-2026",
+  "iso_date": "2026-07-02",
+  "subject": "Anthropic Claude Sonnet 5: flagship reasoning at 40% of Opus cost",
+  "intro": "Anthropic had quite a week. Fable 5 is back after a 3-week government-enforced timeout, and Sonnet 5 just shipped with near-Opus performance at 40% of the price. The real story isn't the drama. It's the direction. Frontier capability is trickling down the model stack faster than anyone expected, and the government is now officially in the loop on what ships and when. We're watching AI get regulated in real time. Buckle up.",
+  "read_time": "6 min 57 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic brings back Claude's Fable 5 model after US government security review",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic ships Claude Sonnet 5 with near Opus-level reasoning at lower cost",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Anthropic ships five new Claude Managed Agents features including per-session config overrides",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic brings back Claude's Fable 5 model after US government security review",
+      "likes": 69152,
+      "body": "Fable 5 is back. After nearly three weeks offline due to US government export controls, Anthropic has redeployed its most capable public model with updated cybersecurity safeguards. Here is what happened: Amazon researchers found a method of bypassing Fable 5's safeguards, prompting it to identify software vulnerabilities. The government pulled the model. Anthropic then trained an improved safety classifier that targets and blocks the behavior described in the report. Think of a classifier as an automated watchdog that scans every request before Fable 5 sees it. The tradeoff? The new classifier flags benign requests more often during routine coding and debugging tasks. When that happens, you get Opus 4.8 instead, with a visible notice. Use /feedback in Claude Code to report false positives. Your regular coding work is mostly unaffected. Anthropic is actively tuning the classifiers to cut false positives.",
+      "bullets": [
+        "Fable 5 is live on Claude.ai, Claude Code, and Cowork",
+        "Paid plans get Fable 5 for up to 50% of weekly usage limits , then it moves to usage credits",
+        "The new classifier blocks the reported jailbreak in over 99% of cases"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782965092313-0a4qm4.png",
+      "read_more_url": "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic ships Claude Sonnet 5 with near Opus-level reasoning at lower cost",
+      "likes": 50503,
+      "body": "Anthropic just shipped Claude Sonnet 5 , and the big story is simple: you now get near-flagship performance without paying flagship prices. Until now, serious agentic work (where the AI plans, uses tools, and runs tasks on its own without you babysitting it) required the bigger, pricier Opus models. Sonnet 5 can make plans, use tools like browsers and terminals, and run autonomously at a level that just a few months ago required larger and more expensive models. Here's what's actually new: You can start using it today via claude-sonnet-5 on the Claude API. It's also the new default on Free and Pro plans.",
+      "bullets": [
+        "Self-checks its own work without being asked, and finishes complex tasks where previous Sonnets stopped short.",
+        "Benchmarks land close to Opus 4.8, scoring 63.2% vs 69.2% on agentic coding, at roughly 40% of Opus's standard price.",
+        "Carries a 1 million token context window and a 128,000 token output limit.",
+        "Introductory pricing of $2/$10 per million tokens through August 31, then moves to $3/$15."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782965162950-tz5wur.png",
+      "read_more_url": "https://www.anthropic.com/news/claude-sonnet-5"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Anthropic ships five new Claude Managed Agents features including per-session config overrides",
+      "likes": 3275,
+      "body": "Claude Managed Agents just got a solid batch of updates that make building production-ready AI agents a lot less painful. Here's what's new and why it matters: To explore these features, run /claude-api managed-agents-onboard in Claude Code for a guided walkthrough, or check the claude-cookbooks repo on GitHub.",
+      "bullets": [
+        "Agent Overrides let you start a session from a saved agent config and swap out the model, system prompt, or tools for just that one session. No more duplicating agents for every small variation.",
+        "Streaming session event deltas means you get real-time updates as your agent works, so you can react to what's happening instead of waiting for it to finish.",
+        "New webhook event types let your server get notified when a session changes state, so you can drop the long-lived HTTP connection that breaks on restarts.",
+        "Credential injection scoping keeps each user's API tokens separate and secure, which matters when you're running agents on behalf of multiple users.",
+        "A new Observability tab in Console shows per-session token usage and tool calls, so you can actually debug what your agent did."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782965000114-rs1l7t.png",
+      "read_more_url": "https://github.com/anthropics/claude-cookbooks"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "NVIDIA splits a 30B model in two to generate text 2.42x faster",
+      "stat": {
+        "type": "likes",
+        "value": 2371
+      },
+      "url": "https://arxiv.org/abs/2606.26493"
+    },
+    {
+      "rank": 2,
+      "headline": "Allen AI releases open-source toolkit to convert messy PDFs into clean LLM training data",
+      "stat": {
+        "type": "stars",
+        "value": 18189
+      },
+      "url": "https://github.com/allenai/olmocr"
+    },
+    {
+      "rank": 3,
+      "headline": "CMU paper argues most 'AI agents' are just scaffolding, not true agents",
+      "stat": {
+        "type": "likes",
+        "value": 689
+      },
+      "url": "https://arxiv.org/abs/2606.23991"
+    },
+    {
+      "rank": 4,
+      "headline": "Jackrong releases a 35B open-source multimodal coding model with tool use and long context",
+      "stat": {
+        "type": "downloads",
+        "value": 12635
+      },
+      "url": "https://huggingface.co/Jackrong/Qwopus3.6-35B-A3B-Coder-MTP-GGUF"
+    },
+    {
+      "rank": 5,
+      "headline": "Open-source Rust browser ships as a single binary, loads pages in 85ms for web scraping and AI agents",
+      "stat": {
+        "type": "likes",
+        "value": 2098
+      },
+      "url": "https://github.com/h4ckf0r0day/obscura"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "date": "19-06-2026",
+  "iso_date": "2026-06-19",
+  "subject": "Midjourney skips imaging giants: 500K sensors, 60-sec body scan, $few",
+  "intro": "AI companies are quietly rewriting what kind of company they are. Midjourney went from text-to-image to full-body medical scanner overnight. Anthropic went from chatbot to design system enforcer . The pattern? AI labs are eating adjacent industries whole, not just augmenting them. We're past \"AI features\" and into full product pivots. The real question isn't whether these bets work. It's whether anyone outside AI can keep up.",
+  "read_time": "6 min 33 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Midjourney launches a new medical imaging division",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "OpenCut is a free open-source video editor with 55K GitHub stars and no watermarks",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic launches Claude Design to build UIs using your real design system",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Midjourney launches a new medical imaging division",
+      "likes": 26349,
+      "body": "Midjourney, the company you know for turning text into images, just announced Midjourney Medical , a full-body scanner. Nobody saw this coming. Here is what it actually is. You step into a pool of water. Sound waves pass through your body from every angle. 60 seconds later , you have a 3D map of your entire body. No radiation, no magnets, just ultrasound. The specs are wild: The goal is catching health problems early, before symptoms show up. Think of it like version control for your body , scan regularly, spot changes over time. They are starting with body composition data (fat, muscle, bone density) while working toward FDA approval for full diagnostics. Midjourney has never shipped a physical product before, so the 2027 timeline is the real test.",
+      "bullets": [
+        "500,000 transducers (tiny sensors) firing sound waves through you simultaneously",
+        "17 gigabytes of data processed every second",
+        "A few dollars per scan, not hundreds",
+        "First location opens in a San Francisco spa in 2027"
+      ],
+      "image_url": "https://alphasignal.ai/image/1776647823920-9z8qyt.png",
+      "read_more_url": "https://x.com/midjourney/status/2067421950314688759"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "OpenCut is a free open-source video editor with 55K GitHub stars and no watermarks",
+      "likes": 23605,
+      "body": "CapCut locks basic features behind a paywall, slaps watermarks on your exports, and uploads your footage to their servers. A group of devs got fed up and built OpenCut , a fully open-source alternative that just hit 55,000 GitHub stars . Here's what you actually get: The current version works today. A full rewrite in Rust (a faster, lower-level language) is in progress, adding a plugin system and scripting support. To try it: clone the repo, run bun install , then bun run dev . Done.",
+      "bullets": [
+        "Multi-track timeline editor with real-time preview, no watermarks, no subscriptions",
+        "Runs in your browser, on desktop, and on mobile, all from one codebase",
+        "Your files never leave your device, everything is stored locally",
+        "MCP Server built in, meaning you can connect AI agents to automate editing tasks",
+        "MIT license, so you can fork it, modify it, ship it in your own product"
+      ],
+      "image_url": "https://alphasignal.ai/image/1781804734848-5ie7nm.png",
+      "read_more_url": "https://github.com/OpenCut-app/OpenCut"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Anthropic launches Claude Design to build UIs using your real design system",
+      "likes": 13223,
+      "body": "Claude Design just got a big update, and the core idea is simple: stop letting AI invent your brand from scratch every time. The old problem? You'd prompt Claude Design to build a UI, and it would make up its own buttons, colors, and spacing. Every project looked slightly different. Now you can import your actual design system from a GitHub repo, a design file, or a raw upload. Claude builds with your real components , then checks its own output against your system before you even see it. Here's what's new and worth knowing: Find it at claude.ai/design on any paid plan.",
+      "bullets": [
+        "Import your design system once, stay on brand across every project",
+        "Edit directly on the canvas by dragging, resizing, and aligning elements",
+        "Use /design-sync in Claude Code to pull your design system into your terminal workflow",
+        "Export to PDF, PowerPoint, Canva, Vercel, and more",
+        "Shared usage limits with Claude Code, so less quota burn"
+      ],
+      "image_url": "https://alphasignal.ai/image/1781804923812-a6ixl1.png",
+      "read_more_url": "https://claude.ai/login?returnTo=%2Fdesign"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "xAI ships image-to-video model with sharper realism and better physics",
+      "stat": {
+        "type": "likes",
+        "value": 11631
+      },
+      "url": "https://grok.com/imagine"
+    },
+    {
+      "rank": 2,
+      "headline": "Zero to Mastery releases free open-source ML course with 10 hours on YouTube",
+      "stat": {
+        "type": "stars",
+        "value": 5681
+      },
+      "url": "https://github.com/mrdbourke/zero-to-mastery-ml"
+    },
+    {
+      "rank": 3,
+      "headline": "MIT method trains RNNs in parallel without backpropagation through time",
+      "stat": {
+        "type": "likes",
+        "value": 759
+      },
+      "url": "https://arxiv.org/abs/2606.06479"
+    },
+    {
+      "rank": 4,
+      "headline": "LocalAI ships ByteDance depth model as a fast, CPU-only C++ tool",
+      "stat": {
+        "type": "downloads",
+        "value": 144
+      },
+      "url": "https://huggingface.co/mudler/depth-anything.cpp-gguf"
+    },
+    {
+      "rank": 5,
+      "headline": "Zhipu AI ships GLM-5.2 for Go with 1M token context at no extra cost",
+      "stat": {
+        "type": "likes",
+        "value": 5976
+      },
+      "url": "https://x.com/opencode/status/2067207923122479242"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "date": "24-06-2026",
+  "iso_date": "2026-06-24",
+  "subject": "🔌 Sakana Fugu auto-routes AI models via one API endpoint",
+  "intro": "The real story this week isn't any single model. It's where AI is living. Claude moves into your Slack channel as a persistent teammate. Sakana Fugu turns model selection into an invisible plumbing layer. And a new paper proves smaller, smarter training beats brute force. The pattern: AI is quietly becoming infrastructure, not a tool you open. And Fugu's export-control angle? That's geopolitics meeting architecture. Wild times.",
+  "read_time": "6 min 25 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Sakana AI ships a multi-agent orchestration model designed to bypass export controls",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic ships Claude as a Slack teammate that writes and merges your code",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "GLM-5.2 beats Claude Opus at real bug fixes for half the cost",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Sakana AI ships a multi-agent orchestration model designed to bypass export controls",
+      "likes": 45885,
+      "body": "Most AI tools make you pick one model and hope for the best. Sakana Fugu flips that. It is itself a small AI model that has learned to call other AI models, pick the right ones for each step, and stitch the results together automatically. You hit one API endpoint . Fugu handles everything behind the scenes. It comes in two versions: The API is OpenAI-compatible, so dropping it into existing projects is straightforward. It hits top scores on SWE-Pro, GPQA-D, and ALE-Bench. The bigger idea: if one model gets hit by export controls and disappears, Fugu just swaps in another. No code changes on your end.",
+      "bullets": [
+        "Fugu : fast, low-latency, great for coding assistants like Codex and everyday chatbot work. You can also block specific models from its pool for data compliance.",
+        "Fugu Ultra : the heavy-hitter. Pulls in a deeper pool of expert models for hard tasks like cybersecurity analysis, research, and patent investigations. Matches top frontier models on benchmarks."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782273853075-gmlv3q.png",
+      "read_more_url": "https://sakana.ai/fugu-release/"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic ships Claude as a Slack teammate that writes and merges your code",
+      "likes": 20243,
+      "body": "Anthropic just shipped Claude Tag , and it's a pretty different take on AI tooling. Instead of opening a chat window, you just type @Claude in Slack and hand it a task. Here's what makes it click. Within a channel, there's one Claude that interacts with everyone, so anyone can pick up the conversation from where the last person left off. No more re-explaining context to a fresh chat window. What you can actually do with it: The proof point: 65% of Anthropic's product team's code is now created by their internal version. It runs on Opus 4.8 and is available now in beta for Enterprise and Team plans.",
+      "bullets": [
+        "Tag @Claude with a request, and it breaks the task into stages, executes them, and posts results back in a Slack thread.",
+        "With ambient mode on, Claude proactively flags relevant info from across channels and follows up on threads that went quiet.",
+        "It builds context as it follows the channel, so you stop explaining the same background on every request."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782273899505-kur7zm.png",
+      "read_more_url": "https://www.anthropic.com/news/introducing-claude-tag"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "GLM-5.2 beats Claude Opus at real bug fixes for half the cost",
+      "likes": 6886,
+      "body": "Someone ran a real-world test: fix an actual bug from the Cline repo. Two models, same tools, same setup. Who wins? Both GLM-5.2 and Claude Opus fixed the bug. But the details tell a very different story. Here's the interesting part. GLM used twice the tokens but still cost less. It seems trained to keep checking its own work before calling it done. Opus moved fast but shipped broken code. For you, this means cheaper runs that actually hold up in production. Try it free today: npm i -g cline",
+      "bullets": [
+        "Cost: GLM cost $0.41 vs Opus at $0.81. Half the price.",
+        "Speed: Opus finished in 1.6 min with 12 tool calls. GLM took 4.7 min and 28 tool calls.",
+        "Quality: GLM cleaned up dead code and verified the build actually compiled. Opus left type errors that broke the production build."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782273722688-vwn13z.png",
+      "read_more_url": "https://github.com/cline/cline"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Baidu releases OCR tool that reads entire documents in one pass",
+      "stat": {
+        "type": "likes",
+        "value": 3416
+      },
+      "url": "https://github.com/baidu/Unlimited-OCR"
+    },
+    {
+      "rank": 2,
+      "headline": "New theory proves self-predicting latents need exponentially less training data",
+      "stat": {
+        "type": "likes",
+        "value": 446
+      },
+      "url": "https://arxiv.org/abs/2605.27734"
+    },
+    {
+      "rank": 3,
+      "headline": "Yoshua Bengio warns visible reward dashboards can corrupt AI safety alignment",
+      "stat": {
+        "type": "likes",
+        "value": 430
+      },
+      "url": "https://arxiv.org/abs/2606.16914"
+    },
+    {
+      "rank": 4,
+      "headline": "Open-source 3B text-to-image model beats FLUX.1 Dev using only public data",
+      "stat": {
+        "type": "likes",
+        "value": 237
+      },
+      "url": "https://arxiv.org/abs/2606.11289"
+    },
+    {
+      "rank": 5,
+      "headline": "Builder.io ships free open-source screen recorder built for AI agents to read",
+      "stat": {
+        "type": "likes",
+        "value": 2886
+      },
+      "url": "https://github.com/BuilderIO/agent-native"
+    }
+  ]
+}

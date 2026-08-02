@@ -54,12 +54,16 @@ def publish_issue(payload_json: dict, cleaned_html: str, message_id: str,
     entry = {
         "date": payload_json["date"],
         "iso_date": payload_json["iso_date"],
+        "type": payload_json.get("type", "digest"),
         "subject": payload_json["subject"],
         "path": repo_paths["json"],
         "json_url": f"{base}/{repo_paths['json']}",
         "html_url": f"{base}/{repo_paths['html']}",
-        "headlines": [n["headline"] for n in payload_json["news"]][:MAX_INDEX_HEADLINES],
+        "headlines": _index_headlines(payload_json),
     }
+    if payload_json.get("type") == "article":
+        entry["title"] = payload_json.get("title", "")
+        entry["kicker"] = payload_json.get("kicker", "")
     issues = [i for i in index.get("issues", []) if i["iso_date"] != entry["iso_date"]]
     issues.append(entry)
     issues.sort(key=lambda i: i["iso_date"], reverse=True)
@@ -81,14 +85,40 @@ def publish_issue(payload_json: dict, cleaned_html: str, message_id: str,
         )
 
     # 4. state
+    mark_processed(message_id)
+
+    print(f"published {repo_paths['json']} (+html, index.json, latest.json)")
+
+
+def mark_processed(message_id: str) -> None:
+    """Record a Message-ID as handled.
+
+    Also used for emails that are deliberately skipped, so they are not
+    re-downloaded on every subsequent run.
+    """
+    if not message_id:
+        return
     state = {"message_ids": []}
     if STATE_FILE.exists():
         state = json.loads(STATE_FILE.read_text(encoding="utf-8"))
-    if message_id and message_id not in state["message_ids"]:
+    if message_id not in state["message_ids"]:
         state["message_ids"].append(message_id)
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
     STATE_FILE.write_text(
         json.dumps(state, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
-    print(f"published {repo_paths['json']} (+html, index.json, latest.json)")
+
+def _index_headlines(payload_json: dict) -> list[str]:
+    """Preview lines for the index.
+
+    Digests list their news headlines; an article lists its own section
+    headings, which read as a table of contents.
+    """
+    if payload_json.get("type") == "article":
+        headings = [
+            b["text"] for b in payload_json.get("blocks", [])
+            if b.get("kind") == "heading" and b.get("text")
+        ]
+        return (headings or [payload_json.get("title", "")])[:MAX_INDEX_HEADLINES]
+    return [n["headline"] for n in payload_json.get("news", [])][:MAX_INDEX_HEADLINES]

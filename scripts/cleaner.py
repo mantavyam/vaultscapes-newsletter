@@ -33,6 +33,16 @@ class FormatDriftError(RuntimeError):
     """Raised when the email HTML no longer matches the expected structure."""
 
 
+class NotADigestError(RuntimeError):
+    """Raised when the email is not a daily digest at all.
+
+    AlphaSignal also sends single-topic sponsored pieces from the same address.
+    They carry none of the digest landmarks, so they are skipped rather than
+    quarantined — treating them as drift would bury a genuine template change
+    under routine noise.
+    """
+
+
 @dataclass
 class EmailPayload:
     """Everything extracted from one .eml file."""
@@ -109,7 +119,15 @@ def _classify(table: Tag) -> str | None:
         return "signals"
     if text.startswith(markers.NEWS_CATEGORY_PREFIX):
         return "news"
-    # Everything else is junk: header nav, author card, sponsor blocks,
+    # Long-form sends: the kicker opens the table, e.g. "Sunday Deep Dive".
+    # Bounded lookahead so a digest merely mentioning the phrase can't match.
+    if markers.ARTICLE_KICKER_SUFFIX in text[:40]:
+        return "article"
+    if text.startswith(markers.AUTHOR_HEADING):
+        # Junk in a digest, byline in an article; kept here and dropped at
+        # render time for digests.
+        return "author"
+    # Everything else is junk: header nav, sponsor blocks,
     # "forward →" / "partner with us →" rows, footer, poll, unsubscribe.
     return None
 
@@ -215,12 +233,33 @@ def clean(html: str) -> CleanResult:
         lead = squash_ws(table.get_text(" ", strip=True))[:80]
         sections.append(Section(kind=kind, table=table, lead=lead))
 
+    # The author card is a byline in an article but junk in a digest, where it
+    # has always been dropped. Classification keeps it; digests discard it here
+    # so their output is unchanged.
+    if not any(s.kind == "article" for s in sections):
+        sections = [s for s in sections if s.kind != "author"]
+
     _validate(sections)
     return CleanResult(sections=sections, cleaned_html=_render(sections))
 
 
 def _validate(sections: list[Section]) -> None:
     kinds = [s.kind for s in sections]
+
+    # Long-form send: validated on its own terms, not the digest's.
+    if "article" in kinds:
+        if "intro" not in kinds:
+            raise FormatDriftError("article is missing its intro section")
+        return
+
+    # Neither a digest nor an article => some other send from the same address.
+    # A digest missing only *some* landmarks still falls through to the drift
+    # check below, which is the alarm that matters.
+    if not {"summary", "news", "signals"} & set(kinds):
+        raise NotADigestError(
+            "no summary, news, signals or article sections — not a known format"
+        )
+
     problems = []
     if "intro" not in kinds:
         problems.append("intro section missing")

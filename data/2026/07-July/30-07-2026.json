@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "30-07-2026",
+  "iso_date": "2026-07-30",
+  "subject": "OpenAI Codex CLI 🔐, Fish Audio S2.1 Pro 🎙️, GPT-5 Academic Access 🎓",
+  "intro": "Open source is eating AI infrastructure. OpenAI ships a security CLI before they even announce it (Hacker News beat them to it), Fish Audio turns a GitHub side project into $21M ARR in 12 months, and a robotics paper wraps a reasoning loop around frozen motor skills to jump from 16% to 97% accuracy. The pattern? Nobody builds from scratch anymore. Wrap, orchestrate, distribute free, charge for the wiring. Fish Audio's playbook: give the model away, sell the enterprise contract. Sound familiar?",
+  "read_time": "6 min 46 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "OpenAI quietly ships open-source security CLI to scan repos and catch vulnerabilities in CI/CD",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Fish Audio raises $52M and ships a voice model 2x faster than rivals",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI gives 100,000 academic scientists free access to GPT-5 models by 2027",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "OpenAI quietly ships open-source security CLI to scan repos and catch vulnerabilities in CI/CD",
+      "likes": 13652,
+      "body": "OpenAI tried to quietly ship Codex Security CLI , but Hacker News spotted it first. Classic. So what is it? It's a free, open-source tool that uses AI to automatically find security holes in your code, confirm they're real, and suggest fixes. Unlike old-school scanners that just match patterns, it uses AI to understand how your code actually behaves in context, then proposes patches you can review and apply. Here's what you can do with it: Getting started takes three commands: install, login, scan. Basic usage is free, but an OpenAI API key unlocks full scanning and is the preferred path for automated setups. The tool has already helped fix over 3,000 critical vulnerabilities , and it's Apache 2.0 licensed , so you can use it freely in your projects.",
+      "bullets": [
+        "Scan entire repos for vulnerabilities",
+        "Track findings across multiple runs to see if fixes actually worked",
+        "Review pull-request diffs and get structured output for security automation",
+        "Plug into CI/CD pipelines using an API key, no interactive login needed"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785384254760-qls5ot.png",
+      "read_more_url": "https://www.npmjs.com/package/@openai/codex-security"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Fish Audio raises $52M and ships a voice model 2x faster than rivals",
+      "likes": 13215,
+      "body": "Fish Audio just launched S2.1 Pro , a voice AI model that went from open-source side project to $21M ARR in one year, and just raised a $52M seed round to back it up. So what actually makes it interesting? Three things: It runs at 2x the speed of Cartesia and roughly 1/6th the cost of ElevenLabs. HeyGen, LiveKit, and Retell already run it in production. You can access it via REST API or Python SDK. There is also a free tier with no hard usage cap, so you can prototype without a paywall blocking you.",
+      "bullets": [
+        "5-second voice cloning -- drop in a short audio clip and it captures tone, pitch, and speaking style instantly, no retraining needed",
+        "Word-level emotion control -- you can tell it exactly how to say each word: the pacing, intonation, and emotion, not just the whole sentence",
+        "~90ms response time -- fast enough for real-time voice agents and live conversation apps"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785384292421-2pez5t.png",
+      "read_more_url": "https://fish.audio/contact-sales/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "OpenAI gives 100,000 academic scientists free access to GPT-5 models by 2027",
+      "likes": 7931,
+      "body": "OpenAI just launched ChatGPT for Academic Researchers , a free program giving scientists access to its most powerful models. Starting with 10,000 seats this summer and scaling to 100,000 by 2027. Here is what you actually get: The value is roughly a $200/month Pro subscription at zero cost. Faculty and postdoctoral researchers at high-research-activity institutions can apply now on OpenAI's website. This is part of a $250 million commitment to external science through 2027.",
+      "bullets": [
+        "GPT-5.6 Sol Pro , the flagship model, which scores 83% on research-level math benchmarks vs. 72.5% for the previous version",
+        "Access to Codex for writing and running code, plus ChatGPT Work for longer multi-step tasks like drafting papers or grant applications",
+        "Higher usage limits, larger context windows, and expanded deep research mode",
+        "Up to 4 collaborators per workspace, with business-grade privacy and your data never used for training"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785384312097-kkz8yg.png",
+      "read_more_url": "https://openai.com/index/chatgpt-for-academic-researchers/"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Open-source PixelRAG scrapes websites as screenshots, beats text RAG by 18%",
+      "stat": {
+        "type": "likes",
+        "value": 4694
+      },
+      "url": "https://github.com/StarTrail-org/PixelRAG"
+    },
+    {
+      "rank": 2,
+      "headline": "FaceSwap open-source tool swaps faces in photos and videos using deep learning",
+      "stat": {
+        "type": "stars",
+        "value": 56168
+      },
+      "url": "https://github.com/deepfakes/faceswap"
+    },
+    {
+      "rank": 3,
+      "headline": "New orchestration layer boosts frozen robot policy from 16.7% to 97.3% accuracy",
+      "stat": {
+        "type": "likes",
+        "value": 210
+      },
+      "url": "https://arxiv.org/abs/2607.21725"
+    },
+    {
+      "rank": 4,
+      "headline": "LiquidAI releases multilingual encoder models that run lean without sacrificing quality",
+      "stat": {
+        "type": "downloads",
+        "value": 4115
+      },
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-Encoder-230M"
+    },
+    {
+      "rank": 5,
+      "headline": "Pipe Network open-sources a tool to run Kimi K3's 2.8T model on a Mac Studio",
+      "stat": {
+        "type": "likes",
+        "value": 2882
+      },
+      "url": "https://huggingface.co/pipenetwork/Kimi-K3-REAP73-zh-code-MLX-mxfp4-q8"
+    }
+  ]
+}

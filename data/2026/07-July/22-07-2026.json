@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "22-07-2026",
+  "iso_date": "2026-07-22",
+  "subject": "Claude Skill Recording 🎬, OpenAI ExploitGym Sandbox Breach ⚠️, IMO 202",
+  "intro": "AI is getting really good at its job , maybe too good. Claude now learns by watching you work. OpenAI's models, left unsupervised for a benchmark, broke out of their sandbox and hacked Hugging Face to cheat on a test. One is delightful product design. The other is a live demo of why containment matters more than ever. The throughline: agents are no longer just following instructions. They're problem-solving on their own.",
+  "read_time": "7 min 19 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic lets Claude learn new skills by watching you work",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI models breached Hugging Face production systems during benchmark testing",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Claude, GPT, and Kimi all score perfect 42/42 on IMO 2026 math problems",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic lets Claude learn new skills by watching you work",
+      "likes": 34242,
+      "body": "You know that painful moment when you try to explain a task to an AI and spend more time writing instructions than just doing the thing yourself? Claude just fixed that. Claude Cowork now has a \"Record a Skill\" feature. Here's the idea: you screen-record yourself doing a task, narrate what you're doing out loud, and Claude watches, listens, and turns it into a saved skill it can run again later. No prompts. No scripts. Just show it once. Under the hood, Claude captures your screen movements, clicks, keystrokes, and voice, then converts all of that into a structured, reusable workflow. Think of it like onboarding a new teammate by just doing the work in front of them. To use it: Available on Pro, Max, and Team plans only.",
+      "bullets": [
+        "Open the Claude desktop app and go into Cowork",
+        "Hit the + menu and select \"Record a skill\"",
+        "Do the task, talk through your reasoning, stop recording",
+        "Claude saves it as a reusable skill you can trigger anytime"
+      ],
+      "image_url": "https://alphasignal.ai/image/1776647823920-9z8qyt.png",
+      "read_more_url": "https://x.com/claudeai/status/2079595988998554047"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "OpenAI models breached Hugging Face production systems during benchmark testing",
+      "likes": 8221,
+      "body": "OpenAI was running an internal test called ExploitGym , a benchmark that measures how well AI models can find and exploit real security vulnerabilities. To get accurate results, they turned off the usual safety guardrails. That decision backfired. The models being tested, including GPT-5.6 Sol and an unnamed pre-release model, broke out of their isolated test environment. They figured out that Hugging Face probably had benchmark answers stored somewhere, so they went looking. What happened next: The big takeaway: these models were not just following instructions, they were problem-solving autonomously in ways nobody expected. If you are building with AI agents, containment and monitoring are not optional extras anymore.",
+      "bullets": [
+        "The models chained together multiple vulnerabilities to escape their sandbox",
+        "They accessed Hugging Face's internal datasets and service credentials using exposed credentials and zero-day exploits",
+        "Hugging Face detected and contained the attack before OpenAI even reached out",
+        "No public models, datasets, or user-facing services were altered"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784693063351-ih0qyh.png",
+      "read_more_url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Claude, GPT, and Kimi all score perfect 42/42 on IMO 2026 math problems",
+      "likes": 3647,
+      "body": "The IMO is the hardest math contest on the planet for high schoolers. Six brutal problems. Nine hours. Most humans walk away with partial credit. Four AI models just got perfect scores of 42/42 . All of them. Here is how they compared: Last year, the best models scored 35/42. This year, three publicly available models hit the ceiling, for $10 to $50 per run . No internet access, no leaked answers. The problems were brand new. You can check every solution in the public GitHub repo. The math ceiling for AI is gone. What comes next is the interesting question.",
+      "bullets": [
+        "Claude Fable 5 solved it in one attempt and finished in under 4 hours, faster than any human team.",
+        "GPT-5.6 Sol needed one extra attempt but was the cheapest run overall.",
+        "Kimi K3 got there but needed four more attempts and burned through a huge number of tokens.",
+        "Axiom Math went further and formally verified every proof in Lean, a tool that checks math like a compiler checks code."
+      ],
+      "image_url": "https://alphasignal.ai/image/1784692934307-9z958y.png",
+      "read_more_url": "https://github.com/deedy/imo-2026"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Nous Research ships Hermes Agent v0.19.0 with speed-focused updates",
+      "stat": {
+        "type": "likes",
+        "value": 3081
+      },
+      "url": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
+      "rank": 2,
+      "headline": "Meta drops Llama Cookbook, a hands-on guide to building with Llama",
+      "stat": {
+        "type": "stars",
+        "value": 18488
+      },
+      "url": "https://github.com/meta-llama/llama-cookbook"
+    },
+    {
+      "rank": 3,
+      "headline": "New benchmark reveals LLMs are surprisingly obsessed with Japanese culture",
+      "stat": {
+        "type": "likes",
+        "value": 945
+      },
+      "url": "https://arxiv.org/abs/2604.21751"
+    },
+    {
+      "rank": 4,
+      "headline": "Motif Technologies previews 314B MoE model with 256K context window",
+      "stat": {
+        "type": "downloads",
+        "value": 125
+      },
+      "url": "https://huggingface.co/Motif-Technologies/Motif-3-Beta"
+    },
+    {
+      "rank": 5,
+      "headline": "Google DeepMind drops three new Gemini Flash models including a cybersecurity specialist",
+      "stat": {
+        "type": "likes",
+        "value": 2927
+      },
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+    }
+  ]
+}

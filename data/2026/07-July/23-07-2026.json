@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "23-07-2026",
+  "iso_date": "2026-07-23",
+  "subject": "Anthropic Security Plugin 🛡️, Cursor Model Router 💰, Claude Agents 500",
+  "intro": "AI coding tools are quietly becoming infrastructure , not just productivity hacks. Anthropic ships a free security plugin that watches your code as you type. Cursor ships a router that picks the right model per request, saving teams 60% on costs. The pattern? The \"write fast, fix later\" era is ending. Speed and safety are now table stakes, baked in automatically. Meanwhile, self-improving agents are learning to fix themselves. We're not just building faster coders. We're building systems that improve on their own.",
+  "read_time": "6 min 29 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic ships Claude Code security plugin that scans your code for vulnerabilities",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Cursor ships smart model router that cuts AI coding costs by 60%",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Anthropic ships effort controls, 500 skills , and webhooks to Claude Managed Agents",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic ships Claude Code security plugin that scans your code for vulnerabilities",
+      "likes": 11838,
+      "body": "Anthropic just dropped the Claude Security plugin for Claude Code in beta, and it's worth paying attention to. Here's the problem it solves: AI writes code fast, but fast also means security holes sneak in faster. Think SQL injection, hardcoded secrets, unsafe function calls. They slip through before anyone notices. This plugin sits inside your terminal and catches those issues before they become your problem. The cool part? No extra commands to remember. It runs automatically as you code. It works in three layers: It's free for all Claude Code users. Install it with /plugins in your terminal, then run /reload-plugins. Done.",
+      "bullets": [
+        "Every file edit triggers an instant pattern scan, flagging dangerous stuff like eval(), os.system(), and innerHTML with zero extra cost",
+        "After each coding turn, a separate Claude model reviews your full git diff for logic-level flaws like auth bypasses and insecure references",
+        "At commit time, it does a deep cross-file review to catch issues that only show up in context"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784779395674-84aow3.png",
+      "read_more_url": "https://claude.com/product/claude-security"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Cursor ships smart model router that cuts AI coding costs by 60%",
+      "likes": 8803,
+      "body": "You know how you always have to pick which AI model to use in Cursor? Too powerful and you burn budget. Too cheap and the output suffers. Cursor Router just killed that tradeoff. Here is how it works: instead of you picking a model, Cursor analyzes each request and picks for you. Simple autocomplete? Cheap model. Complex refactor? Frontier model. You stop thinking about it. You get three modes to tune the behavior: In early testing, teams with thousands of users saved 30-50% with no drop in quality versus routing everything to Opus 4.8. Cost per commit dropped too, which is the number that actually matters. It is live now on Teams and Enterprise plans. Admins can control which models are allowed, set defaults per team, and lock certain modes. Auto mode is now powered by Router out of the box.",
+      "bullets": [
+        "Intelligence : best quality, still cheaper than always using top models",
+        "Balance : solid quality at around 36% lower cost",
+        "Cost : maximum savings for lighter tasks"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784779421748-z1hxq8.png",
+      "read_more_url": "https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&cid=47f859b3380d4cbb&lid=1v2A0EpUYk6gvHArh&mid=1c438b13-8796-44db-bd57-d9e57910f3d0"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Anthropic ships effort controls, 500 skills, and webhooks to Claude Managed Agents",
+      "likes": 3768,
+      "body": "Claude Managed Agents just got a solid set of updates that make building multi-agent systems a lot less painful. The biggest quality-of-life fix: you used to need separate API calls to create a session and send it events. Now you can seed a session with up to 50 events in a single create call , cutting setup time and complexity. Together, these let you build smarter pipelines where different agents handle different tasks at different cost levels. Try it via the claude-cookbooks repo on GitHub.",
+      "bullets": [
+        "Effort levels per agent -- control how hard each agent thinks. Lower effort means faster, cheaper responses. Higher effort means more thorough work.",
+        "500 skills per session -- skills are task-specific instructions you give an agent. You can now stack up to 500 across all agents in one session.",
+        "Webhooks for environments and memory stores -- get notified when things happen in the background, so you can trigger other actions automatically.",
+        "Sub-agent event streaming -- watch what your child agents are doing in real time."
+      ],
+      "image_url": "https://alphasignal.ai/image/1784779319192-mwt4rs.png",
+      "read_more_url": "https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&cid=47f859b3380d4cbb&lid=pdYozSZlorX9f8Ek&mid=1c438b13-8796-44db-bd57-d9e57910f3d0"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "New open-source tokenizer runs 1000x faster than HuggingFace, hits 24GB/s",
+      "stat": {
+        "type": "likes",
+        "value": 3433
+      },
+      "url": "https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&cid=47f859b3380d4cbb&lid=6QzbD4UA7H87ZTF8&mid=1c438b13-8796-44db-bd57-d9e57910f3d0"
+    },
+    {
+      "rank": 2,
+      "headline": "Outlines open-source library forces LLMs to output valid structured data every time",
+      "stat": {
+        "type": "stars",
+        "value": 15063
+      },
+      "url": "https://github.com/dottxt-ai/outlines"
+    },
+    {
+      "rank": 3,
+      "headline": "Jürgen Schmidhuber surveys how modern AI agents learn to improve themselves",
+      "stat": {
+        "type": "likes",
+        "value": 673
+      },
+      "url": "https://arxiv.org/abs/2607.13104"
+    },
+    {
+      "rank": 4,
+      "headline": "Open-source world model slashes game prototyping from weeks to minutes",
+      "stat": {
+        "type": "likes",
+        "value": 373
+      },
+      "url": "https://arxiv.org/abs/2607.06291"
+    },
+    {
+      "rank": 5,
+      "headline": "Microsoft open-sources a tool that rewrites and improves its own AI prompts",
+      "stat": {
+        "type": "likes",
+        "value": 2763
+      },
+      "url": "https://github.com/microsoft/SkillOpt"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "29-07-2026",
+  "iso_date": "2026-07-29",
+  "subject": "Claude autonomously broke post-quantum encryption experts missed for 2",
+  "intro": "Two massive things dropped today, and we think they rhyme. MCP just went stateless, making it a real production-grade protocol. AI agents can now scale like normal web services. Meanwhile, Claude Mythos cracked post-quantum encryption that stumped human experts for two years, autonomously, in 60 hours. The infrastructure is maturing fast. So is the capability. Both at once is worth paying attention to.",
+  "read_time": "6 min 35 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "MCP goes stateless in its biggest update yet, unlocking serverless deployment",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic's Claude autonomously cracks encryption schemes in under a week",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Cursor launches ₹649/month plan with cloud agents and Grok 4.5 for India",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "MCP goes stateless in its biggest update yet, unlocking serverless deployment",
+      "likes": 9630,
+      "body": "MCP just dropped its biggest update ever. Here is what actually changed and why you should care. The old MCP required a persistent session between client and server, meaning each user was locked to one specific server instance. Load balancing was basically impossible, and serverless deployments were off the table. Now MCP is stateless . Every request carries everything it needs, so any server instance can handle any request. You can now deploy behind a standard load balancer, run on serverless platforms like Cloudflare Workers, or scale horizontally without a shared session store. The big new things you get: Updated SDKs for Python, TypeScript, Go, and C# are already available. Older clients still interoperate via automatic fallback.",
+      "bullets": [
+        "Extensions framework : MCP Apps let servers render UI inside a sandboxed iframe, and Tasks handles long-running async operations",
+        "Enterprise Managed Auth: plug in your existing identity provider to control server access centrally",
+        "Formal deprecation policy: future changes will not silently break your code"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785297911275-jd9s5m.png",
+      "read_more_url": "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic's Claude autonomously cracks encryption schemes in under a week",
+      "likes": 8248,
+      "body": "Anthropic's unreleased Claude Mythos Preview just did something that years of expert human review could not: it found real mathematical cracks in two encryption systems used to keep data secure online. Here's what it cracked: Neither breaks anything in production today. HAWK is not deployed yet, and the AES attack only hits a weaker research variant, not the real thing. The bigger story: Mythos did most of this work on its own, with minimal human input. Each result cost roughly $100,000 in API usage. This opens up AI as a serious tool for stress-testing encryption before it gets deployed at scale.",
+      "bullets": [
+        "HAWK is a next-gen digital signature scheme built to survive future quantum computers. It passed two years of expert review. Mythos found a hidden mathematical shortcut in 60 hours, cutting its effective security strength in half.",
+        "AES is the encryption standard securing most internet traffic. Mythos found a way to speed up attacks on a research version of it by 200-800x , autonomously inventing a technique it named the \"Mobius Bridge.\""
+      ],
+      "image_url": "https://alphasignal.ai/image/1776647823920-9z8qyt.png",
+      "read_more_url": "https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&cid=54882e9682fdf7bd&lid=JI8AMrtTrRZAOSAi&mid=28f7a0d2-7956-419f-b48d-0e7318ad2821"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Cursor launches ₹649/month plan with cloud agents and Grok 4.5 for India",
+      "likes": 7147,
+      "body": "Cursor just dropped Cursor Start , a new plan built specifically for India at ₹649/month (roughly $7). That is less than half the price of a Netflix subscription, and way below the $20 Pro plan. Why does this exist? Simple. Cursor's India user base tripled to over 3 million users, making it their third largest market, with more agent requests per person than anywhere else on earth. They listened. Here is what you get: The catch? It does not include frontier models from OpenAI or Anthropic, or advanced features like Bugbot, Auto Mode, and Automations. That stays Pro-only. Existing free users can upgrade from the dashboard, new users pick it during signup.",
+      "bullets": [
+        "Grok 4.5 and Composer access, enough to build with AI agents every single day",
+        "Always-on cloud agents that build, test, and open pull requests while you sleep",
+        "Cursor for iOS so you can launch and steer those agents from your phone",
+        "Plugins, MCP servers, hooks, and skills to wire Cursor into your own workflow",
+        "Pay in INR via UPI, credit, or debit card"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785297979611-aoxuxj.png",
+      "read_more_url": "https://cursor.com/blog/cursor-start-india"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Claude builds a full AAA-style space game in one 24-hour coding session",
+      "stat": {
+        "type": "likes",
+        "value": 3227
+      },
+      "url": "https://github.com/achimala/TheLongSilence"
+    },
+    {
+      "rank": 2,
+      "headline": "Microsoft open-sources a graph-based RAG tool to query private text data",
+      "stat": {
+        "type": "stars",
+        "value": 34958
+      },
+      "url": "https://github.com/microsoft/graphrag"
+    },
+    {
+      "rank": 3,
+      "headline": "Study finds AI-written books now grab 20% of Amazon sales, hurting human authors",
+      "stat": {
+        "type": "likes",
+        "value": 187
+      },
+      "url": "https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&cid=54882e9682fdf7bd&lid=1BvFvGqmj0V1owWKq&mid=28f7a0d2-7956-419f-b48d-0e7318ad2821"
+    },
+    {
+      "rank": 4,
+      "headline": "LiquidAI releases multilingual encoder models in 230M and 350M sizes",
+      "stat": {
+        "type": "downloads",
+        "value": 5327
+      },
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-Encoder-350M"
+    },
+    {
+      "rank": 5,
+      "headline": "Open-source text-to-CAD tool hits 10,000 stars, outputs STEP, STL, and gcode",
+      "stat": {
+        "type": "likes",
+        "value": 2821
+      },
+      "url": "https://github.com/earthtojake/text-to-cad"
+    }
+  ]
+}

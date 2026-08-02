@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "28-07-2026",
+  "iso_date": "2026-07-28",
+  "subject": "SSI secures $5B NVIDIA deal 💰, Kimi K3 ships 2.8T params 🧠, OptMem add",
+  "intro": "Today's theme is simple: compute is the new currency , and everyone is racing to print more of it. SSI just broke two years of silence, not with a product or a paper, but with a $5B NVIDIA deal and a 10x compute upgrade. Meanwhile Moonshot ships FlashKDA, squeezing 2.2x more speed out of existing GPUs. Two very different bets, same obsession. More power, faster inference, better agents. We're not building software anymore. We're building engines.",
+  "read_time": "6 min 34 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "NVIDIA invests in SSI to 10x its compute within 12 months",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Model",
+      "headline": "Moonshot AI ships Kimi K3 with a non-commercial license that locks out big companies",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Developer ships plug-and-play infinite memory prompt for any AI agent",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "NVIDIA invests in SSI to 10x its compute within 12 months",
+      "likes": 12169,
+      "body": "Ilya Sutskever's Safe Superintelligence (SSI) just ended two years of total silence. No product. No published research. Just a team quietly working on one thing: building a safe superintelligence. Now NVIDIA is writing a massive check. The investment stretches into multiple billions, with Bloomberg reporting a figure of $5 billion . But the money is almost secondary. Here's what actually matters: SSI has spent two years quietly pursuing a new research direction for powerful, aligned AI, and NVIDIA only joined after getting rare access to that closely guarded work. More compute means that research can now actually scale.",
+      "bullets": [
+        "SSI gets access to NVIDIA's next-gen Vera Rubin GPU platform, letting them increase their compute by an order of magnitude, meaning 10x more raw processing power .",
+        "Both companies will collaborate on advancing NVIDIA's current and future hardware, using SSI's research insights.",
+        "This adds an NVIDIA GPU path on top of SSI's earlier Google Cloud TPU setup."
+      ],
+      "image_url": "https://alphasignal.ai/image/1785211534893-jqro37.png",
+      "read_more_url": "https://www.wsj.com/tech/ai/nvidia-bets-on-ilya-sutskevers-new-ai-lab-to-expand-compute-reach-f95596e8"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Model",
+      "headline": "Moonshot AI ships Kimi K3 with a non-commercial license that locks out big companies",
+      "likes": 3235,
+      "body": "Moonshot AI just dropped Kimi K3 , a massive open-weight model with 2.8 trillion parameters that you can actually run yourself. Think of it like getting access to a frontier-level AI without paying per API call. Here is what makes it interesting for you: Now the catch: the license looks open but has teeth. Free for personal projects and small companies. But if your company earns over $20M per year , you need a commercial deal. Big platforms with 100M+ users must also display the Kimi K3 branding. Read the license before shipping to production.",
+      "bullets": [
+        "It reads text, images, and video natively, no extra setup needed",
+        "1 million token context window , meaning you can feed it entire codebases or long documents at once",
+        "Scores 88.3 on Terminal-Bench, competing directly with Claude and GPT-5",
+        "Works with vLLM, SGLang, Ollama, and Docker out of the box"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785211471799-ymlm03.png",
+      "read_more_url": "https://huggingface.co/moonshotai/Kimi-K3"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Developer ships plug-and-play infinite memory prompt for any AI agent",
+      "likes": 3024,
+      "body": "AI agents forget everything when a session ends. That's the core problem. OptMem is a plug-and-play memory system that fixes this with just two text files and six shell commands. Here's the clever part. Every memory gets appended to LOG.txt and never deleted. But reading all of it would be too slow. So OptMem builds a tree of compressed summaries, where old memories get squished together and recent ones stay verbatim. You always read a fixed 208-line document , no matter how many memories exist. What you can do with it: Install is three lines. Identity persists across models and vendors. Nothing is ever lost.",
+      "bullets": [
+        "Drop it into any agent harness: Claude Code, Codex, or a plain shell",
+        "Run memo wake at session start to reload the agent's full identity",
+        "Use memo note, memo sleep, memo recall, and memo forget to manage memories",
+        "Search raw history anytime with regex, even after compression"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785211414357-a5098o.png",
+      "read_more_url": "https://github.com/VictorTaelin/OptMem"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Kimi open-sources attention kernel that cuts prefill time by up to 2.2x",
+      "stat": {
+        "type": "likes",
+        "value": 2858
+      },
+      "url": "https://github.com/MoonshotAI/FlashKDA"
+    },
+    {
+      "rank": 2,
+      "headline": "This open-source MCP server cuts AI coding token costs by 95% across 48,000 developers",
+      "stat": {
+        "type": "stars",
+        "value": 2230
+      },
+      "url": "https://github.com/jgravelle/jcodemunch-mcp"
+    },
+    {
+      "rank": 3,
+      "headline": "LangGraph paper shows how graph engineering replaces messy prompt control flow",
+      "stat": {
+        "type": "likes",
+        "value": 742
+      },
+      "url": "https://arxiv.org/abs/2607.19297"
+    },
+    {
+      "rank": 4,
+      "headline": "New 3B model beats Qwen 9B and Gemma 12B on agentic tasks",
+      "stat": {
+        "type": "likes",
+        "value": 228
+      },
+      "url": "https://arxiv.org/abs/2607.22083"
+    },
+    {
+      "rank": 5,
+      "headline": "Kimi open-sources the distributed agent training system behind Kimi K3",
+      "stat": {
+        "type": "likes",
+        "value": 2690
+      },
+      "url": "https://github.com/kvcache-ai/AgentEnv"
+    }
+  ]
+}

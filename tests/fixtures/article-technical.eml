@@ -1,0 +1,917 @@
+Delivered-To: vaultscapes@gmail.com
+Received: by 2002:a05:640c:a0d8:20b0:272:3d4c:b067 with SMTP id eq24-n2csp897024eib;
+        Sat, 1 Aug 2026 07:31:57 -0700 (PDT)
+X-Received: by 2002:a05:690e:d55:b0:662:ba96:9fa3 with SMTP id 956f58d0204a3-66945bdfc36mr6658089d50.3.1785594717570;
+        Sat, 01 Aug 2026 07:31:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1785594717; cv=none;
+        d=google.com; s=arc-20260327;
+        b=GF6tPR+vVL/bH6+eHjagqsI2K7fe67/az0+E8JCQkNcppJiM1wI5BMONoy2YrxZySp
+         mvL6zmtB+X6QA4gxaEfMttOWP8ygN9a70fOH/tomMHJRV5Yjba9lWLGkUMtMiM4c7x0v
+         hHE8cNSzdk/GzSiV2bYOUKzSNvHjHE0lk3QFXyzguM1DoFDCkkbyYRNVn+YGszT5nqg+
+         F8HFp2IxjQouI3coAYxrN8giKOzBVsMBEvp7oJJ0Ryc+Pa/aT3A74Rf6+RYckQ5qxiod
+         /nPRijSL5D7G51z1ONK4MQV1ILyMxk85Bh9FzgUCKhx1Tx709eK6K/c0EcGR2QzKkoKk
+         YanQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=date:message-id:list-help:abuse-reports-to:archived-at:organization
+         :auto-submitted:precedence:feedback-id:list-id:list-unsubscribe-post
+         :list-unsubscribe:mime-version:subject:to:from:dkim-signature
+         :dkim-signature;
+        bh=Ci7BJpylU3LRg5VEkuU1TOafkD18cHtsKkhhdbnQI/Y=;
+        fh=8G0ZOTAlRwwLltMm/X15mRXT5TIPjfL6UJZG8Prad60=;
+        b=VZVuObBc/54RA2lnPXqWjgd8uChB4WggqcU900RMcyq7VFYNlp4CcoY3VRLF4aYxCM
+         wKvFtDsKXz7137CBi9CoukImCpHjbEDGMaKAl2rMq+Dkut7ddzTQFxxR8R60qfTwQ+PP
+         4sFnJTZ9zs+SdWP2L7bSYEA9XBQ2Y7ELwr/B48LPENWm3JHVYSPNhoS8bLp0BWUiYPuv
+         17L7QI8sDKKoC02nvGwFng6mxsV+Jid6pbV1iLzXVU6LkiQ4b8B1wArR4aRuaiVyn87p
+         r5ZyvFjAt+EkGpVp69bhNR0j6NQQpaxG7A7YIWSFrkxnytJioExy0wJ7I3BbOmbqUbCo
+         kNbQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@alphasignal.ai header.s=6t4xwwgfigb46q3fzae2xqfpgghp2ub3 header.b=K3vYVogt;
+       dkim=pass header.i=@amazonses.com header.s=kra23psoka5qyyh6gdejiiuof3nluwuz header.b="mrE/kLhf";
+       spf=pass (google.com: domain of 010f019fbdbd2220-2a4bca88-b5e1-43ee-85f4-f577a8fe20f0-000000@news.alphasignal.ai designates 54.240.115.226 as permitted sender) smtp.mailfrom=010f019fbdbd2220-2a4bca88-b5e1-43ee-85f4-f577a8fe20f0-000000@news.alphasignal.ai;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alphasignal.ai
+Return-Path: <010f019fbdbd2220-2a4bca88-b5e1-43ee-85f4-f577a8fe20f0-000000@news.alphasignal.ai>
+Received: from a115-226.smtp-out.us-east-2.amazonses.com (a115-226.smtp-out.us-east-2.amazonses.com. [54.240.115.226])
+        by mx.google.com with ESMTPS id 956f58d0204a3-669491d59ddsi6130524d50.286.2026.08.01.07.31.57
+        for <vaultscapes@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 01 Aug 2026 07:31:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 010f019fbdbd2220-2a4bca88-b5e1-43ee-85f4-f577a8fe20f0-000000@news.alphasignal.ai designates 54.240.115.226 as permitted sender) client-ip=54.240.115.226;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@alphasignal.ai header.s=6t4xwwgfigb46q3fzae2xqfpgghp2ub3 header.b=K3vYVogt;
+       dkim=pass header.i=@amazonses.com header.s=kra23psoka5qyyh6gdejiiuof3nluwuz header.b="mrE/kLhf";
+       spf=pass (google.com: domain of 010f019fbdbd2220-2a4bca88-b5e1-43ee-85f4-f577a8fe20f0-000000@news.alphasignal.ai designates 54.240.115.226 as permitted sender) smtp.mailfrom=010f019fbdbd2220-2a4bca88-b5e1-43ee-85f4-f577a8fe20f0-000000@news.alphasignal.ai;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alphasignal.ai
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6t4xwwgfigb46q3fzae2xqfpgghp2ub3; d=alphasignal.ai; t=1785594716;
+	h=From:To:Subject:MIME-Version:Content-Type:List-Unsubscribe:List-Unsubscribe-Post:List-Id:List-Help:Message-ID:Date;
+	bh=0cvqjYZmM/MPPzisi5d5LWBbN+ejkZf7AnbnjZvHqcQ=;
+	b=K3vYVogt6NIeSJll5SS9RrowHEFkz7aYNzaqfCDXfS2XsbKTQJf+xpNZ+ZGooYyR
+	4zVFpIN7FR8lHglwdTCpn1FNYxCc8HGuq6cn/siaRssWWq7O1mfMgOhuPWI1VmSeMSD
+	wf9awF3tDqWQZENRUx8DWTXgUKxIuTaP970Wp4HTEBZ2/lfavifovnd2lS+xDvLbteK
+	tJoKTIEZjTYx5SphJ2P/HcHmE8Zx84P/gF0hMdRNZv8dJ5tyVULL81EmAEQlsI5o71V
+	4Hznr8sFWb61Mob0E80w/r73wmS43o2RxzyPo5nCRQ/mKzqTv2yDBTUPHaUoKBd+DB1
+	KC6e0qeC5Q==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=kra23psoka5qyyh6gdejiiuof3nluwuz; d=amazonses.com; t=1785594716;
+	h=From:To:Subject:MIME-Version:Content-Type:List-Unsubscribe:List-Unsubscribe-Post:List-Id:Feedback-ID:List-Help:Message-ID:Date;
+	bh=0cvqjYZmM/MPPzisi5d5LWBbN+ejkZf7AnbnjZvHqcQ=;
+	b=mrE/kLhfss51Pxup7zG8Quu20ZNJ2vhuljE5UMB9YZTh1TMrO2SXiUyCXIFUghvV
+	k4f4I9ptyi5nyLduSQrEWV+t4sZiUIztax7F2WULpLK4r+1QG84olLfmtz5fAAjrASU
+	N60JOVI7r7BIG50nKMB0772QYXUiTeqNmJLoBvr4=
+From: AlphaSignal <news@alphasignal.ai>
+To: vaultscapes@gmail.com
+Subject: =?UTF-8?Q?=F0=9F=94=8D_The_missing_layer_in_AI_coding:_runtime_validation?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_456297_2094103605.1785594716704"
+List-Unsubscribe: <mailto:news@alphasignal.ai?subject=unsubscribe%204f41ae2931bee134>, <https://alphasignal.ai/us?uid=DhS8ajH7NeRZK5Ns&cid=4f41ae2931bee134>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: AlphaSignal Newsletter <news.alphasignal.ai>
+Feedback-ID: ::1.us-east-2.jAR5U7QBOAP7Zz6aQYGcElD40cTATkRIc5pck9uHLa4=:AmazonSES
+Precedence: bulk
+Auto-Submitted: auto-generated
+Organization: AlphaSignal
+Archived-At: https://alphasignal.ai/email/4f41ae2931bee134
+X-Report-Abuse: mailto:news@alphasignal.ai
+X-Report-Spam: mailto:news@alphasignal.ai
+Abuse-Reports-To: mailto:news@alphasignal.ai
+List-Help: <mailto:news@alphasignal.ai?subject=help>
+Message-ID: <010f019fbdbd2220-2a4bca88-b5e1-43ee-85f4-f577a8fe20f0-000000@us-east-2.amazonses.com>
+Date: Sat, 1 Aug 2026 14:31:56 +0000
+X-SES-Outgoing: 2026.08.01-54.240.115.226
+
+------=_Part_456297_2094103605.1785594716704
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+=F0=9F=94=8D The missing layer in AI coding: runtime validation
+Greptile sends scoped agents into sandboxes, tests suspected failures, and =
+returns screenshots and logs inside the PR.
+Stay updated with today=E2=80=99s top AI news, papers, and repos.
+Signup
+|
+Work With Us
+|
+Follow on X
+Hey,
+Your AI coding assistant writes a clean pull request, the types pass, and t=
+he logic looks correct. Then the application freezes at startup, an async e=
+dge case triggers a 500 error, or a shell bypass exposes secrets that no te=
+xt-only review caught.
+Greptile is targeting this validation gap with TREX, a runtime execution la=
+yer that runs PR branches inside isolated sandboxes and returns concrete pr=
+oof of failure. Here is why AI code review needs to move from predicting bu=
+gs to executing the code.
+Today's Author
+Ben Dickson is a veteran software engineer and former CTO known as the "Eng=
+ineer's Journalist" for translating technical AI research into practical, p=
+roduction-focused insights. He is a lead contributor to TechCrunch and Vent=
+ureBeat.
+Technical Deep Dive
+Why AI code review needs proof, not predictions
+AI coding assistants can generate massive volumes of code in seconds, but w=
+hen a text-only review misses a subtle runtime error, developers pay a mass=
+ive debugging tax, spending hours scraping logs, scrambling to reproduce en=
+vironments, and writing urgent hotfixes under pressure.
+Greptile's new tool,
+TREX
+, tackles this bottleneck by moving from static code analysis to active run=
+time execution.
+TREX actively runs PR branches in a dynamic sandbox and automatically spins=
+ up dev servers, mocks API inputs, and executes interactions to catch failu=
+res that static analysis cannot see.
+By reading the code and then running it,
+Greptile
+mimics the review and QA pipelines that real engineering teams build and au=
+tomates the gruntwork of validation.
+By executing the code during validation, TREX catches critical issues that =
+static analysis misses:
+Runtime bugs like the application inexplicably freezing two seconds into st=
+artup.
+Complex security vulnerabilities, like a shell expansion bypass that quietl=
+y leaks secrets.
+The ceiling of static analysis
+Though large language models have gotten much better at finding bugs and re=
+asoning about code logic, they still struggle to predict complex runtime st=
+ate failures.
+These are issues caused by dynamic memory mutations, asynchronous event loo=
+ps, race conditions, or stateful database connection pools that happen duri=
+ng code execution.
+This is exactly what creates the debugging tax. A text-only AI reviewer wil=
+l frequently approve a PR where the TypeScript types and function logic loo=
+k clean in isolation. However, in production, an edge-case null payload pas=
+sing through an async middleware chain triggers an unhandled promise reject=
+ion and a 500 server error.
+When a bug like this slips past review, the team is forced into damage cont=
+rol: bisecting git commits, scraping distributed log aggregators, and patch=
+ing the logic under immense pressure.
+Safely scaling AI code generation requires an evolutionary leap in QA. Team=
+s need to shift from passive compute prediction to active code execution. A=
+ctive execution requires the AI to actually compile, execute, and evaluate =
+the software in an isolated environment.
+Instead of an LLM passively guessing that a database query might time out i=
+f a user ID is null, active code execution spins up an ephemeral container.=
+ It fires a payload against the live endpoint, measures execution, and inte=
+rcepts the real HTTP 504 log directly.
+TREX runtime validation and proof of work
+Attempting to make a single AI agent run services, take screenshots, and ru=
+n tests can overload the model's context window.
+To keep the context focused, the main Greptile reviewer acts as an orchestr=
+ator. When it reads a diff and identifies an issue, it spins up a dedicated=
+ TREX sub-agent scoped exclusively to investigate that specific problem in =
+an isolated sandbox.
+Take a new UI component hidden behind an authentication gate as an example.=
+ Testing this locally normally requires setting up the dev environment, han=
+dling web tokens, and manually toggling feature flags.
+A TREX sub-agent figures this all out autonomously. It interacts with the a=
+pp and returns to the PR with a screenshot of the rendered feature that sho=
+ws whether it works or breaks.
+An AI that only leaves a text comment reading "this might fail" creates mor=
+e work. The developer still has to pull the branch, start the server, and v=
+erify the results.
+By attaching concrete artifacts to the PR, TREX ensures the developer never=
+ has to run the code themselves.
+Under the hood: the semantic code graph and continuous learning
+Executing code in a sandbox sounds simple, but running blind tests on a com=
+plex codebase is computationally impossible. Before TREX can execute a sing=
+le test, it needs to know what to test.
+That context comes from Greptile's underlying
+Semantic Code Graph
+. Before running any code, Greptile parses the entire repository to extract=
+ and map directories, files, functions, variables, and classes.
+When a PR is submitted, Greptile acts as an orchestrator. It deploys a swar=
+m of parallel AI agents that query the graph index to trace dependencies an=
+d assess impact well beyond the changed lines.
+However, mapping static code isn't enough on its own. Greptile continuously=
+ learns and adapts to the team's undocumented preferences and engineering s=
+tandards.
+By ingesting internal documentation and reading historical and ongoing PR c=
+omments, the system dynamically adapts its custom rules over time. This lea=
+ds to highly tailored reviews that understand the nuances of your specific =
+stack.
+This combination of deep codebase mapping and continuous cultural learning =
+is why Greptile's core reading layer catches the subtle issues that diff-on=
+ly AI tools miss:
+Cross-service logical bugs
+Silent exception swallowing
+Stylistic regressions
+The central validation layer: Greptile CLI and the `/greploop`
+Greptile allows you to get the rigorous code auditing without leaving your =
+existing workflows.
+Developers don't have to wait for a GitHub PR to get codebase-aware feedbac=
+k. The
+Greptile CLI
+allows engineers to run a full repository review locally in the terminal.
+The CLI includes an "--agent" mode that lets your local coding assistants t=
+rigger Greptile themselves. They receive findings and suggested fixes as ra=
+w text to iterate on immediately.
+For ultimate autonomy, the "/greploop" skill creates a self-healing develop=
+er loop that follows a five-step cycle:
+An AI agent writes code
+It triggers a Greptile review
+The agent reads the resulting feedback
+It applies the exact fixes and pushes the commit
+It triggers another review
+The system repeats the loop up to five times to prevent runaway cycles. It =
+continues until Greptile scores the PR a perfect five out of five with zero=
+ unresolved comments.
+Real-world impact
+Brex integrated Greptile
+to navigate their massive, 8-year-old monorepo with high precision and low =
+noise. By catching what human reviewers easily miss, the platform helped Br=
+ex ship features 30% faster. CTO James Reggio officially called it "the onl=
+y AI reviewer that doesn't annoy the s**t out of me."
+We can also see TREX runtime validation
+catching bugs in the wild
+. In the "workos/oagen" repository, Greptile caught a correctness bug leaki=
+ng sibling models and breaking a selected-only contract.
+More critically, in the "hashgraph-online/hol-guard" repository, it identif=
+ied a severe vulnerability where a shell expansion bypass allowed secrets t=
+o exfiltrate past a kubectl guard.
+Crucially, TREX didn't just leave a text warning about the security flaw. I=
+t actively spun up a sandbox, executed the malicious payload, fired it agai=
+nst the logic, and attached the exact failure output as proof of work direc=
+tly in the PR.
+Greptile's benchmarks show that teams relying on this automated validation =
+layer merge pull requests up to 4x faster and catch 3x more production-bloc=
+king bugs than those relying on static review alone.
+Enterprise-scale deployment
+To support large-scale engineering teams, Greptile also offers self-hosted,=
+ air-gapped deployments. Organizations can deploy the system entirely withi=
+n their own virtual private cloud to maintain strict data residency require=
+ments.
+The platform is SOC 2 Type II compliant and includes standard enterprise co=
+ntrols like SSO and comprehensive audit logs.
+AI code generation is only as fast as your validation pipeline. Relying on =
+manual human testing to validate AI-generated code nullifies the velocity g=
+ains of using AI in the first place.
+You can begin a
+14-day free trial
+to experience the automated validation layer against your own codebases.
+At Alpha Signal, our mission is to build a sharp, engaged community focused=
+ on AI, machine learning, and cutting-edge language models, helping over 20=
+0,000 developers stay informed and ahead. We=E2=80=99re passionate about cu=
+rating the best in AI, from top research and trending technical blogs to ex=
+pert insights and tailored job opportunities. We keep you connected to the =
+breakthroughs and discussions that matter, so you can stay in the loop with=
+out endless searching. We also work closely with partners who value the fut=
+ure of AI, including employers and advertisers who want to reach an audienc=
+e as passionate about AI as we are.
+Our partnerships are based on shared values of ethics, responsibility, and =
+a commitment to building a better world through technology.Privacy is a pri=
+ority at Alpha Signal. Our Privacy Policy clearly explains how we collect, =
+store, and use your personal and non-personal information. By using our web=
+site, you accept these terms, which you can review on our website. This pol=
+icy applies across all Alpha Signal pages, outlining your rights and how to=
+ contact us if you want to adjust the use of your information. We=E2=80=99r=
+e based in the United States. By using our site, you agree to be governed b=
+y U.S. laws.
+Looking to promote your company, product, service, or event to 250,000+ AI =
+developers?
+WORK WITH US
+How was today=E2=80=99s email?
+Awesome
+Decent
+Not Great
+unsubscribe_me(): return True
+{"AlphaSignal": "214 Barton Springs Rd, Austin, USA"}
+
+Stop receiving emails here: https://app.alphasignal.ai/unsubscribe/u/DhS8aj=
+H7NeRZK5Ns?cid=3D4f41ae2931bee134
+------=_Part_456297_2094103605.1785594716704
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+<html>
+<head>
+<meta charset=3D"utf-8"/>
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"/>
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewpor=
+t"/>
+<meta content=3D"light" name=3D"color-scheme"/>
+<meta content=3D"light dark" name=3D"supported-color-schemes"/>
+<title>=F0=9F=94=8D The missing layer in AI coding: runtime validation</tit=
+le>
+<style type=3D"text/css">
+  /* Reset text resizing */
+  body,
+  table,
+  td,
+  a {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  li:last-child {
+    margin-bottom: 0; /* remove margin from last item */
+  }
+
+  img {
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+    display: block;
+  }
+
+  .h1 {
+    font-size: 17px !important;
+  }
+
+  .p {
+    font-size: 15px !important;
+  }
+
+  p {
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+    mso-hide: all !important;
+  }
+
+  .menu-bar {
+    text-align: center !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+
+  .menu-bar a {
+    display: inline-block !important;
+    padding: 6px 8px !important;
+  }
+
+  /* Mobile styles */
+  @media only screen and (max-width: 600px) {
+    .h1 {
+      font-size: 17px !important;
+      line-height: 22px !important;
+    }
+
+    .p {
+      font-size: 14px !important;
+      line-height: 22px !important;
+    }
+
+    .btn {
+      font-size: 15px !important;
+      padding: 14px 20px !important;
+    }
+
+    .ul li {
+      font-size: 14px !important;
+      line-height: 22px !important;
+    }
+
+    .menu-bar {
+      text-align: center !important;
+    }
+
+    .menu-bar a {
+      display: inline-block !important;
+      padding: 6px 8px !important;
+    }
+
+    .feedback-box {
+      padding: 20px !important;
+    }
+
+    .feedback-title {
+      font-size: 16px !important;
+      line-height: 22px !important;
+    }
+
+    .feedback-link {
+      font-size: 15px !important;
+      line-height: 20px !important;
+    }
+  }
+</style>
+<!--[if mso]>
+<style type=3D"text/css">
+  .h1,
+  .p,
+  .btn,
+  .ul li {
+    font-family: Arial, sans-serif !important;
+  }
+</style>
+<![endif]-->
+</head><img src=3D"https://app.alphasignal.ai/o?uid=3DDhS8ajH7NeRZK5Ns&cid=
+=3D4f41ae2931bee134&mid=3D5f6909b6-de1e-41c9-a0ee-f468f7ef0a68&s=3D%F0%9F%9=
+4%8D%20The%20missing%20layer%20in%20AI%20coding%3A%20runtime%20validation&t=
+=3D1785594712" width=3D"1" height=3D"1" alt=3D"" aria-hidden=3D"true" role=
+=3D"presentation" style=3D"display:block;border:0;outline:none;text-decorat=
+ion:none;opacity:0;"><div style=3D"display:none!important;max-height:0;over=
+flow:hidden;mso-hide:all;font-size:1px;line-height:1px;opacity:0;color:tran=
+sparent;">Greptile sends scoped agents into sandboxes, tests suspected fail=
+ures, and returns screenshots and logs inside the PR.</div>
+<body bgcolor=3D"#fcfcfc" style=3D"margin:0; padding:0; background-color:#f=
+cfcfc;"><div style=3D"display:none;max-height:0;overflow:hidden;">Greptile =
+sends scoped agents into sandboxes, tests suspected failures, and returns s=
+creenshots and logs inside the PR.</div>
+<table bgcolor=3D"#fcfcfc" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" width=3D"100%">
+<tr>
+<td align=3D"center" style=3D"padding:0 10px;">
+<!-- all your inner tables start here -->
+<!-- Hidden Preheader -->
+<div style=3D"display:none !important;font-size:1px;color:#ffffff;line-heig=
+ht:1px;
+              max-height:0px;max-width:0px;overflow:hidden;opacity:0;">
+    Stay updated with today=E2=80=99s top AI news, papers, and repos.
+  </div>
+<!-- =E2=9C=85 Centered footer menu (desktop + mobile) -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:0 auto;" width=3D"100%">
+<tr>
+<td align=3D"center" style=3D"padding:6px 0 2px 0;text-align:center;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"menu-bar" role=3D"presentation" style=3D"display:inline-table;margin=
+:0 auto;text-align:center;">
+<tr>
+<td style=3D"font-size:12px;line-height:18px;font-family:Helvetica, Arial, =
+sans-serif;">
+<a href=3D"https://alphasignal.ai/?utm_source=3Demail" style=3D"text-decora=
+tion:none;color:#000000 !important;
+                      font-family:Helvetica, Arial, sans-serif;
+                      font-size:12px;line-height:18px;" target=3D"_blank">
+              Signup
+            </a>
+</td>
+<td style=3D"font-size:13px;line-height:18px;color:#000000;
+                     font-family:Helvetica, Arial, sans-serif;">|</td>
+<td style=3D"font-size:12px;line-height:18px;font-family:Helvetica, Arial, =
+sans-serif;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D4f=
+41ae2931bee134&amp;lid=3DBkfXNGUjbGQXuFMx&amp;mid=3D5f6909b6-de1e-41c9-a0ee=
+-f468f7ef0a68" style=3D"text-decoration:none;color:#000000 !important;
+                      font-family:Helvetica, Arial, sans-serif;
+                      font-size:12px;line-height:18px;" target=3D"_blank">
+              Work With Us
+            </a>
+</td>
+<td style=3D"font-size:13px;line-height:18px;color:#000000;
+                     font-family:Helvetica, Arial, sans-serif;">|</td>
+<td style=3D"font-size:12px;line-height:18px;font-family:Helvetica, Arial, =
+sans-serif;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D4f=
+41ae2931bee134&amp;lid=3D132O2fVwy6HLWDSWi&amp;mid=3D5f6909b6-de1e-41c9-a0e=
+e-f468f7ef0a68" style=3D"text-decoration:none;color:#000000 !important;
+                      font-family:Helvetica, Arial, sans-serif;
+                      font-size:12px;line-height:18px;" target=3D"_blank">
+              Follow on X
+            </a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- SINGLE BLOCK: BLACK BACKGROUND, WHITE TEXT -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:auto;border:1px solid #000;background-co=
+lor:#000000;margin-bottom:30px;" width=3D"100%">
+<tr>
+<td style=3D"padding:20px;">
+<!-- Logo -->
+<img alt=3D"AlphaSignal Logo" border=3D"0" src=3D"https://alphasignal.ai/im=
+age/1764279764256-wj5ohs.png" style=3D"display:block;width:32px;height:auto=
+;margin-bottom:10px;" width=3D"32"/>
+<!-- White Divider Under Logo -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"margin:0 0 20px 0;" width=3D"100%">
+<tr>
+<td style=3D"border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px;line-he=
+ight:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey,
+      </p>
+<!-- Intro Text -->
+<p style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-he=
+ight:22px;
+                color:#ffffff;margin:0;">=20
+Your AI coding assistant writes a clean pull request, the types pass, and t=
+he logic looks correct. Then the application freezes at startup, an async e=
+dge case triggers a 500 error, or a shell bypass exposes secrets that no te=
+xt-only review caught.
+<br/><br/>
+Greptile is targeting this validation gap with TREX, a runtime execution la=
+yer that runs PR branches inside isolated sandboxes and returns concrete pr=
+oof of failure. Here is why AI code review needs to move from predicting bu=
+gs to executing the code.
+<br/><br/>
+</p></td>
+</tr>
+</table><!-- Author Box -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-b=
+ottom:30px;" width=3D"100%">
+<tr>
+<!-- Profile Image -->
+<td style=3D"padding-right:12px;" valign=3D"top" width=3D"70">
+<img alt=3D"Author photo" height=3D"60" src=3D"https://alphasignal.ai/image=
+/1785577065859-qufgr4.png" style=3D"display:block;border:1px solid #000000;=
+outline:none;text-decoration:none;" width=3D"60"/>
+</td>
+<!-- Text Content -->
+<td style=3D"font-family:system-ui, Helvetica, Arial, sans-serif;color:#000=
+000;" valign=3D"middle">
+<div style=3D"font-size:15px;font-weight:700;line-height:20px;margin:0 0 3p=
+x 0;padding:0;">
+        Today's Author
+      </div>
+<div style=3D"font-size:15px;line-height:20px;margin:0;padding:0;">
+       =20
+   Ben Dickson is a veteran software engineer and former CTO known as the "=
+Engineer's Journalist" for translating technical AI research into practical=
+, production-focused insights. He is a lead contributor to TechCrunch and V=
+entureBeat.
+     =20
+      </div>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:auto;border:1px solid #6B6B6B;background=
+-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width=3D"10=
+0%">
+<!-- Section Title -->
+<tr>
+<td style=3D"font-family:system-ui, sans-serif;font-size:16px;line-height:2=
+2px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-=
+textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Technical Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style=3D"padding:0 0 10px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class=3D"h1" style=3D"font-family:Helvetica, sans-serif;font-size:17px;=
+line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style=3D"color:#000000 !important;text-decoration:none;">
+      Why AI code review needs proof, not predictions
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style=3D"font-family:Helvetica, sans-serif;font-size:15px;line-height:2=
+2px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-=
+textfill-fill-color:#000000;
+               padding:0;">
+<div style=3D"margin-top:0;">
+<p>AI coding assistants can generate massive volumes of code in seconds, bu=
+t when a text-only review misses a subtle runtime error, developers pay a m=
+assive debugging tax, spending hours scraping logs, scrambling to reproduce=
+ environments, and writing urgent hotfixes under pressure.</p>
+<p>Greptile's new tool, <a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8a=
+jH7NeRZK5Ns&amp;cid=3D4f41ae2931bee134&amp;lid=3DjyacbXotASM16jum&amp;mid=
+=3D5f6909b6-de1e-41c9-a0ee-f468f7ef0a68">TREX</a>, tackles this bottleneck =
+by moving from static code analysis to active runtime execution.</p>
+<p>TREX actively runs PR branches in a dynamic sandbox and automatically sp=
+ins up dev servers, mocks API inputs, and executes interactions to catch fa=
+ilures that static analysis cannot see.</p>
+<p>By reading the code and then running it, <a href=3D"https://app.alphasig=
+nal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D4f41ae2931bee134&amp;lid=3Dnn564y=
+6JGmGzbM6v&amp;mid=3D5f6909b6-de1e-41c9-a0ee-f468f7ef0a68">Greptile</a> mim=
+ics the review and QA pipelines that real engineering teams build and autom=
+ates the gruntwork of validation.</p>
+<p>By executing the code during validation, TREX catches critical issues th=
+at static analysis misses:</p>
+<ul>
+<li>Runtime bugs like the application inexplicably freezing two seconds int=
+o startup.</li>
+<li>Complex security vulnerabilities, like a shell expansion bypass that qu=
+ietly leaks secrets.</li>
+</ul>
+<p><b>The ceiling of static analysis</b></p>
+<p>Though large language models have gotten much better at finding bugs and=
+ reasoning about code logic, they still struggle to predict complex runtime=
+ state failures.</p>
+<p>These are issues caused by dynamic memory mutations, asynchronous event =
+loops, race conditions, or stateful database connection pools that happen d=
+uring code execution.</p>
+<p>This is exactly what creates the debugging tax. A text-only AI reviewer =
+will frequently approve a PR where the TypeScript types and function logic =
+look clean in isolation. However, in production, an edge-case null payload =
+passing through an async middleware chain triggers an unhandled promise rej=
+ection and a 500 server error.</p>
+<p>When a bug like this slips past review, the team is forced into damage c=
+ontrol: bisecting git commits, scraping distributed log aggregators, and pa=
+tching the logic under immense pressure.</p>
+<p>Safely scaling AI code generation requires an evolutionary leap in QA. T=
+eams need to shift from passive compute prediction to active code execution=
+. Active execution requires the AI to actually compile, execute, and evalua=
+te the software in an isolated environment.</p>
+<p>Instead of an LLM passively guessing that a database query might time ou=
+t if a user ID is null, active code execution spins up an ephemeral contain=
+er. It fires a payload against the live endpoint, measures execution, and i=
+ntercepts the real HTTP 504 log directly.</p>
+<p><b>TREX runtime validation and proof of work</b></p>
+<p>Attempting to make a single AI agent run services, take screenshots, and=
+ run tests can overload the model's context window.</p>
+<img alt=3D"alpha_signal_image_1" border=3D"0" src=3D"https://alphasignal.a=
+i/image/1785576117298-58vao4.png" style=3D"display:block;width:100%;max-wid=
+th:560px;height:auto;" width=3D"560"/>
+<p>To keep the context focused, the main Greptile reviewer acts as an orche=
+strator. When it reads a diff and identifies an issue, it spins up a dedica=
+ted TREX sub-agent scoped exclusively to investigate that specific problem =
+in an isolated sandbox.</p>
+<p>Take a new UI component hidden behind an authentication gate as an examp=
+le. Testing this locally normally requires setting up the dev environment, =
+handling web tokens, and manually toggling feature flags.</p>
+<p>A TREX sub-agent figures this all out autonomously. It interacts with th=
+e app and returns to the PR with a screenshot of the rendered feature that =
+shows whether it works or breaks.</p>
+<p>An AI that only leaves a text comment reading "this might fail" creates =
+more work. The developer still has to pull the branch, start the server, an=
+d verify the results.</p>
+<p>By attaching concrete artifacts to the PR, TREX ensures the developer ne=
+ver has to run the code themselves.</p>
+<p><b>Under the hood: the semantic code graph and continuous learning</b></=
+p>
+<p>Executing code in a sandbox sounds simple, but running blind tests on a =
+complex codebase is computationally impossible. Before TREX can execute a s=
+ingle test, it needs to know what to test.</p>
+<img alt=3D"alpha_signal_image_2" border=3D"0" src=3D"https://alphasignal.a=
+i/image/1785576144466-s8pf0y.png" style=3D"display:block;width:100%;max-wid=
+th:560px;height:auto;" width=3D"560"/>
+<p>That context comes from Greptile's underlying <a href=3D"https://app.alp=
+hasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D4f41ae2931bee134&amp;lid=3D1=
+tPAfBxrrKBEhTaeB&amp;mid=3D5f6909b6-de1e-41c9-a0ee-f468f7ef0a68">Semantic C=
+ode Graph</a>. Before running any code, Greptile parses the entire reposito=
+ry to extract and map directories, files, functions, variables, and classes=
+.</p>
+<p>When a PR is submitted, Greptile acts as an orchestrator. It deploys a s=
+warm of parallel AI agents that query the graph index to trace dependencies=
+ and assess impact well beyond the changed lines.</p>
+<p>However, mapping static code isn't enough on its own. Greptile continuou=
+sly learns and adapts to the team's undocumented preferences and engineerin=
+g standards.</p>
+<p>By ingesting internal documentation and reading historical and ongoing P=
+R comments, the system dynamically adapts its custom rules over time. This =
+leads to highly tailored reviews that understand the nuances of your specif=
+ic stack.</p>
+<p>This combination of deep codebase mapping and continuous cultural learni=
+ng is why Greptile's core reading layer catches the subtle issues that diff=
+-only AI tools miss:</p>
+<ul>
+<li>Cross-service logical bugs</li>
+<li>Silent exception swallowing</li>
+<li>Stylistic regressions</li>
+</ul>
+<p><b>The central validation layer: Greptile CLI and the `/greploop`</b></p=
+>
+<p>Greptile allows you to get the rigorous code auditing without leaving yo=
+ur existing workflows.</p>
+<p>Developers don't have to wait for a GitHub PR to get codebase-aware feed=
+back. The <a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&am=
+p;cid=3D4f41ae2931bee134&amp;lid=3D7lWwLM66sWKn3KkY&amp;mid=3D5f6909b6-de1e=
+-41c9-a0ee-f468f7ef0a68">Greptile CLI</a> allows engineers to run a full re=
+pository review locally in the terminal.</p>
+<p>The CLI includes an "--agent" mode that lets your local coding assistant=
+s trigger Greptile themselves. They receive findings and suggested fixes as=
+ raw text to iterate on immediately.</p>
+<p>For ultimate autonomy, the "/greploop" skill creates a self-healing deve=
+loper loop that follows a five-step cycle:</p>
+<ul>
+<li>An AI agent writes code</li>
+<li>It triggers a Greptile review</li>
+<li>The agent reads the resulting feedback</li>
+<li>It applies the exact fixes and pushes the commit</li>
+<li>It triggers another review</li>
+</ul>
+<p>The system repeats the loop up to five times to prevent runaway cycles. =
+It continues until Greptile scores the PR a perfect five out of five with z=
+ero unresolved comments.</p>
+<p><b>Real-world impact</b></p>
+<p><a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=
+=3D4f41ae2931bee134&amp;lid=3DQ3Jxwe51tsyUbom1&amp;mid=3D5f6909b6-de1e-41c9=
+-a0ee-f468f7ef0a68">Brex integrated Greptile</a> to navigate their massive,=
+ 8-year-old monorepo with high precision and low noise. By catching what hu=
+man reviewers easily miss, the platform helped Brex ship features 30% faste=
+r. CTO James Reggio officially called it "the only AI reviewer that doesn't=
+ annoy the s**t out of me."</p>
+<p>We can also see TREX runtime validation <a href=3D"https://app.alphasign=
+al.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D4f41ae2931bee134&amp;lid=3D1A8biz4=
+zK2yLcnSry&amp;mid=3D5f6909b6-de1e-41c9-a0ee-f468f7ef0a68">catching bugs in=
+ the wild</a>. In the "workos/oagen" repository, Greptile caught a correctn=
+ess bug leaking sibling models and breaking a selected-only contract.</p>
+<p>More critically, in the "hashgraph-online/hol-guard" repository, it iden=
+tified a severe vulnerability where a shell expansion bypass allowed secret=
+s to exfiltrate past a kubectl guard.</p>
+<p>Crucially, TREX didn't just leave a text warning about the security flaw=
+. It actively spun up a sandbox, executed the malicious payload, fired it a=
+gainst the logic, and attached the exact failure output as proof of work di=
+rectly in the PR.</p>
+<p>Greptile's benchmarks show that teams relying on this automated validati=
+on layer merge pull requests up to 4x faster and catch 3x more production-b=
+locking bugs than those relying on static review alone.</p>
+<p><b>Enterprise-scale deployment</b></p>
+<p>To support large-scale engineering teams, Greptile also offers self-host=
+ed, air-gapped deployments. Organizations can deploy the system entirely wi=
+thin their own virtual private cloud to maintain strict data residency requ=
+irements.</p>
+<p>The platform is SOC 2 Type II compliant and includes standard enterprise=
+ controls like SSO and comprehensive audit logs.</p>
+<p>AI code generation is only as fast as your validation pipeline. Relying =
+on manual human testing to validate AI-generated code nullifies the velocit=
+y gains of using AI in the first place.</p>
+<p>You can begin a <a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7Ne=
+RZK5Ns&amp;cid=3D4f41ae2931bee134&amp;lid=3Dnn564y6JGmGzbM6v&amp;mid=3D5f69=
+09b6-de1e-41c9-a0ee-f468f7ef0a68">14-day free trial</a> to experience the a=
+utomated validation layer against your own codebases.</p>
+</div>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mobile-hid=
+den" role=3D"presentation" style=3D"max-width:600px;width:100%;margin:auto;=
+border:1px solid #A4ACB6;
+         background-color:#ffffff;margin-bottom:30px;" width=3D"100%">
+<tr>
+<td style=3D"padding:20px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" width=3D"100%">
+<tr>
+<td align=3D"center" class=3D"p" style=3D"font-family:Helvetica, Arial, san=
+s-serif;
+                 font-size:10px !important;
+                 line-height:22.5px;
+                 font-weight:normal;
+                 color:#a1a1a1 !important;
+                 mso-color-alt:#6a7788;
+                 mso-style-textfill-fill-color:#6a7788;
+                 padding:0 0 10px 0;">
+        At Alpha Signal, our mission is to build a sharp, engaged community=
+ focused on AI, machine learning, and cutting-edge language models, helping=
+ over 200,000 developers stay informed and ahead. We=E2=80=99re passionate =
+about curating the best in AI, from top research and trending technical blo=
+gs to expert insights and tailored job opportunities. We keep you connected=
+ to the breakthroughs and discussions that matter, so you can stay in the l=
+oop without endless searching. We also work closely with partners who value=
+ the future of AI, including employers and advertisers who want to reach an=
+ audience as passionate about AI as we are.
+<br/><br/>Our partnerships are based on shared values of ethics, responsibi=
+lity, and a commitment to building a better world through technology.Privac=
+y is a priority at Alpha Signal. Our Privacy Policy clearly explains how we=
+ collect, store, and use your personal and non-personal information. By usi=
+ng our website, you accept these terms, which you can review on our website=
+. This policy applies across all Alpha Signal pages, outlining your rights =
+and how to contact us if you want to adjust the use of your information. We=
+=E2=80=99re based in the United States. By using our site, you agree to be =
+governed by U.S. laws.
+      </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;width:100%;margin:auto;border:1px solid #000000=
+;
+         background-color:#ffffff;margin-bottom:30px;" width=3D"100%">
+<tr>
+<!-- Outer wrapper with 20px padding -->
+<td style=3D"padding:20px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<!-- Text Content -->
+<tr>
+<td align=3D"center" class=3D"p" style=3D"font-family:Helvetica, Arial, san=
+s-serif;
+           font-size:15px !important;
+           line-height:22.5px;
+           font-weight:normal;
+           color:#000000 !important;
+           mso-color-alt:#000000;
+           mso-style-textfill-fill-color:#000000;
+           padding:0;">
+  Looking to promote your company, product, service, or event to 250,000+ A=
+I developers?
+</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:10px 0 0 0;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"margin:auto;">
+<tr>
+<td align=3D"center" bgcolor=3D"#f74904" style=3D"font-family:Helvetica, Ar=
+ial, sans-serif;font-size:16px;line-height:20px;
+                           font-weight:bold;padding:12px 12px;color:#ffffff=
+ !important;
+                           border:1px solid #000000;display:block;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D4f=
+41ae2931bee134&amp;lid=3DBkfXNGUjbGQXuFMx&amp;mid=3D5f6909b6-de1e-41c9-a0ee=
+-f468f7ef0a68" style=3D"color:#ffffff !important;text-decoration:none;displ=
+ay:inline-block;" target=3D"_blank">
+                    WORK WITH US
+                  </a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Feedback Box -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:auto;border:1px solid #000;background-co=
+lor:#ffffff;" width=3D"100%">
+<tr>
+<td align=3D"center" style=3D"padding:30px 20px;background-color:#ffffff;">
+<!-- Title -->
+<div style=3D"font-family:Helvetica, Arial, sans-serif;
+               font-size:18px;line-height:24px;font-weight:bold;
+               color:#000000;
+               padding:0 0 20px 0;">
+        How was today=E2=80=99s email?
+      </div>
+<!-- Buttons -->
+<div style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px;line-=
+height:22px;">
+<a href=3D"https://app.alphasignal.ai/fb/DhS8ajH7NeRZK5Ns?cid=3D4f41ae2931b=
+ee134&amp;feedback=3DAwesome" style=3D"display:inline-block;
+                  text-decoration:none;
+                  color:#000000;
+                  border:1px solid #000000;
+                  padding:10px 16px;
+                  margin:0 6px;" target=3D"_blank">
+          Awesome
+        </a>
+<a href=3D"https://app.alphasignal.ai/fb/DhS8ajH7NeRZK5Ns?cid=3D4f41ae2931b=
+ee134&amp;feedback=3DDecent" style=3D"display:inline-block;
+                  text-decoration:none;
+                  color:#000000;
+                  border:1px solid #000000;
+                  padding:10px 16px;
+                  margin:0 6px;" target=3D"_blank">
+          Decent
+        </a>
+<a href=3D"https://app.alphasignal.ai/fb/DhS8ajH7NeRZK5Ns?cid=3D4f41ae2931b=
+ee134&amp;feedback=3DNot%20Great" style=3D"display:inline-block;
+                  text-decoration:none;
+                  color:#000000;
+                  border:1px solid #000000;
+                  padding:10px 16px;
+                  margin:0 6px;" target=3D"_blank">
+          Not Great
+        </a>
+</div>
+</td>
+</tr>
+</table>
+<!-- Footer -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:auto;" width=3D"100%">
+<tr>
+<td align=3D"center" style=3D"padding:20px 10px;">
+<!-- Unsubscribe -->
+<a href=3D"https://app.alphasignal.ai/unsubscribe/u/DhS8ajH7NeRZK5Ns?cid=3D=
+4f41ae2931bee134" style=3D"font-family:system-ui;
+                font-size:14px;line-height:20px;
+                text-decoration:none;color:#f74904 !important;
+                mso-color-alt:#f74904;
+                mso-style-textfill-fill-color:#f74904;" target=3D"_blank">
+       unsubscribe_me(): return True
+      </a>
+<!-- Address -->
+<div style=3D"padding-top:20px; font-family:system-ui;font-size:14px;color:=
+#a1a1a1;">
+{"AlphaSignal": "214 Barton Springs Rd, Austin, USA"}
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body></html>
+------=_Part_456297_2094103605.1785594716704--

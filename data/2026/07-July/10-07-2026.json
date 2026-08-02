@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "10-07-2026",
+  "iso_date": "2026-07-10",
+  "subject": "ChatGPT Work Agent 🏗️, Claude Reflect Dashboard 🧘, SWE-1.7 at $1.97/ta",
+  "intro": "OpenAI just shipped an AI that does your job. Anthropic shipped one that tells you to take a break from it. Same week. That contrast is the whole story right now. The race isn't just about capability anymore. It's about who owns your workflow and how deep that hook goes. ChatGPT Work runs for hours. Claude Reflect nudges you to log off. Two very different bets. Meanwhile, Zhipu's SAO quietly makes agentic RL training leaner. The plumbing is getting better.",
+  "read_time": "6 min 51 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "OpenAI ships ChatGPT Work, a GPT-5.6 agent that runs full workflows for hours",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic adds monthly usage dashboard to Claude with break nudges and quiet hours",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Cognition releases SWE-1.7, a coding model hitting frontier scores at $1.97 per task",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "OpenAI ships ChatGPT Work, a GPT-5.6 agent that runs full workflows for hours",
+      "likes": 18679,
+      "body": "ChatGPT just got a new mode called ChatGPT Work , and it's a big shift. Instead of answering questions, it actually does the work for you. Think of it like hiring an AI that takes a goal, figures out the steps itself, and hands you back a finished doc, slide deck, spreadsheet, or web app. No hand-holding required. Here's what it can actually do: It runs on GPT-5.6 , which comes in three tiers: Sol (top), Terra (mid), Luna (budget). Codex is now merged into the ChatGPT desktop app on Mac and Windows, so you get Chat, Work, and Codex all in one place. ChatGPT Work is live now for Pro, Enterprise, and Edu plans, rolling out to Plus and Business soon.",
+      "bullets": [
+        "Pull data from Google Drive, Slack, Salesforce , and other connected apps",
+        "Stay on a complex project for hours, breaking it into steps and completing them on its own",
+        "Output finished sheets, slides, docs, and shareable web apps, not just chat responses",
+        "Schedule tasks to run automatically"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783656211888-yxkkmx.png",
+      "read_more_url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic adds monthly usage dashboard to Claude with break nudges and quiet hours",
+      "likes": 11205,
+      "body": "Claude just shipped Reflect , a usage dashboard that shows you exactly how you've been spending time with the AI. Think Spotify Wrapped, but for your AI habits. Here's what you actually see inside it: You can look back on activity over the past 1, 3, 6, or 12 months . It skips incognito chats and anything tied to health integrations. To try it: go to Settings > Reflect. Memory must be turned on, and you need to be on web or desktop.",
+      "bullets": [
+        "Your most active day, peak hour, and total conversations over the selected period",
+        "A breakdown of topics you've discussed, with a percentage assigned to the ones you bring up most often",
+        "Workflow tips, like suggesting you use Projects if Claude notices you keep re-explaining the same context",
+        "Controls to set quiet hours and schedule break nudges after a chosen amount of Claude use"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783656287667-3u4wbb.png",
+      "read_more_url": "https://www.anthropic.com/news/reflect-with-claude"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Cognition releases SWE-1.7, a coding model hitting frontier scores at $1.97 per task",
+      "likes": 6589,
+      "body": "Cognition just dropped SWE-1.7 , their most capable coding model yet, and the story here is about squeezing frontier-level performance without frontier-level cost. The model is built on top of Kimi K2.7 and then improved using reinforcement learning (RL) -- basically a training technique where the model learns by trial and error, getting rewarded for writing code you'd actually want to merge. The tricky part? Long RL training runs are notoriously unstable. Two big problems kept killing progress: entropy collapse, where the model stops exploring new ideas and plateaus, and numerical drift between training and inference. Cognition hunted down and fixed both, letting training keep improving well past where earlier runs stalled. SWE-1.7 is available today in Devin via Web, Desktop, and CLI. You can use it right now inside Devin to tackle longer, real-world coding tasks.",
+      "bullets": [
+        "42.3% on FrontierCode at $1.97 per task -- near Opus 4.8 and GPT-5.5 level",
+        "Runs at 1000 tokens/second via Cerebras",
+        "Trained across 4 datacenters on 3 continents",
+        "Investigates more before editing -- touches more files as a tradeoff"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783656315579-0yir9j.png",
+      "read_more_url": "https://cognition.com/blog/swe-1-7"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Open-source tool clones your voice and pipes it into Claude or Cursor",
+      "stat": {
+        "type": "likes",
+        "value": 6515
+      },
+      "url": "https://github.com/jamiepine/voicebox"
+    },
+    {
+      "rank": 2,
+      "headline": "Zhipu AI's new RL training trick beats GRPO on coding and math benchmarks",
+      "stat": {
+        "type": "likes",
+        "value": 435
+      },
+      "url": "https://arxiv.org/abs/2607.07508"
+    },
+    {
+      "rank": 3,
+      "headline": "Open-source benchmark tests 30+ robot models across sim and real-world tasks",
+      "stat": {
+        "type": "likes",
+        "value": 328
+      },
+      "url": "https://arxiv.org/abs/2607.04434"
+    },
+    {
+      "rank": 4,
+      "headline": "Cohere Labs releases Aya Vision, an 8B open-weights model supporting 23 languages",
+      "stat": {
+        "type": "downloads",
+        "value": 144000
+      },
+      "url": "https://huggingface.co/CohereLabs/aya-vision-8b"
+    },
+    {
+      "rank": 5,
+      "headline": "Claude Code's hidden /advisor command lets any model review your code",
+      "stat": {
+        "type": "likes",
+        "value": 3694
+      },
+      "url": "https://github.com/anthropics/claude-code"
+    }
+  ]
+}

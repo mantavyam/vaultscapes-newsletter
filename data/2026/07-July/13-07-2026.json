@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "13-07-2026",
+  "iso_date": "2026-07-13",
+  "subject": "64 parallel subagents just ended a 50-year math standoff — here's the",
+  "intro": "AI is quietly eating two very different worlds this week: software development and pure mathematics. Cursor's side chats and agent history are small UX fixes, but they signal something bigger: agents are becoming persistent collaborators, not just one-shot tools. Meanwhile, GPT-5.6 Sol Ultra proved a 50-year-old math conjecture using 64 parallel subagents in under one hour. Same multi-agent pattern, wildly different stakes. The throughline? Parallelism is the new intelligence.",
+  "read_time": "6 min 52 sec",
+  "summary": [
+    {
+      "category": "Top Repo",
+      "headline": "OpenAI's GPT-5.6 Sol cracks a 50-year-old math conjecture in under one hour",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Cursor ships searchable agent history and side chats for parallel conversations",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Google AI Studio lets deployed apps claim a permanent custom domain",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Repo",
+      "headline": "OpenAI's GPT-5.6 Sol cracks a 50-year-old math conjecture in under one hour",
+      "likes": 6634,
+      "body": "GPT-5.6 Sol Ultra just did something no human mathematician could pull off in 50 years. It produced a proof of the Cycle Double Cover Conjecture, a famous unsolved math problem, in under one hour . So what even is this conjecture? Think of any network of nodes and connections with no single critical link. The conjecture asks: can you always find a set of loops that covers every connection exactly twice? Mathematicians said \"probably yes\" since the 1970s. Nobody could prove it. Until now. Here's how it worked: What this opens up: you can point this model at hard, open-ended research problems using a multi-agent setup. The prompt is public, so you can study exactly how to structure that kind of task yourself.",
+      "bullets": [
+        "The model ran 64 subagents in parallel, meaning 64 copies working simultaneously on different angles of the problem",
+        "OpenAI published the full prompt, the proof PDF, and a Lean formalization (a machine-checkable version of the proof) on GitHub at openai/cdc-lean",
+        "The proof is not yet peer-reviewed, so the math community is still verifying it"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783915368503-3492l3.png",
+      "read_more_url": "https://github.com/openai/cdc-lean"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Cursor ships searchable agent history and side chats for parallel conversations",
+      "likes": 4974,
+      "body": "Cursor just shipped v3.11 , and it fixes one of the most annoying things about working with AI agents: losing track of your conversations. Here's what's new: Side chats are the real unlock here. Explore a tangent, investigate a bug, then bring the answer back. No more cluttered main threads.",
+      "bullets": [
+        "Agent transcript search - Cursor builds a local index of all your past chats. You can now search across thousands of conversations instantly. Inside any open chat, hit Cmd+F to jump between matches with a match counter.",
+        "Side chats - Open a parallel conversation without killing your main thread. Use /side or /btw to spin one up. Each side chat is a full agent conversation you can revisit later, and you can @-mention it to pull its context back into your main chat.",
+        "Cloud agent hooks - You can now hook into the agent conversation itself: prompts, responses, thinking, and turn completion. This lets you build self-correcting agent loops.",
+        "Smarter project picker - Connect GitHub, GitLab, or Azure DevOps without ever leaving the picker. Fewer clicks to launch agents."
+      ],
+      "image_url": "https://alphasignal.ai/image/1783915533701-k81o56.png",
+      "read_more_url": "https://cursor.com/changelog/side-chat"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Google AI Studio lets deployed apps claim a permanent custom domain",
+      "likes": 3099,
+      "body": "You built an app in Google AI Studio. You hit deploy. And then you get a URL like burning-man-animal-cuddle-614365371127.us-west1.run.app . Not exactly portfolio material. Google just fixed that. AI Studio now lets you pick a custom subdomain under ai.studio , so your app lives at something like your-app-name.ai.studio instead of a random word salad. Here is what you need to know: This makes sharing demos, building a portfolio, or sending a link to a client actually feel professional. Your app finally has a real identity.",
+      "bullets": [
+        "Set it inside the publishing menu when you deploy, or update it later",
+        "Names are unique across all of AI Studio, first-come first-served, so grab yours fast",
+        "If you unpublish your app, the URL gets released and anyone can claim it",
+        "You can change it later, but the old address becomes available to others immediately"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783915571114-ko5g2w.png",
+      "read_more_url": "https://aistudio.google.com/welcome"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Unsloth AI ships Qwen3.6 quants that run 2.5x faster on consumer GPUs",
+      "stat": {
+        "type": "likes",
+        "value": 2759
+      },
+      "url": "https://huggingface.co/collections/unsloth/nvfp4"
+    },
+    {
+      "rank": 2,
+      "headline": "AIDC-AI releases open-source tool that turns a topic into a full short video",
+      "stat": {
+        "type": "stars",
+        "value": 25134
+      },
+      "url": "https://github.com/ATH-MaaS/Pixelle-Video"
+    },
+    {
+      "rank": 3,
+      "headline": "Kyutai releases open model that transcribes any song into per-instrument MIDI",
+      "stat": {
+        "type": "likes",
+        "value": 1130
+      },
+      "url": "https://arxiv.org/abs/2607.08168"
+    },
+    {
+      "rank": 4,
+      "headline": "Moonshot AI releases Kimi K2, an open agentic model on Hugging Face",
+      "stat": {
+        "type": "downloads",
+        "value": 1040000
+      },
+      "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905"
+    },
+    {
+      "rank": 5,
+      "headline": "Open-source dataset packs 1,324 animated fitness exercises with multilingual instructions",
+      "stat": {
+        "type": "likes",
+        "value": 1963
+      },
+      "url": "https://github.com/hasaneyldrm/exercises-dataset"
+    }
+  ]
+}

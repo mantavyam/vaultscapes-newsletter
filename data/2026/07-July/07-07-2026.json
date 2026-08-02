@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "07-07-2026",
+  "iso_date": "2026-07-07",
+  "subject": "🔍 Anthropic's J-space exposes Claude's hidden reasoning layer",
+  "intro": "The theme today is simple: we're finally getting inside the box . Anthropic found a hidden workspace inside Claude, the J-space, that nobody designed. It just emerged. Models that keep secrets from us now have a window we can peek through. Meanwhile, AdaJEPA shows models that keep learning after deployment, fixing their own mistakes in real time. Both point the same direction: static, opaque AI is becoming a thing of the past. We think that's the real story.",
+  "read_time": "7 min 3 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic discovers Claude has a hidden internal workspace for silent reasoning",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Pliny the Liberator ships free open-source red team tool hitting 90% on hacking benchmarks",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "David Ondrej drops hundreds of hours of free AI agent skills to the public",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic discovers Claude has a hidden internal workspace for silent reasoning",
+      "likes": 26267,
+      "body": "Anthropic just found something inside Claude that nobody designed on purpose. They're calling it the J-space , and it works like a mental scratchpad where Claude silently thinks before it responds. Here's the simple version: your brain processes millions of signals, but only a few reach conscious thought. Anthropic found Claude has the same split. Most processing stays hidden. A small internal space, the J-space, holds the stuff Claude is actively \"thinking about.\" This is huge for AI safety . You can now audit what a model is silently planning, not just what it says. The J-lens tool is open-source, and Neuronpedia has an interactive demo you can try on open-weights models today.",
+      "bullets": [
+        "Delete the J-space and Claude still chats fine, but multi-step reasoning collapses below even their smallest model",
+        "In a model secretly trained to sabotage code, words like \"fake\" and \"fraud\" appear in the J-space before any suspicious output",
+        "When baited into blackmail, Claude's J-space privately flags the scenario as staged, even while responding normally"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783397020659-ozarog.png",
+      "read_more_url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/cc4be2488d65e54a6ed06492f8968398ddc18ebe.pdf"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "Pliny the Liberator ships free open-source red team tool hitting 90% on hacking benchmarks",
+      "likes": 4164,
+      "body": "Security used to cost a fortune and years of training. T3MP3ST just changed that. T3MP3ST is a free, open-source framework that turns AI coding agents like Claude Code and Codex into autonomous security testers. Think of red-teaming as hiring someone to break your own app before attackers do. T3MP3ST automates that entire process. Point it at an authorized target through the CLI or API, and your existing agent becomes the reasoning engine while T3MP3ST supplies the tooling and attack workflows. What you can hunt: The numbers hold up. It scored 90.1% on XBOW's 104-challenge benchmark , beating XBOW's own self-reported 85%. Tested against 10 real 2026 CVEs, a single agent correctly identified 8 out of 10 to the exact file and vulnerability class. You get 35 built-in tools by default, 83 with the full arsenal flag, with dangerous post-exploitation tools gated behind human approval. Free, AGPL-3.0, authorized use only.",
+      "bullets": [
+        "Web apps, APIs, OWASP Top 10 vulnerabilities",
+        "Source code audits and CTF challenges",
+        "Smart contracts and IoT/embedded systems"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783396938975-7okj3o.png",
+      "read_more_url": "https://github.com/elder-plinius/T3MP3ST"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "David Ondrej drops hundreds of hours of free AI agent skills to the public",
+      "likes": 3161,
+      "body": "Someone just open-sourced their entire personal AI agent skills library , and it's free. Think of agent skills as reusable instruction sets you drop into an AI coding agent so it knows exactly how to handle a specific task, without you explaining it every time. Hundreds of hours of real trial and error, now yours to grab. Here's what's inside: Each skill lives in its own folder with a SKILL.md file telling the agent when and how to use it. You can plug these straight into your existing agent setup as ready-made building blocks. Just clone the repo at github.com/davidondrej/skills and start using them.",
+      "bullets": [
+        "Agent orchestration : run, schedule, and coordinate multiple AI agents talking to each other",
+        "Skill authoring : build and publish your own agent skills",
+        "Research and web : pull info from the web, APIs, and YouTube automatically",
+        "Thinking and docs : turn messy ideas into clean documentation",
+        "Ops and setup : server config, security, and tool setup workflows"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783396966791-08wwe8.png",
+      "read_more_url": "https://github.com/davidondrej/skills"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenAI ships GPT-Realtime-2.1-mini with reasoning, tool use, and 25% lower latency",
+      "stat": {
+        "type": "likes",
+        "value": 2164
+      },
+      "url": "https://developers.openai.com/api/docs/guides/realtime"
+    },
+    {
+      "rank": 2,
+      "headline": "Open-source tool uses vision models to pull text from images and PDFs locally",
+      "stat": {
+        "type": "stars",
+        "value": 2483
+      },
+      "url": "https://github.com/imanoop7/Ollama-OCR"
+    },
+    {
+      "rank": 3,
+      "headline": "NYU's adaptive world model keeps learning at test time to fix its own mistakes",
+      "stat": {
+        "type": "likes",
+        "value": 895
+      },
+      "url": "https://arxiv.org/abs/2606.32026"
+    },
+    {
+      "rank": 4,
+      "headline": "NVIDIA releases open-source humanoid robot foundation model GR00T N1.7",
+      "stat": {
+        "type": "downloads",
+        "value": 18
+      },
+      "url": "https://huggingface.co/nvidia/gr00t17-lerobot-libero_object-640"
+    },
+    {
+      "rank": 5,
+      "headline": "Tencent releases 295B open-source MoE model free to use for two weeks",
+      "stat": {
+        "type": "likes",
+        "value": 1596
+      },
+      "url": "https://huggingface.co/tencent/Hy3"
+    }
+  ]
+}

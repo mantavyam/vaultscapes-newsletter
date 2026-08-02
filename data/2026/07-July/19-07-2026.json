@@ -1,0 +1,168 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "19-07-2026",
+  "iso_date": "2026-07-19",
+  "subject": "🧠 Inside the pragmatic AI engineer’s new secret weapon",
+  "kicker": "Sunday Deep Dive",
+  "title": "Why Inkling is the pragmatic AI engineer’s new secret weapon",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "AI has matured to the point where engineering teams want to see ROI on their token spend while avoiding vendor lock-in with closed model providers. It turns out that sending everything to the closed frontier AI is not a scalable AI strategy. Enter Inkling. Thinking Machines isn’t claiming to have built AGI. Instead, they built a highly capable open-weights MoE that actually runs on enterprise hardware, features a dial for \"thinking effort,\" and costs a fraction of closed APIs. It's the Pareto principle applied to LLMs. Today, we break down why this is the pragmatic engineer's new secret weapon.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "Thinking Machines Lab launched its first in-house model called <a href=\"https://thinkingmachines.ai/news/introducing-inkling/\">Inkling</a> this week. The company openly acknowledges that Inkling is not the strongest overall model available today. Yet, it debuted as the leading American open-weights contender."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The release comes as the developer community is shifting its focus from hunting down the smartest frontier model to securing reliable return on investment with cost-effective LLMs that avoid rigid ecosystem lock-in."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For developers, the raw benchmark rankings are secondary to the model's unparalleled deployment readiness. Released under an enterprise-friendly Apache 2.0 license, Inkling arrives with massive Day-0 implementation support across inference engines."
+    },
+    {
+      "kind": "paragraph",
+      "html": "It also tightly integrates with Thinking Machines' dedicated fine-tuning platform, making it a suitable choice for custom enterprise deployment."
+    },
+    {
+      "kind": "heading",
+      "text": "Under the hood: Architecture, efficiency, and benchmarks"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Inkling is a 975-billion parameter model that supports a one-million token context window. It relies on a sparse Mixture-of-Experts (MoE) architecture that only activates 41 billion parameters per token during inference."
+    },
+    {
+      "kind": "paragraph",
+      "html": "MoEs use a routing system that sends each token to a few specialized sub-networks as opposed to the entire network of model parameters. This grants the reasoning power of a one-trillion parameter model at the inference cost of a much smaller system."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1784468003841-m94w5b.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "To affordably support its massive context window, Inkling introduces a highly efficient attention mechanism. It interleaves local sliding-window attention and global attention that reduces the memory and compute bottleneck typically associated with long-context reasoning."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The model features a \"Thinking Effort\" parameter that allows developers to adjust the reasoning budget. You can push the effort to the maximum for a complex coding problem or drop it down for high-volume tasks where speed and cost are more important."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1784468386261-gxcia6.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "paragraph",
+      "html": "On the Artificial Analysis Intelligence Index, Inkling averages only 25,000 output tokens per task. This easily beats GLM-5.2 (43,000), Kimi K2.6 (38,000), and DeepSeek v4 Pro (37,000)."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Inkling is multimodal and handles text, image, and audio natively, encoding text, audio, and visual data in a joint stream of tokens instead of processing them separately. One interesting detail is that it extracts text from images and audio before reasoning about them, which makes it easier to troubleshoot model errors."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Inkling debuted at 41 on the <a href=\"https://artificialanalysis.ai/articles/thinking-machines-has-released-inkling-the-new-leading-u-s-open-weights-model\">Artificial Analysis Intelligence Index</a> , making it the top U.S. open-weights model. It outscored Nvidia's Nemotron 3 Ultra (38) and Meta's Gemma 4 31B (29), which still being behind Chinese models such as GLM-5.2 and DeepSeek-v4 Pro."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1784468473389-mdraal.png",
+      "alt": "alpha_signal_image_3"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The model also shows immense agentic prowess. It scored an Elo rating of 1238 on GDPval-AA v2, which simulates economically valuable knowledge-work tasks, outperforming both Kimi K2.6 (1190) and DeepSeek v4 Flash (1189)."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Interestingly, Inkling proves how intertwined open-source AI research has become globally. While its architecture was heavily inspired by the Chinese DeepSeek-V3 MoE recipe, its post-training pipeline relied partially on synthetic data generated by Chinese models like Kimi K2.5."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Thinking Machines also teased an upcoming sibling model called Inkling-Small. This 276-billion parameter model only runs 12 billion active parameters. While the weights are not out yet, early benchmark drops show it actually matches or beats the full model on some reasoning tests."
+    },
+    {
+      "kind": "heading",
+      "text": "The \"interaction model\" paradigm in practice"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Thinking Machines is not trying to build a static chatbot. They adhere to an \" <a href=\"https://thinkingmachines.ai/blog/interaction-models/\">Interaction Models</a> \" framework, in which AIs are designed to natively interact with tools, environments, and multi-turn workflows."
+    },
+    {
+      "kind": "paragraph",
+      "html": "To ensure broad applicability, the research team trained Inkling to run inside a wide variety of coding and agent harnesses. They randomized the tool set and schema during training, preventing the model from becoming hyper-fitted to one specific API format."
+    },
+    {
+      "kind": "paragraph",
+      "html": "This makes the model highly effective in real-world applications. Developers can use it to build autonomous web development environments or local Retrieval-Augmented Generation (RAG) pipelines that ingest both PDFs and audio meetings simultaneously to execute workflows."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1784468506161-ref6b5.png",
+      "alt": "alpha_signal_image_4"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Example of web app created with Inkling"
+    },
+    {
+      "kind": "heading",
+      "text": "The ecosystem powerplay"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Thinking Machines smoothed out the rollout logistics of Inkling by partnering heavily across the AI infrastructure stack to ensure immediate usability."
+    },
+    {
+      "kind": "paragraph",
+      "html": "To make the model deployable on private enterprise hardware, aggressive quantization is required. The model supports the new NVFP4 quantized format, dropping the VRAM requirement from 2 TB down to roughly 600 GB for local clusters running Unsloth or llama.cpp."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For teams skipping self-hosting, Inkling was available on Day-0 across premier cloud providers and serverless platforms like OpenRouter, Together AI, and Fireworks AI."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Pricing across routing platforms shows Inkling hovering around $1.00 per 1M input tokens and $4.05 per 1M output tokens. This massively undercuts Western closed frontier models, which routinely charge $5 to $15 per million tokens."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Against its primary Chinese open-weight rivals, it sits comfortably in the middle. It beats GLM-5.2's official input rates ($1.40 input / $4.40 output), though it remains slightly more expensive than DeepSeek V4 Pro. Given its lower token consumption, it should be among the most cost-efficient options."
+    },
+    {
+      "kind": "paragraph",
+      "html": "A major differentiator for the model is its seamless integration with Tinker, Thinking Machines' dedicated fine-tuning platform. Tinker abstracts away the headaches of GPU orchestration and hyperparameter tuning that typically gatekeep enterprise AI adoption."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Instead of needing a team of machine learning engineers to adjust open weights, enterprises use Tinker's managed interface to securely upload proprietary data and run custom evaluation loops."
+    },
+    {
+      "kind": "heading",
+      "text": "The rise of pragmatic engineering"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The future of AI architecture isn't about rigidly choosing between open weights and closed APIs. Smart teams are turning to \"pragmatic engineering,\" building pipelines that blend different models to optimize costs and capabilities."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Massive, expensive frontier models remain essential for handling edge-case reasoning and long-horizon planning. However, high-volume, domain-specific tasks are increasingly routed to cost-efficient, customizable open models that reliably execute those tasks."
+    },
+    {
+      "kind": "paragraph",
+      "html": "This is the Pareto principle of AI applied to enterprise software. For most tasks, you do not need a frontier model. You need a system that gets you 90% of the way there at a fraction of the cost, giving you control over the weights and the ability to fine-tune."
+    },
+    {
+      "kind": "paragraph",
+      "html": "With its controllable latency, tool-use dominance, and robust fine-tuning ecosystem, Inkling is a crucial component for engineering teams ready to scale their real-world AI applications today."
+    }
+  ]
+}

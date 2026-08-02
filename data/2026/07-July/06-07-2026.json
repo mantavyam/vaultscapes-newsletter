@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "06-07-2026",
+  "iso_date": "2026-07-06",
+  "subject": "GitHub Copilot adds Kimi K2 🤖, Claude auto-applies for jobs 💼, pxpipe",
+  "intro": "Kimi is everywhere today. GitHub Copilot just broke its closed-model streak by adding Kimi K2.7 as its first open-weight option , and Superpowers plugin is already wrapping it into structured agentic workflows. The pattern is clear: open-weight models are landing inside the most mainstream dev tools on the planet. A legitimacy signal the closed-model camp should take seriously. Meanwhile, Sakana's multi-agent paper quietly shows the real unlock: many small agents beat one giant brain. The stack is changing fast.",
+  "read_time": "6 min 43 sec",
+  "summary": [
+    {
+      "category": "Top Repo",
+      "headline": "Dev turns a reMarkable tablet into a Harry Potter-style AI diary",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Open-source tool uses Claude to auto-apply for jobs , hits 3.5k GitHub stars",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Hack cuts Claude Code costs 70% by feeding context as images to OCR",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Repo",
+      "headline": "Dev turns a reMarkable tablet into a Harry Potter-style AI diary",
+      "likes": 15314,
+      "body": "Riddle turns a reMarkable Paper Pro tablet into Tom Riddle's diary from Harry Potter. You write with your pen, your words fade into the page, and an AI writes back in flowing handwriting, stroke by stroke. No screen, no keyboard, no chat box. Just ink on paper. Here is what makes it tick: To try it, you need a reMarkable Paper Pro with SSH access enabled. Grab the prebuilt zip from the GitHub releases, copy it over with scp , drop in your API key, and tap launch. Still early, but fully open source under MIT.",
+      "bullets": [
+        "After a 2.8-second pause , your handwriting gets sent as an image to a vision AI model (one that can read images), which reads it and replies",
+        "Works with any OpenAI-compatible API: OpenAI, Groq, OpenRouter, or even a local model",
+        "First reply appears in roughly 0.9 to 1.1 seconds , streaming sentence by sentence",
+        "Built in Rust, runs natively on the tablet"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783310560597-08t0w9.png",
+      "read_more_url": "https://github.com/MaximeRivest/Riddle"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "Open-source tool uses Claude to auto-apply for jobs, hits 3.5k GitHub stars",
+      "likes": 7000,
+      "body": "Someone built a Claude agent to apply for jobs. And then open-sourced it. Meet ai-job-search , built by Mads Lorentzen, a PhD geophysicist who automated his own job hunt. The idea is simple: you fill in your background once, point it at a job posting, and it handles everything. Here is what it does for you: To get started: fork the repo, run gh repo fork MadsLorentzen/ai-job-search --clone , add your profile, and fire away. You need an Anthropic API key or Claude Pro subscription plus Python 3.10+. It hit 4.4k stars fast. MIT license. Every step is plain text you can read and change.",
+      "bullets": [
+        "Reads the posting and scores how well you fit the role",
+        "Drafts a tailored CV, picking only your relevant experience",
+        "Writes a cover letter framed around what you bring to that specific role",
+        "A second AI agent reviews the first one's work, flags weaknesses, and the first agent revises",
+        "Compiles both into clean PDFs ready to send"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783310581777-4smqhi.png",
+      "read_more_url": "https://github.com/MadsLorentzen/ai-job-search"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Hack cuts Claude Code costs 70% by feeding context as images to OCR",
+      "likes": 4844,
+      "body": "pxpipe is a local proxy that cuts your Claude Code API bill by converting bulky text context into images before sending it to the model. Here is the core trick: images are priced by pixel size, not by how much text is packed inside. Dense code and JSON fits roughly 3x more content per token as an image than as plain text. The result? A real 59-70% cost reduction end-to-end on production traffic. Try it in 30 seconds: But here is the catch you need to know: it is lossy. Exact strings like IDs, hashes, and secrets can be silently misread. Fable 5 reads hex strings correctly 13 out of 15 times. Opus gets 0 out of 15. Keep byte-sensitive values as text, which pxpipe does automatically for recent turns.",
+      "bullets": [
+        "Run npx pxpipe-proxy to start the proxy locally",
+        "Point Claude Code at it: ANTHROPIC_BASE_URL=http://127.0.0.1:47821 claude",
+        "A dashboard shows live token savings and every text-to-image conversion"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783310600138-vp8rqn.png",
+      "read_more_url": "https://github.com/teamchong/pxpipe"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenMed ships on-device clinical PII redaction model hitting 755 tokens per second on Mac",
+      "stat": {
+        "type": "likes",
+        "value": 1494
+      },
+      "url": "https://huggingface.co/OpenMed/privacy-filter-nemotron-v2"
+    },
+    {
+      "rank": 2,
+      "headline": "New open-source format packages reusable skills directly into AI agents",
+      "stat": {
+        "type": "stars",
+        "value": 22405
+      },
+      "url": "https://github.com/agentskills/agentskills"
+    },
+    {
+      "rank": 3,
+      "headline": "Sakana AI's multi-agent framework hits 93% on Sudoku where baselines score 11%",
+      "stat": {
+        "type": "likes",
+        "value": 701
+      },
+      "url": "https://arxiv.org/abs/2605.31005"
+    },
+    {
+      "rank": 4,
+      "headline": "DeepSeek releases R1, an open-source reasoning model on Hugging Face",
+      "stat": {
+        "type": "downloads",
+        "value": 8080000
+      },
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1"
+    },
+    {
+      "rank": 5,
+      "headline": "Mistral releases math reasoning model that solves 587/672 Putnam problems at 10x lower cost",
+      "stat": {
+        "type": "likes",
+        "value": 1423
+      },
+      "url": "https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B"
+    }
+  ]
+}

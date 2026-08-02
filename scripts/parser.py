@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import re
 
-from bs4 import Tag
+from bs4 import Comment, NavigableString, Tag
 
 from cleaner import CleanResult, EmailPayload, FormatDriftError, Section
 from utils import markers
@@ -20,7 +20,7 @@ from utils.helpers import (
     squash_ws,
 )
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 _STAT_RE = re.compile(
     r"([\d,]+)\s+(" + "|".join(markers.STAT_TYPES) + r")\b"
@@ -34,6 +34,9 @@ def parse(payload: EmailPayload, cleaned: CleanResult,
     by_kind: dict[str, list[Section]] = {}
     for section in cleaned.sections:
         by_kind.setdefault(section.kind, []).append(section)
+
+    if "article" in by_kind:
+        return _parse_article(payload, by_kind, resolver)
 
     dt = issue_date_ist(payload.date_header)
     news = [
@@ -50,6 +53,7 @@ def parse(payload: EmailPayload, cleaned: CleanResult,
 
     return {
         "version": SCHEMA_VERSION,
+        "type": "digest",
         "date": ddmmyyyy(dt),
         "iso_date": iso_date(dt),
         "subject": payload.subject,
@@ -205,3 +209,173 @@ def _parse_signals(table: Tag, resolver: LinkResolver) -> list[dict]:
             "url": resolver.resolve(a["href"]),
         })
     return items
+
+
+# ---------------------------------------------------------------------------
+# Long-form articles ("Sunday Deep Dive", "Technical Deep Dive")
+# ---------------------------------------------------------------------------
+
+# Inline markup kept inside paragraph/list HTML. Everything else is unwrapped,
+# so the payload stays predictable for the app while citations survive.
+_KEPT_INLINE_TAGS = {"a", "b", "strong", "i", "em", "code"}
+
+
+def _inline_html(node: Tag, resolver: LinkResolver) -> str:
+    """Inner HTML of a node, reduced to links and light emphasis.
+
+    Tracking URLs are resolved here so the stored href is the real destination
+    rather than an alphasignal redirect that may expire.
+    """
+    parts: list[str] = []
+    for child in node.children:
+        if isinstance(child, str):
+            parts.append(squash_ws(child))
+            continue
+        if not isinstance(child, Tag):
+            continue
+        inner = _inline_html(child, resolver)
+        if not inner:
+            continue
+        name = child.name.lower()
+        if name == "a" and child.get("href"):
+            href = resolver.resolve(child["href"])
+            parts.append(f'<a href="{href}">{inner}</a>')
+        elif name in _KEPT_INLINE_TAGS:
+            tag = "b" if name == "strong" else "i" if name == "em" else name
+            parts.append(f"<{tag}>{inner}</{tag}>")
+        else:
+            parts.append(inner)
+    return squash_ws(" ".join(p for p in parts if p))
+
+
+def _is_heading(node: Tag) -> bool:
+    """A <p> whose entire text is bold is a section heading in these sends."""
+    text = squash_ws(node.get_text(" ", strip=True))
+    if not text:
+        return False
+    bold = node.find(["b", "strong"])
+    return bold is not None and squash_ws(bold.get_text(" ", strip=True)) == text
+
+
+def _parse_article_blocks(table: Tag, resolver: LinkResolver) -> list[dict]:
+    blocks: list[dict] = []
+    for node in table.find_all(["p", "ul", "ol", "img"]):
+        # List items are captured with their list, not as loose paragraphs.
+        if node.name == "p" and node.find_parent(["li", "ul", "ol"]):
+            continue
+
+        if node.name == "img":
+            src = node.get("src")
+            if src:
+                blocks.append({
+                    "kind": "image",
+                    "src": src,
+                    "alt": node.get("alt", ""),
+                })
+            continue
+
+        if node.name in ("ul", "ol"):
+            items = [
+                _inline_html(li, resolver)
+                for li in node.find_all("li", recursive=False)
+            ]
+            items = [i for i in items if i]
+            if items:
+                blocks.append({
+                    "kind": "list",
+                    "ordered": node.name == "ol",
+                    "items": items,
+                })
+            continue
+
+        if _is_heading(node):
+            text = squash_ws(node.get_text(" ", strip=True))
+            if text:
+                blocks.append({"kind": "heading", "text": text})
+            continue
+
+        html = _inline_html(node, resolver)
+        if html:
+            blocks.append({"kind": "paragraph", "html": html})
+
+    return blocks
+
+
+def _parse_article_head(table: Tag) -> tuple[str, str]:
+    """(kicker, title) from the head of the article table.
+
+    The template labels its parts with HTML comments ("Section Title",
+    "Headline", "Body Text") and puts the kicker in a <td> and the headline in
+    a <span>, so this walks text nodes in document order rather than guessing
+    at tags.
+    """
+    texts: list[str] = []
+    for node in table.descendants:
+        if isinstance(node, Comment) or not isinstance(node, NavigableString):
+            continue
+        text = squash_ws(str(node))
+        if text:
+            texts.append(text)
+
+    for i, text in enumerate(texts):
+        if markers.ARTICLE_KICKER_SUFFIX not in text:
+            continue
+        if len(text) <= 40:
+            # Kicker on its own; headline is the next substantial line.
+            title = next((t for t in texts[i + 1:] if len(t) > 10), "")
+            return text, title
+        # Kicker and headline share one node.
+        cut = text.find(markers.ARTICLE_KICKER_SUFFIX) + len(
+            markers.ARTICLE_KICKER_SUFFIX)
+        return text[:cut].strip(), text[cut:].strip()
+
+    return "", ""
+
+
+def _parse_author(table: Tag | None) -> dict | None:
+    if table is None:
+        return None
+    text = squash_ws(table.get_text(" ", strip=True))
+    body = text[len(markers.AUTHOR_HEADING):].strip() if text.startswith(
+        markers.AUTHOR_HEADING) else text
+    if not body:
+        return None
+    # "Ben Dickson is a veteran software engineer ..." — the name is the run
+    # before the first verb phrase; fall back to the whole string.
+    match = re.match(r"([A-Z][\w.'-]*(?:\s+[A-Z][\w.'-]*){0,3})\s+is\s", body)
+    name = match.group(1) if match else ""
+    return {"name": name, "bio": body}
+
+
+def _parse_article(payload: EmailPayload, by_kind: dict[str, list[Section]],
+                   resolver: LinkResolver) -> dict:
+    table = by_kind["article"][0].table
+    kicker, title = _parse_article_head(table)
+    blocks = _parse_article_blocks(table, resolver)
+
+    # The kicker and title lead the table, so they also arrive as the first
+    # blocks; drop them rather than repeat them in the body.
+    while blocks and blocks[0].get("kind") in ("heading", "paragraph"):
+        lead = blocks[0].get("text") or re.sub(r"<[^>]+>", "", blocks[0].get("html", ""))
+        if squash_ws(lead) in (kicker, title):
+            blocks.pop(0)
+            continue
+        break
+
+    if not blocks:
+        raise FormatDriftError("Article has no body blocks")
+
+    dt = issue_date_ist(payload.date_header)
+    author_sections = by_kind.get("author") or []
+    return {
+        "version": SCHEMA_VERSION,
+        "type": "article",
+        "date": ddmmyyyy(dt),
+        "iso_date": iso_date(dt),
+        "subject": payload.subject,
+        "kicker": kicker,
+        "title": title,
+        "author": _parse_author(author_sections[0].table if author_sections else None),
+        "intro": _parse_intro(by_kind["intro"][0].table),
+        "blocks": blocks,
+    }

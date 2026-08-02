@@ -20,6 +20,11 @@ READ_TIME_PREFIX = "Read time:"
 # survive without a code change.
 NEWS_CATEGORY_PREFIX = "Top "
 
+# Long-form article sends carry a kicker ending in this phrase — observed as
+# "Sunday Deep Dive" and "Technical Deep Dive". Matched on the suffix so a new
+# prefix ("Weekend Deep Dive", ...) needs no code change.
+ARTICLE_KICKER_SUFFIX = "Deep Dive"
+
 # Sponsor / advert landmarks
 SPONSOR_PRESENTED_BY = "Presented by"
 SPONSOR_PARTNERSHIP = "In Partnership with"

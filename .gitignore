@@ -8,3 +8,6 @@ work/
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# macos
+.DS_Store

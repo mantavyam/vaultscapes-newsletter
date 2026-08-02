@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "date": "25-06-2026",
+  "iso_date": "2026-06-25",
+  "subject": "OpenAI built its own chip in 9 months—here's what changes for API cost",
+  "intro": "OpenAI shipped a custom chip and a model update on the same day. That's not a coincidence. The pattern is clear: the real AI moat is no longer the model, it's the full stack. Jalapeño is OpenAI's bet that owning inference silicon is the only way to make the unit economics work. $20.9B operating loss has a way of focusing the mind. Every layer is getting vertically integrated, fast.",
+  "read_time": "7 min 0 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "OpenAI reveals its first custom AI chip built with Broadcom",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI upgrades GPT-5.5 Instant with smarter intent and better recommendations",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Mistral releases OCR 4 with 72% win rate across 600+ real-world documents",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "OpenAI reveals its first custom AI chip built with Broadcom",
+      "likes": 19258,
+      "body": "OpenAI just built its own chip. Meet Jalapeño , a custom processor built with Broadcom, designed from scratch specifically to run AI models faster and cheaper. Here's the key thing to understand: this chip handles inference , meaning the part where a model actually answers your question. Not training. Just serving responses to users at massive scale. Why does this matter? OpenAI was burning through Nvidia GPUs to power ChatGPT and Codex. Those are expensive and in short supply. A purpose-built chip means lower costs, faster responses, and more capacity. OpenAI even used its own AI models to help design the chip. The takeaway: cheaper inference means cheaper API calls, faster Codex responses, and more reliable access when demand spikes.",
+      "bullets": [
+        "Built in just 9 months , which is reportedly the fastest ever for a chip this complex",
+        "Early tests show better performance-per-watt than current top chips",
+        "Already running GPT-5.3-Codex-Spark in the lab",
+        "Designed to support any LLM, not just OpenAI's own models"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782360246450-27nqii.png",
+      "read_more_url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "OpenAI upgrades GPT-5.5 Instant with smarter intent and better recommendations",
+      "likes": 7604,
+      "body": "OpenAI just pushed an update to GPT-5.5 Instant , the model that powers most ChatGPT conversations. This is not a new model, it is a tune-up to the one already running by default. So what actually changed? The model is now better at figuring out what you actually want, not just what you literally typed. It identifies the underlying goal behind a question, carries context across multiple turns, and follows complex instructions more reliably when a request includes several constraints. The other big fix: it stops being stubborn. When you add constraints, clarify what you mean, or push back on an answer, the model adapts instead of just repeating its original response. Here is what improved: In the API, access it as \"chat-latest\" . Paid users get it now, free users tomorrow.",
+      "bullets": [
+        "Intent understanding : reads the goal, not just the words",
+        "Multi-constraint handling : addresses all requirements in one shot",
+        "Shopping and local queries : better use of location context, combining product info, business details, and images more coherently"
+      ],
+      "image_url": "https://alphasignal.ai/image/1776647823920-9z8qyt.png",
+      "read_more_url": "https://x.com/OpenAI/status/2069843083701915755"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Mistral releases OCR 4 with 72% win rate across 600+ real-world documents",
+      "likes": 6187,
+      "body": "Most OCR tools just dump raw text at you. Mistral OCR 4 does something smarter: it returns a full map of your document. Every block of content gets a bounding box (its exact position on the page), a type label like title, table, equation, or signature, plus a confidence score so you know how sure the model is. That means you stop guessing where things are and start acting on them. What does this unlock for you? Pricing is $4 per 1,000 pages via API, or $2 with batch. Available now on Mistral Studio, Amazon SageMaker, and Microsoft Foundry.",
+      "bullets": [
+        "Cleaner RAG pipelines: classified blocks become better retrieval chunks, not messy text walls",
+        "Smarter agents: flag low-confidence regions for human review automatically",
+        "Compliance-safe: self-host the whole thing in a single container , documents never leave your environment",
+        "Broad language support: 170 languages , with real gains on rare ones where other tools fall apart"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782360329301-90sse1.png",
+      "read_more_url": "https://mistral.ai/news/ocr-4/"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Nous Research's Hermes Agent learns reusable skills from any docs or code you feed it",
+      "stat": {
+        "type": "likes",
+        "value": 5514
+      },
+      "url": "https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&cid=b8b9b48be1c42017&lid=fbDCUxigfxdpdkPN&mid=d59dfec7-00ab-43e1-ac9d-d8c329726adc"
+    },
+    {
+      "rank": 2,
+      "headline": "New method runs LLMs across cheap consumer GPUs using P2P routing",
+      "stat": {
+        "type": "likes",
+        "value": 607
+      },
+      "url": "https://arxiv.org/abs/2606.17059"
+    },
+    {
+      "rank": 3,
+      "headline": "New paper shows pruning Llama beats training small models from scratch",
+      "stat": {
+        "type": "likes",
+        "value": 475
+      },
+      "url": "https://arxiv.org/abs/2606.14150"
+    },
+    {
+      "rank": 4,
+      "headline": "Krea 2 image model shrinks from 25GB to 12GB, now runs on consumer GPUs",
+      "stat": {
+        "type": "downloads",
+        "value": 7347
+      },
+      "url": "https://huggingface.co/AlperKTS/Krea2_FP8"
+    },
+    {
+      "rank": 5,
+      "headline": "Obsidian founder ships MIT-licensed tool turning your notes vault into an AI agent",
+      "stat": {
+        "type": "likes",
+        "value": 2341
+      },
+      "url": "https://github.com/kepano/obsidian-skills"
+    }
+  ]
+}

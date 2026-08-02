@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "09-07-2026",
+  "iso_date": "2026-07-09",
+  "subject": "OpenAI GPT-Live 🎙️, Anthropic Claude 96% at 46% cost 💰, SWE-Bench brok",
+  "intro": "AI is quietly crossing a threshold: from answering to acting. GPT-Live talks and listens simultaneously. Tokyo agents sold an ebook on the open internet. And our coding benchmarks just broke under the weight of models improving faster than we can measure them. The pattern? We built the intelligence. Now we're stress-testing reality. Buckle up, it gets interesting.",
+  "read_time": "6 min 50 sec",
+  "summary": [
+    {
+      "category": "Top Repo",
+      "headline": "Anthropic's Claude Managed Agents hits 96% top model performance at 46% of the cost",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI ships GPT-Live, a full-duplex voice model that talks and listens at once",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI finds 30% of SWE-Bench Pro tasks broken, pulls its recommendation",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Repo",
+      "headline": "Anthropic's Claude Managed Agents hits 96% top model performance at 46% of the cost",
+      "likes": 27252,
+      "body": "Fable 5 is powerful. It's also expensive. Running every token through it adds up fast. Anthropic just shared two patterns to keep the quality without paying full price on every call. The idea: stop using Fable 5 for everything. Use it only where it actually matters. Both patterns run through Claude Managed Agents. The cookbook at github.com/anthropics/claude-cookbooks has working code for both setups.",
+      "bullets": [
+        "Advisor pattern : Sonnet 5 does all the work and calls Fable 5 only at key decision points, roughly once per task. On SWE-bench Pro, this hits 92% of Fable 5's score at 63% of the cost , because most tokens bill at Sonnet's cheaper rate.",
+        "Orchestrator pattern : Fable 5 plans the task and hands off the heavy lifting to Sonnet 5 workers running in parallel. On BrowseComp, this reaches 96% of Fable 5's performance at 46% of the price . One real example: verifying 20 facts cost $1.61 with the split team versus $4.00 solo.",
+        "Caching bonus : Each sub-agent keeps its own cache, so repeated context doesn't get billed twice."
+      ],
+      "image_url": "https://alphasignal.ai/image/1783569737237-4xk3f6.png",
+      "read_more_url": "https://github.com/anthropics/claude-cookbooks"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "OpenAI ships GPT-Live, a full-duplex voice model that talks and listens at once",
+      "likes": 24329,
+      "body": "Old ChatGPT Voice had a simple but annoying problem. It had to wait until you finished speaking before generating a response, which meant it couldn't do things like real-time translation. Every pause felt like a turn signal. That's now fixed. OpenAI just shipped GPT-Live , and the core change is the architecture. It's built on a full-duplex architecture, meaning it can listen and speak at the same time. Think of it like a phone call instead of a walkie-talkie. Here's what that unlocks: Two models are rolling out globally: GPT-Live-1 for paid users and GPT-Live-1 mini for free users, across iOS, Android, and the web. API access is coming soon, and you can sign up to be notified.",
+      "bullets": [
+        "It can say \"mhmm\" or \"yeah\" while you're still talking, or stay quiet when you need a moment to think.",
+        "You can interrupt naturally, and it supports live translation.",
+        "For harder questions needing web search or reasoning, it delegates to a frontier model behind the scenes and brings the result back into the conversation."
+      ],
+      "image_url": "https://alphasignal.ai/image/1783569803663-lfjr7g.png",
+      "read_more_url": "https://openai.com/index/introducing-gpt-live/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "OpenAI finds 30% of SWE-Bench Pro tasks broken, pulls its recommendation",
+      "likes": 5649,
+      "body": "Here is a story about how the ruler we used to measure AI coding progress just snapped in half. OpenAI audited SWE-Bench Pro , the benchmark everyone used to rank AI coding models, and found it is no longer trustworthy. A benchmark is basically a standardized test for AI. The problem? Their analysis flagged 200 tasks (27.4%) as broken, while human reviewers found issues in 249 tasks (34.1%). Correct solutions were failing because of hidden requirements, contradictory instructions, overly strict tests, or incomplete grading criteria. So models were getting penalized for writing good code. The types of broken tasks found: The benchmark hit a saturation point near a 70% noise ceiling , with frontier models jumping from 23.3% to 80.3% in eight months. That speed suggests scores were inflated, not real progress. OpenAI has formally retracted its recommendation. Better benchmarks are coming.",
+      "bullets": [
+        "Hidden requirements not mentioned in the problem description",
+        "Tests that reject valid solutions",
+        "Grading criteria that miss correct answers",
+        "Contradictory instructions"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783569907128-1z7ts2.png",
+      "read_more_url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations/"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Chinese lab drops open-source tool that turns a photo and audio into a talking avatar",
+      "stat": {
+        "type": "likes",
+        "value": 4542
+      },
+      "url": "https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5"
+    },
+    {
+      "rank": 2,
+      "headline": "Tokyo University releases LLM agents into the real internet for 12 weeks and one sold an ebook",
+      "stat": {
+        "type": "likes",
+        "value": 1924
+      },
+      "url": "https://arxiv.org/abs/2606.31046"
+    },
+    {
+      "rank": 3,
+      "headline": "FlowWM predicts multiple possible futures for self-driving using richer visual features",
+      "stat": {
+        "type": "likes",
+        "value": 580
+      },
+      "url": "https://arxiv.org/abs/2606.29059"
+    },
+    {
+      "rank": 4,
+      "headline": "Zyphra releases Zamba2-7B chat model with hybrid Mamba2-transformer architecture",
+      "stat": {
+        "type": "downloads",
+        "value": 29100
+      },
+      "url": "https://huggingface.co/Zyphra/Zamba2-7B-Instruct"
+    },
+    {
+      "rank": 5,
+      "headline": "Prime Intellect raises $130M to build an open stack for training your own frontier models",
+      "stat": {
+        "type": "likes",
+        "value": 4309
+      },
+      "url": "https://www.primeintellect.ai/blog/series-a"
+    }
+  ]
+}

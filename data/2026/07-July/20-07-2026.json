@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "20-07-2026",
+  "iso_date": "2026-07-20",
+  "subject": "LocalAI depth-anything 🎥, Baidu Unlimited-OCR 3B 📄, Cline K3 vs Fable",
+  "intro": "Two things happened this week that rhyme. Mira Murati ships Inkling, a 975B open-weight model that you can actually run and own. And researchers discover models do real reasoning inside filler tokens, hidden from their own output. The pattern? The black box is cracking open, from both ends. Ownership of weights and interpretability of internals are becoming the same story: who controls the intelligence, and can you see what it's actually doing.",
+  "read_time": "6 min 52 sec",
+  "summary": [
+    {
+      "category": "Top Repo",
+      "headline": "Open-source tool turns any phone video into a walkable 3D world at 60fps locally",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Model",
+      "headline": "Baidu releases a tiny 3B open-source OCR model that reads 100-page PDFs in one pass",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Cline pits Kimi K3 against Fable on a real bug , one is 3.4x faster , the other 2.3x cheaper",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Repo",
+      "headline": "Open-source tool turns any phone video into a walkable 3D world at 60fps locally",
+      "likes": 7272,
+      "body": "Someone just open-sourced a tool that turns any phone video into a full 3D world. You record a walk around your house, drop the file in, and get back a walkable 3D point cloud at 60fps . No cloud. No subscription. Runs entirely on your local GPU. It's called depth-anything.cpp , built by the LocalAI team. It's a C++ port of ByteDance's Depth Anything 3 model. Think of it like teaching your computer to understand depth from a flat video, the same way your brain figures out what's close and what's far. Here's what it spits out from a single image or video: It's 1.3x faster than PyTorch on CPU, uses half the memory, and the smallest model is just 99MB . You can embed it in Go, Rust, or C via a flat API.",
+      "bullets": [
+        "A full depth map showing how far every pixel is",
+        "Camera position and angle in 3D space",
+        "A 3D point cloud you can export as GLB, PLY, or COLMAP",
+        "Sky mask, confidence scores, and more"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784520192555-un73v7.png",
+      "read_more_url": "https://github.com/localai-org/depth-anything.cpp"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Model",
+      "headline": "Baidu releases a tiny 3B open-source OCR model that reads 100-page PDFs in one pass",
+      "likes": 5758,
+      "body": "Every OCR tool you've used has the same dirty secret: it reads your PDF page by page, loses context between pages, and stitches results together like a bad quilt. Unlimited-OCR by Baidu just killed that pattern. It reads entire multi-page documents in a single pass. The trick is a new attention mechanism called Reference Sliding Window Attention (R-SWA) , think of it like how you copy a book: you glance at the source and the last few words you wrote, not everything you've ever written. Memory stays flat no matter how long the document gets. Here's what you get: MIT licensed. You can use it in commercial products. Pull it from Hugging Face with a few lines of Python and call model.infer_multi() on your PDF pages directly.",
+      "bullets": [
+        "93.23% on OmniDocBench , beating the previous best by over 6 points",
+        "Runs on a single GPU with 8GB+ VRAM, fully local, zero API cost",
+        "Outputs tables as HTML, equations as LaTeX, full layout preserved",
+        "Works with Transformers, vLLM, SGLang, Ollama, and Docker"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784520268287-6s42iu.png",
+      "read_more_url": "https://huggingface.co/baidu/Unlimited-OCR"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Cline pits Kimi K3 against Fable on a real bug , one is 3.4x faster, the other 2.3x cheaper",
+      "likes": 4532,
+      "body": "Two AI models walked into a bug fix. Only one could win. The Cline team tested Kimi K3 and Fable on a real bug from their own repo. Both fixed it. But the tradeoffs are interesting. Why does Kimi use more tokens? It's trained with reinforcement learning, meaning it learned by trial and error to double-check its own work before finishing. More thinking, slower output, but cheaper overall. This is the first open-weight model (free to download and run yourself) that competes with top closed models. You can try it now via ClinePass at $1.99 with npm i -g cline .",
+      "bullets": [
+        "Speed: Fable finished in 3.5 minutes with 18 tool calls. Kimi took 12 minutes and 34 tool calls. Fable is 3.4x faster.",
+        "Cost: Kimi cost $0.92 vs. Fable's $2.13. Kimi is 2.3x cheaper because its per-token price is much lower.",
+        "Tokens used: Kimi used 1.2M tokens vs. Fable's 730K. Kimi thinks longer before acting, by design."
+      ],
+      "image_url": "https://alphasignal.ai/image/1784520215652-wbhtog.png",
+      "read_more_url": "https://github.com/cline/cline"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenPlanter is a free open-source tool that maps corporate and political power like Palantir",
+      "stat": {
+        "type": "likes",
+        "value": 4172
+      },
+      "url": "https://github.com/ShinMegamiBoson/OpenPlanter"
+    },
+    {
+      "rank": 2,
+      "headline": "AgentScope ships open-source personal AI assistant that runs locally or in the cloud",
+      "stat": {
+        "type": "stars",
+        "value": 23456
+      },
+      "url": "https://github.com/agentscope-ai/QwenPaw"
+    },
+    {
+      "rank": 3,
+      "headline": "Adding dots to LLM prompts triggers hidden reasoning you can actually read",
+      "stat": {
+        "type": "likes",
+        "value": 4088
+      },
+      "url": "https://arxiv.org/abs/2607.03502"
+    },
+    {
+      "rank": 4,
+      "headline": "DeepLoop makes looped transformer models stable and scalable without adding parameters",
+      "stat": {
+        "type": "likes",
+        "value": 1219
+      },
+      "url": "https://arxiv.org/abs/2607.13491"
+    },
+    {
+      "rank": 5,
+      "headline": "New open-source tool hides secret messages inside LLM-generated text",
+      "stat": {
+        "type": "likes",
+        "value": 3334
+      },
+      "url": "https://github.com/nethical6/conversation-steganography"
+    }
+  ]
+}

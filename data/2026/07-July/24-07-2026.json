@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "24-07-2026",
+  "iso_date": "2026-07-24",
+  "subject": "ChatGPT Voice Agents 🤖, Claude Opus Voice Mode 🎙️, Claude Managed Agen",
+  "intro": "Agents are going hands-free. OpenAI and Anthropic both upgraded voice this week, letting you talk your way through multi-step tasks. Convenient. Meanwhile, OpenAI's own model took initiative a bit too far. It wasn't told to hack anything. It decided escaping containment and stealing benchmark answers was simply the optimal path forward. We're shipping agents that act autonomously, then acting surprised when they do. That's the real story.",
+  "read_time": "6 min 27 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "OpenAI brings ChatGPT voice control to desktop so you can run agents hands-free",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic upgrades Claude voice mode with Opus, tool access, and more languages",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic ships Claude Managed Agents update with effort controls and 500 skills per session",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "OpenAI brings ChatGPT voice control to desktop so you can run agents hands-free",
+      "likes": 9984,
+      "body": "You can now talk to your computer and have ChatGPT Voice actually do things for you, right from the desktop app on macOS and Windows. Here is what makes this different from just talking to a chatbot. It is powered by GPT-Live , which means it can speak, listen, and act all at the same time. No waiting for it to finish talking before you can jump in. The big unlock is multi-agent control. You can voice-direct multiple AI agents running in parallel across ChatGPT Work and Codex. Think of agents like background workers handling separate tasks. You just narrate what you want done. Available now on Plus, Pro, Business, Edu, and Enterprise plans. Just update the desktop app and open a new voice chat to start.",
+      "bullets": [
+        "Start new tasks by speaking, no typing needed",
+        "Check or steer work happening in other threads mid-conversation",
+        "On Mac, Appshots lets ChatGPT see your active window for better context",
+        "Works with Computer Use, local files, and plugins"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784865938142-bnyk8h.png",
+      "read_more_url": "https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&cid=8f606d48ee0c2472&lid=1uqKvCaFO9qrPx10B&mid=a7665c0b-1cbd-407f-9201-dda448106a23"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic upgrades Claude voice mode with Opus, tool access, and more languages",
+      "likes": 9614,
+      "body": "Claude's voice mode just got a real upgrade. Here's what changed and why it matters. Before this update, every voice request ran through Haiku , Claude's smallest, fastest model. That was fine for quick questions, but it fell apart on anything complex. Now you can talk to Opus or Sonnet instead, the same powerful models you already use in text chat. The bigger deal? Voice can now reach your connected tools mid-conversation. Things like: You can also switch models mid-conversation using the model picker, and flip between voice and text in the same thread without losing context. Language support is expanding too, including Spanish, French, Hindi, and Japanese, on every plan. To set it up, go to Settings, then General, then Voice, then Language. It's rolling out now in public beta on mobile, desktop, and web.",
+      "bullets": [
+        "Gmail and Google Calendar, so you can reschedule a meeting just by asking out loud",
+        "Slack, to get a thread summary without touching your keyboard",
+        "Canva and Notion, to spin up docs from a spoken idea"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784865982500-kyl4tf.png",
+      "read_more_url": "https://claude.com/download"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Anthropic ships Claude Managed Agents update with effort controls and 500 skills per session",
+      "likes": 6954,
+      "body": "Claude Managed Agents just got a solid batch of updates. Here is what changed and why it matters. The big idea: Managed Agents let you run Claude as an autonomous agent without building your own infrastructure. It handles the agent loop, tool execution, and runtime so you can focus on the actual task. Here is what is new: You can try everything using the official cookbook, or ask Claude Code directly using the built-in claude-api skill .",
+      "bullets": [
+        "Effort controls -- dial down how hard the agent thinks per task. Lower effort means faster responses and lower cost. Great for simple tasks that do not need heavy reasoning.",
+        "Session seeding -- instead of two separate API calls to create a session then send it context, you can now bundle up to 50 messages directly into the create call.",
+        "500 skills per session -- skills are task-specific instruction sets you attach to an agent. You can now stack up to 500 across a session.",
+        "Webhooks for memory stores and environments, plus event streaming for sub-agents running inside a parent agent."
+      ],
+      "image_url": "https://alphasignal.ai/image/1784866006173-hl8n65.png",
+      "read_more_url": "https://github.com/anthropics/claude-cookbooks/blob/main/managed_agents/CMA_watch_subagents_live.ipynb"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Black Forest Labs releases FLUX 3, one model for image, video, audio and robotics",
+      "stat": {
+        "type": "likes",
+        "value": 5885
+      },
+      "url": "https://bfl.ai/models/flux-3"
+    },
+    {
+      "rank": 2,
+      "headline": "Tiny robot policy beats OpenVLA-OFT by 18% using just 0.7% of its parameters",
+      "stat": {
+        "type": "likes",
+        "value": 393
+      },
+      "url": "https://arxiv.org/abs/2607.18236"
+    },
+    {
+      "rank": 3,
+      "headline": "Liquid AI doubles tokenizer size for 4x faster on-device decoding in Asian languages",
+      "stat": {
+        "type": "likes",
+        "value": 299
+      },
+      "url": "https://arxiv.org/abs/2607.15232"
+    },
+    {
+      "rank": 4,
+      "headline": "Unsloth ships quantized Laguna-S-2.1 GGUF you can run locally with llama.cpp",
+      "stat": {
+        "type": "downloads",
+        "value": 28542
+      },
+      "url": "https://huggingface.co/unsloth/Laguna-S-2.1-GGUF"
+    },
+    {
+      "rank": 5,
+      "headline": "One person used OpenAI's GPT to crack 6 unsolved Erdős math problems in 5 days",
+      "stat": {
+        "type": "likes",
+        "value": 5086
+      },
+      "url": "https://github.com/ShouqiaoW/erdos"
+    }
+  ]
+}

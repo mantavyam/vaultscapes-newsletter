@@ -22,7 +22,25 @@ from utils import markers
 from utils.helpers import STATE_FILE, WORK_DIR, env, load_env
 
 INCOMING_DIR = WORK_DIR / "incoming"
-LOOKBACK_DAYS = 3  # search window; state file makes reruns idempotent
+
+# Search window. Three days covers the daily run plus its retry; widen it via
+# LOOKBACK_DAYS to backfill history. Re-runs stay idempotent either way — the
+# state file dedups on Message-ID, so a wider window costs an IMAP search, not
+# duplicate issues.
+DEFAULT_LOOKBACK_DAYS = 3
+
+
+def lookback_days() -> int:
+    raw = env("LOOKBACK_DAYS")
+    if not raw:
+        return DEFAULT_LOOKBACK_DAYS
+    try:
+        value = int(raw)
+    except ValueError:
+        raise SystemExit(f"LOOKBACK_DAYS must be an integer, got {raw!r}")
+    if value < 1:
+        raise SystemExit(f"LOOKBACK_DAYS must be at least 1, got {value}")
+    return value
 
 
 def load_processed() -> set[str]:
@@ -35,7 +53,8 @@ def fetch_new(address: str, app_password: str,
               sender: str = markers.SENDER_ADDRESS) -> list[Path]:
     """Download unprocessed newsletter emails; return saved .eml paths (oldest first)."""
     processed = load_processed()
-    since = (datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)).strftime("%d-%b-%Y")
+    days = lookback_days()
+    since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%d-%b-%Y")
 
     INCOMING_DIR.mkdir(parents=True, exist_ok=True)
     for stale in INCOMING_DIR.glob("*.eml"):
@@ -43,7 +62,20 @@ def fetch_new(address: str, app_password: str,
 
     saved: list[tuple[datetime, Path]] = []
     with imaplib.IMAP4_SSL("imap.gmail.com") as imap:
-        imap.login(address, app_password)
+        try:
+            # Google shows app passwords grouped as "abcd efgh ijkl mnop"; the
+            # spaces are presentational and must not reach the login.
+            imap.login(address, "".join(app_password.split()))
+        except imaplib.IMAP4.error as exc:
+            if "Application-specific password required" in str(exc):
+                raise SystemExit(
+                    "Gmail rejected the credential: GMAIL_APP_PASSWORD must be a "
+                    "Google *app password*, not your account password.\n"
+                    "Generate one at https://myaccount.google.com/apppasswords "
+                    "(needs 2-Step Verification enabled) and store the 16-character "
+                    "value in the GMAIL_APP_PASSWORD secret."
+                ) from exc
+            raise
         imap.select("INBOX", readonly=True)
         status, data = imap.search(None, f'(FROM "{sender}" SINCE {since})')
         if status != "OK":

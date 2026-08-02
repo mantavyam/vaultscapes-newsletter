@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#000000;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Logo -->
+
+<!-- White Divider Under Logo -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 20px 0;" width="100%">
+<tr>
+<td style="border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey,
+      </p>
+<!-- Intro Text -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;
+                color:#ffffff;margin:0;"> 
+AI has matured to the point where engineering teams want to see ROI on their token spend while avoiding vendor lock-in with closed model providers. It turns out that sending everything to the closed frontier AI is not a scalable AI strategy.
+<br/><br/>
+Enter Inkling. Thinking Machines isn’t claiming to have built AGI. Instead, they built a highly capable open-weights MoE that actually runs on enterprise hardware, features a dial for "thinking effort," and costs a fraction of closed APIs. It's the Pareto principle applied to LLMs.
+<br/><br/>
+Today, we break down why this is the pragmatic engineer's new secret weapon.
+
+    </p></td>
+</tr>
+</table>
+<!-- section: author -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1784469065456-721h4o.png" style="display:block;border:1px solid #000000;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+        Today's Author
+      </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+        
+   Ben Dickson is a veteran software engineer and former CTO known as the "Engineer's Journalist" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat.
+      
+      </div>
+</td>
+</tr>
+</table>
+<!-- section: article -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family:system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Sunday Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+      Why Inkling is the pragmatic AI engineer’s new secret weapon
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0;">
+<div style="margin-top:0;">
+<p>Thinking Machines Lab launched its first in-house model called <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b18ac1a2dd4989b7&amp;lid=1BYmK6epqSvErdOB5&amp;mid=87c633be-b520-4cb1-bd82-6b8eb127789c">Inkling</a> this week. The company openly acknowledges that Inkling is not the strongest overall model available today. Yet, it debuted as the leading American open-weights contender.</p>
+<p>The release comes as the developer community is shifting its focus from hunting down the smartest frontier model to securing reliable return on investment with cost-effective LLMs that avoid rigid ecosystem lock-in.</p>
+<p>For developers, the raw benchmark rankings are secondary to the model's unparalleled deployment readiness. Released under an enterprise-friendly Apache 2.0 license, Inkling arrives with massive Day-0 implementation support across inference engines.</p>
+<p>It also tightly integrates with Thinking Machines' dedicated fine-tuning platform, making it a suitable choice for custom enterprise deployment.</p>
+<p><b>Under the hood: Architecture, efficiency, and benchmarks</b></p>
+<p>Inkling is a 975-billion parameter model that supports a one-million token context window. It relies on a sparse Mixture-of-Experts (MoE) architecture that only activates 41 billion parameters per token during inference.</p>
+<p>MoEs use a routing system that sends each token to a few specialized sub-networks as opposed to the entire network of model parameters. This grants the reasoning power of a one-trillion parameter model at the inference cost of a much smaller system.</p>
+<img alt="alpha_signal_image_1" border="0" src="https://alphasignal.ai/image/1784468003841-m94w5b.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>To affordably support its massive context window, Inkling introduces a highly efficient attention mechanism. It interleaves local sliding-window attention and global attention that reduces the memory and compute bottleneck typically associated with long-context reasoning.</p>
+<p>The model features a "Thinking Effort" parameter that allows developers to adjust the reasoning budget. You can push the effort to the maximum for a complex coding problem or drop it down for high-volume tasks where speed and cost are more important.</p>
+<img alt="alpha_signal_image_2" border="0" src="https://alphasignal.ai/image/1784468386261-gxcia6.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>On the Artificial Analysis Intelligence Index, Inkling averages only 25,000 output tokens per task. This easily beats GLM-5.2 (43,000), Kimi K2.6 (38,000), and DeepSeek v4 Pro (37,000).</p>
+<p>Inkling is multimodal and handles text, image, and audio natively, encoding text, audio, and visual data in a joint stream of tokens instead of processing them separately. One interesting detail is that it extracts text from images and audio before reasoning about them, which makes it easier to troubleshoot model errors.</p>
+<p>Inkling debuted at 41 on the <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b18ac1a2dd4989b7&amp;lid=KdyrhknTmGdbo3Ct&amp;mid=87c633be-b520-4cb1-bd82-6b8eb127789c">Artificial Analysis Intelligence Index</a>, making it the top U.S. open-weights model. It outscored Nvidia's Nemotron 3 Ultra (38) and Meta's Gemma 4 31B (29), which still being behind Chinese models such as GLM-5.2 and DeepSeek-v4 Pro.</p>
+<img alt="alpha_signal_image_3" border="0" src="https://alphasignal.ai/image/1784468473389-mdraal.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>The model also shows immense agentic prowess. It scored an Elo rating of 1238 on GDPval-AA v2, which simulates economically valuable knowledge-work tasks, outperforming both Kimi K2.6 (1190) and DeepSeek v4 Flash (1189).</p>
+<p>Interestingly, Inkling proves how intertwined open-source AI research has become globally. While its architecture was heavily inspired by the Chinese DeepSeek-V3 MoE recipe, its post-training pipeline relied partially on synthetic data generated by Chinese models like Kimi K2.5.</p>
+<p>Thinking Machines also teased an upcoming sibling model called Inkling-Small. This 276-billion parameter model only runs 12 billion active parameters. While the weights are not out yet, early benchmark drops show it actually matches or beats the full model on some reasoning tests.</p>
+<p><b>The "interaction model" paradigm in practice</b></p>
+<p>Thinking Machines is not trying to build a static chatbot. They adhere to an "<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b18ac1a2dd4989b7&amp;lid=gbaA0zfMG6KkYvhf&amp;mid=87c633be-b520-4cb1-bd82-6b8eb127789c">Interaction Models</a>" framework, in which AIs are designed to natively interact with tools, environments, and multi-turn workflows.</p>
+<p>To ensure broad applicability, the research team trained Inkling to run inside a wide variety of coding and agent harnesses. They randomized the tool set and schema during training, preventing the model from becoming hyper-fitted to one specific API format.</p>
+<p>This makes the model highly effective in real-world applications. Developers can use it to build autonomous web development environments or local Retrieval-Augmented Generation (RAG) pipelines that ingest both PDFs and audio meetings simultaneously to execute workflows.</p>
+<img alt="alpha_signal_image_4" border="0" src="https://alphasignal.ai/image/1784468506161-ref6b5.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>Example of web app created with Inkling</p>
+<p><b>The ecosystem powerplay</b></p>
+<p>Thinking Machines smoothed out the rollout logistics of Inkling by partnering heavily across the AI infrastructure stack to ensure immediate usability.</p>
+<p>To make the model deployable on private enterprise hardware, aggressive quantization is required. The model supports the new NVFP4 quantized format, dropping the VRAM requirement from 2 TB down to roughly 600 GB for local clusters running Unsloth or llama.cpp.</p>
+<p>For teams skipping self-hosting, Inkling was available on Day-0 across premier cloud providers and serverless platforms like OpenRouter, Together AI, and Fireworks AI.</p>
+<p>Pricing across routing platforms shows Inkling hovering around $1.00 per 1M input tokens and $4.05 per 1M output tokens. This massively undercuts Western closed frontier models, which routinely charge $5 to $15 per million tokens.</p>
+<p>Against its primary Chinese open-weight rivals, it sits comfortably in the middle. It beats GLM-5.2's official input rates ($1.40 input / $4.40 output), though it remains slightly more expensive than DeepSeek V4 Pro. Given its lower token consumption, it should be among the most cost-efficient options.</p>
+<p>A major differentiator for the model is its seamless integration with Tinker, Thinking Machines' dedicated fine-tuning platform. Tinker abstracts away the headaches of GPU orchestration and hyperparameter tuning that typically gatekeep enterprise AI adoption.</p>
+<p>Instead of needing a team of machine learning engineers to adjust open weights, enterprises use Tinker's managed interface to securely upload proprietary data and run custom evaluation loops.</p>
+<p><b>The rise of pragmatic engineering</b></p>
+<p>The future of AI architecture isn't about rigidly choosing between open weights and closed APIs. Smart teams are turning to "pragmatic engineering," building pipelines that blend different models to optimize costs and capabilities.</p>
+<p>Massive, expensive frontier models remain essential for handling edge-case reasoning and long-horizon planning. However, high-volume, domain-specific tasks are increasingly routed to cost-efficient, customizable open models that reliably execute those tasks.</p>
+<p>This is the Pareto principle of AI applied to enterprise software. For most tasks, you do not need a frontier model. You need a system that gets you 90% of the way there at a fraction of the cost, giving you control over the weights and the ability to fine-tune.</p>
+<p>With its controllable latency, tool-use dominance, and robust fine-tuning ecosystem, Inkling is a crucial component for engineering teams ready to scale their real-world AI applications today.</p>
+</div>
+</td>
+</tr>
+</table>
+</body></html>

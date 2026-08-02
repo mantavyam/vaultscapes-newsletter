@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "18-07-2026",
+  "iso_date": "2026-07-18",
+  "subject": "Moonshot's 2.8T model decodes 6.3x faster at 1M token context",
+  "intro": "China just dropped the largest open-weight model ever, and Claude responded by making its artifacts actually useful. Coincidence? Probably not. What we're really watching is a two-front war: raw scale from the East, deeper tooling from the West. Kimi K3 at 2.8T parameters is a statement. Claude's live MCP dashboards are a different kind. Meanwhile, a new paper quietly proved video diffusion has a hard physics ceiling. More compute won't fix it. Sometimes the architecture is the limit.",
+  "read_time": "7 min 17 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Kimi drops 2.8T-parameter model with 6.3x faster decoding, beats Claude and GPT-5",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "China open-sources a real-time 3D scene reconstruction model that runs at 20 FPS",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Claude Code artifacts now pull live data via MCP connectors on demand",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Kimi drops 2.8T-parameter model with 6.3x faster decoding, beats Claude and GPT-5",
+      "likes": 45351,
+      "body": "Moonshot AI just dropped Kimi K3 , and it's a big one. This is the largest open-weight model ever announced, sitting at 2.8 trillion parameters with a 1 million token context window. That context window means you can feed it entire codebases, massive documents, or hours of conversation without it forgetting anything. So what makes it fast at that scale? The new Kimi Delta Attention architecture delivers 6.3x faster decoding at million-token lengths. Think of it like a smarter filing system: instead of re-reading everything each time, it only processes what changed. The model also only activates 16 out of 896 internal \"expert\" sub-networks per request, keeping compute lean. Here's what it can actually do: You can use it now via the Kimi API or Kimi Code. Open weights drop by July 27.",
+      "bullets": [
+        "Write, run, and fix code by looking at live screenshots of the output",
+        "Beat Claude Opus 4.8 and GPT-5.5 on coding and agent benchmarks",
+        "Reach #1 on Frontend Code Arena with a 76% win rate",
+        "Handle long multi-step tasks without losing context"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784308231752-q3fi6k.png",
+      "read_more_url": "https://www.kimi.com/blog/kimi-k3"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "China open-sources a real-time 3D scene reconstruction model that runs at 20 FPS",
+      "likes": 11861,
+      "body": "Point your phone at a room. Walk around. Watch a full 3D map build itself in real time. That's LingBot-Map, a new open-source model from a Chinese research team. Before this, turning video into 3D required expensive LiDAR sensors or slow processing that took minutes per scene. LingBot-Map skips all that. It reads a regular video stream and outputs 3D geometry on the fly, no special hardware needed. Here's what it can do: This opens up real use cases: robots that map spaces as they move, AR apps that understand room geometry instantly, or autonomous vehicles building live maps without expensive sensors. It's fully open source on GitHub under Apache 2.0. Get started with one command: python demo . py - - model_path / path / to / model - - image_folder example / courthouse",
+      "bullets": [
+        "Runs at ~20 FPS on a single GPU , fast enough to feel live",
+        "Stays stable over 10,000+ frames without drifting or falling apart",
+        "Works on drone footage, driving videos, and indoor walkthroughs",
+        "Beats traditional optimization-based methods on benchmarks"
+      ],
+      "image_url": "https://alphasignal.ai/image/1784308140423-fk4fed.png",
+      "read_more_url": "https://github.com/Robbyant/lingbot-map"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Claude Code artifacts now pull live data via MCP connectors on demand",
+      "likes": 10103,
+      "body": "Claude Code just got a serious upgrade. You can now build dashboards and apps that pull live data on demand , instead of being frozen snapshots. Here's the idea: you build an artifact once inside Claude Code. That artifact connects to MCP connectors (think of them as plugins that let apps talk to external tools and data sources). Every time someone opens it, it fetches fresh, real-time data automatically. The clever part? Each viewer uses their own MCP connection. So you see your data, your colleague sees theirs. No re-running sessions, no manual refreshes, no sharing data people shouldn't see. What this opens up: Available on Pro, Max, Team, and Enterprise plans . Not available on publicly-shared artifacts, so keep that in mind before you build.",
+      "bullets": [
+        "Live dashboards that update per viewer",
+        "Apps that take actions on behalf of each user",
+        "Personalized tools built once, used by many"
+      ],
+      "image_url": "https://alphasignal.ai/image/1776647823920-9z8qyt.png",
+      "read_more_url": "https://x.com/ClaudeDevs/status/2077489907350856038"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Anthropic upgrades Claude Code with tiered code review from fast single-pass to multi-agent",
+      "stat": {
+        "type": "likes",
+        "value": 4681
+      },
+      "url": "https://code.claude.com/docs/en/ultrareview"
+    },
+    {
+      "rank": 2,
+      "headline": "Thinking Machines releases open-source SDK to fine-tune language models via API",
+      "stat": {
+        "type": "stars",
+        "value": 3752
+      },
+      "url": "https://github.com/thinking-machines-lab/tinker-cookbook"
+    },
+    {
+      "rank": 3,
+      "headline": "New paper proves video diffusion models can't simulate chain-reaction physics, no matter the compute",
+      "stat": {
+        "type": "likes",
+        "value": 422
+      },
+      "url": "https://arxiv.org/abs/2607.13031"
+    },
+    {
+      "rank": 4,
+      "headline": "Cactus-Compute releases a 26M open-source model distilled from Gemini that runs at 6000 tok/s on-device",
+      "stat": {
+        "type": "downloads",
+        "value": 469000
+      },
+      "url": "https://huggingface.co/Cactus-Compute/needle"
+    },
+    {
+      "rank": 5,
+      "headline": "Google updates Gemma 4 with up to 70% faster prefill and sharper vision",
+      "stat": {
+        "type": "likes",
+        "value": 3926
+      },
+      "url": "https://huggingface.co/spaces/google/gemma4_vision_token_budget"
+    }
+  ]
+}

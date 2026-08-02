@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "03-07-2026",
+  "iso_date": "2026-07-03",
+  "subject": "Anthropic's Claude Science runs 60+ databases: researchers report 10x",
+  "intro": "Anthropic had a big week. Claude Fable 5 is back after a 19-day security timeout, and Claude Science just launched in beta. Two very different stories, same underlying theme. The real signal: Anthropic is quietly moving from model company to vertical platform company. Science for researchers, Code for engineers, tighter safety rails for governments. That's a product suite, not a chatbot. Meanwhile, a 35B model just beat trillion-parameter giants on agent tasks. Bigger is no longer the only game.",
+  "read_time": "6 min 47 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic brings Claude Fable 5 back globally with tighter cybersecurity blocks",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic launches Claude Science app with 60+ research databases and live code",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Model",
+      "headline": "NVIDIA splits a 30B model in two to generate text 2.42x faster with 98.7% quality",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic brings Claude Fable 5 back globally with tighter cybersecurity blocks",
+      "likes": 43107,
+      "body": "Claude Fable 5 is back online after a 19-day suspension. Here is the quick version of what happened and what it means for you. Amazon researchers found a way to bypass Fable 5's safety filters, prompting the model to identify software vulnerabilities and, in one case, produce code showing how to exploit one. The US government treated that as a national security issue and pulled the model globally. To get it back, Anthropic made three changes: If a classifier fires on your request, the response comes from Opus 4.8. Your code path stays the same. Access is live across Claude.ai, the Claude Platform, Claude Code, and Claude Cowork.",
+      "bullets": [
+        "A new safety classifier trained specifically on the reported bypass technique, blocking it in over 99% of cases.",
+        "Some routine coding and debugging requests will temporarily fall back to Opus 4.8 while Anthropic tunes the filters to cut false positives.",
+        "A new cross-industry jailbreak severity framework is being drafted with Amazon, Microsoft, Google, and other Glasswing partners."
+      ],
+      "image_url": "https://alphasignal.ai/image/1783051444064-9gnbd3.png",
+      "read_more_url": "https://www.anthropic.com/news/redeploying-fable-5"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic launches Claude Science app with 60+ research databases and live code",
+      "likes": 37375,
+      "body": "Anthropic just shipped Claude Science , a dedicated research app now in beta. Think of it like a smarter Jupyter Notebook that actually runs your analysis, not just talks about it. The big idea: general AI assistants can discuss biology, but they can't run a pipeline, navigate scientific databases, orchestrate cluster jobs, or keep track of what happened in a previous session. Claude Science fixes that. Here's what you can actually do with it: One UCSF team reported certain analyses now take roughly one tenth of the previous time. Available on macOS and Linux for Pro, Max, Team, and Enterprise plans.",
+      "bullets": [
+        "Connect natively to 60+ scientific databases , including UniProt, PDB, and ChEMBL",
+        "Every artifact includes the exact code that generated it, the environment it ran in, and the conversation that led there",
+        "A reviewer agent inspects outputs, flagging incorrect citations and figures that don't match their underlying code",
+        "Scale analyses from a single GPU to hundreds as needed"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783051517135-fyz90p.png",
+      "read_more_url": "https://claude.com/product/claude-science"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Model",
+      "headline": "NVIDIA splits a 30B model in two to generate text 2.42x faster with 98.7% quality",
+      "likes": 4395,
+      "body": "Normal AI models write text one word at a time, like typing letter by letter. NVIDIA just flipped that idea with Nemotron-Labs-TwoTower , a model that writes whole chunks of text in parallel. Here is the trick: they took one 30B model and split it into two copies. One half reads your prompt and holds all the context. The other half takes a block of blank \"masked\" slots and fills them all at once, refining its guesses over a few passes until it is confident enough to commit. No training from scratch needed. The results are pretty solid: You can load it today via Hugging Face Transformers with trust_remote_code=True and call generate_mask_diffusion() to use the fast parallel mode. This opens up faster inference for any text generation task without sacrificing much quality.",
+      "bullets": [
+        "2.42x faster generation vs. the original model",
+        "98.7% quality retained across benchmarks like MMLU, GSM8K, and HumanEval",
+        "Runs on 2x H100 or A100 GPUs , about 59GB per GPU"
+      ],
+      "image_url": "https://alphasignal.ai/image/1783051400015-3xjjji.png",
+      "read_more_url": "https://huggingface.co/nvidia/Nemotron-Labs-TwoTower-30B-A3B-Base-BF16"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Nous Research ships Hermes Agent v0.18.0 with new judgment capabilities",
+      "stat": {
+        "type": "likes",
+        "value": 2584
+      },
+      "url": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
+      "rank": 2,
+      "headline": "LangBot ships open-source platform to deploy AI bots across Slack, Discord, and WeChat",
+      "stat": {
+        "type": "stars",
+        "value": 16603
+      },
+      "url": "https://github.com/langbot-app/LangBot"
+    },
+    {
+      "rank": 3,
+      "headline": "New 35B model beats trillion-parameter giants on long-horizon agent tasks",
+      "stat": {
+        "type": "likes",
+        "value": 619
+      },
+      "url": "https://arxiv.org/abs/2606.30616"
+    },
+    {
+      "rank": 4,
+      "headline": "LiquidAI refreshes its tiny 450M vision-language model with stronger real-world performance",
+      "stat": {
+        "type": "downloads",
+        "value": 771000
+      },
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-450M"
+    },
+    {
+      "rank": 5,
+      "headline": "GitHub releases spec-kit, an open-source tool that structures AI coding before any code is written",
+      "stat": {
+        "type": "likes",
+        "value": 1718
+      },
+      "url": "https://github.com/github/spec-kit"
+    }
+  ]
+}

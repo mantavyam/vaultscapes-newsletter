@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#000000;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Logo -->
+
+<!-- White Divider Under Logo -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 20px 0;" width="100%">
+<tr>
+<td style="border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey,
+      </p>
+<!-- Intro Text -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;
+                color:#ffffff;margin:0;"> 
+We’ve all been there: you tweak a skill file to fix your agent on Task A, only to cause to fail on Task B. Manual skill optimization is a pain.
+<br/><br/>
+The real bottleneck for reliable agents isn't the underlying LLM anymore. It's the fragile, unscalable way we write their standard operating procedures.
+<br/><br/>
+But a new wave of text-space optimizers is shifting the paradigm. Frameworks are now treating text files exactly like neural networks, allowing agents to iteratively debug, validate, and update their own skills without touching the model weights. 
+<br/><br/>
+Today, we break down automated skill optimization and how you can use it.
+
+    </p></td>
+</tr>
+</table>
+<!-- section: author -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1782035677005-kmj34v.png" style="display:block;border:1px solid #000000;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+        Today's Author
+      </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+        
+   Ben Dickson is a veteran software engineer and former CTO known as the "Engineer's Journalist" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat.
+      
+      </div>
+</td>
+</tr>
+</table>
+<!-- section: article -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family:system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Sunday Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+      How your agents can write and optimize their own skills
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0;">
+<div style="margin-top:0;">
+<p>The real bottleneck for deploying reliable agentic systems is no longer the core capabilities of the underlying language model. Today’s LLMs have a lot of power. </p>
+<p>Instead, the quality of the agent hinges largely on the skills that you give them. In modern agent harnesses, a skill is a standalone .md file that acts as an agent’s operating procedure for a set of tasks. It outlines the instructions, tool-use guidelines, formatting requirements, and failure-recovery logic that the agent should adhere to.</p>
+<p>Optimizing these text files remains a slow and manual process. Developers must manually edit instructions, test them on a task suite, analyze failures, and rewrite the text. This manual loop is not scalable. </p>
+<p>And unlike the underlying model, the skill document can’t be trained like a machine learning model. It lacks differentiable parameters, meaning you cannot calculate an exact gradient to guide updates.</p>
+<p><b>The fundamental challenge of skill optimization</b></p>
+<p>Tweaking textual instructions in skill files can also cause downstream problems. When you edit a markdown file to fix a brittle behavior in long-horizon Task A, you might cause a regression in Task B. Without systematic tracking, it is nearly impossible to pinpoint the causal effect of individual textual changes.</p>
+<p>The industry is responding to this problem by shifting from static manual prompting to system-driven automation. Engineers are now building optimization loops that treat the skill document as a trainable external state.</p>
+<p><b>SkillOpt: a structured text-space optimizer</b></p>
+<p>Developed by Microsoft Research, <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=fe9ac113c2f879b1&amp;lid=1whDtlNNVOpLcC7Tz&amp;mid=4982e1b6-c504-4c50-bfae-2a5147d3a9f1">SkillOpt</a> treats text documents exactly like neural network parameters. It establishes an optimization pipeline that updates skills without altering underlying model weights.</p>
+<p>The SkillOpt training pipeline operates via a structured loop:</p>
+<ul>
+<li><b>Rollout:</b> The system executes a batch of tasks and records their execution trajectories.</li>
+<li><b>Evaluation:</b> Trajectories receive a success or failure score from a verifier.</li>
+<li><b>Reflection:</b> A separate LLM optimizer analyzes the minibatches of these trajectories to identify specific text components driving failures.</li>
+<li><b>Bounded edits:</b> The optimizer proposes specific add, delete, or replace modifications. A textual learning-rate budget limits the scope of these edits to prevent volatile changes.</li>
+</ul>
+<p>The proposed edits are tested rigorously to make sure they are actually effective. They are evaluated on a held-out validation set not seen during training. The system stores unsuccessful changes in a rejected-edit buffer to ensure stable performance gains.</p>
+<img alt="alpha_signal_image_1" border="0" src="https://alphasignal.ai/image/1782034138754-bh9qq9.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>This systematic process yields compact artifacts with high performance. On GPT-5.5, SkillOpt delivers a +23.5 point average improvement in direct chat and +24.8 points in a Codex loop. It achieved the highest or tied performance across 52 evaluated model, benchmark, and harness settings. The optimized skill files remain highly efficient, holding a median length of roughly 920 tokens.</p>
+<p>Experiments show that a skill document optimized by SkillOpt on a specific model and harness generalizes to other models and harnesses (though it is usually preferable to optimize your skill for your specific model/harness configuration to get the best performance).</p>
+<p><b>GEPA</b></p>
+<p>Beyond bounded edits on a single text file, other frameworks approach skill optimization through evolutionary programming and multi-agent synthesis.</p>
+<p><a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=fe9ac113c2f879b1&amp;lid=x7aXNpIJR49KNLlc&amp;mid=4982e1b6-c504-4c50-bfae-2a5147d3a9f1">GEPA</a> (Genetic-Pareto) is an optimization framework that uses evolutionary algorithms to improve the instructions given to LLMs. It can be applied to prompts, skills, and other text-based artifacts. When an agent carries out a task, GEPA uses an LLM (it can be the same one that powers the agent) to reflect on the reasoning trace, diagnose failures, and propose different “mutations” of the original artifact. </p>
+<p>GEPA explores these different paths through “Pareto-based selection,” where it creates a list of top-candidates that perform well on different tasks. It then uses this pool of candidates to sample a diverse set of winning strategies and explore more solutions that can generalize well across a wide range of inputs.</p>
+<img alt="alpha_signal_image_2" border="0" src="https://alphasignal.ai/image/1782033538085-r77h88.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>GEPA is very versatile and is compatible with <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=fe9ac113c2f879b1&amp;lid=rqWiqToNdjRJVgOK&amp;mid=4982e1b6-c504-4c50-bfae-2a5147d3a9f1">DSPy</a>, the popular framework used for optimizing LLM prompts.</p>
+<p><b>EvoSkill</b></p>
+<p>EvoSkill is a new framework that uses the idea of GEPA to discover and synthesize skills for multi-agent coding workflows. </p>
+<p>EvoSkill uses the same fundamental idea as SkillOpt: an optimization loop that analyzes execution traces, finds error patterns and proposes fixes.</p>
+<p>Like <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=fe9ac113c2f879b1&amp;lid=VQGUyyorVBAc1c4U&amp;mid=4982e1b6-c504-4c50-bfae-2a5147d3a9f1">GEPA</a>, EvoSkill keeps track of multiple skill candidates simultaneously, keeping them on separate Git branches and using a Pareto frontier to select the highest-performing variants.</p>
+<img alt="alpha_signal_image_3" border="0" src="https://alphasignal.ai/image/1782033563161-37d7vz.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>To understand how this operates in practice, consider an engineering scenario where a coding agent keeps failing to handle nested pagination links when parsing an internal company API.</p>
+<p>EvoSkill evaluates a branch on a held-out dataset. If the pagination accuracy surpasses the baseline, this version replaces the lowest-performing variant on the active Pareto frontier. </p>
+<p><b>Trade-offs, costs, and practical considerations</b></p>
+<p>Automated text-space optimization requires structural prerequisites. Systems like SkillOpt and EvoSkill cannot function on subjective, completely open-ended tasks. They require a verifiable feedback signal and a clean, representative held-out evaluation dataset.</p>
+<p>The primary trade-off rests entirely in upfront compute. Because an LLM optimizer must read and analyze voluminous token histories to diagnose failures, training a skill can be resource-intensive and costly. </p>
+<p>But it offers you the option to save time and manual effort by spending more on AI optimization.</p>
+<p>But it is worth noting that this cost only applies to the optimization phase. Because the final output is a standardized text block, it incurs no additional costs at the inference stage. And since the output is a standard skill file, it doesn’t need any changes to the inference stack.</p>
+<p><b>Loop engineering and self-optimizing agents</b></p>
+<p>These specialized toolchains reflect a much broader architectural evolution. The development landscape is shifting from simple, linear prompting to "<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=fe9ac113c2f879b1&amp;lid=1eSPoW6clDueciPMl&amp;mid=4982e1b6-c504-4c50-bfae-2a5147d3a9f1">loop engineering</a>."</p>
+<p>The main idea of loop engineering is to create a repeatable cycle with a well-defined and verifiable goal, and letting an LLM or AI agent repeat the task until it archives optimal performance.</p>
+<p>This architecture creates an end-to-end self-improving loop. Instead of writing prompts, developers assemble control systems featuring precise evaluation metrics, memory storage, and exit conditions. Production systems can then track live agent trajectories, flag recurring edge-case failures, and launch background optimization routines to update their own files safely.</p>
+<p>The era of tweaking individual phrases in a system prompt or skill file is drawing to a close. As AI agents become better at handling the small details, engineers will have the higher level role of designing systems and overseeing execution.</p>
+</div>
+</td>
+</tr>
+</table>
+</body></html>

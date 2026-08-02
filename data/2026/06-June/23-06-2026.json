@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "date": "23-06-2026",
+  "iso_date": "2026-06-23",
+  "subject": "SpaceX paid $60B for Cursor — here's what developers actually get",
+  "intro": "The coding layer is getting a full security upgrade. OpenAI ships a gated cyber model to patch the internet's bugs at scale. SpaceX buys Cursor for $60B to own the IDE. And researchers crack open Claude Code to find... a while-loop. The pattern is clear: whoever owns the coding workflow owns the future of software. Security, writing, shipping, fixing. It's all collapsing into one agentic loop. Rockets building coding AIs. Wild times.",
+  "read_time": "6 min 30 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "OpenAI launches GPT-5.5-Cyber to scan, patch, and fix vulnerable code at scale",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Cursor announces three new features including a model trained with SpaceX",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "GLM 5.2 tops open-source coding leaderboard , beating Kimi K2 by 17%",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "OpenAI launches GPT-5.5-Cyber to scan, patch, and fix vulnerable code at scale",
+      "likes": 3470,
+      "body": "Security bugs pile up faster than anyone can fix them. OpenAI just shipped a full stack to close that gap. The centerpiece is GPT-5.5-Cyber , a specialized model that scored 85.6% on CyberGym (vs 81.8% for standard GPT-5.5). It is gated to verified defenders only, not open access. Plugged into Codex, the new Codex Security plugin lets you run end-to-end security workflows without switching tools: Since its research preview, Codex Security scanned 30 million commits across 30,000+ codebases. That is real scale. The Patch the Planet initiative brings this to open source. Projects like cURL, Python, and Go are already in. Maintainers get Codex access and API credits to help ship fixes, not just find bugs.",
+      "bullets": [
+        "Scan your codebase, trace real attack paths, and build threat models from your repo",
+        "Validate findings in an isolated environment so you fix real bugs, not noise",
+        "Generate codebase-specific patches and export results into your existing tools via SARIF and CodeQL"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782187686705-gdbfpj.png",
+      "read_more_url": "https://openai.com/index/daybreak-securing-the-world/"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Cursor announces three new features including a model trained with SpaceX",
+      "likes": 2992,
+      "body": "Cursor just held Compile , its first-ever user conference, and dropped three big announcements on the same day SpaceX acquired the company for $60 billion. Here's what was announced: What this opens up: you get a coding assistant backed by rocket-company-scale compute , not just a startup's GPU budget. Smarter completions, better multi-file edits, and intelligence that goes beyond just code.",
+      "bullets": [
+        "SpaceX acquisition: SpaceX is buying Cursor in an all-stock deal. The goal is building the world's best coding AI, combining Cursor's product with SpaceX's massive Colossus supercomputer cluster.",
+        "Composer 3 incoming: A brand new model is coming. It has 1.5 trillion parameters (think of parameters as the brain cells of an AI, more means smarter), trained on over 100,000 GPUs from scratch. It sits in the same performance class as Claude Opus and GPT-5.5, but built specifically for coding.",
+        "Joint model with SpaceX: Cursor and SpaceXAI have already been co-training a model together. It will ship inside both Cursor and Grok Build."
+      ],
+      "image_url": "https://alphasignal.ai/image/1782187733469-zm9fzv.png",
+      "read_more_url": "https://www.youtube.com/watch?v=fWa7uxyhVDE"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "GLM 5.2 tops open-source coding leaderboard, beating Kimi K2 by 17%",
+      "likes": 2786,
+      "body": "GLM-5.2 just claimed the top spot among open-source models on the DeepSWE leaderboard, and the gap is hard to ignore. First, what is DeepSWE? It is a coding benchmark that drops an AI into an isolated container and asks it to fix real bugs from active open-source repos , no internet, no hints. Think of it as a coding interview that actually reflects your job. The score is pass@1, meaning: did it solve the problem on the first try? This lets you build coding agents that handle real, messy repositories, not just toy problems. You can self-host it, plug it into vLLM or SGLang, and run it on your own infrastructure with zero vendor lock-in.",
+      "bullets": [
+        "44% pass@1 at max effort on DeepSWE, beating Kimi K2.7 Code by 17%",
+        "DeepSWE score jumped from 18% to 46.2% vs the previous version",
+        "81.0 on Terminal-Bench 2.1, just 4 points behind Claude Opus 4.8",
+        "MIT license, so you can use, modify, and ship it commercially with no restrictions",
+        "1 million token context , meaning you can feed it an entire codebase in one go"
+      ],
+      "image_url": "https://alphasignal.ai/image/1782187766789-c73yfm.png",
+      "read_more_url": "https://deepswe.datacurve.ai/"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Sakana AI launches model orchestration system to rival closed frontier models",
+      "stat": {
+        "type": "likes",
+        "value": 2382
+      },
+      "url": "https://github.com/SakanaAI/fugu"
+    },
+    {
+      "rank": 2,
+      "headline": "Open-source LLM algorithm course covers Transformers, CUDA, and inference tricks",
+      "stat": {
+        "type": "stars",
+        "value": 201
+      },
+      "url": "https://github.com/datawhalechina/llm-algo-leetcode"
+    },
+    {
+      "rank": 3,
+      "headline": "Anthropic's Claude Code architecture decoded across 13 design principles",
+      "stat": {
+        "type": "likes",
+        "value": 480
+      },
+      "url": "https://arxiv.org/abs/2604.14228"
+    },
+    {
+      "rank": 4,
+      "headline": "Simple looped transformer beats complex reasoning models, hitting 94% on hard Sudoku",
+      "stat": {
+        "type": "likes",
+        "value": 306
+      },
+      "url": "https://arxiv.org/abs/2606.18206"
+    },
+    {
+      "rank": 5,
+      "headline": "Claude Code turns a home sensor setup into a self-aware AI pet",
+      "stat": {
+        "type": "likes",
+        "value": 2353
+      },
+      "url": "https://github.com/lifemate-ai/embodied-claude"
+    }
+  ]
+}
