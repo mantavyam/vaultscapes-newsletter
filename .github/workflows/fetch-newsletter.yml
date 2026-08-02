@@ -41,6 +41,13 @@ jobs:
           FEED_GITHUB_BRANCH: ${{ github.ref_name }}
         run: python scripts/run_pipeline.py
 
+      - name: Announce the new issue (FCM)
+        # Only after a successful pipeline run: a failed or no-op run must not
+        # notify. The script is itself a no-op when nothing new was published.
+        env:
+          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+        run: python scripts/push_notification.py
+
       - name: Commit & push feed data
         # always(): on format drift the pipeline exits non-zero (job stays red,
         # GitHub notifies the owner) but the quarantined HTML evidence still
