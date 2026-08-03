@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-02T17:28:36Z",
+  "updated_at": "2026-08-03T16:14:30Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "03-08-2026",
+      "iso_date": "2026-08-03",
+      "type": "digest",
+      "subject": "🤖 DeepSeek V4-Flash beats V4-Pro on 9 benchmarks, same size",
+      "path": "data/2026/08-August/03-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/03-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/03-08-2026.html",
+      "headlines": [
+        "DeepSeek launches V4-Flash API with stronger agent skills and Codex support",
+        "Open-source Rust tool classifies PDFs in 20ms, no OCR needed",
+        "Qwen releases 2.4T parameter model that codes autonomously for 10+ days straight"
+      ]
+    },
     {
       "date": "02-08-2026",
       "iso_date": "2026-08-02",
