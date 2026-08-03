@@ -2,10 +2,8 @@ name: Fetch AlphaSignal Newsletter
 
 on:
   schedule:
-    # AlphaSignal sends ~14:30 UTC on weekdays. Two windows; the second is a
-    # retry that no-ops (via state/processed.json) if the first succeeded.
+    # AlphaSignal sends ~14:30 UTC on weekdays. 
     - cron: '0 15 * * 1-5'
-    - cron: '0 18 * * 1-5'
   workflow_dispatch: {}   # manual run for testing / backfill
 
 concurrency:
