@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-03T16:14:30Z",
+  "updated_at": "2026-08-04T16:49:51Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "04-08-2026",
+      "iso_date": "2026-08-04",
+      "type": "digest",
+      "subject": "🧮 OpenAI Astra solves 10 unsolved math proofs for $2,000 total",
+      "path": "data/2026/08-August/04-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/04-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/04-08-2026.html",
+      "headlines": [
+        "OpenAI's unreleased model cracks 10 open math problems for $2,000 in compute",
+        "OpenAI rebuilds ChatGPT Voice so reasoning runs without interrupting speech",
+        "Unsloth ships day-zero support for Qwen3 27B running on 17GB RAM"
+      ]
+    },
     {
       "date": "03-08-2026",
       "iso_date": "2026-08-03",
