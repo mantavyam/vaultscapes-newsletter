@@ -76,7 +76,7 @@ def main() -> int:
 
     is_article = issue.get("type") == "article"
     headline = (issue.get("title") or issue.get("subject") or "New issue").strip()
-    title = f"📖 {issue.get('kicker', 'Deep Dive')}" if is_article else "🤖 AI News"
+    title = f"📖 {issue.get('kicker', 'Deep Dive')}" if is_article else "Your daily AI intelligence briefing has landed."
 
     token, project_id = _access_token(raw)
     topic = os.environ.get("FCM_TOPIC", "news-feed")
