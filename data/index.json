@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-04T16:49:51Z",
+  "updated_at": "2026-08-05T16:39:47Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "05-08-2026",
+      "iso_date": "2026-08-05",
+      "type": "digest",
+      "subject": "Cursor MoE Kernel 🐱, Liquid AI On-Device 2.6B Agent 📱, Mistral 3B Safe",
+      "path": "data/2026/08-August/05-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/05-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/05-08-2026.html",
+      "headlines": [
+        "Cursor open-sources MoE training kernel that runs 2.37x faster than top baselines",
+        "Nous Research ships Hermes Agent v0.20.0 in new Herald release",
+        "Liquid AI ships a 2.6B open-weight agentic model that runs fully on-device"
+      ]
+    },
     {
       "date": "04-08-2026",
       "iso_date": "2026-08-04",
