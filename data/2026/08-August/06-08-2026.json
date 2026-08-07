@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "06-08-2026",
+  "iso_date": "2026-08-06",
+  "subject": "Prime Intellect Agent 🧠, Meta Muse Code Terminal 💻, Skills.sh v1.2 Upd",
+  "intro": "Coding agents are eating the dev stack from every angle. Prime Intellect goes open-source and hits near-perfect AGI scores. Meta ships its own terminal agent. And a new paper quietly explains why both will get expensive and dumb over time without smarter memory. The real story isn't any single release. It's that persistent, autonomous agents are becoming the new baseline. Memory management is the unsexy problem nobody wants to talk about, until the bill arrives.",
+  "read_time": "6 min 41 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Prime Intellect releases open-source coding agent that scores 95.5% on ARC-AGI-3",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Matt Pocock ships Skills v1.2 with Claude marketplace plugin and Codex support",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Meta ships Muse Code , a terminal coding agent that runs 1,000+ tool calls autonomously",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Prime Intellect releases open-source coding agent that scores 95.5% on ARC-AGI-3",
+      "likes": 8864,
+      "body": "Prime Agent just dropped, and it's worth paying attention. It's an open-source coding agent that wraps around AI models and makes them dramatically smarter at long, complex tasks. Here's the key idea. Most AI tools forget everything between steps. Prime Agent doesn't. It runs inside a persistent Python environment where context carries over from one step to the next. Think of it like giving the AI a sticky notepad that never gets erased. What you can actually do with it: The results speak: with Opus 5, it hits 95.5% on ARC-AGI-3 , surpassing the human expert baseline. It also uses fewer tokens than competing tools by running functions over data instead of reading it. It's fully MIT open-source , free to use with your own API keys, and works with both open and closed models.",
+      "bullets": [
+        "Spin up sub-agents for delegated tasks and modify its own approach based on what's working",
+        "Use the /refine command to let the agent update its own prompts, memory, and skills mid-task",
+        "Run sub-agents as full independent sessions that survive terminal disconnects via a background daemon"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785989037435-qu2v22.png",
+      "read_more_url": "https://github.com/PrimeIntellect-ai/prime-agent"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "Matt Pocock ships Skills v1.2 with Claude marketplace plugin and Codex support",
+      "likes": 4111,
+      "body": "mattpocock/skills v1.2 just dropped, and it's now the 19th most-starred repo of all time with 13.5 million downloads. If you haven't used it, skills.sh gives your AI agent a set of reusable commands that make it smarter at specific tasks. The biggest addition is full docs. Every skill is now explained with flows and troubleshooting. You can also install it directly from Claude's official marketplace , and Codex is now fully supported. Here's what changed and what it unlocks for you: Update now with npx skills update .",
+      "bullets": [
+        "/prototype now outputs HTML instead of a terminal UI, so you can share logic prototypes with anyone, not just people with a terminal",
+        "/wizard lets your agent build a step-by-step setup guide for complex infrastructure, so you stop doing it manually",
+        "/to-questionnaire turns a tough question into a shareable doc you can walk through with a teammate",
+        "/wait-what simplifies confusing model output into plain language you actually understand"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785988982093-62leuf.png",
+      "read_more_url": "https://github.com/mattpocock/skills"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Meta ships Muse Code, a terminal coding agent that runs 1,000+ tool calls autonomously",
+      "likes": 3041,
+      "body": "Meet Muse Code , Meta's new terminal coding agent. Think of it like a tireless coding partner that lives in your terminal, handles entire repos, and keeps working even when you walk away. Here's what makes it different from just asking an AI to write code: it runs persistent background agents , meaning multiple mini-agents work in parallel on your task simultaneously, so complex jobs finish faster with less hand-holding from you. Install it with one command: curl -fsSL https://dev.meta.ai/install.sh | bash",
+      "bullets": [
+        "Plans, writes, and validates multi-file changes across large repos",
+        "Crash-safe: a local log records every action, so it resumes exactly where it stopped",
+        "Understands video input, like turning a home walkthrough mp4 into a full booking website",
+        "Scored 82.9% on Terminal-Bench 2.1 , just behind Claude Opus 5",
+        "Available on macOS and Linux via the Meta Model API"
+      ],
+      "image_url": "https://alphasignal.ai/image/1785989088355-mh4vgk.png",
+      "read_more_url": "https://auth.meta.com/?waterfall_id=1332eb2b-0307-4bde-905f-e37c816541b5&redirect_uri=https%3A%2F%2Fauth.meta.com%2Foidc%2F%3Fapp_id%3D2403310080153219%26nonce%3DAdSFWr_TcFmGsx2_E6N4tDdW3OQ%26redirect_uri%3Dhttps%253A%252F%252Fdev.meta.ai%252Foidc%252Fcallback%252F%26response_type%3Dcode%26scope%3Dopenid%26state%3DATq0MRcRCmOgFHvf0IzwCyE1m29AGLVAODGJKGn3gLuVNrU3jW2s-qmckyfg6Ttwm-Q6w2OS_HuIjpWYPh5QRFaLA8VgzbGWrtA3BMxYhrPfVVSJX2ibShjSQpvwWfTH3ChhJKfVSA1urQd6yFVmQhzoFIpkgOHhq32IEU77Hzo%26waterfall_id%3D1332eb2b-0307-4bde-905f-e37c816541b5&source_app_id=2403310080153219&force_reauth=0&rcs=ATpRDzunSk0hRtS6ij95i4CxwAb8LOtUR_W8iT6_z8KRwHhTob4ybKCGfNOqiwcNrpc_bMT3O1shioRZuH8WouknjZ2YXCvmxn9YIImYTujsEDyf7gIGjS5a-2Ml8-a-a1alQ98bB5Nv3TjoIUFJTrqKx59VP-8m8-s3IkC3ZzmKfeD9G0Us-5Ld5KQ"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "This prompt turns any codebase into an interactive architecture map with Claude",
+      "stat": {
+        "type": "likes",
+        "value": 3000
+      },
+      "url": "https://github.com/Graphify-Labs/graphify"
+    },
+    {
+      "rank": 2,
+      "headline": "Uber's open-source tool monitors and blocks threats in enterprise AI agents",
+      "stat": {
+        "type": "stars",
+        "value": 973
+      },
+      "url": "https://github.com/uber/ADR"
+    },
+    {
+      "rank": 3,
+      "headline": "New paper shows how to cut AI agent memory costs without losing accuracy",
+      "stat": {
+        "type": "likes",
+        "value": 419
+      },
+      "url": "https://arxiv.org/abs/2607.21503"
+    },
+    {
+      "rank": 4,
+      "headline": "New training recipe cuts nGPT token needs in half on a 14B model",
+      "stat": {
+        "type": "likes",
+        "value": 244
+      },
+      "url": "https://arxiv.org/abs/2608.01284"
+    },
+    {
+      "rank": 5,
+      "headline": "Mistral releases open-source 3B content moderation model that runs on a single GPU",
+      "stat": {
+        "type": "likes",
+        "value": 2678
+      },
+      "url": "https://huggingface.co/mistralai/Shieldstral-1.0-3B"
+    }
+  ]
+}

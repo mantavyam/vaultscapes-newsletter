@@ -1,7 +1,35 @@
 {
-  "updated_at": "2026-08-05T16:39:47Z",
+  "updated_at": "2026-08-07T15:53:43Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "07-08-2026",
+      "iso_date": "2026-08-07",
+      "type": "digest",
+      "subject": "OpenAI GPT-5.6 Sol 🧠, OpenAI Agent Plugins Standard 🔌, Block Buzz Work",
+      "path": "data/2026/08-August/07-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/07-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/07-08-2026.html",
+      "headlines": [
+        "OpenAI upgrades ChatGPT with GPT-5.6 Sol, cutting factual errors by 68%",
+        "OpenAI launches Agent Plugins open standard to share tools across Codex, Cursor, Copilot",
+        "Jack Dorsey open-sources a free self-hosted workspace with built-in AI agents"
+      ]
+    },
+    {
+      "date": "06-08-2026",
+      "iso_date": "2026-08-06",
+      "type": "digest",
+      "subject": "Prime Intellect Agent 🧠, Meta Muse Code Terminal 💻, Skills.sh v1.2 Upd",
+      "path": "data/2026/08-August/06-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/06-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/06-08-2026.html",
+      "headlines": [
+        "Prime Intellect releases open-source coding agent that scores 95.5% on ARC-AGI-3",
+        "Matt Pocock ships Skills v1.2 with Claude marketplace plugin and Codex support",
+        "Meta ships Muse Code, a terminal coding agent that runs 1,000+ tool calls autonomously"
+      ]
+    },
     {
       "date": "05-08-2026",
       "iso_date": "2026-08-05",
