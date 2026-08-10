@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-07T15:53:43Z",
+  "updated_at": "2026-08-10T18:32:11Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "10-08-2026",
+      "iso_date": "2026-08-10",
+      "type": "digest",
+      "subject": "🤝 Claude Code sessions talk mid-task, catching 89% of bad commands",
+      "path": "data/2026/08-August/10-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/10-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/10-08-2026.html",
+      "headlines": [
+        "Claude Code sessions can now talk to each other mid-task",
+        "Anthropic makes Claude Code auto mode default, catching 89% of dangerous commands",
+        "OpenAI flags its Astra model as a cybersecurity risk under its safety framework"
+      ]
+    },
     {
       "date": "07-08-2026",
       "iso_date": "2026-08-07",
