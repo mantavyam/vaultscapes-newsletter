@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-10T18:32:11Z",
+  "updated_at": "2026-08-12T15:56:42Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "12-08-2026",
+      "iso_date": "2026-08-12",
+      "type": "digest",
+      "subject": "🧮 Anthropic Claude jumps Riemann Hypothesis from 41% to 67% in history",
+      "path": "data/2026/08-August/12-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/12-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/12-08-2026.html",
+      "headlines": [
+        "Anthropic's unreleased Claude model pushes Riemann hypothesis progress from 41.6% to 67.2%",
+        "OpenAI ships GPT-5.6-Cyber, a model that found zero-days in Chrome's V8 engine",
+        "NVIDIA releases open 30B model that runs 4x faster than similar-sized models"
+      ]
+    },
     {
       "date": "10-08-2026",
       "iso_date": "2026-08-10",
