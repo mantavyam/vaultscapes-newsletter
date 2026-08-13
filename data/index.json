@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-08-12T15:56:42Z",
+  "updated_at": "2026-08-13T15:57:01Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
     {
       "date": "12-08-2026",
       "iso_date": "2026-08-12",
       "type": "digest",
-      "subject": "🧮 Anthropic Claude jumps Riemann Hypothesis from 41% to 67% in history",
+      "subject": "ChatGPT lands on Linux with Codex while Claude's hidden thinking expos",
       "path": "data/2026/08-August/12-08-2026.json",
       "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/12-08-2026.json",
       "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/12-08-2026.html",
       "headlines": [
-        "Anthropic's unreleased Claude model pushes Riemann hypothesis progress from 41.6% to 67.2%",
-        "OpenAI ships GPT-5.6-Cyber, a model that found zero-days in Chrome's V8 engine",
-        "NVIDIA releases open 30B model that runs 4x faster than similar-sized models"
+        "Security flaw lets anyone steal hidden reasoning from Claude, GPT, and Gemini",
+        "OpenAI drops ChatGPT desktop app for Linux on Ubuntu, Debian, and Fedora",
+        "Unsloth releases open-source desktop app to run and train models 2x faster locally"
       ]
     },
     {
