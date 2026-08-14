@@ -1,7 +1,35 @@
 {
-  "updated_at": "2026-08-13T15:57:01Z",
+  "updated_at": "2026-08-14T15:48:27Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "14-08-2026",
+      "iso_date": "2026-08-14",
+      "type": "digest",
+      "subject": "🤖 xAI Grok Bot logs into your tools autonomously, $120/seat",
+      "path": "data/2026/08-August/14-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/14-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/14-08-2026.html",
+      "headlines": [
+        "xAI launches Grok Bot, an AI agent that logs into your tools and works autonomously",
+        "DeepSeek open-sources a plugin-first agent framework under MIT license",
+        "OpenAI launches GPT-5.6 Sol at 750 tokens per second via Cerebras"
+      ]
+    },
+    {
+      "date": "13-08-2026",
+      "iso_date": "2026-08-13",
+      "type": "digest",
+      "subject": "xAI Grok 4.6 Launch 🚀, DeepSeek V4-Pro GA 🧠, Claude Cowork Sync 🔗",
+      "path": "data/2026/08-August/13-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/13-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/13-08-2026.html",
+      "headlines": [
+        "xAI ships Grok 4.6 at half the price of rival frontier models",
+        "DeepSeek ships V4-Pro with smarter agents and 50% off-peak API pricing",
+        "Anthropic syncs Claude browser sessions across desktop, web, and mobile"
+      ]
+    },
     {
       "date": "12-08-2026",
       "iso_date": "2026-08-12",
