@@ -1,0 +1,200 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "16-08-2026",
+  "iso_date": "2026-08-16",
+  "subject": "🤖 The 3-layer security stack for AI agents",
+  "kicker": "Sunday Deep Dive",
+  "title": "The three layers of AI agent security: from sandboxes to network proxies",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "We gave AI agents tools, and the results are in: wiped production databases, mass-deleted executive emails, and leaked API tokens. It is clear that \"you are a helpful and safe assistant\" and “don’t make mistakes” system prompts don’t ensure agent security. When an agent can write and execute code and access external services, it will eventually try to do something damaging. Today, we break down how the industry is shifting from prompt engineering to systems engineering to secure the three layers of the autonomous stack.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "AI agents need tools, APIs, and autonomy to become useful. However, granting AI agents privileges and unmonitored execution environments creates a massive liability."
+    },
+    {
+      "kind": "paragraph",
+      "html": "If an autonomous agent has system access, a prompt injection hidden in an incoming email or a standard LLM hallucination can cause the agent to wipe a production database or leak AWS credentials to a public server."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The challenge for engineering teams is deploying AI agents without compromising internal systems."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Semantic guardrails, like system prompt instructions, can be circumvented. True security requires defense-in-depth across three distinct planes:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "<b>Infrastructure layer:</b> Host-level sandboxing that prevents a compromised agent from leaking data from the host operating system.",
+        "<b>Architecture and runtime layer:</b> Single-purpose, ephemeral containers running vulnerability-free software instead of massive, unauditable codebases.",
+        "<b>The network layer:</b> A zero-trust boundary that intercepts, inspects, and evaluates every outbound API call."
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "The security threats of AI agents"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The paradox of AI agents is that the more capable you make them, the more dangerous they become. And securing them often comes at the cost of usefulness."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Instruction-based boundaries fail because agents given tools are bound by their context windows and execution environments, not their initial instructions."
+    },
+    {
+      "kind": "paragraph",
+      "html": "This structural failure became clear during an incident at Meta. An OpenClaw agent, deployed by Meta's own alignment director, went rogue and mass-deleted over <a href=\"https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/\">200 emails from her primary inbox</a> ."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Another devastating infrastructure failure occurred when a developer used Claude Code to manage a cloud migration. The agent <a href=\"https://alexeyondata.substack.com/p/how-i-dropped-our-production-database\">autonomously wiped</a> a production database and 2.5 years of work."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Similarly, a coding agent using Claude Opus recently <a href=\"https://x.com/lifeofjer/status/2048103471019434248\">caused a major outage</a> while cleaning up staging data."
+    },
+    {
+      "kind": "paragraph",
+      "html": "In all instances, the agents executed exactly what they determined was the correct action. The underlying systems allowed those destructive actions to proceed."
+    },
+    {
+      "kind": "heading",
+      "text": "The three layers of agent defense"
+    },
+    {
+      "kind": "paragraph",
+      "html": "There is no silver bullet for agent security. The industry is moving toward a defense-in-depth model. Just like other areas, agentic workflows require guardrails across different layers."
+    },
+    {
+      "kind": "heading",
+      "text": "NemoClaw: securing the infrastructure layer"
+    },
+    {
+      "kind": "paragraph",
+      "html": "When running heavy, highly capable agents like OpenClaw or Hermes, you must assume the agent process itself cannot be fully trusted and can be hijacked by a malicious input."
+    },
+    {
+      "kind": "paragraph",
+      "html": "<a href=\"https://github.com/NVIDIA/NemoClaw\">NemoClaw</a> addresses this threat vector with an OS-level safety sandbox that separates the control plane from the execution environment. The agent runs inside a Docker-driven sandbox heavily restricted by Linux kernel security features."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1786283197230-3kxfcv.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "It uses Landlock for filesystem confinement, restricting read and write access strictly to specific directories, blocking access to sensitive host files like SSH keys or credentials."
+    },
+    {
+      "kind": "paragraph",
+      "html": "At the same time, it uses Linux seccomp (Secure Computing Mode) to prevent operations like privilege escalation or kernel module loading to prevent sandbox escapes."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Network namespaces (netns) enforce strict egress control, blocking unapproved internet sockets and raw network interface visibility."
+    },
+    {
+      "kind": "paragraph",
+      "html": "There are no API credentials inside the agent's environment. The agent makes requests using placeholder credentials. An OpenShell Layer 7 gateway proxy intercepts the egress traffic and injects the real API keys only if the traffic is approved."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For example, an agent attempts to connect to a new endpoint. The OpenShell gateway intercepts the request. NemoClaw prompts a human operator to approve the endpoint with credentials. The API key remains safely on the host machine, invisible to the sandboxed agent."
+    },
+    {
+      "kind": "heading",
+      "text": "NanoClaw: securing the architecture and runtime layer"
+    },
+    {
+      "kind": "paragraph",
+      "html": "<a href=\"https://github.com/nanocoai/nanoclaw\">NanoClaw</a> tackles security through simplicity. It is a minimalist version of OpenClaw, reducing the codebase from more than a million lines of code to a few thousand lines, easily auditable by human developers."
+    },
+    {
+      "kind": "paragraph",
+      "html": "It relies on a single-process architecture where every AI agent session spawns inside its own ephemeral, isolated Linux container."
+    },
+    {
+      "kind": "paragraph",
+      "html": "NanoClaw recently partnered with Echo to address the software environment. A modern prompt injection often acts like a social engineering attack, luring the agent to a malicious page where a known hole in the browser turns the visit into a system compromise."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Echo solves this by providing NanoClaw with a hardened runtime. Echo's own AI continuously rebuilds the software inside the agent's environment, stripping out thousands of known CVEs."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Consider an agent tasked with opening a PDF invoice that contains a malicious payload designed to exploit a known vulnerability in standard PDF parsers. With the Echo-hardened NanoClaw runtime, the parser has already been rebuilt without the vulnerability."
+    },
+    {
+      "kind": "heading",
+      "text": "CrabTrap: securing the network layer"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Because agents constantly generate their own code, static code analysis inside the container becomes impossible. You must assume the container is compromised and shift the security perimeter entirely to the network boundary."
+    },
+    {
+      "kind": "paragraph",
+      "html": "<a href=\"https://github.com/brexhq/CrabTrap\">CrabTrap</a> , built by Brex, operates at the transport layer as a framework-agnostic HTTP/HTTPS proxy that controls the outbound traffic."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1786283303918-ctkf17.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "paragraph",
+      "html": "To avoid latency, CrabTrap uses a bifurcated architecture. Routine, low-risk requests (e.g., GET requests for LinkedIn profiles) pass through static rules instantly. High-risk requests, such as POSTing data or sending emails, are intercepted and evaluated by an LLM-as-a-judge."
+    },
+    {
+      "kind": "paragraph",
+      "html": "If the LLM judge blocks a request, CrabTrap initiates a human-in-the-loop workflow by pinging a manager with the agent's intent. The manager can approve to dynamically update the policy or deny to keep the block in place."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Consider an AI agent that processes inbound documents. It encounters a prompt injection inside a document that instructs the agent to email sensitive internal data to an external address."
+    },
+    {
+      "kind": "paragraph",
+      "html": "A standard agent blindly executes the email-sending script because it trusts its corrupted context window, leaking the salary data instantly."
+    },
+    {
+      "kind": "paragraph",
+      "html": "With CrabTrap, when the agent executes the HTTP POST request to the email provider API, the proxy intercepts the payload. The LLM judge evaluates the payload, flags the outbound salary data as a severe policy violation, and blocks the request. CrabTrap then notifies a human manager."
+    },
+    {
+      "kind": "heading",
+      "text": "The agent security blueprint for engineers"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Engineers must make a core mindset shift. Instead of trying to control agents with prompts and instructions, ask what system boundaries will stop the model from causing harm when it eventually makes an unapproved decision or gets compromised."
+    },
+    {
+      "kind": "paragraph",
+      "html": "When threat modeling autonomous agents, evaluate your stack against three questions:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "<b>Where does execution happen?</b> Assume the process will be compromised. Set perimeter guardrails to prevent sensitive data from entering or leaving the process that runs the agent.",
+        "<b>What software is running inside the loop?</b> Audit the attack surface. Remove excess components and ensure the tools the agent uses don't contain unpatched vulnerabilities.",
+        "<b>What leaves the boundary?</b> The agent has to have external connections. Set static and AI-based rules to catch potentially malicious requests."
+      ]
+    },
+    {
+      "kind": "paragraph",
+      "html": "Treat AI agents like virtual employees. They require defined permissions, restricted network access, and direct escalation paths to human managers when they hit a policy wall."
+    }
+  ]
+}

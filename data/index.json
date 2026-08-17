@@ -1,7 +1,39 @@
 {
-  "updated_at": "2026-08-14T15:48:27Z",
+  "updated_at": "2026-08-17T15:22:52Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "17-08-2026",
+      "iso_date": "2026-08-17",
+      "type": "digest",
+      "subject": "🔒 Z.ai GLM-5.3 hits 50% coding gain, zero architecture changes",
+      "path": "data/2026/08-August/17-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/17-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/17-08-2026.html",
+      "headlines": [
+        "Z.ai releases GLM-5.3, a 743B coding model built for cybersecurity defense",
+        "AI agents running a RuneScape server develop their own barter economy",
+        "OrcaRouter drops uncensored Qwen3 27B weights built for AI red teaming"
+      ]
+    },
+    {
+      "date": "16-08-2026",
+      "iso_date": "2026-08-16",
+      "type": "article",
+      "subject": "🤖 The 3-layer security stack for AI agents",
+      "path": "data/2026/08-August/16-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/16-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/16-08-2026.html",
+      "headlines": [
+        "The security threats of AI agents",
+        "The three layers of agent defense",
+        "NemoClaw: securing the infrastructure layer",
+        "NanoClaw: securing the architecture and runtime layer",
+        "CrabTrap: securing the network layer"
+      ],
+      "title": "The three layers of AI agent security: from sandboxes to network proxies",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "14-08-2026",
       "iso_date": "2026-08-14",
