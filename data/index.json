@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-18T15:28:34Z",
+  "updated_at": "2026-08-19T15:28:13Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "19-08-2026",
+      "iso_date": "2026-08-19",
+      "type": "digest",
+      "subject": "🧬 Claude Opus 5 hits 2x drug binder success rate vs. industry avg",
+      "path": "data/2026/08-August/19-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/19-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/19-08-2026.html",
+      "headlines": [
+        "Anthropic's Claude designs drug-binding proteins at 2x the industry success rate",
+        "Claude can now send Gmail emails and manage Google Drive files",
+        "OpenAI pauses frontier model training to harden security and alignment checks"
+      ]
+    },
     {
       "date": "18-08-2026",
       "iso_date": "2026-08-18",
