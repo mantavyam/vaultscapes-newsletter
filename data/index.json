@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-19T15:28:13Z",
+  "updated_at": "2026-08-21T15:30:10Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "21-08-2026",
+      "iso_date": "2026-08-21",
+      "type": "digest",
+      "subject": "🎬 Meituan LongCat Avatar: photo+audio to lip-sync video, MIT free",
+      "path": "data/2026/08-August/21-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/21-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/21-08-2026.html",
+      "headlines": [
+        "New open-source model turns a photo and audio clip into a talking video",
+        "OpenAI adds transparent background support to GPT-Image-2 API",
+        "DeepSeek drops free open-source coding agent framework that rivals $200/month tools"
+      ]
+    },
     {
       "date": "19-08-2026",
       "iso_date": "2026-08-19",
