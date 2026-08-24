@@ -1,0 +1,184 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "23-08-2026",
+  "iso_date": "2026-08-23",
+  "subject": "🧠 AI agent skills: Why they succeed—and what causes them to crash",
+  "kicker": "Sunday Deep Dive",
+  "title": "What 8,100 trial records reveal about the strengths and flaws in AI agent skills",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "For the past year, the industry has been building agentic systems on pure intuition. We write skills, tweak prompts, and hoover up successful execution logs into \"self-improving\" memory loops. But without a systematic understanding of how and when skills work, we can’t put them to optimal use. A new study provides us with hard empirical data that prove that how you format an agent's skills can make a huge difference on its outcome. Today, we break down where skills shine, when and how they fail, and how to scientifically test your skill catalog to fix it.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "Skills have become a cornerstone of modern AI applications, enabling developers to adapt agents to different tools and tasks. While adding skills to AI agents improves their overall success, the industry has left a fundamental question underexplored: When do skills help, why do they work, and where do they fail?"
+    },
+    {
+      "kind": "paragraph",
+      "html": "A <a href=\"https://arxiv.org/abs/2608.14036\">new study</a> by various universities provides the answer through analyzing 8,135 trial records across various benchmarks. The findings show that developers' underlying assumptions about building agent skills are often flawed."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The research shows that skills do not act as repositories for missing knowledge. Instead, they work as anchors that prevent agents from getting derailed during complex workflows."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Furthermore, scaling a skill catalog creates unexpected behaviors. Having too many skills degrades an agent's ability to pick the right one. But agents can also extract enough partial guidance from related tools to succeed anyway. Understanding these mechanics is the difference between building a fragile demo and a resilient production agent."
+    },
+    {
+      "kind": "heading",
+      "text": "How to scientifically test your skill catalog"
+    },
+    {
+      "kind": "paragraph",
+      "html": "AI engineers usually rely on intuition to develop and choose skills. They often build agent skill libraries through trial and error."
+    },
+    {
+      "kind": "paragraph",
+      "html": "To isolate the effect of skills, researchers evaluated agents on multi-step environments like Terminal-Bench 2.0 and SkillsBench. These benchmarks require complex execution, debugging, and verification."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers ran controlled experiments comparing three distinct execution modes using the exact same prior experience:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "<b>Raw execution</b> : The agent tackles the task with no prior experience.",
+        "<b>Workflow memory:</b> The agent receives raw, noisy execution logs from past runs.",
+        "<b>Distilled skill:</b> The agent receives a clean, standardized procedural summary extracted from those past runs."
+      ]
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1787492043258-ovwxy7.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The key finding is that distilling experience into a standardized skill improves task success over raw workflow memory by 6.06 percentage points. This proves that how you format the experience matters just as much as possessing the experience in the first place."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Developers can replicate this baseline test locally to see if their custom abstractions actually add value over simply injecting raw logs into the prompt."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1787492017237-rbcarv.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "heading",
+      "text": "The runbook vs tutorial insight"
+    },
+    {
+      "kind": "paragraph",
+      "html": "One of the key insights from the study is that \"skills work when noisy trajectories become procedural anchors that stabilize execution.\" This means that the main focus of the skill should be on showing the agent the steps to solve a task instead of teaching it facts."
+    },
+    {
+      "kind": "paragraph",
+      "html": "In their findings, procedural anchoring accounts for 65.7% of successful skill cases, while explicit knowledge injection accounts for a mere 4.5%."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Instead of fixing high-level reasoning, skills typically provide agents with execution robustness. For example, environment infrastructure failures (e.g., when an agent struggles with tooling configurations, dependency workarounds, or general environment setup) drop from 5.3% in raw execution to 0.2% when agents use distilled skills."
+    },
+    {
+      "kind": "paragraph",
+      "html": "In one text, a raw agent knew how to write a React patch but failed the latency verification check. The API took 915 milliseconds to load instead of the required sub-800 milliseconds because the agent left requests serialized."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The skill acted as a strict procedural runbook, instructing the agent to convert independent awaits to Promise.all, start promises early, and await late. By anchoring the execution sequence, the agent passed all tests in 11.74 seconds."
+    },
+    {
+      "kind": "paragraph",
+      "html": "<b>Takeaway for developers:</b> Stop writing skills to teach your agents facts or generic algorithms. Format your skills as standardized, step-by-step runbooks that force the AI to follow a strict operational checklist."
+    },
+    {
+      "kind": "heading",
+      "text": "The hazard of unannotated experience"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers warn that skills \"fail under brittle assumptions, incompatible contexts, or insufficient adaptation.\" A major cause of these failures stems from how the skills are created. Distilling skills from raw trajectories without explicitly telling the agent which runs succeeded and which failed severely degrades performance."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers proved this through a \"no-hint\" ablation experiment. They gave a Gemini agent a mixed batch of three successful and two failed trajectories. When success and failure annotations were visible during distillation, the agent achieved 74.6% success rate on subsequent tasks."
+    },
+    {
+      "kind": "paragraph",
+      "html": "When those annotations were withheld, success plummeted to 40.0%. Without explicit outcome hints, the agent could not separate the signal from the noise, permanently baking hallucinations and inefficiencies into the resulting skill library."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1787491989798-ngdbda.png",
+      "alt": "alpha_signal_image_3"
+    },
+    {
+      "kind": "paragraph",
+      "html": "<b>Takeaway for developers:</b> While raw trajectories are valuable, you must make sure that the contain the right signals to distill skills from. You can use an LLM-as-a-judge to help you measure the quality of your trajectories."
+    },
+    {
+      "kind": "heading",
+      "text": "The brutal (and surprising) math of skill retrieval"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Building a massive skill catalog introduces severe retrieval bottlenecks. The study finds that, as a skill pool grows from 5 to 100 options, the actual-use precision of retrieved skills falls drastically from 29.6% down to 3.3%."
+    },
+    {
+      "kind": "paragraph",
+      "html": "You would expect this massive precision drop to tank task success, but the data reveals a counterintuitive reality. On the Gemini agent, downstream task success remained stable at around 36% to 39% even as the pool grew to 100 options."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers note that \"exact ground-truth invocation is neither sufficient nor necessary for success.\" While agents frequently pull the wrong skills, related non-ground-truth distractors still provide enough partial procedural support to help the agent pass the task."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For example, if an agent retrieves a general API debugging skill instead of the exact checkout API debugging skill, it still gets a valuable checklist to guide its execution."
+    },
+    {
+      "kind": "paragraph",
+      "html": "However, the real danger in large catalogs is \"semantic confusability.\" When a pool is filled with skills that look identical in embedding space, offline retrieval systems struggle to choose the right skill."
+    },
+    {
+      "kind": "paragraph",
+      "html": "<b>Takeaway for developers:</b> To build reliable systems, developers can gate skills by domain buckets first, and use strict trigger conditions second."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For example, instead of a flat vector search across 100 skills, build a two-level system:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "<b>Level 1 (domain bucket):</b> An LLM router first categorizes the task into a specific bucket, like a frontend or backend environment.",
+        "<b>Level 2 (strict trigger):</b> Inside that bucket, the agent retrieves a skill only if a rigid rule is met, such as detecting the exact error string \"Connection refused\" in the terminal logs."
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Build abstractions, not just memories"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Skills work best when prior experience is distilled into reusable procedural anchors rather than injected as raw memory traces. Accumulating more memories is not the answer to agent reliability."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Audit your skills like a library of production runbooks, ensure your agents have the judgment to apply them correctly, and build architectures that bypass semantic confusability."
+    },
+    {
+      "kind": "paragraph",
+      "html": "As the researchers note, \"Skill use should be understood as a lifecycle problem rather than a single memory-injection mechanism.\""
+    }
+  ]
+}

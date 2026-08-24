@@ -1,7 +1,39 @@
 {
-  "updated_at": "2026-08-21T15:30:10Z",
+  "updated_at": "2026-08-24T15:36:24Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "24-08-2026",
+      "iso_date": "2026-08-24",
+      "type": "digest",
+      "subject": "Claude Code Remote Control 🔄, DeepSeek V4-Flash-Vision Launch 👁️, Anth",
+      "path": "data/2026/08-August/24-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/24-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/24-08-2026.html",
+      "headlines": [
+        "Claude Code remote control gets faster reconnects and phone-to-machine session start",
+        "DeepSeek ships vision model that rivals Claude on multimodal agent benchmarks",
+        "Anthropic upgrades Claude Security scans with its most capable model in public beta"
+      ]
+    },
+    {
+      "date": "23-08-2026",
+      "iso_date": "2026-08-23",
+      "type": "article",
+      "subject": "🧠 AI agent skills: Why they succeed—and what causes them to crash",
+      "path": "data/2026/08-August/23-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/23-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/23-08-2026.html",
+      "headlines": [
+        "How to scientifically test your skill catalog",
+        "The runbook vs tutorial insight",
+        "The hazard of unannotated experience",
+        "The brutal (and surprising) math of skill retrieval",
+        "Build abstractions, not just memories"
+      ],
+      "title": "What 8,100 trial records reveal about the strengths and flaws in AI agent skills",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "21-08-2026",
       "iso_date": "2026-08-21",
