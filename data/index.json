@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-24T15:36:24Z",
+  "updated_at": "2026-08-25T15:39:14Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "25-08-2026",
+      "iso_date": "2026-08-25",
+      "type": "digest",
+      "subject": "Anthropic Renderer Rewrite ⚡, Claude CV Agent Tool 📄, Pi Coding Agent",
+      "path": "data/2026/08-August/25-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/25-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/25-08-2026.html",
+      "headlines": [
+        "Claude's streaming renderer rebuilt to run 4x smoother on long replies",
+        "Open-source Claude tool auto-writes your CV and cover letter for every job",
+        "Pi's coding agent cuts context costs 88% by spilling tool output to disk"
+      ]
+    },
     {
       "date": "24-08-2026",
       "iso_date": "2026-08-24",
