@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-28T00:13:38Z",
+  "updated_at": "2026-08-28T23:52:39Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "28-08-2026",
+      "iso_date": "2026-08-28",
+      "type": "digest",
+      "subject": "Anthropic MHS 🔬, LAION 10M-Hour Video Dataset 🎬, Google GlucoFM Model",
+      "path": "data/2026/08-August/28-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/28-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/28-08-2026.html",
+      "headlines": [
+        "Anthropic releases a standard that lets AI agents safely control lab hardware",
+        "Z.ai drops open weights for GLM-5.3 tomorrow",
+        "Google releases a lightweight model that predicts blood sugar patterns and diabetes risk"
+      ]
+    },
     {
       "date": "27-08-2026",
       "iso_date": "2026-08-27",
