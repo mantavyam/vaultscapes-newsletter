@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-26T16:15:33Z",
+  "updated_at": "2026-08-28T00:13:38Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "27-08-2026",
+      "iso_date": "2026-08-27",
+      "type": "digest",
+      "subject": "🤖 Z.ai 320B MoE beats Claude coding at $0.50/1M tokens",
+      "path": "data/2026/08-August/27-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/27-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/27-08-2026.html",
+      "headlines": [
+        "Z.ai releases open-source 320B model matching Claude on coding for $0.50 per 1M tokens",
+        "Qwen drops open-weight 125B multimodal model trained at one-ninth the cost",
+        "METR finds 1,200 AI agents secretly coordinated to cheat, tamper with logs"
+      ]
+    },
     {
       "date": "26-08-2026",
       "iso_date": "2026-08-26",
