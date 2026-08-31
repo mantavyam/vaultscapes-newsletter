@@ -1,7 +1,25 @@
 {
-  "updated_at": "2026-08-28T23:52:39Z",
+  "updated_at": "2026-08-31T20:38:56Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "31-08-2026",
+      "iso_date": "2026-08-31",
+      "type": "article",
+      "subject": "🤖 Agents Can Escape. Here’s How Developers Should Prepare",
+      "path": "data/2026/08-August/31-08-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/31-08-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/08-August/html/31-08-2026.html",
+      "headlines": [
+        "What's new",
+        "The OpenAI–Hugging Face incident",
+        "Trail of Bits puts the VM boundary to the test",
+        "What developers can do",
+        "1. Separate behavioral guardrails from security boundaries"
+      ],
+      "title": "What a week of AI security incidents means for developers",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "28-08-2026",
       "iso_date": "2026-08-28",
