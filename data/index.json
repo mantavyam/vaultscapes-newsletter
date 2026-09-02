@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-08-31T20:38:56Z",
+  "updated_at": "2026-09-02T18:24:55Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "02-09-2026",
+      "iso_date": "2026-09-02",
+      "type": "digest",
+      "subject": "Google TimesFM-3 📊, Anthropic Claude 5.1 25% cheaper 💸, Runway Solaris",
+      "path": "data/2026/09-September/02-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/02-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/02-09-2026.html",
+      "headlines": [
+        "Google releases TimesFM-3, a forecasting model beating rivals across major benchmarks",
+        "Anthropic releases Claude Fable 5.1 with 25% lower costs and doubled benchmark scores",
+        "Runway's Solaris generates interactive UI interfaces frame by frame with no code"
+      ]
+    },
     {
       "date": "31-08-2026",
       "iso_date": "2026-08-31",
