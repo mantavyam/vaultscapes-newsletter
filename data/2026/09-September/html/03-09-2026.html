@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;margin-top:30px;border:1px solid #6B6B6B;background-color:#ffffff;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Greeting -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:16px;
+                   line-height:24px;
+                   font-weight:bold;
+                   color:#000000;
+                   padding:0 0 10px 0;">
+<p style="margin:0;">Hey,</p>
+</td>
+</tr>
+</table>
+<!-- Intro text -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:15px;
+                   line-height:22px;
+                   font-weight:400;
+                   color:#000000;">
+          Both Alibaba and Google shipped upgrades yesterday, no new model numbers, just sharper versions of what already exists. That's the new normal: post-training is the product now.<br/><br/>Meanwhile, an 8-year research paper quietly dropped, showing LLMs secretly build symbolic structure inside their vectors on their own. If that holds, we can finally inspect and steer these things, not just prompt and pray.<br/><br/>Better models, lower prices, and now interpretability. We're having a moment.
+        </td>
+</tr>
+</table>
+<!-- Ad block -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;" width="100%">
+<tr>
+<td style="padding:30px 0 0 0;">
+<table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation">
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: summary -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:0 20px;margin-bottom:30px;padding-bottom:20px;" width="100%">
+<tr>
+<td class="h1" style="font-family:system-ui, sans-serif;font-size:17px;font-weight:bold;line-height:22.5px;
+                      margin:0;padding:15px 0 10px 0;
+                      color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+  Summary
+</td>
+</tr>
+<tr>
+<td style="padding:0 0 10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="color:#000000 !important;">
+<p style="font-family:system-ui; font-size:13px;line-height:22.5px;font-weight:normal;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    Read time: 6 min 37 sec
+  </p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top Repo</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=17vEEyrVnZnJ7OqKh&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Anthropic open-sources <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">Claude shopping agents</span> that boost cart size by 35%
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=CQwNOKIjO5Cxz9ld&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Qwen upgrades its 2.4T <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">parameter model with</span> 1M token context at $2 per million
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=1onKVQQUNQzuPEoAa&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Google ships Gemini 2.5 Flash with stronger coding and <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">multi-step reasoning</span> at same price
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Signals</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=6IXptT1ATza0fVq2&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    1. MiniMax H3 Max is fast enough to power <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">real-time interactive games</span>
+</a>
+</td>
+</tr>
+
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=1uRKSTMz3zYfXuI2B&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    3. 8-year study finds LLMs secretly <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">build symbolic structure</span> inside their vectors
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=hopnFzwNi19ahYDe&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    4. New paper explains why some <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">generative models need</span> 100 steps and others just one
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=13S7Pt83kXWvdsBzY&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    5. Google's framework lets small AI agents outperform models 3x their size using a <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">persistent knowledge wiki</span>
+</a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=1dU5kza0gkYB6eO9m&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    6. Meta ships Muse Spark 1.3 with 25% fewer tokens and <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">smarter agentic coding</span>
+</a>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top Repo
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Anthropic open-sources Claude shopping agents that boost cart size by 35%
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          6,219 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Anthropic open-sources Claude shopping agents that" border="0" src="https://alphasignal.ai/image/1788408296063-fgkejv.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Anthropic just open-sourced <b>Claude Commerce Agents</b>, a ready-to-use blueprint for building AI shopping assistants. Think of it as a starter kit so you skip weeks of figuring out how to wire an AI agent to a store backend.</p><p>There are two agents included:</p><ul><li><b>Shopping agent</b>: sits inside a customer-facing app, searches products, fills carts, and answers order questions</li><li><b>Merchant agent</b>: helps store staff manage listings, inventory, and pricing, but every change waits for a human to approve it</li><li><b>Four vertical demos</b>: retail, travel, telecom, and entertainment, all runnable out of the box</li><li><b>A Claude Code plugin</b> that scaffolds an agent against your own backend automatically</li></ul><p>Real results from pilots: <b>35% larger carts</b> and shoppers <b>60% more likely to complete a purchase</b>. To get started, clone the repo, add your API key, and run 
+</p><pre style="
+    margin:0;
+    font-size:13px;
+    font-family:'SF Mono';
+    background-
+    border:1px solid #2A2A2A;
+    
+    overflow:auto;
+    padding:16px;
+    line-height:1.38;
+"><code><span>python</span> <span>scripts</span><span>/</span><span>run_demo</span><span>.</span><span>py</span> <span>retail</span><br/></code></pre>
+.
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=17vEEyrVnZnJ7OqKh&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Qwen upgrades its 2.4T parameter model with 1M token context at $2 per million
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          5,733 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Qwen upgrades its 2.4T parameter model with 1M tok" border="0" src="https://alphasignal.ai/image/1788408421381-ikvrtb.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Alibaba just pushed an update to <b>Qwen3.8-Max</b>, and the new version is called <b>Qwen3.8-Max-0902</b>. Same giant model underneath, but with extra post-training focused on coding and collaborative work tasks.</p><p>Quick recap of what this thing actually is: a 2.4-trillion-parameter model with 95B active parameters and a <b>1M-token context window</b>. That context window means you can feed it an entire large codebase in one shot.</p><p>The upgrade sharpens it for real enterprise work. Here is what it handles well:</p><ul><li>PaperBench score of <b>93.0</b>, ahead of GPT-5.6 Sol, Claude Fable 5, and Opus 4.8</li><li>OSWorld-Verified score of 86.1, beating GPT-5.6 Sol Max and Claude Fable 5</li><li>Strong vision across satellite imagery, documents, technical drawings, and crowded scenes</li></ul><p>Pricing stays the same: $2 per 1M input tokens and $6 per 1M output tokens, plus cache discounts. You can hit it right now via the QwenCloud API.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=CQwNOKIjO5Cxz9ld&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: news -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Google ships Gemini 2.5 Flash with stronger coding and multi-step reasoning at same price
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          3,949 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Google ships Gemini 2.5 Flash with stronger coding" border="0" src="https://alphasignal.ai/image/1788408433478-6ttdjf.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Google just dropped <b>Gemini 3.8 Flash</b>, and the pitch is simple: smarter reasoning, same low price as 3.7 Flash.</p><p>So what actually changed? The model now works harder on tough tasks. The performance boost comes from a design choice: it executes extra internal reasoning steps and calls tools repeatedly to reach better answers. Think of it like a teammate who keeps double-checking their work instead of stopping at the first answer.</p><p>Here is what it is good at:</p><ul><li>On long-horizon coding, it beats most larger, pricier models at solving complex engineering problems end to end.</li><li>On Terminal-Bench 2.1, an agentic terminal coding test, it scores <b>89.4%</b>, edging out Claude Opus 5.</li><li>It handles text, image, audio, video, and PDF input with a <b>1M token context window.</b></li></ul><p>Pricing stays at <b>$0.75 per 1M input tokens</b> and $3.75 per 1M output. If you need lower compute overhead, you can adjust effort settings or stay on 3.7 Flash. You can try it now via the Gemini API and AI Studio.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=1onKVQQUNQzuPEoAa&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- section: signals -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;" width="100%"><tr><td style="padding:0 20px;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<!-- Section Title -->
+<tr>
+<td class="h1" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:17px;font-weight:bold;line-height:22.5px;
+             margin:0;padding:15px 0 10px 0;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;">
+    Signals
+    
+  </td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Item 1 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">1</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=6IXptT1ATza0fVq2&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    MiniMax H3 Max is fast enough to power real-time interactive games
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">3,203 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 2 -->
+<tr>
+<td style="padding:15px 0;">
+
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 3 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">3</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=1uRKSTMz3zYfXuI2B&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    8-year study finds LLMs secretly build symbolic structure inside their vectors
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">900 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 4 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">4</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=hopnFzwNi19ahYDe&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    New paper explains why some generative models need 100 steps and others just one
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">866 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 5 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">5</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=13S7Pt83kXWvdsBzY&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Google's framework lets small AI agents outperform models 3x their size using a persistent knowledge wiki
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">406 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 6 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">6</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=7f3e3f23495ae8b8&amp;lid=1dU5kza0gkYB6eO9m&amp;mid=21d0a9aa-d523-4098-bdd5-c027e2a6aa31" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Meta ships Muse Spark 1.3 with 25% fewer tokens and smarter agentic coding
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">2,505 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table>
+</body></html>

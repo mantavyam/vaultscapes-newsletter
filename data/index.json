@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-02T18:24:55Z",
+  "updated_at": "2026-09-03T18:24:35Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "03-09-2026",
+      "iso_date": "2026-09-03",
+      "type": "digest",
+      "subject": "Anthropic open-sources Claude Commerce Agents: 35% larger carts, 60% more conversions",
+      "path": "data/2026/09-September/03-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/03-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/03-09-2026.html",
+      "headlines": [
+        "Anthropic open-sources Claude shopping agents that boost cart size by 35%",
+        "Qwen upgrades its 2.4T parameter model with 1M token context at $2 per million",
+        "Google ships Gemini 2.5 Flash with stronger coding and multi-step reasoning at same price"
+      ]
+    },
     {
       "date": "02-09-2026",
       "iso_date": "2026-09-02",
