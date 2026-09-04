@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-03T18:24:35Z",
+  "updated_at": "2026-09-04T18:04:12Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "04-09-2026",
+      "iso_date": "2026-09-04",
+      "type": "digest",
+      "subject": "Anthropic Claude Shopping 🛍️, Cursor Self-Hosted Agents 🖥️, NVIDIA DLS",
+      "path": "data/2026/09-September/04-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/04-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/04-09-2026.html",
+      "headlines": [
+        "Anthropic open-sources Claude shopping agents that grow cart sizes by 35%",
+        "Developer releases open-source demo applying DLSS 5 to live webcam footage",
+        "Cursor lets you run cloud coding agents on your own infrastructure"
+      ]
+    },
     {
       "date": "03-09-2026",
       "iso_date": "2026-09-03",
