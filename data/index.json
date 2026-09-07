@@ -1,7 +1,38 @@
 {
-  "updated_at": "2026-09-04T18:04:12Z",
+  "updated_at": "2026-09-07T18:58:47Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "07-09-2026",
+      "iso_date": "2026-09-07",
+      "type": "digest",
+      "subject": "Claude Lean Proof 📐, GPT-4o Minecraft Diamond ⛏️, DeepMind 100-Agent S",
+      "path": "data/2026/09-September/07-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/07-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/07-09-2026.html",
+      "headlines": [
+        "Claude writes the largest Lean proof ever, verifying Fermat's Last Theorem in 13M lines",
+        "GPT-4o autonomously mines a diamond in Minecraft overnight using computer use",
+        "GPT-6 Astra beats GTA Vice City by turning it into a turn-based game"
+      ]
+    },
+    {
+      "date": "06-09-2026",
+      "iso_date": "2026-09-06",
+      "type": "article",
+      "subject": "⚙️ What Developers Can Learn From Shopify’s Self-Improving AI Pipeline",
+      "path": "data/2026/09-September/06-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/06-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/06-09-2026.html",
+      "headlines": [
+        "What the flywheel looks like in practice",
+        "The hard parts behind a self-improving loop",
+        "Why specialization matters at scale",
+        "Don't fine-tune your prototype"
+      ],
+      "title": "Lessons learned from Shopify’s self-improving AI pipeline",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "04-09-2026",
       "iso_date": "2026-09-04",

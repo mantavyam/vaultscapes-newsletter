@@ -1,0 +1,164 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "06-09-2026",
+  "iso_date": "2026-09-06",
+  "subject": "⚙️ What Developers Can Learn From Shopify’s Self-Improving AI Pipeline",
+  "kicker": "Sunday Deep Dive",
+  "title": "Lessons learned from Shopify’s self-improving AI pipeline",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "Shopify just got a 0.8B model to outperform GPT-5.6 Sol on a specialized task, while increasing throughput from 2 million to 72 million outputs per day. The interesting part isn’t the benchmark win. It’s how Shopify got there: a production pipeline that turns real-world failures into training data for smaller, cheaper models. As AI applications mature, frontier models may increasingly become the teachers rather than the workers. Today we look at how that flywheel works, and when it makes sense to build one.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "Shopify CEO Tobi Lütke recently <a href=\"https://x.com/tobi/status/2094808564355191249\">highlighted an internal experiment</a> in which a fine-tuned Qwen3.5 0.8B model beat GPT-5.6 Sol xhigh on a narrow buyer-profile generation task."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Shopify cut the system prompt from around 9,100 tokens to 1,100 and increased throughput from roughly 2 million buyer profiles per day to 72 million. The model also improved across successive training rounds as the team added examples."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1788696564921-fdt6g4.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "This does not mean a 0.8B model is generally more capable than GPT-5.6. But once you have an AI task that is precisely bounded and specific, then cost, latency and throughput become part of the product."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The more interesting part that is useful for AI engineering teams is how Shopify built feedback loops that turn production usage into evaluation data, repaired examples and new training runs."
+    },
+    {
+      "kind": "heading",
+      "text": "What the flywheel looks like in practice"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Though Lutke did not provide further information on that specific use case, Shopify has documented its flywheel in detail."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Its <a href=\"https://shopify.engineering/sidekicks-continual-learning-loop\">Sidekick GraphQL agent</a> provides a concrete example. A merchant can ask which products are almost out of stock. The agent must understand the request, write the right Shopify Admin GraphQL query, run it against the store and turn the result into a plain-language answer."
+    },
+    {
+      "kind": "paragraph",
+      "html": "A frontier model is a useful place to start because much of the product can change without retraining it. Developers can modify system prompts, tool descriptions, routing logic, and orchestration code (aka the harness) as they learn what users need."
+    },
+    {
+      "kind": "paragraph",
+      "html": "When deployed across millions of merchants, the system spots ambiguous requests, business-specific workflows, and tool failures. Some conversations work while others receive low scores from the company's automated evaluators."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Those failures feed the next stage. Frontier reasoning models critique the bad trajectory and suggest how to repair it. Shopify applies the suggestions and replays the conversation. If the evaluator accepts the new result, the repaired trajectory becomes training data for a smaller model."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1788696624198-1xxyez.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "paragraph",
+      "html": "In this context, the role of the frontier model shifts from solving every request to helping create a model that can handle a well-understood workload more efficiently."
+    },
+    {
+      "kind": "heading",
+      "text": "The hard parts behind a self-improving loop"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The big challenge of the loop is creating the evaluation criteria. Shopify turns product requirements into a rubric with separate criteria such as completeness, execution, response quality and safety. An LLM judge then scores conversations against those criteria."
+    },
+    {
+      "kind": "paragraph",
+      "html": "To harden the LLM judge, product experts label conversations and Shopify measures how much they agree. It then calibrates its LLM judges against those human judgments. (They use <a href=\"https://en.wikipedia.org/wiki/Cohen%27s_kappa\">Cohen's kappa</a> , a metric that measures the reliability of agreement between raters.)"
+    },
+    {
+      "kind": "paragraph",
+      "html": "This makes evaluation infrastructure crucial for the rest of the loop. Once model outputs become training examples, a bad judge can systematically teach the model the wrong behavior."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The second challenge is turning production failures into clean training data. Shopify mines low-scoring conversations for \"hard negatives,\" examples that reveal where the current system struggles."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Frontier reasoning models critique each failure, an arbiter combines the critiques into a repair instruction, and Shopify runs the interaction again. If the repaired version passes evaluation, it can enter the training set. Cases that still fail go to human annotators."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Production data also has blind spots. Shopify encountered this while teaching one Sidekick skill to reject impossible customer-segmentation requests. Its existing dataset contained tens of thousands of successful production queries but no examples of correct refusals."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The team created a small human-labeled dataset and used it to calibrate four LLM judges. Shopify accepted an automated label only when all four judges agreed."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The final step is moving those lessons into the model. Shopify first uses supervised fine-tuning, which trains the smaller model to imitate successful trajectories. It then applies reinforcement learning (GRPO), where the model generates several responses, judges score them, and training increases the probability of the better responses."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Shopify runs this self-healing pipeline daily for the GraphQL agent, adding new trajectories to the accumulated training set and retraining on new and previous examples."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1788696663659-p8xv2j.png",
+      "alt": "alpha_signal_image_3"
+    },
+    {
+      "kind": "heading",
+      "text": "Why specialization matters at scale"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Shopify's GraphQL agent serves up to 2,000 requests per minute. The specialized model eventually surpassed the frontier-powered baseline on its evaluator. Serving the same traffic with frontier models could cost around $27 million per year, compared to about $1 million for the fine-tuned model."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Optimization carried to other parts as well. The original GraphQL agent had a system prompt of roughly 6,000 tokens on every request. The fine-tuned version used a prompt with around 1,500 learned tokens."
+    },
+    {
+      "kind": "paragraph",
+      "html": "This reduced time-to-first-token by 19% and end-to-end latency by around 38%. Throughput increased by 16%, allowing Shopify to serve the same workload with around 14% fewer GPUs."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The buyer-profile example and GraphQL agent are separate systems, but they point in the same direction. Once a workload becomes stable and high-volume, teams can optimize the model, prompt and serving stack around the exact work the application performs."
+    },
+    {
+      "kind": "heading",
+      "text": "Don't fine-tune your prototype"
+    },
+    {
+      "kind": "paragraph",
+      "html": "This approach is not for the exploration phase of your product. Frontier models let a small team change prompts, tools and product behavior quickly without maintaining a training pipeline. That flexibility matters while the team is still discovering what users will ask and which parts of the application will remain stable."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Specialization becomes more attractive when the workload has high volume, bounded behavior, measurable quality, and useful proprietary data. Until those conditions emerge, a frontier model can be the cheaper choice in engineering time even if each inference costs more."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1788696590317-intgfk.png",
+      "alt": "alpha_signal_image_4"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Common and predictable workloads can move to smaller specialized models, while unusual or open-ended cases can remain on frontier systems."
+    },
+    {
+      "kind": "paragraph",
+      "html": "In this context, improvements to frontier models can make specialization easier by setting up the training and evaluation structure (LLM judges, synthetic data generation, etc.). Each generation of frontier models can become a better teacher for the next generation of specialists."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The durable asset is the loop around the model: production data, evals, training recipes and deployment infrastructure. Individual models will keep changing. An engineering team that can repeatedly turn production experience into a cheaper and faster specialist can keep improving even as the frontier moves."
+    }
+  ]
+}

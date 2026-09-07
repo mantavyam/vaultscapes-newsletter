@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#000000;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Logo -->
+
+<!-- White Divider Under Logo -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 20px 0;" width="100%">
+<tr>
+<td style="border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey,
+      </p>
+<!-- Intro Text -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;
+                color:#ffffff;margin:0;"> 
+Shopify just got a 0.8B model to outperform GPT-5.6 Sol on a specialized task, while increasing throughput from 2 million to 72 million outputs per day.
+<br/><br/>
+The interesting part isn’t the benchmark win. It’s how Shopify got there: a production pipeline that turns real-world failures into training data for smaller, cheaper models.
+<br/><br/>
+As AI applications mature, frontier models may increasingly become the teachers rather than the workers.
+<br/><br/>
+Today we look at how that flywheel works, and when it makes sense to build one.
+
+
+    </p></td>
+</tr>
+</table>
+<!-- section: author -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1788697724481-jtq6hk.png" style="display:block;border:1px solid #000000;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+        Today's Author
+      </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+        
+   Ben Dickson is a veteran software engineer and former CTO known as the "Engineer's Journalist" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat.
+      
+      </div>
+</td>
+</tr>
+</table>
+<!-- section: article -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family:system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Sunday Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+      Lessons learned from Shopify’s self-improving AI pipeline
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0;">
+<div style="margin-top:0;">
+<p>Shopify CEO Tobi Lütke recently <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=16eeb59411f865b1&amp;lid=nV0qGJshcUyaQzNI&amp;mid=b438c65f-e60e-4d90-aa69-ea9b7e20dfec">highlighted an internal experiment</a> in which a fine-tuned Qwen3.5 0.8B model beat GPT-5.6 Sol xhigh on a narrow buyer-profile generation task. </p>
+<p>Shopify cut the system prompt from around 9,100 tokens to 1,100 and increased throughput from roughly 2 million buyer profiles per day to 72 million. The model also improved across successive training rounds as the team added examples.</p>
+<img alt="alpha_signal_image_1" border="0" src="https://alphasignal.ai/image/1788696564921-fdt6g4.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>This does not mean a 0.8B model is generally more capable than GPT-5.6. But once you have an AI task that is precisely bounded and specific, then cost, latency and throughput become part of the product.</p>
+<p>The more interesting part that is useful for AI engineering teams is how Shopify built feedback loops that turn production usage into evaluation data, repaired examples and new training runs. </p>
+<p><b>What the flywheel looks like in practice</b></p>
+<p>Though Lutke did not provide further information on that specific use case, Shopify has documented its flywheel in detail.</p>
+<p>Its <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=16eeb59411f865b1&amp;lid=169IKIdPoB2OdCsUb&amp;mid=b438c65f-e60e-4d90-aa69-ea9b7e20dfec">Sidekick GraphQL agent</a> provides a concrete example. A merchant can ask which products are almost out of stock. The agent must understand the request, write the right Shopify Admin GraphQL query, run it against the store and turn the result into a plain-language answer.</p>
+<p>A frontier model is a useful place to start because much of the product can change without retraining it. Developers can modify system prompts, tool descriptions, routing logic, and orchestration code (aka the harness) as they learn what users need. </p>
+<p>When deployed across millions of merchants, the system spots ambiguous requests, business-specific workflows, and tool failures. Some conversations work while others receive low scores from the company's automated evaluators.</p>
+<p>Those failures feed the next stage. Frontier reasoning models critique the bad trajectory and suggest how to repair it. Shopify applies the suggestions and replays the conversation. If the evaluator accepts the new result, the repaired trajectory becomes training data for a smaller model.</p>
+<img alt="alpha_signal_image_2" border="0" src="https://alphasignal.ai/image/1788696624198-1xxyez.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>In this context, the role of the frontier model shifts from solving every request to helping create a model that can handle a well-understood workload more efficiently.</p>
+<p><b>The hard parts behind a self-improving loop</b></p>
+<p>The big challenge of the loop is creating the evaluation criteria. Shopify turns product requirements into a rubric with separate criteria such as completeness, execution, response quality and safety. An LLM judge then scores conversations against those criteria. </p>
+<p>To harden the LLM judge, product experts label conversations and Shopify measures how much they agree. It then calibrates its LLM judges against those human judgments. (They use <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=16eeb59411f865b1&amp;lid=RDmCJb0T36ab08Md&amp;mid=b438c65f-e60e-4d90-aa69-ea9b7e20dfec">Cohen's kappa</a>, a metric that measures the reliability of agreement between raters.)</p>
+<p>This makes evaluation infrastructure crucial for the rest of the loop. Once model outputs become training examples, a bad judge can systematically teach the model the wrong behavior.</p>
+<p>The second challenge is turning production failures into clean training data. Shopify mines low-scoring conversations for "hard negatives," examples that reveal where the current system struggles. </p>
+<p>Frontier reasoning models critique each failure, an arbiter combines the critiques into a repair instruction, and Shopify runs the interaction again. If the repaired version passes evaluation, it can enter the training set. Cases that still fail go to human annotators.</p>
+<p>Production data also has blind spots. Shopify encountered this while teaching one Sidekick skill to reject impossible customer-segmentation requests. Its existing dataset contained tens of thousands of successful production queries but no examples of correct refusals. </p>
+<p>The team created a small human-labeled dataset and used it to calibrate four LLM judges. Shopify accepted an automated label only when all four judges agreed.</p>
+<p>The final step is moving those lessons into the model. Shopify first uses supervised fine-tuning, which trains the smaller model to imitate successful trajectories. It then applies reinforcement learning (GRPO), where the model generates several responses, judges score them, and training increases the probability of the better responses.</p>
+<p>Shopify runs this self-healing pipeline daily for the GraphQL agent, adding new trajectories to the accumulated training set and retraining on new and previous examples. </p>
+<img alt="alpha_signal_image_3" border="0" src="https://alphasignal.ai/image/1788696663659-p8xv2j.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p><b>Why specialization matters at scale</b></p>
+<p>Shopify's GraphQL agent serves up to 2,000 requests per minute. The specialized model eventually surpassed the frontier-powered baseline on its evaluator. Serving the same traffic with frontier models could cost around $27 million per year, compared to about $1 million for the fine-tuned model.</p>
+<p>Optimization carried to other parts as well. The original GraphQL agent had a system prompt of roughly 6,000 tokens on every request. The fine-tuned version used a prompt with around 1,500 learned tokens. </p>
+<p>This reduced time-to-first-token by 19% and end-to-end latency by around 38%. Throughput increased by 16%, allowing Shopify to serve the same workload with around 14% fewer GPUs.</p>
+<p>The buyer-profile example and GraphQL agent are separate systems, but they point in the same direction. Once a workload becomes stable and high-volume, teams can optimize the model, prompt and serving stack around the exact work the application performs.</p>
+<p><b>Don't fine-tune your prototype</b></p>
+<p>This approach is not for the exploration phase of your product. Frontier models let a small team change prompts, tools and product behavior quickly without maintaining a training pipeline. That flexibility matters while the team is still discovering what users will ask and which parts of the application will remain stable.</p>
+<p>Specialization becomes more attractive when the workload has high volume, bounded behavior, measurable quality, and useful proprietary data. Until those conditions emerge, a frontier model can be the cheaper choice in engineering time even if each inference costs more.</p>
+<img alt="alpha_signal_image_4" border="0" src="https://alphasignal.ai/image/1788696590317-intgfk.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>Common and predictable workloads can move to smaller specialized models, while unusual or open-ended cases can remain on frontier systems.</p>
+<p>In this context, improvements to frontier models can make specialization easier by setting up the training and evaluation structure (LLM judges, synthetic data generation, etc.). Each generation of frontier models can become a better teacher for the next generation of specialists.</p>
+<p>The durable asset is the loop around the model: production data, evals, training recipes and deployment infrastructure. Individual models will keep changing. An engineering team that can repeatedly turn production experience into a cheaper and faster specialist can keep improving even as the frontier moves.</p>
+</div>
+</td>
+</tr>
+</table>
+</body></html>
