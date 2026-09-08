@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-07T18:58:47Z",
+  "updated_at": "2026-09-08T18:17:07Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "08-09-2026",
+      "iso_date": "2026-09-08",
+      "type": "digest",
+      "subject": "🧠 Meta AIRA3 beats 4,000 Kaggle teams, takes Gold at 8th place",
+      "path": "data/2026/09-September/08-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/08-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/08-09-2026.html",
+      "headlines": [
+        "Interactive tool maps a fly's brain neurons firing in real time",
+        "GPT-6 powered tool lets you mod Super Nintendo games with plain English",
+        "Meta's autonomous research system places top 10 among 4,000 Kaggle teams"
+      ]
+    },
     {
       "date": "07-09-2026",
       "iso_date": "2026-09-07",
