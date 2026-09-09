@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-08T18:17:07Z",
+  "updated_at": "2026-09-09T18:18:01Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "09-09-2026",
+      "iso_date": "2026-09-09",
+      "type": "digest",
+      "subject": "🧮 OpenAI's 10,000 agents solved a 90-year math problem in 88hrs",
+      "path": "data/2026/09-September/09-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/09-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/09-09-2026.html",
+      "headlines": [
+        "OpenAI agents crack a 90-year-old math problem in 88 hours",
+        "OpenAI ships ChatGPT Images 2.5 with faster generation, sketch input, and two new API models",
+        "Mistral raises €3B Series D, the biggest equity round in European tech history"
+      ]
+    },
     {
       "date": "08-09-2026",
       "iso_date": "2026-09-08",
