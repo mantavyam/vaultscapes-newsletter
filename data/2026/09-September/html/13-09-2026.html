@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#000000;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Logo -->
+
+<!-- White Divider Under Logo -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 20px 0;" width="100%">
+<tr>
+<td style="border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey,
+      </p>
+<!-- Intro Text -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;
+                color:#ffffff;margin:0;"> 
+DeepSeek’s new V4.1-Flash is almost twice as large as its predecessor. But its KV cache footprint is four times smaller.
+<br/><br/>
+That matters if you’re building long-running agents, where context keeps growing and memory costs can quickly become a bottleneck. DeepSeek gets around this with a series of architectural changes that rethink how a model reads, stores, and retrieves its context.
+<br/><br/>
+Today we break down how it works, and what it tells us about the next frontier of LLM efficiency.
+
+
+    </p></td>
+</tr>
+</table>
+<!-- section: author -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1789313381237-wf2dm3.png" style="display:block;border:1px solid #000000;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+        Today's Author
+      </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+        
+   Ben Dickson is a veteran software engineer and former CTO known as the "Engineer's Journalist" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat.
+      
+      </div>
+</td>
+</tr>
+</table>
+<!-- section: article -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family:system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Sunday Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+      How DeepSeek made a bigger model cheaper to run
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0;">
+<div style="margin-top:0;">
+<p>DeepSeek released <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=dbce367ad97e73c6&amp;lid=1j5cVDqye4cQkzilB&amp;mid=1243bcf3-5e45-4ded-8fc2-33017b35e43c">V4.1-Flash</a> on September 10 with an unusual combination of numbers. It is almost twice the size of V4-Flash but is 4x more efficient than its predecessor when it comes to KV cache storage.</p>
+<p>The model is also competitive with leading proprietary models. At maximum reasoning effort, V4.1-Flash scores 40 on the <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=dbce367ad97e73c6&amp;lid=PXFglVJRBNeCbxw5&amp;mid=1243bcf3-5e45-4ded-8fc2-33017b35e43c">Artificial Analysis Intelligence Index</a>, just behind Gemini 3.8 Flash High at 41, while having a quarter of the cost per task.</p>
+<p>Sebastian Raschka called the release a “big overhaul” and argued that DeepSeek could have called it V5.</p>
+<img alt="alpha_signal_image_1" border="0" src="https://alphasignal.ai/image/1789312507559-swqmbb.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>For engineers, the interesting part is how DeepSeek separated model capacity from the resources needed to serve it. Parameter count alone says less about production cost when architectures can change how much of the model runs on each token, how much context must stay in memory, and how much work is required to retrieve it. V4.1-Flash provides a useful case study in all three.</p>
+<p><b>A much bigger model</b></p>
+<p>DeepSeek-V4.1-Flash is a 552B Mixture-of-Experts (MoE) model (one shared, 384 routed with six shared experts per token) with a 40-layer Transformer backbone, divided into a 20-layer causal encoder and a 20-layer decoder (more on this in a bit). The model accepts text and images, generates text, and supports a context window of up to one million tokens.</p>
+<p>(You might see other figures, such as 763B params. This is because V4.1-Flash has some other auxiliary components that are separate from the main backbone.)</p>
+<p><b>Prefill, decode and the KV cache</b></p>
+<p>When you send a prompt to an LLM, inference starts with “prefill.” The model processes all the input tokens and constructs the internal attention state it will need to produce an answer. Then comes “decode,” where the model generates new tokens sequentially while repeatedly referring back to the tokens it has already processed.</p>
+<p>The KV cache connects these phases. Transformer attention creates key and value representations for previous tokens. Keeping those representations in memory saves the model from recomputing the entire history for every new output token.</p>
+<p>KV cache efficiency matters for agents because their contexts accumulate. A coding agent might carry source files, conversation history, retrieved documentation and dozens of tool results. DeepSeek has steadily reduced the global KV footprint for these workloads, from around 48 KB per token in V3.2 to 3,514 bytes in V4-Flash and 890 bytes in V4.1-Flash.</p>
+<img alt="alpha_signal_image_2" border="0" src="https://alphasignal.ai/image/1789312382359-cppics.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p><b>Causal Encoder-Decoder: make reading cheaper</b></p>
+<p>In a conventional decoder-only Transformer, every input token moves through the entire model during prefill. Each layer creates a new representation of the prompt and derives the keys and values that it will later need during generation. If the prompt contains hundreds of thousands of tokens, all of that work happens before the model produces its first output.</p>
+<p>DeepSeek changes that with its Causal Encoder-Decoder (CED) architecture. The first 20 layers act as the encoder and process the prompt to create a contextual representation for each position. The second 20 layers are only used during the decode phase</p>
+<p>As a result, DeepSeek-V4.1-Flash only uses 8B active parameters for each input token and 16B for each generated token. (V4-Flash activated around 13B for both.)</p>
+<img alt="alpha_signal_image_3" border="0" src="https://alphasignal.ai/image/1789312441190-e35f9e.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p><b>SWA Bounded Replay: store less local context</b></p>
+<p>V4.1 also uses Sliding-Window Attention (SWA). Full attention lets each token look across the entire preceding context. SWA gives each layer a much smaller local view instead to reduce the costs of computing and storing KV cache.</p>
+<p>SWA creates a problem when a cached agent session is restored and the local cache is missing. Reconstructing it exactly is expensive. Each layer depends on representations produced by the layer below, so the historical dependency expands as you move through the stack.</p>
+<p>DeepSeek’s “Bounded Replay” limits that work. When reconstructing the KV cache, the serving system recomputes only the most recent tokens to rebuild the local window state instead of reproducing the full dependency chain.</p>
+<p>Because SWA state can be reconstructed cheaply, DeepSeek does not need to persist that local KV state to SSD. Combined with the compression of the global cache, persistent KV-cache storage falls to roughly one-eighth of V4-Flash.</p>
+<p><b>CSA2: share the long-term memory</b></p>
+<p>SWA works for nearby tokens, but the model still needs access to older information. Full attention over a million-token is expensive because every new token needs to attend to all previous tokens.</p>
+<p>“Sparse attention” reduces that work by finding a much smaller set of relevant historical tokens and running the expensive attention operation over that subset.</p>
+<p>DeepSeek already used compressed sparse attention in V4. V4.1 introduces Compressed Sparse Attention 2 (CSA2), which addresses redundancy across layers. CSA2 allows layers to share both cache state and, in some cases, retrieval results.</p>
+<p>It divides attention layers into three modes. A “Full” layer creates a fresh KV state and indexes relevant tokens. A “Reindex” layer shares the existing KV but performs its own search, allowing it to choose a different subset of the history. A “Reuse” layer shares both the KV and an earlier set of selected positions.</p>
+<img alt="alpha_signal_image_4" border="0" src="https://alphasignal.ai/image/1789312410183-j3jxj2.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>Instead of every layer keeping a separate copy of the model’s history, multiple layers can treat compressed historical state as a shared memory resource. That removes one of the factors that makes KV cache grow so quickly in conventional architectures.</p>
+<p><b>Hierarchical indexing: make sparse attention cheap to search</b></p>
+<p>Before the sparse attention mechanism can attend to a few hundred useful positions, it has to find them. If every Reindex layer searched all one million tokens independently, the indexing stage itself could become the bottleneck.</p>
+<p>DeepSeek solves this with a “Hierarchical Sparse Indexer.” The first Full decoder layer searches the wider history and creates a candidate pool of up to 2,048 blocks. Later Reindex layers search only inside this pool, and individual attention layers ultimately select up to 512 compressed positions.</p>
+<img alt="alpha_signal_image_5" border="0" src="https://alphasignal.ai/image/1789312338415-qfj5uw.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>The important point is that the deeper search no longer grows directly with the full context. Once context windows reach hundreds of thousands of tokens, finding the relevant memory can become a substantial cost of its own. V4.1 bounds that cost as well as the size of the memory being searched.</p>
+<p>Finally, DeepSeek-V4.1-Flash compresses the remaining main KV cache further by storing it in FP4 format (four-bit floating-point values), compared to FP8 for V4-Flash.</p>
+<p><b>What this means for inference costs</b></p>
+<p>At the full one-million-token context window, 890 bytes per token works out to roughly 890 MB of growing global KV state for one sequence. At V4-Flash’s 3,514 bytes per token, the equivalent is about 3.5 GB. The difference compounds quickly when a server is handling many long-running agent sessions.</p>
+<p>DeepSeek summarizes the storage effect as about “one-quarter of V4-Flash’s HBM requirement and one-eighth of its SSD cache storage.” These differences matter most when applications maintain long prompts rather than starting every request from a short context.</p>
+<p>The optimizations also show themselves in the cost structure. DeepSeek costs $0.30 per million input tokens and $1.20 per million output tokens. (Cache hits cost $0.006 per million tokens.)</p>
+<p>V4.1-Flash shows why total parameter count is becoming a weaker way to estimate the economics of an LLM. For developers evaluating models for long-context and agentic applications, a more useful set of questions is emerging:</p>
+<ul>
+<li>How many parameters are active for input versus output?</li>
+<li>How many bytes of KV cache does each token add?</li>
+<li>What state must be persisted when a session pauses?</li>
+<li>Does attention and retrieval cost keep growing with context?</li>
+</ul>
+<p>DeepSeek has attacked those problems at several levels in one model. The result suggests that there is still substantial performance to be found in the architecture between better GPUs and better application code.</p>
+<p>If these techniques spread, the next generation of efficient models might not be defined by having fewer parameters. They might instead get better at deciding which parameters need to run, which memories need to survive, and which parts of a million-token history are worth looking at again.</p>
+</div>
+</td>
+</tr>
+</table>
+</body></html>

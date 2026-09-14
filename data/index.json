@@ -1,7 +1,39 @@
 {
-  "updated_at": "2026-09-11T18:10:04Z",
+  "updated_at": "2026-09-14T19:43:23Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "14-09-2026",
+      "iso_date": "2026-09-14",
+      "type": "digest",
+      "subject": "🔧 OpenAI: trim bloated prompts, ElevenLabs rival ships free voice clon",
+      "path": "data/2026/09-September/14-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/14-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/14-09-2026.html",
+      "headlines": [
+        "OpenAI shares tips to get better results from GPT-4o agents",
+        "Solo dev open-sources free ElevenLabs rival that clones voices and dubs video into 646 languages",
+        "10 free open-source GitHub tools that replace software you're paying for monthly"
+      ]
+    },
+    {
+      "date": "13-09-2026",
+      "iso_date": "2026-09-13",
+      "type": "article",
+      "subject": "⚡ What DeepSeek-V4.1-Flash teaches us about efficient AI",
+      "path": "data/2026/09-September/13-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/13-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/13-09-2026.html",
+      "headlines": [
+        "A much bigger model",
+        "Prefill, decode and the KV cache",
+        "Causal Encoder-Decoder: make reading cheaper",
+        "SWA Bounded Replay: store less local context",
+        "CSA2: share the long-term memory"
+      ],
+      "title": "How DeepSeek made a bigger model cheaper to run",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "11-09-2026",
       "iso_date": "2026-09-11",
