@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-14T19:43:23Z",
+  "updated_at": "2026-09-15T18:41:59Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "15-09-2026",
+      "iso_date": "2026-09-15",
+      "type": "digest",
+      "subject": "Frank Fly Brain 🦟, ByteDance Self-Improving AI 🔄, Bolt Open Model 💡",
+      "path": "data/2026/09-September/15-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/15-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/15-09-2026.html",
+      "headlines": [
+        "Frank wires a 166,700-neuron fruit fly brain model into a walking robot",
+        "New looped transformer design gives language models unlimited reasoning depth",
+        "Developer builds open-source Codex clone that runs on your existing ChatGPT plan"
+      ]
+    },
     {
       "date": "14-09-2026",
       "iso_date": "2026-09-14",
