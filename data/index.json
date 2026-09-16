@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-15T18:41:59Z",
+  "updated_at": "2026-09-16T18:38:21Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "16-09-2026",
+      "iso_date": "2026-09-16",
+      "type": "digest",
+      "subject": "Salesforce+Claude CRM 🛒, Odyssey-3 Universal Robot Brain 🦾, LongCat Av",
+      "path": "data/2026/09-September/16-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/16-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/16-09-2026.html",
+      "headlines": [
+        "Anthropic ships Claude's Salesforce integration with 37 built-in sales tools",
+        "Free open-source tool turns a photo and audio clip into a talking avatar video",
+        "Odyssey releases world model that controls robots, cars, drones, and trains other AIs"
+      ]
+    },
     {
       "date": "15-09-2026",
       "iso_date": "2026-09-15",
