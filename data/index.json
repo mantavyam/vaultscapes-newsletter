@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-16T18:38:21Z",
+  "updated_at": "2026-09-17T18:48:16Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "17-09-2026",
+      "iso_date": "2026-09-17",
+      "type": "digest",
+      "subject": "🛠️ Anthropic Claude adds Docs, Slides & Design — no app-switching",
+      "path": "data/2026/09-September/17-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/17-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/17-09-2026.html",
+      "headlines": [
+        "Anthropic merges Claude chat and Cowork, adds Docs, Slides, and Design tools",
+        "Google DeepMind's self-improving agent cuts AI search costs by up to 162x",
+        "Free open-source tool turns a photo and audio into a minutes-long talking avatar video"
+      ]
+    },
     {
       "date": "16-09-2026",
       "iso_date": "2026-09-16",
