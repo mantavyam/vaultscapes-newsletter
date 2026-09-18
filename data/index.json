@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-17T18:48:16Z",
+  "updated_at": "2026-09-18T18:03:27Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "18-09-2026",
+      "iso_date": "2026-09-18",
+      "type": "digest",
+      "subject": "Anthropic Claude Code runs parallel cloud threads while your laptop is",
+      "path": "data/2026/09-September/18-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/18-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/18-09-2026.html",
+      "headlines": [
+        "OpenAI launches GPT-6 Astra for law firms with 230M-URL legal search index",
+        "Anthropic ships Claude Code Projects, running parallel cloud threads while you're offline",
+        "Open-source browser agent finds flights in 7 seconds for less than half a cent"
+      ]
+    },
     {
       "date": "17-09-2026",
       "iso_date": "2026-09-17",
