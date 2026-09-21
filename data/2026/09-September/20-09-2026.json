@@ -1,0 +1,160 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "20-09-2026",
+  "iso_date": "2026-09-20",
+  "subject": "🧩 Understanding the “harness tax” behind coding agents",
+  "kicker": "Sunday Deep Dive",
+  "title": "How to avoid the harness tax when choosing coding agents",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "Two developers can use the same model on the same coding task and end up paying very different inference costs. The difference can come from the harness. Whether you use Codex, Claude Code, Pi, or some other harness can make a huge difference. A new study finds that simple harnesses can be surprisingly competitive, more complex setups can add substantial cost for small gains, and models do not always perform best inside their own vendor’s harness. Today we look at what that means when choosing a coding-agent stack.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "Giving a coding task to the same model but with different harnesses can change its inference cost by as much as 5x without producing a comparable change in task success. That is the key finding of <a href=\"https://harnesstax.github.io/\">HarnessTax</a> , a new study that tests how much the software surrounding an AI model affects coding-agent performance and cost."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The harness is the layer that determines the model’s instructions, tools, memory and context management, and how the agent executes a task. When choosing between Claude Code, Codex CLI, Pi and other coding agents, you’re choosing two things at once: a model and the harness."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The study suggests three useful rules of thumb:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "Harness choice can move cost much more than aggregate success",
+        "A minimal harness can compete with feature-rich alternatives",
+        "A model does not necessarily perform best in the harness built by its own provider"
+      ]
+    },
+    {
+      "kind": "paragraph",
+      "html": "For developers, the key lesson is to evaluate the model and harness as one system instead of accepting the default pairing."
+    },
+    {
+      "kind": "heading",
+      "text": "What HarnessTax tested"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers tested a total of 21 model-harness combinations, composed of seven models and three harnesses: Claude Code, Codex CLI and Pir. They randomly selected 30 tasks from SWE-bench Lite, which tests an agent’s ability to fix software issues, and 30 from Terminal-Bench 2.0, which tests command-line tasks."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers measured both task success and token cost based on API pricing. This makes it possible to see whether one harness causes the same model to consume more tokens instead of mixing that effect with differences in product pricing."
+    },
+    {
+      "kind": "heading",
+      "text": "Finding 1: The harness can move the bill more than the score"
+    },
+    {
+      "kind": "paragraph",
+      "html": "On SWE-bench Lite, Claude Fable 5 solved 97.8% of attempts with Claude Code and 96.7% with Pi. But an average attempt cost $1.33 with Claude Code and $0.67 with Pi. That means you’re paying roughly double the cost for an observed success difference of 1.1 percentage points."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Interestingly, both Claude Code and Pi averaged around 15 turns per task. However, each Claude Code turn carried more information. Across all seven models, its mean initial context was more than 10 times Pi’s, driven by longer instructions and larger tool definitions."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1789912154228-a3bwwm.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "This overhead matters because the model has to process the harness instructions and tool descriptions alongside the actual task. Token cost is therefore not only a property of the model you choose. The model-harness combination determines how much inference you need to buy to get a result."
+    },
+    {
+      "kind": "heading",
+      "text": "Finding 2: A simple harness can be competitive"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Pi gives the agent four basic tools: read, write, edit and bash. Yet its configurations reach the study’s cost-success Pareto frontier on both benchmarks, meaning that it gives the highest accuracy for a given budget."
+    },
+    {
+      "kind": "paragraph",
+      "html": "That does not mean that simpler harnesses are always better. These experiments cover two public benchmarks and do not measure every reason developers might choose a richer product, such as integrations, permissions, memory, hooks or workflow features."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1789912195906-1kgl3f.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "paragraph",
+      "html": "But the results make a simple harness a useful baseline. You can add additional scaffolding when it fixes a failure or provides a feature that matters for the application."
+    },
+    {
+      "kind": "heading",
+      "text": "Finding 3: The vendor default is only a starting point"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The study shows that models do not necessarily work best inside their provider’s harness. Across six Anthropic and OpenAI models and two benchmarks, an alternative harness recorded the highest observed success rate in nine of 12 comparisons."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1789912257430-66vvvg.png",
+      "alt": "alpha_signal_image_3"
+    },
+    {
+      "kind": "paragraph",
+      "html": "For example, on Terminal-Bench 2.0, GPT-5.6 Sol scored 83.3% with Pi at around $0.42 per attempt, compared with 78.9% and about $0.76 with OpenAI’s Codex CLI. This does not prove that Pi is generally better for GPT models, especially given the sample size of experiments. But it suggests that native pairing should not be considered as the ultimate best choice."
+    },
+    {
+      "kind": "heading",
+      "text": "What it means for developers"
+    },
+    {
+      "kind": "paragraph",
+      "html": "HarnessTax also exposes a problem with how developers choose agent stacks today."
+    },
+    {
+      "kind": "paragraph",
+      "html": "“Many harness decisions nowadays are sort of made by: preference, tribal knowledge, word of mouth,” Melissa Pan, co-author of the paper, told AlphaSignal. “It is very unclear whether a particular harness is more accurate, more cost efficient, more this or that on certain metrics for certain workload.”"
+    },
+    {
+      "kind": "paragraph",
+      "html": "A practical evaluation should therefore treat “model × harness × workload” as the unit of comparison. Start with a representative sample of your own tasks, run several combinations against it, and track task success, cost and latency."
+    },
+    {
+      "kind": "paragraph",
+      "html": "A harness that looks inexpensive per attempt might become expensive if failed attempts require retries, so cost per successful task is often more useful than cost per run."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The right tradeoff depends on the application. For high-volume routine work, doubling inference cost for a small change in accuracy makes little sense. For a task where failure is expensive, even a modest reliability improvement might justify a higher bill."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Also don’t put too much trust in aggregate success rates. Two configurations can achieve similar overall scores while failing on different tasks. If your workload contains many of the cases where one configuration breaks, the aggregate benchmark can hide the difference that matters most."
+    },
+    {
+      "kind": "paragraph",
+      "html": "A useful process should be to build a representative task set, test several model-harness combinations, measure success, cost and latency, and inspect the failed cases. Choose the least expensive configuration that clears your reliability requirements, and rerun the evaluation when models or harnesses change."
+    },
+    {
+      "kind": "heading",
+      "text": "Harnesses are also an optimization layer"
+    },
+    {
+      "kind": "paragraph",
+      "html": "There is a broader implication for the developer community. Frontier model training requires resources that few organizations have. “Harness effort is one of the few ways that people can improve performance without touching the model,” Pan said."
+    },
+    {
+      "kind": "paragraph",
+      "html": "“For research, [the study] gives us hope that we have a chance to win in the harness space without having the ability to co-train with SOTA models,” Pan said. “This is very exciting for people who are doing work in the open including academia and the developer community.”"
+    },
+    {
+      "kind": "paragraph",
+      "html": "HarnessTax shows why that layer deserves more scrutiny from developers as well. The practical question is no longer only which model to use. It is which model-harness combination provides the reliability your application needs at a cost you can justify."
+    }
+  ]
+}

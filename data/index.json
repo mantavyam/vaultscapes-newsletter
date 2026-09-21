@@ -1,7 +1,39 @@
 {
-  "updated_at": "2026-09-18T18:03:27Z",
+  "updated_at": "2026-09-21T19:51:25Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "21-09-2026",
+      "iso_date": "2026-09-21",
+      "type": "digest",
+      "subject": "Claude Code AGENTS.md 📄, Alibaba Qwen-Image-2.1 7B 🖼️, xAI Grok Transc",
+      "path": "data/2026/09-September/21-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/21-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/21-09-2026.html",
+      "headlines": [
+        "Claude Code now reads AGENTS.md files to pick up project instructions",
+        "Vercel experiment renders full UI components from JSON in milliseconds",
+        "Open-source text-based classifier runs 50x faster on Apple Silicon, uses under 1GB RAM"
+      ]
+    },
+    {
+      "date": "20-09-2026",
+      "iso_date": "2026-09-20",
+      "type": "article",
+      "subject": "🧩 Understanding the “harness tax” behind coding agents",
+      "path": "data/2026/09-September/20-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/20-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/20-09-2026.html",
+      "headlines": [
+        "What HarnessTax tested",
+        "Finding 1: The harness can move the bill more than the score",
+        "Finding 2: A simple harness can be competitive",
+        "Finding 3: The vendor default is only a starting point",
+        "What it means for developers"
+      ],
+      "title": "How to avoid the harness tax when choosing coding agents",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "18-09-2026",
       "iso_date": "2026-09-18",
