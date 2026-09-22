@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-21T19:51:25Z",
+  "updated_at": "2026-09-22T18:29:23Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "22-09-2026",
+      "iso_date": "2026-09-22",
+      "type": "digest",
+      "subject": "xAI Grok 4.7 500k ctx 🧠, GPT-6 Astra Alignment Fail ⚠️, Google AX Agen",
+      "path": "data/2026/09-September/22-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/22-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/22-09-2026.html",
+      "headlines": [
+        "xAI ships Grok 4.7 with stronger reasoning and safety at the same price",
+        "Google rebuilds Kubernetes from scratch to run stateful AI agents",
+        "GPT-6 pushed a simulated person off a ledge where Grok, Gemini, and Claude refused"
+      ]
+    },
     {
       "date": "21-09-2026",
       "iso_date": "2026-09-21",
