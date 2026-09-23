@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-22T18:29:23Z",
+  "updated_at": "2026-09-23T18:49:00Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "23-09-2026",
+      "iso_date": "2026-09-23",
+      "type": "digest",
+      "subject": "💸 Anthropic Claude Opus 5.5: 40% cheaper, 30% faster output",
+      "path": "data/2026/09-September/23-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/23-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/23-09-2026.html",
+      "headlines": [
+        "Anthropic ships Claude Opus 5.5 at 40% lower cost and 30% faster output",
+        "OpenAI ships GPT-6 Sol and Luna at 50% lower API prices",
+        "Study finds em-dash use in medical preprints nearly tripled after ChatGPT launched"
+      ]
+    },
     {
       "date": "22-09-2026",
       "iso_date": "2026-09-22",
