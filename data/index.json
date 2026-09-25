@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-24T18:49:20Z",
+  "updated_at": "2026-09-25T19:06:55Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "25-09-2026",
+      "iso_date": "2026-09-25",
+      "type": "digest",
+      "subject": "Claude Marketplace launches with 2,000+ plugins and unified billing",
+      "path": "data/2026/09-September/25-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/25-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/25-09-2026.html",
+      "headlines": [
+        "NVIDIA releases 100M-parameter speaker tracking model with 24% lower error than rivals",
+        "Anthropic launches Claude Marketplace to browse agents, plugins, and service partners",
+        "OpenAI releases open mental health benchmark built with 80 clinicians"
+      ]
+    },
     {
       "date": "24-09-2026",
       "iso_date": "2026-09-24",
