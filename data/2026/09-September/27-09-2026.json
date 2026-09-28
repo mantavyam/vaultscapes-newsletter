@@ -1,0 +1,163 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "27-09-2026",
+  "iso_date": "2026-09-27",
+  "subject": "🚀 System One models are carving out a new layer in the AI stack",
+  "kicker": "Sunday Deep Dive",
+  "title": "Where Jev and System One models fit in your AI stack",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "LLMs have become the default building block for almost every AI task, from writing code to deciding which support queue should receive an email. But many of those tasks don’t require generation at all. They require fast, reliable decisions, and using a full generative model for every one can become expensive as applications scale. Jev and a growing group of “System One” models are taking a different approach. Today we break down where they fit in your AI stack, and when developers should use them instead of code or an LLM.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "TypeSafe AI released Jev, its new “ <a href=\"https://typesafe.ai/blog/introducing-system-one-models-and-jev\">System One Model</a> ,” on September 15. Jev is designed to make lightning-fast structured decisions instead of generating text like LLMs."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The launch drew strong developer interest, and open alternatives followed quickly. Laya provides an open System One-style model, while Stanford and Nvidia researchers released CLM-8B, which tackles the same class of bounded decisions with a different contrastive architecture."
+    },
+    {
+      "kind": "paragraph",
+      "html": "It is too early to call System One an established model category, but the rapid appearance of alternatives suggests Jev has exposed a useful niche: models built to choose, score and verify instead of generate."
+    },
+    {
+      "kind": "paragraph",
+      "html": "AI applications often make decisions that are too fuzzy for hand-written rules but do not require a generative model: choosing an agent tool, routing a request, enforcing a guardrail, or selecting the best answer from several candidates."
+    },
+    {
+      "kind": "paragraph",
+      "html": "System One models provide another building block for handling those decisions, with the potential to make production AI systems more predictable and economical as they scale."
+    },
+    {
+      "kind": "heading",
+      "text": "How Jev changes the model interface"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Large language models are autoregressive. They create output one token at a time, which is good for generating text and code. But that flexibility is unnecessary if you only want to decide whether a support ticket belongs to billing, sales or technical support."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Jev handles these kinds of situations. You provide it with the application state, questions and possible answers. It returns typed values with probability and confidence information. Instead of asking an LLM to generate and then parse “This looks like a billing issue,” your application can directly receive a typed “billing” value."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Jev produces its outputs in parallel instead of decoding a string token by token. TypeSafe reports 70–500 millisecond end-to-end latency, $0.042 per million input tokens and no metered output-token cost."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1790521864318-w1bc98.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Image source: <a href=\"https://typesafe.ai/blog/introducing-system-one-models-and-jev\">TypeSafe AI</a>"
+    },
+    {
+      "kind": "paragraph",
+      "html": "For “System One shaped” queries at comparable intelligence levels, it claims 40–200x lower latency than frontier LLMs and 444.6x gains in cost reduction."
+    },
+    {
+      "kind": "paragraph",
+      "html": "TypeSafe also trained Jev with Reinforcement Learning for Calibrated Decisions, or RLCD. The practical benefit is useful uncertainty. A spam score of 0.52 should not be treated like 0.998. A system can send uncertain cases to a stronger model or human while automatically processing high-confidence ones."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Technically, Jev solves the hallucination problem of LLMs in decision-based tasks because it can’t invent output types and its answers are constrained to the schema you define."
+    },
+    {
+      "kind": "paragraph",
+      "html": "However, it can still choose the wrong answer and its quality depends on the options you provide. If a ticket concerns fraud but the available answers are “billing,” “sales” and “technical,” the model cannot return the correct category."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The quality of the answer space therefore becomes part of the quality of the system. Developers therefore need to make sure the choices are complete and distinct."
+    },
+    {
+      "kind": "heading",
+      "text": "Where System One models fit in your stack"
+    },
+    {
+      "kind": "paragraph",
+      "html": "A useful way to decide whether you need Jev is to start with ordinary code. If you can express the logic reliably with an explicit rule, use the rule. There is little benefit in adding probabilistic AI to something like “if balance < 0: require_payment().”"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The sweet spot comes when you know the possible answers but cannot easily write the rule that separates them. Examples include email classification, sentiment and urgency scoring, agent tool selection, content moderation, and retrieval ranking."
+    },
+    {
+      "kind": "paragraph",
+      "html": "One particularly interesting application is replacing LLM-as-a-judge with <a href=\"https://arxiv.org/abs/2609.26550\">Jev-as-a-judge</a> . Many AI systems generate several candidate responses and use another model to verify them."
+    },
+    {
+      "kind": "paragraph",
+      "html": "A powerful reasoning model could generate multiple candidates and have Jev rank them. High-confidence decisions could be accepted immediately, while ambiguous cases fall back to an LLM judge or human reviewer."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1790521917123-xrllv3.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Image source: <a href=\"https://arxiv.org/abs/2609.26550\">arXiv</a>"
+    },
+    {
+      "kind": "paragraph",
+      "html": "This division of labor leaves expensive models to do what they are good at: generation and reasoning. Cheaper decision models handle selection, routing and verification."
+    },
+    {
+      "kind": "heading",
+      "text": "Open alternatives are already emerging"
+    },
+    {
+      "kind": "paragraph",
+      "html": "<a href=\"https://huggingface.co/convaiinnovations/laya\">Laya</a> is an open-source alternative to Jev. It has 421 million parameters and uses ModernBERT with a dedicated decision head. It accepts state and typed questions and scores every option in a single forward pass. The project also provides a Jev-compatible server API."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Laya’s developers report around 33 milliseconds for single-question inference on the multilingual checkpoint on a Tesla T4. That is not directly comparable with Jev’s hosted end-to-end latency."
+    },
+    {
+      "kind": "paragraph",
+      "html": "<a href=\"https://contrastive-lm.notion.site/\">Contrastive Language Models</a> (CLM) takes a different approach. Its 8-billion-parameter model maps the current state and candidate actions into a shared embedding space, then selects the best match."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1790521997245-cxaxej.png",
+      "alt": "alpha_signal_image_3"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Image source: <a href=\"https://contrastive-lm.notion.site/\">CLM team</a>"
+    },
+    {
+      "kind": "paragraph",
+      "html": "In the researchers’ zero-shot tests, CLM ran up to 9x faster than Jev. The largest CLM speedups appeared when actions could be reused across many states or the candidate set was large."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The CLM team also tested the judge pattern directly. Larger models generated several coding solutions, and a fine-tuned CLM ranked them. On small held-out subsets, CLM reached 81.6% on 38 DeepSWE tasks and 87.6% on 30 Terminal-Bench 2.1 tasks, versus 71.1% and 83.1% for Jev."
+    },
+    {
+      "kind": "heading",
+      "text": "Bigger models are not the only way to scale AI"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Autoregressive models remain essential when applications need difficult reasoning or new text, code and other content. But routing every intelligent operation through the same general-purpose model creates unnecessary latency and cost."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The emerging stack can be more heterogeneous: conventional code for explicit rules, decision models for fuzzy choices, and generative models for open-ended tasks."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Jev and the models following it give engineers another way to turn expensive intelligence into applications that are reliable, fast and economical enough to operate at scale."
+    }
+  ]
+}

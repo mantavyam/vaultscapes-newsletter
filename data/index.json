@@ -1,7 +1,38 @@
 {
-  "updated_at": "2026-09-25T19:06:55Z",
+  "updated_at": "2026-09-28T21:03:22Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "28-09-2026",
+      "iso_date": "2026-09-28",
+      "type": "digest",
+      "subject": "Claude Physics Record 🔬, VoiceStudio 646-Language Cloning 🎙️, Anthropi",
+      "path": "data/2026/09-September/28-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/28-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/28-09-2026.html",
+      "headlines": [
+        "Solo dev releases free open-source voice cloning tool supporting 646 languages",
+        "Developer reverse-engineers a 2007 Nokia to run Claude with 8MB of RAM",
+        "Claude breaks physics world record by solving nine-loop particle calculation unsupervised"
+      ]
+    },
+    {
+      "date": "27-09-2026",
+      "iso_date": "2026-09-27",
+      "type": "article",
+      "subject": "🚀 System One models are carving out a new layer in the AI stack",
+      "path": "data/2026/09-September/27-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/27-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/27-09-2026.html",
+      "headlines": [
+        "How Jev changes the model interface",
+        "Where System One models fit in your stack",
+        "Open alternatives are already emerging",
+        "Bigger models are not the only way to scale AI"
+      ],
+      "title": "Where Jev and System One models fit in your AI stack",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "25-09-2026",
       "iso_date": "2026-09-25",
