@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-28T21:03:22Z",
+  "updated_at": "2026-09-29T19:46:30Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "29-09-2026",
+      "iso_date": "2026-09-29",
+      "type": "digest",
+      "subject": "Claude Sonnet 5.5 hits 70.6% on Terminal-Bench, beats Opus 5",
+      "path": "data/2026/09-September/29-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/29-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/29-09-2026.html",
+      "headlines": [
+        "Anthropic releases Claude Sonnet 5.5, 30% faster and 30% cheaper than its predecessor",
+        "OpenAI patches GPT-6 bug that was breaking image understanding in the API",
+        "xAI launches Grok Team Bots that learn and coordinate work inside Slack"
+      ]
+    },
     {
       "date": "28-09-2026",
       "iso_date": "2026-09-28",
