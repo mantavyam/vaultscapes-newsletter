@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-29T19:46:30Z",
+  "updated_at": "2026-09-30T19:48:36Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "30-09-2026",
+      "iso_date": "2026-09-30",
+      "type": "digest",
+      "subject": "OpenAI cut GPT-6.1 Sol input cost to $0.10/M tokens — here's the trade",
+      "path": "data/2026/09-September/30-09-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/30-09-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/09-September/html/30-09-2026.html",
+      "headlines": [
+        "OpenAI ships GPT-6.1 Sol at 80% less cost with near-flagship performance",
+        "Tree search framework hits 98.7% on documents where vector search fails",
+        "OpenAI ships Decisions API letting apps route and classify with GPT-6 Luna"
+      ]
+    },
     {
       "date": "29-09-2026",
       "iso_date": "2026-09-29",
