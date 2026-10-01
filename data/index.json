@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-09-30T19:48:36Z",
+  "updated_at": "2026-10-01T20:05:47Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "01-10-2026",
+      "iso_date": "2026-10-01",
+      "type": "digest",
+      "subject": "🚀 Google Gemini 4 Argon hits 1M output tokens, restricted launch",
+      "path": "data/2026/10-October/01-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/01-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/01-10-2026.html",
+      "headlines": [
+        "Google DeepMind unveils Gemini 4 Argon with 1M token output for complex workflows",
+        "OpenAI launches Ultrafast tier with 8x faster GPT-6 and new GPT-6.1 Sol model",
+        "OpenAI ships major Codex CLI update with voice, parallel agents, and new UI"
+      ]
+    },
     {
       "date": "30-09-2026",
       "iso_date": "2026-09-30",
