@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#000000;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Logo -->
+
+<!-- White Divider Under Logo -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 20px 0;" width="100%">
+<tr>
+<td style="border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey,
+      </p>
+<!-- Intro Text -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;
+                color:#ffffff;margin:0;"> 
+Previously, developers had to optimize AI agents by hand-tuning prompts, tools, memory, and control flow to squeeze more performance.
+<br/><br/>
+Now researchers are turning those same components into optimization targets. Skills can rewrite themselves. Harnesses can evolve from execution traces. Models can train on the behavior their own harnesses discover.
+<br/><br/>
+The result is a new design question for developers: which part of the agent stack should remain fixed, and which part should learn?
+<br/><br/>
+Today we map the emerging self-evolving agent stack.
+
+    </p></td>
+</tr>
+</table>
+<!-- section: author -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1791121568432-0uf1at.png" style="display:block;border:1px solid #000000;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+        Today's Author
+      </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+        
+   Ben Dickson is a veteran software engineer and former CTO known as the "Engineer's Journalist" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat.
+      
+      </div>
+</td>
+</tr>
+</table>
+<!-- section: article -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family:system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Sunday Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+      How AI agents are learning to optimize their own stack
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0;">
+<div style="margin-top:0;">
+<p>Researchers are enabling AI agents to self-improve by rewriting the software and the models that power them. The goal is to remove the bottleneck of manually tuning agents with an automated loop driven by execution feedback.</p>
+<p>The main target is the agent harness, the layer around a model that includes prompts, tools, memory, context management and control flow. These components determine what the model sees, what actions it can take and how it handles failures.</p>
+<p>But the emerging self-improving agentic frameworks also work on fine-tuning the backbone model along with the agent, reshape training environments, and redesign how multiple agents work together.</p>
+<p>The emerging approaches are not stages in a hierarchy, and they often overlap. But most follow a similar pattern: run tasks, collect execution traces, find recurring weaknesses, modify part of the stack, then test whether the new version is better.</p>
+<p><b>Skills: Make the agent’s instructions trainable</b></p>
+<p>Skills are one of the easiest places to start. They are usually text files that package task-specific instructions, workflows and heuristics outside the model weights. <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=be126abd100b101e&amp;lid=ovzHFXBkY1O8kSr9&amp;mid=5473a055-af53-4cf7-a4ce-2a8801fdb135">Microsoft’s SkillOpt</a> turns the skill document itself into the object being optimized.</p>
+<p>SkillOpt evaluates the agent on a set of tasks. It then analyzes the scored trajectories and proposes small additions, deletions or replacements to the skill file. It then tests the candidate on a held-out validation set, which contains examples that were not used to generate the edit. A suggested modification is only accepted if it improves the validation score.</p>
+<img alt="alpha_signal_image_1" border="0" src="https://alphasignal.ai/image/1791120613451-32du2y.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>Google Research’s <a href="https://alphasignal.ai/news/self-improving-ai-skills-learn-in-the-notebook-not-the-file">WikiSkill</a> addresses another problem: the information needed to optimize skill files is scattered across different components. WikiSkill creates a wiki that gathers the agent’s experience (both successes and failures) into a structured format.</p>
+<p>The wiki sits as an intermediate layer between raw execution traces and the executable skills used by the agent. WikiSkills uses this information to iterate over skills and avoid rediscovering the same problems and retrying rejected fixes.</p>
+<img alt="alpha_signal_image_2" border="0" src="https://alphasignal.ai/image/1791120716845-mqq7by.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>Skills are a good first optimization surface when the agent has the right tools and general workflow but repeatedly makes procedural mistakes. The model stays fixed, and the result remains a compact artifact that developers can inspect, version and deploy like other agent instructions.</p>
+<p><b>When skills aren’t enough: Let the harness rewrite itself</b></p>
+<p>Some failures are caused by deeper problems in the runtime components surrounding the agent. An agent might retry the same broken command, fail to verify its work or mishandle state between tool calls.</p>
+<p><a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=be126abd100b101e&amp;lid=QsMLt2U6ZDjyaGXw&amp;mid=5473a055-af53-4cf7-a4ce-2a8801fdb135">Self-Harness</a> expands the editable surface beyond instructions. It mines execution traces for recurring weaknesses, proposes targeted harness changes and uses regression tests to make sure improvements on one task does not break performance on others.</p>
+<img alt="alpha_signal_image_3" border="0" src="https://alphasignal.ai/image/1791120777796-gq390o.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>In experiments with three model families on Terminal-Bench-2.0, SWE-bench Verified, and AppWorld, Self-Harness made impressive improvements, with relative gains reaching 132%.</p>
+<p>The <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=be126abd100b101e&amp;lid=113rQqrK9dr6cz77k&amp;mid=5473a055-af53-4cf7-a4ce-2a8801fdb135">Darwin Gödel Machine</a> (DGM) takes a more open-ended approach. A coding agent modifies its own implementation, tests the descendant and stores different variants in an archive. Instead of following one best-so-far chain, it can return to older versions and explore different paths.</p>
+<p>DGM works mainly for coding agents: its target task is coding, and improving itself is also a coding task. <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=be126abd100b101e&amp;lid=1B8UJ8RTroGEKFTKu&amp;mid=5473a055-af53-4cf7-a4ce-2a8801fdb135">Hyperagents</a> by Meta extends the idea to domains where that alignment does not exist.</p>
+<p>It combines a task agent with a meta-agent responsible for changing it in one editable program. The modification process itself can evolve, and experiments showed mechanisms such as persistent memory and performance tracking emerging during the search.</p>
+<img alt="alpha_signal_image_4" border="0" src="https://alphasignal.ai/image/1791120809024-9cc0vp.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>The progression expands the optimization surface from instructions, to runtime behavior, to the machinery that generates the next improvement.</p>
+<p><b>Model-harness co-evolution: Let each side teach the other</b></p>
+<p>Xiaomi’s <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=be126abd100b101e&amp;lid=ujiRtveGEjKd6YvI&amp;mid=5473a055-af53-4cf7-a4ce-2a8801fdb135">HarnessX</a> introduces the idea of model-harness co-evolution. It uses execution traces to evolve the harness. But the same trajectories can also become training data for the underlying model.</p>
+<p>Better harnesses expose strategies that the model can learn to internalize. The updated model then produces new behavior that provides evidence for another round of harness optimization. A model that is fine-tuned on harness trajectories will be able to perform tasks more efficiently and with fewer input tokens.</p>
+<p>Note that model-harness co-evolution only applies to open-weight models rather than proprietary models available only through an API.</p>
+<img alt="alpha_signal_image_5" border="0" src="https://alphasignal.ai/image/1791120641880-o1dpek.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>The tradeoff is cost and complexity. Harness-only evolution can operate around a frozen model. Model-harness co-evolution adds training-data generation, training compute, model versioning and another evaluation loop to make sure the updated model still works well with its harness.</p>
+<p><b>Optimize the other side of the loop</b></p>
+<p>Agent developers usually focus on improving the harness. <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=be126abd100b101e&amp;lid=MALvzuQxut0y9Tb3&amp;mid=5473a055-af53-4cf7-a4ce-2a8801fdb135">EnvHarness</a> suggests that the environment it learns from should evolve too. Training environments are expensive to build and often remain static, making them ineffective after the agent masters their tasks.</p>
+<p>EnvHarness wraps an existing environment with programmable components without changing its underlying logic or verifier. An LLM-based designer reads the agent’s trajectories, diagnoses weaknesses and writes components that change parts of the experience, such as starting conditions, observations or available actions. The loop can repeat as the agent improves and new weaknesses emerge.</p>
+<img alt="alpha_signal_image_6" border="0" src="https://alphasignal.ai/image/1791120689831-ttihva.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>Across five benchmarks, agents learning in EnvHarness environments improved by up to nine points on held-out tasks while using about 9.8% fewer interaction steps. For applications where the agent has exhausted the useful lessons in a static set of tasks, the next optimization target can therefore be the experience the agent receives.</p>
+<p><b>Beyond one agent: Evolving the orchestration layer</b></p>
+<p>The same optimization idea can move above individual agents. EverMind AI’s <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=be126abd100b101e&amp;lid=AMXaSIyIAdQuHyrr&amp;mid=5473a055-af53-4cf7-a4ce-2a8801fdb135">Raven</a> applies it to multi-agent systems. Its host agent can break a goal into subtasks, assign them to specialized agents, coordinate dependencies and integrate the results.</p>
+<p>Raven can also evolve model- and domain-specific harnesses based on benchmark feedback. The system can improve both the agents that perform individual tasks and the way those agents are assembled to solve larger problems.</p>
+<img alt="alpha_signal_image_7" border="0" src="https://alphasignal.ai/image/1791120565549-zjt0u8.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p><b>Which part of your agent stack should evolve first?</b></p>
+<p>The practical rule is to start with the narrowest optimization surface that contains the bottleneck:</p>
+<ul>
+<li>If the runtime works but the agent repeatedly makes procedural mistakes, <b>optimize the skills</b>.</li>
+<li>If failures come from tool use, context management, memory, verification or control flow, <b>optimize the harness</b>.</li>
+<li>If the harness repeatedly discovers strategies the model cannot execute reliably, <b>consider model-harness co-evolution</b>.</li>
+<li>If the agent has stopped learning enough from a static training setup, <b>optimize the environment</b>.</li>
+<li>If specialized agents work well individually but coordination is the bottleneck, <b>optimize the orchestration layer</b>.</li>
+</ul>
+<p>As more of the agent stack becomes editable, developers will spend less time deciding every improvement manually and more time deciding what can change, what must remain fixed and how improvement will be measured.</p>
+</div>
+</td>
+</tr>
+</table>
+</body></html>

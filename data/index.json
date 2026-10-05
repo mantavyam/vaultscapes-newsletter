@@ -1,7 +1,39 @@
 {
-  "updated_at": "2026-10-02T19:44:41Z",
+  "updated_at": "2026-10-05T21:48:35Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "05-10-2026",
+      "iso_date": "2026-10-05",
+      "type": "digest",
+      "subject": "🌍 image-blaster turns one photo into a 3D world in 5 min",
+      "path": "data/2026/10-October/05-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/05-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/05-10-2026.html",
+      "headlines": [
+        "New open-source tool turns any photo into a full 3D world in five minutes",
+        "Open-source tool lets Claude agents code your repos inside Minecraft",
+        "Aleph Alpha open-sources 78B model with only 3.5B active params and 1M token context"
+      ]
+    },
+    {
+      "date": "04-10-2026",
+      "iso_date": "2026-10-04",
+      "type": "article",
+      "subject": "🤖 How AI Agents Are Learning to Rewrite Their Own Stack",
+      "path": "data/2026/10-October/04-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/04-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/04-10-2026.html",
+      "headlines": [
+        "Skills: Make the agent’s instructions trainable",
+        "When skills aren’t enough: Let the harness rewrite itself",
+        "Model-harness co-evolution: Let each side teach the other",
+        "Optimize the other side of the loop",
+        "Beyond one agent: Evolving the orchestration layer"
+      ],
+      "title": "How AI agents are learning to optimize their own stack",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "02-10-2026",
       "iso_date": "2026-10-02",
