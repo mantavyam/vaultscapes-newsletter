@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-05T21:48:35Z",
+  "updated_at": "2026-10-06T19:57:59Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "06-10-2026",
+      "iso_date": "2026-10-06",
+      "type": "digest",
+      "subject": "Reflection Beam runs 501B params with only 23B active — 4x cheaper",
+      "path": "data/2026/10-October/06-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/06-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/06-10-2026.html",
+      "headlines": [
+        "OpenAI adds invisible text watermarks to ChatGPT to meet EU AI Act rules",
+        "Reflection releases Beam, a 501B open-source model 4x more inference-efficient than rivals",
+        "Vals AI uses 90 Claude agents to find two room-temperature magnetic semiconductor candidates in 3 days"
+      ]
+    },
     {
       "date": "05-10-2026",
       "iso_date": "2026-10-05",
