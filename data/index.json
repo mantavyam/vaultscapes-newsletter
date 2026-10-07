@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-06T19:57:59Z",
+  "updated_at": "2026-10-07T20:24:16Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "07-10-2026",
+      "iso_date": "2026-10-07",
+      "type": "digest",
+      "subject": "🧠 Mistral Large 4 1T params beats closed models, $1.18/M out",
+      "path": "data/2026/10-October/07-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/07-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/07-10-2026.html",
+      "headlines": [
+        "Mistral drops 1T-parameter open-weight multimodal model beating closed frontier models",
+        "Claude integrates directly into Google Docs, Sheets, and Slides for live editing",
+        "OpenAI drops new math results from a frontier model advised by top mathematicians"
+      ]
+    },
     {
       "date": "06-10-2026",
       "iso_date": "2026-10-06",
