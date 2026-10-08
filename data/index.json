@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-07T20:24:16Z",
+  "updated_at": "2026-10-08T20:29:15Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "08-10-2026",
+      "iso_date": "2026-10-08",
+      "type": "digest",
+      "subject": "Anthropic Haiku 5.5 💸, OpenAI GPT-6 Intelligent UI 🖥️, Google Playgrou",
+      "path": "data/2026/10-October/08-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/08-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/08-10-2026.html",
+      "headlines": [
+        "Anthropic drops Claude Haiku 5.5, its fastest small model at 75% lower cost",
+        "OpenAI ships GPT-6 with interactive visuals, buttons, and tools inside ChatGPT",
+        "Google Labs launches Playground, a no-code AI game creation tool"
+      ]
+    },
     {
       "date": "07-10-2026",
       "iso_date": "2026-10-07",
