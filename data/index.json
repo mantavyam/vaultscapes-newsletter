@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-09T19:59:02Z",
+  "updated_at": "2026-10-12T22:22:57Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "12-10-2026",
+      "iso_date": "2026-10-12",
+      "type": "digest",
+      "subject": "🐛 Anthropic's 1,000-agent swarm catches 66/70 bugs in parallel",
+      "path": "data/2026/10-October/12-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/12-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/12-10-2026.html",
+      "headlines": [
+        "Anthropic launches Claude managed agents, coordinating up to 1,000 agents per run",
+        "Open-source tool turns one-line descriptions into interactive 3D machine diagrams with Claude",
+        "AirLLM runs Llama 405B on just 8GB of VRAM with no quantization"
+      ]
+    },
     {
       "date": "09-10-2026",
       "iso_date": "2026-10-09",

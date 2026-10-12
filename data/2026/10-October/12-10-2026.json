@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "12-10-2026",
+  "iso_date": "2026-10-12",
+  "subject": "🐛 Anthropic's 1,000-agent swarm catches 66/70 bugs in parallel",
+  "intro": "The coding agent wars just got a hardware upgrade. Anthropic ships 1,000-agent swarms. OpenAI teaches Codex to predict your next message. Both point at the same thing: the bottleneck is no longer the model, it's the interface around it. More agents, less typing. AI tools are quietly absorbing the cognitive overhead of using AI tools. That's a loop worth watching. A new paper reminds us that smarter context trimming often beats throwing more compute at the problem.",
+  "read_time": "6 min 44 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic launches Claude managed agents, coordinating up to 1,000 agents per run",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Open-source tool turns one-line descriptions into interactive 3D machine diagrams with Claude",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "AirLLM runs Llama 405B on just 8GB of VRAM with no quantization",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic launches Claude managed agents, coordinating up to 1,000 agents per run",
+      "likes": 14228,
+      "body": "Imagine asking one AI to review a 116,000-line codebase for bugs. It finds maybe 27. Now imagine spinning up 1,000 agents working in parallel on the same job. They find 66 out of 70 bugs , consistently, every single run. That's the gap Claude's new dynamic workflows just opened up. Here's how it works: one lead agent writes a plan, splits the work into phases, and hands tasks off to a swarm of worker agents. They run in parallel, then merge results at the end. You don't manage any of that coordination yourself. What you can now tackle: To turn it on, set multiagent type: multiagent_20261001 in your agent config. Start small, since these workflows burn tokens fast. Kick things off in Claude Code with: /claude-api managed-agents-onboard bug-hunter",
+      "bullets": [
+        "Reviewing hundreds of documents at once",
+        "Large-scale bug hunting across massive codebases",
+        "Any task too big for a single context window"
+      ],
+      "image_url": "https://alphasignal.ai/image/1791781507659-8zcouj.png",
+      "read_more_url": "https://platform.claude.com/agent-quickstart"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "Open-source tool turns one-line descriptions into interactive 3D machine diagrams with Claude",
+      "likes": 10869,
+      "body": "Docs diagrams are usually dead boxes and arrows. Anatomy fixes that. It's a free Claude Code skill that turns one line of text into a fully interactive, rotatable machine illustration. The clever part: it maps your concept to a physical object . A rate limiter becomes a pin-tumbler lock. A GPU serving many canvases becomes a gantry plotter with 16 arms. The machine's mechanics mirror how your concept actually works. What you get: Install it with one command: npx skills add wheresryan22/anatomy -g -a claude-code . Then type /anatomy followed by your idea. Add the word \"interactive\" and it moves. Leave it out and you get a still drawing. Perfect for docs, articles, and landing pages.",
+      "bullets": [
+        "Rotatable isometric SVG figures you can drag, hover, and explore with your keyboard",
+        "WebGL shaders for fire, water, and plasma layered inside the drawing",
+        "A true 3D mode where parts spin in depth (slow to build, but impressive)",
+        "Zero npm dependencies, no API keys needed"
+      ],
+      "image_url": "https://alphasignal.ai/image/1791781395815-q9k7df.png",
+      "read_more_url": "https://github.com/wheresryan22/anatomy"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "AirLLM runs Llama 405B on just 8GB of VRAM with no quantization",
+      "likes": 7292,
+      "body": "No GPU? No problem. AirLLM just made that excuse obsolete. Normally, running a 70-billion-parameter AI model needs around 140GB of VRAM , that's two enterprise A100 GPUs costing tens of thousands of dollars. AirLLM loads one layer at a time into GPU memory, runs the computation, saves the result, then swaps in the next. A 70B model runs on just 4GB of VRAM, at full precision. Think of it like reading a book one page at a time instead of memorizing the whole thing. Here's what you get out of the box: Speed is traded for accessibility , it's slower than full-VRAM inference, but you can now run private, local AI on hardware you already own. Get started with pip install airllm .",
+      "bullets": [
+        "70B models on 4GB VRAM , 405B on 8GB , no expensive hardware needed",
+        "No quantization (model quality stays intact) , optional 4-bit mode for up to 3x speed",
+        "Supports Llama, Qwen, Mistral, DeepSeek on Linux, Windows, and macOS"
+      ],
+      "image_url": "https://alphasignal.ai/image/1791781423096-c3wzp7.png",
+      "read_more_url": "https://github.com/lyogavin/airllm"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenAI's Codex now predicts your next message before you type it",
+      "stat": {
+        "type": "likes",
+        "value": 7266
+      },
+      "url": "https://x.com/OpenAIDevs/status/2108624138369929725"
+    },
+    {
+      "rank": 2,
+      "headline": "New open-source tool turns any mobile app into a callable Python library",
+      "stat": {
+        "type": "stars",
+        "value": 2606
+      },
+      "url": "https://github.com/littledivy/mimic"
+    },
+    {
+      "rank": 3,
+      "headline": "New study breaks down which coding agent harness components actually improve performance",
+      "stat": {
+        "type": "likes",
+        "value": 3146
+      },
+      "url": "https://arxiv.org/abs/2609.20804"
+    },
+    {
+      "rank": 4,
+      "headline": "AtomicChat ships uncensored Qwen image model that runs locally without restrictions",
+      "stat": {
+        "type": "downloads",
+        "value": 100530
+      },
+      "url": "https://huggingface.co/AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF"
+    },
+    {
+      "rank": 5,
+      "headline": "Baidu open-sources a 3B OCR model that reads 100-page PDFs in one pass",
+      "stat": {
+        "type": "likes",
+        "value": 6019
+      },
+      "url": "https://huggingface.co/baidu/Unlimited-OCR"
+    }
+  ]
+}
