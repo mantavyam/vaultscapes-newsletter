@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "13-10-2026",
+  "iso_date": "2026-10-13",
+  "subject": "🆓 Claude Code free proxy: 53 providers, 1.3B tokens/month",
+  "intro": "Open-weight models are quietly eating closed-model lunch, one vertical at a time. Mistral's Le Chonk beats GPT-6 Astra on visual grounding. Z.ai's GLM-Legal matches frontier models on legal tasks at 70x lower cost. And RSI-Anything lets agents self-improve without human babysitting. The pattern is clear: specialized, efficient, open. We're watching the moat around closed models shrink in real time.",
+  "read_time": "6 min 47 sec",
+  "summary": [
+    {
+      "category": "Top Repo",
+      "headline": "GitHub tool routes Claude Code through 49 free providers, 1.3B tokens monthly",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Z.ai releases GLM-Legal, a model that matches frontier models on legal tasks",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "NVIDIA open-sources a voice model that listens and speaks at the same time",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Repo",
+      "headline": "GitHub tool routes Claude Code through 49 free providers, 1.3B tokens monthly",
+      "likes": 6399,
+      "body": "You know how Claude Code costs money every month? Someone built a free proxy that routes your requests through 53 free AI providers instead. Same Claude Code interface. Zero subscription cost. The idea is simple: Claude Code thinks it's talking to Anthropic, but it's actually hitting free providers like DeepSeek, Kimi, Groq, and Gemini. You get 1.3 billion free tokens per month pooled across all of them. If one provider goes down, it auto-switches to the next. No restarts needed. What you can actually do with it: Setup takes about 5 minutes. The project already has 55,000+ GitHub stars , so it's well-tested. Worth trying before paying for another subscription.",
+      "bullets": [
+        "Run Claude Code, Codex, Cline, Aider, and 6 other coding agents, all from one setup",
+        "Use it in your terminal, VS Code, JetBrains, or even your phone",
+        "Send voice notes and get code back using built-in Whisper transcription"
+      ],
+      "image_url": "https://alphasignal.ai/image/1791867780387-l8910x.png",
+      "read_more_url": "https://github.com/Alishahryar1/free-claude-code"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Z.ai releases GLM-Legal, a model that matches frontier models on legal tasks",
+      "likes": 5055,
+      "body": "Z.ai just dropped GLM-Legal , an AI model built specifically for legal work. Think of it as a regular AI that went to law school and actually paid attention. It runs on GLM-5.3-Flash and was trained on massive legal datasets, then practiced on tens of thousands of real legal task simulations. The result: it can actually complete legal tasks end-to-end, not just answer questions about law. The headline number is a 19.2% all-pass rate on Harvey LAB , a strict benchmark covering 24 areas of legal practice. That tripled the base model's 6.7% score. It also costs just $0.15 per task , compared to $10.55 for Gemini 4 Argon. Here's what you can build with it: You can access it via API or try it inside AutoClaw , Z.ai's desktop agent app that turns goals into automated multi-step tasks. API access requires applying through their consultation page.",
+      "bullets": [
+        "Contract review that flags risky clauses and suggests fixes",
+        "Evidence analysis across large document sets",
+        "Cross-border compliance planning"
+      ],
+      "image_url": "https://alphasignal.ai/image/1791867818579-9kwndj.png",
+      "read_more_url": "https://z.ai/consultation/legal"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "NVIDIA open-sources a voice model that listens and speaks at the same time",
+      "likes": 4348,
+      "body": "Old voice AI had a painful rhythm: you talk, it waits, it replies, you wait. PersonaPlex-7B kills that cycle entirely. NVIDIA open-sourced a model that listens and speaks at the same time, just like a real conversation. No more awkward pauses. You can interrupt it, and it handles that naturally. Here is what makes it worth your attention: Traditional voice AI stitched three separate tools together: speech-to-text, a language model, then text-to-speech. Each step added delay and lost emotional tone. PersonaPlex collapses all three into one model. This opens up real-time voice agents, live customer support bots, and natural AI companions. Grab it on Hugging Face or GitHub.",
+      "bullets": [
+        "Runs on a single GPU (under 16GB VRAM), no server farm needed",
+        "Under 300ms latency , compared to 1.5-3 seconds with traditional voice pipelines",
+        "Beats Gemini Live and Qwen 2.5 Omni on conversation quality benchmarks",
+        "MIT license on code, commercially usable weights",
+        "You can define custom personas using text descriptions plus voice samples"
+      ],
+      "image_url": "https://alphasignal.ai/image/1791867783336-7si09o.png",
+      "read_more_url": "https://github.com/NVIDIA/personaplex"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Solo dev open-sources free ElevenLabs alternative that clones voices and dubs video in 646 languages",
+      "stat": {
+        "type": "likes",
+        "value": 3393
+      },
+      "url": "https://github.com/debpalash/VoiceStudio"
+    },
+    {
+      "rank": 2,
+      "headline": "Anthropic releases a free 9-chapter interactive prompt engineering course",
+      "stat": {
+        "type": "stars",
+        "value": 38493
+      },
+      "url": "https://github.com/anthropics/prompt-eng-interactive-tutorial"
+    },
+    {
+      "rank": 3,
+      "headline": "New open-source framework lets AI agents recursively self-improve across coding, science, and GUI tasks",
+      "stat": {
+        "type": "likes",
+        "value": 1582
+      },
+      "url": "https://arxiv.org/abs/2610.13912"
+    },
+    {
+      "rank": 4,
+      "headline": "Sakana AI's self-improving model beats its own baseline by 1.6x using virtual agent teams",
+      "stat": {
+        "type": "likes",
+        "value": 1440
+      },
+      "url": "https://arxiv.org/abs/2610.12176"
+    },
+    {
+      "rank": 5,
+      "headline": "Mistral's Large 4 scores 42% on visual grounding, beating top closed models",
+      "stat": {
+        "type": "likes",
+        "value": 2927
+      },
+      "url": "https://x.com/MistralAI/status/2109687906751086628"
+    }
+  ]
+}
