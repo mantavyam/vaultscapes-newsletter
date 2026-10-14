@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "14-10-2026",
+  "iso_date": "2026-10-14",
+  "subject": "Anthropic Scion VCS ⚙️, Fish Audio Drama 3 TTS 🎙️, Claude Road Game 🗺️",
+  "intro": "AI is outgrowing the tools built for humans. Anthropic just replaced Git because Claude writes code so fast it broke version control at 30,000 merges a day. That's not a bug, that's a signal. Meanwhile Fish Audio ships Drama 3, an open-weight voice model that beats ElevenLabs on pronunciation. Open beats closed again. The pattern is clear: AI agents are now the primary users of dev infrastructure. Everything built for human scale needs a rethink.",
+  "read_time": "6 min 53 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic built its own version control after AI agents pushed git past 30,000 daily merges",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Fish Audio ships Drama 3, an open-weight voice model with word-level tone control",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Claude maps 5,285 km of real US roads into a clicker game for under $500",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic built its own version control after AI agents pushed git past 30,000 daily merges",
+      "likes": 17736,
+      "body": "Anthropic just ditched Git. The reason: Claude writes code so fast that Git literally could not keep up. Daily merges grew from 2,500 in May to over 30,000 in September, driven by Claude writing most of the code. Git was built for humans working at human speed. AI agents don't take lunch breaks. So they built their own system called Scion . The key idea: unlike Git, which is decentralized, Scion assumes the server is always available and clients request only the data they need. That's the opposite of how Git works. The results: Scion is not a general Git replacement. But Anthropic hopes Git platforms adopt the transferable ideas: server-side operations and smarter sparse checkout features.",
+      "bullets": [
+        "CPU and memory usage dropped by roughly 200x compared to the old Git setup.",
+        "Code checkout times dropped from minutes to seconds.",
+        "A team of seven built Scion and a code review tool called Antique, and migrated the monorepo in five months."
+      ],
+      "image_url": "https://alphasignal.ai/image/1791954279837-juwjh9.png",
+      "read_more_url": "https://www.anthropic.com/engineering/redesigning-source-control"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Fish Audio ships Drama 3, an open-weight voice model with word-level tone control",
+      "likes": 11110,
+      "body": "Fish Audio just dropped Drama 3 , an open-weight text-to-speech model that lets you direct AI voices like a film director, using plain English instead of clunky code tags. Most TTS tools give you one flat voice. Drama 3 changes that. You write square-bracket instructions right inside your script, like stage directions, and the model follows them. Start calm, get angry mid-sentence, whisper one word, shout the next. Here is what it can do: Under the hood it is a 35B parameter model (only 3B active at a time, so it runs leaner than it sounds) available on Hugging Face. It hits 89ms to first audio on a single H200 GPU. It ranks #1 among open-weight TTS models on the Artificial Analysis leaderboard, beating ElevenLabs on pronunciation accuracy. You can use it via the Fish Audio API or self-host the weights yourself.",
+      "bullets": [
+        "Control tone, pacing, and emotion word-by-word using plain English cues",
+        "Fix a single word without re-generating the whole audio clip",
+        "Voice full multi-character scenes in one pass",
+        "Supports 83 languages with mid-sentence voice and language switches"
+      ],
+      "image_url": "https://alphasignal.ai/image/1791954370619-mtvc1a.png",
+      "read_more_url": "https://fish.audio/contact-sales/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Claude maps 5,285 km of real US roads into a clicker game for under $500",
+      "likes": 7108,
+      "body": "Someone built a coast-to-coast USA clicker game using Claude Opus 5.5, and the whole thing cost under $500 . That's real roads, real mountains, real buildings, all rendered as pixel art. Here's how it works: Opus 5.5 pulled 5,285 km of real road data from OpenStreetMap (a free, community-built map of the world), sampled every 10 meters. The mountains you see on the horizon are real too, pulled from elevation grids. The engine figures out what hills are visible by scanning outward and tracking the steepest angle, accounting for the actual curve of the Earth. The result? 1,185 AI-generated images , including 71 vehicles with animation frames. You can use it yourself right now as a Claude Code skill: Install it with /plugin marketplace add jonwheatley/pixel-path inside Claude Code, then just ask for a pixel path between any two places.",
+      "bullets": [
+        "Pick any two locations on Earth",
+        "Get a price estimate, then choose your quality level (free placeholders up to detailed pixel art)",
+        "Get a full flyable, walkable route back"
+      ],
+      "image_url": "https://alphasignal.ai/image/1791954186059-sdcz2e.png",
+      "read_more_url": "https://github.com/jonwheatley/pixel-path"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Anthropic drops 400+ free ready-to-use agents and skills for Claude",
+      "stat": {
+        "type": "likes",
+        "value": 5900
+      },
+      "url": "https://github.com/wshobson/agents"
+    },
+    {
+      "rank": 2,
+      "headline": "New open-source toolkit makes AI go/no-go decisions auditable and replayable offline",
+      "stat": {
+        "type": "stars",
+        "value": 152
+      },
+      "url": "https://github.com/BichengWang/ai-decision-system"
+    },
+    {
+      "rank": 3,
+      "headline": "Leiden University drops a free 472-page textbook on agentic LLMs",
+      "stat": {
+        "type": "likes",
+        "value": 1051
+      },
+      "url": "https://arxiv.org/abs/2610.13455"
+    },
+    {
+      "rank": 4,
+      "headline": "LiquidAI releases 24B reasoning model that runs on-device with only 2B active parameters",
+      "stat": {
+        "type": "downloads",
+        "value": 2565
+      },
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+    },
+    {
+      "rank": 5,
+      "headline": "Google's Gemini 4 Argon boosts developer speed 35% and cuts bad code by 30%",
+      "stat": {
+        "type": "likes",
+        "value": 5892
+      },
+      "url": "https://github.com/google/skills"
+    }
+  ]
+}

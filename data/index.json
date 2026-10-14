@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-13T20:29:47Z",
+  "updated_at": "2026-10-14T19:09:34Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "14-10-2026",
+      "iso_date": "2026-10-14",
+      "type": "digest",
+      "subject": "Anthropic Scion VCS ⚙️, Fish Audio Drama 3 TTS 🎙️, Claude Road Game 🗺️",
+      "path": "data/2026/10-October/14-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/14-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/14-10-2026.html",
+      "headlines": [
+        "Anthropic built its own version control after AI agents pushed git past 30,000 daily merges",
+        "Fish Audio ships Drama 3, an open-weight voice model with word-level tone control",
+        "Claude maps 5,285 km of real US roads into a clicker game for under $500"
+      ]
+    },
     {
       "date": "13-10-2026",
       "iso_date": "2026-10-13",
