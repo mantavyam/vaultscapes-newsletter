@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "14-10-2026",
-  "iso_date": "2026-10-14",
-  "subject": "Anthropic Scion VCS ⚙️, Fish Audio Drama 3 TTS 🎙️, Claude Road Game 🗺️",
-  "intro": "AI is outgrowing the tools built for humans. Anthropic just replaced Git because Claude writes code so fast it broke version control at 30,000 merges a day. That's not a bug, that's a signal. Meanwhile Fish Audio ships Drama 3, an open-weight voice model that beats ElevenLabs on pronunciation. Open beats closed again. The pattern is clear: AI agents are now the primary users of dev infrastructure. Everything built for human scale needs a rethink.",
-  "read_time": "6 min 53 sec",
+  "date": "15-10-2026",
+  "iso_date": "2026-10-15",
+  "subject": "Claude Code parallel tabs 💻, DigUp local search 🔍, Gemini 4 Argon codi",
+  "intro": "Parallelism is having a moment. Claude Code now runs multiple sessions side by side, Fork-and-Flush beats single-agent runs by 66% using parallel copies with wiped memory, and a local semantic search tool finds your files across all types at once. The pattern is clear: the next unlock isn't smarter models, it's smarter orchestration. Run more, reset often, stay in control. Turns out the best way to think harder is to think sideways .",
+  "read_time": "6 min 44 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Anthropic built its own version control after AI agents pushed git past 30,000 daily merges",
+      "headline": "Claude Code desktop app now runs multiple coding sessions side by side",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "Fish Audio ships Drama 3, an open-weight voice model with word-level tone control",
+      "headline": "Open-source macOS tool brings fully local semantic search to photos, audio, and code",
       "news_id": "news-2"
     },
     {
-      "category": "Top Repo",
-      "headline": "Claude maps 5,285 km of real US roads into a clicker game for under $500",
+      "category": "Top News",
+      "headline": "Google releases Gemini 4 Argon, cutting bad code commits by 30% in production",
       "news_id": "news-3"
     }
   ],
@@ -27,92 +27,94 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Anthropic built its own version control after AI agents pushed git past 30,000 daily merges",
-      "likes": 17736,
-      "body": "Anthropic just ditched Git. The reason: Claude writes code so fast that Git literally could not keep up. Daily merges grew from 2,500 in May to over 30,000 in September, driven by Claude writing most of the code. Git was built for humans working at human speed. AI agents don't take lunch breaks. So they built their own system called Scion . The key idea: unlike Git, which is decentralized, Scion assumes the server is always available and clients request only the data they need. That's the opposite of how Git works. The results: Scion is not a general Git replacement. But Anthropic hopes Git platforms adopt the transferable ideas: server-side operations and smarter sparse checkout features.",
+      "headline": "Claude Code desktop app now runs multiple coding sessions side by side",
+      "likes": 18663,
+      "body": "Claude Code's desktop app just got a serious upgrade for managing multiple tasks at once. Here's the deal. You can now run parallel sessions (think: multiple tasks happening at the same time, each in its own tab). Claude spins up a separate mini-session for each task, then reports results back to your main session when done. Your main thread stays clean and readable. This opens up running entire workflows in parallel without losing track of anything. Update the desktop app and start a new session to try it.",
       "bullets": [
-        "CPU and memory usage dropped by roughly 200x compared to the old Git setup.",
-        "Code checkout times dropped from minutes to seconds.",
-        "A team of seven built Scion and a code review tool called Antique, and migrated the monorepo in five months."
+        "Live to-do list inside each session, so you always see what Claude is doing",
+        "A recap card appears when Claude needs your input, no digging required",
+        "Save folder setups, SSH hosts, or cloud configs as reusable environments",
+        "Use /btw to ask a side question in a new tab without interrupting your main session",
+        "One-click follow-up sessions from Claude's own suggestions"
       ],
-      "image_url": "https://alphasignal.ai/image/1791954279837-juwjh9.png",
-      "read_more_url": "https://www.anthropic.com/engineering/redesigning-source-control"
+      "image_url": "https://alphasignal.ai/image/1792040635975-zmnw2w.png",
+      "read_more_url": "https://code.claude.com/docs/en/desktop-quickstart"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "Fish Audio ships Drama 3, an open-weight voice model with word-level tone control",
-      "likes": 11110,
-      "body": "Fish Audio just dropped Drama 3 , an open-weight text-to-speech model that lets you direct AI voices like a film director, using plain English instead of clunky code tags. Most TTS tools give you one flat voice. Drama 3 changes that. You write square-bracket instructions right inside your script, like stage directions, and the model follows them. Start calm, get angry mid-sentence, whisper one word, shout the next. Here is what it can do: Under the hood it is a 35B parameter model (only 3B active at a time, so it runs leaner than it sounds) available on Hugging Face. It hits 89ms to first audio on a single H200 GPU. It ranks #1 among open-weight TTS models on the Artificial Analysis leaderboard, beating ElevenLabs on pronunciation accuracy. You can use it via the Fish Audio API or self-host the weights yourself.",
+      "headline": "Open-source macOS tool brings fully local semantic search to photos, audio, and code",
+      "likes": 9617,
+      "body": "Your Mac has always been bad at finding files. You remember the moment , not the filename. DigUp fixes that. DigUp is a free, open-source macOS menu bar app that lets you search your files by describing what you remember. It runs Google DeepMind's EmbeddingGemma 2 entirely on your machine. No cloud. No account. No data leaving your laptop. The trick: it converts text, images, audio, and video into points in the same shared space. So one query can reach across all your file types at once. Here's what you can actually do: Hit Shift+Cmd+Space from anywhere. Requires Apple Silicon and macOS 14+. One-time 865 MB model download, then fully offline.",
       "bullets": [
-        "Control tone, pacing, and emotion word-by-word using plain English cues",
-        "Fix a single word without re-generating the whole audio clip",
-        "Voice full multi-character scenes in one pass",
-        "Supports 83 languages with mid-sentence voice and language switches"
+        "Type \"dog near water\" and find the photo",
+        "Type \"where they talk about sleep\" and jump to that podcast minute",
+        "Type \"payment declined error\" and surface the right screenshot",
+        "Search your codebase by what a function does, not what it's called"
       ],
-      "image_url": "https://alphasignal.ai/image/1791954370619-mtvc1a.png",
-      "read_more_url": "https://fish.audio/contact-sales/"
+      "image_url": "https://alphasignal.ai/image/1792040674295-avc5qi.png",
+      "read_more_url": "https://github.com/ARahim3/DigUp"
     },
     {
       "id": "news-3",
-      "category": "Top Repo",
-      "headline": "Claude maps 5,285 km of real US roads into a clicker game for under $500",
-      "likes": 7108,
-      "body": "Someone built a coast-to-coast USA clicker game using Claude Opus 5.5, and the whole thing cost under $500 . That's real roads, real mountains, real buildings, all rendered as pixel art. Here's how it works: Opus 5.5 pulled 5,285 km of real road data from OpenStreetMap (a free, community-built map of the world), sampled every 10 meters. The mountains you see on the horizon are real too, pulled from elevation grids. The engine figures out what hills are visible by scanning outward and tracking the steepest angle, accounting for the actual curve of the Earth. The result? 1,185 AI-generated images , including 71 vehicles with animation frames. You can use it yourself right now as a Claude Code skill: Install it with /plugin marketplace add jonwheatley/pixel-path inside Claude Code, then just ask for a pixel path between any two places.",
+      "category": "Top News",
+      "headline": "Google releases Gemini 4 Argon, cutting bad code commits by 30% in production",
+      "likes": 9403,
+      "body": "Google just dropped Gemini 4 Argon , its most capable coding model yet, and it's already been battle-tested inside Google's own production codebases. The results? A 35% boost in code written by AI agents and 30% fewer bugs making it past code review. The big unlock here is output size. Argon can generate up to 1 million output tokens in one shot, up from 64K. Think of tokens as chunks of text. More tokens means the model can rewrite entire codebases, migrate legacy systems, or refactor hundreds of files without stopping mid-task. Real things it has already done: You can try it now in the Antigravity app or CLI , Google's agentic coding platform, if you're on AI Pro or Ultra. Install via curl -fsSL https://antigravity.google/cli/install.sh | bash, then run agy.",
       "bullets": [
-        "Pick any two locations on Earth",
-        "Get a price estimate, then choose your quality level (free placeholders up to detailed pixel art)",
-        "Get a full flyable, walkable route back"
+        "Helped Chrome engineers untangle a 40-million-line codebase, finishing months of work in weeks",
+        "Translated 40-year-old scientific code into Rust",
+        "Autonomously built a 3D Japanese pagoda in Blender using multi-agent looping"
       ],
-      "image_url": "https://alphasignal.ai/image/1791954186059-sdcz2e.png",
-      "read_more_url": "https://github.com/jonwheatley/pixel-path"
+      "image_url": "https://alphasignal.ai/image/1792040728779-bwspkb.png",
+      "read_more_url": "https://github.com/google/skills/tree/main/skills/developers/migrate-to-rust"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Anthropic drops 400+ free ready-to-use agents and skills for Claude",
+      "headline": "Hacker runs a 27B model on a jailbroken PS5 GPU at 20 tokens per second",
       "stat": {
         "type": "likes",
-        "value": 5900
+        "value": 4791
       },
-      "url": "https://github.com/wshobson/agents"
+      "url": "https://github.com/abhi245y/PS5LM"
     },
     {
       "rank": 2,
-      "headline": "New open-source toolkit makes AI go/no-go decisions auditable and replayable offline",
+      "headline": "Simple fork-and-flush trick boosts research agents 66% by escaping idea ruts",
       "stat": {
-        "type": "stars",
-        "value": 152
+        "type": "likes",
+        "value": 1000
       },
-      "url": "https://github.com/BichengWang/ai-decision-system"
+      "url": "https://arxiv.org/abs/2610.07447"
     },
     {
       "rank": 3,
-      "headline": "Leiden University drops a free 472-page textbook on agentic LLMs",
+      "headline": "New image generation method skips flow scheduling and still beats top few-step models",
       "stat": {
         "type": "likes",
-        "value": 1051
+        "value": 454
       },
-      "url": "https://arxiv.org/abs/2610.13455"
+      "url": "https://arxiv.org/abs/2610.12102"
     },
     {
       "rank": 4,
-      "headline": "LiquidAI releases 24B reasoning model that runs on-device with only 2B active parameters",
+      "headline": "Open-source text generation model runs 31× faster than diffusion language models",
       "stat": {
-        "type": "downloads",
-        "value": 2565
+        "type": "likes",
+        "value": 363
       },
-      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+      "url": "https://arxiv.org/abs/2610.14162"
     },
     {
       "rank": 5,
-      "headline": "Google's Gemini 4 Argon boosts developer speed 35% and cuts bad code by 30%",
+      "headline": "Tiny 1M parameter OCR model runs 11x faster than PaddleOCR on CPU",
       "stat": {
         "type": "likes",
-        "value": 5892
+        "value": 2757
       },
-      "url": "https://github.com/google/skills"
+      "url": "https://huggingface.co/datalab-to/indra-ocr"
     }
   ]
 }

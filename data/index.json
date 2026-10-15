@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-14T19:09:34Z",
+  "updated_at": "2026-10-15T18:52:15Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "15-10-2026",
+      "iso_date": "2026-10-15",
+      "type": "digest",
+      "subject": "Claude Code parallel tabs 💻, DigUp local search 🔍, Gemini 4 Argon codi",
+      "path": "data/2026/10-October/15-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/15-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/15-10-2026.html",
+      "headlines": [
+        "Claude Code desktop app now runs multiple coding sessions side by side",
+        "Open-source macOS tool brings fully local semantic search to photos, audio, and code",
+        "Google releases Gemini 4 Argon, cutting bad code commits by 30% in production"
+      ]
+    },
     {
       "date": "14-10-2026",
       "iso_date": "2026-10-14",
