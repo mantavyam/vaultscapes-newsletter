@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "15-10-2026",
-  "iso_date": "2026-10-15",
-  "subject": "Claude Code parallel tabs 💻, DigUp local search 🔍, Gemini 4 Argon codi",
-  "intro": "Parallelism is having a moment. Claude Code now runs multiple sessions side by side, Fork-and-Flush beats single-agent runs by 66% using parallel copies with wiped memory, and a local semantic search tool finds your files across all types at once. The pattern is clear: the next unlock isn't smarter models, it's smarter orchestration. Run more, reset often, stay in control. Turns out the best way to think harder is to think sideways .",
-  "read_time": "6 min 44 sec",
+  "date": "16-10-2026",
+  "iso_date": "2026-10-16",
+  "subject": "🧠 Meta's 816B Model Runs Locally on Two Mac Studios",
+  "intro": "Open weights keep getting heavier. Meta just dropped an 816B model you can run on two Mac Studios, while GPT-6 is correcting physicists' own homework at 98% accuracy. The pattern is clear: frontier capability is becoming a commodity, fast. What took a GPU cluster now fits in your garage. What took a PhD now costs $3. We're not just watching AI get smarter. We're watching the moat evaporate in real time.",
+  "read_time": "6 min 41 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Claude Code desktop app now runs multiple coding sessions side by side",
+      "headline": "Meta releases 816B open-weight model built for coding and long agentic tasks",
       "news_id": "news-1"
     },
     {
-      "category": "Top News",
-      "headline": "Open-source macOS tool brings fully local semantic search to photos, audio, and code",
+      "category": "Top Repo",
+      "headline": "Cheng Lou's open-source tool converts JavaScript code into a real neural net without training",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "Google releases Gemini 4 Argon, cutting bad code commits by 30% in production",
+      "headline": "OpenAI ships GPT-Live-1.1 with new voices in six languages to all users",
       "news_id": "news-3"
     }
   ],
@@ -27,94 +27,92 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Claude Code desktop app now runs multiple coding sessions side by side",
-      "likes": 18663,
-      "body": "Claude Code's desktop app just got a serious upgrade for managing multiple tasks at once. Here's the deal. You can now run parallel sessions (think: multiple tasks happening at the same time, each in its own tab). Claude spins up a separate mini-session for each task, then reports results back to your main session when done. Your main thread stays clean and readable. This opens up running entire workflows in parallel without losing track of anything. Update the desktop app and start a new session to try it.",
+      "headline": "Meta releases 816B open-weight model built for coding and long agentic tasks",
+      "likes": 9882,
+      "body": "Meta just dropped Muse Spark Open , and it's a big one. It's a massive 816 billion parameter model, but here's the trick: only 42B parameters actually run per request. Think of it like a team of 256 specialists where only 8 show up per task. You get huge model quality without paying for all 816B every time. What can you actually build with it? The wild part: you can run this locally on two Apple M5 Ultra Mac Studios using the MLX framework. No cloud required. You can also hit it via API on Groq, Together AI, OpenRouter, and others, or grab the weights on Hugging Face. Fine-tuning is supported through PyTorch. The license allows free use for many projects, but check the Muse Model License for commercial limits.",
       "bullets": [
-        "Live to-do list inside each session, so you always see what Claude is doing",
-        "A recap card appears when Claude needs your input, no digging required",
-        "Save folder setups, SSH hosts, or cloud configs as reusable environments",
-        "Use /btw to ask a side question in a new tab without interrupting your main session",
-        "One-click follow-up sessions from Claude's own suggestions"
+        "Coding agents that handle long, multi-step tasks without losing track",
+        "Apps that read text, images, video, and audio all at once",
+        "Workflows using a 1M token context window , meaning you can feed it entire codebases in one shot"
       ],
-      "image_url": "https://alphasignal.ai/image/1792040635975-zmnw2w.png",
-      "read_more_url": "https://code.claude.com/docs/en/desktop-quickstart"
+      "image_url": "https://alphasignal.ai/image/1792126989014-f2x8r2.png",
+      "read_more_url": "https://huggingface.co/collections/meta-models/muse-spark-open"
     },
     {
       "id": "news-2",
-      "category": "Top News",
-      "headline": "Open-source macOS tool brings fully local semantic search to photos, audio, and code",
-      "likes": 9617,
-      "body": "Your Mac has always been bad at finding files. You remember the moment , not the filename. DigUp fixes that. DigUp is a free, open-source macOS menu bar app that lets you search your files by describing what you remember. It runs Google DeepMind's EmbeddingGemma 2 entirely on your machine. No cloud. No account. No data leaving your laptop. The trick: it converts text, images, audio, and video into points in the same shared space. So one query can reach across all your file types at once. Here's what you can actually do: Hit Shift+Cmd+Space from anywhere. Requires Apple Silicon and macOS 14+. One-time 865 MB model download, then fully offline.",
+      "category": "Top Repo",
+      "headline": "Cheng Lou's open-source tool converts JavaScript code into a real neural net without training",
+      "likes": 9040,
+      "body": "What if your regular JavaScript code was already a neural net ? That's the idea behind Handwired. Neural nets are usually trained on data, which makes them fuzzy and probabilistic. Handwired skips training entirely. Instead, it converts your if-else statements and loops directly into neural net weights, numbers that represent your program exactly , with zero guessing. Why does this matter? Because now your code is fully differentiable, meaning you can apply machine learning techniques like loss functions and backpropagation (nudging numbers to improve a result) to actual working software. You can grab the source and tutorial on GitHub and play with the demos live in your browser right now.",
       "bullets": [
-        "Type \"dog near water\" and find the photo",
-        "Type \"where they talk about sleep\" and jump to that podcast minute",
-        "Type \"payment declined error\" and surface the right screenshot",
-        "Search your codebase by what a function does, not what it's called"
+        "Runs entirely in the browser, no GPU needed",
+        "Search 100k JSON files in real time using WebGPU matrix math",
+        "Photos that learn to rearrange themselves as you drag",
+        "Mix it with an LLM so it can follow both learned behavior and exact program logic"
       ],
-      "image_url": "https://alphasignal.ai/image/1792040674295-avc5qi.png",
-      "read_more_url": "https://github.com/ARahim3/DigUp"
+      "image_url": "https://alphasignal.ai/image/1792126935016-etcbfx.png",
+      "read_more_url": "https://github.com/chenglou/handwired"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "Google releases Gemini 4 Argon, cutting bad code commits by 30% in production",
-      "likes": 9403,
-      "body": "Google just dropped Gemini 4 Argon , its most capable coding model yet, and it's already been battle-tested inside Google's own production codebases. The results? A 35% boost in code written by AI agents and 30% fewer bugs making it past code review. The big unlock here is output size. Argon can generate up to 1 million output tokens in one shot, up from 64K. Think of tokens as chunks of text. More tokens means the model can rewrite entire codebases, migrate legacy systems, or refactor hundreds of files without stopping mid-task. Real things it has already done: You can try it now in the Antigravity app or CLI , Google's agentic coding platform, if you're on AI Pro or Ultra. Install via curl -fsSL https://antigravity.google/cli/install.sh | bash, then run agy.",
+      "headline": "OpenAI ships GPT-Live-1.1 with new voices in six languages to all users",
+      "likes": 8941,
+      "body": "OpenAI just updated its voice model. GPT-Live-1.1 is now live for all users across ChatGPT, Codex, and Dots. The big deal? Voice now sounds actually local, not like a robot guessing at accents. It brings 13 new voices , two per language, in French, German, Hindi, Japanese, Korean, and Mexican Spanish, plus Bubbie in English. There are also two model sizes now. Plus and above users get GPT-Live-1.1 by default, while others get the smaller Quip version. What else changed: To try it now: open the ChatGPT app, tap the Voice icon, and pick Live mode from Settings then Voice.",
       "bullets": [
-        "Helped Chrome engineers untangle a 40-million-line codebase, finishing months of work in weeks",
-        "Translated 40-year-old scientific code into Rust",
-        "Autonomously built a 3D Japanese pagoda in Blender using multi-agent looping"
+        "More natural accents across languages, and the voice uses a wider range of short phrases when it is searching instead of repeating \"checking...\" on loop.",
+        "More natural handoffs when delegating tasks, and better steerability so the voice responds the way you actually want.",
+        "API access is coming, but OpenAI has not provided a date."
       ],
-      "image_url": "https://alphasignal.ai/image/1792040728779-bwspkb.png",
-      "read_more_url": "https://github.com/google/skills/tree/main/skills/developers/migrate-to-rust"
+      "image_url": "https://alphasignal.ai/image/1792127008554-txbr7o.png",
+      "read_more_url": "https://x.com/OpenAI/status/2110797830361436604"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Hacker runs a 27B model on a jailbroken PS5 GPU at 20 tokens per second",
+      "headline": "Google releases Gemini 4 Argon, turning prompts into apps, slides, and 3D files",
       "stat": {
         "type": "likes",
-        "value": 4791
+        "value": 8685
       },
-      "url": "https://github.com/abhi245y/PS5LM"
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
     },
     {
       "rank": 2,
-      "headline": "Simple fork-and-flush trick boosts research agents 66% by escaping idea ruts",
+      "headline": "Meta releases AudioCraft, an open-source PyTorch library for music and audio generation",
       "stat": {
-        "type": "likes",
-        "value": 1000
+        "type": "stars",
+        "value": 23715
       },
-      "url": "https://arxiv.org/abs/2610.07447"
+      "url": "https://github.com/facebookresearch/audiocraft"
     },
     {
       "rank": 3,
-      "headline": "New image generation method skips flow scheduling and still beats top few-step models",
+      "headline": "GPT-6 solves 49 of 50 expert physics problems at 98% accuracy for $3 each",
       "stat": {
         "type": "likes",
-        "value": 454
+        "value": 2053
       },
-      "url": "https://arxiv.org/abs/2610.12102"
+      "url": "https://arxiv.org/abs/2610.16733"
     },
     {
       "rank": 4,
-      "headline": "Open-source text generation model runs 31× faster than diffusion language models",
+      "headline": "Black Forest Labs releases 5.6B open-weights model for text-to-image and multi-reference editing",
       "stat": {
-        "type": "likes",
-        "value": 363
+        "type": "downloads",
+        "value": 3241
       },
-      "url": "https://arxiv.org/abs/2610.14162"
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein"
     },
     {
       "rank": 5,
-      "headline": "Tiny 1M parameter OCR model runs 11x faster than PaddleOCR on CPU",
+      "headline": "How to run uncensored open-source AI models locally using Ollama",
       "stat": {
         "type": "likes",
-        "value": 2757
+        "value": 2027
       },
-      "url": "https://huggingface.co/datalab-to/indra-ocr"
+      "url": "https://huggingface.co/igorls/gemma-4-12B-it-heretic-GGUF"
     }
   ]
 }

@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "16-10-2026",
+  "iso_date": "2026-10-16",
+  "subject": "🧠 Meta's 816B Model Runs Locally on Two Mac Studios",
+  "intro": "Open weights keep getting heavier. Meta just dropped an 816B model you can run on two Mac Studios, while GPT-6 is correcting physicists' own homework at 98% accuracy. The pattern is clear: frontier capability is becoming a commodity, fast. What took a GPU cluster now fits in your garage. What took a PhD now costs $3. We're not just watching AI get smarter. We're watching the moat evaporate in real time.",
+  "read_time": "6 min 41 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Meta releases 816B open-weight model built for coding and long agentic tasks",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Cheng Lou's open-source tool converts JavaScript code into a real neural net without training",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI ships GPT-Live-1.1 with new voices in six languages to all users",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Meta releases 816B open-weight model built for coding and long agentic tasks",
+      "likes": 9882,
+      "body": "Meta just dropped Muse Spark Open , and it's a big one. It's a massive 816 billion parameter model, but here's the trick: only 42B parameters actually run per request. Think of it like a team of 256 specialists where only 8 show up per task. You get huge model quality without paying for all 816B every time. What can you actually build with it? The wild part: you can run this locally on two Apple M5 Ultra Mac Studios using the MLX framework. No cloud required. You can also hit it via API on Groq, Together AI, OpenRouter, and others, or grab the weights on Hugging Face. Fine-tuning is supported through PyTorch. The license allows free use for many projects, but check the Muse Model License for commercial limits.",
+      "bullets": [
+        "Coding agents that handle long, multi-step tasks without losing track",
+        "Apps that read text, images, video, and audio all at once",
+        "Workflows using a 1M token context window , meaning you can feed it entire codebases in one shot"
+      ],
+      "image_url": "https://alphasignal.ai/image/1792126989014-f2x8r2.png",
+      "read_more_url": "https://huggingface.co/collections/meta-models/muse-spark-open"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "Cheng Lou's open-source tool converts JavaScript code into a real neural net without training",
+      "likes": 9040,
+      "body": "What if your regular JavaScript code was already a neural net ? That's the idea behind Handwired. Neural nets are usually trained on data, which makes them fuzzy and probabilistic. Handwired skips training entirely. Instead, it converts your if-else statements and loops directly into neural net weights, numbers that represent your program exactly , with zero guessing. Why does this matter? Because now your code is fully differentiable, meaning you can apply machine learning techniques like loss functions and backpropagation (nudging numbers to improve a result) to actual working software. You can grab the source and tutorial on GitHub and play with the demos live in your browser right now.",
+      "bullets": [
+        "Runs entirely in the browser, no GPU needed",
+        "Search 100k JSON files in real time using WebGPU matrix math",
+        "Photos that learn to rearrange themselves as you drag",
+        "Mix it with an LLM so it can follow both learned behavior and exact program logic"
+      ],
+      "image_url": "https://alphasignal.ai/image/1792126935016-etcbfx.png",
+      "read_more_url": "https://github.com/chenglou/handwired"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "OpenAI ships GPT-Live-1.1 with new voices in six languages to all users",
+      "likes": 8941,
+      "body": "OpenAI just updated its voice model. GPT-Live-1.1 is now live for all users across ChatGPT, Codex, and Dots. The big deal? Voice now sounds actually local, not like a robot guessing at accents. It brings 13 new voices , two per language, in French, German, Hindi, Japanese, Korean, and Mexican Spanish, plus Bubbie in English. There are also two model sizes now. Plus and above users get GPT-Live-1.1 by default, while others get the smaller Quip version. What else changed: To try it now: open the ChatGPT app, tap the Voice icon, and pick Live mode from Settings then Voice.",
+      "bullets": [
+        "More natural accents across languages, and the voice uses a wider range of short phrases when it is searching instead of repeating \"checking...\" on loop.",
+        "More natural handoffs when delegating tasks, and better steerability so the voice responds the way you actually want.",
+        "API access is coming, but OpenAI has not provided a date."
+      ],
+      "image_url": "https://alphasignal.ai/image/1792127008554-txbr7o.png",
+      "read_more_url": "https://x.com/OpenAI/status/2110797830361436604"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Google releases Gemini 4 Argon, turning prompts into apps, slides, and 3D files",
+      "stat": {
+        "type": "likes",
+        "value": 8685
+      },
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+    },
+    {
+      "rank": 2,
+      "headline": "Meta releases AudioCraft, an open-source PyTorch library for music and audio generation",
+      "stat": {
+        "type": "stars",
+        "value": 23715
+      },
+      "url": "https://github.com/facebookresearch/audiocraft"
+    },
+    {
+      "rank": 3,
+      "headline": "GPT-6 solves 49 of 50 expert physics problems at 98% accuracy for $3 each",
+      "stat": {
+        "type": "likes",
+        "value": 2053
+      },
+      "url": "https://arxiv.org/abs/2610.16733"
+    },
+    {
+      "rank": 4,
+      "headline": "Black Forest Labs releases 5.6B open-weights model for text-to-image and multi-reference editing",
+      "stat": {
+        "type": "downloads",
+        "value": 3241
+      },
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein"
+    },
+    {
+      "rank": 5,
+      "headline": "How to run uncensored open-source AI models locally using Ollama",
+      "stat": {
+        "type": "likes",
+        "value": 2027
+      },
+      "url": "https://huggingface.co/igorls/gemma-4-12B-it-heretic-GGUF"
+    }
+  ]
+}

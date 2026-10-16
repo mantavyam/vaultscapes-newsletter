@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-15T18:52:15Z",
+  "updated_at": "2026-10-16T18:36:17Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "16-10-2026",
+      "iso_date": "2026-10-16",
+      "type": "digest",
+      "subject": "🧠 Meta's 816B Model Runs Locally on Two Mac Studios",
+      "path": "data/2026/10-October/16-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/16-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/16-10-2026.html",
+      "headlines": [
+        "Meta releases 816B open-weight model built for coding and long agentic tasks",
+        "Cheng Lou's open-source tool converts JavaScript code into a real neural net without training",
+        "OpenAI ships GPT-Live-1.1 with new voices in six languages to all users"
+      ]
+    },
     {
       "date": "15-10-2026",
       "iso_date": "2026-10-15",
