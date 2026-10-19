@@ -1,0 +1,174 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "18-10-2026",
+  "iso_date": "2026-10-18",
+  "subject": "🧠 New AI Architecture Challenges Token-by-Token Generation",
+  "kicker": "Sunday Deep Dive",
+  "title": "How Next-Concept Modeling rethinks AI text generation",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "What if the next breakthrough in AI comes from changing how models generate text, rather than making them bigger? Stanford researchers have introduced a new architecture that challenges the token-by-token generation process behind today's LLMs. Early results show major efficiency gains, but the implications could go much further than speed. Today, we unpack Next-Concept Modeling and why it could change how future AI systems are built.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "Researchers at Stanford University have introduced <a href=\"https://arxiv.org/html/2610.14162\">Next-Concept Modeling</a> (NCM), a new architecture that changes how AI models generate text. Instead of predicting text one token at a time, NCM learns to represent entire sequences as hierarchies of discrete codes, then generates those representations from coarse concepts to fine details."
+    },
+    {
+      "kind": "paragraph",
+      "html": "In experiments with models of comparable scale, NCM produced text 10–31 times faster than strong diffusion language model baselines while achieving comparable or better quality. It also processed 4–5 times fewer training tokens in selected language modeling benchmarks."
+    },
+    {
+      "kind": "paragraph",
+      "html": "While NCM is in its early stages, the architecture raises an important question for future AI systems: Can models generate better answers more efficiently by deciding on the overall representation before producing the final text?"
+    },
+    {
+      "kind": "heading",
+      "text": "The autoregressive challenge"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Most language models today are autoregressive. They generate text by predicting the next token based on the input and everything they have generated so far. Each new token depends on the previous ones, creating a sequential process that becomes more expensive as outputs grow longer."
+    },
+    {
+      "kind": "paragraph",
+      "html": "This also makes it difficult for the model to revise earlier decisions. Once the model generates a token, it cannot directly change that token within the same decoding pass. Techniques such as chain-of-thought reasoning help models plan before producing final answers, but they still depend on sequential token generation."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1792334577142-ov71f0.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Diffusion language models (DLMs) offer one alternative. Instead of predicting tokens from left to right, they work on entire blocks simultaneously and refine the output through successive steps. However, this comes with several limitations:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "They often require many sampling steps to achieve good quality.",
+        "They process the full output sequence at each step, making computation expensive.",
+        "Strong diffusion models can require large training budgets, often involving repeated passes over the same data."
+      ]
+    },
+    {
+      "kind": "paragraph",
+      "html": "NCM takes a different approach. Instead of repeatedly refining predictions for individual text tokens, it builds an answer by generating representations at progressively finer levels of detail."
+    },
+    {
+      "kind": "heading",
+      "text": "How Next-Concept Modeling works"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Think about writing an article. You usually start by establishing the main idea and structure, then develop individual paragraphs and sentences. As you write, you might go back and edit earlier sentences and paragraphs."
+    },
+    {
+      "kind": "paragraph",
+      "html": "This helps maintain consistency across the article instead of deciding what to write next without considering the overall direction and having no recourse. NCM follows a similar coarse-to-fine process. It learns latent representations that capture information about its answer at different levels of detail."
+    },
+    {
+      "kind": "paragraph",
+      "html": "NCM first represents the answer as a hierarchy of discrete codes, which represent concepts at different levels of granularity. The early levels are short, containing a few codes that capture coarse information about the entire sequence. Later levels contain more codes and progressively add finer details."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers illustrate this with a German-to-English translation example. At the earliest levels, the decoded text is incomplete and does not fully capture the original sentence. As NCM generates additional levels, the translation becomes more accurate and detailed. The intermediate outputs can contain mistakes, which later levels may correct."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1792334653143-he31i8.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "paragraph",
+      "html": "To learn this representation and generation process, NCM uses two training stages."
+    },
+    {
+      "kind": "paragraph",
+      "html": "<b>Stage 1: Learning to represent text.</b> A multiscale autoencoder learns to compress text into hierarchical codes and reconstruct the original sequence from them. This helps the model learn representations that carry meaningful information at different levels of detail."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1792334624831-f74unu.png",
+      "alt": "alpha_signal_image_3"
+    },
+    {
+      "kind": "paragraph",
+      "html": "<b>Stage 2: Learning to generate the hierarchy.</b> A transformer learns to predict the codes at each level, using reconstructions from earlier levels as context. During training, all levels can be predicted in a single forward pass because the correct earlier representations are available. (During inference, the model must generate levels sequentially, but it predicts all codes within each level in parallel.)"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The prediction mechanism is key to NCM's efficiency. An autoregressive model needs a sequential generation step for each output token. NCM needs one step for each hierarchical level, typically far fewer than the total number of output tokens. The earlier levels also contain shorter sequences, reducing their computational cost."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1792334599382-mx7hcw.png",
+      "alt": "alpha_signal_image_4"
+    },
+    {
+      "kind": "heading",
+      "text": "NCM in action"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers evaluated NCM on language modeling, translation, summarization, and Sudoku. They compared it with autoregressive and diffusion-based methods, generally using generators with around 100 million parameters."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The experiments highlight several findings:"
+    },
+    {
+      "kind": "paragraph",
+      "html": "<b>Faster generation at competitive quality:</b> On the LM1B language modeling benchmark, NCM generated text 21× faster than the strongest diffusion baseline while generating higher quality text. The gains come from fewer generation steps and lower computation per step. The researchers measured latency on an NVIDIA H100 GPU."
+    },
+    {
+      "kind": "paragraph",
+      "html": "<b>Promising results for reasoning tasks:</b> On hard Sudoku puzzles, NCM outperformed the strongest competing method while requiring fewer model evaluations. Sudoku requires satisfying constraints across the entire board, making it a useful test of coarse-to-fine refinement."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1792334678742-7h1nar.png",
+      "alt": "alpha_signal_image_5"
+    },
+    {
+      "kind": "paragraph",
+      "html": "<b>Lower training-token budgets:</b> In the experiments, NCM required 4–5× fewer training tokens than strong diffusion baselines."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers also explored how faster generation can improve quality by allocating more compute at inference time. They tested minimum Bayes risk (MBR) decoding, where the model generates multiple candidate answers and selects the one with the highest average similarity to the others."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Because NCM produces samples quickly, it can explore more candidates within the same time budget. In summarization tasks, it outperformed the strongest baseline by an approximately 7% higher ROUGE-L, a measure of overlap with reference summaries."
+    },
+    {
+      "kind": "paragraph",
+      "html": "This could be useful for applications where developers prefer to spend extra inference compute on improving response quality rather than minimizing latency. Similar selection methods can work with other architectures, but faster generation changes how many candidates an application can afford to examine."
+    },
+    {
+      "kind": "heading",
+      "text": "Availability and future outlook"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers have released NCM's code under an MIT license, along with pretrained checkpoints for different tasks. You can download the models from <a href=\"https://huggingface.co/collections/hazyresearch/ncm\">Hugging Face</a> and use the code from <a href=\"https://github.com/HazyResearch/ncm\">GitHub</a> to reproduce evaluations and inspect generated outputs."
+    },
+    {
+      "kind": "paragraph",
+      "html": "NCM remains an early-stage research architecture. Most experiments involve relatively small generators, although the researchers have tested scaling to 725 million parameters with encouraging results."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Future improvements could include jointly training the tokenizer and generator, scaling to larger models, and dynamically adjusting the number of hierarchical levels based on task difficulty. The current architecture uses a fixed hierarchy."
+    },
+    {
+      "kind": "paragraph",
+      "html": "NCM is still far from replacing mainstream autoregressive LLMs. But its early results show that predicting individual tokens is not the only viable way to generate language. If its advantages hold at larger scales, hierarchical generation could provide another path toward AI systems that produce more consistent outputs while making better use of compute budgets."
+    }
+  ]
+}

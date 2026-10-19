@@ -1,0 +1,122 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "19-10-2026",
+  "iso_date": "2026-10-19",
+  "subject": "DeepSeek Flash-1017 🚀, Claude Quantum Circuits 🔬, Grok Bot 3x Speed ⚡",
+  "intro": "Claude is having a week. It just redesigned quantum circuits up to 39x cheaper than published work, autonomously, from plain English. No PhD required. Meanwhile, a multi-agent sim showed that model character is real and consequential. Grok's town collapsed in 4 days. Claude built a democracy. Mix them together and crime drops 96%. Your AI's neighborhood matters. The throughline: we're past \"can it reason\" and deep into \"how does it behave at scale.\" That's the real benchmark now.",
+  "read_time": "6 min 42 sec",
+  "summary": [
+    {
+      "category": "Top Model",
+      "headline": "DeepSeek ships faster open-source model with free search and fetch APIs",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Claude Code removes 25 bloatware apps from a Xiaomi TV using just the model number",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Grok Bot gets 3x faster tasks, X Chat access, and new app integrations",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Model",
+      "headline": "DeepSeek ships faster open-source model with free search and fetch APIs",
+      "likes": 35581,
+      "body": "DeepSeek just dropped V4.1-Flash-1017 , a tighter update to their Flash model. Same base, better results across the board. Faster outputs, shorter responses, lower cost. All at once. Here's what actually changed and why it matters: Upgrade to DeepSeek Harness v0.2.1-rc.1 to get the best experience. The API model name is deepseek-flash.",
+      "bullets": [
+        "Coding scores jumped hard : 77.0% on DeepSWE (a coding task benchmark), beating Claude Opus 5 at 74.0% and GPT-5.6 Sol at 73.0%",
+        "End-to-end project building : the model uses reinforcement learning with self-feedback, meaning it learns from its own mistakes to build full projects, from games to 3D models, without you babysitting every step",
+        "1M token context window with up to 256K output tokens, so you can feed it entire codebases",
+        "Search and Fetch APIs now open : plug DeepSeek's own search engine into your app at $0.75 per 1,000 calls. Free if you use it through Claude Code or Codex right now",
+        "Weights are MIT-licensed on Hugging Face , run it locally via vLLM or SGLang"
+      ],
+      "image_url": "https://alphasignal.ai/image/1792386284985-ihx4ph.png",
+      "read_more_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "Claude Code removes 25 bloatware apps from a Xiaomi TV using just the model number",
+      "likes": 22773,
+      "body": "Someone's parents had a Xiaomi TV that forced them to sit through a sponsored ad before reaching Netflix. So they grabbed Claude Code, gave it the TV model, and let it loose. The AI found the TV over Wi-Fi using ADB (Android's built-in debug tool, basically a remote control for Android devices), stripped 25 bloatware packages , and built a custom home screen from scratch. No root. No cables. Fully reversible. The result looks like an Apple TV. Here's what you get: Works on any Android TV or Google TV : Xiaomi, TCL, Sony, Hisense, OnePlus. The full prompt, launcher source, and gotchas are open on GitHub with 1.3k stars already. You can run it yourself in about 15 minutes.",
+      "bullets": [
+        "Clean black home screen with a 4-app dock at the bottom",
+        "App grid that slides up on demand",
+        "Zero sponsored rows, zero analytics phoning home",
+        "One-line restore if you want to undo everything"
+      ],
+      "image_url": "https://alphasignal.ai/image/1792386211931-yvnc3n.png",
+      "read_more_url": "https://github.com/Gathin23/cleanyourtv"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Grok Bot gets 3x faster tasks, X Chat access, and new app integrations",
+      "likes": 6952,
+      "body": "Grok Bot just got a solid speed and features update. Here is what actually changed. Speed is the headline. Computer-use tasks now finish about 3x faster on average, while other responses arrive in less than half the previous time. That means your bot finishes browser tasks before your queue piles up. New things you can actually use: Grok Bot is an AI teammate that signs into your tools and comes back with finished work.",
+      "bullets": [
+        "Tag @bot in any post on X and Grok Bot gets to work right away.",
+        "Email now supports plus aliases, so routines only fire on specific inbound addresses.",
+        "Voice calls are faster, more reliable, and Bot now better remembers past conversations.",
+        "New connectors include Robinhood, Coinbase, Trello, PostHog, beehiiv, and eToro, plus teams can submit their own to the marketplace.",
+        "Notifications now go only to the device you are actively using."
+      ],
+      "image_url": "https://alphasignal.ai/image/1792386343791-4tf4p7.png",
+      "read_more_url": "https://x.ai/bot/marketplace/submit-a-plugin"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Anthropic's Claude designs quantum circuits up to 10x more efficient than published work",
+      "stat": {
+        "type": "likes",
+        "value": 5409
+      },
+      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits"
+    },
+    {
+      "rank": 2,
+      "headline": "ScrapeCreators releases social media research skills for AI coding agents",
+      "stat": {
+        "type": "stars",
+        "value": 4077
+      },
+      "url": "https://github.com/ScrapeCreators/social-media-research-skills"
+    },
+    {
+      "rank": 3,
+      "headline": "16-day multi-agent sim shows GPT behaved best while Grok's town collapsed in 4 days",
+      "stat": {
+        "type": "likes",
+        "value": 566
+      },
+      "url": "https://arxiv.org/abs/2609.17320"
+    },
+    {
+      "rank": 4,
+      "headline": "New distillation trick cuts image generation from 50 steps down to 8",
+      "stat": {
+        "type": "downloads",
+        "value": 12410
+      },
+      "url": "https://huggingface.co/lodestones/MOSS-Image-SFT-8-steps-dmd"
+    },
+    {
+      "rank": 5,
+      "headline": "Claude builds a WebGPU water renderer from scratch in 30 minutes, no libraries",
+      "stat": {
+        "type": "likes",
+        "value": 5167
+      },
+      "url": "https://github.com/Noniv/web-ocean"
+    }
+  ]
+}

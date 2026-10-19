@@ -1,118 +1,122 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "16-10-2026",
-  "iso_date": "2026-10-16",
-  "subject": "🧠 Meta's 816B Model Runs Locally on Two Mac Studios",
-  "intro": "Open weights keep getting heavier. Meta just dropped an 816B model you can run on two Mac Studios, while GPT-6 is correcting physicists' own homework at 98% accuracy. The pattern is clear: frontier capability is becoming a commodity, fast. What took a GPU cluster now fits in your garage. What took a PhD now costs $3. We're not just watching AI get smarter. We're watching the moat evaporate in real time.",
-  "read_time": "6 min 41 sec",
+  "date": "19-10-2026",
+  "iso_date": "2026-10-19",
+  "subject": "DeepSeek Flash-1017 🚀, Claude Quantum Circuits 🔬, Grok Bot 3x Speed ⚡",
+  "intro": "Claude is having a week. It just redesigned quantum circuits up to 39x cheaper than published work, autonomously, from plain English. No PhD required. Meanwhile, a multi-agent sim showed that model character is real and consequential. Grok's town collapsed in 4 days. Claude built a democracy. Mix them together and crime drops 96%. Your AI's neighborhood matters. The throughline: we're past \"can it reason\" and deep into \"how does it behave at scale.\" That's the real benchmark now.",
+  "read_time": "6 min 42 sec",
   "summary": [
     {
-      "category": "Top News",
-      "headline": "Meta releases 816B open-weight model built for coding and long agentic tasks",
+      "category": "Top Model",
+      "headline": "DeepSeek ships faster open-source model with free search and fetch APIs",
       "news_id": "news-1"
     },
     {
       "category": "Top Repo",
-      "headline": "Cheng Lou's open-source tool converts JavaScript code into a real neural net without training",
+      "headline": "Claude Code removes 25 bloatware apps from a Xiaomi TV using just the model number",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "OpenAI ships GPT-Live-1.1 with new voices in six languages to all users",
+      "headline": "Grok Bot gets 3x faster tasks, X Chat access, and new app integrations",
       "news_id": "news-3"
     }
   ],
   "news": [
     {
       "id": "news-1",
-      "category": "Top News",
-      "headline": "Meta releases 816B open-weight model built for coding and long agentic tasks",
-      "likes": 9882,
-      "body": "Meta just dropped Muse Spark Open , and it's a big one. It's a massive 816 billion parameter model, but here's the trick: only 42B parameters actually run per request. Think of it like a team of 256 specialists where only 8 show up per task. You get huge model quality without paying for all 816B every time. What can you actually build with it? The wild part: you can run this locally on two Apple M5 Ultra Mac Studios using the MLX framework. No cloud required. You can also hit it via API on Groq, Together AI, OpenRouter, and others, or grab the weights on Hugging Face. Fine-tuning is supported through PyTorch. The license allows free use for many projects, but check the Muse Model License for commercial limits.",
+      "category": "Top Model",
+      "headline": "DeepSeek ships faster open-source model with free search and fetch APIs",
+      "likes": 35581,
+      "body": "DeepSeek just dropped V4.1-Flash-1017 , a tighter update to their Flash model. Same base, better results across the board. Faster outputs, shorter responses, lower cost. All at once. Here's what actually changed and why it matters: Upgrade to DeepSeek Harness v0.2.1-rc.1 to get the best experience. The API model name is deepseek-flash.",
       "bullets": [
-        "Coding agents that handle long, multi-step tasks without losing track",
-        "Apps that read text, images, video, and audio all at once",
-        "Workflows using a 1M token context window , meaning you can feed it entire codebases in one shot"
+        "Coding scores jumped hard : 77.0% on DeepSWE (a coding task benchmark), beating Claude Opus 5 at 74.0% and GPT-5.6 Sol at 73.0%",
+        "End-to-end project building : the model uses reinforcement learning with self-feedback, meaning it learns from its own mistakes to build full projects, from games to 3D models, without you babysitting every step",
+        "1M token context window with up to 256K output tokens, so you can feed it entire codebases",
+        "Search and Fetch APIs now open : plug DeepSeek's own search engine into your app at $0.75 per 1,000 calls. Free if you use it through Claude Code or Codex right now",
+        "Weights are MIT-licensed on Hugging Face , run it locally via vLLM or SGLang"
       ],
-      "image_url": "https://alphasignal.ai/image/1792126989014-f2x8r2.png",
-      "read_more_url": "https://huggingface.co/collections/meta-models/muse-spark-open"
+      "image_url": "https://alphasignal.ai/image/1792386284985-ihx4ph.png",
+      "read_more_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
     },
     {
       "id": "news-2",
       "category": "Top Repo",
-      "headline": "Cheng Lou's open-source tool converts JavaScript code into a real neural net without training",
-      "likes": 9040,
-      "body": "What if your regular JavaScript code was already a neural net ? That's the idea behind Handwired. Neural nets are usually trained on data, which makes them fuzzy and probabilistic. Handwired skips training entirely. Instead, it converts your if-else statements and loops directly into neural net weights, numbers that represent your program exactly , with zero guessing. Why does this matter? Because now your code is fully differentiable, meaning you can apply machine learning techniques like loss functions and backpropagation (nudging numbers to improve a result) to actual working software. You can grab the source and tutorial on GitHub and play with the demos live in your browser right now.",
+      "headline": "Claude Code removes 25 bloatware apps from a Xiaomi TV using just the model number",
+      "likes": 22773,
+      "body": "Someone's parents had a Xiaomi TV that forced them to sit through a sponsored ad before reaching Netflix. So they grabbed Claude Code, gave it the TV model, and let it loose. The AI found the TV over Wi-Fi using ADB (Android's built-in debug tool, basically a remote control for Android devices), stripped 25 bloatware packages , and built a custom home screen from scratch. No root. No cables. Fully reversible. The result looks like an Apple TV. Here's what you get: Works on any Android TV or Google TV : Xiaomi, TCL, Sony, Hisense, OnePlus. The full prompt, launcher source, and gotchas are open on GitHub with 1.3k stars already. You can run it yourself in about 15 minutes.",
       "bullets": [
-        "Runs entirely in the browser, no GPU needed",
-        "Search 100k JSON files in real time using WebGPU matrix math",
-        "Photos that learn to rearrange themselves as you drag",
-        "Mix it with an LLM so it can follow both learned behavior and exact program logic"
+        "Clean black home screen with a 4-app dock at the bottom",
+        "App grid that slides up on demand",
+        "Zero sponsored rows, zero analytics phoning home",
+        "One-line restore if you want to undo everything"
       ],
-      "image_url": "https://alphasignal.ai/image/1792126935016-etcbfx.png",
-      "read_more_url": "https://github.com/chenglou/handwired"
+      "image_url": "https://alphasignal.ai/image/1792386211931-yvnc3n.png",
+      "read_more_url": "https://github.com/Gathin23/cleanyourtv"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "OpenAI ships GPT-Live-1.1 with new voices in six languages to all users",
-      "likes": 8941,
-      "body": "OpenAI just updated its voice model. GPT-Live-1.1 is now live for all users across ChatGPT, Codex, and Dots. The big deal? Voice now sounds actually local, not like a robot guessing at accents. It brings 13 new voices , two per language, in French, German, Hindi, Japanese, Korean, and Mexican Spanish, plus Bubbie in English. There are also two model sizes now. Plus and above users get GPT-Live-1.1 by default, while others get the smaller Quip version. What else changed: To try it now: open the ChatGPT app, tap the Voice icon, and pick Live mode from Settings then Voice.",
+      "headline": "Grok Bot gets 3x faster tasks, X Chat access, and new app integrations",
+      "likes": 6952,
+      "body": "Grok Bot just got a solid speed and features update. Here is what actually changed. Speed is the headline. Computer-use tasks now finish about 3x faster on average, while other responses arrive in less than half the previous time. That means your bot finishes browser tasks before your queue piles up. New things you can actually use: Grok Bot is an AI teammate that signs into your tools and comes back with finished work.",
       "bullets": [
-        "More natural accents across languages, and the voice uses a wider range of short phrases when it is searching instead of repeating \"checking...\" on loop.",
-        "More natural handoffs when delegating tasks, and better steerability so the voice responds the way you actually want.",
-        "API access is coming, but OpenAI has not provided a date."
+        "Tag @bot in any post on X and Grok Bot gets to work right away.",
+        "Email now supports plus aliases, so routines only fire on specific inbound addresses.",
+        "Voice calls are faster, more reliable, and Bot now better remembers past conversations.",
+        "New connectors include Robinhood, Coinbase, Trello, PostHog, beehiiv, and eToro, plus teams can submit their own to the marketplace.",
+        "Notifications now go only to the device you are actively using."
       ],
-      "image_url": "https://alphasignal.ai/image/1792127008554-txbr7o.png",
-      "read_more_url": "https://x.com/OpenAI/status/2110797830361436604"
+      "image_url": "https://alphasignal.ai/image/1792386343791-4tf4p7.png",
+      "read_more_url": "https://x.ai/bot/marketplace/submit-a-plugin"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Google releases Gemini 4 Argon, turning prompts into apps, slides, and 3D files",
+      "headline": "Anthropic's Claude designs quantum circuits up to 10x more efficient than published work",
       "stat": {
         "type": "likes",
-        "value": 8685
+        "value": 5409
       },
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits"
     },
     {
       "rank": 2,
-      "headline": "Meta releases AudioCraft, an open-source PyTorch library for music and audio generation",
+      "headline": "ScrapeCreators releases social media research skills for AI coding agents",
       "stat": {
         "type": "stars",
-        "value": 23715
+        "value": 4077
       },
-      "url": "https://github.com/facebookresearch/audiocraft"
+      "url": "https://github.com/ScrapeCreators/social-media-research-skills"
     },
     {
       "rank": 3,
-      "headline": "GPT-6 solves 49 of 50 expert physics problems at 98% accuracy for $3 each",
+      "headline": "16-day multi-agent sim shows GPT behaved best while Grok's town collapsed in 4 days",
       "stat": {
         "type": "likes",
-        "value": 2053
+        "value": 566
       },
-      "url": "https://arxiv.org/abs/2610.16733"
+      "url": "https://arxiv.org/abs/2609.17320"
     },
     {
       "rank": 4,
-      "headline": "Black Forest Labs releases 5.6B open-weights model for text-to-image and multi-reference editing",
+      "headline": "New distillation trick cuts image generation from 50 steps down to 8",
       "stat": {
         "type": "downloads",
-        "value": 3241
+        "value": 12410
       },
-      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein"
+      "url": "https://huggingface.co/lodestones/MOSS-Image-SFT-8-steps-dmd"
     },
     {
       "rank": 5,
-      "headline": "How to run uncensored open-source AI models locally using Ollama",
+      "headline": "Claude builds a WebGPU water renderer from scratch in 30 minutes, no libraries",
       "stat": {
         "type": "likes",
-        "value": 2027
+        "value": 5167
       },
-      "url": "https://huggingface.co/igorls/gemma-4-12B-it-heretic-GGUF"
+      "url": "https://github.com/Noniv/web-ocean"
     }
   ]
 }
