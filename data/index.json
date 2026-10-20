@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-19T20:20:57Z",
+  "updated_at": "2026-10-20T18:53:34Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "20-10-2026",
+      "iso_date": "2026-10-20",
+      "type": "digest",
+      "subject": "DeepSeek V4.1-Flash 🚀, Anthropic OSS Scanner 🛡️, DeepMind Agent Study",
+      "path": "data/2026/10-October/20-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/20-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/20-10-2026.html",
+      "headlines": [
+        "DeepSeek ships open-source Flash model with faster outputs and free search API",
+        "Anthropic's free scanner found 77 critical bugs in open-source projects in one week",
+        "Open-source tool generates game audio locally in seconds, no API key needed"
+      ]
+    },
     {
       "date": "19-10-2026",
       "iso_date": "2026-10-19",

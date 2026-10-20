@@ -1,122 +1,118 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "19-10-2026",
-  "iso_date": "2026-10-19",
-  "subject": "DeepSeek Flash-1017 🚀, Claude Quantum Circuits 🔬, Grok Bot 3x Speed ⚡",
-  "intro": "Claude is having a week. It just redesigned quantum circuits up to 39x cheaper than published work, autonomously, from plain English. No PhD required. Meanwhile, a multi-agent sim showed that model character is real and consequential. Grok's town collapsed in 4 days. Claude built a democracy. Mix them together and crime drops 96%. Your AI's neighborhood matters. The throughline: we're past \"can it reason\" and deep into \"how does it behave at scale.\" That's the real benchmark now.",
-  "read_time": "6 min 42 sec",
+  "date": "20-10-2026",
+  "iso_date": "2026-10-20",
+  "subject": "DeepSeek V4.1-Flash 🚀, Anthropic OSS Scanner 🛡️, DeepMind Agent Study",
+  "intro": "Today's news tells one story: AI is getting better at doing things, but humans keep getting in the way. DeepSeek ships a faster open-source Flash model with a free search API. Anthropic's OSS Scanner found 880 critical bugs in a week. Both are AI acting in the world, autonomously, at scale. That's the trend. Then DeepMind drops the plot twist: one wrong hint from you tanks agent performance by nearly half. The bottleneck isn't the model anymore.",
+  "read_time": "7 min 44 sec",
   "summary": [
     {
-      "category": "Top Model",
-      "headline": "DeepSeek ships faster open-source model with free search and fetch APIs",
+      "category": "Top News",
+      "headline": "DeepSeek ships open-source Flash model with faster outputs and free search API",
       "news_id": "news-1"
     },
     {
-      "category": "Top Repo",
-      "headline": "Claude Code removes 25 bloatware apps from a Xiaomi TV using just the model number",
+      "category": "Top News",
+      "headline": "Anthropic's free scanner found 77 critical bugs in open-source projects in one week",
       "news_id": "news-2"
     },
     {
-      "category": "Top News",
-      "headline": "Grok Bot gets 3x faster tasks, X Chat access, and new app integrations",
+      "category": "Top Repo",
+      "headline": "Open-source tool generates game audio locally in seconds, no API key needed",
       "news_id": "news-3"
     }
   ],
   "news": [
     {
       "id": "news-1",
-      "category": "Top Model",
-      "headline": "DeepSeek ships faster open-source model with free search and fetch APIs",
-      "likes": 35581,
-      "body": "DeepSeek just dropped V4.1-Flash-1017 , a tighter update to their Flash model. Same base, better results across the board. Faster outputs, shorter responses, lower cost. All at once. Here's what actually changed and why it matters: Upgrade to DeepSeek Harness v0.2.1-rc.1 to get the best experience. The API model name is deepseek-flash.",
+      "category": "Top News",
+      "headline": "DeepSeek ships open-source Flash model with faster outputs and free search API",
+      "likes": 45288,
+      "body": "DeepSeek just dropped V4.1-Flash-1017 , and it's a straight upgrade: faster, cheaper, and shorter outputs than the previous version. No tradeoffs. The big idea? It uses a technique called reinforcement learning with self-feedback , meaning the model practices tasks, grades its own results, and improves. Think of it like a student who keeps retaking a test until they nail it. This makes it genuinely good at building full projects from scratch, not just answering questions. Here's what's new and usable right now: The Search and Fetch APIs let your app pull live web data without building your own scraper. That's a big unlock for anyone building research tools or AI agents.",
       "bullets": [
-        "Coding scores jumped hard : 77.0% on DeepSWE (a coding task benchmark), beating Claude Opus 5 at 74.0% and GPT-5.6 Sol at 73.0%",
-        "End-to-end project building : the model uses reinforcement learning with self-feedback, meaning it learns from its own mistakes to build full projects, from games to 3D models, without you babysitting every step",
-        "1M token context window with up to 256K output tokens, so you can feed it entire codebases",
-        "Search and Fetch APIs now open : plug DeepSeek's own search engine into your app at $0.75 per 1,000 calls. Free if you use it through Claude Code or Codex right now",
-        "Weights are MIT-licensed on Hugging Face , run it locally via vLLM or SGLang"
+        "Model is open-source on Hugging Face and ModelScope",
+        "Search and Fetch APIs are now public at $0.75 per 1,000 calls",
+        "Works with Claude Code, Codex, and DeepSeek Harness (upgrade to v0.2.1-rc.1)",
+        "Search and Fetch calls via server-side tools are free for API users until Oct 31"
       ],
-      "image_url": "https://alphasignal.ai/image/1792386284985-ihx4ph.png",
-      "read_more_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      "image_url": "https://alphasignal.ai/image/1792472706904-plbs13.png",
+      "read_more_url": "https://modelscope.cn/models/deepseek-ai/DeepSeek-V4.1-Flash-1017"
     },
     {
       "id": "news-2",
-      "category": "Top Repo",
-      "headline": "Claude Code removes 25 bloatware apps from a Xiaomi TV using just the model number",
-      "likes": 22773,
-      "body": "Someone's parents had a Xiaomi TV that forced them to sit through a sponsored ad before reaching Netflix. So they grabbed Claude Code, gave it the TV model, and let it loose. The AI found the TV over Wi-Fi using ADB (Android's built-in debug tool, basically a remote control for Android devices), stripped 25 bloatware packages , and built a custom home screen from scratch. No root. No cables. Fully reversible. The result looks like an Apple TV. Here's what you get: Works on any Android TV or Google TV : Xiaomi, TCL, Sony, Hisense, OnePlus. The full prompt, launcher source, and gotchas are open on GitHub with 1.3k stars already. You can run it yourself in about 15 minutes.",
+      "category": "Top News",
+      "headline": "Anthropic's free scanner found 77 critical bugs in open-source projects in one week",
+      "likes": 8010,
+      "body": "Anthropic just launched OSS Scanner , a free tool that automatically hunts for security holes in open-source projects using its strongest AI models. Think of it as a tireless security intern that never sleeps and never misses a bug. Here's the problem it solves: almost all software relies on open-source code, much of it maintained by small teams of volunteers. Those teams rarely have time for deep security audits. OSS Scanner fills that gap. What you actually get per report: Early results: 77 critical and 803 high-severity findings already reported to maintainers. These included multiple vulnerabilities chained to unauthenticated remote code execution exploits. To enroll, open a pull request adding a directory under projects/name with a project.yaml file containing your repo address and contact email. Anthropic verifies you're a core maintainer before accepting.",
       "bullets": [
-        "Clean black home screen with a 4-app dock at the bottom",
-        "App grid that slides up on demand",
-        "Zero sponsored rows, zero analytics phoning home",
-        "One-line restore if you want to undo everything"
+        "A working proof-of-concept that reproduces the bug",
+        "A plain explanation of why it's dangerous",
+        "A suggested patch where possible"
       ],
-      "image_url": "https://alphasignal.ai/image/1792386211931-yvnc3n.png",
-      "read_more_url": "https://github.com/Gathin23/cleanyourtv"
+      "image_url": "https://alphasignal.ai/image/1792472717226-yqw4hi.png",
+      "read_more_url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source"
     },
     {
       "id": "news-3",
-      "category": "Top News",
-      "headline": "Grok Bot gets 3x faster tasks, X Chat access, and new app integrations",
-      "likes": 6952,
-      "body": "Grok Bot just got a solid speed and features update. Here is what actually changed. Speed is the headline. Computer-use tasks now finish about 3x faster on average, while other responses arrive in less than half the previous time. That means your bot finishes browser tasks before your queue piles up. New things you can actually use: Grok Bot is an AI teammate that signs into your tools and comes back with finished work.",
+      "category": "Top Repo",
+      "headline": "Open-source tool generates game audio locally in seconds, no API key needed",
+      "likes": 5296,
+      "body": "Audio Studio MCP is a free, open-source tool that generates background music and sound effects directly on your Mac. No cloud, no API key, no cost per generation. The problem it solves: game audio and video sound design used to mean paid subscriptions or hunting royalty-free libraries. Now you just describe what you want in plain English. Under the hood it runs Stable Audio 3 (Stability AI's audio model) locally on Apple Silicon. On an M1 Mac, a 60-second track generates in roughly 5 seconds after the model loads. Here's what you can generate and export: To get started: paste the GitHub repo link into Claude Code and ask it to install and register the MCP server. Or manually run git clone then ./install.sh. Requires Apple Silicon with 16 GB RAM recommended. MIT licensed.",
       "bullets": [
-        "Tag @bot in any post on X and Grok Bot gets to work right away.",
-        "Email now supports plus aliases, so routines only fire on specific inbound addresses.",
-        "Voice calls are faster, more reliable, and Bot now better remembers past conversations.",
-        "New connectors include Robinhood, Coinbase, Trello, PostHog, beehiiv, and eToro, plus teams can submit their own to the marketplace.",
-        "Notifications now go only to the device you are actively using."
+        "BGM, instrument loops, and sound effects from one sentence, up to 4 candidates at once",
+        "Edit existing clips: restyle, regenerate a section, or extend a track",
+        "Export as OGG, WAV, or FLAC for Godot or Unity, with loudness normalization baked in"
       ],
-      "image_url": "https://alphasignal.ai/image/1792386343791-4tf4p7.png",
-      "read_more_url": "https://x.ai/bot/marketplace/submit-a-plugin"
+      "image_url": "https://alphasignal.ai/image/1792472620423-c308p1.png",
+      "read_more_url": "https://github.com/kanaworksai-hue/audio-studio-mcp"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Anthropic's Claude designs quantum circuits up to 10x more efficient than published work",
+      "headline": "OpenAI upgrades its model to modernize legacy COBOL, Fortran, and Visual Basic code",
       "stat": {
         "type": "likes",
-        "value": 5409
+        "value": 5010
       },
-      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits"
+      "url": "https://openai.com/index/low-resource-programming-languages/"
     },
     {
       "rank": 2,
-      "headline": "ScrapeCreators releases social media research skills for AI coding agents",
+      "headline": "Nvidia's robot learning framework hits 99% success across 80 manipulation tasks",
       "stat": {
         "type": "stars",
-        "value": 4077
+        "value": 546
       },
-      "url": "https://github.com/ScrapeCreators/social-media-research-skills"
+      "url": "https://github.com/NVlabs/ASPIRE"
     },
     {
       "rank": 3,
-      "headline": "16-day multi-agent sim shows GPT behaved best while Grok's town collapsed in 4 days",
+      "headline": "Google DeepMind finds bad user guesses cut AI agent success rates by nearly half",
       "stat": {
         "type": "likes",
-        "value": 566
+        "value": 1194
       },
-      "url": "https://arxiv.org/abs/2609.17320"
+      "url": "https://arxiv.org/abs/2609.23939"
     },
     {
       "rank": 4,
-      "headline": "New distillation trick cuts image generation from 50 steps down to 8",
+      "headline": "Lucebox ships quantized DeepSeek V4.1 Flash builds optimized for AMD Radeon AI PRO",
       "stat": {
         "type": "downloads",
-        "value": 12410
+        "value": 3724
       },
-      "url": "https://huggingface.co/lodestones/MOSS-Image-SFT-8-steps-dmd"
+      "url": "https://huggingface.co/Lucebox/DeepSeek-V4.1-Flash-1017-ROCMFP-GGUF"
     },
     {
       "rank": 5,
-      "headline": "Claude builds a WebGPU water renderer from scratch in 30 minutes, no libraries",
+      "headline": "Claude Code strips Android TV bloatware over ADB, freeing 90% more RAM",
       "stat": {
         "type": "likes",
-        "value": 5167
+        "value": 4796
       },
-      "url": "https://github.com/Noniv/web-ocean"
+      "url": "https://github.com/Ansub/tv-detox"
     }
   ]
 }
