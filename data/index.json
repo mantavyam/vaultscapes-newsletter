@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-20T18:53:34Z",
+  "updated_at": "2026-10-21T19:06:12Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "21-10-2026",
+      "iso_date": "2026-10-21",
+      "type": "digest",
+      "subject": "🧬 Claude designs 318K proteins for scorpion antivenom autonomously",
+      "path": "data/2026/10-October/21-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/21-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/21-10-2026.html",
+      "headlines": [
+        "DeepSeek open-sources its production inference stack to cut AI compute costs",
+        "Anthropic uses Claude to design 300,000 proteins targeting deadly scorpion toxins",
+        "Anthropic drops 400+ free ready-to-use agents and skills for Claude"
+      ]
+    },
     {
       "date": "20-10-2026",
       "iso_date": "2026-10-20",

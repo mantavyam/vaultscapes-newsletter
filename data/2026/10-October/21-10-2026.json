@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "21-10-2026",
+  "iso_date": "2026-10-21",
+  "subject": "🧬 Claude designs 318K proteins for scorpion antivenom autonomously",
+  "intro": "AI is quietly moving from talking about science to doing science. Claude just autonomously designed 318,000 proteins targeting scorpion toxins. Meanwhile, a new GRAFT paper solves one of RL's oldest headaches: reward hacking, by letting models cheat freely into a disposable adapter, then deleting it. The pattern is clear: AI is getting better at self-directing and self-correcting. DeepSeek open-sourcing its inference stack and Anthropic dropping 400+ free agents the same week? The cost of building with AI just keeps falling.",
+  "read_time": "6 min 50 sec",
+  "summary": [
+    {
+      "category": "Top Repo",
+      "headline": "DeepSeek open-sources its production inference stack to cut AI compute costs",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic uses Claude to design 300,000 proteins targeting deadly scorpion toxins",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Anthropic drops 400+ free ready-to-use agents and skills for Claude",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Repo",
+      "headline": "DeepSeek open-sources its production inference stack to cut AI compute costs",
+      "likes": 32366,
+      "body": "DeepSeek just open-sourced DeepInfer , the actual engine running their models in production. Not a demo. Not a stripped-down version. The real thing. Think of an inference framework as the software layer between your model and your users. It decides how fast responses come back, how many users you can serve at once, and how much that costs you. DeepSeek is handing that over for free. Here's what's inside: Hardware support: NVIDIA SM100 and Huawei Ascend 950. Older Nvidia architectures are not supported yet. License is Apache 2.0, so you can use it commercially. Future DeepSeek model updates land here too.",
+      "bullets": [
+        "Speculative decoding via DSpark : drafts 5 tokens ahead, checks only the most confident ones, cutting verification work by ~30% and boosting throughput 4-7%",
+        "Distributed inference : splits work across many GPUs instead of choking on one",
+        "Structured outputs : constrain responses to JSON schemas or regex patterns out of the box",
+        "deepseek-recipe : token encoding that matches the official API exactly, so your self-hosted version behaves identically"
+      ],
+      "image_url": "https://alphasignal.ai/image/1792558971386-a8l70g.png",
+      "read_more_url": "https://github.com/deepseek-ai/DeepInfer"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic uses Claude to design 300,000 proteins targeting deadly scorpion toxins",
+      "likes": 7389,
+      "body": "Scorpions sting 1.2 million people every year. Antivenoms are expensive and often out of stock. Treating a sting can mean finding a molecule that physically grabs onto the toxin before it reaches your nerve cells. That search normally takes years. Anthropic just showed Claude can do a big chunk of that work autonomously. Claude chose target sites on five scorpion toxins, set its own scoring thresholds, generated 318,484 candidate proteins using 12 design tools, and picked 180 to send to two labs for testing. All from a single prompt and four follow-ups. Here is what the lab results showed: The 17 candidates have not yet been shown to neutralize venom in cells or protect animals from stings. But this shows AI can now run early drug discovery searches that used to require entire lab teams.",
+      "bullets": [
+        "211 designs were tested, and 17 met strict binding criteria.",
+        "The strongest hits bind the Mexican Cn2 toxin at single-digit nanomolar affinity.",
+        "No design bound more than one toxin, and none bound the Brazilian Ts1.",
+        "All 211 designs and lab data are publicly released."
+      ],
+      "image_url": "https://alphasignal.ai/image/1792559054797-moj49t.png",
+      "read_more_url": "https://www-cdn.anthropic.com/31ac578806cffd8b3d92d8affe6edc4c04d502e1.pdf"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Anthropic drops 400+ free ready-to-use agents and skills for Claude",
+      "likes": 5197,
+      "body": "Anthropic just dropped a massive free library of 400+ agents, skills, and plugins for Claude. Think of skills as pre-built instruction sets that tell Claude exactly how to handle specific tasks, no setup required. Here's what's available across the main repos: Every plugin is just markdown and JSON files. No code, no build steps. You pick only what you need, customize it for your stack, and Claude starts working like it knows your team. Install with: claude plugin marketplace add anthropics/knowledge-work-plugins , then install individual plugins per role.",
+      "bullets": [
+        "knowledge-work-plugins : 11 role-based plugins covering sales, legal, finance, data, marketing, product, and more. Each one connects Claude to your real tools like Slack, Jira, HubSpot, and Snowflake.",
+        "claude-plugins-official : 202 agents, 184 skills, and 105 commands across 94 plugins built for Claude Code. Covers code review, debugging, security, and CI/CD.",
+        "claude-quickstarts : 25 skills covering the full dev cycle, from writing specs to browser testing to security review. Best starting point."
+      ],
+      "image_url": "https://alphasignal.ai/image/1792558990282-v2kzuf.png",
+      "read_more_url": "https://github.com/anthropics/knowledge-work-plugins"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Researchers cut Qwen3 censorship from 58% to 2% with no retraining",
+      "stat": {
+        "type": "likes",
+        "value": 3532
+      },
+      "url": "https://huggingface.co/zjj1993/Qwen3.8-Flash-Next-uncensored-china"
+    },
+    {
+      "rank": 2,
+      "headline": "ECCV 2024 method combines 3D scene rendering with real-time semantic mapping",
+      "stat": {
+        "type": "stars",
+        "value": 713
+      },
+      "url": "https://github.com/ShuhongLL/SGS-SLAM"
+    },
+    {
+      "rank": 3,
+      "headline": "New training trick stops AI reward hacking without hiding it deeper",
+      "stat": {
+        "type": "likes",
+        "value": 1741
+      },
+      "url": "https://arxiv.org/abs/2610.17062"
+    },
+    {
+      "rank": 4,
+      "headline": "New residual trick stops looped transformers from \"overthinking\" and scales to 20,000 steps",
+      "stat": {
+        "type": "likes",
+        "value": 788
+      },
+      "url": "https://arxiv.org/abs/2610.11570"
+    },
+    {
+      "rank": 5,
+      "headline": "Timestral predicts what comes next when you draw a curve",
+      "stat": {
+        "type": "likes",
+        "value": 2342
+      },
+      "url": "https://huggingface.co/mistralai/Timestral-5M"
+    }
+  ]
+}

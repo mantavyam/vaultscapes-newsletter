@@ -1,118 +1,119 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "20-10-2026",
-  "iso_date": "2026-10-20",
-  "subject": "DeepSeek V4.1-Flash 🚀, Anthropic OSS Scanner 🛡️, DeepMind Agent Study",
-  "intro": "Today's news tells one story: AI is getting better at doing things, but humans keep getting in the way. DeepSeek ships a faster open-source Flash model with a free search API. Anthropic's OSS Scanner found 880 critical bugs in a week. Both are AI acting in the world, autonomously, at scale. That's the trend. Then DeepMind drops the plot twist: one wrong hint from you tanks agent performance by nearly half. The bottleneck isn't the model anymore.",
-  "read_time": "7 min 44 sec",
+  "date": "21-10-2026",
+  "iso_date": "2026-10-21",
+  "subject": "🧬 Claude designs 318K proteins for scorpion antivenom autonomously",
+  "intro": "AI is quietly moving from talking about science to doing science. Claude just autonomously designed 318,000 proteins targeting scorpion toxins. Meanwhile, a new GRAFT paper solves one of RL's oldest headaches: reward hacking, by letting models cheat freely into a disposable adapter, then deleting it. The pattern is clear: AI is getting better at self-directing and self-correcting. DeepSeek open-sourcing its inference stack and Anthropic dropping 400+ free agents the same week? The cost of building with AI just keeps falling.",
+  "read_time": "6 min 50 sec",
   "summary": [
     {
-      "category": "Top News",
-      "headline": "DeepSeek ships open-source Flash model with faster outputs and free search API",
+      "category": "Top Repo",
+      "headline": "DeepSeek open-sources its production inference stack to cut AI compute costs",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "Anthropic's free scanner found 77 critical bugs in open-source projects in one week",
+      "headline": "Anthropic uses Claude to design 300,000 proteins targeting deadly scorpion toxins",
       "news_id": "news-2"
     },
     {
       "category": "Top Repo",
-      "headline": "Open-source tool generates game audio locally in seconds, no API key needed",
+      "headline": "Anthropic drops 400+ free ready-to-use agents and skills for Claude",
       "news_id": "news-3"
     }
   ],
   "news": [
     {
       "id": "news-1",
-      "category": "Top News",
-      "headline": "DeepSeek ships open-source Flash model with faster outputs and free search API",
-      "likes": 45288,
-      "body": "DeepSeek just dropped V4.1-Flash-1017 , and it's a straight upgrade: faster, cheaper, and shorter outputs than the previous version. No tradeoffs. The big idea? It uses a technique called reinforcement learning with self-feedback , meaning the model practices tasks, grades its own results, and improves. Think of it like a student who keeps retaking a test until they nail it. This makes it genuinely good at building full projects from scratch, not just answering questions. Here's what's new and usable right now: The Search and Fetch APIs let your app pull live web data without building your own scraper. That's a big unlock for anyone building research tools or AI agents.",
+      "category": "Top Repo",
+      "headline": "DeepSeek open-sources its production inference stack to cut AI compute costs",
+      "likes": 32366,
+      "body": "DeepSeek just open-sourced DeepInfer , the actual engine running their models in production. Not a demo. Not a stripped-down version. The real thing. Think of an inference framework as the software layer between your model and your users. It decides how fast responses come back, how many users you can serve at once, and how much that costs you. DeepSeek is handing that over for free. Here's what's inside: Hardware support: NVIDIA SM100 and Huawei Ascend 950. Older Nvidia architectures are not supported yet. License is Apache 2.0, so you can use it commercially. Future DeepSeek model updates land here too.",
       "bullets": [
-        "Model is open-source on Hugging Face and ModelScope",
-        "Search and Fetch APIs are now public at $0.75 per 1,000 calls",
-        "Works with Claude Code, Codex, and DeepSeek Harness (upgrade to v0.2.1-rc.1)",
-        "Search and Fetch calls via server-side tools are free for API users until Oct 31"
+        "Speculative decoding via DSpark : drafts 5 tokens ahead, checks only the most confident ones, cutting verification work by ~30% and boosting throughput 4-7%",
+        "Distributed inference : splits work across many GPUs instead of choking on one",
+        "Structured outputs : constrain responses to JSON schemas or regex patterns out of the box",
+        "deepseek-recipe : token encoding that matches the official API exactly, so your self-hosted version behaves identically"
       ],
-      "image_url": "https://alphasignal.ai/image/1792472706904-plbs13.png",
-      "read_more_url": "https://modelscope.cn/models/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      "image_url": "https://alphasignal.ai/image/1792558971386-a8l70g.png",
+      "read_more_url": "https://github.com/deepseek-ai/DeepInfer"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "Anthropic's free scanner found 77 critical bugs in open-source projects in one week",
-      "likes": 8010,
-      "body": "Anthropic just launched OSS Scanner , a free tool that automatically hunts for security holes in open-source projects using its strongest AI models. Think of it as a tireless security intern that never sleeps and never misses a bug. Here's the problem it solves: almost all software relies on open-source code, much of it maintained by small teams of volunteers. Those teams rarely have time for deep security audits. OSS Scanner fills that gap. What you actually get per report: Early results: 77 critical and 803 high-severity findings already reported to maintainers. These included multiple vulnerabilities chained to unauthenticated remote code execution exploits. To enroll, open a pull request adding a directory under projects/name with a project.yaml file containing your repo address and contact email. Anthropic verifies you're a core maintainer before accepting.",
+      "headline": "Anthropic uses Claude to design 300,000 proteins targeting deadly scorpion toxins",
+      "likes": 7389,
+      "body": "Scorpions sting 1.2 million people every year. Antivenoms are expensive and often out of stock. Treating a sting can mean finding a molecule that physically grabs onto the toxin before it reaches your nerve cells. That search normally takes years. Anthropic just showed Claude can do a big chunk of that work autonomously. Claude chose target sites on five scorpion toxins, set its own scoring thresholds, generated 318,484 candidate proteins using 12 design tools, and picked 180 to send to two labs for testing. All from a single prompt and four follow-ups. Here is what the lab results showed: The 17 candidates have not yet been shown to neutralize venom in cells or protect animals from stings. But this shows AI can now run early drug discovery searches that used to require entire lab teams.",
       "bullets": [
-        "A working proof-of-concept that reproduces the bug",
-        "A plain explanation of why it's dangerous",
-        "A suggested patch where possible"
+        "211 designs were tested, and 17 met strict binding criteria.",
+        "The strongest hits bind the Mexican Cn2 toxin at single-digit nanomolar affinity.",
+        "No design bound more than one toxin, and none bound the Brazilian Ts1.",
+        "All 211 designs and lab data are publicly released."
       ],
-      "image_url": "https://alphasignal.ai/image/1792472717226-yqw4hi.png",
-      "read_more_url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source"
+      "image_url": "https://alphasignal.ai/image/1792559054797-moj49t.png",
+      "read_more_url": "https://www-cdn.anthropic.com/31ac578806cffd8b3d92d8affe6edc4c04d502e1.pdf"
     },
     {
       "id": "news-3",
       "category": "Top Repo",
-      "headline": "Open-source tool generates game audio locally in seconds, no API key needed",
-      "likes": 5296,
-      "body": "Audio Studio MCP is a free, open-source tool that generates background music and sound effects directly on your Mac. No cloud, no API key, no cost per generation. The problem it solves: game audio and video sound design used to mean paid subscriptions or hunting royalty-free libraries. Now you just describe what you want in plain English. Under the hood it runs Stable Audio 3 (Stability AI's audio model) locally on Apple Silicon. On an M1 Mac, a 60-second track generates in roughly 5 seconds after the model loads. Here's what you can generate and export: To get started: paste the GitHub repo link into Claude Code and ask it to install and register the MCP server. Or manually run git clone then ./install.sh. Requires Apple Silicon with 16 GB RAM recommended. MIT licensed.",
+      "headline": "Anthropic drops 400+ free ready-to-use agents and skills for Claude",
+      "likes": 5197,
+      "body": "Anthropic just dropped a massive free library of 400+ agents, skills, and plugins for Claude. Think of skills as pre-built instruction sets that tell Claude exactly how to handle specific tasks, no setup required. Here's what's available across the main repos: Every plugin is just markdown and JSON files. No code, no build steps. You pick only what you need, customize it for your stack, and Claude starts working like it knows your team. Install with: claude plugin marketplace add anthropics/knowledge-work-plugins , then install individual plugins per role.",
       "bullets": [
-        "BGM, instrument loops, and sound effects from one sentence, up to 4 candidates at once",
-        "Edit existing clips: restyle, regenerate a section, or extend a track",
-        "Export as OGG, WAV, or FLAC for Godot or Unity, with loudness normalization baked in"
+        "knowledge-work-plugins : 11 role-based plugins covering sales, legal, finance, data, marketing, product, and more. Each one connects Claude to your real tools like Slack, Jira, HubSpot, and Snowflake.",
+        "claude-plugins-official : 202 agents, 184 skills, and 105 commands across 94 plugins built for Claude Code. Covers code review, debugging, security, and CI/CD.",
+        "claude-quickstarts : 25 skills covering the full dev cycle, from writing specs to browser testing to security review. Best starting point."
       ],
-      "image_url": "https://alphasignal.ai/image/1792472620423-c308p1.png",
-      "read_more_url": "https://github.com/kanaworksai-hue/audio-studio-mcp"
+      "image_url": "https://alphasignal.ai/image/1792558990282-v2kzuf.png",
+      "read_more_url": "https://github.com/anthropics/knowledge-work-plugins"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "OpenAI upgrades its model to modernize legacy COBOL, Fortran, and Visual Basic code",
+      "headline": "Researchers cut Qwen3 censorship from 58% to 2% with no retraining",
       "stat": {
         "type": "likes",
-        "value": 5010
+        "value": 3532
       },
-      "url": "https://openai.com/index/low-resource-programming-languages/"
+      "url": "https://huggingface.co/zjj1993/Qwen3.8-Flash-Next-uncensored-china"
     },
     {
       "rank": 2,
-      "headline": "Nvidia's robot learning framework hits 99% success across 80 manipulation tasks",
+      "headline": "ECCV 2024 method combines 3D scene rendering with real-time semantic mapping",
       "stat": {
         "type": "stars",
-        "value": 546
+        "value": 713
       },
-      "url": "https://github.com/NVlabs/ASPIRE"
+      "url": "https://github.com/ShuhongLL/SGS-SLAM"
     },
     {
       "rank": 3,
-      "headline": "Google DeepMind finds bad user guesses cut AI agent success rates by nearly half",
+      "headline": "New training trick stops AI reward hacking without hiding it deeper",
       "stat": {
         "type": "likes",
-        "value": 1194
+        "value": 1741
       },
-      "url": "https://arxiv.org/abs/2609.23939"
+      "url": "https://arxiv.org/abs/2610.17062"
     },
     {
       "rank": 4,
-      "headline": "Lucebox ships quantized DeepSeek V4.1 Flash builds optimized for AMD Radeon AI PRO",
+      "headline": "New residual trick stops looped transformers from \"overthinking\" and scales to 20,000 steps",
       "stat": {
-        "type": "downloads",
-        "value": 3724
+        "type": "likes",
+        "value": 788
       },
-      "url": "https://huggingface.co/Lucebox/DeepSeek-V4.1-Flash-1017-ROCMFP-GGUF"
+      "url": "https://arxiv.org/abs/2610.11570"
     },
     {
       "rank": 5,
-      "headline": "Claude Code strips Android TV bloatware over ADB, freeing 90% more RAM",
+      "headline": "Timestral predicts what comes next when you draw a curve",
       "stat": {
         "type": "likes",
-        "value": 4796
+        "value": 2342
       },
-      "url": "https://github.com/Ansub/tv-detox"
+      "url": "https://huggingface.co/mistralai/Timestral-5M"
     }
   ]
 }
