@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-21T19:06:12Z",
+  "updated_at": "2026-10-22T19:02:40Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "22-10-2026",
+      "iso_date": "2026-10-22",
+      "type": "digest",
+      "subject": "DeepSeek DeepInfer 🔓, Claude Duet Agent 🤖, EAGLE-4 961 tok/s ⚡",
+      "path": "data/2026/10-October/22-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/22-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/22-10-2026.html",
+      "headlines": [
+        "DeepSeek open-sources its production inference engine to cut compute costs",
+        "Anthropic previews Claude Duet, a proactive agent that works while you're away",
+        "Unitree unveils a kung fu humanoid robot with 8-hour battery life"
+      ]
+    },
     {
       "date": "21-10-2026",
       "iso_date": "2026-10-21",
