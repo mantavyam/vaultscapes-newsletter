@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-22T19:02:40Z",
+  "updated_at": "2026-10-23T18:52:51Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "23-10-2026",
+      "iso_date": "2026-10-23",
+      "type": "digest",
+      "subject": "Claude Security 🛡️, Hermes Robot Agent 🤖, Meta Byte Models 🧠",
+      "path": "data/2026/10-October/23-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/23-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/23-10-2026.html",
+      "headlines": [
+        "Anthropic launches Claude Security to scan and track code vulnerabilities automatically",
+        "Nous Research's Hermes agent builds and trains a robot duck sim in one prompt",
+        "Grok Bot now controls your phone's calendar, reminders, and contacts"
+      ]
+    },
     {
       "date": "22-10-2026",
       "iso_date": "2026-10-22",

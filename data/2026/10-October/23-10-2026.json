@@ -1,0 +1,121 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "23-10-2026",
+  "iso_date": "2026-10-23",
+  "subject": "Claude Security 🛡️, Hermes Robot Agent 🤖, Meta Byte Models 🧠",
+  "intro": "AI is quietly eating its own assumptions. Tokens, static scanners, hand-held agent workflows: all getting replaced this week. Anthropic now watches your code continuously, open-source Hermes trained a real robot from a single prompt on Jensen's keynote stage, and Meta proved the tokenizer itself was never necessary. Smaller, faster, cheaper, on less data. The pattern is clear: we are compressing the entire stack, from infrastructure to architecture.",
+  "read_time": "7 min 34 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic launches Claude Security to scan and track code vulnerabilities automatically",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Nous Research's Hermes agent builds and trains a robot duck sim in one prompt",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Grok Bot now controls your phone's calendar, reminders, and contacts",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic launches Claude Security to scan and track code vulnerabilities automatically",
+      "likes": 11456,
+      "body": "Old security scanners had a big problem: they gave you a snapshot. Code kept moving, but your findings stayed frozen in time. Claude Security just fixed that. Connect your repos once from GitHub, GitLab, or any Git provider. Claude does a deep first scan, then keeps watching. Every time code changes, it re-scans automatically. No manual triggers needed. The really useful part: fix tracking . When your team ships a patch, Claude checks the changed code and marks the issue resolved, even if the fix happened outside Claude Security. And if the bug sneaks back in later, the finding reopens on its own. Each project also gets a threat model (a written summary of where your code is most at risk) that Claude generates from your actual code, and your team can edit it. It is live now in public beta for Claude Enterprise customers.",
+      "bullets": [
+        "Findings delivered via a new API and MCP connector, so they plug into your existing tools",
+        "Spans multiple repos, catching bugs that cross service boundaries",
+        "$25K/month in free credits for two months for eligible orgs"
+      ],
+      "image_url": "https://alphasignal.ai/image/1792731988278-70t4o6.png",
+      "read_more_url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Nous Research's Hermes agent builds and trains a robot duck sim in one prompt",
+      "likes": 9791,
+      "body": "Jensen Huang just closed his GTC Berlin keynote with a live Hermes Agent demo, and it was a proper flex for open source AI. Here is what happened. Jensen typed one prompt. Hermes installed itself, configured itself, and got to work. No hand-holding. That single prompt kicked off a full robot training pipeline. Hermes then coordinated a chain of tools to train Hugging Face's tiny Microduck robot : Hermes is MIT-licensed , runs locally or in the cloud, and supports 300+ models with no vendor lock-in. You can chain local models, cloud models, and real-world tools yourself, without waiting for any company to build that workflow for you. That is the whole point. You own the stack.",
+      "bullets": [
+        "Nemotron planned the obstacle course",
+        "GPT-6 Astra built it using FreeCAD, Blender, Omniverse, Newton, and Isaac Lab",
+        "Thousands of simulated ducks trained in parallel until the policy was ready",
+        "That policy then ran on the real physical robot"
+      ],
+      "image_url": "https://alphasignal.ai/image/1792732018364-748o62.png",
+      "read_more_url": "https://x.com/NousResearch/status/2113010017645244623"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Grok Bot now controls your phone's calendar, reminders, and contacts",
+      "likes": 8528,
+      "body": "Grok Bot just got a lot more useful on your phone. It can now tap into your native phone apps, not just chat with you. Six apps are now supported: You grant access app by app . Want it to manage reminders but not messages? Done. You stay in control of your data. The big deal here: your phone already syncs calendars and contacts from iCloud, Google, and Exchange. Grok sees all of that in one shot, with no extra setup needed per account. Just update the app on iOS or Android and you are good to go.",
+      "bullets": [
+        "Messages - read and send texts",
+        "Calendar - check your schedule and add events",
+        "Reminders - set and check reminders",
+        "Contacts - find and add people",
+        "Location - find places near you",
+        "Home - control lights and locks"
+      ],
+      "image_url": "https://alphasignal.ai/image/1792732047061-phf3rd.png",
+      "read_more_url": "https://apps.apple.com/us/app/grok-bot/id6794501026"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "8 GitHub repos to build videos with Claude, ranked by stars",
+      "stat": {
+        "type": "likes",
+        "value": 8205
+      },
+      "url": "https://github.com/JohnHeibel/ClaudeAnimationBase"
+    },
+    {
+      "rank": 2,
+      "headline": "Meta proves byte-based models beat token-based Llama and Gemma with one-sixth the data",
+      "stat": {
+        "type": "likes",
+        "value": 2848
+      },
+      "url": "https://arxiv.org/abs/2609.12303"
+    },
+    {
+      "rank": 3,
+      "headline": "Open-source memory model beats transformer rivals on long-context benchmarks",
+      "stat": {
+        "type": "likes",
+        "value": 500
+      },
+      "url": "https://arxiv.org/abs/2610.26834"
+    },
+    {
+      "rank": 4,
+      "headline": "BRIA AI's image diffusion model gets repackaged for ComfyUI with int8 support",
+      "stat": {
+        "type": "downloads",
+        "value": 56780
+      },
+      "url": "https://huggingface.co/Comfy-Org/Fibo-2.0"
+    },
+    {
+      "rank": 5,
+      "headline": "Recursive releases open-weight coding model that hits 150 tokens/sec on a laptop",
+      "stat": {
+        "type": "likes",
+        "value": 8083
+      },
+      "url": "https://huggingface.co/RecursiveSI/flint"
+    }
+  ]
+}

@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "22-10-2026",
-  "iso_date": "2026-10-22",
-  "subject": "DeepSeek DeepInfer 🔓, Claude Duet Agent 🤖, EAGLE-4 961 tok/s ⚡",
-  "intro": "Inference speed is having a moment. DeepSeek just open-sourced its actual production engine. FlashMap hits 6x faster inference. EAGLE-4 clocks 961 tokens/s. The whole stack is getting faster, cheaper, and more open. Meanwhile, Anthropic ships Claude Duet, a proactive agent that works while you sleep. Faster inference enables exactly this: always-on agents that don't burn your budget. Speed unlocks behavior. That's the real story today.",
-  "read_time": "7 min 48 sec",
+  "date": "23-10-2026",
+  "iso_date": "2026-10-23",
+  "subject": "Claude Security 🛡️, Hermes Robot Agent 🤖, Meta Byte Models 🧠",
+  "intro": "AI is quietly eating its own assumptions. Tokens, static scanners, hand-held agent workflows: all getting replaced this week. Anthropic now watches your code continuously, open-source Hermes trained a real robot from a single prompt on Jensen's keynote stage, and Meta proved the tokenizer itself was never necessary. Smaller, faster, cheaper, on less data. The pattern is clear: we are compressing the entire stack, from infrastructure to architecture.",
+  "read_time": "7 min 34 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "DeepSeek open-sources its production inference engine to cut compute costs",
+      "headline": "Anthropic launches Claude Security to scan and track code vulnerabilities automatically",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "Anthropic previews Claude Duet, a proactive agent that works while you're away",
+      "headline": "Nous Research's Hermes agent builds and trains a robot duck sim in one prompt",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "Unitree unveils a kung fu humanoid robot with 8-hour battery life",
+      "headline": "Grok Bot now controls your phone's calendar, reminders, and contacts",
       "news_id": "news-3"
     }
   ],
@@ -27,96 +27,95 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "DeepSeek open-sources its production inference engine to cut compute costs",
-      "likes": 49039,
-      "body": "DeepSeek just open-sourced DeepInfer , the actual engine running their models in production. Not a demo. Not a research paper. The real thing. Think of an inference engine as the software layer that takes a trained AI model and makes it answer questions fast, at scale, without melting your server budget. That is what DeepInfer does. Here is what is inside: They also dropped deepseek-recipe , a token encoding library that mirrors the official DeepSeek API exactly. Self-host it and your outputs behave identically to the hosted version. No more subtle mismatches. Both repos are on GitHub under Apache 2.0 . Future model code lands here too.",
+      "headline": "Anthropic launches Claude Security to scan and track code vulnerabilities automatically",
+      "likes": 11456,
+      "body": "Old security scanners had a big problem: they gave you a snapshot. Code kept moving, but your findings stayed frozen in time. Claude Security just fixed that. Connect your repos once from GitHub, GitLab, or any Git provider. Claude does a deep first scan, then keeps watching. Every time code changes, it re-scans automatically. No manual triggers needed. The really useful part: fix tracking . When your team ships a patch, Claude checks the changed code and marks the issue resolved, even if the fix happened outside Claude Security. And if the bug sneaks back in later, the finding reopens on its own. Each project also gets a threat model (a written summary of where your code is most at risk) that Claude generates from your actual code, and your team can edit it. It is live now in public beta for Claude Enterprise customers.",
       "bullets": [
-        "Speculative decoding via DSpark: a draft model guesses tokens ahead, a confidence filter trims ~30% of checks, netting a 4-7% throughput gain",
-        "Distributed inference to split work across multiple chips",
-        "Structured outputs so responses follow a set format",
-        "Runs on Nvidia SM100 and Huawei Ascend 950 chips"
+        "Findings delivered via a new API and MCP connector, so they plug into your existing tools",
+        "Spans multiple repos, catching bugs that cross service boundaries",
+        "$25K/month in free credits for two months for eligible orgs"
       ],
-      "image_url": "https://alphasignal.ai/image/1792645560447-clz5gc.png",
-      "read_more_url": "https://github.com/deepseek-ai/deepseek-recipe"
+      "image_url": "https://alphasignal.ai/image/1792731988278-70t4o6.png",
+      "read_more_url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "Anthropic previews Claude Duet, a proactive agent that works while you're away",
-      "likes": 42516,
-      "body": "Most AI tools sit there waiting for you to type something. Claude Duet flips that. It comes to you. Anthropic just launched a research preview of Duet, a standalone app where Claude acts as a proactive agent. Think of it less like a chatbot and more like a background worker that monitors your apps, surfaces what matters, and handles tasks while you are away. Here is what it actually does: It runs on Claude Opus 5.5 and pulls in your existing Claude memory and connected apps, so setup is minimal. It never sees your passwords, and a dedicated safety layer guards against leaking sensitive info. Access is via waitlist for Pro and Max subscribers in the US, at no extra cost, though background tasks count toward your usage limits.",
+      "headline": "Nous Research's Hermes agent builds and trains a robot duck sim in one prompt",
+      "likes": 9791,
+      "body": "Jensen Huang just closed his GTC Berlin keynote with a live Hermes Agent demo, and it was a proper flex for open source AI. Here is what happened. Jensen typed one prompt. Hermes installed itself, configured itself, and got to work. No hand-holding. That single prompt kicked off a full robot training pipeline. Hermes then coordinated a chain of tools to train Hugging Face's tiny Microduck robot : Hermes is MIT-licensed , runs locally or in the cloud, and supports 300+ models with no vendor lock-in. You can chain local models, cloud models, and real-world tools yourself, without waiting for any company to build that workflow for you. That is the whole point. You own the stack.",
       "bullets": [
-        "Sends you a morning brief from your connected apps",
-        "Monitors email, calendars, and Slack, then pings you only when something needs you",
-        "Connects to 6,000+ tools including invoicing and scheduling",
-        "Keeps running in the cloud even when your device is off",
-        "Asks your approval before sending messages, payments, or deleting anything"
+        "Nemotron planned the obstacle course",
+        "GPT-6 Astra built it using FreeCAD, Blender, Omniverse, Newton, and Isaac Lab",
+        "Thousands of simulated ducks trained in parallel until the policy was ready",
+        "That policy then ran on the real physical robot"
       ],
-      "image_url": "https://alphasignal.ai/image/1792645575325-hz99zx.png",
-      "read_more_url": "https://claude.com/resources/articles/claude-duet"
+      "image_url": "https://alphasignal.ai/image/1792732018364-748o62.png",
+      "read_more_url": "https://x.com/NousResearch/status/2113010017645244623"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "Unitree unveils a kung fu humanoid robot with 8-hour battery life",
-      "likes": 20309,
-      "body": "Unitree just dropped the H2-X Kung Fu Legend Guardian , a humanoid robot built for security and rescue. Think less warehouse helper, more bodyguard with a black belt. Here is what it can actually do: It stands 182cm tall, weighs 70kg, and has 31 movable joints. Unitree actually warns you to stay 2-3 meters away while it operates. That tells you everything about how much force those joints generate. No pricing or release date announced yet. The base H2 starts at $29,900 for context.",
+      "headline": "Grok Bot now controls your phone's calendar, reminders, and contacts",
+      "likes": 8528,
+      "body": "Grok Bot just got a lot more useful on your phone. It can now tap into your native phone apps, not just chat with you. Six apps are now supported: You grant access app by app . Want it to manage reminders but not messages? Done. You stay in control of your data. The big deal here: your phone already syncs calendars and contacts from iCloud, Google, and Exchange. Grok sees all of that in one shot, with no extra setup needed per account. Just update the app on iOS or Android and you are good to go.",
       "bullets": [
-        "Run for 8 hours on a single charge, nearly triple the base H2's 3-hour battery life",
-        "Jump off 4-meter platforms and land without falling over",
-        "Lift cars to free people trapped underneath",
-        "Execute real martial arts moves using an AI model that predicts opponent actions in real-time, no human controlling it",
-        "Pack 2,070 TOPS of onboard AI compute, roughly the processing muscle needed to run complex decisions locally"
+        "Messages - read and send texts",
+        "Calendar - check your schedule and add events",
+        "Reminders - set and check reminders",
+        "Contacts - find and add people",
+        "Location - find places near you",
+        "Home - control lights and locks"
       ],
-      "image_url": "https://alphasignal.ai/image/1792645616750-fdw2p3.png",
-      "read_more_url": "https://x.com/UnitreeRobotics/status/2112819774573179175"
+      "image_url": "https://alphasignal.ai/image/1792732047061-phf3rd.png",
+      "read_more_url": "https://apps.apple.com/us/app/grok-bot/id6794501026"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "OpenAI models find critical security flaw in PHP, which powers 70% of websites",
+      "headline": "8 GitHub repos to build videos with Claude, ranked by stars",
       "stat": {
         "type": "likes",
-        "value": 13781
+        "value": 8205
       },
-      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/"
+      "url": "https://github.com/JohnHeibel/ClaudeAnimationBase"
     },
     {
       "rank": 2,
-      "headline": "Nebius drops open cookbook for building AI apps with open-source models",
+      "headline": "Meta proves byte-based models beat token-based Llama and Gemma with one-sixth the data",
       "stat": {
-        "type": "stars",
-        "value": 269
+        "type": "likes",
+        "value": 2848
       },
-      "url": "https://github.com/nebius/token-factory-cookbook"
+      "url": "https://arxiv.org/abs/2609.12303"
     },
     {
       "rank": 3,
-      "headline": "New speculative decoding method hits 6x faster inference on Qwen3-8B",
+      "headline": "Open-source memory model beats transformer rivals on long-context benchmarks",
       "stat": {
         "type": "likes",
-        "value": 521
+        "value": 500
       },
-      "url": "https://arxiv.org/abs/2610.24365"
+      "url": "https://arxiv.org/abs/2610.26834"
     },
     {
       "rank": 4,
-      "headline": "DeepSeek V4.1 Flash gets a 339 GB GGUF quantization that runs on consumer hardware",
+      "headline": "BRIA AI's image diffusion model gets repackaged for ComfyUI with int8 support",
       "stat": {
         "type": "downloads",
-        "value": 23033
+        "value": 56780
       },
-      "url": "https://huggingface.co/peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF"
+      "url": "https://huggingface.co/Comfy-Org/Fibo-2.0"
     },
     {
       "rank": 5,
-      "headline": "EAGLE-4 hits 961 tokens/s, up to 4x faster than vanilla LLM inference",
+      "headline": "Recursive releases open-weight coding model that hits 150 tokens/sec on a laptop",
       "stat": {
         "type": "likes",
-        "value": 8470
+        "value": 8083
       },
-      "url": "https://github.com/eagle-hq/EAGLE-4"
+      "url": "https://huggingface.co/RecursiveSI/flint"
     }
   ]
 }
