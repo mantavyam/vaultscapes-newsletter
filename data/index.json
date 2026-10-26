@@ -1,7 +1,39 @@
 {
-  "updated_at": "2026-10-23T18:52:51Z",
+  "updated_at": "2026-10-26T20:17:39Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "26-10-2026",
+      "iso_date": "2026-10-26",
+      "type": "digest",
+      "subject": "OpenAI paused all frontier training after its own model broke out sile",
+      "path": "data/2026/10-October/26-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/26-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/26-10-2026.html",
+      "headlines": [
+        "Kimi releases 104B open-weight model beating GPT-6 on coding with 1M-token context",
+        "OpenAI paused frontier training after a model escaped its sandbox via DNS",
+        "Modders double AI compute on NVIDIA RTX GPUs by removing software limits"
+      ]
+    },
+    {
+      "date": "25-10-2026",
+      "iso_date": "2026-10-25",
+      "type": "article",
+      "subject": "🛠️ Stop Overengineering AI Agent Memory, New Study Suggests",
+      "path": "data/2026/10-October/25-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/25-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/25-10-2026.html",
+      "headlines": [
+        "What MemoryTax tested",
+        "What they found",
+        "1. Stronger models change memory economics",
+        "2. Memory is limited by what gets preserved",
+        "3. Model-directed search can lower costs"
+      ],
+      "title": "The hidden memory tax in AI agents",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "23-10-2026",
       "iso_date": "2026-10-23",

@@ -1,0 +1,164 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "25-10-2026",
+  "iso_date": "2026-10-25",
+  "subject": "🛠️ Stop Overengineering AI Agent Memory, New Study Suggests",
+  "kicker": "Sunday Deep Dive",
+  "title": "The hidden memory tax in AI agents",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "AI agents need memory to handle long-running tasks. But adding a memory layer isn't free. Extracting facts, building knowledge graphs, and retrieving past information all come with costs. And sometimes, these systems can make agents less effective. A new study puts seven memory approaches to the test, raising important questions about how developers should design their agent stacks. Today we break down the hidden memory tax and when it's worth paying.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "AI agents might carry out sessions or conversations that last for a long time. For example, a customer-support agent might interact with a client for six months."
+    },
+    {
+      "kind": "paragraph",
+      "html": "When asked about an earlier purchase or promise, should it search the original conversations or rely on a structured memory system that extracts important details? The answer affects the agent's accuracy, inference costs and maintenance."
+    },
+    {
+      "kind": "paragraph",
+      "html": "<a href=\"https://arxiv.org/html/2610.29823\">MemoryTax</a> , a new study by Shanghai Jiao Tong University, tests seven ways agents can access past conversations. The findings suggest that weaker models can benefit from structured memory but stronger models often do better when given the raw information."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For developers, the question is when building a separate memory layer earns back its cost."
+    },
+    {
+      "kind": "heading",
+      "text": "What MemoryTax tested"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The study used one conversation from <a href=\"https://github.com/snap-research/locomo\">LoCoMo</a> , a benchmark for long-term conversations with hundreds of turns. The experiment tests the agent’s ability for factual recall, connections across messages, and the sequence of events."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1792938942235-7hm7f5.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "They tested seven different memory approaches paired with three models: GPT-4o-mini, GPT-6 Luna, and Claude Opus 5.5."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The seven approaches fall into several groups:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "<b>Full context:</b> The entire conversation is inserted in the model's prompt. This avoids building a separate memory store but repeatedly processes the same history.",
+        "<b>Retrieved memory:</b> The system uses an algorithm like BM25 to search the raw history and retrieve the parts that are relevant to the question.",
+        "<b>Precomputed memory:</b> These are memory consolidation techniques like <a href=\"https://github.com/mem0ai/mem0\">Mem0</a> , which uses a model to extract and update useful facts, then retrieves them later. Another is <a href=\"https://arxiv.org/abs/2501.13956\">Zep</a> , which builds a knowledge graph that links different elements in the conversation history.",
+        "<b>Agent-directed search:</b> A harness like Pi, Codex, or Claude Code receive the original conversation as a JSON file. The model could choose which parts to inspect using its tools."
+      ]
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers used GPT-4o-mini to judge correctness of answers."
+    },
+    {
+      "kind": "heading",
+      "text": "What they found"
+    },
+    {
+      "kind": "heading",
+      "text": "1. Stronger models change memory economics"
+    },
+    {
+      "kind": "paragraph",
+      "html": "With GPT-4o-mini, Mem0 achieved the highest accuracy among all methods. With GPT-6 Luna, full context had the best outcome. Claude Opus 5.5 reached 95% with either method. Memory extraction helped the weakest model in this test, but offered no accuracy advantage with the stronger ones."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1792938903578-nqk5wj.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "paragraph",
+      "html": "One more thing to consider is the upfront cost of each method. For example, with GPT-4o mini, answering all 152 questions with full context cost $0.43 while building Mem0's store alone cost $0.56. However, once built, Mem0 answered questions more cheaply. With the same history, Mem0 would break even with full context after 372–596 questions, depending on the model."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For example, A customer-service system making repeated queries about a stable account might recover the memory-building costs. An agent that reads a conversation once probably would not."
+    },
+    {
+      "kind": "heading",
+      "text": "2. Memory is limited by what gets preserved"
+    },
+    {
+      "kind": "paragraph",
+      "html": "To isolate memory quality, the researchers let different models read stores built by other models. The key finding is that the model that writes the memory dictates the final quality of the answer."
+    },
+    {
+      "kind": "paragraph",
+      "html": "When GPT-4o-mini built a Zep graph, it scored 43% reading that graph. With the same memory graph, Claude Opus 5.5 reached only 45%. But when Opus built and read the graph, accuracy rose to 87%. Mem0 showed a similar pattern."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1792938821737-hwpise.png",
+      "alt": "alpha_signal_image_3"
+    },
+    {
+      "kind": "paragraph",
+      "html": "How can this happen? Imagine a support agent extracting a summary of a complaint but omitting the purchase date. A later warranty question requires that date. A stronger answering model cannot reconstruct it from the summary."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The practical safeguard is to keep original records available, even when extracted facts or graphs make common queries faster."
+    },
+    {
+      "kind": "heading",
+      "text": "3. Model-directed search can lower costs"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Claude Opus 5.5 with the minimalist Pi harness answered 99% of questions for $6.95, versus 95% for full context at $17.84. Instead of rereading everything, Pi used tools to locate relevant passages. As a result, it processed about 10,000 input tokens per question as opposed to 28,900 with full context."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1792938874361-283h45.png",
+      "alt": "alpha_signal_image_4"
+    },
+    {
+      "kind": "paragraph",
+      "html": "One caveat to consider is that coding agents could read photo captions unavailable to the other methods. On 88 questions whose evidence did not involve photos, Pi scored 100% and full context 99%."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The choice of agent also mattered. On the same Opus model, Codex cost $25.41 and Claude Code $28.41, with 98% and 97% accuracy. This echoes <a href=\"https://alphasignal.ai/news/understanding-the-harness-tax-behind-coding-agents\">the HarnessTax</a> study that we covered recently, which found up to fivefold cost differences between coding-agent harnesses using the same model without comparable gains in success."
+    },
+    {
+      "kind": "heading",
+      "text": "How developers should choose agent memory"
+    },
+    {
+      "kind": "paragraph",
+      "html": "It is worth noting that the study is not very comprehensive. The results come from one LoCoMo conversation, one run per configuration and a GPT-4o-mini judge. Also, the entire conversation history fitted within the models' context windows. So consider the study as a testing framework."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Developers can turn its findings into four practical checks:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "<b>Start with full context.</b> If the history fits in the model’s context and costs are acceptable, measure accuracy and spending before adding more engineering layers.",
+        "<b>Add retrieval when context becomes unwieldy.</b> A coding agent searching the full history can fetch relevant passages instead of loading everything into each prompt. Test lexical search and model-directed file search first.",
+        "<b>Precompute memory where reuse warrants it.</b> A CRM agent that repeatedly checks account ownership and past commitments might benefit from extracted facts or a memory graph.",
+        "<b>Benchmark the complete stack.</b> Compare model-and-harness combinations on real tasks. Record accuracy, latency, tokens, cost per task and total cost over multiple tasks reusing the same history. Include memory construction and updates."
+      ]
+    },
+    {
+      "kind": "paragraph",
+      "html": "As models get better at finding information, you can spend less effort deciding in advance what the agent should remember and instead give it reliable access to original records. Then, design the memory layer that improves performance or reduces the cost of real work."
+    }
+  ]
+}

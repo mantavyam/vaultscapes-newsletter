@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#000000;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Logo -->
+
+<!-- White Divider Under Logo -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 20px 0;" width="100%">
+<tr>
+<td style="border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey,
+      </p>
+<!-- Intro Text -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;
+                color:#ffffff;margin:0;"> 
+AI agents need memory to handle long-running tasks. But adding a memory layer isn't free. Extracting facts, building knowledge graphs, and retrieving past information all come with costs. And sometimes, these systems can make agents less effective.
+<br/><br/>
+A new study puts seven memory approaches to the test, raising important questions about how developers should design their agent stacks.
+<br/><br/>
+Today we break down the hidden memory tax and when it's worth paying.
+
+
+    </p></td>
+</tr>
+</table>
+<!-- section: author -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1792939662609-o0vo9l.png" style="display:block;border:1px solid #000000;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+        Today's Author
+      </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+        
+   Ben Dickson is a veteran software engineer and former CTO known as the "Engineer's Journalist" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat.
+      
+      </div>
+</td>
+</tr>
+</table>
+<!-- section: article -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family:system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Sunday Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+      The hidden memory tax in AI agents
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0;">
+<div style="margin-top:0;">
+<p>AI agents might carry out sessions or conversations that last for a long time. For example, a customer-support agent might interact with a client for six months. </p>
+<p>When asked about an earlier purchase or promise, should it search the original conversations or rely on a structured memory system that extracts important details? The answer affects the agent's accuracy, inference costs and maintenance.</p>
+<p><a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b29e226b9b63ceed&amp;lid=OKuaNJ00kAKqVVA6&amp;mid=5f404d73-07f2-446b-9b7c-e2e4c4d80bed">MemoryTax</a>, a new study by Shanghai Jiao Tong University, tests seven ways agents can access past conversations. The findings suggest that weaker models can benefit from structured memory but stronger models often do better when given the raw information. </p>
+<p>For developers, the question is when building a separate memory layer earns back its cost.</p>
+<p><b>What MemoryTax tested</b></p>
+<p>The study used one conversation from <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b29e226b9b63ceed&amp;lid=wzxCs6vE4wcP7Mhv&amp;mid=5f404d73-07f2-446b-9b7c-e2e4c4d80bed">LoCoMo</a>, a benchmark for long-term conversations  with hundreds of turns. The experiment tests the agent’s ability for factual recall, connections across messages, and the sequence of events. </p>
+<img alt="alpha_signal_image_1" border="0" src="https://alphasignal.ai/image/1792938942235-7hm7f5.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>They tested seven different memory approaches paired with three models: GPT-4o-mini, GPT-6 Luna, and Claude Opus 5.5.</p>
+<p>The seven approaches fall into several groups:</p>
+<ul>
+<li><b>Full context:</b> The entire conversation is inserted in the model's prompt. This avoids building a separate memory store but repeatedly processes the same history.</li>
+<li><b>Retrieved memory: </b>The system uses an algorithm like BM25 to search the raw history and retrieve the parts that are relevant to the question. </li>
+<li><b>Precomputed memory: </b>These are memory consolidation techniques like <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b29e226b9b63ceed&amp;lid=Y79JvByEEEusIbZT&amp;mid=5f404d73-07f2-446b-9b7c-e2e4c4d80bed">Mem0</a>, which uses a model to extract and update useful facts, then retrieves them later. Another is <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=b29e226b9b63ceed&amp;lid=D6peQ6royabkl4dH&amp;mid=5f404d73-07f2-446b-9b7c-e2e4c4d80bed">Zep</a>, which builds a knowledge graph that links different elements in the conversation history.</li>
+<li><b>Agent-directed search:</b> A harness like Pi, Codex, or Claude Code receive the original conversation as a JSON file. The model could choose which parts to inspect using its tools.</li>
+</ul>
+<p>The researchers used GPT-4o-mini to judge correctness of answers. </p>
+<p><b>What they found</b></p>
+<p><b>1. Stronger models change memory economics</b></p>
+<p>With GPT-4o-mini, Mem0 achieved the highest accuracy among all methods. With GPT-6 Luna, full context had the best outcome. Claude Opus 5.5 reached 95% with either method. Memory extraction helped the weakest model in this test, but offered no accuracy advantage with the stronger ones.</p>
+<img alt="alpha_signal_image_2" border="0" src="https://alphasignal.ai/image/1792938903578-nqk5wj.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>One more thing to consider is the upfront cost of each method. For example, with GPT-4o mini, answering all 152 questions with full context cost $0.43 while building Mem0's store alone cost $0.56. However, once built, Mem0 answered questions more cheaply. With the same history, Mem0 would break even with full context after 372–596 questions, depending on the model.</p>
+<p>For example, A customer-service system making repeated queries about a stable account might recover the memory-building costs. An agent that reads a conversation once probably would not.</p>
+<p><b>2. Memory is limited by what gets preserved</b></p>
+<p>To isolate memory quality, the researchers let different models read stores built by other models. The key finding is that the model that writes the memory dictates the final quality of the answer.</p>
+<p>When GPT-4o-mini built a Zep graph, it scored 43% reading that graph. With the same memory graph, Claude Opus 5.5 reached only 45%. But when Opus built and read the graph, accuracy rose to 87%. Mem0 showed a similar pattern.</p>
+<img alt="alpha_signal_image_3" border="0" src="https://alphasignal.ai/image/1792938821737-hwpise.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>How can this happen? Imagine a support agent extracting a summary of a complaint but omitting the purchase date. A later warranty question requires that date. A stronger answering model cannot reconstruct it from the summary. </p>
+<p>The practical safeguard is to keep original records available, even when extracted facts or graphs make common queries faster.</p>
+<p><b>3. Model-directed search can lower costs</b></p>
+<p>Claude Opus 5.5 with the minimalist Pi harness answered 99% of questions for $6.95, versus 95% for full context at $17.84. Instead of rereading everything, Pi used tools to locate relevant passages. As a result, it processed about 10,000 input tokens per question as opposed to 28,900 with full context. </p>
+<img alt="alpha_signal_image_4" border="0" src="https://alphasignal.ai/image/1792938874361-283h45.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>One caveat to consider is that coding agents could read photo captions unavailable to the other methods. On 88 questions whose evidence did not involve photos, Pi scored 100% and full context 99%. </p>
+<p>The choice of agent also mattered. On the same Opus model, Codex cost $25.41 and Claude Code $28.41, with 98% and 97% accuracy. This echoes <a href="https://alphasignal.ai/news/understanding-the-harness-tax-behind-coding-agents">the HarnessTax</a> study that we covered recently, which found up to fivefold cost differences between coding-agent harnesses using the same model without comparable gains in success. </p>
+<p><b>How developers should choose agent memory</b></p>
+<p>It is worth noting that the study is not very comprehensive. The results come from one LoCoMo conversation, one run per configuration and a GPT-4o-mini judge. Also, the entire conversation history fitted within the models' context windows. So consider the study as a testing framework.</p>
+<p>Developers can turn its findings into four practical checks:</p>
+<ul>
+<li><b>Start with full context.</b> If the history fits in the model’s context and costs are acceptable, measure accuracy and spending before adding more engineering layers.</li>
+<li><b>Add retrieval when context becomes unwieldy.</b> A coding agent searching the full history can fetch relevant passages instead of loading everything into each prompt. Test lexical search and model-directed file search first.</li>
+<li><b>Precompute memory where reuse warrants it.</b> A CRM agent that repeatedly checks account ownership and past commitments might benefit from extracted facts or a memory graph. </li>
+<li><b>Benchmark the complete stack.</b> Compare model-and-harness combinations on real tasks. Record accuracy, latency, tokens, cost per task and total cost over multiple tasks reusing the same history. Include memory construction and updates.</li>
+</ul>
+<p>As models get better at finding information, you can spend less effort deciding in advance what the agent should remember and instead give it reliable access to original records. Then, design the memory layer that improves performance or reduces the cost of real work.</p>
+</div>
+</td>
+</tr>
+</table>
+</body></html>
