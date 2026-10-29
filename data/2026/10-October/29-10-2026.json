@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "29-10-2026",
+  "iso_date": "2026-10-29",
+  "subject": "⚖️ Anthropic Claude for Legal: 6 ready-to-run workflows ship",
+  "intro": "Two big themes collide today: AI going vertical and AI going tiny . Anthropic just made Claude genuinely useful for lawyers, not with a smarter model, but with pre-built workflows. Liquid AI shipped six multimodal models that fit in 1GB. Meanwhile, BabelArena quietly exposed that your agent might need 8x more tool calls in Telugu than English. Same output, wildly different cost. The real pattern? The infra layer is maturing fast.",
+  "read_time": "7 min 28 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic ships Claude for Legal with ready-made contract review and compliance tools",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Liquid AI ships six open-weight 2B models that run on-device with 35% fewer parameters",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Artificial Analysis drops v5 benchmark index with Claude Opus 5.5 leading at 58",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic ships Claude for Legal with ready-made contract review and compliance tools",
+      "likes": 24511,
+      "body": "Claude for Legal just got a lot more useful. Instead of typing questions into a chat box, you now get a gallery of pre-built interactive tools called artifacts, built specifically for legal work. Think of artifacts as ready-to-run apps living inside Claude. You pick one, load your own documents, and Claude does a first pass. You review and decide. That's the whole loop. Six workflows ship ready to use: You also get 60+ connectors to tools like Bloomberg Law, Docusign, and Filevine. Firms like Goodwin and Foley and Lardner contributed their own artifacts too. The big unlock: finished workflows you can share across your whole org, no building from scratch required.",
+      "bullets": [
+        "Cite Check : flags misquotes, wrong page numbers, and citations that don't back up the claim",
+        "Tabular Contract Review: answers questions across a stack of contracts and shows the exact source quote",
+        "Regulatory Scan: monitors for new legal developments and routes them to the right owner",
+        "Playbook Deviation, Jurisdiction Matrix, and Matter Board round out the set"
+      ],
+      "image_url": "https://alphasignal.ai/image/1793250272889-s5ybks.png",
+      "read_more_url": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Liquid AI ships six open-weight 2B models that run on-device with 35% fewer parameters",
+      "likes": 8447,
+      "body": "Liquid AI just dropped LFM3 , a family of six small models that run on your laptop, phone, or Raspberry Pi. The big idea: tiny models that punch way above their weight. The base model, LFM3-1.7B , beats a 2.6B model from their last generation using 35% fewer parameters. Its weights fit in about 1GB , and it handles a 256K-token context window, meaning it can hold a massive amount of conversation history without choking on memory. Here is what the six models cover: You can fine-tune any of them on a single GPU , then deploy locally with no API fees. Weights are open on Hugging Face, and it runs on Ollama, vLLM, and llama.cpp today.",
+      "bullets": [
+        "Text with long context and agent tool use",
+        "Vision and video understanding, competitive with models 6x larger",
+        "Audio with 18-language voice and tool calls",
+        "Omni combining vision, audio, and language together",
+        "Two decision models that output structured, typed answers in one pass"
+      ],
+      "image_url": "https://alphasignal.ai/image/1793250309078-8vuhwv.png",
+      "read_more_url": "https://playground.liquid.ai/sign-in?callbackUrl=%2F"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Artificial Analysis drops v5 benchmark index with Claude Opus 5.5 leading at 58",
+      "likes": 8128,
+      "body": "AI benchmarks have a cheating problem. Labs train on public test data, scores inflate, and rankings stop meaning anything. Artificial Analysis just fixed that with Intelligence Index v5 . The big move: 60% of the index now uses private test sets , meaning models can't be trained on the answers ahead of time. It's a direct response to benchmark contamination. Two new benchmarks you should know: Current standings: Claude Opus 5.5 leads at 58, GPT-6 Astra sits at 57. The open-source gap is the real story though. It jumped from 3 points to 12 points behind the leader. Downloadable models now score 26 points below the top. Cost matters too. GPT-6.1 Sol scores within 4 points of Opus 5.5 at roughly one-eighth the cost per task. Effort settings now swing scores by up to 23 points.",
+      "bullets": [
+        "FrontierCode 2.0 : 132 real open-source repo tasks, graded by whether a maintainer would actually merge the code. No partial credit.",
+        "Terminal-Bench-Science : 70 tasks where an AI agent runs real scientific research workflows inside a terminal. Every single test must pass to count."
+      ],
+      "image_url": "https://alphasignal.ai/image/1793250314089-3ndlvv.png",
+      "read_more_url": "https://artificialanalysis.ai/methodology/intelligence-benchmarking"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "NVIDIA releases open-weight speech model topping transcription and speaker-ID benchmarks",
+      "stat": {
+        "type": "likes",
+        "value": 5419
+      },
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+    },
+    {
+      "rank": 2,
+      "headline": "Qwen open-sources BabelArena to benchmark LLM agents across 23 languages",
+      "stat": {
+        "type": "likes",
+        "value": 1244
+      },
+      "url": "https://arxiv.org/abs/2609.23490"
+    },
+    {
+      "rank": 3,
+      "headline": "New benchmark tests whether LLMs grasp hidden meaning the way humans do",
+      "stat": {
+        "type": "likes",
+        "value": 1225
+      },
+      "url": "https://arxiv.org/abs/2609.03370"
+    },
+    {
+      "rank": 4,
+      "headline": "Nanjing University's AI builds a Hearthstone bot that beats the server's top 10 players",
+      "stat": {
+        "type": "likes",
+        "value": 947
+      },
+      "url": "https://arxiv.org/abs/2610.33845"
+    },
+    {
+      "rank": 5,
+      "headline": "REA drops 20 open-source repos to build a full AI reverse engineering studio",
+      "stat": {
+        "type": "likes",
+        "value": 3776
+      },
+      "url": "https://github.com/morluto/rea"
+    }
+  ]
+}

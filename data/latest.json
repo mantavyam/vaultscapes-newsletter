@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "28-10-2026",
-  "iso_date": "2026-10-28",
-  "subject": "Google Genie 4 🌐, Anthropic Claude Drug Discovery 🧬, IBM RAG 65x Less",
-  "intro": "AI is no longer just predicting the next token. It's simulating entire worlds, designing drugs, and finally learning to read documents properly. Google's Genie 4 and Anthropic's biotech push share the same underlying bet: safe simulation before real-world deployment . Test your robot in a virtual world. Test your drug candidate in silico. The pattern is clear. IBM's STAIR quietly makes all of it more trustworthy. Hallucinating agents are useless agents.",
-  "read_time": "7 min 12 sec",
+  "date": "29-10-2026",
+  "iso_date": "2026-10-29",
+  "subject": "⚖️ Anthropic Claude for Legal: 6 ready-to-run workflows ship",
+  "intro": "Two big themes collide today: AI going vertical and AI going tiny . Anthropic just made Claude genuinely useful for lawyers, not with a smarter model, but with pre-built workflows. Liquid AI shipped six multimodal models that fit in 1GB. Meanwhile, BabelArena quietly exposed that your agent might need 8x more tool calls in Telugu than English. Same output, wildly different cost. The real pattern? The infra layer is maturing fast.",
+  "read_time": "7 min 28 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Google DeepMind releases Genie 4, an interactive world model with real-time physics and audio",
+      "headline": "Anthropic ships Claude for Legal with ready-made contract review and compliance tools",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "Anthropic partners with six drug companies to test Claude in medicine discovery",
+      "headline": "Liquid AI ships six open-weight 2B models that run on-device with 35% fewer parameters",
       "news_id": "news-2"
     },
     {
-      "category": "Top Repo",
-      "headline": "OpenAI models crack a Millennium Prize math problem with a verified QCD proof",
+      "category": "Top News",
+      "headline": "Artificial Analysis drops v5 benchmark index with Claude Opus 5.5 leading at 58",
       "news_id": "news-3"
     }
   ],
@@ -27,94 +27,93 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Google DeepMind releases Genie 4, an interactive world model with real-time physics and audio",
-      "likes": 18776,
-      "body": "Google DeepMind just dropped Genie 4 , a model that generates fully interactive virtual worlds in real time. You type a prompt, and a living scene appears. You can then steer it mid-simulation, no code needed. Here is what makes it different from anything before it: The big unlock here is safe simulation for robots and AI agents. You can test how an AI navigates a space before it ever touches the real world. Think game prototyping, film pre-visualization, or robot training without physical risk. Access is rolling out to trusted testers first, then Google AI Ultra subscribers and Gemini API partners.",
+      "headline": "Anthropic ships Claude for Legal with ready-made contract review and compliance tools",
+      "likes": 24511,
+      "body": "Claude for Legal just got a lot more useful. Instead of typing questions into a chat box, you now get a gallery of pre-built interactive tools called artifacts, built specifically for legal work. Think of artifacts as ready-to-run apps living inside Claude. You pick one, load your own documents, and Claude does a first pass. You review and decide. That's the whole loop. Six workflows ship ready to use: You also get 60+ connectors to tools like Bloomberg Law, Docusign, and Filevine. Firms like Goodwin and Foley and Lardner contributed their own artifacts too. The big unlock: finished workflows you can share across your whole org, no building from scratch required.",
       "bullets": [
-        "Native audio : ambient sounds, music, and characters that actually speak and react to you",
-        "Real-time steering : change the weather, camera angle, or add new characters with a text prompt while the world keeps running",
-        "Advanced physics: people move naturally, objects collide realistically",
-        "Up to 2 minutes of consistent simulation, double the previous version",
-        "Gemini models plan multi-step events to keep scenes coherent over time"
+        "Cite Check : flags misquotes, wrong page numbers, and citations that don't back up the claim",
+        "Tabular Contract Review: answers questions across a stack of contracts and shows the exact source quote",
+        "Regulatory Scan: monitors for new legal developments and routes them to the right owner",
+        "Playbook Deviation, Jurisdiction Matrix, and Matter Board round out the set"
       ],
-      "image_url": "https://alphasignal.ai/image/1793163923784-i3uae1.png",
-      "read_more_url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+      "image_url": "https://alphasignal.ai/image/1793250272889-s5ybks.png",
+      "read_more_url": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "Anthropic partners with six drug companies to test Claude in medicine discovery",
-      "likes": 6973,
-      "body": "Anthropic just shared its first real results from using Claude inside actual drug labs. Not demos. Real science. Here is what Claude is actually doing across six biotech partnerships : Anthropic also acquired Mithril Medicine and is now running its own drug programs targeting rare childhood diseases and cancer. The tool making this possible is Claude Science , a workbench that connects biology tools like PubMed and Jupyter so researchers can go from literature review to protein structure in one place, no switching apps. Everything here is still preclinical, meaning no patients yet. But the pipeline is real and moving fast.",
+      "headline": "Liquid AI ships six open-weight 2B models that run on-device with 35% fewer parameters",
+      "likes": 8447,
+      "body": "Liquid AI just dropped LFM3 , a family of six small models that run on your laptop, phone, or Raspberry Pi. The big idea: tiny models that punch way above their weight. The base model, LFM3-1.7B , beats a 2.6B model from their last generation using 35% fewer parameters. Its weights fit in about 1GB , and it handles a 256K-token context window, meaning it can hold a massive amount of conversation history without choking on memory. Here is what the six models cover: You can fine-tune any of them on a single GPU , then deploy locally with no API fees. Weights are open on Hugging Face, and it runs on Ollama, vLLM, and llama.cpp today.",
       "bullets": [
-        "Generate Biomedicines used Claude Code to build AI agents that redesigned cancer therapy instructions, producing a version 70% shorter that generated 10x more receptors on cell surfaces in lab tests.",
-        "Divergence Labs used Claude to generate roughly 35,000 antibody designs targeting food allergies.",
-        "Bristol Myers Squibb is using Claude for clinical trial planning, including predicting whether trials will succeed.",
-        "The Column Group used Claude for operational work while spinning up a new biotech from scratch."
+        "Text with long context and agent tool use",
+        "Vision and video understanding, competitive with models 6x larger",
+        "Audio with 18-language voice and tool calls",
+        "Omni combining vision, audio, and language together",
+        "Two decision models that output structured, typed answers in one pass"
       ],
-      "image_url": "https://alphasignal.ai/image/1793163980490-ofcidi.png",
-      "read_more_url": "https://www.anthropic.com/research/early-progress-drug-development"
+      "image_url": "https://alphasignal.ai/image/1793250309078-8vuhwv.png",
+      "read_more_url": "https://playground.liquid.ai/sign-in?callbackUrl=%2F"
     },
     {
       "id": "news-3",
-      "category": "Top Repo",
-      "headline": "OpenAI models crack a Millennium Prize math problem with a verified QCD proof",
-      "likes": 6944,
-      "body": "OpenAI just dropped something huge. Its models produced three proofs across math, computer science, and physics, all at once. Here is what got solved: That last one is part of a Millennium Prize problem , one of seven problems the Clay Mathematics Institute offered $1 million to solve. Only one had ever been cracked before this. The math and CS proofs are already public on GitHub, verified in Lean, a tool that checks proofs like a compiler checks code. The physics proof is being reviewed by a Nobel Prize-winning panel before release. These were not human-guided hints. The models produced the full proofs themselves.",
+      "category": "Top News",
+      "headline": "Artificial Analysis drops v5 benchmark index with Claude Opus 5.5 leading at 58",
+      "likes": 8128,
+      "body": "AI benchmarks have a cheating problem. Labs train on public test data, scores inflate, and rankings stop meaning anything. Artificial Analysis just fixed that with Intelligence Index v5 . The big move: 60% of the index now uses private test sets , meaning models can't be trained on the answers ahead of time. It's a direct response to benchmark contamination. Two new benchmarks you should know: Current standings: Claude Opus 5.5 leads at 58, GPT-6 Astra sits at 57. The open-source gap is the real story though. It jumped from 3 points to 12 points behind the leader. Downloadable models now score 26 points below the top. Cost matters too. GPT-6.1 Sol scores within 4 points of Opus 5.5 at roughly one-eighth the cost per task. Effort settings now swing scores by up to 23 points.",
       "bullets": [
-        "Kakeya conjecture in all dimensions, a long-open geometry problem in mathematics",
-        "Exponential Time Hypothesis disproved , meaning a widely held assumption about how hard certain computing problems are turns out to be wrong",
-        "Yang-Mills and QCD existence , a proof that the physics equations describing how quarks interact actually make mathematical sense"
+        "FrontierCode 2.0 : 132 real open-source repo tasks, graded by whether a maintainer would actually merge the code. No partial credit.",
+        "Terminal-Bench-Science : 70 tasks where an AI agent runs real scientific research workflows inside a terminal. Every single test must pass to count."
       ],
-      "image_url": "https://alphasignal.ai/image/1793163850647-gbgsb0.png",
-      "read_more_url": "https://github.com/openai/math"
+      "image_url": "https://alphasignal.ai/image/1793250314089-3ndlvv.png",
+      "read_more_url": "https://artificialanalysis.ai/methodology/intelligence-benchmarking"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "LiquidAI releases six 2B on-device models matching rivals six times larger",
+      "headline": "NVIDIA releases open-weight speech model topping transcription and speaker-ID benchmarks",
       "stat": {
         "type": "likes",
-        "value": 4478
+        "value": 5419
       },
-      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
     },
     {
       "rank": 2,
-      "headline": "NVIDIA releases open-source library that stops AI agents from returning wrong data",
+      "headline": "Qwen open-sources BabelArena to benchmark LLM agents across 23 languages",
       "stat": {
-        "type": "stars",
-        "value": 340
+        "type": "likes",
+        "value": 1244
       },
-      "url": "https://github.com/NVIDIA/auto-ontology"
+      "url": "https://arxiv.org/abs/2609.23490"
     },
     {
       "rank": 3,
-      "headline": "IBM's new retrieval system hallucinates 65x less than standard RAG",
+      "headline": "New benchmark tests whether LLMs grasp hidden meaning the way humans do",
       "stat": {
         "type": "likes",
-        "value": 1482
+        "value": 1225
       },
-      "url": "https://arxiv.org/abs/2609.03874"
+      "url": "https://arxiv.org/abs/2609.03370"
     },
     {
       "rank": 4,
-      "headline": "mradermacher releases quantized GGUF versions of a 9B uncensored conversational model",
+      "headline": "Nanjing University's AI builds a Hearthstone bot that beats the server's top 10 players",
       "stat": {
-        "type": "downloads",
-        "value": 7410
+        "type": "likes",
+        "value": 947
       },
-      "url": "https://huggingface.co/mradermacher/Ornith1.0-9B-3MPER0RR-abliterated-GGUF"
+      "url": "https://arxiv.org/abs/2610.33845"
     },
     {
       "rank": 5,
-      "headline": "Maya-2 open-weight voice model covers 11 Indian languages and beats ElevenLabs",
+      "headline": "REA drops 20 open-source repos to build a full AI reverse engineering studio",
       "stat": {
         "type": "likes",
-        "value": 2928
+        "value": 3776
       },
-      "url": "https://huggingface.co/maya-research/maya2-native"
+      "url": "https://github.com/morluto/rea"
     }
   ]
 }

@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-10-28T20:03:45Z",
+  "updated_at": "2026-10-29T20:03:11Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "29-10-2026",
+      "iso_date": "2026-10-29",
+      "type": "digest",
+      "subject": "⚖️ Anthropic Claude for Legal: 6 ready-to-run workflows ship",
+      "path": "data/2026/10-October/29-10-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/29-10-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/10-October/html/29-10-2026.html",
+      "headlines": [
+        "Anthropic ships Claude for Legal with ready-made contract review and compliance tools",
+        "Liquid AI ships six open-weight 2B models that run on-device with 35% fewer parameters",
+        "Artificial Analysis drops v5 benchmark index with Claude Opus 5.5 leading at 58"
+      ]
+    },
     {
       "date": "28-10-2026",
       "iso_date": "2026-10-28",
