@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "29-10-2026",
-  "iso_date": "2026-10-29",
-  "subject": "⚖️ Anthropic Claude for Legal: 6 ready-to-run workflows ship",
-  "intro": "Two big themes collide today: AI going vertical and AI going tiny . Anthropic just made Claude genuinely useful for lawyers, not with a smarter model, but with pre-built workflows. Liquid AI shipped six multimodal models that fit in 1GB. Meanwhile, BabelArena quietly exposed that your agent might need 8x more tool calls in Telugu than English. Same output, wildly different cost. The real pattern? The infra layer is maturing fast.",
-  "read_time": "7 min 28 sec",
+  "date": "30-10-2026",
+  "iso_date": "2026-10-30",
+  "subject": "Claude Mobile Update 📱, OpenAI API Credits 💰, DeepSeek 1M Tokens 🧠",
+  "intro": "The hardware wall just got shorter. DeepSeek's V4.1-Flash squeezes a 1M token context into under 1GB of KV cache , while everyone else needs a server farm. That's not incremental, that's a different game. Meanwhile, Anthropic adds CarPlay and 33 languages to Claude, and OpenAI bundles API credits into subscriptions. Both moves scream the same thing: AI is going mass market, fast. The gap between \"AI for enterprises\" and \"AI for everyone\" is collapsing from both ends.",
+  "read_time": "6 min 40 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Anthropic ships Claude for Legal with ready-made contract review and compliance tools",
+      "headline": "Anthropic ships Claude mobile update with multi-account, CarPlay, and 33 languages",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "Liquid AI ships six open-weight 2B models that run on-device with 35% fewer parameters",
+      "headline": "OpenAI gives Pro and Business users up to $500 monthly in free API credits",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "Artificial Analysis drops v5 benchmark index with Claude Opus 5.5 leading at 58",
+      "headline": "NVIDIA releases open-weight speech model that tops ASR leaderboards with 4B active parameters",
       "news_id": "news-3"
     }
   ],
@@ -27,93 +27,96 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Anthropic ships Claude for Legal with ready-made contract review and compliance tools",
-      "likes": 24511,
-      "body": "Claude for Legal just got a lot more useful. Instead of typing questions into a chat box, you now get a gallery of pre-built interactive tools called artifacts, built specifically for legal work. Think of artifacts as ready-to-run apps living inside Claude. You pick one, load your own documents, and Claude does a first pass. You review and decide. That's the whole loop. Six workflows ship ready to use: You also get 60+ connectors to tools like Bloomberg Law, Docusign, and Filevine. Firms like Goodwin and Foley and Lardner contributed their own artifacts too. The big unlock: finished workflows you can share across your whole org, no building from scratch required.",
+      "headline": "Anthropic ships Claude mobile update with multi-account, CarPlay, and 33 languages",
+      "likes": 13185,
+      "body": "Claude's mobile apps just got a solid round of updates. Here's what changed and why it matters. Coming soon: pull-down search on iPhone and iPad to find past chats, projects, or settings instantly.",
       "bullets": [
-        "Cite Check : flags misquotes, wrong page numbers, and citations that don't back up the claim",
-        "Tabular Contract Review: answers questions across a stack of contracts and shows the exact source quote",
-        "Regulatory Scan: monitors for new legal developments and routes them to the right owner",
-        "Playbook Deviation, Jurisdiction Matrix, and Matter Board round out the set"
+        "Multi-account switching on iOS and Android: stay logged into multiple accounts and flip between them without signing out.",
+        "iPad split view : whatever Claude creates now opens beside the chat, not on top of it. Tap to go full screen when you need a closer look.",
+        "33 languages total : Bengali, Swahili, Thai, Turkish, Ukrainian, Vietnamese, and more are now supported across all platforms.",
+        "CarPlay voice mode on iPhone: ask Claude questions while driving, hands-free.",
+        "Faster, smarter voice : responds quicker, handles noisy environments better, and now runs on more Android phones.",
+        "Chromebook and foldable support : resizable sidebar, trackpad, right-click, and keyboard shortcuts, just like the desktop app."
       ],
-      "image_url": "https://alphasignal.ai/image/1793250272889-s5ybks.png",
-      "read_more_url": "https://claude.com/resources/articles/introducing-artifacts-for-legal-work"
+      "image_url": "https://alphasignal.ai/image/1793336626420-9bscuv.png",
+      "read_more_url": "https://x.com/claudeai/status/2115859377488072879"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "Liquid AI ships six open-weight 2B models that run on-device with 35% fewer parameters",
-      "likes": 8447,
-      "body": "Liquid AI just dropped LFM3 , a family of six small models that run on your laptop, phone, or Raspberry Pi. The big idea: tiny models that punch way above their weight. The base model, LFM3-1.7B , beats a 2.6B model from their last generation using 35% fewer parameters. Its weights fit in about 1GB , and it handles a 256K-token context window, meaning it can hold a massive amount of conversation history without choking on memory. Here is what the six models cover: You can fine-tune any of them on a single GPU , then deploy locally with no API fees. Weights are open on Hugging Face, and it runs on Ollama, vLLM, and llama.cpp today.",
+      "headline": "OpenAI gives Pro and Business users up to $500 monthly in free API credits",
+      "likes": 10332,
+      "body": "OpenAI just made your ChatGPT subscription pull double duty. Pro and Business subscribers can now claim free API credits every month, meaning you can build real apps without paying extra. Think of the API like a direct line to OpenAI's models that you control from your own code. These credits let you call that line for free each month. Here is how the credits break down: To claim: go to ChatGPT billing settings, find the API credits benefit, and link it to an API organization you own. You also need Owner permissions on that API org. You can use credits on agents, images, and live API features. Small teams get real value here.",
       "bullets": [
-        "Text with long context and agent tool use",
-        "Vision and video understanding, competitive with models 6x larger",
-        "Audio with 18-language voice and tool calls",
-        "Omni combining vision, audio, and language together",
-        "Two decision models that output structured, typed answers in one pass"
+        "Pro $100/$200/$500 plans each get matching credits (pay $200, get $200 in API credits)",
+        "Business Standard seats get $20 each, Premium seats get $100 each, pooled up to $500 per workspace",
+        "Credits expire at end of each billing cycle and do not roll over"
       ],
-      "image_url": "https://alphasignal.ai/image/1793250309078-8vuhwv.png",
-      "read_more_url": "https://playground.liquid.ai/sign-in?callbackUrl=%2F"
+      "image_url": "https://alphasignal.ai/image/1793336669690-1hj46e.png",
+      "read_more_url": "https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "Artificial Analysis drops v5 benchmark index with Claude Opus 5.5 leading at 58",
-      "likes": 8128,
-      "body": "AI benchmarks have a cheating problem. Labs train on public test data, scores inflate, and rankings stop meaning anything. Artificial Analysis just fixed that with Intelligence Index v5 . The big move: 60% of the index now uses private test sets , meaning models can't be trained on the answers ahead of time. It's a direct response to benchmark contamination. Two new benchmarks you should know: Current standings: Claude Opus 5.5 leads at 58, GPT-6 Astra sits at 57. The open-source gap is the real story though. It jumped from 3 points to 12 points behind the leader. Downloadable models now score 26 points below the top. Cost matters too. GPT-6.1 Sol scores within 4 points of Opus 5.5 at roughly one-eighth the cost per task. Effort settings now swing scores by up to 23 points.",
+      "headline": "NVIDIA releases open-weight speech model that tops ASR leaderboards with 4B active parameters",
+      "likes": 9693,
+      "body": "NVIDIA just dropped Nemotron 3.5 Transcribe , and it just took the top spot among open-weight speech models. Here's why it matters. Most transcription setups make you stitch together separate tools: one for transcription, one for translation, one to figure out who's speaking. Nemotron collapses all of that into a single model you can download and run yourself. The efficiency angle is real: it runs on roughly 4B active parameters despite being a 30B model, matching accuracy of a 24B competitor at one-sixth the compute cost. It's free, open-weight, and commercially usable. Grab it on Hugging Face.",
       "bullets": [
-        "FrontierCode 2.0 : 132 real open-source repo tasks, graded by whether a maintainer would actually merge the code. No partial credit.",
-        "Terminal-Bench-Science : 70 tasks where an AI agent runs real scientific research workflows inside a terminal. Every single test must pass to count."
+        "Transcribes audio in 40 languages , handles recordings up to 1 hour long",
+        "Tells apart up to 8 speakers in a conversation automatically",
+        "Translates 31 languages to or from English",
+        "You can prompt it: \"redact PII\" or \"add speaker labels\" in plain text",
+        "Ranked #1 open-weight model on Hugging Face Open ASR Leaderboard at 5.33% word error rate"
       ],
-      "image_url": "https://alphasignal.ai/image/1793250314089-3ndlvv.png",
-      "read_more_url": "https://artificialanalysis.ai/methodology/intelligence-benchmarking"
+      "image_url": "https://alphasignal.ai/image/1793336698499-tfzdbr.png",
+      "read_more_url": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard?proprietary=false"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "NVIDIA releases open-weight speech model topping transcription and speaker-ID benchmarks",
+      "headline": "Mistral releases open coding and cyberdefense model, tops FrontierCode benchmark",
       "stat": {
         "type": "likes",
-        "value": 5419
+        "value": 5984
       },
-      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
     },
     {
       "rank": 2,
-      "headline": "Qwen open-sources BabelArena to benchmark LLM agents across 23 languages",
+      "headline": "DeepSeek's new model runs 1M token context on under 1GB of RAM",
       "stat": {
         "type": "likes",
-        "value": 1244
+        "value": 5357
       },
-      "url": "https://arxiv.org/abs/2609.23490"
+      "url": "https://arxiv.org/abs/2609.19969"
     },
     {
       "rank": 3,
-      "headline": "New benchmark tests whether LLMs grasp hidden meaning the way humans do",
+      "headline": "Only GPT-6 Astra discovered hidden physics laws in a fake world, 11 other models scored zero",
       "stat": {
         "type": "likes",
-        "value": 1225
+        "value": 1280
       },
-      "url": "https://arxiv.org/abs/2609.03370"
+      "url": "https://arxiv.org/abs/2610.37649"
     },
     {
       "rank": 4,
-      "headline": "Nanjing University's AI builds a Hearthstone bot that beats the server's top 10 players",
+      "headline": "New retrieval method beats dense search by 17 points without vector embeddings",
       "stat": {
         "type": "likes",
-        "value": 947
+        "value": 861
       },
-      "url": "https://arxiv.org/abs/2610.33845"
+      "url": "https://arxiv.org/abs/2610.35868"
     },
     {
       "rank": 5,
-      "headline": "REA drops 20 open-source repos to build a full AI reverse engineering studio",
+      "headline": "CopilotKit ships self-hostable open-source AI agent template with human-in-the-loop controls",
       "stat": {
         "type": "likes",
-        "value": 3776
+        "value": 3886
       },
-      "url": "https://github.com/morluto/rea"
+      "url": "https://github.com/CopilotKit/OpenDuet"
     }
   ]
 }
