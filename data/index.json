@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-30T19:50:04Z",
+  "updated_at": "2026-11-02T22:58:51Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "02-11-2026",
+      "iso_date": "2026-11-02",
+      "type": "digest",
+      "subject": "🚫 Anthropic Claude Ultra kills 5-hour cap for verified users",
+      "path": "data/2026/11-November/02-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/02-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/02-11-2026.html",
+      "headlines": [
+        "Anthropic renames Claude plans and drops 5-hour limit for verified Ultra subscribers",
+        "Developer rebuilds Apple's subvocal feature for AirPods Pro in 9 minutes with one prompt",
+        "Vercel Labs ships open-source tool letting AI agents control your whole desktop"
+      ]
+    },
+    {
+      "date": "01-11-2026",
+      "iso_date": "2026-11-01",
+      "type": "article",
+      "subject": "🧠 Why Specialized Foundation Models Could Reshape the AI Stack",
+      "path": "data/2026/11-November/01-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/01-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/01-11-2026.html",
+      "headlines": [
+        "How Timestral works",
+        "Beyond language: The rise of specialized foundation models",
+        "What the multi-model AI stack could look like"
+      ],
+      "title": "Why the future AI stack needs more than one foundation model",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "30-10-2026",
       "iso_date": "2026-10-30",

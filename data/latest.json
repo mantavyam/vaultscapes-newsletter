@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "30-10-2026",
-  "iso_date": "2026-10-30",
-  "subject": "Claude Mobile Update 📱, OpenAI API Credits 💰, DeepSeek 1M Tokens 🧠",
-  "intro": "The hardware wall just got shorter. DeepSeek's V4.1-Flash squeezes a 1M token context into under 1GB of KV cache , while everyone else needs a server farm. That's not incremental, that's a different game. Meanwhile, Anthropic adds CarPlay and 33 languages to Claude, and OpenAI bundles API credits into subscriptions. Both moves scream the same thing: AI is going mass market, fast. The gap between \"AI for enterprises\" and \"AI for everyone\" is collapsing from both ends.",
-  "read_time": "6 min 40 sec",
+  "date": "02-11-2026",
+  "iso_date": "2026-11-02",
+  "subject": "🚫 Anthropic Claude Ultra kills 5-hour cap for verified users",
+  "intro": "Anthropic had quite a week: cleaner plan names, fewer limits for power users, and a malware scare hiding inside the very tool developers trust most. The irony? As Claude gets more capable and agentic, it also becomes a bigger target. A poisoned extension planting SSH backdoors on 5,000 dev machines is a reminder that the supply chain is now the attack surface. We're building faster than we're securing.",
+  "read_time": "6 min 39 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Anthropic ships Claude mobile update with multi-account, CarPlay, and 33 languages",
+      "headline": "Anthropic renames Claude plans and drops 5-hour limit for verified Ultra subscribers",
       "news_id": "news-1"
     },
     {
-      "category": "Top News",
-      "headline": "OpenAI gives Pro and Business users up to $500 monthly in free API credits",
+      "category": "Top Repo",
+      "headline": "Developer rebuilds Apple's subvocal feature for AirPods Pro in 9 minutes with one prompt",
       "news_id": "news-2"
     },
     {
-      "category": "Top News",
-      "headline": "NVIDIA releases open-weight speech model that tops ASR leaderboards with 4B active parameters",
+      "category": "Top Repo",
+      "headline": "Vercel Labs ships open-source tool letting AI agents control your whole desktop",
       "news_id": "news-3"
     }
   ],
@@ -27,96 +27,93 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Anthropic ships Claude mobile update with multi-account, CarPlay, and 33 languages",
-      "likes": 13185,
-      "body": "Claude's mobile apps just got a solid round of updates. Here's what changed and why it matters. Coming soon: pull-down search on iPhone and iPad to find past chats, projects, or settings instantly.",
+      "headline": "Anthropic renames Claude plans and drops 5-hour limit for verified Ultra subscribers",
+      "likes": 31853,
+      "body": "Claude just got a naming refresh. The Max 5x plan is now simply called Max ($100/month), and Max 20x is now called Ultra ($200/month). Same price, cleaner names. Nothing changes for existing subscribers. The bigger news? The 5-hour usage limit is gone for verified Ultra accounts. That cap used to cut off heavy sessions mid-flow, which was frustrating if you were deep in a long coding task or running background jobs. Now you can run longer without hitting a wall. A few things to know: Bottom line: longer uninterrupted sessions means you can tackle bigger tasks without getting cut off at a bad moment.",
       "bullets": [
-        "Multi-account switching on iOS and Android: stay logged into multiple accounts and flip between them without signing out.",
-        "iPad split view : whatever Claude creates now opens beside the chat, not on top of it. Tap to go full screen when you need a closer look.",
-        "33 languages total : Bengali, Swahili, Thai, Turkish, Ukrainian, Vietnamese, and more are now supported across all platforms.",
-        "CarPlay voice mode on iPhone: ask Claude questions while driving, hands-free.",
-        "Faster, smarter voice : responds quicker, handles noisy environments better, and now runs on more Android phones.",
-        "Chromebook and foldable support : resizable sidebar, trackpad, right-click, and keyboard shortcuts, just like the desktop app."
+        "Newer accounts keep a temporary limit until verified, to prevent abuse. You'll get an email when it's lifted.",
+        "Weekly limits are still in place, unchanged.",
+        "If you're already verified, the removal is rolling out to you now."
       ],
-      "image_url": "https://alphasignal.ai/image/1793336626420-9bscuv.png",
-      "read_more_url": "https://x.com/claudeai/status/2115859377488072879"
+      "image_url": "https://alphasignal.ai/image/1793595909935-pp1n1c.png",
+      "read_more_url": "https://claude.com/pricing"
     },
     {
       "id": "news-2",
-      "category": "Top News",
-      "headline": "OpenAI gives Pro and Business users up to $500 monthly in free API credits",
-      "likes": 10332,
-      "body": "OpenAI just made your ChatGPT subscription pull double duty. Pro and Business subscribers can now claim free API credits every month, meaning you can build real apps without paying extra. Think of the API like a direct line to OpenAI's models that you control from your own code. These credits let you call that line for free each month. Here is how the credits break down: To claim: go to ChatGPT billing settings, find the API credits benefit, and link it to an API organization you own. You also need Owner permissions on that API org. You can use credits on agents, images, and live API features. Small teams get real value here.",
+      "category": "Top Repo",
+      "headline": "Developer rebuilds Apple's subvocal feature for AirPods Pro in 9 minutes with one prompt",
+      "likes": 9792,
+      "body": "A startup called Subvocal raised $1.3M to build glasses that turn silent mouthing into text at 200+ words per minute . No keyboard. No talking out loud. Just mouth words and they appear as text. Then Joe Blau replied with a gut punch: he rebuilt the same idea in 9 minutes with one prompt , for AirPods you already own, and put it on GitHub for free. Here is how his app, subvox , actually works: The bigger story: a funded startup took months to demo this. One prompt rebuilt it. Software ideas alone are not a moat anymore.",
       "bullets": [
-        "Pro $100/$200/$500 plans each get matching credits (pay $200, get $200 in API credits)",
-        "Business Standard seats get $20 each, Premium seats get $100 each, pooled up to $500 per workspace",
-        "Credits expire at end of each billing cycle and do not roll over"
+        "Your AirPods have motion sensors for spatial audio. Subvox reads that head-motion data when you silently mouth words.",
+        "You train it by mouthing a word a few times. It stores those as templates, then matches future mouthing against them.",
+        "No AI model involved. Just pattern matching on motion signals.",
+        "To run it: brew install xcodegen, then xcodegen generate, then open in Xcode. Requires macOS 14 and AirPods Pro."
       ],
-      "image_url": "https://alphasignal.ai/image/1793336669690-1hj46e.png",
-      "read_more_url": "https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions"
+      "image_url": "https://alphasignal.ai/image/1793595782972-evr2r3.png",
+      "read_more_url": "https://github.com/joeblau/subvox"
     },
     {
       "id": "news-3",
-      "category": "Top News",
-      "headline": "NVIDIA releases open-weight speech model that tops ASR leaderboards with 4B active parameters",
-      "likes": 9693,
-      "body": "NVIDIA just dropped Nemotron 3.5 Transcribe , and it just took the top spot among open-weight speech models. Here's why it matters. Most transcription setups make you stitch together separate tools: one for transcription, one for translation, one to figure out who's speaking. Nemotron collapses all of that into a single model you can download and run yourself. The efficiency angle is real: it runs on roughly 4B active parameters despite being a 30B model, matching accuracy of a 24B competitor at one-sixth the compute cost. It's free, open-weight, and commercially usable. Grab it on Hugging Face.",
+      "category": "Top Repo",
+      "headline": "Vercel Labs ships open-source tool letting AI agents control your whole desktop",
+      "likes": 9473,
+      "body": "Most AI agents that control your computer work by taking screenshots and guessing where buttons are. Slow, expensive, and fragile. agent-desktop from Vercel Labs fixes that. Instead of screenshots, it reads your OS's accessibility tree (think of it as a structured map of every button, input, and window on screen) and gives each element a stable ID called a ref. Your agent clicks the ref, not a pixel. No vision model needed. Here's what you can do with it: Install it: npm install -g agent-desktop . Free, open-source, Apache 2.0. Runs on macOS, Windows, and Linux.",
       "bullets": [
-        "Transcribes audio in 40 languages , handles recordings up to 1 hour long",
-        "Tells apart up to 8 speakers in a conversation automatically",
-        "Translates 31 languages to or from English",
-        "You can prompt it: \"redact PII\" or \"add speaker labels\" in plain text",
-        "Ranked #1 open-weight model on Hugging Face Open ASR Leaderboard at 5.33% word error rate"
+        "Let agents open apps, toggle settings, or inspect logs while you keep coding",
+        "Run multiple agents in parallel , each with its own cursor, on the same machine",
+        "Automate end-to-end desktop app testing without pasting screenshots into chat",
+        "Works with Claude Code, Codex, and any shell-capable agent"
       ],
-      "image_url": "https://alphasignal.ai/image/1793336698499-tfzdbr.png",
-      "read_more_url": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard?proprietary=false"
+      "image_url": "https://alphasignal.ai/image/1793595801609-pai5ic.png",
+      "read_more_url": "https://github.com/vercel-labs/agent-desktop"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Mistral releases open coding and cyberdefense model, tops FrontierCode benchmark",
+      "headline": "Cursor warns 5,000 users of malware hidden in fake Claude Code VS Code extension",
       "stat": {
         "type": "likes",
-        "value": 5984
+        "value": 7006
       },
-      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
+      "url": "https://cursor.com/blog/claude-code-extension-security-notice"
     },
     {
       "rank": 2,
-      "headline": "DeepSeek's new model runs 1M token context on under 1GB of RAM",
+      "headline": "Scenario opens agent skills to generate images, video, 3D and audio with consistent branding",
       "stat": {
-        "type": "likes",
-        "value": 5357
+        "type": "stars",
+        "value": 1423
       },
-      "url": "https://arxiv.org/abs/2609.19969"
+      "url": "https://github.com/scenario-labs/skills"
     },
     {
       "rank": 3,
-      "headline": "Only GPT-6 Astra discovered hidden physics laws in a fake world, 11 other models scored zero",
+      "headline": "New method trains foundation models in one unified pass, beating staged training",
       "stat": {
         "type": "likes",
-        "value": 1280
+        "value": 1472
       },
-      "url": "https://arxiv.org/abs/2610.37649"
+      "url": "https://arxiv.org/abs/2610.40564"
     },
     {
       "rank": 4,
-      "headline": "New retrieval method beats dense search by 17 points without vector embeddings",
+      "headline": "A red heart emoji makes Claude and GPT pick recursion 100% of the time",
       "stat": {
         "type": "likes",
-        "value": 861
+        "value": 1020
       },
-      "url": "https://arxiv.org/abs/2610.35868"
+      "url": "https://arxiv.org/abs/2610.36449"
     },
     {
       "rank": 5,
-      "headline": "CopilotKit ships self-hostable open-source AI agent template with human-in-the-loop controls",
+      "headline": "20 free open-source motion studio skills drop for Claude on GitHub",
       "stat": {
         "type": "likes",
-        "value": 3886
+        "value": 6390
       },
-      "url": "https://github.com/CopilotKit/OpenDuet"
+      "url": "https://github.com/remotion-dev/remotion"
     }
   ]
 }

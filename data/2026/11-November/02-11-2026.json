@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "02-11-2026",
+  "iso_date": "2026-11-02",
+  "subject": "🚫 Anthropic Claude Ultra kills 5-hour cap for verified users",
+  "intro": "Anthropic had quite a week: cleaner plan names, fewer limits for power users, and a malware scare hiding inside the very tool developers trust most. The irony? As Claude gets more capable and agentic, it also becomes a bigger target. A poisoned extension planting SSH backdoors on 5,000 dev machines is a reminder that the supply chain is now the attack surface. We're building faster than we're securing.",
+  "read_time": "6 min 39 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic renames Claude plans and drops 5-hour limit for verified Ultra subscribers",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Developer rebuilds Apple's subvocal feature for AirPods Pro in 9 minutes with one prompt",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Vercel Labs ships open-source tool letting AI agents control your whole desktop",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic renames Claude plans and drops 5-hour limit for verified Ultra subscribers",
+      "likes": 31853,
+      "body": "Claude just got a naming refresh. The Max 5x plan is now simply called Max ($100/month), and Max 20x is now called Ultra ($200/month). Same price, cleaner names. Nothing changes for existing subscribers. The bigger news? The 5-hour usage limit is gone for verified Ultra accounts. That cap used to cut off heavy sessions mid-flow, which was frustrating if you were deep in a long coding task or running background jobs. Now you can run longer without hitting a wall. A few things to know: Bottom line: longer uninterrupted sessions means you can tackle bigger tasks without getting cut off at a bad moment.",
+      "bullets": [
+        "Newer accounts keep a temporary limit until verified, to prevent abuse. You'll get an email when it's lifted.",
+        "Weekly limits are still in place, unchanged.",
+        "If you're already verified, the removal is rolling out to you now."
+      ],
+      "image_url": "https://alphasignal.ai/image/1793595909935-pp1n1c.png",
+      "read_more_url": "https://claude.com/pricing"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "Developer rebuilds Apple's subvocal feature for AirPods Pro in 9 minutes with one prompt",
+      "likes": 9792,
+      "body": "A startup called Subvocal raised $1.3M to build glasses that turn silent mouthing into text at 200+ words per minute . No keyboard. No talking out loud. Just mouth words and they appear as text. Then Joe Blau replied with a gut punch: he rebuilt the same idea in 9 minutes with one prompt , for AirPods you already own, and put it on GitHub for free. Here is how his app, subvox , actually works: The bigger story: a funded startup took months to demo this. One prompt rebuilt it. Software ideas alone are not a moat anymore.",
+      "bullets": [
+        "Your AirPods have motion sensors for spatial audio. Subvox reads that head-motion data when you silently mouth words.",
+        "You train it by mouthing a word a few times. It stores those as templates, then matches future mouthing against them.",
+        "No AI model involved. Just pattern matching on motion signals.",
+        "To run it: brew install xcodegen, then xcodegen generate, then open in Xcode. Requires macOS 14 and AirPods Pro."
+      ],
+      "image_url": "https://alphasignal.ai/image/1793595782972-evr2r3.png",
+      "read_more_url": "https://github.com/joeblau/subvox"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "Vercel Labs ships open-source tool letting AI agents control your whole desktop",
+      "likes": 9473,
+      "body": "Most AI agents that control your computer work by taking screenshots and guessing where buttons are. Slow, expensive, and fragile. agent-desktop from Vercel Labs fixes that. Instead of screenshots, it reads your OS's accessibility tree (think of it as a structured map of every button, input, and window on screen) and gives each element a stable ID called a ref. Your agent clicks the ref, not a pixel. No vision model needed. Here's what you can do with it: Install it: npm install -g agent-desktop . Free, open-source, Apache 2.0. Runs on macOS, Windows, and Linux.",
+      "bullets": [
+        "Let agents open apps, toggle settings, or inspect logs while you keep coding",
+        "Run multiple agents in parallel , each with its own cursor, on the same machine",
+        "Automate end-to-end desktop app testing without pasting screenshots into chat",
+        "Works with Claude Code, Codex, and any shell-capable agent"
+      ],
+      "image_url": "https://alphasignal.ai/image/1793595801609-pai5ic.png",
+      "read_more_url": "https://github.com/vercel-labs/agent-desktop"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Cursor warns 5,000 users of malware hidden in fake Claude Code VS Code extension",
+      "stat": {
+        "type": "likes",
+        "value": 7006
+      },
+      "url": "https://cursor.com/blog/claude-code-extension-security-notice"
+    },
+    {
+      "rank": 2,
+      "headline": "Scenario opens agent skills to generate images, video, 3D and audio with consistent branding",
+      "stat": {
+        "type": "stars",
+        "value": 1423
+      },
+      "url": "https://github.com/scenario-labs/skills"
+    },
+    {
+      "rank": 3,
+      "headline": "New method trains foundation models in one unified pass, beating staged training",
+      "stat": {
+        "type": "likes",
+        "value": 1472
+      },
+      "url": "https://arxiv.org/abs/2610.40564"
+    },
+    {
+      "rank": 4,
+      "headline": "A red heart emoji makes Claude and GPT pick recursion 100% of the time",
+      "stat": {
+        "type": "likes",
+        "value": 1020
+      },
+      "url": "https://arxiv.org/abs/2610.36449"
+    },
+    {
+      "rank": 5,
+      "headline": "20 free open-source motion studio skills drop for Claude on GitHub",
+      "stat": {
+        "type": "likes",
+        "value": 6390
+      },
+      "url": "https://github.com/remotion-dev/remotion"
+    }
+  ]
+}

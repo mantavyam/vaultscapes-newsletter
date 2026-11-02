@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#000000;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Logo -->
+
+<!-- White Divider Under Logo -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 20px 0;" width="100%">
+<tr>
+<td style="border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey,
+      </p>
+<!-- Intro Text -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;
+                color:#ffffff;margin:0;"> 
+The default approach to building AI applications has been to reach for a more powerful LLM. But what if a task doesn't need language generation in the first place?
+<br/><br/>
+Mistral's new Timestral model is a glimpse of a different future, where smaller, specialized foundation models handle tasks that would otherwise require expensive AI pipelines.
+<br/><br/>
+And Timestral is part of a much bigger trend. For engineers, this could change how we build AI agents, what capabilities we can add to applications, and how much they cost.
+<br/><br/>
+Today we unpack the emerging multi-model AI stack.
+
+
+    </p></td>
+</tr>
+</table>
+<!-- section: author -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1793543089846-5h29hi.png" style="display:block;border:1px solid #000000;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+        Today's Author
+      </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+        
+   Ben Dickson is a veteran software engineer and former CTO known as the "Engineer's Journalist" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat.
+      
+      </div>
+</td>
+</tr>
+</table>
+<!-- section: article -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family:system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Sunday Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+      Why the future AI stack needs more than one foundation model
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0;">
+<div style="margin-top:0;">
+<p>Mistral has released <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=e821698e2110d431&amp;lid=1AoU1IR9lsnbwstrc&amp;mid=0e51da9c-f0e2-40ba-966d-985ac2bab85c">Timestral</a>, a family of foundation models designed to forecast numerical data such as sales, energy consumption, and equipment readings. The models are very small, with the largest version having just 209 million parameters. Yet Mistral reports that it leads three public forecasting benchmarks among pretrained, zero-shot models.</p>
+<p>Timestral is the latest of a growing category of models built for specific tasks rather than general-purpose text generation. Recent releases include models that learn from tables, predict outcomes across relational databases, and make structured decisions.</p>
+<p>For developers, this opens new ways to build AI applications. Instead of using LLMs to handle every step, you can combine them with specialized prediction models. This makes applications more efficient while bringing predictive machine learning to problems that previously didn't justify building custom ML pipelines.</p>
+<p><b>How Timestral works</b></p>
+<p>Enterprises forecast different measures based on historical time-series data. Classical approaches such as ARIMA usually require fitting a model to each series. Deep learning alternatives require dataset-specific training. Scaling either approach across thousands of products or assets takes work.</p>
+<p>LLMs are <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=e821698e2110d431&amp;lid=NL7BL8TZQyHZAaWR&amp;mid=0e51da9c-f0e2-40ba-966d-985ac2bab85c">not necessarily better forecasters</a>. They learn to predict text tokens, while forecasting requires numerical estimates of future values.</p>
+<p>Timestral takes the foundation-model approach to forecasting. Basically, Timestral can do “zero-shot forecasting,” which means performing forecasting without retraining or fine-tuning the model.</p>
+<p>Consider a retailer planning its inventory for next month. A developer supplies historical daily sales as numerical arrays and requests a forecast for the next 30 days. The pretrained model predicts future sales without a new training run for that retailer.</p>
+<img alt="alpha_signal_image_1" border="0" src="https://alphasignal.ai/image/1793542423687-a8nzfr.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>The developer can also provide related information, such as past promotions or holidays scheduled during the forecast period. Timestral supports multiple related series and additional variables, aka “covariates.”</p>
+<p>Instead of generating an explanation in prose, it returns numerical predictions, including the median and quantiles that describe a range of possible outcomes. An inventory system can use a higher quantile to plan for stronger-than-expected demand.</p>
+<p>Under the hood, Timestral uses a transformer (like LLMs), but its inputs are patches of 32 numerical observations rather than text tokens. It uses a “Decoupled Horizon Forecasting” method that separates historical observations from tokens representing future predictions.</p>
+<p>This helps the model learn to forecast over different time horizons while preserving historical information. Mistral first pretrained it on synthetic sequences containing trends, seasonal changes, noise, and relationships between variables, then continued training with real and synthetic data.</p>
+<img alt="alpha_signal_image_2" border="0" src="https://alphasignal.ai/image/1793542454160-6e76es.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>The family comes in four sizes: 5M, 28M, 123M, and 209M parameters. Mistral reports leading results on multiple industry benchmarks. In one CPU test, the smallest model forecast 96 steps from 2,048 observations in 17 milliseconds using eight threads.</p>
+<p><b>Beyond language: The rise of specialized foundation models</b></p>
+<p>The general approach of foundation-model pretraining is spreading to data and outputs that don't fit naturally into the conversational interface that LLMs are designed for. A few notable examples from recent months:</p>
+<p><a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=e821698e2110d431&amp;lid=iv1iPpApqtSqJgO3&amp;mid=0e51da9c-f0e2-40ba-966d-985ac2bab85c">TabPFN</a> is a tabular foundation model. Given rows with known outcomes, it predicts labels or numerical values for new rows through in-context learning. It was trained across millions of synthetic datasets, and in experiments, it outperformed conventional ML baselines.</p>
+<p><a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=e821698e2110d431&amp;lid=1a2iaL7I2P2U7oHlz&amp;mid=0e51da9c-f0e2-40ba-966d-985ac2bab85c">Kumo Relational</a> is a foundation model designed for relational databases. it predicts outcomes using linked tables of customers, orders, and products, preserving relationships and timestamps. NVIDIA reports beating supervised baselines across 41 tasks on 15 databases. Its Predictive Query Language lets AI agents request predictions.</p>
+<img alt="alpha_signal_image_3" border="0" src="https://alphasignal.ai/image/1793542529210-ccoltv.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>And another popular example is <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=e821698e2110d431&amp;lid=CvSNRpvkZU8ICfo8&amp;mid=0e51da9c-f0e2-40ba-966d-985ac2bab85c">Jev</a> and the broader category of <a href="https://alphasignal.ai/news/system-one-models-are-carving-out-a-new-layer-in-the-ai-stack">decision models</a>. Jev takes application state and produces typed decisions and probability estimates. It can classify records, route requests, score options, or choose predefined actions.</p>
+<p>These models bring pretrained capabilities to new tasks through zero-shot predictions or in-context examples.</p>
+<p>Until now, adding predictive capabilities to applications often required collecting labeled data, preparing features, training models, and maintaining them in production. Specialized foundation models can reduce the work needed to bring forecasting or classification into applications.</p>
+<p>These models still need clean data, application-specific evaluation, and monitoring. They are not always faster or cheaper than traditional models such as XGBoost or CatBoost. Their advantage is mostly in reducing development costs.</p>
+<p><b>What the multi-model AI stack could look like</b></p>
+<p>Specialized foundation models can change how developers can design AI agents. A frontier reasoning model can interpret a request, plan operations, write code, and explain results. Specialized models can handle numerical forecasts, risk scores, and predefined decisions.</p>
+<p>Consider an inventory agent asked to find products likely to run out of stock. Instead of having one LLM analyze every record and estimate every outcome, the system could divide the work:</p>
+<ul>
+<li><b>Timestral</b> forecasts demand over the coming weeks.</li>
+<li><b>TabPFN</b> estimates stockout risk from labeled historical records.</li>
+<li><b>Kumo Relational</b> predicts supplier delays using connected order, shipment, and supplier data.</li>
+<li><b>Jev</b> classifies findings into predefined categories, such as routine monitoring or human review.</li>
+</ul>
+<img alt="alpha_signal_image_4" border="0" src="https://alphasignal.ai/image/1793542488570-e747bc.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>The reasoning model can combine these results, explain its recommendations, and identify decisions requiring approval. Application code can check inventory limits and purchasing rules before taking action.</p>
+<p>For developers, the practical starting point is to break workflows into tasks. Determine where flexible reasoning is required, where a specialized model can make a measurable prediction, and where deterministic code is sufficient.</p>
+<p>The next generation of AI applications may still depend on powerful language models, but their value will increasingly come from the systems built around them. Specialized foundation models could make predictive capabilities available to more applications while giving agents more reliable and efficient tools for individual steps.</p>
+</div>
+</td>
+</tr>
+</table>
+</body></html>
