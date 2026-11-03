@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-11-02T22:58:51Z",
+  "updated_at": "2026-11-03T20:45:40Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "03-11-2026",
+      "iso_date": "2026-11-03",
+      "type": "digest",
+      "subject": "🔬 Anthropic pays $500K/yr for safety research, no ML needed",
+      "path": "data/2026/11-November/03-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/03-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/03-11-2026.html",
+      "headlines": [
+        "Anthropic opens paid AI safety residency, no ML background needed",
+        "Anthropic's Claude API now caches conversations server-side, cutting time to first token by 35%",
+        "Claude generates a Studio Ghibli anime scene as a single HTML file with no assets"
+      ]
+    },
     {
       "date": "02-11-2026",
       "iso_date": "2026-11-02",
