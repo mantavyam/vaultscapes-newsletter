@@ -1,121 +1,118 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "03-11-2026",
-  "iso_date": "2026-11-03",
-  "subject": "🔬 Anthropic pays $500K/yr for safety research, no ML needed",
-  "intro": "AI is quietly eating its own job description. Google's ScientistTwo now writes better ML papers than humans. Anthropic is paying up to $500K to recruit physicists and founders into safety research, no ML background needed. The throughline? The bottleneck is no longer compute or models. It's people who understand what to do with them. We're watching the field recruit faster than it can train, and automate faster than it can recruit.",
-  "read_time": "6 min 47 sec",
+  "date": "04-11-2026",
+  "iso_date": "2026-11-04",
+  "subject": "GPT-6 Astra Weight Fix 🔬, Hydrogen-1.0 Science 🧪, OpenAI Bug Pay 💰",
+  "intro": "Both Anthropic and OpenAI made big moves to harden their platforms today. One by removing friction for enterprise teams, the other by paying serious money to find its own holes. The pattern: AI is growing up, and trust infrastructure is now a competitive moat. Meanwhile, the Claude Code self-improvement paper delivered a sobering reality check. Generating smart suggestions is easy. Knowing if they actually work? Hard. Today's theme: AI systems getting better at managing themselves , and humans scrambling to keep up.",
+  "read_time": "6 min 53 sec",
   "summary": [
     {
-      "category": "Top News",
-      "headline": "Anthropic opens paid AI safety residency, no ML background needed",
+      "category": "Top Model",
+      "headline": "GPT-6 Astra edits model weights directly, boosting math 6x without training",
       "news_id": "news-1"
     },
     {
-      "category": "Top News",
-      "headline": "Anthropic's Claude API now caches conversations server-side , cutting time to first token by 35%",
+      "category": "Top Model",
+      "headline": "Hydrogen-1.0 open-weight science model beats GPT-6 on chemistry benchmarks",
       "news_id": "news-2"
     },
     {
       "category": "Top Repo",
-      "headline": "Claude generates a Studio Ghibli anime scene as a single HTML file with no assets",
+      "headline": "Open-source tool unlocks Nvidia GeForce GPUs, boosting AI performance up to 87%",
       "news_id": "news-3"
     }
   ],
   "news": [
     {
       "id": "news-1",
-      "category": "Top News",
-      "headline": "Anthropic opens paid AI safety residency, no ML background needed",
-      "likes": 17991,
-      "body": "Anthropic just opened a paid research residency, and it is not your typical internship. This is a career pivot program for people who already have serious technical chops but zero AI safety experience. Here is the setup: you have strong skills in some technical field, but AI safety research feels like a locked door. This program is the key. You work on a real scoped research project matched to your background. Shorter placements can be remote. Longer ones prefer San Francisco, with visa sponsorship available. This opens up a path to publish real AI safety research and potentially join Anthropic full-time. Apply by November 22.",
+      "category": "Top Model",
+      "headline": "GPT-6 Astra edits model weights directly, boosting math 6x without training",
+      "likes": 54233,
+      "body": "MIT CSAIL just showed something genuinely weird: GPT-6 Astra edited another AI model's brain directly , no training required. Think of it like this. Every AI model is made of billions of numbers called weights. Those numbers control how the model thinks. Normally, changing them means expensive retraining. Astra just... read them, found the bug, and patched it like editing a config file. The target was Qwen3.5-0.8B, a small model stuck in reasoning loops. Astra touched only 0.016% of its weights and the results were: They call this Weight-Space Programming : using a big AI to fix a smaller AI by editing its weights directly. No GPU training runs, no datasets, no cost. The fixed model is already on HuggingFace. MIT is now building tools so you can try this yourself.",
       "bullets": [
-        "No ML background needed -- they teach you modern machine learning on the job",
-        "Placements run 6 weeks to 6 months , full-time",
-        "Pay is $350K to $500K annualized , prorated to your placement length",
-        "You get a dedicated Anthropic mentor, GPU compute budget, and access to Claude models",
-        "Research areas include interpretability, AI control, scalable oversight, and red-teaming"
+        "MATH-500 score jumped from 7.9% to 48.1%",
+        "GSM8K math score went from 13.8% to 67.1%",
+        "Instruction-following score tripled, from 21% to 62.3%"
       ],
-      "image_url": "https://alphasignal.ai/image/1793682368339-mhu3j6.png",
-      "read_more_url": "https://alignment.anthropic.com/2026/anthropic-residency/"
+      "image_url": "https://alphasignal.ai/image/1793768618175-yqrav7.png",
+      "read_more_url": "https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming"
     },
     {
       "id": "news-2",
-      "category": "Top News",
-      "headline": "Anthropic's Claude API now caches conversations server-side, cutting time to first token by 35%",
-      "likes": 7068,
-      "body": "Every turn in a long AI conversation, your app was resending the entire chat history to the server. Every. Single. Turn. For a coding agent running hundreds of requests, that ballooned to around 800 KB per request . Anthropic just fixed that with Message Threads, now in public beta on the Messages API. The server stores your conversation between turns. You send only new messages plus the previous response ID, and Claude starts replying faster. That 800 KB request? It drops to 1.8 KB . One catch: threads can expire, so you still need to keep your own conversation history locally as a backup. The bigger your context, the more you gain from this.",
+      "category": "Top Model",
+      "headline": "Hydrogen-1.0 open-weight science model beats GPT-6 on chemistry benchmarks",
+      "likes": 7530,
+      "body": "Most science AI is locked behind closed APIs. You can't inspect it, adapt it, or trust it fully. Hydrogen-1.0 flips that. Deep Principle just dropped a fully open, 753B parameter model built specifically for scientific research, and you can grab the weights right now on Hugging Face under MIT license. It was trained on top of GLM-5.3, then fine-tuned on real lab records, full experiment cycles, and past discovery paths. That training approach is what makes it special: it learned not just facts, but how scientists actually think and work. Here's what it can do: Specs worth knowing: 1M token context , 128K output, scores 38.3% on FrontierScience-Research versus GPT-6-Astra's 33.3%. You can self-host it with SGLang on 8 GPUs, or hit it via API at GLM-5.3 pricing.",
       "bullets": [
-        "Median time before Claude starts responding drops by 35% on requests with 500K to 1M tokens",
-        "Threads are encrypted in memory, never written to disk, and expire 5 minutes after the last request",
-        "To use it: add the thread parameter and beta header to your API requests",
-        "No extra cost, standard token rates apply"
+        "Plan experiments from a short description of intent",
+        "Run and debug molecular simulations end-to-end",
+        "Catch lab procedure errors before they happen in a virtual rehearsal",
+        "Find better material candidates with fewer attempts"
       ],
-      "image_url": "https://alphasignal.ai/image/1793682399607-mdb0hs.png",
-      "read_more_url": "https://claude.com/resources/articles/message-threads"
+      "image_url": "https://alphasignal.ai/image/1793768635689-u7mb9e.png",
+      "read_more_url": "https://huggingface.co/deep-principle/Hydrogen-1.0"
     },
     {
       "id": "news-3",
       "category": "Top Repo",
-      "headline": "Claude generates a Studio Ghibli anime scene as a single HTML file with no assets",
-      "likes": 6333,
-      "body": "Fable 5.5 just one-shotted a full anime short film. No video model. No assets. Pure code. Someone gave it a detailed Studio Ghibli-style prompt and it spat out a single self-contained HTML file with a giant robot waking up in a mossy forest, rising into a golden sky. The whole thing runs in your browser with zero dependencies. Here is what the file actually does: The kicker? No image or video model was involved. Fable 5.5 wrote every frame procedurally in code. You can clone the repo at ChetasLua/moss-keeper, open index.html, and it works offline instantly. Run the same prompt on Fable 5.1 and quality drops noticeably. This shows how fast the gap between model versions is growing for creative code tasks.",
+      "headline": "Open-source tool unlocks Nvidia GeForce GPUs, boosting AI performance up to 87%",
+      "likes": 5563,
+      "body": "Your consumer GPU has been running at half speed. On purpose. NVIDIA artificially limits Tensor Core performance (the chips that handle AI math) on GeForce cards to push you toward pricier professional GPUs. A new open-source tool called gpu-unlock removes that limit. Here is what actually happens: when your GPU does the AI math most training and inference relies on, GeForce cards issue those instructions at half the rate of professional cards. gpu-unlock rewrites two hardware registers before NVIDIA's driver loads, then hands control back. No VBIOS flash, no patched driver. Real-world gains reported: It is Linux-only, still experimental, and requires a cold boot each time. The warning is real: running tensor cores at full speed draws significantly more power. Check the repo at github.com/Zagitta/gpu-unlock.",
       "bullets": [
-        "Film embedded as base64 MP4, decoded into a Blob at load time",
-        "Custom player with play/pause, seek bar, fullscreen, and sound toggle",
-        "Live film-grain overlay drawn on a Canvas element",
-        "Keyboard shortcuts built in: Space, arrow keys, M, F"
+        "RTX 3090: up to +65% compute throughput in AI workloads",
+        "RTX 4090: FP16 rate jumps from 165 to 331 TFLOPS",
+        "Image generation and model fine-tuning: 25-55% faster"
       ],
-      "image_url": "https://alphasignal.ai/image/1793682234728-w24onc.png",
-      "read_more_url": "https://github.com/ChetasLua/moss-keeper"
+      "image_url": "https://alphasignal.ai/image/1793768599293-ecequr.png",
+      "read_more_url": "https://github.com/zagitta/gpu-unlock"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "OpenAI releases a real-world benchmark built from thousands of ChatGPT user requests",
+      "headline": "Anthropic lets Claude auto-connect plugins without re-authorizing each time",
       "stat": {
         "type": "likes",
-        "value": 5550
+        "value": 5452
       },
-      "url": "https://openai.com/index/lifeval/"
+      "url": "https://modelcontextprotocol.io/extensions/auth/enterprise-managed-authorization"
     },
     {
       "rank": 2,
-      "headline": "Google's autonomous research agent outperforms human scientists by 25% across 86 tasks",
+      "headline": "Study tests whether Claude Code can improve itself by reviewing past mistakes",
       "stat": {
         "type": "likes",
-        "value": 1866
+        "value": 1875
       },
-      "url": "https://arxiv.org/abs/2609.19644"
+      "url": "https://arxiv.org/abs/2610.34938"
     },
     {
       "rank": 3,
-      "headline": "Tokyo lab of AI agents runs a full quantum physics experiment and discovers a new law",
+      "headline": "Google releases open multimodal embedding model that beats models 12x its size",
       "stat": {
         "type": "likes",
-        "value": 1827
+        "value": 1028
       },
-      "url": "https://arxiv.org/abs/2610.40589"
+      "url": "https://arxiv.org/abs/2610.37364"
     },
     {
       "rank": 4,
-      "headline": "Open-source sparse attention method runs 72x faster at 10M token context",
+      "headline": "IST-DASLab squeezes a 763B DeepSeek coding model down to 72 GB at 1 bit per parameter",
       "stat": {
-        "type": "likes",
-        "value": 1000
+        "type": "downloads",
+        "value": 28666
       },
-      "url": "https://arxiv.org/abs/2610.42147"
+      "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-Coder-GGUF"
     },
     {
       "rank": 5,
-      "headline": "OpenAI's new Git backend cuts monorepo push latency by 80% at petabyte scale",
+      "headline": "OpenAI quadruples bug bounty payouts, now offering up to $172,000 per critical find",
       "stat": {
         "type": "likes",
-        "value": 4468
+        "value": 3744
       },
-      "url": "https://openai.com/index/scaling-git-at-openai/"
+      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai/"
     }
   ]
 }
