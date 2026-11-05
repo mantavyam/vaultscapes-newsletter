@@ -1,118 +1,117 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "04-11-2026",
-  "iso_date": "2026-11-04",
-  "subject": "GPT-6 Astra Weight Fix 🔬, Hydrogen-1.0 Science 🧪, OpenAI Bug Pay 💰",
-  "intro": "Both Anthropic and OpenAI made big moves to harden their platforms today. One by removing friction for enterprise teams, the other by paying serious money to find its own holes. The pattern: AI is growing up, and trust infrastructure is now a competitive moat. Meanwhile, the Claude Code self-improvement paper delivered a sobering reality check. Generating smart suggestions is easy. Knowing if they actually work? Hard. Today's theme: AI systems getting better at managing themselves , and humans scrambling to keep up.",
-  "read_time": "6 min 53 sec",
+  "date": "05-11-2026",
+  "iso_date": "2026-11-05",
+  "subject": "💸 Claude Code cuts subagent costs 99%, 6% more prompts",
+  "intro": "The theme today is efficiency . Anthropic quietly cut Claude Code's subagent token costs by 99% with a smarter status update trick. OpenAI shipped Images 2.6 with GIFs and generation that's 50% faster. Both labs shipping the same day, both chasing the same thing: doing more with less. We're past the era of raw capability. The race is now about cost per useful output . More runway, faster pixels. Not bad for a Tuesday.",
+  "read_time": "7 min 3 sec",
   "summary": [
     {
-      "category": "Top Model",
-      "headline": "GPT-6 Astra edits model weights directly, boosting math 6x without training",
+      "category": "Top News",
+      "headline": "Claude Code cuts background subagent token cost by 99% in v2.1.316",
       "news_id": "news-1"
     },
     {
-      "category": "Top Model",
-      "headline": "Hydrogen-1.0 open-weight science model beats GPT-6 on chemistry benchmarks",
+      "category": "Top News",
+      "headline": "OpenAI ships ChatGPT Images 2.6 with GIF output and 6-second image generation",
       "news_id": "news-2"
     },
     {
-      "category": "Top Repo",
-      "headline": "Open-source tool unlocks Nvidia GeForce GPUs, boosting AI performance up to 87%",
+      "category": "Top News",
+      "headline": "Kimi.ai releases Kimi K3.1 Pro model weights to the public",
       "news_id": "news-3"
     }
   ],
   "news": [
     {
       "id": "news-1",
-      "category": "Top Model",
-      "headline": "GPT-6 Astra edits model weights directly, boosting math 6x without training",
-      "likes": 54233,
-      "body": "MIT CSAIL just showed something genuinely weird: GPT-6 Astra edited another AI model's brain directly , no training required. Think of it like this. Every AI model is made of billions of numbers called weights. Those numbers control how the model thinks. Normally, changing them means expensive retraining. Astra just... read them, found the bug, and patched it like editing a config file. The target was Qwen3.5-0.8B, a small model stuck in reasoning loops. Astra touched only 0.016% of its weights and the results were: They call this Weight-Space Programming : using a big AI to fix a smaller AI by editing its weights directly. No GPU training runs, no datasets, no cost. The fixed model is already on HuggingFace. MIT is now building tools so you can try this yourself.",
+      "category": "Top News",
+      "headline": "Claude Code cuts background subagent token cost by 99% in v2.1.316",
+      "likes": 17480,
+      "body": "Claude Code just got a quiet but useful fix for background subagents, those helper agents that run tasks in parallel while your main session keeps going. Here is the problem it solved. Every 30 seconds, each background subagent refreshed its status line. To do that, it re-read its entire conversation history each time. That is expensive. The longer the session, the worse it got. Now, Haiku 5.5, a smaller and faster model, writes that status update from short notes instead of the full transcript. The result: each status update costs 99% less to generate. What does that mean for you? More runway on the same plan. Small change, real impact, especially if you run long multi-agent sessions.",
       "bullets": [
-        "MATH-500 score jumped from 7.9% to 48.1%",
-        "GSM8K math score went from 13.8% to 67.1%",
-        "Instruction-following score tripled, from 21% to 62.3%"
+        "Sessions with background subagents now use about 5% less of your usage limit",
+        "That translates to roughly 6% more prompts before you hit the wall",
+        "No config changes needed, just update to v2.1.316+ with claude update",
+        "Live for Pro, Max, Ultra, Team, and Enterprise users"
       ],
-      "image_url": "https://alphasignal.ai/image/1793768618175-yqrav7.png",
-      "read_more_url": "https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming"
+      "image_url": "https://alphasignal.ai/image/1793855075051-ec5n14.png",
+      "read_more_url": "https://x.com/ClaudeDevs/status/2118063143167693011"
     },
     {
       "id": "news-2",
-      "category": "Top Model",
-      "headline": "Hydrogen-1.0 open-weight science model beats GPT-6 on chemistry benchmarks",
-      "likes": 7530,
-      "body": "Most science AI is locked behind closed APIs. You can't inspect it, adapt it, or trust it fully. Hydrogen-1.0 flips that. Deep Principle just dropped a fully open, 753B parameter model built specifically for scientific research, and you can grab the weights right now on Hugging Face under MIT license. It was trained on top of GLM-5.3, then fine-tuned on real lab records, full experiment cycles, and past discovery paths. That training approach is what makes it special: it learned not just facts, but how scientists actually think and work. Here's what it can do: Specs worth knowing: 1M token context , 128K output, scores 38.3% on FrontierScience-Research versus GPT-6-Astra's 33.3%. You can self-host it with SGLang on 8 GPUs, or hit it via API at GLM-5.3 pricing.",
+      "category": "Top News",
+      "headline": "OpenAI ships ChatGPT Images 2.6 with GIF output and 6-second image generation",
+      "likes": 13311,
+      "body": "OpenAI just dropped Images 2.6 , and it is a solid upgrade worth knowing about. The headline feature: you can now generate animated GIFs from a text prompt or a photo. You can tweak the speed and edit individual frames. The model keeps characters consistent across frames, so animations actually look coherent. The other big addition is reference images . Save a character, a pet, or a product once, and reuse it across future creations without re-uploading anything. Huge for anyone building consistent visual content. On the API side, two models are now available: Both support image markup and SVG export , so you can pinpoint edits and pipe results directly into design workflows. Overall generation is 50% faster than before. Available now in ChatGPT, Codex, and the API.",
       "bullets": [
-        "Plan experiments from a short description of intent",
-        "Run and debug molecular simulations end-to-end",
-        "Catch lab procedure errors before they happen in a virtual rehearsal",
-        "Find better material candidates with fewer attempts"
+        "Flare (gpt-image-2.6-flare): speed-first, generates in as little as 6 seconds. Great for prototyping and high-volume pipelines.",
+        "Sunburst (gpt-image-2.6-sunburst): higher quality, more consistent edits. Built for polished output."
       ],
-      "image_url": "https://alphasignal.ai/image/1793768635689-u7mb9e.png",
-      "read_more_url": "https://huggingface.co/deep-principle/Hydrogen-1.0"
+      "image_url": "https://alphasignal.ai/image/1793855104570-jfp31w.png",
+      "read_more_url": "https://openai.com/index/introducing-images-2-6/"
     },
     {
       "id": "news-3",
-      "category": "Top Repo",
-      "headline": "Open-source tool unlocks Nvidia GeForce GPUs, boosting AI performance up to 87%",
-      "likes": 5563,
-      "body": "Your consumer GPU has been running at half speed. On purpose. NVIDIA artificially limits Tensor Core performance (the chips that handle AI math) on GeForce cards to push you toward pricier professional GPUs. A new open-source tool called gpu-unlock removes that limit. Here is what actually happens: when your GPU does the AI math most training and inference relies on, GeForce cards issue those instructions at half the rate of professional cards. gpu-unlock rewrites two hardware registers before NVIDIA's driver loads, then hands control back. No VBIOS flash, no patched driver. Real-world gains reported: It is Linux-only, still experimental, and requires a cold boot each time. The warning is real: running tensor cores at full speed draws significantly more power. Check the repo at github.com/Zagitta/gpu-unlock.",
+      "category": "Top News",
+      "headline": "Kimi.ai releases Kimi K3.1 Pro model weights to the public",
+      "likes": 6681,
+      "body": "Moonshot AI just dropped the weights for Kimi K3.1 Pro on Hugging Face, and it's a big deal for anyone who wants a powerful model they can actually run themselves. So what is it exactly? A 2.8 trillion parameter open-weight model with a 1 million token context window , meaning you can feed it an entire codebase at once. It uses a Mixture-of-Experts setup, where only a slice of the model activates per task, keeping it efficient despite the massive size. Here's what it's good at: Platforms like Ollama, Nebius, and Databricks already support it, so you don't need to self-host. The weights alone are around 1.56 TB , so local runs need serious hardware.",
       "bullets": [
-        "RTX 3090: up to +65% compute throughput in AI workloads",
-        "RTX 4090: FP16 rate jumps from 165 to 331 TFLOPS",
-        "Image generation and model fine-tuning: 25-55% faster"
+        "Full-project coding in Unreal, Unity, and Godot, plus 3D modeling in Blender and CAD",
+        "Finance work with hallucination down by 65%",
+        "Ranked #1 among open-weight models on Agent Arena, across productivity, coding, and chat"
       ],
-      "image_url": "https://alphasignal.ai/image/1793768599293-ecequr.png",
-      "read_more_url": "https://github.com/zagitta/gpu-unlock"
+      "image_url": "https://alphasignal.ai/image/1793855130041-nsmy85.png",
+      "read_more_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Anthropic lets Claude auto-connect plugins without re-authorizing each time",
+      "headline": "OpenAI model finds and patches 948 Linux kernel exploits for $1.2M",
       "stat": {
         "type": "likes",
-        "value": 5452
+        "value": 5851
       },
-      "url": "https://modelcontextprotocol.io/extensions/auth/enterprise-managed-authorization"
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/"
     },
     {
       "rank": 2,
-      "headline": "Study tests whether Claude Code can improve itself by reviewing past mistakes",
+      "headline": "Tsinghua and NVIDIA release open-source benchmark rating 37 interactive video models",
       "stat": {
         "type": "likes",
-        "value": 1875
+        "value": 698
       },
-      "url": "https://arxiv.org/abs/2610.34938"
+      "url": "https://arxiv.org/abs/2610.28402"
     },
     {
       "rank": 3,
-      "headline": "Google releases open multimodal embedding model that beats models 12x its size",
+      "headline": "LeCun proves AI models trained on different data converge to the same world view",
       "stat": {
         "type": "likes",
-        "value": 1028
+        "value": 567
       },
-      "url": "https://arxiv.org/abs/2610.37364"
+      "url": "https://arxiv.org/abs/2610.39302"
     },
     {
       "rank": 4,
-      "headline": "IST-DASLab squeezes a 763B DeepSeek coding model down to 72 GB at 1 bit per parameter",
+      "headline": "Yarchi ships a free open-source site that teaches AI agents in 15 minutes",
       "stat": {
-        "type": "downloads",
-        "value": 28666
+        "type": "likes",
+        "value": 4398
       },
-      "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-Coder-GGUF"
+      "url": "https://github.com/undefined-ui/second-brain-os"
     },
     {
       "rank": 5,
-      "headline": "OpenAI quadruples bug bounty payouts, now offering up to $172,000 per critical find",
+      "headline": "Free open-source tool runs a full macOS inside your terminal for AI agents",
       "stat": {
         "type": "likes",
-        "value": 3744
+        "value": 3388
       },
-      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai/"
+      "url": "https://github.com/govijr/terminal-mac"
     }
   ]
 }

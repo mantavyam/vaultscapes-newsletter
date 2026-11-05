@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "05-11-2026",
+  "iso_date": "2026-11-05",
+  "subject": "💸 Claude Code cuts subagent costs 99%, 6% more prompts",
+  "intro": "The theme today is efficiency . Anthropic quietly cut Claude Code's subagent token costs by 99% with a smarter status update trick. OpenAI shipped Images 2.6 with GIFs and generation that's 50% faster. Both labs shipping the same day, both chasing the same thing: doing more with less. We're past the era of raw capability. The race is now about cost per useful output . More runway, faster pixels. Not bad for a Tuesday.",
+  "read_time": "7 min 3 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Claude Code cuts background subagent token cost by 99% in v2.1.316",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI ships ChatGPT Images 2.6 with GIF output and 6-second image generation",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Kimi.ai releases Kimi K3.1 Pro model weights to the public",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Claude Code cuts background subagent token cost by 99% in v2.1.316",
+      "likes": 17480,
+      "body": "Claude Code just got a quiet but useful fix for background subagents, those helper agents that run tasks in parallel while your main session keeps going. Here is the problem it solved. Every 30 seconds, each background subagent refreshed its status line. To do that, it re-read its entire conversation history each time. That is expensive. The longer the session, the worse it got. Now, Haiku 5.5, a smaller and faster model, writes that status update from short notes instead of the full transcript. The result: each status update costs 99% less to generate. What does that mean for you? More runway on the same plan. Small change, real impact, especially if you run long multi-agent sessions.",
+      "bullets": [
+        "Sessions with background subagents now use about 5% less of your usage limit",
+        "That translates to roughly 6% more prompts before you hit the wall",
+        "No config changes needed, just update to v2.1.316+ with claude update",
+        "Live for Pro, Max, Ultra, Team, and Enterprise users"
+      ],
+      "image_url": "https://alphasignal.ai/image/1793855075051-ec5n14.png",
+      "read_more_url": "https://x.com/ClaudeDevs/status/2118063143167693011"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "OpenAI ships ChatGPT Images 2.6 with GIF output and 6-second image generation",
+      "likes": 13311,
+      "body": "OpenAI just dropped Images 2.6 , and it is a solid upgrade worth knowing about. The headline feature: you can now generate animated GIFs from a text prompt or a photo. You can tweak the speed and edit individual frames. The model keeps characters consistent across frames, so animations actually look coherent. The other big addition is reference images . Save a character, a pet, or a product once, and reuse it across future creations without re-uploading anything. Huge for anyone building consistent visual content. On the API side, two models are now available: Both support image markup and SVG export , so you can pinpoint edits and pipe results directly into design workflows. Overall generation is 50% faster than before. Available now in ChatGPT, Codex, and the API.",
+      "bullets": [
+        "Flare (gpt-image-2.6-flare): speed-first, generates in as little as 6 seconds. Great for prototyping and high-volume pipelines.",
+        "Sunburst (gpt-image-2.6-sunburst): higher quality, more consistent edits. Built for polished output."
+      ],
+      "image_url": "https://alphasignal.ai/image/1793855104570-jfp31w.png",
+      "read_more_url": "https://openai.com/index/introducing-images-2-6/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Kimi.ai releases Kimi K3.1 Pro model weights to the public",
+      "likes": 6681,
+      "body": "Moonshot AI just dropped the weights for Kimi K3.1 Pro on Hugging Face, and it's a big deal for anyone who wants a powerful model they can actually run themselves. So what is it exactly? A 2.8 trillion parameter open-weight model with a 1 million token context window , meaning you can feed it an entire codebase at once. It uses a Mixture-of-Experts setup, where only a slice of the model activates per task, keeping it efficient despite the massive size. Here's what it's good at: Platforms like Ollama, Nebius, and Databricks already support it, so you don't need to self-host. The weights alone are around 1.56 TB , so local runs need serious hardware.",
+      "bullets": [
+        "Full-project coding in Unreal, Unity, and Godot, plus 3D modeling in Blender and CAD",
+        "Finance work with hallucination down by 65%",
+        "Ranked #1 among open-weight models on Agent Arena, across productivity, coding, and chat"
+      ],
+      "image_url": "https://alphasignal.ai/image/1793855130041-nsmy85.png",
+      "read_more_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenAI model finds and patches 948 Linux kernel exploits for $1.2M",
+      "stat": {
+        "type": "likes",
+        "value": 5851
+      },
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+    },
+    {
+      "rank": 2,
+      "headline": "Tsinghua and NVIDIA release open-source benchmark rating 37 interactive video models",
+      "stat": {
+        "type": "likes",
+        "value": 698
+      },
+      "url": "https://arxiv.org/abs/2610.28402"
+    },
+    {
+      "rank": 3,
+      "headline": "LeCun proves AI models trained on different data converge to the same world view",
+      "stat": {
+        "type": "likes",
+        "value": 567
+      },
+      "url": "https://arxiv.org/abs/2610.39302"
+    },
+    {
+      "rank": 4,
+      "headline": "Yarchi ships a free open-source site that teaches AI agents in 15 minutes",
+      "stat": {
+        "type": "likes",
+        "value": 4398
+      },
+      "url": "https://github.com/undefined-ui/second-brain-os"
+    },
+    {
+      "rank": 5,
+      "headline": "Free open-source tool runs a full macOS inside your terminal for AI agents",
+      "stat": {
+        "type": "likes",
+        "value": 3388
+      },
+      "url": "https://github.com/govijr/terminal-mac"
+    }
+  ]
+}

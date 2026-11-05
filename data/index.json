@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-11-04T21:03:24Z",
+  "updated_at": "2026-11-05T21:19:28Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "05-11-2026",
+      "iso_date": "2026-11-05",
+      "type": "digest",
+      "subject": "💸 Claude Code cuts subagent costs 99%, 6% more prompts",
+      "path": "data/2026/11-November/05-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/05-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/05-11-2026.html",
+      "headlines": [
+        "Claude Code cuts background subagent token cost by 99% in v2.1.316",
+        "OpenAI ships ChatGPT Images 2.6 with GIF output and 6-second image generation",
+        "Kimi.ai releases Kimi K3.1 Pro model weights to the public"
+      ]
+    },
     {
       "date": "04-11-2026",
       "iso_date": "2026-11-04",
