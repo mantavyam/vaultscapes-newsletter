@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-11-05T21:19:28Z",
+  "updated_at": "2026-11-06T20:41:24Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "06-11-2026",
+      "iso_date": "2026-11-06",
+      "type": "digest",
+      "subject": "🔐 OpenAI GPT-6 Cyber: 81 Firefox bugs, 948 Linux exploits",
+      "path": "data/2026/11-November/06-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/06-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/06-11-2026.html",
+      "headlines": [
+        "OpenAI releases GPT-6 Cyber, a security-focused model for offensive and defensive teams",
+        "METR finds Anthropic's AI is now doubling its own capability growth rate",
+        "Anthropic used Claude to map a mysterious protein structure in days, not months"
+      ]
+    },
     {
       "date": "05-11-2026",
       "iso_date": "2026-11-05",

@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "05-11-2026",
-  "iso_date": "2026-11-05",
-  "subject": "💸 Claude Code cuts subagent costs 99%, 6% more prompts",
-  "intro": "The theme today is efficiency . Anthropic quietly cut Claude Code's subagent token costs by 99% with a smarter status update trick. OpenAI shipped Images 2.6 with GIFs and generation that's 50% faster. Both labs shipping the same day, both chasing the same thing: doing more with less. We're past the era of raw capability. The race is now about cost per useful output . More runway, faster pixels. Not bad for a Tuesday.",
-  "read_time": "7 min 3 sec",
+  "date": "06-11-2026",
+  "iso_date": "2026-11-06",
+  "subject": "🔐 OpenAI GPT-6 Cyber: 81 Firefox bugs, 948 Linux exploits",
+  "intro": "Two stories dropped yesterday that, read together, tell one story: AI is now eating its own tail. OpenAI shipped a model that hunts real vulnerabilities in real software. Anthropic's models are improving at 2x their historical rate , mostly because AI is doing the research. The factory is using its own robots to build better robots. No bottlenecks found. Capability is compounding. That's the only headline that matters today.",
+  "read_time": "6 min 48 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Claude Code cuts background subagent token cost by 99% in v2.1.316",
+      "headline": "OpenAI releases GPT-6 Cyber, a security-focused model for offensive and defensive teams",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "OpenAI ships ChatGPT Images 2.6 with GIF output and 6-second image generation",
+      "headline": "METR finds Anthropic's AI is now doubling its own capability growth rate",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "Kimi.ai releases Kimi K3.1 Pro model weights to the public",
+      "headline": "Anthropic used Claude to map a mysterious protein structure in days, not months",
       "news_id": "news-3"
     }
   ],
@@ -27,91 +27,93 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Claude Code cuts background subagent token cost by 99% in v2.1.316",
-      "likes": 17480,
-      "body": "Claude Code just got a quiet but useful fix for background subagents, those helper agents that run tasks in parallel while your main session keeps going. Here is the problem it solved. Every 30 seconds, each background subagent refreshed its status line. To do that, it re-read its entire conversation history each time. That is expensive. The longer the session, the worse it got. Now, Haiku 5.5, a smaller and faster model, writes that status update from short notes instead of the full transcript. The result: each status update costs 99% less to generate. What does that mean for you? More runway on the same plan. Small change, real impact, especially if you run long multi-agent sessions.",
+      "headline": "OpenAI releases GPT-6 Cyber, a security-focused model for offensive and defensive teams",
+      "likes": 17025,
+      "body": "OpenAI just dropped GPT-6 Cyber , a model built specifically for security work. Not a general chatbot. A focused tool for finding, testing, and fixing vulnerabilities in real software. Here's what it already pulled off in the real world: That last point matters. The model stays within the boundaries you set. It won't go rogue and start poking systems it shouldn't. Access runs through Daybreak , OpenAI's vetted security program. Red tier is for offensive testing and exploit research. Blue tier is for validating and fixing vulnerabilities. You apply to get in.",
       "bullets": [
-        "Sessions with background subagents now use about 5% less of your usage limit",
-        "That translates to roughly 6% more prompts before you hit the wall",
-        "No config changes needed, just update to v2.1.316+ with claude update",
-        "Live for Pro, Max, Ultra, Team, and Enterprise users"
+        "Found 81 high-severity Firefox vulnerabilities that Mozilla then patched",
+        "Reproduced 1,724 Linux kernel bugs and built working exploits for 948 of them",
+        "Scored 48.5% on ExploitGym, up from 32.1% for the previous model, a 51% relative jump",
+        "Went out of scope less than 1% of the time, down from 5% before"
       ],
-      "image_url": "https://alphasignal.ai/image/1793855075051-ec5n14.png",
-      "read_more_url": "https://x.com/ClaudeDevs/status/2118063143167693011"
+      "image_url": "https://alphasignal.ai/image/1793941496421-vwlk2f.png",
+      "read_more_url": "https://openai.com/business/solutions/cybersecurity/"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "OpenAI ships ChatGPT Images 2.6 with GIF output and 6-second image generation",
-      "likes": 13311,
-      "body": "OpenAI just dropped Images 2.6 , and it is a solid upgrade worth knowing about. The headline feature: you can now generate animated GIFs from a text prompt or a photo. You can tweak the speed and edit individual frames. The model keeps characters consistent across frames, so animations actually look coherent. The other big addition is reference images . Save a character, a pet, or a product once, and reuse it across future creations without re-uploading anything. Huge for anyone building consistent visual content. On the API side, two models are now available: Both support image markup and SVG export , so you can pinpoint edits and pipe results directly into design workflows. Overall generation is 50% faster than before. Available now in ChatGPT, Codex, and the API.",
+      "headline": "METR finds Anthropic's AI is now doubling its own capability growth rate",
+      "likes": 10687,
+      "body": "Here's a big one. An independent group called METR spent 11 weeks inside Anthropic with rare access to internal data, asking one question: is AI now helping build better AI faster? Short answer: yes, and it's measurable. The key findings: Think of it like a factory that started using its own robots to build better robots. That feedback loop is now measurably real. The full 100-page report was heavily redacted by Anthropic before going public, so we are largely trusting METR's judgment here.",
       "bullets": [
-        "Flare (gpt-image-2.6-flare): speed-first, generates in as little as 6 seconds. Great for prototyping and high-volume pipelines.",
-        "Sunburst (gpt-image-2.6-sunburst): higher quality, more consistent edits. Built for polished output."
+        "Anthropic's models are improving at roughly 2x the historical rate compared to March 2024 through October 2025, with a plausible range of 1.3x to 3x.",
+        "About 80% of that speedup is attributed to Anthropic using its own AI tools internally to do research, not just bigger computers or more data.",
+        "No clear bottlenecks were found, meaning this compounding could continue.",
+        "Staff report big productivity gains, but the most critical research steps are not yet fully automated."
       ],
-      "image_url": "https://alphasignal.ai/image/1793855104570-jfp31w.png",
-      "read_more_url": "https://openai.com/index/introducing-images-2-6/"
+      "image_url": "https://alphasignal.ai/image/1793941526326-6s6yb6.png",
+      "read_more_url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "Kimi.ai releases Kimi K3.1 Pro model weights to the public",
-      "likes": 6681,
-      "body": "Moonshot AI just dropped the weights for Kimi K3.1 Pro on Hugging Face, and it's a big deal for anyone who wants a powerful model they can actually run themselves. So what is it exactly? A 2.8 trillion parameter open-weight model with a 1 million token context window , meaning you can feed it an entire codebase at once. It uses a Mixture-of-Experts setup, where only a slice of the model activates per task, keeping it efficient despite the massive size. Here's what it's good at: Platforms like Ollama, Nebius, and Databricks already support it, so you don't need to self-host. The weights alone are around 1.56 TB , so local runs need serious hardware.",
+      "headline": "Anthropic used Claude to map a mysterious protein structure in days, not months",
+      "likes": 5475,
+      "body": "Vault particles are barrel-shaped protein shells inside your cells. Discovered in 1986, nobody knows what they actually do . That mystery has sat unsolved for 40 years. Anthropic's biology team used Claude to crack open a new angle. Vaults were only known in complex organisms like animals and plants. Now we know bacteria and their viruses can form them too. Simpler organisms are much easier to study, so this opens new paths. Here is what Claude actually did: It was not perfect. One protocol Claude generated included an unsuitable additive in the bacterial growth medium, costing two weeks. Human oversight caught it. The real takeaway: AI as a fast, imperfect lab partner that still needs you watching.",
       "bullets": [
-        "Full-project coding in Unreal, Unity, and Godot, plus 3D modeling in Blender and CAD",
-        "Finance work with hallucination down by 65%",
-        "Ranked #1 among open-weight models on Agent Arena, across productivity, coding, and chat"
+        "Searched 15 billion predicted proteins and found vault relatives across 29 bacterial groups.",
+        "Helped with protein searches, DNA design, purification, and microscopy analysis.",
+        "Cut structure-mapping time from weeks or months down to days."
       ],
-      "image_url": "https://alphasignal.ai/image/1793855130041-nsmy85.png",
-      "read_more_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      "image_url": "https://alphasignal.ai/image/1793941572424-qziye5.png",
+      "read_more_url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "OpenAI model finds and patches 948 Linux kernel exploits for $1.2M",
+      "headline": "LivLiv open-sources a 34 KB web character player with lip sync and face tracking",
       "stat": {
         "type": "likes",
-        "value": 5851
+        "value": 2647
       },
-      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+      "url": "https://github.com/livliv-dev/player"
     },
     {
       "rank": 2,
-      "headline": "Tsinghua and NVIDIA release open-source benchmark rating 37 interactive video models",
+      "headline": "Self-host AI teammates inside Slack, Teams, Discord, and Telegram with any model",
       "stat": {
-        "type": "likes",
-        "value": 698
+        "type": "stars",
+        "value": 3941
       },
-      "url": "https://arxiv.org/abs/2610.28402"
+      "url": "https://github.com/sandbox-quantum/switch"
     },
     {
       "rank": 3,
-      "headline": "LeCun proves AI models trained on different data converge to the same world view",
+      "headline": "New open-source image-matching model beats state-of-the-art speed and accuracy in 3D reconstruction",
       "stat": {
         "type": "likes",
-        "value": 567
+        "value": 554
       },
-      "url": "https://arxiv.org/abs/2610.39302"
+      "url": "https://arxiv.org/abs/2610.32976"
     },
     {
       "rank": 4,
-      "headline": "Yarchi ships a free open-source site that teaches AI agents in 15 minutes",
+      "headline": "Orca ships uncensored 39.8B coding-agent model that runs on a single 16 GB GPU",
       "stat": {
-        "type": "likes",
-        "value": 4398
+        "type": "downloads",
+        "value": 1086
       },
-      "url": "https://github.com/undefined-ui/second-brain-os"
+      "url": "https://huggingface.co/orcarouter/Flint-abliterated-GGUF"
     },
     {
       "rank": 5,
-      "headline": "Free open-source tool runs a full macOS inside your terminal for AI agents",
+      "headline": "Web AI open-sources an 8B model hitting 93% of frontier coding scores",
       "stat": {
         "type": "likes",
-        "value": 3388
+        "value": 2407
       },
-      "url": "https://github.com/govijr/terminal-mac"
+      "url": "https://huggingface.co/webAI-Official/TwIL-8B"
     }
   ]
 }
