@@ -1,0 +1,162 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "08-11-2026",
+  "iso_date": "2026-11-08",
+  "subject": "⚡ Latent Sparse Attention Speeds Up 10M-Token AI Contexts by 9x",
+  "kicker": "Sunday Deep Dive",
+  "title": "How latent sparse attention tackles the search bottleneck in long-context AI",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "AI agents are getting better at working on tasks that span hours and involve entire codebases, document libraries, and long histories of interactions. But the longer they work, the more expensive it becomes for the underlying models to process their growing context. Even sparse attention, designed to reduce this cost, has scaling problems of its own. Researchers have developed Latent Sparse Attention (LSA), a technique that could make million-token contexts much more practical. Today, we examine the results, the tradeoffs, and what developers can already test.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "AI agents (particularly coding agents) accumulate millions of tokens of context as they work with large code repositories and document libraries. At that scale, handling the attention values of the underlying model becomes tedious and expensive."
+    },
+    {
+      "kind": "paragraph",
+      "html": "To address this bottleneck, researchers at Prefrontal AI and ETH Zurich have developed <a href=\"https://arxiv.org/abs/2610.42147\">Latent Sparse Attention</a> (LSA), a new technique that cuts the compute costs of processing long contexts in LLMs."
+    },
+    {
+      "kind": "paragraph",
+      "html": "LSA is among a growing range of techniques for optimizing the attention mechanism in LLMs. However, it addresses a bottleneck in other sparse attention methods, which limits how many previous tokens a model examines."
+    },
+    {
+      "kind": "paragraph",
+      "html": "LSA organizes attention values into clusters and groups to make it easier to search through them when mapping new queries. For example, in experiments on 10-million-token tasks, it reduced time to first token by more than 9 times a full-attention model and 2.2 times against a model using a popular sparse attention mechanism."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For developers building long-running agents and LLM applications that process large contexts, LSA offers a way to reduce inference latency."
+    },
+    {
+      "kind": "heading",
+      "text": "Why sparse attention still becomes expensive"
+    },
+    {
+      "kind": "paragraph",
+      "html": "In a transformer, attention determines which parts of the context matter when processing a token. Each token has a query (what is it looking for), a key (what information is relevant), and a value (the information to obtain the answer). In full attention, every new query examines all preceding keys."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The full attention mechanism becomes very expensive as the model’s context grows. Doubling the context roughly quadruples full-attention computation."
+    },
+    {
+      "kind": "paragraph",
+      "html": "This is particularly evident in the “prefill” stage, where the model must process the attention values of the entire input, which can become quite long for tasks involving large documents and codebases."
+    },
+    {
+      "kind": "paragraph",
+      "html": "When generating new tokens, the “decode” stage, the model must also consult the entire context for each new token, which also becomes slow and expensive as the context grows."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1794150107624-ixyttl.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Sparse attention solves the compute bottleneck by selecting a limited set of keys for each query. Methods such as DeepSeek Sparse Attention (DSA) use a smaller, cheaper indexer to score candidates. Other approaches group neighboring keys into blocks and score the blocks instead."
+    },
+    {
+      "kind": "paragraph",
+      "html": "But if the indexer still examines every previous key or block, its prefill work continues to grow quadratically. For example, in a 10-million-token experiment with GLM-5.3-Flash, which uses a variant of DSA, selecting relevant tokens consumed 98% of an attention layer's prefill time."
+    },
+    {
+      "kind": "heading",
+      "text": "How latent sparse attention works"
+    },
+    {
+      "kind": "paragraph",
+      "html": "LSA organizes attention values like a library. Rather than checking a description of every book, a query first examines groups of books, then retrieves books from the most promising groups. LSA creates these groups in a learned “latent space,” where compact numerical representations help identify similar keys."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The process has four main stages:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "<b>Represent:</b> Create compact representations of keys for selection.",
+        "<b>Organize:</b> Organize keys into clusters based on their similarities, and store a representative vector, called a “centroid,” for each cluster.",
+        "<b>Search:</b> Compare each query with cluster centroids and select the groups most likely to contain relevant information.",
+        "<b>Attend:</b> Retrieve the original keys from those groups and perform conventional attention over them, alongside a recent-token window and a few initial tokens that remain accessible."
+      ]
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1794150168874-zwbo0b.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers propose two ways to search the clusters. “Flat search” compares a query with every cluster centroid. This is simple but the search tax grows with the number of clusters. “Tree search” optimizes search by organizing clusters into hierarchies and following promising branches."
+    },
+    {
+      "kind": "paragraph",
+      "html": "There are also two ways to integrate LSA into models. Distilled LSA (D-LSA) adds a trained indexer to an existing model. The indexer learns to reproduce the model's attention preferences while the original model remains frozen."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1794150073368-t5ymhv.png",
+      "alt": "alpha_signal_image_3"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Native LSA (N-LSA) incorporates clustering during training, learning through the usual next-token prediction task without a separate teacher or index projections."
+    },
+    {
+      "kind": "heading",
+      "text": "What the experiments show"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers evaluated D-LSA on Qwen-3.8-27B, which uses full attention, and GLM-5.3-Flash, which already uses sparse attention."
+    },
+    {
+      "kind": "paragraph",
+      "html": "At 10 million tokens on an NVIDIA H200, D-LSA accelerated one GLM attention layer's prefill by 22.7 times and decoding by 4.6 times against the baseline sparse attention. For Qwen, prefill was 72.4 times faster than full attention."
+    },
+    {
+      "kind": "paragraph",
+      "html": "In end-to-end serving across eight H200 GPUs, GLM's time to first token improved by 2.2 times, and its time per output token by 2.1 times. Qwen's time to first token improved by 9.2 times."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1794150140170-kcl70k.png",
+      "alt": "alpha_signal_image_4"
+    },
+    {
+      "kind": "paragraph",
+      "html": "On RULER, a benchmark for long-context retrieval and reasoning, Qwen improved by scoring 63.9 at 10 million tokens against 59.9 for full attention. GLM, however, lost up to eight points at contexts of two to five million tokens relative to its sparse-attention baseline."
+    },
+    {
+      "kind": "paragraph",
+      "html": "They tested N-LSA by training a 500-million-parameter hybrid model at up to 128,000 tokens. It matched full attention's validation loss and trained 1.6 times faster per attention layer and 1.24 times faster end to end. It also retained more long-context accuracy than other baseline attention methods such as sliding-window attention (SWA)."
+    },
+    {
+      "kind": "heading",
+      "text": "What developers can do with LSA"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Prefrontal AI has published <a href=\"https://github.com/Prefrontal-AI/latent-sparse-attention\">the code</a> under the Apache 2.0 license, along with distilled indexer weights for Qwen and GLM, native-training checkpoints, evaluation tools, and an SGLang integration."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The first candidates are applications that repeatedly process very large contexts: coding agents with extensive histories, research assistants searching document collections, and systems that must connect facts across many files."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Compare LSA against existing attention methods using representative input lengths, first-token latency, output-token latency, and retrieval accuracy. Note that the reported gains become much smaller in shorter context tasks."
+    },
+    {
+      "kind": "paragraph",
+      "html": "AI models and agents are becoming increasingly better at long horizon tasks. Accordingly, the underlying attention mechanisms must catch up to make sure the AI systems don’t grind to a halt. LSA is one of the techniques that can enable this future where agents work for hours and days at a time."
+    }
+  ]
+}

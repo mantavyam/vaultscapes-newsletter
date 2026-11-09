@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "06-11-2026",
-  "iso_date": "2026-11-06",
-  "subject": "🔐 OpenAI GPT-6 Cyber: 81 Firefox bugs, 948 Linux exploits",
-  "intro": "Two stories dropped yesterday that, read together, tell one story: AI is now eating its own tail. OpenAI shipped a model that hunts real vulnerabilities in real software. Anthropic's models are improving at 2x their historical rate , mostly because AI is doing the research. The factory is using its own robots to build better robots. No bottlenecks found. Capability is compounding. That's the only headline that matters today.",
-  "read_time": "6 min 48 sec",
+  "date": "09-11-2026",
+  "iso_date": "2026-11-09",
+  "subject": "🧹 Nous Research drops Qwen3 bias from 22% to 1% — no RL",
+  "intro": "Today's theme is simple: Chinese open models are the best you can run locally , and the West is scrambling to make them usable on its own terms. Nous Research just proved that political bias in Qwen3 is surprisingly shallow. One fine-tune, no RL, and propaganda drops from 22% to 1%. Meanwhile Tencent's Terminal-RSI shows a model that learns from its own wins. Both labs, opposite goals, same 27B weight class. The irony writes itself.",
+  "read_time": "6 min 38 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "OpenAI releases GPT-6 Cyber, a security-focused model for offensive and defensive teams",
+      "headline": "Nous Research fine-tunes Qwen3 to cut pro-China propaganda rate from 22% to 1%",
       "news_id": "news-1"
     },
     {
-      "category": "Top News",
-      "headline": "METR finds Anthropic's AI is now doubling its own capability growth rate",
+      "category": "Top Repo",
+      "headline": "Open-source Chrome extension translates pages using a local LLM , no account needed",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "Anthropic used Claude to map a mysterious protein structure in days, not months",
+      "headline": "OpenCode ships browser control so your coding agent uses your real tabs and logins",
       "news_id": "news-3"
     }
   ],
@@ -27,93 +27,94 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "OpenAI releases GPT-6 Cyber, a security-focused model for offensive and defensive teams",
-      "likes": 17025,
-      "body": "OpenAI just dropped GPT-6 Cyber , a model built specifically for security work. Not a general chatbot. A focused tool for finding, testing, and fixing vulnerabilities in real software. Here's what it already pulled off in the real world: That last point matters. The model stays within the boundaries you set. It won't go rogue and start poking systems it shouldn't. Access runs through Daybreak , OpenAI's vetted security program. Red tier is for offensive testing and exploit research. Blue tier is for validating and fixing vulnerabilities. You apply to get in.",
+      "headline": "Nous Research fine-tunes Qwen3 to cut pro-China propaganda rate from 22% to 1%",
+      "likes": 18974,
+      "body": "Chinese open models are currently the strongest you can run locally. But there's a catch: they ship with built-in political bias , meaning they dodge or spin answers on topics like democracy, free speech, and privacy to match the Chinese government's position. Nous Research just fixed that. They took Alibaba's Qwen3.8-27B and retrained it to produce Arete-27B. Here's what changed: The big takeaway: political bias sits shallow in these models. You can swap it out without breaking anything else. The weights, eval set, and full training data are all openly available right now on Hugging Face.",
       "bullets": [
-        "Found 81 high-severity Firefox vulnerabilities that Mozilla then patched",
-        "Reproduced 1,724 Linux kernel bugs and built working exploits for 948 of them",
-        "Scored 48.5% on ExploitGym, up from 32.1% for the previous model, a 51% relative jump",
-        "Went out of scope less than 1% of the time, down from 5% before"
+        "Propaganda rate dropped from 22% to under 1% , matching Western models",
+        "Fact score improved from 2.32 to 2.98 out of 5",
+        "General performance stayed flat, 65.60% vs 65.77% on Hermes Bench",
+        "No reinforcement learning used, just plain supervised fine-tuning on 53 million tokens"
       ],
-      "image_url": "https://alphasignal.ai/image/1793941496421-vwlk2f.png",
-      "read_more_url": "https://openai.com/business/solutions/cybersecurity/"
+      "image_url": "https://alphasignal.ai/image/1794200766190-td1eu8.png",
+      "read_more_url": "https://nousresearch.com/arete"
     },
     {
       "id": "news-2",
-      "category": "Top News",
-      "headline": "METR finds Anthropic's AI is now doubling its own capability growth rate",
-      "likes": 10687,
-      "body": "Here's a big one. An independent group called METR spent 11 weeks inside Anthropic with rare access to internal data, asking one question: is AI now helping build better AI faster? Short answer: yes, and it's measurable. The key findings: Think of it like a factory that started using its own robots to build better robots. That feedback loop is now measurably real. The full 100-page report was heavily redacted by Anthropic before going public, so we are largely trusting METR's judgment here.",
+      "category": "Top Repo",
+      "headline": "Open-source Chrome extension translates pages using a local LLM, no account needed",
+      "likes": 5435,
+      "body": "Sakutto is a free, open-source Chrome extension that translates web pages entirely on your device. No account, no server, no data leaving your browser. The magic here: it runs a small AI model called PLaMo 3 Translate (a 0.8B model, meaning a compact AI small enough to live on your laptop) directly inside Chrome. Your text never touches an external server. Here's what you can do with it: It's MIT licensed, fully open source, and installable from the Chrome Web Store right now. Worth a star on GitHub.",
       "bullets": [
-        "Anthropic's models are improving at roughly 2x the historical rate compared to March 2024 through October 2025, with a plausible range of 1.3x to 3x.",
-        "About 80% of that speedup is attributed to Anthropic using its own AI tools internally to do research, not just bigger computers or more data.",
-        "No clear bottlenecks were found, meaning this compounding could continue.",
-        "Staff report big productivity gains, but the most critical research steps are not yet fully automated."
+        "Translate any full web page with Alt+A (or Option+A on Mac)",
+        "Translate selected text with Alt+S, or paste text manually in the popup",
+        "Switch between translated-only and bilingual view (original + translation side by side) with Alt+B",
+        "Supports 53 languages , with 11 more handled by Chrome's built-in translator as a fallback"
       ],
-      "image_url": "https://alphasignal.ai/image/1793941526326-6s6yb6.png",
-      "read_more_url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
+      "image_url": "https://alphasignal.ai/image/1794200632715-lil7l4.png",
+      "read_more_url": "https://github.com/jammaru/sakutto"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "Anthropic used Claude to map a mysterious protein structure in days, not months",
-      "likes": 5475,
-      "body": "Vault particles are barrel-shaped protein shells inside your cells. Discovered in 1986, nobody knows what they actually do . That mystery has sat unsolved for 40 years. Anthropic's biology team used Claude to crack open a new angle. Vaults were only known in complex organisms like animals and plants. Now we know bacteria and their viruses can form them too. Simpler organisms are much easier to study, so this opens new paths. Here is what Claude actually did: It was not perfect. One protocol Claude generated included an unsuitable additive in the bacterial growth medium, costing two weeks. Human oversight caught it. The real takeaway: AI as a fast, imperfect lab partner that still needs you watching.",
+      "headline": "OpenCode ships browser control so your coding agent uses your real tabs and logins",
+      "likes": 5418,
+      "body": "AI agents that control browsers are nothing new. But they always had one annoying problem: they'd spin up a blank browser with zero logins, zero cookies, zero context. You'd have to re-authenticate everything. Painful. OpenCode Browse fixes that. Your agent now controls your actual browser , the one already signed into GitHub, Stripe, your staging environment, everything. Here's what it can do for you: To get started, install the Chrome extension, then run opencode browser install once. That's it. Everything stays local, nothing goes to the cloud. The big unlock: testing flows that require real auth, like checkout pages or dashboards, without writing a single login script.",
       "bullets": [
-        "Searched 15 billion predicted proteins and found vault relatives across 29 bacterial groups.",
-        "Helped with protein searches, DNA design, purification, and microscopy analysis.",
-        "Cut structure-mapping time from weeks or months down to days."
+        "Open and drive tabs automatically, taking screenshots and recording network traffic",
+        "Hand control back to you for logins, 2FA, or payments, then pick up where it left off",
+        "Works with Claude Code, Cursor, Codex, Zed, and any MCP-compatible tool",
+        "Supports Chrome, Edge, Brave, Arc, and most Chromium browsers"
       ],
-      "image_url": "https://alphasignal.ai/image/1793941572424-qziye5.png",
-      "read_more_url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude"
+      "image_url": "https://alphasignal.ai/image/1794200863238-q3w2gd.png",
+      "read_more_url": "https://opencode.ai/product/browse"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "LivLiv open-sources a 34 KB web character player with lip sync and face tracking",
+      "headline": "OpenAI and Ligo release a benchmark testing AI agents on real wet-lab data",
       "stat": {
         "type": "likes",
-        "value": 2647
+        "value": 3725
       },
-      "url": "https://github.com/livliv-dev/player"
+      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/"
     },
     {
       "rank": 2,
-      "headline": "Self-host AI teammates inside Slack, Teams, Discord, and Telegram with any model",
+      "headline": "neuml ships txtai, an open-source framework combining semantic search and LLM orchestration",
       "stat": {
         "type": "stars",
-        "value": 3941
+        "value": 13164
       },
-      "url": "https://github.com/sandbox-quantum/switch"
+      "url": "https://github.com/neuml/txtai"
     },
     {
       "rank": 3,
-      "headline": "New open-source image-matching model beats state-of-the-art speed and accuracy in 3D reconstruction",
+      "headline": "Tencent's 27B model rewrites and retrains itself with zero human input",
       "stat": {
         "type": "likes",
-        "value": 554
+        "value": 3054
       },
-      "url": "https://arxiv.org/abs/2610.32976"
+      "url": "https://arxiv.org/abs/2610.22192"
     },
     {
       "rank": 4,
-      "headline": "Orca ships uncensored 39.8B coding-agent model that runs on a single 16 GB GPU",
+      "headline": "StartLux ships decision models from 0.8B to 27B that think only when uncertain",
       "stat": {
-        "type": "downloads",
-        "value": 1086
+        "type": "likes",
+        "value": 511
       },
-      "url": "https://huggingface.co/orcarouter/Flint-abliterated-GGUF"
+      "url": "https://arxiv.org/abs/2610.17309"
     },
     {
       "rank": 5,
-      "headline": "Web AI open-sources an 8B model hitting 93% of frontier coding scores",
+      "headline": "New open-source library renders live AI agent cards inside Slack and Teams",
       "stat": {
         "type": "likes",
-        "value": 2407
+        "value": 3082
       },
-      "url": "https://huggingface.co/webAI-Official/TwIL-8B"
+      "url": "https://github.com/vercel-labs/json-render"
     }
   ]
 }

@@ -1,7 +1,38 @@
 {
-  "updated_at": "2026-11-06T20:41:24Z",
+  "updated_at": "2026-11-09T23:40:51Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "09-11-2026",
+      "iso_date": "2026-11-09",
+      "type": "digest",
+      "subject": "🧹 Nous Research drops Qwen3 bias from 22% to 1% — no RL",
+      "path": "data/2026/11-November/09-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/09-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/09-11-2026.html",
+      "headlines": [
+        "Nous Research fine-tunes Qwen3 to cut pro-China propaganda rate from 22% to 1%",
+        "Open-source Chrome extension translates pages using a local LLM, no account needed",
+        "OpenCode ships browser control so your coding agent uses your real tabs and logins"
+      ]
+    },
+    {
+      "date": "08-11-2026",
+      "iso_date": "2026-11-08",
+      "type": "article",
+      "subject": "⚡ Latent Sparse Attention Speeds Up 10M-Token AI Contexts by 9x",
+      "path": "data/2026/11-November/08-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/08-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/08-11-2026.html",
+      "headlines": [
+        "Why sparse attention still becomes expensive",
+        "How latent sparse attention works",
+        "What the experiments show",
+        "What developers can do with LSA"
+      ],
+      "title": "How latent sparse attention tackles the search bottleneck in long-context AI",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "06-11-2026",
       "iso_date": "2026-11-06",

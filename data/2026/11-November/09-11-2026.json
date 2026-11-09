@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "09-11-2026",
+  "iso_date": "2026-11-09",
+  "subject": "🧹 Nous Research drops Qwen3 bias from 22% to 1% — no RL",
+  "intro": "Today's theme is simple: Chinese open models are the best you can run locally , and the West is scrambling to make them usable on its own terms. Nous Research just proved that political bias in Qwen3 is surprisingly shallow. One fine-tune, no RL, and propaganda drops from 22% to 1%. Meanwhile Tencent's Terminal-RSI shows a model that learns from its own wins. Both labs, opposite goals, same 27B weight class. The irony writes itself.",
+  "read_time": "6 min 38 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Nous Research fine-tunes Qwen3 to cut pro-China propaganda rate from 22% to 1%",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "Open-source Chrome extension translates pages using a local LLM , no account needed",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenCode ships browser control so your coding agent uses your real tabs and logins",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Nous Research fine-tunes Qwen3 to cut pro-China propaganda rate from 22% to 1%",
+      "likes": 18974,
+      "body": "Chinese open models are currently the strongest you can run locally. But there's a catch: they ship with built-in political bias , meaning they dodge or spin answers on topics like democracy, free speech, and privacy to match the Chinese government's position. Nous Research just fixed that. They took Alibaba's Qwen3.8-27B and retrained it to produce Arete-27B. Here's what changed: The big takeaway: political bias sits shallow in these models. You can swap it out without breaking anything else. The weights, eval set, and full training data are all openly available right now on Hugging Face.",
+      "bullets": [
+        "Propaganda rate dropped from 22% to under 1% , matching Western models",
+        "Fact score improved from 2.32 to 2.98 out of 5",
+        "General performance stayed flat, 65.60% vs 65.77% on Hermes Bench",
+        "No reinforcement learning used, just plain supervised fine-tuning on 53 million tokens"
+      ],
+      "image_url": "https://alphasignal.ai/image/1794200766190-td1eu8.png",
+      "read_more_url": "https://nousresearch.com/arete"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Repo",
+      "headline": "Open-source Chrome extension translates pages using a local LLM, no account needed",
+      "likes": 5435,
+      "body": "Sakutto is a free, open-source Chrome extension that translates web pages entirely on your device. No account, no server, no data leaving your browser. The magic here: it runs a small AI model called PLaMo 3 Translate (a 0.8B model, meaning a compact AI small enough to live on your laptop) directly inside Chrome. Your text never touches an external server. Here's what you can do with it: It's MIT licensed, fully open source, and installable from the Chrome Web Store right now. Worth a star on GitHub.",
+      "bullets": [
+        "Translate any full web page with Alt+A (or Option+A on Mac)",
+        "Translate selected text with Alt+S, or paste text manually in the popup",
+        "Switch between translated-only and bilingual view (original + translation side by side) with Alt+B",
+        "Supports 53 languages , with 11 more handled by Chrome's built-in translator as a fallback"
+      ],
+      "image_url": "https://alphasignal.ai/image/1794200632715-lil7l4.png",
+      "read_more_url": "https://github.com/jammaru/sakutto"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "OpenCode ships browser control so your coding agent uses your real tabs and logins",
+      "likes": 5418,
+      "body": "AI agents that control browsers are nothing new. But they always had one annoying problem: they'd spin up a blank browser with zero logins, zero cookies, zero context. You'd have to re-authenticate everything. Painful. OpenCode Browse fixes that. Your agent now controls your actual browser , the one already signed into GitHub, Stripe, your staging environment, everything. Here's what it can do for you: To get started, install the Chrome extension, then run opencode browser install once. That's it. Everything stays local, nothing goes to the cloud. The big unlock: testing flows that require real auth, like checkout pages or dashboards, without writing a single login script.",
+      "bullets": [
+        "Open and drive tabs automatically, taking screenshots and recording network traffic",
+        "Hand control back to you for logins, 2FA, or payments, then pick up where it left off",
+        "Works with Claude Code, Cursor, Codex, Zed, and any MCP-compatible tool",
+        "Supports Chrome, Edge, Brave, Arc, and most Chromium browsers"
+      ],
+      "image_url": "https://alphasignal.ai/image/1794200863238-q3w2gd.png",
+      "read_more_url": "https://opencode.ai/product/browse"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenAI and Ligo release a benchmark testing AI agents on real wet-lab data",
+      "stat": {
+        "type": "likes",
+        "value": 3725
+      },
+      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/"
+    },
+    {
+      "rank": 2,
+      "headline": "neuml ships txtai, an open-source framework combining semantic search and LLM orchestration",
+      "stat": {
+        "type": "stars",
+        "value": 13164
+      },
+      "url": "https://github.com/neuml/txtai"
+    },
+    {
+      "rank": 3,
+      "headline": "Tencent's 27B model rewrites and retrains itself with zero human input",
+      "stat": {
+        "type": "likes",
+        "value": 3054
+      },
+      "url": "https://arxiv.org/abs/2610.22192"
+    },
+    {
+      "rank": 4,
+      "headline": "StartLux ships decision models from 0.8B to 27B that think only when uncertain",
+      "stat": {
+        "type": "likes",
+        "value": 511
+      },
+      "url": "https://arxiv.org/abs/2610.17309"
+    },
+    {
+      "rank": 5,
+      "headline": "New open-source library renders live AI agent cards inside Slack and Teams",
+      "stat": {
+        "type": "likes",
+        "value": 3082
+      },
+      "url": "https://github.com/vercel-labs/json-render"
+    }
+  ]
+}
