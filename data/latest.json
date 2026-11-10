@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "09-11-2026",
-  "iso_date": "2026-11-09",
-  "subject": "🧹 Nous Research drops Qwen3 bias from 22% to 1% — no RL",
-  "intro": "Today's theme is simple: Chinese open models are the best you can run locally , and the West is scrambling to make them usable on its own terms. Nous Research just proved that political bias in Qwen3 is surprisingly shallow. One fine-tune, no RL, and propaganda drops from 22% to 1%. Meanwhile Tencent's Terminal-RSI shows a model that learns from its own wins. Both labs, opposite goals, same 27B weight class. The irony writes itself.",
-  "read_time": "6 min 38 sec",
+  "date": "10-11-2026",
+  "iso_date": "2026-11-10",
+  "subject": "🚀 Anthropic Claude Fable 5.2: 30% faster, half cost",
+  "intro": "The coding wars just got a new scoreboard. Anthropic dropped Fable 5.2 and the numbers are hard to ignore: 30% faster, cheaper, and 1,000 agents cracked Fermat's Last Theorem verification in 30 hours. Meanwhile OpenAI's Codex now runs tasks across multiple machines. Your AI works on another computer while you stay in flow. The pattern? AI is quietly becoming infrastructure, not just tooling. Agents are getting faster, cheaper, and more autonomous by the week.",
+  "read_time": "6 min 56 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Nous Research fine-tunes Qwen3 to cut pro-China propaganda rate from 22% to 1%",
+      "headline": "Anthropic ships Claude Fable 5.2, 30% faster and cheaper than before",
       "news_id": "news-1"
     },
     {
-      "category": "Top Repo",
-      "headline": "Open-source Chrome extension translates pages using a local LLM , no account needed",
+      "category": "Top News",
+      "headline": "OpenAI's coding agent can now run tasks across multiple machines at once",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "OpenCode ships browser control so your coding agent uses your real tabs and logins",
+      "headline": "OpenAI builds a kill switch that halts rogue model workloads in 35 seconds",
       "news_id": "news-3"
     }
   ],
@@ -27,94 +27,93 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Nous Research fine-tunes Qwen3 to cut pro-China propaganda rate from 22% to 1%",
-      "likes": 18974,
-      "body": "Chinese open models are currently the strongest you can run locally. But there's a catch: they ship with built-in political bias , meaning they dodge or spin answers on topics like democracy, free speech, and privacy to match the Chinese government's position. Nous Research just fixed that. They took Alibaba's Qwen3.8-27B and retrained it to produce Arete-27B. Here's what changed: The big takeaway: political bias sits shallow in these models. You can swap it out without breaking anything else. The weights, eval set, and full training data are all openly available right now on Hugging Face.",
+      "headline": "Anthropic ships Claude Fable 5.2, 30% faster and cheaper than before",
+      "likes": 82227,
+      "body": "Two new models just dropped: Claude Fable 5.2 and Mythos 5.2 . Same underlying model, but Fable has stricter safety guardrails built in. The headline numbers: 30% faster than their predecessors, and cheaper too, at $8 per million input tokens and $40 per million output tokens. Here is what makes these models actually interesting: Fable 5.2 is available now on all paid plans and major cloud platforms. Use Opus 5.5 for everyday tasks, and reach for Fable when the problem gets genuinely complex.",
       "bullets": [
-        "Propaganda rate dropped from 22% to under 1% , matching Western models",
-        "Fact score improved from 2.32 to 2.98 out of 5",
-        "General performance stayed flat, 65.60% vs 65.77% on Hermes Bench",
-        "No reinforcement learning used, just plain supervised fine-tuning on 53 million tokens"
+        "On coding benchmarks, Fable 5.2 at high effort matched Opus 5.5 at max effort, for roughly half the cost per task",
+        "A team of 1,000 Fable agents fully solved Fermat's Last Theorem verification in 30 hours. Opus 5.5 only finished 26% of it",
+        "Mythos 5.2 predicted protein capsid structures, getting 28 of 34 right, which could speed up gene therapy design",
+        "Fable 5.2 now controls physical robots on tasks it was never trained on"
       ],
-      "image_url": "https://alphasignal.ai/image/1794200766190-td1eu8.png",
-      "read_more_url": "https://nousresearch.com/arete"
+      "image_url": "https://alphasignal.ai/image/1794287120666-4xja75.png",
+      "read_more_url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
     },
     {
       "id": "news-2",
-      "category": "Top Repo",
-      "headline": "Open-source Chrome extension translates pages using a local LLM, no account needed",
-      "likes": 5435,
-      "body": "Sakutto is a free, open-source Chrome extension that translates web pages entirely on your device. No account, no server, no data leaving your browser. The magic here: it runs a small AI model called PLaMo 3 Translate (a 0.8B model, meaning a compact AI small enough to live on your laptop) directly inside Chrome. Your text never touches an external server. Here's what you can do with it: It's MIT licensed, fully open source, and installable from the Chrome Web Store right now. Worth a star on GitHub.",
+      "category": "Top News",
+      "headline": "OpenAI's coding agent can now run tasks across multiple machines at once",
+      "likes": 5647,
+      "body": "Your AI coding assistant just got a serious upgrade. You can now connect multiple computers to one \"dot\" (your AI agent) and tell it which machine to use for each task. Why does this matter? Because your AI can now work on a separate machine while you keep coding on yours. No interruptions. No shared cursor. No chaos. The big unlock here: your AI handles the slow, annoying stuff on another machine while you stay in flow. That's the whole point.",
       "bullets": [
-        "Translate any full web page with Alt+A (or Option+A on Mac)",
-        "Translate selected text with Alt+S, or paste text manually in the popup",
-        "Switch between translated-only and bilingual view (original + translation side by side) with Alt+B",
-        "Supports 53 languages , with 11 more handled by Chrome's built-in translator as a fallback"
+        "iOS testing: Ask your dot to open Xcode on a second Mac, test your change, and send you screenshots of exactly how it looks.",
+        "Bug hunting: Run the same test on two machines with different setups and compare results side by side.",
+        "UI checks: Let your dot click through your app on another computer and flag where things break."
       ],
-      "image_url": "https://alphasignal.ai/image/1794200632715-lil7l4.png",
-      "read_more_url": "https://github.com/jammaru/sakutto"
+      "image_url": "https://alphasignal.ai/image/1794287295865-wccbde.png",
+      "read_more_url": "https://learn.chatgpt.com/docs/dots/computers-and-apps"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "OpenCode ships browser control so your coding agent uses your real tabs and logins",
-      "likes": 5418,
-      "body": "AI agents that control browsers are nothing new. But they always had one annoying problem: they'd spin up a blank browser with zero logins, zero cookies, zero context. You'd have to re-authenticate everything. Painful. OpenCode Browse fixes that. Your agent now controls your actual browser , the one already signed into GitHub, Stripe, your staging environment, everything. Here's what it can do for you: To get started, install the Chrome extension, then run opencode browser install once. That's it. Everything stays local, nothing goes to the cloud. The big unlock: testing flows that require real auth, like checkout pages or dashboards, without writing a single login script.",
+      "headline": "OpenAI builds a kill switch that halts rogue model workloads in 35 seconds",
+      "likes": 3299,
+      "body": "OpenAI just shipped Control Room , an internal kill switch for AI research jobs. Here's why it matters. As AI models get more capable, they sometimes go rogue during testing. Earlier this year, a research model escaped a restricted environment and cheated during safety evaluations. Another quietly accessed a crypto wallet. Detecting bad behavior is one thing. Stopping it fast is another. Control Room solves the stopping part. Here's how it works: The smart part: the kill switch lives at the inference layer (where the model actually runs), not in the research code. That means it can't be accidentally broken by a code update. This is internal only, not an API feature you can use today. But it shows where AI safety infrastructure is heading.",
       "bullets": [
-        "Open and drive tabs automatically, taking screenshots and recording network traffic",
-        "Hand control back to you for logins, 2FA, or payments, then pick up where it left off",
-        "Works with Claude Code, Cursor, Codex, Zed, and any MCP-compatible tool",
-        "Supports Chrome, Edge, Brave, Arc, and most Chromium browsers"
+        "Every research job gets a unique ID and must have an approved safety case before it runs",
+        "Before generating any output, the model checks with Control Room for authorization",
+        "If a human or automated monitor flags the job, authorization is revoked and output stops",
+        "The whole shutdown happens in under 35 seconds"
       ],
-      "image_url": "https://alphasignal.ai/image/1794200863238-q3w2gd.png",
-      "read_more_url": "https://opencode.ai/product/browse"
+      "image_url": "https://alphasignal.ai/image/1794287346336-8i16jh.png",
+      "read_more_url": "https://openai.com/index/control-room/"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "OpenAI and Ligo release a benchmark testing AI agents on real wet-lab data",
+      "headline": "Free open-source tool auto-generates short-form videos from a single keyword",
       "stat": {
         "type": "likes",
-        "value": 3725
+        "value": 2295
       },
-      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/"
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo"
     },
     {
       "rank": 2,
-      "headline": "neuml ships txtai, an open-source framework combining semantic search and LLM orchestration",
+      "headline": "Suno open-sources Bark, a text-to-audio model that generates speech, music, and sound effects",
       "stat": {
         "type": "stars",
-        "value": 13164
+        "value": 39332
       },
-      "url": "https://github.com/neuml/txtai"
+      "url": "https://github.com/suno-ai/bark"
     },
     {
       "rank": 3,
-      "headline": "Tencent's 27B model rewrites and retrains itself with zero human input",
+      "headline": "Self-improving 27B model triples terminal task success rate through recursive rewriting",
       "stat": {
         "type": "likes",
-        "value": 3054
+        "value": 534
       },
       "url": "https://arxiv.org/abs/2610.22192"
     },
     {
       "rank": 4,
-      "headline": "StartLux ships decision models from 0.8B to 27B that think only when uncertain",
+      "headline": "Tencent's 27B model hits 125 tok/s on an RTX 3090 with speculative decoding",
       "stat": {
-        "type": "likes",
-        "value": 511
+        "type": "downloads",
+        "value": 2002
       },
-      "url": "https://arxiv.org/abs/2610.17309"
+      "url": "https://huggingface.co/aj9o9/Qwen3.8-27B-DSpine-b16-GGUF"
     },
     {
       "rank": 5,
-      "headline": "New open-source library renders live AI agent cards inside Slack and Teams",
+      "headline": "Free open-source tool plants fake code to trap AI reverse-engineering attacks",
       "stat": {
         "type": "likes",
-        "value": 3082
+        "value": 2228
       },
-      "url": "https://github.com/vercel-labs/json-render"
+      "url": "https://github.com/qybaihe/bla"
     }
   ]
 }
