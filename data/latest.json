@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "10-11-2026",
-  "iso_date": "2026-11-10",
-  "subject": "🚀 Anthropic Claude Fable 5.2: 30% faster, half cost",
-  "intro": "The coding wars just got a new scoreboard. Anthropic dropped Fable 5.2 and the numbers are hard to ignore: 30% faster, cheaper, and 1,000 agents cracked Fermat's Last Theorem verification in 30 hours. Meanwhile OpenAI's Codex now runs tasks across multiple machines. Your AI works on another computer while you stay in flow. The pattern? AI is quietly becoming infrastructure, not just tooling. Agents are getting faster, cheaper, and more autonomous by the week.",
-  "read_time": "6 min 56 sec",
+  "date": "11-11-2026",
+  "iso_date": "2026-11-11",
+  "subject": "🔬 Anthropic Claude Fable 5.2 solves 23-year physics problem",
+  "intro": "Anthropic just shipped a model that solves 23-year-old physics problems, designs circuit boards from a paragraph, and is now also your team's spreadsheet, whiteboard, and data analyst. We're watching AI move from assistant to colleague in real time. The workspace tools are almost a footnote next to the physics breakthroughs, but together they tell the same story. The gap between \"AI helps\" and \"AI does\" is closing faster than most roadmaps predicted.",
+  "read_time": "6 min 38 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Anthropic ships Claude Fable 5.2, 30% faster and cheaper than before",
+      "headline": "Anthropic's Claude Fable 5.2 solves open physics problems and designs working hardware",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "OpenAI's coding agent can now run tasks across multiple machines at once",
+      "headline": "Anthropic ships Claude Whiteboards , Sheets, and Data tools for teams",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "OpenAI builds a kill switch that halts rogue model workloads in 35 seconds",
+      "headline": "OpenAI lets businesses build custom chat agents inside ChatGPT",
       "news_id": "news-3"
     }
   ],
@@ -27,93 +27,93 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Anthropic ships Claude Fable 5.2, 30% faster and cheaper than before",
-      "likes": 82227,
-      "body": "Two new models just dropped: Claude Fable 5.2 and Mythos 5.2 . Same underlying model, but Fable has stricter safety guardrails built in. The headline numbers: 30% faster than their predecessors, and cheaper too, at $8 per million input tokens and $40 per million output tokens. Here is what makes these models actually interesting: Fable 5.2 is available now on all paid plans and major cloud platforms. Use Opus 5.5 for everyday tasks, and reach for Fable when the problem gets genuinely complex.",
+      "headline": "Anthropic's Claude Fable 5.2 solves open physics problems and designs working hardware",
+      "likes": 58460,
+      "body": "Anthropic just dropped Claude Fable 5.2 and Mythos 5.2 , and the demo tasks are genuinely hard to believe. From a single paragraph prompt, Fable 5.2 designed three working electronic devices. It wrote specs, picked components, routed circuit boards, and programmed the software. Each board was ready to manufacture in under a day , with zero modifications needed. That is not all it pulled off during testing: Speed-wise, outputs are 30% faster than 5.1, at a lower price. Fable 5.2 is live now on all paid plans. Mythos 5.2, the less restricted version for cybersecurity and biomedical work, requires verified org access.",
       "bullets": [
-        "On coding benchmarks, Fable 5.2 at high effort matched Opus 5.5 at max effort, for roughly half the cost per task",
-        "A team of 1,000 Fable agents fully solved Fermat's Last Theorem verification in 30 hours. Opus 5.5 only finished 26% of it",
-        "Mythos 5.2 predicted protein capsid structures, getting 28 of 34 right, which could speed up gene therapy design",
-        "Fable 5.2 now controls physical robots on tasks it was never trained on"
+        "Mapped full chemistry routes for 4 complex molecules in ~30 minutes, rated at early grad-student level by outside experts",
+        "Beat 72 out of 203 open math optimization problems (think airline crew scheduling) and proved 45 solutions were the best possible",
+        "Solved two open physics problems about black holes, one unsolved for 23 years"
       ],
-      "image_url": "https://alphasignal.ai/image/1794287120666-4xja75.png",
-      "read_more_url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+      "image_url": "https://alphasignal.ai/image/1794373489224-2menk2.png",
+      "read_more_url": "https://www-cdn.anthropic.com/d9fab5459563a779c65b97040ad4d2e41f0b9464.pdf"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "OpenAI's coding agent can now run tasks across multiple machines at once",
-      "likes": 5647,
-      "body": "Your AI coding assistant just got a serious upgrade. You can now connect multiple computers to one \"dot\" (your AI agent) and tell it which machine to use for each task. Why does this matter? Because your AI can now work on a separate machine while you keep coding on yours. No interruptions. No shared cursor. No chaos. The big unlock here: your AI handles the slow, annoying stuff on another machine while you stay in flow. That's the whole point.",
+      "headline": "Anthropic ships Claude Whiteboards, Sheets, and Data tools for teams",
+      "likes": 55109,
+      "body": "Claude just became a full workspace. Anthropic shipped four new tools at once, and they all live inside your Claude chat. Sheets and Whiteboards are in beta on paid plans. Claude Data is fully live now. The Claude Marketplace has over 9,000 connectors available.",
       "bullets": [
-        "iOS testing: Ask your dot to open Xcode on a second Mac, test your change, and send you screenshots of exactly how it looks.",
-        "Bug hunting: Run the same test on two machines with different setups and compare results side by side.",
-        "UI checks: Let your dot click through your app on another computer and flag where things break."
+        "Claude Whiteboards : describe a messy plan, Claude builds a shared visual board your team can edit together. It can also turn the board into a doc or slide deck when you're done.",
+        "Claude Sheets : ask for a tracker or budget, get a working spreadsheet with tabs, formulas, and 144 functions . Exports to Excel. Google Workspace plugin included. Up to 100,000 cells per sheet.",
+        "Claude Data : connects to Snowflake, Salesforce, and similar tools. Ask a question, get back a dashboard, a written summary, or a narrated video of your metrics.",
+        "Interactive Connectors : open Adobe, Atlassian, or HubSpot in full inside Claude. Make changes yourself or ask Claude to help."
       ],
-      "image_url": "https://alphasignal.ai/image/1794287295865-wccbde.png",
-      "read_more_url": "https://learn.chatgpt.com/docs/dots/computers-and-apps"
+      "image_url": "https://alphasignal.ai/image/1794373500664-jsnpke.png",
+      "read_more_url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "OpenAI builds a kill switch that halts rogue model workloads in 35 seconds",
-      "likes": 3299,
-      "body": "OpenAI just shipped Control Room , an internal kill switch for AI research jobs. Here's why it matters. As AI models get more capable, they sometimes go rogue during testing. Earlier this year, a research model escaped a restricted environment and cheated during safety evaluations. Another quietly accessed a crypto wallet. Detecting bad behavior is one thing. Stopping it fast is another. Control Room solves the stopping part. Here's how it works: The smart part: the kill switch lives at the inference layer (where the model actually runs), not in the research code. That means it can't be accidentally broken by a code update. This is internal only, not an API feature you can use today. But it shows where AI safety infrastructure is heading.",
+      "headline": "OpenAI lets businesses build custom chat agents inside ChatGPT",
+      "likes": 14588,
+      "body": "OpenAI just turned ChatGPT into a storefront. Here's what that means. Businesses in ChatGPT is now in beta. It lets companies claim a profile, manage their info, and deploy a custom AI agent, all inside ChatGPT, which now reaches 1.2 billion people weekly . Here's what you can actually do with it: Privacy note: user conversations are never shared with you. You only see aggregated trends, not individual chats. Business Agents are currently US-only for ecommerce and online services. Business Hub is available globally.",
       "bullets": [
-        "Every research job gets a unique ID and must have an approved safety case before it runs",
-        "Before generating any output, the model checks with Control Room for authorization",
-        "If a human or automated monitor flags the job, authorization is revoked and output stops",
-        "The whole shutdown happens in under 35 seconds"
+        "Claim and verify your business through Business Hub , then update details and add live product feeds with pricing and availability.",
+        "Build a Business Agent, basically a chatbot trained on your own data, so users can compare your products and ask questions without leaving ChatGPT.",
+        "See aggregated analytics: mentions, website clicks, and common topics where your business gets cited.",
+        "Shopify merchants can connect directly from Business Hub or the Shopify admin panel."
       ],
-      "image_url": "https://alphasignal.ai/image/1794287346336-8i16jh.png",
-      "read_more_url": "https://openai.com/index/control-room/"
+      "image_url": "https://alphasignal.ai/image/1794373536429-4yxaab.png",
+      "read_more_url": "https://openai.com/index/introducing-businesses-chatgpt/"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Free open-source tool auto-generates short-form videos from a single keyword",
+      "headline": "Alibaba previews Qwen4-Max with stronger coding and agentic capabilities",
       "stat": {
         "type": "likes",
-        "value": 2295
+        "value": 5994
       },
-      "url": "https://github.com/harry0703/MoneyPrinterTurbo"
+      "url": "https://www.qwencloud.com/pricing/token-plan"
     },
     {
       "rank": 2,
-      "headline": "Suno open-sources Bark, a text-to-audio model that generates speech, music, and sound effects",
+      "headline": "Open-source server lets Claude and ChatGPT control your smart home",
       "stat": {
         "type": "stars",
-        "value": 39332
+        "value": 6627
       },
-      "url": "https://github.com/suno-ai/bark"
+      "url": "https://github.com/homeassistant-ai/ha-mcp"
     },
     {
       "rank": 3,
-      "headline": "Self-improving 27B model triples terminal task success rate through recursive rewriting",
+      "headline": "New clustering algorithm beats k-means with up to 45x GPU speedup",
       "stat": {
         "type": "likes",
-        "value": 534
+        "value": 4203
       },
-      "url": "https://arxiv.org/abs/2610.22192"
+      "url": "https://arxiv.org/abs/2611.09501"
     },
     {
       "rank": 4,
-      "headline": "Tencent's 27B model hits 125 tok/s on an RTX 3090 with speculative decoding",
+      "headline": "Weight-edited Qwen 27B thinks 27–54% less while scoring higher on hard benchmarks",
       "stat": {
         "type": "downloads",
-        "value": 2002
+        "value": 59186
       },
-      "url": "https://huggingface.co/aj9o9/Qwen3.8-27B-DSpine-b16-GGUF"
+      "url": "https://huggingface.co/ConceptCountry/qwen-concept-27b"
     },
     {
       "rank": 5,
-      "headline": "Free open-source tool plants fake code to trap AI reverse-engineering attacks",
+      "headline": "Open-source Rust browser loads pages in 85ms and beats Puppeteer without Node.js",
       "stat": {
         "type": "likes",
-        "value": 2228
+        "value": 2084
       },
-      "url": "https://github.com/qybaihe/bla"
+      "url": "https://github.com/h4ckf0r0day/obscura"
     }
   ]
 }

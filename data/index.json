@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-11-10T21:11:35Z",
+  "updated_at": "2026-11-11T21:43:26Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "11-11-2026",
+      "iso_date": "2026-11-11",
+      "type": "digest",
+      "subject": "🔬 Anthropic Claude Fable 5.2 solves 23-year physics problem",
+      "path": "data/2026/11-November/11-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/11-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/11-11-2026.html",
+      "headlines": [
+        "Anthropic's Claude Fable 5.2 solves open physics problems and designs working hardware",
+        "Anthropic ships Claude Whiteboards, Sheets, and Data tools for teams",
+        "OpenAI lets businesses build custom chat agents inside ChatGPT"
+      ]
+    },
     {
       "date": "10-11-2026",
       "iso_date": "2026-11-10",
