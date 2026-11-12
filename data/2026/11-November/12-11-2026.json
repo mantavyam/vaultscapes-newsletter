@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "12-11-2026",
+  "iso_date": "2026-11-12",
+  "subject": "🤖 Grok Bot joins Slack teams; Gemini 4 Carbon runs days",
+  "intro": "AI is quietly moving from your assistant to our assistant. Grok Bot joins team Slack channels. Gemini 4 Carbon runs solo for days on hard problems. And NYU just showed you can teach a model new skills by deleting 0.05% of its weights. The pattern? Less is becoming more. Shared context, fewer weights, longer autonomy. We're entering the era of AI that works with teams, not just for individuals. That's a bigger shift than it sounds.",
+  "read_time": "6 min 39 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Grok Bot 1.0 ships AI teammates that join Slack, Teams, and meetings",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Google releases Gemini 4 Carbon, its most powerful model for complex agentic work",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Repo",
+      "headline": "FAISS ships e-means, a clustering algorithm 10x faster than k-means",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Grok Bot 1.0 ships AI teammates that join Slack, Teams, and meetings",
+      "likes": 11994,
+      "body": "Grok Bot 1.0 just dropped, and it flips the script on how AI assistants work. Until now, your AI was yours alone. Now it belongs to the whole team. Here is what changed: Setup needs a team admin to approve access. What the Bot learns from teammates also needs owner approval before it sticks. So there are guardrails. The big unlock here is that your team can now give a Bot real ongoing work across support, sales, or accounting, and it keeps context across the whole group, not just one person.",
+      "bullets": [
+        "Team Bots : one shared Bot your whole team can use inside Slack and Microsoft Teams channels",
+        "Meeting support : invite a Bot to Google Meet, Zoom, or Teams calls and it listens, answers in chat, then sends a summary with action items",
+        "Proactive work : the Bot spots unfinished tasks and offers to take them on without you asking",
+        "Shared memory : the Bot learns from everyone it works with, building up team knowledge over time"
+      ],
+      "image_url": "https://alphasignal.ai/image/1794459865068-r6iq3u.png",
+      "read_more_url": "https://x.ai/news/grok-bot-1-0"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Google releases Gemini 4 Carbon, its most powerful model for complex agentic work",
+      "likes": 8425,
+      "body": "Google just dropped Gemini 4 Carbon , their strongest model yet. Think of it as Argon's smarter sibling that takes more time to think before answering. Here's the key idea: Carbon uses extra internal reasoning steps before giving you a response. More thinking equals better answers on hard problems. Google's own teams have seen Carbon run for days on complex engineering tasks without giving up. What it's built for: Pricing starts at $2/$10 per 1M input/output tokens , with a 95% discount on cached inputs . Already using Argon? Switching is literally a one-word model ID change: gemini-4-carbon . Access it today via Google AI Studio or the Gemini API.",
+      "bullets": [
+        "Multi-step debugging across large codebases",
+        "Cybersecurity work like finding and patching vulnerabilities",
+        "Long-running agentic tasks that take hours or days",
+        "Open-ended scientific research with a 1M token context window"
+      ],
+      "image_url": "https://alphasignal.ai/image/1794459893304-jqxaxm.png",
+      "read_more_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Repo",
+      "headline": "FAISS ships e-means, a clustering algorithm 10x faster than k-means",
+      "likes": 6832,
+      "body": "K-means is everywhere. It groups data points into clusters, used in search engines, recommendation systems, and AI model training. But it's slow. Meta FAIR just shipped e-means , a faster drop-in replacement, now live in FAISS 1.16.0 . The core idea: instead of scanning the full dataset every round, e-means reads small chunks and tracks a running average per cluster. Smarter updates, same result, way less work. Here's what that looks like in practice: Swapping it in takes one line. Replace Kmeans(d, k).train(x) with Emeans(d, k).train(x). That's it. You get better quality clusters, faster, and with no config headaches.",
+      "bullets": [
+        "10-45x faster on GPU , 8-15x on CPU vs standard k-means",
+        "Matches 25-epoch k-means quality in just 1.4 to 2.6 epochs",
+        "Tested on 26 datasets, from 100K to 10 billion points",
+        "Zero extra settings to tune beyond k (number of clusters)"
+      ],
+      "image_url": "https://alphasignal.ai/image/1794459782904-uip5qb.png",
+      "read_more_url": "https://github.com/facebookresearch/faiss"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Google DeepMind ships Gemini Robotics 2.5 with 96% accuracy sorting car parts",
+      "stat": {
+        "type": "likes",
+        "value": 5532
+      },
+      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+    },
+    {
+      "rank": 2,
+      "headline": "NYU method matches full fine-tuning by deleting just 0.05% of LLM weights",
+      "stat": {
+        "type": "likes",
+        "value": 1760
+      },
+      "url": "https://arxiv.org/abs/2611.10866"
+    },
+    {
+      "rank": 3,
+      "headline": "Anthropic tool reads AI \"inner monologue\" , catches self-preservation thoughts before deletion",
+      "stat": {
+        "type": "likes",
+        "value": 753
+      },
+      "url": "https://arxiv.org/abs/2611.08465"
+    },
+    {
+      "rank": 4,
+      "headline": "Zyphra releases open-source voice cloning model that runs in your browser",
+      "stat": {
+        "type": "downloads",
+        "value": 4170
+      },
+      "url": "https://huggingface.co/Zyphra/ZONOS3-Mini"
+    },
+    {
+      "rank": 5,
+      "headline": "Unsloth AI ships quantized Qwen3 models that run on 12GB RAM with 5–10% accuracy gains",
+      "stat": {
+        "type": "likes",
+        "value": 2522
+      },
+      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF"
+    }
+  ]
+}

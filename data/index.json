@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-11-11T21:43:26Z",
+  "updated_at": "2026-11-12T21:42:31Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "12-11-2026",
+      "iso_date": "2026-11-12",
+      "type": "digest",
+      "subject": "🤖 Grok Bot joins Slack teams; Gemini 4 Carbon runs days",
+      "path": "data/2026/11-November/12-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/12-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/12-11-2026.html",
+      "headlines": [
+        "Grok Bot 1.0 ships AI teammates that join Slack, Teams, and meetings",
+        "Google releases Gemini 4 Carbon, its most powerful model for complex agentic work",
+        "FAISS ships e-means, a clustering algorithm 10x faster than k-means"
+      ]
+    },
     {
       "date": "11-11-2026",
       "iso_date": "2026-11-11",

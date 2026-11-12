@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "11-11-2026",
-  "iso_date": "2026-11-11",
-  "subject": "🔬 Anthropic Claude Fable 5.2 solves 23-year physics problem",
-  "intro": "Anthropic just shipped a model that solves 23-year-old physics problems, designs circuit boards from a paragraph, and is now also your team's spreadsheet, whiteboard, and data analyst. We're watching AI move from assistant to colleague in real time. The workspace tools are almost a footnote next to the physics breakthroughs, but together they tell the same story. The gap between \"AI helps\" and \"AI does\" is closing faster than most roadmaps predicted.",
-  "read_time": "6 min 38 sec",
+  "date": "12-11-2026",
+  "iso_date": "2026-11-12",
+  "subject": "🤖 Grok Bot joins Slack teams; Gemini 4 Carbon runs days",
+  "intro": "AI is quietly moving from your assistant to our assistant. Grok Bot joins team Slack channels. Gemini 4 Carbon runs solo for days on hard problems. And NYU just showed you can teach a model new skills by deleting 0.05% of its weights. The pattern? Less is becoming more. Shared context, fewer weights, longer autonomy. We're entering the era of AI that works with teams, not just for individuals. That's a bigger shift than it sounds.",
+  "read_time": "6 min 39 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Anthropic's Claude Fable 5.2 solves open physics problems and designs working hardware",
+      "headline": "Grok Bot 1.0 ships AI teammates that join Slack, Teams, and meetings",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "Anthropic ships Claude Whiteboards , Sheets, and Data tools for teams",
+      "headline": "Google releases Gemini 4 Carbon, its most powerful model for complex agentic work",
       "news_id": "news-2"
     },
     {
-      "category": "Top News",
-      "headline": "OpenAI lets businesses build custom chat agents inside ChatGPT",
+      "category": "Top Repo",
+      "headline": "FAISS ships e-means, a clustering algorithm 10x faster than k-means",
       "news_id": "news-3"
     }
   ],
@@ -27,93 +27,94 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Anthropic's Claude Fable 5.2 solves open physics problems and designs working hardware",
-      "likes": 58460,
-      "body": "Anthropic just dropped Claude Fable 5.2 and Mythos 5.2 , and the demo tasks are genuinely hard to believe. From a single paragraph prompt, Fable 5.2 designed three working electronic devices. It wrote specs, picked components, routed circuit boards, and programmed the software. Each board was ready to manufacture in under a day , with zero modifications needed. That is not all it pulled off during testing: Speed-wise, outputs are 30% faster than 5.1, at a lower price. Fable 5.2 is live now on all paid plans. Mythos 5.2, the less restricted version for cybersecurity and biomedical work, requires verified org access.",
+      "headline": "Grok Bot 1.0 ships AI teammates that join Slack, Teams, and meetings",
+      "likes": 11994,
+      "body": "Grok Bot 1.0 just dropped, and it flips the script on how AI assistants work. Until now, your AI was yours alone. Now it belongs to the whole team. Here is what changed: Setup needs a team admin to approve access. What the Bot learns from teammates also needs owner approval before it sticks. So there are guardrails. The big unlock here is that your team can now give a Bot real ongoing work across support, sales, or accounting, and it keeps context across the whole group, not just one person.",
       "bullets": [
-        "Mapped full chemistry routes for 4 complex molecules in ~30 minutes, rated at early grad-student level by outside experts",
-        "Beat 72 out of 203 open math optimization problems (think airline crew scheduling) and proved 45 solutions were the best possible",
-        "Solved two open physics problems about black holes, one unsolved for 23 years"
+        "Team Bots : one shared Bot your whole team can use inside Slack and Microsoft Teams channels",
+        "Meeting support : invite a Bot to Google Meet, Zoom, or Teams calls and it listens, answers in chat, then sends a summary with action items",
+        "Proactive work : the Bot spots unfinished tasks and offers to take them on without you asking",
+        "Shared memory : the Bot learns from everyone it works with, building up team knowledge over time"
       ],
-      "image_url": "https://alphasignal.ai/image/1794373489224-2menk2.png",
-      "read_more_url": "https://www-cdn.anthropic.com/d9fab5459563a779c65b97040ad4d2e41f0b9464.pdf"
+      "image_url": "https://alphasignal.ai/image/1794459865068-r6iq3u.png",
+      "read_more_url": "https://x.ai/news/grok-bot-1-0"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "Anthropic ships Claude Whiteboards, Sheets, and Data tools for teams",
-      "likes": 55109,
-      "body": "Claude just became a full workspace. Anthropic shipped four new tools at once, and they all live inside your Claude chat. Sheets and Whiteboards are in beta on paid plans. Claude Data is fully live now. The Claude Marketplace has over 9,000 connectors available.",
+      "headline": "Google releases Gemini 4 Carbon, its most powerful model for complex agentic work",
+      "likes": 8425,
+      "body": "Google just dropped Gemini 4 Carbon , their strongest model yet. Think of it as Argon's smarter sibling that takes more time to think before answering. Here's the key idea: Carbon uses extra internal reasoning steps before giving you a response. More thinking equals better answers on hard problems. Google's own teams have seen Carbon run for days on complex engineering tasks without giving up. What it's built for: Pricing starts at $2/$10 per 1M input/output tokens , with a 95% discount on cached inputs . Already using Argon? Switching is literally a one-word model ID change: gemini-4-carbon . Access it today via Google AI Studio or the Gemini API.",
       "bullets": [
-        "Claude Whiteboards : describe a messy plan, Claude builds a shared visual board your team can edit together. It can also turn the board into a doc or slide deck when you're done.",
-        "Claude Sheets : ask for a tracker or budget, get a working spreadsheet with tabs, formulas, and 144 functions . Exports to Excel. Google Workspace plugin included. Up to 100,000 cells per sheet.",
-        "Claude Data : connects to Snowflake, Salesforce, and similar tools. Ask a question, get back a dashboard, a written summary, or a narrated video of your metrics.",
-        "Interactive Connectors : open Adobe, Atlassian, or HubSpot in full inside Claude. Make changes yourself or ask Claude to help."
+        "Multi-step debugging across large codebases",
+        "Cybersecurity work like finding and patching vulnerabilities",
+        "Long-running agentic tasks that take hours or days",
+        "Open-ended scientific research with a 1M token context window"
       ],
-      "image_url": "https://alphasignal.ai/image/1794373500664-jsnpke.png",
-      "read_more_url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors"
+      "image_url": "https://alphasignal.ai/image/1794459893304-jqxaxm.png",
+      "read_more_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
     },
     {
       "id": "news-3",
-      "category": "Top News",
-      "headline": "OpenAI lets businesses build custom chat agents inside ChatGPT",
-      "likes": 14588,
-      "body": "OpenAI just turned ChatGPT into a storefront. Here's what that means. Businesses in ChatGPT is now in beta. It lets companies claim a profile, manage their info, and deploy a custom AI agent, all inside ChatGPT, which now reaches 1.2 billion people weekly . Here's what you can actually do with it: Privacy note: user conversations are never shared with you. You only see aggregated trends, not individual chats. Business Agents are currently US-only for ecommerce and online services. Business Hub is available globally.",
+      "category": "Top Repo",
+      "headline": "FAISS ships e-means, a clustering algorithm 10x faster than k-means",
+      "likes": 6832,
+      "body": "K-means is everywhere. It groups data points into clusters, used in search engines, recommendation systems, and AI model training. But it's slow. Meta FAIR just shipped e-means , a faster drop-in replacement, now live in FAISS 1.16.0 . The core idea: instead of scanning the full dataset every round, e-means reads small chunks and tracks a running average per cluster. Smarter updates, same result, way less work. Here's what that looks like in practice: Swapping it in takes one line. Replace Kmeans(d, k).train(x) with Emeans(d, k).train(x). That's it. You get better quality clusters, faster, and with no config headaches.",
       "bullets": [
-        "Claim and verify your business through Business Hub , then update details and add live product feeds with pricing and availability.",
-        "Build a Business Agent, basically a chatbot trained on your own data, so users can compare your products and ask questions without leaving ChatGPT.",
-        "See aggregated analytics: mentions, website clicks, and common topics where your business gets cited.",
-        "Shopify merchants can connect directly from Business Hub or the Shopify admin panel."
+        "10-45x faster on GPU , 8-15x on CPU vs standard k-means",
+        "Matches 25-epoch k-means quality in just 1.4 to 2.6 epochs",
+        "Tested on 26 datasets, from 100K to 10 billion points",
+        "Zero extra settings to tune beyond k (number of clusters)"
       ],
-      "image_url": "https://alphasignal.ai/image/1794373536429-4yxaab.png",
-      "read_more_url": "https://openai.com/index/introducing-businesses-chatgpt/"
+      "image_url": "https://alphasignal.ai/image/1794459782904-uip5qb.png",
+      "read_more_url": "https://github.com/facebookresearch/faiss"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Alibaba previews Qwen4-Max with stronger coding and agentic capabilities",
+      "headline": "Google DeepMind ships Gemini Robotics 2.5 with 96% accuracy sorting car parts",
       "stat": {
         "type": "likes",
-        "value": 5994
+        "value": 5532
       },
-      "url": "https://www.qwencloud.com/pricing/token-plan"
+      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
     },
     {
       "rank": 2,
-      "headline": "Open-source server lets Claude and ChatGPT control your smart home",
+      "headline": "NYU method matches full fine-tuning by deleting just 0.05% of LLM weights",
       "stat": {
-        "type": "stars",
-        "value": 6627
+        "type": "likes",
+        "value": 1760
       },
-      "url": "https://github.com/homeassistant-ai/ha-mcp"
+      "url": "https://arxiv.org/abs/2611.10866"
     },
     {
       "rank": 3,
-      "headline": "New clustering algorithm beats k-means with up to 45x GPU speedup",
+      "headline": "Anthropic tool reads AI \"inner monologue\" , catches self-preservation thoughts before deletion",
       "stat": {
         "type": "likes",
-        "value": 4203
+        "value": 753
       },
-      "url": "https://arxiv.org/abs/2611.09501"
+      "url": "https://arxiv.org/abs/2611.08465"
     },
     {
       "rank": 4,
-      "headline": "Weight-edited Qwen 27B thinks 27–54% less while scoring higher on hard benchmarks",
+      "headline": "Zyphra releases open-source voice cloning model that runs in your browser",
       "stat": {
         "type": "downloads",
-        "value": 59186
+        "value": 4170
       },
-      "url": "https://huggingface.co/ConceptCountry/qwen-concept-27b"
+      "url": "https://huggingface.co/Zyphra/ZONOS3-Mini"
     },
     {
       "rank": 5,
-      "headline": "Open-source Rust browser loads pages in 85ms and beats Puppeteer without Node.js",
+      "headline": "Unsloth AI ships quantized Qwen3 models that run on 12GB RAM with 5–10% accuracy gains",
       "stat": {
         "type": "likes",
-        "value": 2084
+        "value": 2522
       },
-      "url": "https://github.com/h4ckf0r0day/obscura"
+      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF"
     }
   ]
 }
