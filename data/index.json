@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-11-12T21:42:31Z",
+  "updated_at": "2026-11-13T21:10:08Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "13-11-2026",
+      "iso_date": "2026-11-13",
+      "type": "digest",
+      "subject": "🎙️ Claude Meetings joins Google Meet live, builds docs in real time",
+      "path": "data/2026/11-November/13-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/13-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/13-11-2026.html",
+      "headlines": [
+        "Anthropic launches Claude Meetings to join video calls and build docs live",
+        "Anthropic opens private beta for self-hosted Claude agents on your own cloud",
+        "Anthropic files for its initial public offering with the SEC"
+      ]
+    },
     {
       "date": "12-11-2026",
       "iso_date": "2026-11-12",
