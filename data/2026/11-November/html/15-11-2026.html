@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaSignal (cleaned)</title>
+<style>body{margin:0 auto;max-width:640px;font-family:Helvetica,Arial,sans-serif;background:#fff;color:#222}table{width:100%}</style>
+</head><body>
+<!-- section: intro -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#000000;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Logo -->
+
+<!-- White Divider Under Logo -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 20px 0;" width="100%">
+<tr>
+<td style="border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey,
+      </p>
+<!-- Intro Text -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;
+                color:#ffffff;margin:0;"> 
+AI agents are getting better at tackling complex, multi-step tasks. But there's a hidden cost: every tool call, file read, and intermediate decision adds to their growing context, making each subsequent step more expensive.
+<br/><br/>
+New research from Nvidia challenges the assumption that agents need all that history. And the findings have important implications for how we build, optimize, and serve AI applications.
+<br/><br/>
+Today we break down what developers should know.
+
+
+    </p></td>
+</tr>
+</table>
+<!-- section: author -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1794760135298-tyu2md.png" style="display:block;border:1px solid #000000;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+        Today's Author
+      </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+        
+   Ben Dickson is a veteran software engineer and former CTO known as the "Engineer's Journalist" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat.
+      
+      </div>
+</td>
+</tr>
+</table>
+<!-- section: article -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family:system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Sunday Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+      Why AI agents don't always need long contexts
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0;">
+<div style="margin-top:0;">
+<p>In agentic tasks, the context of the underlying LLM might grow into hundreds of thousands of tokens. The agent spends many steps searching repositories, modifying files, and running tests.</p>
+<p>Each of these interactions becomes part of the next request to the model. The agent’s context continues to grow, even when much of that history is no longer useful.</p>
+<p>In a <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=97b15ce5de3131ef&amp;lid=SVY4m8VfgnSXizpe&amp;mid=9d828979-02df-489e-99c1-fcfa65652cf7">new study</a>, researchers at Nvidia tested whether AI models really need those long contexts. Across different long-context tasks, they found that LLMs can often work with much shorter contexts while maintaining their accuracy.</p>
+<p>For developers, the findings suggest that instead of stuffing everything into the model’s context, only keep the minimal information the agent needs for the next step.</p>
+<p><b>Why long contexts are expensive</b></p>
+<p>When an LLM generates a token, it must attend to all the tokens that precede it. Even when storing attention values in the KV cache, the attention tax increases as the context grows because attending to previous tokens takes more computation and memory.</p>
+<p>The researchers measured the impact on three open-weight models running on NVIDIA H100 GPUs. Reducing the configured context window from 256,000 to 16,000 tokens increased output-token throughput by 3.6 times for GLM 5.2, 5.6 times for Kimi K2.6 and seven times for Qwen 3 Coder Next.</p>
+<img alt="alpha_signal_image_1" border="0" src="https://alphasignal.ai/image/1794752908766-7ra33f.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>The study identifies two ways different types of long-context tasks:</p>
+<ul>
+<li><b>Long-horizon tasks:</b> An agent adds commands, tool outputs, and decisions as it works through a multi-step job.</li>
+<li><b>Long-input tasks:</b> A model receives a large collection of documents or other source material to carry out one task.</li>
+</ul>
+<p><b>How much context do tasks actually need?</b></p>
+<p>The researchers tested 13 benchmarks, including SWE-bench Verified, Terminal-Bench, LongBench v2 and LOONG. Their main accuracy experiments used Claude Opus 4.5 and GPT-5.6 Sol. They compared a baseline that retains the full conversation with an approach that compacts the agent's history when it reaches a predefined threshold.</p>
+<p>Their baseline was a plain technique that retains the full conversation history. Their compaction technique triggers when the agent’s history reaches a predefined threshold (e.g., 16K tokens).</p>
+<p>At that point, the agent compacts its history and starts a fresh conversation with the original instructions and that state. The researchers also tested a more aggressive method that resets the conversation after every environment action.</p>
+<p><b>Long-running agents can forget much of their history</b></p>
+<p>On long-horizon benchmarks, threshold-based compaction generally kept accuracy close to the full-history baseline. On SWE-bench Verified, Claude Opus 4.5 solved 70% of tasks without compaction and 74.8% at its best compaction setting. GPT 5.6 Sol improved from 84.4% to 88.8% at its best setting.</p>
+<img alt="alpha_signal_image_2" border="0" src="https://alphasignal.ai/image/1794752955756-c4q6wk.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p><b>Long documents can be read selectively</b></p>
+<p>For long-input tasks, the researchers used a different strategy. Instead of placing entire documents in the prompt, they stored them as files. Agents could search those files with commands such as grep and import relevant passages into the model's context.</p>
+<p>This approach matched or improved accuracy across almost all seven long-input benchmarks. In many tasks, agents finished without performing a single compaction. Most of the benefit came from deciding what to read, rather than summarizing what had already been read.</p>
+<img alt="alpha_signal_image_3" border="0" src="https://alphasignal.ai/image/1794752996182-1ajewq.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p><b>One action at a time</b></p>
+<p>The researchers also tested single-action compaction. After each tool action, the agent produced an updated description of its task state. That state became the starting point for its next action, while the previous conversation was discarded.</p>
+<p>On SWE-bench Verified, both Claude Opus 4.5 and GPT-5.6 Sol almost matched the full-history baseline. Across the two evaluated benchmarks, the median peak context was just 7,000–9,000 tokens.</p>
+<p>These results led the researchers to propose Semantic State Space Models, which would be trained to carry an explicit, human-readable task state between steps, rather than a conventional state-space model's internal numerical state.</p>
+<p><b>What makes a good compaction?</b></p>
+<p>The researchers found that conventional summaries can preserve the wrong information: they recount prominent events in an agent's history, even when those events no longer matter.</p>
+<p>A good compaction is a briefing for the agent that only preserves what the next step requires, which they describe as “the gist of the agentic trace.”</p>
+<p>Their compaction instructions focus on the original objective, established facts, relevant files and results, completed changes, failed approaches, remaining work and the immediate next action.</p>
+<p><b>What developers should do differently</b></p>
+<p>The first caveat is that models respond differently to compaction. In the paper's open-weight experiments, Qwen 3 Coder Next fell from 53% accuracy on SWE-bench Verified to 3.6% under a 16K-token context limit. The findings show that the collapse is due to the model's verbose outputs, which left little room for progress between compactions.</p>
+<p>Other models such as Qwen3.6-27B and MiniMax M2.7 held up much better and showed very little accuracy drops. Developers should therefore run their own evaluations across different tasks and compaction thresholds instead of assuming that one setting will suit every model.</p>
+<p>Also worth considering are API costs when using cloud-hosted models. When successive requests share an unchanged prefix, prompt caching can reuse earlier computation at a discounted input-token rate.</p>
+<p>Compaction changes part of that prefix and invalidates the cache. As a result, the next request might become more expensive even though it contains fewer tokens.</p>
+<p>For example, on SWE-bench Verified, GPT 5.6 Sol's cost under standard per-token API pricing rose from $167.68 without compaction to $203.12 at the 16K limit.</p>
+<p>The practical choice depends on the workload:</p>
+<ul>
+<li><b>Long-running agents:</b> Compact into a structured task handoff. Keep full logs, tool results and artifacts available for retrieval. Measure cache hits, output tokens, latency and cost per completed task before tightening context limits.</li>
+<li><b>Document-processing applications:</b> Store the source material externally and let the agent retrieve the passages it needs. Compact only if the resulting investigation accumulates a long interaction history.</li>
+<li><b>Tasks requiring exact information:</b> Avoid relying on lossy summaries for detailed records, instructions or audit trails. Keep the original information available, and use full context when the input is manageable and the additional machinery offers little benefit.</li>
+</ul>
+<p>As context windows expand, developers have more room to work with. But as the study shows, for many applications, the better optimization is deciding what belongs in working memory, and what can be retrieved later.</p>
+</div>
+</td>
+</tr>
+</table>
+</body></html>

@@ -1,0 +1,180 @@
+{
+  "version": 2,
+  "type": "article",
+  "date": "15-11-2026",
+  "iso_date": "2026-11-15",
+  "subject": "🧠 Nvidia Shows How to Cut AI Context Without Sacrificing Accuracy",
+  "kicker": "Sunday Deep Dive",
+  "title": "Why AI agents don't always need long contexts",
+  "author": {
+    "name": "Ben Dickson",
+    "bio": "Ben Dickson is a veteran software engineer and former CTO known as the \"Engineer's Journalist\" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat."
+  },
+  "intro": "AI agents are getting better at tackling complex, multi-step tasks. But there's a hidden cost: every tool call, file read, and intermediate decision adds to their growing context, making each subsequent step more expensive. New research from Nvidia challenges the assumption that agents need all that history. And the findings have important implications for how we build, optimize, and serve AI applications. Today we break down what developers should know.",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "html": "In agentic tasks, the context of the underlying LLM might grow into hundreds of thousands of tokens. The agent spends many steps searching repositories, modifying files, and running tests."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Each of these interactions becomes part of the next request to the model. The agent’s context continues to grow, even when much of that history is no longer useful."
+    },
+    {
+      "kind": "paragraph",
+      "html": "In a <a href=\"https://arxiv.org/abs/2611.05306\">new study</a> , researchers at Nvidia tested whether AI models really need those long contexts. Across different long-context tasks, they found that LLMs can often work with much shorter contexts while maintaining their accuracy."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For developers, the findings suggest that instead of stuffing everything into the model’s context, only keep the minimal information the agent needs for the next step."
+    },
+    {
+      "kind": "heading",
+      "text": "Why long contexts are expensive"
+    },
+    {
+      "kind": "paragraph",
+      "html": "When an LLM generates a token, it must attend to all the tokens that precede it. Even when storing attention values in the KV cache, the attention tax increases as the context grows because attending to previous tokens takes more computation and memory."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers measured the impact on three open-weight models running on NVIDIA H100 GPUs. Reducing the configured context window from 256,000 to 16,000 tokens increased output-token throughput by 3.6 times for GLM 5.2, 5.6 times for Kimi K2.6 and seven times for Qwen 3 Coder Next."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1794752908766-7ra33f.png",
+      "alt": "alpha_signal_image_1"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The study identifies two ways different types of long-context tasks:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "<b>Long-horizon tasks:</b> An agent adds commands, tool outputs, and decisions as it works through a multi-step job.",
+        "<b>Long-input tasks:</b> A model receives a large collection of documents or other source material to carry out one task."
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "How much context do tasks actually need?"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers tested 13 benchmarks, including SWE-bench Verified, Terminal-Bench, LongBench v2 and LOONG. Their main accuracy experiments used Claude Opus 4.5 and GPT-5.6 Sol. They compared a baseline that retains the full conversation with an approach that compacts the agent's history when it reaches a predefined threshold."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Their baseline was a plain technique that retains the full conversation history. Their compaction technique triggers when the agent’s history reaches a predefined threshold (e.g., 16K tokens)."
+    },
+    {
+      "kind": "paragraph",
+      "html": "At that point, the agent compacts its history and starts a fresh conversation with the original instructions and that state. The researchers also tested a more aggressive method that resets the conversation after every environment action."
+    },
+    {
+      "kind": "heading",
+      "text": "Long-running agents can forget much of their history"
+    },
+    {
+      "kind": "paragraph",
+      "html": "On long-horizon benchmarks, threshold-based compaction generally kept accuracy close to the full-history baseline. On SWE-bench Verified, Claude Opus 4.5 solved 70% of tasks without compaction and 74.8% at its best compaction setting. GPT 5.6 Sol improved from 84.4% to 88.8% at its best setting."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1794752955756-c4q6wk.png",
+      "alt": "alpha_signal_image_2"
+    },
+    {
+      "kind": "heading",
+      "text": "Long documents can be read selectively"
+    },
+    {
+      "kind": "paragraph",
+      "html": "For long-input tasks, the researchers used a different strategy. Instead of placing entire documents in the prompt, they stored them as files. Agents could search those files with commands such as grep and import relevant passages into the model's context."
+    },
+    {
+      "kind": "paragraph",
+      "html": "This approach matched or improved accuracy across almost all seven long-input benchmarks. In many tasks, agents finished without performing a single compaction. Most of the benefit came from deciding what to read, rather than summarizing what had already been read."
+    },
+    {
+      "kind": "image",
+      "src": "https://alphasignal.ai/image/1794752996182-1ajewq.png",
+      "alt": "alpha_signal_image_3"
+    },
+    {
+      "kind": "heading",
+      "text": "One action at a time"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers also tested single-action compaction. After each tool action, the agent produced an updated description of its task state. That state became the starting point for its next action, while the previous conversation was discarded."
+    },
+    {
+      "kind": "paragraph",
+      "html": "On SWE-bench Verified, both Claude Opus 4.5 and GPT-5.6 Sol almost matched the full-history baseline. Across the two evaluated benchmarks, the median peak context was just 7,000–9,000 tokens."
+    },
+    {
+      "kind": "paragraph",
+      "html": "These results led the researchers to propose Semantic State Space Models, which would be trained to carry an explicit, human-readable task state between steps, rather than a conventional state-space model's internal numerical state."
+    },
+    {
+      "kind": "heading",
+      "text": "What makes a good compaction?"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The researchers found that conventional summaries can preserve the wrong information: they recount prominent events in an agent's history, even when those events no longer matter."
+    },
+    {
+      "kind": "paragraph",
+      "html": "A good compaction is a briefing for the agent that only preserves what the next step requires, which they describe as “the gist of the agentic trace.”"
+    },
+    {
+      "kind": "paragraph",
+      "html": "Their compaction instructions focus on the original objective, established facts, relevant files and results, completed changes, failed approaches, remaining work and the immediate next action."
+    },
+    {
+      "kind": "heading",
+      "text": "What developers should do differently"
+    },
+    {
+      "kind": "paragraph",
+      "html": "The first caveat is that models respond differently to compaction. In the paper's open-weight experiments, Qwen 3 Coder Next fell from 53% accuracy on SWE-bench Verified to 3.6% under a 16K-token context limit. The findings show that the collapse is due to the model's verbose outputs, which left little room for progress between compactions."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Other models such as Qwen3.6-27B and MiniMax M2.7 held up much better and showed very little accuracy drops. Developers should therefore run their own evaluations across different tasks and compaction thresholds instead of assuming that one setting will suit every model."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Also worth considering are API costs when using cloud-hosted models. When successive requests share an unchanged prefix, prompt caching can reuse earlier computation at a discounted input-token rate."
+    },
+    {
+      "kind": "paragraph",
+      "html": "Compaction changes part of that prefix and invalidates the cache. As a result, the next request might become more expensive even though it contains fewer tokens."
+    },
+    {
+      "kind": "paragraph",
+      "html": "For example, on SWE-bench Verified, GPT 5.6 Sol's cost under standard per-token API pricing rose from $167.68 without compaction to $203.12 at the 16K limit."
+    },
+    {
+      "kind": "paragraph",
+      "html": "The practical choice depends on the workload:"
+    },
+    {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+        "<b>Long-running agents:</b> Compact into a structured task handoff. Keep full logs, tool results and artifacts available for retrieval. Measure cache hits, output tokens, latency and cost per completed task before tightening context limits.",
+        "<b>Document-processing applications:</b> Store the source material externally and let the agent retrieve the passages it needs. Compact only if the resulting investigation accumulates a long interaction history.",
+        "<b>Tasks requiring exact information:</b> Avoid relying on lossy summaries for detailed records, instructions or audit trails. Keep the original information available, and use full context when the input is manageable and the additional machinery offers little benefit."
+      ]
+    },
+    {
+      "kind": "paragraph",
+      "html": "As context windows expand, developers have more room to work with. But as the study shows, for many applications, the better optimization is deciding what belongs in working memory, and what can be retrieved later."
+    }
+  ]
+}

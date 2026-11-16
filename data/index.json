@@ -1,7 +1,39 @@
 {
-  "updated_at": "2026-11-13T21:10:08Z",
+  "updated_at": "2026-11-16T23:38:09Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "16-11-2026",
+      "iso_date": "2026-11-16",
+      "type": "digest",
+      "subject": "1980s energy model beats modern AI loops by 1,000x in speed",
+      "path": "data/2026/11-November/16-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/16-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/16-11-2026.html",
+      "headlines": [
+        "Claude Code desktop app now supports custom themes with animated backgrounds",
+        "Anthropic upgrades Claude Code Projects with smarter coordination and thread sharing",
+        "DeepSeek opens web search, file parsing, and voice to API developers"
+      ]
+    },
+    {
+      "date": "15-11-2026",
+      "iso_date": "2026-11-15",
+      "type": "article",
+      "subject": "🧠 Nvidia Shows How to Cut AI Context Without Sacrificing Accuracy",
+      "path": "data/2026/11-November/15-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/15-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/15-11-2026.html",
+      "headlines": [
+        "Why long contexts are expensive",
+        "How much context do tasks actually need?",
+        "Long-running agents can forget much of their history",
+        "Long documents can be read selectively",
+        "One action at a time"
+      ],
+      "title": "Why AI agents don't always need long contexts",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "13-11-2026",
       "iso_date": "2026-11-13",
