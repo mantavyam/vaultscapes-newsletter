@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "17-11-2026",
+  "iso_date": "2026-11-17",
+  "subject": "📱 Claude Code folds iPhone Duo layouts; OpenCode cuts memory 25x",
+  "intro": "AI coding agents are quietly eating the entire dev stack. Claude now folds and unfolds your iPhone Duo in the simulator. OpenCode rewrote its browser bridge in Rust for $60 and got 25x less memory. And researchers just found silent numerical bugs corrupting gradients in training pipelines. The pattern? Agents aren't just writing code anymore. They're running your tools, your hardware, your math. We're watching the IDE become the agent. That's a big deal.",
+  "read_time": "6 min 55 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic's Claude Code now tests iPhone Duo foldable layouts in iOS simulator",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenCode ships Rust-rewritten browser tool that uses 25x less memory",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "LiquidAI ships decision models that read, locate, and extract from text, images, and audio",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic's Claude Code now tests iPhone Duo foldable layouts in iOS simulator",
+      "likes": 9727,
+      "body": "Apple's iPhone Duo is a foldable iPhone, and building apps for it means testing multiple screen states: folded, open, half-bent. That used to mean clicking around Xcode manually. Not anymore. Claude Code now runs the iPhone Duo simulator right next to your chat. You describe what you want to test, and Claude folds and unfolds the device itself, checking how your layout holds up at each position. For existing apps, just ask Claude to prep it for Duo. It can install Apple's App Resizability skill , which scans your project for layout problems and proposes fixes. You approve, Claude applies them, then verifies on the simulator. No rewrite needed. This puts Swift editing, builds, simulator control, and visual checks all inside one session.",
+      "bullets": [
+        "Requires macOS with Xcode 27.1 or later",
+        "Install the Xcode plugin: /plugin install xcode@claude-plugins-official",
+        "Plugin lets Claude build, run, render SwiftUI previews, and search Apple docs"
+      ],
+      "image_url": "https://alphasignal.ai/image/1794891914561-sgf9eq.png",
+      "read_more_url": "https://code.claude.com/docs/en/desktop-ios-simulator"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "OpenCode ships Rust-rewritten browser tool that uses 25x less memory",
+      "likes": 6041,
+      "body": "OpenCode Browse just dropped v0.1.0, and it's a full rewrite in Rust. That matters because the old version was bloated: it needed Node.js, Playwright, and a pile of npm packages just to connect your AI agent to a browser. The new numbers are hard to ignore: What does this unlock? Your agent can now open a URL, scrape a list, loop over it, call your other tools, and keep going, all using your real browser with your logins already active . No headless browser setup needed. It works with Claude Code, Cursor, Codex, Zed, and any MCP client. Install via the extension or CLI.",
+      "bullets": [
+        "25x less memory used, dropping from ~190 MB down to 5.6 MB per session",
+        "23x smaller binary , now just 4.3 MB instead of 53-64 MB",
+        "No more Playwright dependency, the whole thing is self-contained",
+        "Browser tools now exposed directly to your agent as MCP tools (think: actions your AI can call like functions)"
+      ],
+      "image_url": "https://alphasignal.ai/image/1794891984002-0xlt51.png",
+      "read_more_url": "https://opencode.ai/product/browse"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "LiquidAI ships decision models that read, locate, and extract from text, images, and audio",
+      "likes": 3360,
+      "body": "Liquid AI just dropped d1.2 and d1.2-ultra , two models built for one thing: making decisions from any input you throw at them, text, images, or audio. These aren't chat models. They take a question, look at your data, and return a structured answer with a confidence score. Think of it like a smart classifier you can actually trust. Five new things you can now do: The confidence scores are actually reliable. d1.2-ultra's calibration error is 0.8 , meaning when it says 80%, it's right about 80% of the time. That lets you auto-route low-confidence results to human review. Pricing: $0.02/1M tokens for d1.2, $0.042 for ultra. You only pay for inputs, zero output cost.",
+      "bullets": [
+        "Pull a specific value from a document, like an invoice total, and get \"not found\" if it's missing instead of a hallucinated guess",
+        "Find every matching passage in text, like all personal data in a note",
+        "Locate objects in images with bounding boxes, one or many",
+        "Estimate numbers with a confidence range",
+        "Pick every label that fits from a list, each with its own probability"
+      ],
+      "image_url": "https://alphasignal.ai/image/1794892010797-4ce4rm.png",
+      "read_more_url": "https://artificialanalysis.ai/evaluations/artificial-analysis-decision-index"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "OpenAI study finds ChatGPT nearly doubles productivity for 1,800 academic scientists",
+      "stat": {
+        "type": "likes",
+        "value": 3352
+      },
+      "url": "https://openai.com/index/science-at-the-frontier/"
+    },
+    {
+      "rank": 2,
+      "headline": "Open-source Vietnamese text-to-speech model clones voices in 115ms on consumer GPU",
+      "stat": {
+        "type": "stars",
+        "value": 3376
+      },
+      "url": "https://github.com/pnnbao97/VieNeu-TTS"
+    },
+    {
+      "rank": 3,
+      "headline": "Brandon Amos exposes silent numerical bugs in KL and JSD divergence calculations",
+      "stat": {
+        "type": "likes",
+        "value": 301
+      },
+      "url": "https://arxiv.org/abs/2611.18511"
+    },
+    {
+      "rank": 4,
+      "headline": "Comfy-Org repackages PAN2 text-to-video diffusion model for ComfyUI",
+      "stat": {
+        "type": "downloads",
+        "value": 1288
+      },
+      "url": "https://huggingface.co/Comfy-Org/PAN2"
+    },
+    {
+      "rank": 5,
+      "headline": "Nvidia drops a free 4GB model that runs fully offline on any laptop",
+      "stat": {
+        "type": "likes",
+        "value": 3256
+      },
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB"
+    }
+  ]
+}

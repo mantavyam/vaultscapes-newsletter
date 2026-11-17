@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "16-11-2026",
-  "iso_date": "2026-11-16",
-  "subject": "1980s energy model beats modern AI loops by 1,000x in speed",
-  "intro": "Claude Code got custom themes and smarter project coordination this week. Fun, but almost decorative next to the real story. CRAM just showed that a 1985 physics idea outperforms modern reasoning loops by 1,000x in training speed. We keep building bigger, and a 40-year-old energy function quietly solves Sudoku in 42ms on one GPU. The pattern: the best ideas aren't always the newest ones.",
-  "read_time": "6 min 9 sec",
+  "date": "17-11-2026",
+  "iso_date": "2026-11-17",
+  "subject": "📱 Claude Code folds iPhone Duo layouts; OpenCode cuts memory 25x",
+  "intro": "AI coding agents are quietly eating the entire dev stack. Claude now folds and unfolds your iPhone Duo in the simulator. OpenCode rewrote its browser bridge in Rust for $60 and got 25x less memory. And researchers just found silent numerical bugs corrupting gradients in training pipelines. The pattern? Agents aren't just writing code anymore. They're running your tools, your hardware, your math. We're watching the IDE become the agent. That's a big deal.",
+  "read_time": "6 min 55 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Claude Code desktop app now supports custom themes with animated backgrounds",
+      "headline": "Anthropic's Claude Code now tests iPhone Duo foldable layouts in iOS simulator",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "Anthropic upgrades Claude Code Projects with smarter coordination and thread sharing",
+      "headline": "OpenCode ships Rust-rewritten browser tool that uses 25x less memory",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "DeepSeek opens web search, file parsing, and voice to API developers",
+      "headline": "LiquidAI ships decision models that read, locate, and extract from text, images, and audio",
       "news_id": "news-3"
     }
   ],
@@ -27,96 +27,94 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Claude Code desktop app now supports custom themes with animated backgrounds",
-      "likes": 23490,
-      "body": "Claude Code just got a glow-up. You can now build custom themes for the Claude Code desktop app using a feature called mods, which are small plugins that change how the app looks and behaves. Want a dark purple background with animated particles? Just describe it to Claude and it builds the theme for you. No design skills needed. Here is what you can do right now: To try it, update to the latest desktop version . Themes currently work in local sessions only. The fun part: you do not need to write a single line of CSS. Just tell Claude what vibe you want. It handles the rest. Your terminal, your aesthetic.",
+      "headline": "Anthropic's Claude Code now tests iPhone Duo foldable layouts in iOS simulator",
+      "likes": 9727,
+      "body": "Apple's iPhone Duo is a foldable iPhone, and building apps for it means testing multiple screen states: folded, open, half-bent. That used to mean clicking around Xcode manually. Not anymore. Claude Code now runs the iPhone Duo simulator right next to your chat. You describe what you want to test, and Claude folds and unfolds the device itself, checking how your layout holds up at each position. For existing apps, just ask Claude to prep it for Duo. It can install Apple's App Resizability skill , which scans your project for layout problems and proposes fixes. You approve, Claude applies them, then verifies on the simulator. No rewrite needed. This puts Swift editing, builds, simulator control, and visual checks all inside one session.",
       "bullets": [
-        "Change colors across the entire UI",
-        "Add animated backgrounds",
-        "Use the theme-examples plugin to get started fast with pre-built scenes",
-        "Write your own theme from scratch using the official docs"
+        "Requires macOS with Xcode 27.1 or later",
+        "Install the Xcode plugin: /plugin install xcode@claude-plugins-official",
+        "Plugin lets Claude build, run, render SwiftUI previews, and search Apple docs"
       ],
-      "image_url": "https://alphasignal.ai/image/1794805615593-7usa96.png",
-      "read_more_url": "https://code.claude.com/docs/en/plugins/mods/interface"
+      "image_url": "https://alphasignal.ai/image/1794891914561-sgf9eq.png",
+      "read_more_url": "https://code.claude.com/docs/en/desktop-ios-simulator"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "Anthropic upgrades Claude Code Projects with smarter coordination and thread sharing",
-      "likes": 21615,
-      "body": "Claude Code just got a solid upgrade to its Projects feature, and it changes how you manage complex, multi-part work. Projects let Claude run multiple tasks at the same time in separate threads, like having several conversations going in parallel. The coordinator, the part that oversees everything, now speaks up more. It answers your questions directly in the project chat and gives you live status updates on what's running. Projects is in public beta on Pro and Max plans. Join the waitlist if you don't have access yet.",
+      "headline": "OpenCode ships Rust-rewritten browser tool that uses 25x less memory",
+      "likes": 6041,
+      "body": "OpenCode Browse just dropped v0.1.0, and it's a full rewrite in Rust. That matters because the old version was bloated: it needed Node.js, Playwright, and a pile of npm packages just to connect your AI agent to a browser. The new numbers are hard to ignore: What does this unlock? Your agent can now open a URL, scrape a list, loop over it, call your other tools, and keep going, all using your real browser with your logins already active . No headless browser setup needed. It works with Claude Code, Cursor, Codex, Zed, and any MCP client. Install via the extension or CLI.",
       "bullets": [
-        "Share threads as read-only links with anyone signed into Claude",
-        "Set reminders on any thread so it hides until you need it, then Claude surfaces it automatically",
-        "/btw spins off a new thread mid-task so your current one stays focused",
-        "/fork branches a thread so you can try a different approach without losing your original",
-        "Artifact thumbnails now show inside each thread for faster navigation"
+        "25x less memory used, dropping from ~190 MB down to 5.6 MB per session",
+        "23x smaller binary , now just 4.3 MB instead of 53-64 MB",
+        "No more Playwright dependency, the whole thing is self-contained",
+        "Browser tools now exposed directly to your agent as MCP tools (think: actions your AI can call like functions)"
       ],
-      "image_url": "https://alphasignal.ai/image/1794805696328-vu7ab4.png",
-      "read_more_url": "https://claude.com/form/projects"
+      "image_url": "https://alphasignal.ai/image/1794891984002-0xlt51.png",
+      "read_more_url": "https://opencode.ai/product/browse"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "DeepSeek opens web search, file parsing, and voice to API developers",
-      "likes": 14042,
-      "body": "DeepSeek just gave its V4.1-Flash model a serious upgrade. The tools powering the DeepSeek consumer app are now available through the API. No more stitching together third-party services. Before this, adding web search or PDF parsing to your AI app meant calling external APIs yourself and manually assembling the context. Until now, incorporating web search, PDF parsing, or speech recognition required setting up your own infrastructure. That changes now. Here is what you can plug in with a few parameters: Enable search with deepseek_web_search and URL reading with deepseek_read_url. Tool usage is billed on top of normal token prices. Public apps must have safety checks on.",
+      "headline": "LiquidAI ships decision models that read, locate, and extract from text, images, and audio",
+      "likes": 3360,
+      "body": "Liquid AI just dropped d1.2 and d1.2-ultra , two models built for one thing: making decisions from any input you throw at them, text, images, or audio. These aren't chat models. They take a question, look at your data, and return a structured answer with a confidence score. Think of it like a smart classifier you can actually trust. Five new things you can now do: The confidence scores are actually reliable. d1.2-ultra's calibration error is 0.8 , meaning when it says 80%, it's right about 80% of the time. That lets you auto-route low-confidence results to human review. Pricing: $0.02/1M tokens for d1.2, $0.042 for ultra. You only pay for inputs, zero output cost.",
       "bullets": [
-        "Web Search : the model searches the web and returns cited answers automatically",
-        "Deep Thinking Search: searches and reads pages during multi-step reasoning",
-        "File Input: drop in PDFs, Office files, or images and the model reads them",
-        "URL Reading: paste a link in a message and the model fetches and reads it",
-        "Safety Checks: screens inputs and outputs, flags risky content automatically"
+        "Pull a specific value from a document, like an invoice total, and get \"not found\" if it's missing instead of a hallucinated guess",
+        "Find every matching passage in text, like all personal data in a note",
+        "Locate objects in images with bounding boxes, one or many",
+        "Estimate numbers with a confidence range",
+        "Pick every label that fits from a list, each with its own probability"
       ],
-      "image_url": "https://alphasignal.ai/image/1794805711753-4jy3mz.png",
-      "read_more_url": "https://api-docs.deepseek.com/guides/build_a_chatbot/"
+      "image_url": "https://alphasignal.ai/image/1794892010797-4ce4rm.png",
+      "read_more_url": "https://artificialanalysis.ai/evaluations/artificial-analysis-decision-index"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Qwen releases Qwen4-Max with 60% lower cost and 1M-token context",
+      "headline": "OpenAI study finds ChatGPT nearly doubles productivity for 1,800 academic scientists",
       "stat": {
         "type": "likes",
-        "value": 7306
+        "value": 3352
       },
-      "url": "https://www.qwencloud.com/pricing/token-plan"
+      "url": "https://openai.com/index/science-at-the-frontier/"
     },
     {
       "rank": 2,
-      "headline": "Open-source tool reverse engineers any codebase into plain business workflows",
+      "headline": "Open-source Vietnamese text-to-speech model clones voices in 115ms on consumer GPU",
       "stat": {
         "type": "stars",
-        "value": 1805
+        "value": 3376
       },
-      "url": "https://github.com/FinanceFlash/unvibecode"
+      "url": "https://github.com/pnnbao97/VieNeu-TTS"
     },
     {
       "rank": 3,
-      "headline": "1980s energy model trains reasoning tasks 1,000x faster than looped models",
+      "headline": "Brandon Amos exposes silent numerical bugs in KL and JSD divergence calculations",
       "stat": {
         "type": "likes",
-        "value": 2070
+        "value": 301
       },
-      "url": "https://arxiv.org/abs/2611.17309"
+      "url": "https://arxiv.org/abs/2611.18511"
     },
     {
       "rank": 4,
-      "headline": "Meta study of 200+ models finds vision encoders need parameters, not pretraining",
+      "headline": "Comfy-Org repackages PAN2 text-to-video diffusion model for ComfyUI",
       "stat": {
-        "type": "likes",
-        "value": 855
+        "type": "downloads",
+        "value": 1288
       },
-      "url": "https://arxiv.org/abs/2611.17334"
+      "url": "https://huggingface.co/Comfy-Org/PAN2"
     },
     {
       "rank": 5,
-      "headline": "Open-source 18 MB text-to-speech model runs on CPU, never trained on real voices",
+      "headline": "Nvidia drops a free 4GB model that runs fully offline on any laptop",
       "stat": {
         "type": "likes",
-        "value": 5676
+        "value": 3256
       },
-      "url": "https://huggingface.co/n4ze3m/tiny-voca"
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB"
     }
   ]
 }

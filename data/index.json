@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-11-16T23:38:09Z",
+  "updated_at": "2026-11-17T22:46:02Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "17-11-2026",
+      "iso_date": "2026-11-17",
+      "type": "digest",
+      "subject": "📱 Claude Code folds iPhone Duo layouts; OpenCode cuts memory 25x",
+      "path": "data/2026/11-November/17-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/17-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/17-11-2026.html",
+      "headlines": [
+        "Anthropic's Claude Code now tests iPhone Duo foldable layouts in iOS simulator",
+        "OpenCode ships Rust-rewritten browser tool that uses 25x less memory",
+        "LiquidAI ships decision models that read, locate, and extract from text, images, and audio"
+      ]
+    },
     {
       "date": "16-11-2026",
       "iso_date": "2026-11-16",
