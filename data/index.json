@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-11-17T22:46:02Z",
+  "updated_at": "2026-11-18T22:28:45Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "18-11-2026",
+      "iso_date": "2026-11-18",
+      "type": "digest",
+      "subject": "OpenAI GPT-6.2 Astra 🧠, Anthropic Claude Code Mode ⛓️",
+      "path": "data/2026/11-November/18-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/18-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/18-11-2026.html",
+      "headlines": [
+        "OpenAI ships GPT-6.2 Astra and Sol at one-third the cost of GPT-6",
+        "Anthropic's experimental Claude Code mode chains tools and answers mid-run",
+        "OpenAI gives four outside safety teams deep access to probe its models"
+      ]
+    },
     {
       "date": "17-11-2026",
       "iso_date": "2026-11-17",
