@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "18-11-2026",
-  "iso_date": "2026-11-18",
-  "subject": "OpenAI GPT-6.2 Astra 🧠, Anthropic Claude Code Mode ⛓️",
-  "intro": "The AI arms race has a new rule: better and cheaper is the only move that matters now. OpenAI just dropped GPT-6.2 Astra and Sol at a fraction of GPT-6's cost, one week after Anthropic and Google shipped their own flagships. The pattern is clear: labs are no longer just racing on benchmarks, they're racing on efficiency . Meanwhile, Claude Code quietly rewired how agents chain tools together. We're watching the infrastructure of AI agents get rebuilt in real time.",
-  "read_time": "6 min 52 sec",
+  "date": "19-11-2026",
+  "iso_date": "2026-11-19",
+  "subject": "Gemini 4 Neon 🧠, OpenAI Chip Model +14% PPA 🔧, Devin Bots 🤖",
+  "intro": "AI is eating its own supply chain. Google ships Neon to make frontier reasoning cheaper, while OpenAI uses AI to redesign the chips that run it all. That's the loop closing in real time: better models, cheaper to run, on hardware AI helped build. And Google's SIM paper adds memory to the mix, so agents compound instead of reset. The stack is getting smarter at every layer. Quietly.",
+  "read_time": "6 min 43 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "OpenAI ships GPT-6.2 Astra and Sol at one-third the cost of GPT-6",
+      "headline": "Google DeepMind ships Gemini 4 Neon , ranking #3 on the Intelligence Index",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "Anthropic's experimental Claude Code mode chains tools and answers mid-run",
+      "headline": "OpenAI's chip design model delivers 14% hardware gains on AMD's GPU",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "OpenAI gives four outside safety teams deep access to probe its models",
+      "headline": "Cognition launches Devin Bots , helping engineers merge 4.5x more PRs",
       "news_id": "news-3"
     }
   ],
@@ -27,94 +27,90 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "OpenAI ships GPT-6.2 Astra and Sol at one-third the cost of GPT-6",
-      "likes": 46727,
-      "body": "OpenAI just dropped GPT-6.2 Astra and Sol , and the headline is simple: more capable, cheaper to run. Here is the quick breakdown. Astra is the heavy-hitter for complex work. Sol is your everyday workhorse. Think of them as a sports car vs. a reliable daily driver. To use them, hit gpt-6.2-astra or gpt-6.2-sol in the OpenAI API. Available now for Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.",
+      "headline": "Google DeepMind ships Gemini 4 Neon, ranking #3 on the Intelligence Index",
+      "likes": 7150,
+      "body": "Google just dropped Gemini 4 Neon , a new model sitting between the cheaper Hydrogen and the more powerful Carbon. Think of it as the sweet spot: near-Carbon reasoning quality, but faster and cheaper per task. Here is what you get: You can use it right now via the Gemini API, AI Studio, and Android Studio with model ID gemini-4-neon . One heads-up: if you are migrating from an older Gemini model, set the thinking level explicitly or you will hit validation errors.",
       "bullets": [
-        "Astra costs less than 1/3 the price per task compared to GPT-6 Astra, with API tokens priced 20% lower at $8 input / $40 output per million tokens.",
-        "Sol approaches Astra's coding performance at roughly one fifth of the cost , keeping the same $2 input / $10 output pricing.",
-        "Astra jumped 22 points on cybersecurity benchmarks and is the first externally released model rated High for AI self-improvement, meaning it can meaningfully help accelerate AI research itself.",
-        "Both models handle multistep agentic workflows, where the AI completes a chain of tasks automatically without you babysitting each step."
+        "1M token context window shared across input, thinking, and output, so you can feed it entire codebases or long documents",
+        "Handles text, images, video, audio, and PDFs in one call",
+        "Four thinking levels: low, medium, high, and xhigh, so you control how hard it thinks and what you spend",
+        "Supports Computer Use, code execution, file search, and Google Search grounding",
+        "Priced at $3 per million input tokens and $15 per million output tokens"
       ],
-      "image_url": "https://alphasignal.ai/image/1794978253157-uefb8e.png",
-      "read_more_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol"
+      "image_url": "https://alphasignal.ai/image/1795064659839-141wju.png",
+      "read_more_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "Anthropic's experimental Claude Code mode chains tools and answers mid-run",
-      "likes": 6247,
-      "body": "Claude Code just got a new experimental mode called Code Mode , and it changes how Claude uses tools under the hood. Normally, Claude calls tools one at a time: run Bash, wait, read the result, call the next tool, wait again. It's slow and chatty. Code Mode fixes that. With Code Mode on, Claude writes a small JavaScript program that chains all your tool calls together. That script runs in your session, collects only the useful output, and hands Claude a clean summary. You can also get answers while long commands are still running. To try it: run CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude , confirm the prompt, and you're in. To make it permanent, add the env variable to ~/.claude/settings.json.",
-      "bullets": [
-        "Run multiple tools in parallel, not one by one",
-        "Get responses while commands are still executing",
-        "Scripts time out after 10 minutes max",
-        "Terminal only, does not work in VS Code or the Desktop app"
-      ],
-      "image_url": "https://alphasignal.ai/image/1794978282074-ihznnm.png",
-      "read_more_url": "https://code.claude.com/docs/en/code-mode"
+      "headline": "OpenAI's chip design model delivers 14% hardware gains on AMD's GPU",
+      "likes": 4229,
+      "body": "Chip design used to take years of expert tuning. OpenAI just showed AI can compress that into months. Working with AMD, OpenAI's models rewrote chip circuit code and found up to 14% PPA improvement on AMD's flagship GPU. PPA stands for power, performance, and area: how efficient, fast, and compact a chip is. That's roughly a year of progress achieved in less than five months. And these weren't fresh designs either. AMD has already included some changes in a recent design sent for manufacturing, with others added to production files for future versions. OpenAI also ran the same approach on Jalapeño , its own custom chip built to run AI models, with gains confirmed on real silicon. The bigger unlock is GPT-Synopsys : a new model trained to use Synopsys EDA tools the way expert chip designers do. EDA tools are the software used to build and verify chips. This opens the workflow to any team, not just the biggest labs.",
+      "bullets": [],
+      "image_url": "https://alphasignal.ai/image/1795064682399-ue60v0.png",
+      "read_more_url": "https://openai.com/index/advancing-chip-design-with-our-models/"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "OpenAI gives four outside safety teams deep access to probe its models",
-      "likes": 4323,
-      "body": "OpenAI just invited four independent safety teams to dig deep inside its models and look for problems. This is called an embedded assessment , meaning outside experts get real access to internal systems, not just the public API. Here is what each team is hunting for: The honest catch: Apollo says access is still limited and does not yet meet its bar for a full evaluation. Still, this opens a path toward real third-party accountability in AI development.",
+      "headline": "Cognition launches Devin Bots, helping engineers merge 4.5x more PRs",
+      "likes": 4063,
+      "body": "Cognition just shipped Devin Bots , and the idea is simple: instead of you managing every coding task, an AI manager does it for you. Think of it like hiring a team lead. The Bot takes a big goal, breaks it into tasks, spins up multiple Devin agents to work in parallel, checks their output, and only pings you when a real decision is needed. The numbers are hard to ignore. Beta testers are merging 4.5x more pull requests per message. One team went from 50 to nearly 2,000 PRs a week . You can start from a template for your backlog, CI, or next release at devin.ai/bots.",
       "bullets": [
-        "Apollo Research checks if the model could secretly work against the people building it, like an AI quietly resisting its own oversight without anyone noticing.",
-        "METR digs into the biggest reinforcement learning training run to find bad behaviors that OpenAI's own tests may have missed.",
-        "Transluce audits how good the safety tests actually are, then recommends what is missing.",
-        "Goodfire uses tools to look inside the model's internals during training to spot and fix unsafe patterns."
+        "Handles planning, code review, and automated testing end-to-end",
+        "Bots talk to each other: a QA Bot finds a bug, hands it to a Developer Bot to fix",
+        "Keeps memory across sessions, so it stays on track over days or weeks",
+        "You follow along in Slack, group chat, or phone call"
       ],
-      "image_url": "https://alphasignal.ai/image/1794978317178-ilgz5r.png",
-      "read_more_url": "https://openai.com/index/our-first-phase-of-embedded-assessments/"
+      "image_url": "https://alphasignal.ai/image/1795064728930-89f0is.png",
+      "read_more_url": "https://devin.ai/bots"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Uncensored Qwen image model ships free with text-to-image and editing in 4.4GB",
+      "headline": "Yuki Nagai builds a ChatGPT tool that converts handwritten notes to PDF",
       "stat": {
         "type": "likes",
-        "value": 3990
+        "value": 2422
       },
-      "url": "https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized"
+      "url": "https://github.com/cometscome/handwritten2pdf"
     },
     {
       "rank": 2,
-      "headline": "Google Cloud releases multi-agent tool that writes full research papers from raw notes",
+      "headline": "Sellbird is an open-source cold email agent that runs on your Claude or ChatGPT plan",
       "stat": {
         "type": "stars",
-        "value": 2960
+        "value": 6492
       },
-      "url": "https://github.com/google-research/paper-orchestra"
+      "url": "https://github.com/ethanplusai/sellbird"
     },
     {
       "rank": 3,
-      "headline": "MiHoYo builds a game-playing agent that beats GPT-4o at its own titles",
+      "headline": "Google's self-improving agent logs its own changes to score 84.75 on workplace tasks",
       "stat": {
         "type": "likes",
-        "value": 866
+        "value": 1316
       },
-      "url": "https://arxiv.org/abs/2611.18397"
+      "url": "https://arxiv.org/abs/2611.18856"
     },
     {
       "rank": 4,
-      "headline": "Adding noise to teacher inputs makes small LLMs learn faster from large ones",
+      "headline": "MiniMax releases full 66GB text-to-image model with ComfyUI support and LoRA fix",
       "stat": {
-        "type": "likes",
-        "value": 279
+        "type": "downloads",
+        "value": 1970
       },
-      "url": "https://arxiv.org/abs/2611.11598"
+      "url": "https://huggingface.co/t8star/Minimax-H3-Image-Exp-Comfy"
     },
     {
       "rank": 5,
-      "headline": "Sarvam launches India-hosted inference platform with 80% cheaper pricing than Gemma",
+      "headline": "MIT researcher builds a real-time tool to steer LLM output as you write",
       "stat": {
         "type": "likes",
-        "value": 3923
+        "value": 2335
       },
-      "url": "https://indus.sarvam.ai/login?return_to=%2Ftoken-factory%2Fhome"
+      "url": "https://github.com/chuanqisun/spaceship"
     }
   ]
 }

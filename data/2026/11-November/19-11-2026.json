@@ -1,0 +1,116 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "19-11-2026",
+  "iso_date": "2026-11-19",
+  "subject": "Gemini 4 Neon 🧠, OpenAI Chip Model +14% PPA 🔧, Devin Bots 🤖",
+  "intro": "AI is eating its own supply chain. Google ships Neon to make frontier reasoning cheaper, while OpenAI uses AI to redesign the chips that run it all. That's the loop closing in real time: better models, cheaper to run, on hardware AI helped build. And Google's SIM paper adds memory to the mix, so agents compound instead of reset. The stack is getting smarter at every layer. Quietly.",
+  "read_time": "6 min 43 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Google DeepMind ships Gemini 4 Neon , ranking #3 on the Intelligence Index",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI's chip design model delivers 14% hardware gains on AMD's GPU",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Cognition launches Devin Bots , helping engineers merge 4.5x more PRs",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Google DeepMind ships Gemini 4 Neon, ranking #3 on the Intelligence Index",
+      "likes": 7150,
+      "body": "Google just dropped Gemini 4 Neon , a new model sitting between the cheaper Hydrogen and the more powerful Carbon. Think of it as the sweet spot: near-Carbon reasoning quality, but faster and cheaper per task. Here is what you get: You can use it right now via the Gemini API, AI Studio, and Android Studio with model ID gemini-4-neon . One heads-up: if you are migrating from an older Gemini model, set the thinking level explicitly or you will hit validation errors.",
+      "bullets": [
+        "1M token context window shared across input, thinking, and output, so you can feed it entire codebases or long documents",
+        "Handles text, images, video, audio, and PDFs in one call",
+        "Four thinking levels: low, medium, high, and xhigh, so you control how hard it thinks and what you spend",
+        "Supports Computer Use, code execution, file search, and Google Search grounding",
+        "Priced at $3 per million input tokens and $15 per million output tokens"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795064659839-141wju.png",
+      "read_more_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "OpenAI's chip design model delivers 14% hardware gains on AMD's GPU",
+      "likes": 4229,
+      "body": "Chip design used to take years of expert tuning. OpenAI just showed AI can compress that into months. Working with AMD, OpenAI's models rewrote chip circuit code and found up to 14% PPA improvement on AMD's flagship GPU. PPA stands for power, performance, and area: how efficient, fast, and compact a chip is. That's roughly a year of progress achieved in less than five months. And these weren't fresh designs either. AMD has already included some changes in a recent design sent for manufacturing, with others added to production files for future versions. OpenAI also ran the same approach on Jalapeño , its own custom chip built to run AI models, with gains confirmed on real silicon. The bigger unlock is GPT-Synopsys : a new model trained to use Synopsys EDA tools the way expert chip designers do. EDA tools are the software used to build and verify chips. This opens the workflow to any team, not just the biggest labs.",
+      "bullets": [],
+      "image_url": "https://alphasignal.ai/image/1795064682399-ue60v0.png",
+      "read_more_url": "https://openai.com/index/advancing-chip-design-with-our-models/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Cognition launches Devin Bots, helping engineers merge 4.5x more PRs",
+      "likes": 4063,
+      "body": "Cognition just shipped Devin Bots , and the idea is simple: instead of you managing every coding task, an AI manager does it for you. Think of it like hiring a team lead. The Bot takes a big goal, breaks it into tasks, spins up multiple Devin agents to work in parallel, checks their output, and only pings you when a real decision is needed. The numbers are hard to ignore. Beta testers are merging 4.5x more pull requests per message. One team went from 50 to nearly 2,000 PRs a week . You can start from a template for your backlog, CI, or next release at devin.ai/bots.",
+      "bullets": [
+        "Handles planning, code review, and automated testing end-to-end",
+        "Bots talk to each other: a QA Bot finds a bug, hands it to a Developer Bot to fix",
+        "Keeps memory across sessions, so it stays on track over days or weeks",
+        "You follow along in Slack, group chat, or phone call"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795064728930-89f0is.png",
+      "read_more_url": "https://devin.ai/bots"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Yuki Nagai builds a ChatGPT tool that converts handwritten notes to PDF",
+      "stat": {
+        "type": "likes",
+        "value": 2422
+      },
+      "url": "https://github.com/cometscome/handwritten2pdf"
+    },
+    {
+      "rank": 2,
+      "headline": "Sellbird is an open-source cold email agent that runs on your Claude or ChatGPT plan",
+      "stat": {
+        "type": "stars",
+        "value": 6492
+      },
+      "url": "https://github.com/ethanplusai/sellbird"
+    },
+    {
+      "rank": 3,
+      "headline": "Google's self-improving agent logs its own changes to score 84.75 on workplace tasks",
+      "stat": {
+        "type": "likes",
+        "value": 1316
+      },
+      "url": "https://arxiv.org/abs/2611.18856"
+    },
+    {
+      "rank": 4,
+      "headline": "MiniMax releases full 66GB text-to-image model with ComfyUI support and LoRA fix",
+      "stat": {
+        "type": "downloads",
+        "value": 1970
+      },
+      "url": "https://huggingface.co/t8star/Minimax-H3-Image-Exp-Comfy"
+    },
+    {
+      "rank": 5,
+      "headline": "MIT researcher builds a real-time tool to steer LLM output as you write",
+      "stat": {
+        "type": "likes",
+        "value": 2335
+      },
+      "url": "https://github.com/chuanqisun/spaceship"
+    }
+  ]
+}
