@@ -1,7 +1,21 @@
 {
-  "updated_at": "2026-11-19T22:33:34Z",
+  "updated_at": "2026-11-20T22:06:10Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "20-11-2026",
+      "iso_date": "2026-11-20",
+      "type": "digest",
+      "subject": "Nous Hermes in Teams 🤝, Gemini 4 Neon API 💡, OpenAI GPT-Live-1.1 🎙️",
+      "path": "data/2026/11-November/20-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/20-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/20-11-2026.html",
+      "headlines": [
+        "Nous Research brings its Hermes agent to Microsoft Teams and Azure",
+        "Google releases Gemini 4 Neon with 1M context at $3 per million tokens",
+        "OpenAI ships GPT-Live-1.1 to API with standby mode cutting idle costs 60%"
+      ]
+    },
     {
       "date": "19-11-2026",
       "iso_date": "2026-11-19",

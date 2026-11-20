@@ -1,25 +1,25 @@
 {
   "version": 2,
   "type": "digest",
-  "date": "19-11-2026",
-  "iso_date": "2026-11-19",
-  "subject": "Gemini 4 Neon 🧠, OpenAI Chip Model +14% PPA 🔧, Devin Bots 🤖",
-  "intro": "AI is eating its own supply chain. Google ships Neon to make frontier reasoning cheaper, while OpenAI uses AI to redesign the chips that run it all. That's the loop closing in real time: better models, cheaper to run, on hardware AI helped build. And Google's SIM paper adds memory to the mix, so agents compound instead of reset. The stack is getting smarter at every layer. Quietly.",
-  "read_time": "6 min 43 sec",
+  "date": "20-11-2026",
+  "iso_date": "2026-11-20",
+  "subject": "Nous Hermes in Teams 🤝, Gemini 4 Neon API 💡, OpenAI GPT-Live-1.1 🎙️",
+  "intro": "Two big themes collided this week: AI getting cheaper and faster to deploy, and AI getting smarter on its own. Google's Neon slots neatly into enterprise budgets. Nous Research ships agents directly into Teams. The race isn't just about raw intelligence anymore, it's about friction removal. Meanwhile, researchers just showed a 27B model rewriting its own weights without retraining. If that scales, the whole \"train once, freeze forever\" paradigm quietly breaks.",
+  "read_time": "6 min 49 sec",
   "summary": [
     {
       "category": "Top News",
-      "headline": "Google DeepMind ships Gemini 4 Neon , ranking #3 on the Intelligence Index",
+      "headline": "Nous Research brings its Hermes agent to Microsoft Teams and Azure",
       "news_id": "news-1"
     },
     {
       "category": "Top News",
-      "headline": "OpenAI's chip design model delivers 14% hardware gains on AMD's GPU",
+      "headline": "Google releases Gemini 4 Neon with 1M context at $3 per million tokens",
       "news_id": "news-2"
     },
     {
       "category": "Top News",
-      "headline": "Cognition launches Devin Bots , helping engineers merge 4.5x more PRs",
+      "headline": "OpenAI ships GPT-Live-1.1 to API with standby mode cutting idle costs 60%",
       "news_id": "news-3"
     }
   ],
@@ -27,90 +27,94 @@
     {
       "id": "news-1",
       "category": "Top News",
-      "headline": "Google DeepMind ships Gemini 4 Neon, ranking #3 on the Intelligence Index",
-      "likes": 7150,
-      "body": "Google just dropped Gemini 4 Neon , a new model sitting between the cheaper Hydrogen and the more powerful Carbon. Think of it as the sweet spot: near-Carbon reasoning quality, but faster and cheaper per task. Here is what you get: You can use it right now via the Gemini API, AI Studio, and Android Studio with model ID gemini-4-neon . One heads-up: if you are migrating from an older Gemini model, set the thinking level explicitly or you will hit validation errors.",
+      "headline": "Nous Research brings its Hermes agent to Microsoft Teams and Azure",
+      "likes": 5453,
+      "body": "Nous Research just dropped Hermes Enterprise , and it lives right inside the tools your company already uses. Here is the setup. Most AI agents force you to leave your workflow to use them. Hermes flips that. You stay in Teams, hand it a task, and get the result back in the same chat thread. What you can actually do with it: The most interesting part is Collective Wisdom . When someone on your team figures out a great way to handle a recurring task, Hermes saves it as a skill. After a quick review, the whole team can use it. Your org's best practices build up over time automatically. It is MIT licensed and open-source, so you can inspect exactly what it does.",
       "bullets": [
-        "1M token context window shared across input, thinking, and output, so you can feed it entire codebases or long documents",
-        "Handles text, images, video, audio, and PDFs in one call",
-        "Four thinking levels: low, medium, high, and xhigh, so you control how hard it thinks and what you spend",
-        "Supports Computer Use, code execution, file search, and Google Search grounding",
-        "Priced at $3 per million input tokens and $15 per million output tokens"
+        "Assign financial analysis, document drafts, or inbox triage directly inside Teams",
+        "Download Hermes Desktop from the Microsoft Store for Windows",
+        "Run agent tasks in isolated Azure Container Apps sandboxes , so nothing bleeds between jobs",
+        "Deploy the whole thing inside your own Azure tenant if your company has strict data rules"
       ],
-      "image_url": "https://alphasignal.ai/image/1795064659839-141wju.png",
-      "read_more_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+      "image_url": "https://alphasignal.ai/image/1795151064798-qd20a0.png",
+      "read_more_url": "https://nousresearch.com/hermes-enterprise-in-microsoft-teams"
     },
     {
       "id": "news-2",
       "category": "Top News",
-      "headline": "OpenAI's chip design model delivers 14% hardware gains on AMD's GPU",
-      "likes": 4229,
-      "body": "Chip design used to take years of expert tuning. OpenAI just showed AI can compress that into months. Working with AMD, OpenAI's models rewrote chip circuit code and found up to 14% PPA improvement on AMD's flagship GPU. PPA stands for power, performance, and area: how efficient, fast, and compact a chip is. That's roughly a year of progress achieved in less than five months. And these weren't fresh designs either. AMD has already included some changes in a recent design sent for manufacturing, with others added to production files for future versions. OpenAI also ran the same approach on Jalapeño , its own custom chip built to run AI models, with gains confirmed on real silicon. The bigger unlock is GPT-Synopsys : a new model trained to use Synopsys EDA tools the way expert chip designers do. EDA tools are the software used to build and verify chips. This opens the workflow to any team, not just the biggest labs.",
-      "bullets": [],
-      "image_url": "https://alphasignal.ai/image/1795064682399-ue60v0.png",
-      "read_more_url": "https://openai.com/index/advancing-chip-design-with-our-models/"
+      "headline": "Google releases Gemini 4 Neon with 1M context at $3 per million tokens",
+      "likes": 5017,
+      "body": "Google just dropped Gemini 4 Neon , and it sits right between their mid-tier and top-tier models. Think of it as the sweet spot: near-flagship smarts, but faster and cheaper to run. Here is what it can do: Pricing is $3 per million input tokens and $15 per million output. You can hit it right now via the Gemini API or AI Studio using model ID gemini-4-neon .",
+      "bullets": [
+        "#1 on the Coding Agent Index (58.6), beating Claude Opus 5.5 on CursorBench 65.4% vs 58.1%",
+        "Best-in-class science reasoning: 84% on RiemannBench, 71.3% on HLE-Diamond",
+        "1 million token context window , so you can feed it entire codebases, PDFs, spreadsheets, audio, and video all at once",
+        "Four thinking levels (low, medium, high, xhigh), letting you dial cost vs. intelligence per task",
+        "32% cheaper per task than Gemini 4 Carbon at the default setting"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795151093069-od7395.png",
+      "read_more_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faistudio.google.com%2Fapps&followup=https%3A%2F%2Faistudio.google.com%2Fapps&ltmpl=aistudio&passive=1209600&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S-954786526%3A1795039061926061"
     },
     {
       "id": "news-3",
       "category": "Top News",
-      "headline": "Cognition launches Devin Bots, helping engineers merge 4.5x more PRs",
-      "likes": 4063,
-      "body": "Cognition just shipped Devin Bots , and the idea is simple: instead of you managing every coding task, an AI manager does it for you. Think of it like hiring a team lead. The Bot takes a big goal, breaks it into tasks, spins up multiple Devin agents to work in parallel, checks their output, and only pings you when a real decision is needed. The numbers are hard to ignore. Beta testers are merging 4.5x more pull requests per message. One team went from 50 to nearly 2,000 PRs a week . You can start from a template for your backlog, CI, or next release at devin.ai/bots.",
+      "headline": "OpenAI ships GPT-Live-1.1 to API with standby mode cutting idle costs 60%",
+      "likes": 4186,
+      "body": "GPT-Live-1.1 just landed in the API. This is the same voice model that has been powering ChatGPT Plus and Pro for weeks. Now you can plug it into your own apps. So what does it actually do better? It handles accents more naturally across languages, understands precise details like letters and numbers, and follows instructions more reliably. Think voice agents that don't fumble when a user spells out an email address. The big new addition is Standby mode . Voice calls cost money even when nobody is talking. Standby solves that. Set a silence timeout between 5 and 60 seconds. When the user goes quiet, the model pauses but the call stays open at $0.02 per minute instead of the usual $0.05. That's a 60% drop in idle costs. Already on GPT-Live-1? Swap the model ID. That's it.",
       "bullets": [
-        "Handles planning, code review, and automated testing end-to-end",
-        "Bots talk to each other: a QA Bot finds a bug, hands it to a Developer Bot to fix",
-        "Keeps memory across sessions, so it stays on track over days or weeks",
-        "You follow along in Slack, group chat, or phone call"
+        "Model ID: gpt-live-1.1 , endpoint: v1/live/sessions",
+        "Standby works on both GPT-Live-1 and GPT-Live-1.1",
+        "Supports streaming and function calling, not fine-tuning or image inputs"
       ],
-      "image_url": "https://alphasignal.ai/image/1795064728930-89f0is.png",
-      "read_more_url": "https://devin.ai/bots"
+      "image_url": "https://alphasignal.ai/image/1795151124442-uu56w1.png",
+      "read_more_url": "https://developers.openai.com/api/docs/models/gpt-live-1.1"
     }
   ],
   "signals": [
     {
       "rank": 1,
-      "headline": "Yuki Nagai builds a ChatGPT tool that converts handwritten notes to PDF",
+      "headline": "Firecrawl ships local open-source web scraper that's 37x faster and uses 230x less memory",
       "stat": {
         "type": "likes",
-        "value": 2422
+        "value": 3885
       },
-      "url": "https://github.com/cometscome/handwritten2pdf"
+      "url": "https://github.com/firecrawl/firecrawl"
     },
     {
       "rank": 2,
-      "headline": "Sellbird is an open-source cold email agent that runs on your Claude or ChatGPT plan",
+      "headline": "Microsoft releases open-source toolkit to stress-test generative AI safety",
       "stat": {
         "type": "stars",
-        "value": 6492
+        "value": 4966
       },
-      "url": "https://github.com/ethanplusai/sellbird"
+      "url": "https://github.com/microsoft/PyRIT"
     },
     {
       "rank": 3,
-      "headline": "Google's self-improving agent logs its own changes to score 84.75 on workplace tasks",
+      "headline": "CMU and Stanford get a 27B model to rewrite its own weights and grow smarter",
       "stat": {
         "type": "likes",
-        "value": 1316
+        "value": 843
       },
-      "url": "https://arxiv.org/abs/2611.18856"
+      "url": "https://arxiv.org/abs/2611.21885"
     },
     {
       "rank": 4,
-      "headline": "MiniMax releases full 66GB text-to-image model with ComfyUI support and LoRA fix",
+      "headline": "SenseNova releases a 9B model that runs 56 layers deep by reusing weights",
       "stat": {
         "type": "downloads",
-        "value": 1970
+        "value": 1447
       },
-      "url": "https://huggingface.co/t8star/Minimax-H3-Image-Exp-Comfy"
+      "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B"
     },
     {
       "rank": 5,
-      "headline": "MIT researcher builds a real-time tool to steer LLM output as you write",
+      "headline": "Tufa Labs shrinks 1 GB of Wikipedia to 105 MB using only a neural network",
       "stat": {
         "type": "likes",
-        "value": 2335
+        "value": 3193
       },
-      "url": "https://github.com/chuanqisun/spaceship"
+      "url": "https://github.com/Tufalabs/tufazip"
     }
   ]
 }
