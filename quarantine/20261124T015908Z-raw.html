@@ -1,0 +1,485 @@
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="light" name="color-scheme"/>
+<meta content="light dark" name="supported-color-schemes"/>
+<title>🔧 Meta fixes RAG’s huge clustering bottleneck with e-means</title>
+<style type="text/css">
+  /* Reset text resizing */
+  body,
+  table,
+  td,
+  a {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  li:last-child {
+    margin-bottom: 0; /* remove margin from last item */
+  }
+
+  img {
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+    display: block;
+  }
+
+  .h1 {
+    font-size: 17px !important;
+  }
+
+  .p {
+    font-size: 15px !important;
+  }
+
+  p {
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+    mso-hide: all !important;
+  }
+
+  .menu-bar {
+    text-align: center !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+
+  .menu-bar a {
+    display: inline-block !important;
+    padding: 6px 8px !important;
+  }
+
+  /* Mobile styles */
+  @media only screen and (max-width: 600px) {
+    .h1 {
+      font-size: 17px !important;
+      line-height: 22px !important;
+    }
+
+    .p {
+      font-size: 14px !important;
+      line-height: 22px !important;
+    }
+
+    .btn {
+      font-size: 15px !important;
+      padding: 14px 20px !important;
+    }
+
+    .ul li {
+      font-size: 14px !important;
+      line-height: 22px !important;
+    }
+
+    .menu-bar {
+      text-align: center !important;
+    }
+
+    .menu-bar a {
+      display: inline-block !important;
+      padding: 6px 8px !important;
+    }
+
+    .feedback-box {
+      padding: 20px !important;
+    }
+
+    .feedback-title {
+      font-size: 16px !important;
+      line-height: 22px !important;
+    }
+
+    .feedback-link {
+      font-size: 15px !important;
+      line-height: 20px !important;
+    }
+  }
+</style>
+<!--[if mso]>
+<style type="text/css">
+  .h1,
+  .p,
+  .btn,
+  .ul li {
+    font-family: Arial, sans-serif !important;
+  }
+</style>
+<![endif]-->
+</head><img src="https://app.alphasignal.ai/o?uid=DhS8ajH7NeRZK5Ns&cid=980ea889d740a7b9&mid=5c8b2f78-b42e-438d-a495-921cc61a984f&s=%F0%9F%94%A7%20Meta%20fixes%20RAG%E2%80%99s%20huge%20clustering%20bottleneck%20with%20e-means&t=1795361049" width="1" height="1" alt="" aria-hidden="true" role="presentation" style="display:block;border:0;outline:none;text-decoration:none;opacity:0;"><div style="display:none!important;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;opacity:0;color:transparent;">Stale search results? Now you can refresh your index every night instead of every few months.</div>
+<body bgcolor="#fcfcfc" style="margin:0; padding:0; background-color:#fcfcfc;"><div style="display:none;max-height:0;overflow:hidden;">Stale search results? Now you can refresh your index every night instead of every few months.</div>
+<table bgcolor="#fcfcfc" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td align="center" style="padding:0 10px;">
+<!-- all your inner tables start here -->
+<!-- Hidden Preheader -->
+<div style="display:none !important;font-size:1px;color:#ffffff;line-height:1px;
+              max-height:0px;max-width:0px;overflow:hidden;opacity:0;">
+    Stay updated with today’s top AI news, papers, and repos.
+  </div>
+<!-- ✅ Centered footer menu (desktop + mobile) -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:0 auto;" width="100%">
+<tr>
+<td align="center" style="padding:6px 0 2px 0;text-align:center;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="menu-bar" role="presentation" style="display:inline-table;margin:0 auto;text-align:center;">
+<tr>
+<td style="font-size:12px;line-height:18px;font-family:Helvetica, Arial, sans-serif;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=980ea889d740a7b9&amp;lid=1x0cnA3hHa6pjMQKC&amp;mid=5c8b2f78-b42e-438d-a495-921cc61a984f" style="text-decoration:none;color:#000000 !important;
+                      font-family:Helvetica, Arial, sans-serif;
+                      font-size:12px;line-height:18px;" target="_blank">
+              Signup
+            </a>
+</td>
+<td style="font-size:13px;line-height:18px;color:#000000;
+                     font-family:Helvetica, Arial, sans-serif;">|</td>
+<td style="font-size:12px;line-height:18px;font-family:Helvetica, Arial, sans-serif;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=980ea889d740a7b9&amp;lid=i1CApPZeLpylhUV9&amp;mid=5c8b2f78-b42e-438d-a495-921cc61a984f" style="text-decoration:none;color:#000000 !important;
+                      font-family:Helvetica, Arial, sans-serif;
+                      font-size:12px;line-height:18px;" target="_blank">
+              Work With Us
+            </a>
+</td>
+<td style="font-size:13px;line-height:18px;color:#000000;
+                     font-family:Helvetica, Arial, sans-serif;">|</td>
+<td style="font-size:12px;line-height:18px;font-family:Helvetica, Arial, sans-serif;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=980ea889d740a7b9&amp;lid=105gbmDoNlp9q9Ed&amp;mid=5c8b2f78-b42e-438d-a495-921cc61a984f" style="text-decoration:none;color:#000000 !important;
+                      font-family:Helvetica, Arial, sans-serif;
+                      font-size:12px;line-height:18px;" target="_blank">
+              Follow on X
+            </a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- SINGLE BLOCK: BLACK BACKGROUND, WHITE TEXT -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#000000;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Logo -->
+<img alt="AlphaSignal Logo" border="0" src="https://alphasignal.ai/image/1764279764256-wj5ohs.png" style="display:block;width:32px;height:auto;margin-bottom:10px;" width="32"/>
+<!-- White Divider Under Logo -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 20px 0;" width="100%">
+<tr>
+<td style="border-top:1px solid #FFFFFF;"></td>
+</tr>
+</table>
+<!-- Greeting -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;
+                font-weight:bold;color:#ffffff;margin:0 0 10px 0;">
+        Hey Vaultscapes,
+      </p>
+<!-- Intro Text -->
+<p style="font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;
+                color:#ffffff;margin:0;"> 
+When clustering millions of embeddings for RAG or LLM data curation, engineers have been stuck in a frustrating tradeoff: slow full-batch k-means clustering or classic mini-batch methods that demand constant tuning and leave dead clusters behind.
+<br/><br/>
+Meta FAIR’s new e-means algorithm applies modern deep-learning techniques to break that stalemate, beating the classic baselines in both speed and accuracy. The boost can unlock new applications for RAG pipelines that require constant reindexing.
+<br/><br/>
+Today we look under the hood at how it works and where it fits in production.
+
+
+    </p></td>
+</tr>
+</table><!-- Author Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000000;
+              background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1795359221252-v5h83n.png" style="display:block;border:1px solid #000000;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+        Today's Author
+      </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+        
+   Ben Dickson is a veteran software engineer and former CTO known as the "Engineer's Journalist" for translating technical AI research into practical, production-focused insights. He is a lead contributor to TechCrunch and VentureBeat.
+      
+      </div>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;padding:0 20px;background-color:#ffffff;margin-bottom:30px;" width="100%">
+<!-- Item 1 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td valign="top">
+<span style="font-family:system-ui;color:#f74904;font-weight:normal;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">From CoreWeave</span>
+<a class="h1" href="" style="font-family:Helvetica;font-size:16px !important;font-weight:bold;line-height:22.5px; color:#000000 !important;mso-color-alt:windowtext; text-decoration:none;display:block;margin:0 0 5px 0;"></a>
+<div style="font-family:Helvetica;font-size:15px;line-height:22.5px;color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;margin-top:5px;">More than 60% of enterprises have experimented with AI agents. Fewer than 10% have scaled them. Inference is the biggest gap. Download our guide to learn what makes inference workloads challenging and how to provision infrastructure that scales with your roadmap rather than limiting it.</div>
+<div style="padding-top:20px;"><a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=980ea889d740a7b9&amp;lid=1qtgpH7uBd7OZBlUp&amp;mid=5c8b2f78-b42e-438d-a495-921cc61a984f" style="font-family:Helvetica;font-size:15px;font-weight:bold;text-decoration:underline;color:#000000 !important;" target="_blank"><span style="color:#000000 !important;">Get the guide ↗</span></a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family:system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0 0 10px 0;">
+      Sunday Deep Dive
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;
+             padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+      RAG gets a 70-year upgrade with Meta’s e-means algorithm
+    </span>
+</td>
+</tr>
+<!-- Body Text -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+               color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+               padding:0;">
+<div style="margin-top:0;">
+<p>Modern Retrieval-Augmented Generation (RAG) systems can expand to millions of document chunks encoded as high-dimensional embeddings that can store up to 3,072 values per chunk.</p>
+<p>Yet, Lloyd’s k-means, the clustering algorithm that powers the vector search techniques used to match documents to prompts, has remained largely unchanged for nearly seven decades. The limits of this algorithm is showing itself when RAG systems are deployed at scale.</p>
+<p>To solve this challenge, researchers at Meta FAIR and École nationale des ponts et chaussées have released “<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=980ea889d740a7b9&amp;lid=JKOW5TcetmwRRgcW&amp;mid=5c8b2f78-b42e-438d-a495-921cc61a984f">e-means</a>,” a drop-in replacement for k-means that works at the scale of modern RAG pipelines.</p>
+<p>Across 24 benchmarks covering text, code, image, and multimodal embeddings, e-means beats Lloyd baseline in roughly one-tenth the passes while running 10-45X faster on GPUs than Flash-KMeans and 8-15X faster on CPUs than Faiss.</p>
+<p>e-means is compatible with the embedding model and document chunking strategy, and it doesn’t affect your search queries. It lowers the cost and time of clustering your embedding collections, which will allow you to rebuild RAG indexes more frequently and prevent search quality from degrading over time.</p>
+<p><b>How clustering became a bottleneck for RAG pipelines</b></p>
+<p>When you have millions of records in your vector database, comparing every one of them against your prompt becomes prohibitively expensive. To speed up search, vector indexes break the embeddings into tens of thousands of clusters, each represented by a centroid.</p>
+<p>Vector search happens in a multi-step search, where the query embedding is compared against the centroids first before choosing the subset of documents (the clusters) from which the final candidates should be chosen from.</p>
+<p>To update the centroids of the document corpus, Lloyd’s k-means scans every vector in the dataset. To refine the centroids, Lloyds repeats the full-pass cycle (aka epoch) 20-25 times.</p>
+<img alt="alpha_signal_image_1" border="0" src="https://alphasignal.ai/image/1795358712779-fhs6up.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>The compute cost of Lloyd’s k-means becomes prohibitive as documents grow to millions. Consequently RAG teams are forced to postpone index rebuilds in stores with shifting corpora, such as support tickets, product docs, or news feeds.</p>
+<p>Meanwhile, appending new documents without recalculating the clusters causes the centroids to lose their accuracy. As a result, the clusters can become lopsided (some containing too many documents and some too few), resulting in higher latency and lower recall accuracy.</p>
+<p>In LLM data pipelines, slow clustering also drags down semantic deduplication, where oversized clusters inflate the pairwise similarity checks performed inside each bucket.</p>
+<p>The obvious fix to scanning every document is to update centroids incrementally on small slices of data. That is how mini-batch k-means works. Built on James MacQueen’s 1967 update rule, mini-batch k-means replaces full-dataset passes with faster partial updates.</p>
+<img alt="alpha_signal_image_2" border="0" src="https://alphasignal.ai/image/1795358743577-8zsvbd.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>Mini-batch k-means has three key challenges:</p>
+<ul>
+<li>It requires manual tuning of the clustering parameters for every new dataset</li>
+<li>It generates a lot of empty "dead" clusters that waste index capacity</li>
+<li>It can generate unbalanced clusters that hurt both vector search recall and deduplication runtime</li>
+</ul>
+<p>Engineers were stuck choosing between Lloyd’s reliable-but-slow algorithm and mini-batch’s fast-but-unstable shortcuts and frustrating tuning. e-means challenged this decades-long tradeoff.</p>
+<p><b>How e-means works</b></p>
+<p>At a high level, e-means combines the best of both worlds: the speed of mini-batch updates with the zero-tuning reliability of Lloyd’s algorithm. It has three practical outcomes:</p>
+<ul>
+<li><b>Lower compute and memory costs:</b> e-means needs fewer passes over the data and uses custom GPU code that reduces memory requirements.</li>
+<li><b>Higher clustering accuracy:</b> It has better accuracy than 25-epoch Lloyd across datasets.</li>
+<li><b>No classic mini-batch pitfalls:</b> It requires no per-dataset tuning, produces almost no dead clusters, and keeps cluster sizes balanced.</li>
+</ul>
+<img alt="alpha_signal_image_3" border="0" src="https://alphasignal.ai/image/1795358649254-lnknib.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>Three core design choices drive these results:</p>
+<ul>
+<li><b>Moving averages that forget early mistakes:</b> Instead of storing every historical assignment, e-means updates each centroid with an exponential moving average (EMA). Centroids track recent data while gradually fading out outdated early guesses. The mild noise from small batches also helps centroids escape bad groupings that happen in Lloyd’s method.</li>
+<li><b>Zero-tuning scaling rules:</b> In classic mini-batch methods, engineers have to find batch and step sizes by trial and error. Meta’s team derived scaling laws that automatically set both parameters from three inputs you already have: dataset size, cluster count, and epoch budget.</li>
+<li><b>Reviving dead clusters by splitting crowded ones:</b> When a cluster goes empty, e-means picks a large active cluster and splits it in two. This reduces dead clusters considerably in comparison to baseline methods.</li>
+</ul>
+<p>Two additional engineering touches convert fewer passes into wall-clock speed. First, e-means gradually shrinks its update step size as training progresses (cosine annealing) and ends with a near-zero-cost finalization step that snaps centroids to their exact last-epoch averages.</p>
+<p>Second, it uses fused GPU kernels to combine distance calculation and cluster assignment into a single pass without filling GPU memory. On an H100 GPU with 10 million vectors and 65,536 clusters, 25 epochs of plain PyTorch Lloyd take 142 to 155 seconds and Flash-KMeans takes 14 to 22 seconds. Meanwhile, e-means cuts Flash-KMeans’ end-to-end GPU runtime by 10 to 45 times.</p>
+<img alt="alpha_signal_image_4" border="0" src="https://alphasignal.ai/image/1795358681651-c9h7ja.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+<p>In practice, these gains change how teams schedule routine index and data-pipeline work:</p>
+<ul>
+<li><b>Dynamic RAG indexing:</b> With a 50-million-document index of live support tickets or internal docs, a 25-pass Lloyd reindexing would tie up GPUs or stall CPU batch jobs, pushing teams to delay re-clustering for months. With e-means, rebuilding the cluster map becomes fast enough to run as a scheduled weekly or nightly job, preserving search quality without touching embeddings or query-time retrieval.</li>
+<li><b>LLM data curation:</b> Before e-means, teams running semantic deduplication or diversity sampling for supervised fine-tuning (SFT) over large text corpora faced steep full-batch compute bills or lopsided mini-batch buckets that slowed intra-cluster similarity checks. After e-means, they can partition large datasets quickly and evenly, iterating on curation sweeps far more often.</li>
+</ul>
+<p><b>Where you can use e-means today and where you cannot</b></p>
+<p>Meta shipped <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=980ea889d740a7b9&amp;lid=1DuxR41PAUJx6AHBe&amp;mid=5c8b2f78-b42e-438d-a495-921cc61a984f">the code for e-means</a> in Faiss 1.16.0, offering both PyTorch GPU and NumPy CPU versions under Faiss’s commercial-friendly MIT license. Standalone clustering with e-means can be done in three lines of Python.</p>
+<p>Passing those centroids into a Faiss Inverted File (IVF) search index (the structure that uses clusters to narrow down which vectors to scan at search time) requires only light glue code.</p>
+<p>e-means has a few operational boundaries:</p>
+<ul>
+<li>Teams running self-hosted Faiss IVF pipelines, or custom PyTorch and NumPy clustering scripts for LLM deduplication and dataset curation, can test it immediately.</li>
+<li>Teams on managed or third-party vector databases (e.g., Pinecone, Milvus, Qdrant) cannot plug e-means in themselves today because clustering is hidden inside the storage engine.</li>
+<li>e-means only affects offline indexing and curation, not live search. It also applies to static dataset snapshots rather than continuous streaming updates.</li>
+</ul>
+<p>Frontier model launches draw most of the spotlight in AI. Yet modernizing a 70-year-old primitive like k-means quietly removes real operational friction across the infrastructure that feeds, cleans, and grounds those models.</p>
+</div>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="max-width:600px;width:100%;margin:auto;border:1px solid #6B6B6B;
+            background-color:#ffffff;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td align="center" style="padding:0;">
+<img alt="Sponsor Logo" border="0" src="https://alphasignal.ai/image/1795354680330-2biuau.png" style="display:block;margin:auto;max-width:150px;height:auto;padding-bottom:15px;"/>
+</td>
+</tr>
+<tr>
+<td align="center" class="p" style="font-family:Helvetica, Arial, sans-serif;
+                 font-size:15px !important;
+                 line-height:22.5px;
+                 font-weight:normal;
+                 color:#000000 !important;
+                 mso-color-alt:#000000;
+                 mso-style-textfill-fill-color:#000000;
+                 padding:0 0 10px 0;">
+        Most enterprises have not managed to scale their AI agents. Inference is the biggest reason why. Learn how to plan and scale AI inference for enterprises in this guide.
+      </td>
+</tr>
+<tr>
+<td align="center" style="padding:10px 0 0 0;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=980ea889d740a7b9&amp;lid=1qtgpH7uBd7OZBlUp&amp;mid=5c8b2f78-b42e-438d-a495-921cc61a984f" style="font-family:Helvetica, Arial, sans-serif;
+                      font-size:16px;
+                      line-height:20px;
+                      font-weight:normal;
+                      color:#1a73e8;
+                      text-decoration:underline;
+                      text-underline-offset:3px;" target="_blank">
+              Learn More →
+            </a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="mobile-hidden" role="presentation" style="max-width:600px;width:100%;margin:auto;border:1px solid #A4ACB6;
+         background-color:#ffffff;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td align="center" class="p" style="font-family:Helvetica, Arial, sans-serif;
+                 font-size:10px !important;
+                 line-height:22.5px;
+                 font-weight:normal;
+                 color:#a1a1a1 !important;
+                 mso-color-alt:#6a7788;
+                 mso-style-textfill-fill-color:#6a7788;
+                 padding:0 0 10px 0;">
+        At Alpha Signal, our mission is to build a sharp, engaged community focused on AI, machine learning, and cutting-edge language models, helping over 200,000 developers stay informed and ahead. We’re passionate about curating the best in AI, from top research and trending technical blogs to expert insights and tailored job opportunities. We keep you connected to the breakthroughs and discussions that matter, so you can stay in the loop without endless searching. We also work closely with partners who value the future of AI, including employers and advertisers who want to reach an audience as passionate about AI as we are.
+<br/><br/>Our partnerships are based on shared values of ethics, responsibility, and a commitment to building a better world through technology.Privacy is a priority at Alpha Signal. Our Privacy Policy clearly explains how we collect, store, and use your personal and non-personal information. By using our website, you accept these terms, which you can review on our website. This policy applies across all Alpha Signal pages, outlining your rights and how to contact us if you want to adjust the use of your information. We’re based in the United States. By using our site, you agree to be governed by U.S. laws.
+      </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;width:100%;margin:auto;border:1px solid #000000;
+         background-color:#ffffff;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Outer wrapper with 20px padding -->
+<td style="padding:20px;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<!-- Text Content -->
+<tr>
+<td align="center" class="p" style="font-family:Helvetica, Arial, sans-serif;
+           font-size:15px !important;
+           line-height:22.5px;
+           font-weight:normal;
+           color:#000000 !important;
+           mso-color-alt:#000000;
+           mso-style-textfill-fill-color:#000000;
+           padding:0;">
+  Looking to promote your company, product, service, or event to 250,000+ AI developers?
+</td>
+</tr>
+<tr>
+<td align="center" style="padding:10px 0 0 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:auto;">
+<tr>
+<td align="center" bgcolor="#f74904" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:20px;
+                           font-weight:bold;padding:12px 12px;color:#ffffff !important;
+                           border:1px solid #000000;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=980ea889d740a7b9&amp;lid=i1CApPZeLpylhUV9&amp;mid=5c8b2f78-b42e-438d-a495-921cc61a984f" style="color:#ffffff !important;text-decoration:none;display:inline-block;" target="_blank">
+                    WORK WITH US
+                  </a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Feedback Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #000;background-color:#ffffff;" width="100%">
+<tr>
+<td align="center" style="padding:30px 20px;background-color:#ffffff;">
+<!-- Title -->
+<div style="font-family:Helvetica, Arial, sans-serif;
+               font-size:18px;line-height:24px;font-weight:bold;
+               color:#000000;
+               padding:0 0 20px 0;">
+        How was today’s email?
+      </div>
+<!-- Buttons -->
+<div style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:22px;">
+<a href="https://app.alphasignal.ai/fb/DhS8ajH7NeRZK5Ns?cid=980ea889d740a7b9&amp;feedback=Awesome" style="display:inline-block;
+                  text-decoration:none;
+                  color:#000000;
+                  border:1px solid #000000;
+                  padding:10px 16px;
+                  margin:0 6px;" target="_blank">
+          Awesome
+        </a>
+<a href="https://app.alphasignal.ai/fb/DhS8ajH7NeRZK5Ns?cid=980ea889d740a7b9&amp;feedback=Decent" style="display:inline-block;
+                  text-decoration:none;
+                  color:#000000;
+                  border:1px solid #000000;
+                  padding:10px 16px;
+                  margin:0 6px;" target="_blank">
+          Decent
+        </a>
+<a href="https://app.alphasignal.ai/fb/DhS8ajH7NeRZK5Ns?cid=980ea889d740a7b9&amp;feedback=Not%20Great" style="display:inline-block;
+                  text-decoration:none;
+                  color:#000000;
+                  border:1px solid #000000;
+                  padding:10px 16px;
+                  margin:0 6px;" target="_blank">
+          Not Great
+        </a>
+</div>
+</td>
+</tr>
+</table>
+<!-- Footer -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;" width="100%">
+<tr>
+<td align="center" style="padding:20px 10px;">
+<!-- Unsubscribe -->
+<a href="https://app.alphasignal.ai/unsubscribe/u/DhS8ajH7NeRZK5Ns?cid=980ea889d740a7b9" style="font-family:system-ui;
+                font-size:14px;line-height:20px;
+                text-decoration:none;color:#f74904 !important;
+                mso-color-alt:#f74904;
+                mso-style-textfill-fill-color:#f74904;" target="_blank">
+       unsubscribe_me(): return True
+      </a>
+<!-- Address -->
+<div style="padding-top:20px; font-family:system-ui;font-size:14px;color:#a1a1a1;">
+{"AlphaSignal": "214 Barton Springs Rd, Austin, USA"}
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body></html>
