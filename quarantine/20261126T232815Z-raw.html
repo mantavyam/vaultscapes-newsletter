@@ -1,0 +1,1354 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="light" name="color-scheme"/>
+<meta content="light dark" name="supported-color-schemes"/>
+<title>AlphaSignal</title>
+<style type="text/css">
+      /* Reset text resizing */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      li:last-child {
+        margin-bottom: 0; /* remove margin from last item */
+      }
+
+      img {
+        border: 0;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+        display: block;
+      }
+
+      .h1 {
+        font-size: 17px !important;
+      }
+
+      .p {
+        font-size: 15px !important;
+      }
+
+      p {
+        margin-top: 10px;
+        padding: 0;
+      }
+
+
+      .menu-bar {
+        text-align: center !important;
+        font-size: 14px !important;
+        line-height: 20px !important;
+      }
+
+      .menu-bar a {
+        display: inline-block !important;
+        padding: 3px 8px !important;
+      }
+
+      /* Mobile styles */
+      @media only screen and (max-width: 600px) {
+
+        .mobile-hidden {
+          display: none !important;
+          mso-hide: all !important;
+        }
+        
+
+        .signal-img-cell {
+          width: 90px !important;
+          padding-left: 10px !important;
+        }
+
+        .signal-img {
+          width: 90px !important;
+          height: 90px !important;
+          min-width: 90px !important;
+          min-height: 90px !important;
+          max-width: 90px !important;
+          max-height: 90px !important;
+        }
+
+        .h1 {
+          font-size: 17px !important;
+          line-height: 22px !important;
+        }
+
+        .p {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .btn {
+          font-size: 15px !important;
+          padding: 14px 20px !important;
+        }
+
+        .ul li {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .menu-bar {
+          text-align: center !important;
+        }
+
+        .menu-bar a {
+          display: inline-block !important;
+          padding: 6px 8px !important;
+        }
+
+        .feedback-box {
+          padding: 20px !important;
+        }
+
+        .feedback-title {
+          font-size: 16px !important;
+          line-height: 22px !important;
+        }
+
+        .feedback-link {
+          font-size: 15px !important;
+          line-height: 20px !important;
+        }
+
+        .feedback-btn {
+          display: block !important;
+          width: 100% !important;
+          margin: 0 0 10px 0 !important;
+          box-sizing: border-box !important;
+          text-align: center !important;
+        }
+
+.feedback-btn-last {
+          margin-bottom: 0 !important;
+        }
+
+        /* "Your Signal" preferences block — stack columns on mobile */
+        .ys-col {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          max-width: 100% !important;
+        }
+
+        .ys-divider-cell {
+          display: none !important;
+          mso-hide: all !important;
+        }
+
+    .ys-col-right {
+          padding-top: 18px !important;
+          margin-top: 18px !important;
+        }
+      }
+    </style>
+<!--[if mso]>
+    <style type="text/css">
+      .h1,
+      .p,
+      .btn,
+      .ul li {
+        font-family: Arial, sans-serif !important;
+      }
+    </style>
+    <![endif]-->
+</head><img src="https://app.alphasignal.ai/o?uid=DhS8ajH7NeRZK5Ns&cid=1b7a5d6be16510c2&mid=49c5ed04-7ace-4067-8678-2acf2078a62b&s=%F0%9F%A7%AA%20OpenAI%20MedChemBench%3A%20GPT-6%20Astra%20fails%20drug%20selection%20at%2050%25&t=1795442717" width="1" height="1" alt="" aria-hidden="true" role="presentation" style="display:block;border:0;outline:none;text-decoration:none;opacity:0;"><div style="display:none!important;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;opacity:0;color:transparent;">MedChemBench: 761 structures, 99 problems—compound selection accuracy drops below 50% even on top models.</div>
+<body bgcolor="#fcfcfc" style="margin:0; padding:0; background-color:#fcfcfc;">
+<table bgcolor="#fcfcfc" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#fcfcfc;" width="100%">
+<tr>
+<td align="center" style="padding:0 10px;">
+<!-- all your inner tables start here -->
+<!-- Hidden Preheader -->
+<div style="display:none !important;font-size:1px;color:#ffffff;line-height:1px;
+                  max-height:0px;max-width:0px;overflow:hidden;opacity:0;">
+        Stay updated with today's top AI news, papers, and repos.
+      </div>
+<!--Centered header menu (desktop + mobile) -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:0 auto;" width="100%">
+<tr>
+<td align="center" style="padding:4px 0px 0px 0px;text-align:center;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="menu-bar" role="presentation" style="display:inline-table;margin:0 auto;text-align:center;">
+<tr>
+<td style="font-size:12px;line-height:18px;font-family:Helvetica, Arial, sans-serif;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1xFPqu6tsyMsSrT4l&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#000000 !important;
+                          font-family:Helvetica, Arial, sans-serif;
+                          font-size:12px;line-height:18px;" target="_blank">
+                  Signup
+                </a>
+</td>
+<td style="font-size:13px;line-height:18px;color:#000000;
+                         font-family:Helvetica, Arial, sans-serif;">|</td>
+<td style="font-size:12px;line-height:18px;font-family:Helvetica, Arial, sans-serif;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1A73MtFOPtvw6F7hL&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#000000 !important;
+                          font-family:Helvetica, Arial, sans-serif;
+                          font-size:12px;line-height:18px;" target="_blank">
+                  Work With Us
+                </a>
+</td>
+<td style="font-size:13px;line-height:18px;color:#000000;
+                         font-family:Helvetica, Arial, sans-serif;">|</td>
+<td style="font-size:12px;line-height:18px;font-family:Helvetica, Arial, sans-serif;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1uueO4fkfHrnkKUHJ&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#000000 !important;
+                          font-family:Helvetica, Arial, sans-serif;
+                          font-size:12px;line-height:18px;" target="_blank">
+                  Follow on X
+                </a>
+</td>
+<td style="font-size:13px;line-height:18px;color:#000000;
+               font-family:Helvetica, Arial, sans-serif;">|</td>
+<td style="font-size:12px;line-height:18px;font-family:Helvetica, Arial, sans-serif;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1dOMkNNf3ruNOWbTK&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#000000 !important;
+                font-family:Helvetica, Arial, sans-serif;
+                font-size:12px;line-height:18px;" target="_blank">
+        Archive
+      </a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Header Image -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:0 auto;margin-bottom:0;" width="100%">
+<tr>
+<td style="padding:0;border-bottom:none;">
+<img alt="AlphaSignal" border="0" src="https://alphasignal.ai/image/1774379296454-hg8tkk.png" style="display:block;width:100%;max-width:600px;height:auto;" width="600"/>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;margin-top:30px;border:1px solid #6B6B6B;background-color:#ffffff;margin-bottom:30px;" width="100%">
+<tr>
+<td style="padding:0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding:20px;">
+<!-- Greeting -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:16px;
+                   line-height:24px;
+                   font-weight:bold;
+                   color:#000000;
+                   padding:0 0 10px 0;">
+<p style="margin:0;">Hey Vaultscapes,</p>
+</td>
+</tr>
+</table>
+<!-- Intro text -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:15px;
+                   line-height:22px;
+                   font-weight:400;
+                   color:#000000;">
+          OpenAI had a big Thursday. A drug discovery benchmark and a safety paper dropped the same day. Two very different problems, one common thread: <b>AI is only as useful as what you can trust it to do.</b><br/><br/>MedChemBench grades models on chemistry they can't fake. Adversarial distillation research shows how bad actors clone those same models, guardrails stripped out.<br/><br/>Meanwhile NVIDIA quietly published CPU-ARC, caching LLM reasoning as plain CPU code at up to 291x lower cost. Capability, safety, efficiency. One news cycle.
+        </td>
+</tr>
+</table>
+<!-- Ad block -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;" width="100%">
+<tr>
+<td style="padding:30px 0 0 0;">
+<table align="right" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                         font-size:13px;
+                         line-height:24px;
+                         color:#999999;
+                         vertical-align:middle;
+                         padding-right:8px;">
+                
+In Partnership with
+              </td>
+<td style="font-family:Helvetica, Arial, sans-serif;
+                         font-size:13px;
+                         line-height:24px;
+                         color:#999999;
+                         vertical-align:middle;
+                         padding-right:8px;">
+                ·
+              </td>
+<td style="vertical-align:middle;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1aM8Cy0xBqLWUTVFO&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;" target="_blank"><img alt="partner_image" src="https://alphasignal.ai/image/1795410141413-mr1h7s.png" style="max-height:100%;width:150px;max-width:150px;vertical-align:middle;"/></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Author Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;margin-bottom:30px;" width="100%">
+<tr>
+<!-- Profile Image -->
+<td style="padding-right:12px;" valign="top" width="70">
+<img alt="Author photo" height="60" src="https://alphasignal.ai/image/1773273870123-brvvx0.png" style="display:block;border:1px solid #6B6B6B;outline:none;text-decoration:none;" width="60"/>
+</td>
+<!-- Text Content -->
+<td style="font-family:system-ui, Helvetica, Arial, sans-serif;color:#000000;" valign="middle">
+<div style="font-size:15px;font-weight:700;line-height:20px;margin:0 0 3px 0;padding:0;">
+    Today's Author
+  </div>
+<div style="font-size:15px;line-height:20px;margin:0;padding:0;">
+    Lior Alexander. Founder of AlphaSignal and former ML Engineer. Previously built ML systems at Iguazio, Guesty, Enphase, Mila.
+  </div>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:0 20px;margin-bottom:30px;padding-bottom:20px;" width="100%">
+<tr>
+<td class="h1" style="font-family:system-ui, sans-serif;font-size:17px;font-weight:bold;line-height:22.5px;
+                      margin:0;padding:15px 0 10px 0;
+                      color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+  Summary
+</td>
+</tr>
+<tr>
+<td style="padding:0 0 10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="color:#000000 !important;">
+<p style="font-family:system-ui; font-size:13px;line-height:22.5px;font-weight:normal;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    Read time: 6 min 39 sec
+  </p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1CLQTJ8OB1BJ3Zy5m&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ OpenAI releases benchmark measuring how well models find <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">new drug candidates</span>
+</a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Fireworks.ai</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1aM8Cy0xBqLWUTVFO&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>▸<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>F<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>r<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>T<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>r<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>a<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>g<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>:<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>B<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>u<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>l<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>d<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>B<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>r<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>M<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>d<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>l<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>s<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>F<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>i<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>r<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>w<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>r<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>k<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>s<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>
+</a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=dgyHGNU29t04fMI7&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ OpenAI reveals how <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">model distillation bypasses</span> safety guardrails and how to stop it
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>MongoDB</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1lkUo1NHvZbyvn5mU&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>▸<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>T<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>a<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>k<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>A<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>I<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>A<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>g<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>s<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>B<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>y<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>n<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>d<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>h<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span> <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>P<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>r<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>o<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>t<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>y<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>p<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>e<span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;"></span>
+</a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Top News</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=d3iN4kZBxNIjXRjU&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    ▸ Google Antigravity upgrades its CLI tool to let you <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">fork and explore</span> agent threads mid-task
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:5px 0 0 0;color:#000000 !important;">
+<p style="font-family:Helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:22.5px;
+            margin:0;padding:0;
+            color:#000000 !important;mso-color-alt:windowtext;
+            mso-style-textfill-fill-color:#000000;">
+<u>Signals</u>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=K02CBXPlDD3k1dk7&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    1. Thinking Machines drops 26B <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">open-source model</span> that runs on 16GB RAM
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=7Axvkx3aHJgagg5z&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    2. <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">Tiger Data:</span> Agent traces compressed by up to 95% and queryable in Postgres. Includes $1000 in Tiger Cloud credits for new accounts
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=HwRoUFDsFOxsqtY0&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    3. NVIDIA method <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">caches LLM reasoning</span> as CPU code, cutting costs up to 291x
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=8Ic0iyAuJ65XbpYx&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    4. Study explains why <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">AI-generated text feels</span> harder to read than human writing
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1CeThkNR8z3CW7Dpp&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    5. AtomicChat releases <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">uncensored GGUF model</span> you can run locally
+  </a>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0;color:#000000 !important;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=XmM7uY1J9dF1902f&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22.5px;
+                     color:#000000 !important;text-decoration:none;display:block;
+                     mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;">
+    6. Dev open-sources 30 SEO skills and 4 <span style="background-color:#FBEDE7;color:#f74904 !important;mso-color-alt:#f74904;mso-style-textfill-fill-color:#f74904;mso-highlight:#FBEDE7;">MCP servers for</span> Claude Code and Cursor
+  </a>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;" width="100%"><tr><td style="padding:0 20px;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<!-- Section Title -->
+<tr>
+<td class="h1" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:17px;font-weight:bold;line-height:22.5px;
+             margin:0;padding:15px 0 10px 0;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;">
+    Our Events
+    
+  </td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Item 1 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1hK3KlLHQBKCr9P5n&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    From Vulnerable Dependencies to Tested Pull Requests with Snyk
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#999999;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">Dec 9, 10a PT · Online · <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1hK3KlLHQBKCr9P5n&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="color:#999999;text-decoration:underline;" target="_blank">Register now</a></span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 2 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1Dt5ABvKeLL6ewvXj&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    When AI Agents Ship Faster Than Security Can Review
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#999999;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">Dec 17, 10a PT · Online · <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1Dt5ABvKeLL6ewvXj&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="color:#999999;text-decoration:underline;" target="_blank">Register now</a></span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table>
+<!-- Outer Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    OpenAI releases benchmark measuring how well models find new drug candidates
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          4,956 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="OpenAI releases benchmark measuring how well model" border="0" src="https://alphasignal.ai/image/1795410384613-ks1pj0.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Drug discovery is slow, expensive, and brutal. Finding one viable drug candidate can take years of lab work. OpenAI just released <b>MedChemBench</b> to measure how well AI can speed that up.</p><p>Think of it as a chemistry exam for AI. It pulls from 117 papers and patents, with 761 molecular structures across 99 problems. Models had to reconstruct compounds, explain findings, choose candidates, and predict properties.</p><p>Here is what the benchmark actually tests:</p><ul><li>Reading molecular structures (think: decoding a chemical blueprint)</li><li>Reasoning from experimental results</li><li>Picking which compounds to test next</li><li>Predicting how a drug behaves in the body</li></ul><p>The results are uneven. <b>GPT-6 Astra</b> scored 95.4% on structure tasks, but only about half on compound selection and numerical prediction.</p><p>MedChemBench is a capability signal, not proof AI can independently identify viable drug candidates. But it gives you a clear, honest picture of where AI actually helps in chemistry workflows today.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1CLQTJ8OB1BJ3Zy5m&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Promo Text (outside box) -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:0 auto;" width="100%">
+<tr>
+<td style="padding:0; text-align:right;">
+<a href="mailto:?subject=Fwd%3A%20OpenAI%20releases%20benchmark%20measuring%20how%20well%20models%20find%20new%20drug%20candidates&amp;body=Thought%20you%27d%20find%20this%20interesting%3A%0D%0A%0D%0A%22Drug%20discovery%20is%20slow%2C%20expensive%2C%20and%20brutal.%20Finding%20one%20viable%20drug%20candidate%20can%20take%20years%20of%20lab%20work.%20OpenAI%20just%20released%20MedChemBench%20to%20measure%20how%20well%20AI%20can%20speed%20that%20up.%0D%0A%0D%0AThink%20of%20it%20as%20a%20chemistry%20exam%20for%20AI.%20%0D%0A%0D%0AIt%20pulls%20from%20117%20papers%20and%20patents%2C%20with%20761%20molecular%20structures%20across%2099%20problems.%20Models%20had%20to%20reconstruct%20compounds%2C%20explain...%22%0D%0A%0D%0ARead%20it%20here%3A%20https%3A%2F%2Falphasignal.ai%2Femail%2F1b7a5d6be16510c2%3Futm_source%3Dforward" style="text-decoration:none;color:#767676 !important;font-family:Helvetica, sans-serif;font-size:13px;font-style:italic;" target="_blank">
+<span style="color:#767676 !important;font-style:italic;">forward →</span>
+</a>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#999999 !important;
+                  mso-color-alt:#999999;
+                  mso-style-textfill-fill-color:#999999;">
+          Presented by Fireworks.ai
+        </td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Free Training: Build Better Models on Fireworks
+  </span>
+</td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1aM8Cy0xBqLWUTVFO&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;" target="_blank"><img alt="" border="0" src="https://alphasignal.ai/image/1795410142932-0oa3r3.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/></a>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Hitting the limits of prompting and RAG? Training a model for your application can help improve quality, lower cost, or deliver faster responses.</p><p><a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1aM8Cy0xBqLWUTVFO&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="color:#000000 !important;text-decoration:none;"><span style="color:#000000 !important;border-bottom:1px solid #f74904;display:inline;"><strong>Train Muse Glimmer 30B for free through November 30</strong></span></a><strong>.</strong> <br/>No credit card required. </p><p><strong>&gt;</strong> <strong>Train without managing GPUs. </strong>The Fireworks Training API handles the infrastructure.</p><p><strong>&gt; Start with your coding agent.</strong> It can help configure and run experiments using your own data or one of our ready-to-run cookbooks.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1aM8Cy0xBqLWUTVFO&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">👉 START TRAINING</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Promo Text (outside box) -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:0 auto;" width="100%">
+<tr>
+<td style="padding:0; text-align:right;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1A73MtFOPtvw6F7hL&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#767676 !important;font-family:Helvetica, sans-serif;font-size:13px;font-style:italic;" target="_blank">
+<span style="color:#767676 !important;font-style:italic;">partner with us →</span>
+</a>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    OpenAI reveals how model distillation bypasses safety guardrails and how to stop it
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          4,803 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="OpenAI reveals how model distillation bypasses saf" border="0" src="https://alphasignal.ai/image/1795410415973-rhe3vq.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Here is something worth knowing about. OpenAI just published research on a sneaky attack called <b>adversarial distillation</b>, where someone uses a powerful AI's outputs to train a cheaper copy, but without any of the safety rules baked in.</p><p>Think of it like photocopying a locked book and removing all the warning labels. The copied model can reproduce advanced capabilities without the safety restrictions, meaning it could help with things the original would have refused.</p><p>Here is what the numbers look like:</p><ul><li>Attack success rate dropped from <b>54%</b> on GPT-6 Astra to just <b>0.2%</b> on GPT-6.2 Astra.</li><li>Defenses combine model training, automated classifiers, and API-level restrictions.</li><li>Weekly enforcement actions have hit thousands to tens of thousands of accounts running distillation campaigns.</li></ul><p>Older model families with weaker safeguards are now blocked from reading GPT-6.2's protected reasoning. This matters because it shapes how AI APIs get locked down going forward.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=dgyHGNU29t04fMI7&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Promo Text (outside box) -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:0 auto;" width="100%">
+<tr>
+<td style="padding:0; text-align:right;">
+<a href="mailto:?subject=Fwd%3A%20OpenAI%20reveals%20how%20model%20distillation%20bypasses%20safety%20guardrails%20and%20how%20to%20stop%20it&amp;body=Thought%20you%27d%20find%20this%20interesting%3A%0D%0A%0D%0A%22Here%20is%20something%20worth%20knowing%20about.%20OpenAI%20just%20published%20research%20on%20a%20sneaky%20attack%20called%20adversarial%20distillation%2C%20where%20someone%20uses%20a%20powerful%20AI%27s%20outputs%20to%20train%20a%20cheaper%20copy%2C%20but%20without%20any%20of%20the%20safety%20rules%20baked%20in.%0D%0A%0D%0AThink%20of%20it%20like%20photocopying%20a%20locked%20book%20and%20removing%20all%20the%20warning%20labels.%20%0D%0A%0D%0AThe%20copied%20model%20can%20reproduce%20advanced%20capabilities%20without...%22%0D%0A%0D%0ARead%20it%20here%3A%20https%3A%2F%2Falphasignal.ai%2Femail%2F1b7a5d6be16510c2%3Futm_source%3Dforward" style="text-decoration:none;color:#767676 !important;font-family:Helvetica, sans-serif;font-size:13px;font-style:italic;" target="_blank">
+<span style="color:#767676 !important;font-style:italic;">forward →</span>
+</a>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#999999 !important;
+                  mso-color-alt:#999999;
+                  mso-style-textfill-fill-color:#999999;">
+          Presented by MongoDB
+        </td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Take AI Agents Beyond the Prototype
+  </span>
+</td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1lkUo1NHvZbyvn5mU&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;" target="_blank"><img alt="" border="0" src="https://alphasignal.ai/image/1795410144526-1k86bo.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/></a>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Building an AI agent is one thing. Running it at scale is another. <a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1lkUo1NHvZbyvn5mU&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="color:#000000 !important;text-decoration:none;"><span style="color:#000000 !important;border-bottom:1px solid #f74904;display:inline;">MongoDB Atlas Agent Engine</span></a> brings execution, long-term memory, retrieval, and governance together, so you can focus on building agents instead of managing infrastructure.</p><p></p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1lkUo1NHvZbyvn5mU&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">LEARN MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Promo Text (outside box) -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:0 auto;" width="100%">
+<tr>
+<td style="padding:0; text-align:right;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1A73MtFOPtvw6F7hL&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#767676 !important;font-family:Helvetica, sans-serif;font-size:13px;font-style:italic;" target="_blank">
+<span style="color:#767676 !important;font-style:italic;">partner with us →</span>
+</a>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;padding:15px 20px 20px 20px;" width="100%">
+<!-- Section Title -->
+<tr>
+<td style="font-family: system-ui, sans-serif;font-size:16px;line-height:22px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top News
+    </td>
+</tr>
+<!-- Divider -->
+<tr>
+<td style="padding:0 0 10px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class="h1" style="font-family:Helvetica, sans-serif;font-size:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<span style="color:#000000 !important;text-decoration:none;">
+    Google Antigravity upgrades its CLI tool to let you fork and explore agent threads mid-task
+  </span>
+</td>
+</tr>
+<tr>
+<td style="font-family:system-ui;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#f74904 !important;
+                  mso-color-alt:#f74904;
+                  mso-style-textfill-fill-color:#f74904;">
+          4,077 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style="padding:0 0 10px 0;"> <!-- bottom only -->
+<img alt="Google Antigravity upgrades its CLI tool to let yo" border="0" src="https://alphasignal.ai/image/1795410476440-x3mg6d.png" style="display:block;width:100%;max-width:560px;height:auto;" width="560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style="font-family:Helvetica, sans-serif;font-size:15px;line-height:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;
+         padding:0;">
+<div style="margin-top:0;">
+<p>Google Antigravity just upgraded <b>/btw</b>, and it is way more useful now.</p><p>Before, /btw let you sneak in a quick question while your AI agent was busy working. Think of it like tapping a colleague on the shoulder mid-task. Handy, but limited.</p><p>Now, /btw spins up a full <b>forked conversation</b>, meaning a separate copy of your chat that runs in parallel, with all your existing context included. You explore a side idea, and your main task keeps running untouched.</p><p>Here is what you can do with it now:</p><ul><li>Ask a side question without breaking your agent's flow</li><li>Explore a rabbit hole in a parallel thread, then promote it back to your main conversation</li><li>Use <b>/copy btw</b> to pull the side answer back into your main thread</li></ul><p>To try it, run <b>agy update</b> in your terminal, then type /btw followed by your question inside any active session. Works in the app, CLI, and IDE extensions.</p>
+</div>
+</td>
+</tr>
+<!-- Button -->
+<tr>
+<td align="center" style="padding:15px 0 0px 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" class="btn" style="font-family:Helvetica, sans-serif;font-size:16px;font-weight:bold;
+                   padding:12px 12px;color:#ffffff !important;
+                   border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=d3iN4kZBxNIjXRjU&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="text-decoration:none;color:#ffffff !important;display:inline-block;font-size:16px;" target="_blank">
+<span style="color:#ffffff !important;">READ MORE</span>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Promo Text (outside box) -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:0 auto;" width="100%">
+<tr>
+<td style="padding:0; text-align:right;">
+<a href="mailto:?subject=Fwd%3A%20Google%20Antigravity%20upgrades%20its%20CLI%20tool%20to%20let%20you%20fork%20and%20explore%20agent%20threads%20mid-task&amp;body=Thought%20you%27d%20find%20this%20interesting%3A%0D%0A%0D%0A%22Google%20Antigravity%20just%20upgraded%20%2Fbtw%2C%20and%20it%20is%20way%20more%20useful%20now.%0D%0A%0D%0ABefore%2C%20%2Fbtw%20let%20you%20sneak%20in%20a%20quick%20question%20while%20your%20AI%20agent%20was%20busy%20working.%20Think%20of%20it%20like%20tapping%20a%20colleague%20on%20the%20shoulder%20mid-task.%20Handy%2C%20but%20limited.%0D%0A%0D%0ANow%2C%20%2Fbtw%20spins%20up%20a%20full%20forked%20conversation%2C%20meaning%20a%20separate%20copy%20of%20your%20chat%20that%20runs%20in...%22%0D%0A%0D%0ARead%20it%20here%3A%20https%3A%2F%2Falphasignal.ai%2Femail%2F1b7a5d6be16510c2%3Futm_source%3Dforward" style="text-decoration:none;color:#767676 !important;font-family:Helvetica, sans-serif;font-size:13px;font-style:italic;" target="_blank">
+<span style="color:#767676 !important;font-style:italic;">forward →</span>
+</a>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:30px auto 0 auto;border:1px solid #6B6B6B;background-color:#ffffff;" width="100%"><tr><td style="padding:0 20px;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<!-- Section Title -->
+<tr>
+<td class="h1" style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+             font-size:17px;font-weight:bold;line-height:22.5px;
+             margin:0;padding:15px 0 10px 0;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;">
+    Signals
+    
+  </td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #6B6B6B;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Item 1 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">1</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=K02CBXPlDD3k1dk7&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Thinking Machines drops 26B open-source model that runs on 16GB RAM
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">3,495 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 2 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">2</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=7Axvkx3aHJgagg5z&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Agent traces compressed by up to 95% and queryable in Postgres. Includes $1000 in Tiger Cloud credits for new accounts
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#999999;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">Presented by Tiger Data</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 3 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">3</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=HwRoUFDsFOxsqtY0&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    NVIDIA method caches LLM reasoning as CPU code, cutting costs up to 291x
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">1,268 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 4 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">4</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=8Ic0iyAuJ65XbpYx&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Study explains why AI-generated text feels harder to read than human writing
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">748 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 5 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">5</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1CeThkNR8z3CW7Dpp&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    AtomicChat releases uncensored GGUF model you can run locally
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">129,693 Downloads</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr><td style="border-top:1px solid #cbcbcb;"></td></tr>
+</table></td></tr>
+<!-- Item 6 -->
+<tr>
+<td style="padding:15px 0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:bold;color:#f74904;padding-right:10px;" valign="top" width="30">6</td>
+<td valign="top">
+<!--[if mso]><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;font-size:16px !important;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtext;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class="h1" href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=XmM7uY1J9dF1902f&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="font-family:Helvetica,Arial,sans-serif;
+                            font-size:16px !important;font-weight:bold;line-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowtext;
+                            text-decoration:none;display:block;margin:0;">
+                    Dev open-sources 30 SEO skills and 4 MCP servers for Claude Code and Cursor
+                  </a>
+</td>
+</tr>
+<tr><td><span style="font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f74904;font-weight:600;font-size:13px;line-height:22.5px;margin:0;padding:0;display:block;">2,563 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table>
+<!-- Alpha Description -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;width:100%;border:1px solid #6B6B6B;
+             background-color:#ffffff; margin-top:30px;" width="100%">
+<tr>
+<td style="padding:20px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td align="center" class="p" style="font-family:Helvetica, Arial, sans-serif;
+                     font-size:10px !important;
+                     line-height:22.5px;
+
+                     font-weight:normal;
+                     color:#a1a1a1 !important;
+                     mso-color-alt:#6a7788;
+                     mso-style-textfill-fill-color:#6a7788;
+                     padding:0 0 10px 0;">
+            At Alpha Signal, our mission is to build a sharp, engaged community focused on AI, machine learning, and cutting-edge language models, helping over 300,000 developers stay informed and ahead. We're passionate about curating the best in AI, from top research and trending technical blogs to expert insights and tailored job opportunities. We keep you connected to the breakthroughs and discussions that matter, so you can stay in the loop without endless searching. We also work closely with partners who value the future of AI, including employers and advertisers who want to reach an audience as passionate about AI as we are.
+    <br/><br/>Our partnerships are based on shared values of ethics, responsibility, and a commitment to building a better world through technology.Privacy is a priority at Alpha Signal. Our Privacy Policy clearly explains how we collect, store, and use your personal and non-personal information. By using our website, you accept these terms, which you can review on our website. This policy applies across all Alpha Signal pages, outlining your rights and how to contact us if you want to adjust the use of your information. We're based in the United States. By using our site, you agree to be governed by U.S. laws.
+          </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Work with us -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;width:100%;margin:auto;border:1px solid #6B6B6B;
+             background-color:#ffffff;margin-top:30px;" width="100%">
+<tr>
+<!-- Outer wrapper with 20px padding -->
+<td style="padding:20px;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<!-- Text Content -->
+<tr>
+<td align="center" class="p" style="font-family:Helvetica, Arial, sans-serif;
+               font-size:15px !important;
+               line-height:22.5px;
+               font-weight:normal;
+               color:#000000 !important;
+               mso-color-alt:#000000;
+               mso-style-textfill-fill-color:#000000;
+               padding:0;">
+      Looking to promote your company, product, service, or event to 300,000+ AI developers?
+    </td>
+</tr>
+<tr>
+<td align="center" style="padding:10px 0 0 0;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td align="center" bgcolor="#f74904" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:20px;
+                               font-weight:bold;padding:12px 12px;color:#ffffff !important;
+                               border:1px solid #6B6B6B;display:block;">
+<a href="https://app.alphasignal.ai/c?uid=DhS8ajH7NeRZK5Ns&amp;cid=1b7a5d6be16510c2&amp;lid=1A73MtFOPtvw6F7hL&amp;mid=49c5ed04-7ace-4067-8678-2acf2078a62b" style="color:#ffffff !important;text-decoration:none;display:inline-block;" target="_blank">
+                        WORK WITH US
+                      </a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Feedback Box -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin-top:30px;border:1px solid #6B6B6B;background-color:#ffffff;" width="100%">
+<tr>
+<td align="center" style="padding:30px 20px;background-color:#ffffff;">
+<!-- Title -->
+<div style="font-family:Helvetica, Arial, sans-serif;
+                   font-size:18px;line-height:24px;font-weight:bold;
+                   color:#000000;
+                   padding:0 0 20px 0;">
+            How was today's email?
+          </div>
+<!-- Buttons -->
+<div style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:22px;">
+<a class="feedback-btn" href="https://app.alphasignal.ai/fb/DhS8ajH7NeRZK5Ns?cid=1b7a5d6be16510c2&amp;feedback=Awesome" style="display:inline-block;
+                      text-decoration:none;
+                      color:#000000;
+                      border:1px solid #6B6B6B;
+                      padding:10px 16px;
+                      margin:0 6px;" target="_blank">
+              Awesome
+            </a>
+<a class="feedback-btn" href="https://app.alphasignal.ai/fb/DhS8ajH7NeRZK5Ns?cid=1b7a5d6be16510c2&amp;feedback=Decent" style="display:inline-block;
+                      text-decoration:none;
+                      color:#000000;
+                      border:1px solid #6B6B6B;
+                      padding:10px 16px;
+                      margin:0 6px;" target="_blank">
+              Decent
+            </a>
+<a class="feedback-btn feedback-btn-last" href="https://app.alphasignal.ai/fb/DhS8ajH7NeRZK5Ns?cid=1b7a5d6be16510c2&amp;feedback=Not%20Great" style="display:inline-block;
+                      text-decoration:none;
+                      color:#000000;
+                      border:1px solid #6B6B6B;
+                      padding:10px 16px;
+                      margin:0 6px;" target="_blank">
+              Not Great
+            </a>
+</div>
+</td>
+</tr>
+</table>
+<!-- Footer -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;margin:auto;" width="100%">
+<tr>
+<td align="center" style="padding:20px 10px;">
+<!-- Unsubscribe -->
+<a href="https://app.alphasignal.ai/unsubscribe/u/DhS8ajH7NeRZK5Ns?cid=1b7a5d6be16510c2" style="font-family:system-ui;
+                    font-size:14px;line-height:20px;
+                    text-decoration:none;color:#f74904 !important;
+                    mso-color-alt:#f74904;
+                    mso-style-textfill-fill-color:#f74904;" target="_blank">
+           unsubscribe_me(): return True
+          </a>
+<!-- Address -->
+<div style="padding-top:20px; font-family:system-ui;font-size:14px;color:#a1a1a1;">
+    {"AlphaSignal": "214 Barton Springs Rd, Austin, USA"}
+    </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body></html>
