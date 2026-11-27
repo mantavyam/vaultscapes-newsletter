@@ -15,7 +15,7 @@ permissions:
   issues: write     # open / comment / close alert issues (scripts/alerts.py)
 
 env:
-  # Every alert issue and every published issue is mirrored to Discord.
+  # Every alert issue (open / update / resolve) is mirrored to Discord.
   DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
   GH_TOKEN: ${{ github.token }}
 

@@ -16,8 +16,6 @@ Labels (IMPORTANT ones also get the `important` label):
   push-failed                the FCM notification was not delivered
                                                                closes after a delivered push
 
-Also: `announce()` posts a short "issue published" note to the same webhook.
-
 Environment: GH_TOKEN + GITHUB_ACTIONS (issues are filed only in Actions),
 DISCORD_WEBHOOK_URL (optional; without it nothing is posted).
 
@@ -88,20 +86,6 @@ def alert_text(event: str, label: str, title: str, body: str, url: str | None) -
 
 def alert(event: str, label: str, title: str, body: str, url: str | None = None) -> None:
     _post(alert_text(event, label, title, body, url))
-
-
-def announce(payload: dict, json_url: str | None = None) -> None:
-    """Short 'new issue published' note."""
-    if payload.get("type") == "article":
-        lines = [f"## 📖 {payload.get('kicker', 'Deep Dive')} · {payload['date']}",
-                 f"**{payload.get('title', '')}**"]
-    else:
-        lines = [f"## 📰 AlphaSignal digest · {payload['date']}",
-                 f"**{payload.get('subject', '')}**", ""]
-        lines += [f"- {n['headline']}" for n in payload.get("news", [])]
-    if json_url:
-        lines += ["", f"[JSON]({json_url})"]
-    _post("\n".join(lines))
 
 
 # ---------------------------------------------------------------------------

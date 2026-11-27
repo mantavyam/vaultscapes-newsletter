@@ -53,7 +53,6 @@ def process_eml(path: Path, resolver: LinkResolver) -> dict | None:
     entry = publish.publish_issue(
         payload_json, cleaned.cleaned_html, payload.message_id, payload.date_header
     )
-    alerts.announce(payload_json, entry["json_url"])
     gaps = inspection.coverage_problems(payload_json)
     if gaps:
         # A known template "parsed" it but left fields empty: the layout has

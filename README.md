@@ -32,7 +32,6 @@ flowchart TD
             PUB --> COV{coverage_problems?<br/>empty fields}
         end
 
-        PUB --> ANN[Discord: issue published]
         PUB --> FCM[push_notification.py<br/>FCM topic news-feed]
         Q --> I1[issue: new-template]
         COV -->|gaps| I1
@@ -178,8 +177,8 @@ section-internal scrubbing:
 
 `scripts/alerts.py` keeps **one open issue per label**: a repeat is a comment
 on the open issue, not a new one. Every open / comment / close is mirrored to
-Discord via `DISCORD_WEBHOOK_URL`, and every published issue gets a short
-"published" note there too. Issues are only filed inside GitHub Actions; local
+Discord via `DISCORD_WEBHOOK_URL`. Successful publishes are **not** posted —
+Discord only hears about problems and their resolution. Issues are only filed inside GitHub Actions; local
 runs print instead.
 
 | Label | Important | Opened when | Closed when |
@@ -201,7 +200,7 @@ next run (with `LOOKBACK_DAYS` wide enough) publishes it automatically.
    | `GMAIL_ADDRESS` | Gmail address receiving AlphaSignal |
    | `GMAIL_APP_PASSWORD` | Google app password (requires 2FA) |
    | `FCM_SERVICE_ACCOUNT` | Firebase service account JSON for push |
-   | `DISCORD_WEBHOOK_URL` | Discord channel for alerts + publish notes |
+   | `DISCORD_WEBHOOK_URL` | Discord channel for alert issues (problems only) |
 
    `GH_TOKEN` is the workflow's own token; the workflow grants it
    `contents: write` and `issues: write`.
@@ -238,7 +237,7 @@ LOOKBACK_DAYS=8 work/venv/bin/python scripts/run_pipeline.py
 | `GMAIL_ADDRESS` / `GMAIL_APP_PASSWORD` | local live fetch only; CI uses Secrets |
 | `LOOKBACK_DAYS` | IMAP search window in days (default 3) |
 | `STALE_DAYS` | days without a publish before `no-new-issues` (default 4) |
-| `DISCORD_WEBHOOK_URL` | optional locally; set it only if local runs should post |
+| `DISCORD_WEBHOOK_URL` | optional locally; set it only if local runs should post alerts |
 
 ## Data layout
 
