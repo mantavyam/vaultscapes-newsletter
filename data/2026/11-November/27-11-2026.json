@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "27-11-2026",
+  "iso_date": "2026-11-27",
+  "subject": "🧠 Qwen3.5-9B beats GPT-120B on GPQA, fits in 6 GB",
+  "intro": "The theme today is doing more with less . Tencent's DFly2 borrows the big model's own memory instead of allocating new storage, squeezing out 4.2x speed gains. Qwen3.5-9B fits in 6GB and outscores a 120B model on graduate reasoning. The edge is eating the cloud, one clever trick at a time. Harvard is cutting inference costs 34% during pretraining and llm.asm runs 35% faster than llama.cpp in pure assembly. Efficiency is the new arms race.",
+  "read_time": "6 min 18 sec",
+  "summary": [
+    {
+      "category": "Top Model",
+      "headline": "LM Studio Brings Alibaba's Qwen3.5-9B to Apple Silicon for 6 GB",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Paper",
+      "headline": "Samsung's CCNN Fixes 3D Gaussian Splatting's Blurry Detail Problem",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Paper",
+      "headline": "Voice AI Assistants Fail Group Meetings Without Explicit Turn-Taking Training",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Model",
+      "headline": "LM Studio Brings Alibaba's Qwen3.5-9B to Apple Silicon for 6 GB",
+      "likes": 3327,
+      "body": "Alibaba's Qwen3.5-9B just landed on Apple Silicon, packaged by LM Studio to run in under 6 GB of storage. That's a 9-billion-parameter model sitting on your MacBook. Here's the exciting part: it scores 81.7 on GPQA Diamond , a tough graduate-level science test, beating OpenAI's gpt-oss-120b at 71.5. Smaller model, better score on that benchmark. Key specs worth knowing: To run it, install mlx-lm and start the server. It exposes an OpenAI-compatible API at localhost, so your existing code just works. You can also disable reasoning mode with enable_thinking=False to get faster, shorter responses for tasks like classification. Apple Silicon only. For Windows or Linux, grab the GGUF build instead.",
+      "bullets": [
+        "4-bit compressed weights, roughly 6 GB on disk, but you need 16 GB RAM minimum to actually use it comfortably",
+        "262,144 token context window , though real usable length depends on your available memory",
+        "Supports text, images, and video inputs",
+        "Apache 2.0 license, so commercial use is fine"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795784408626-o7tngz.png",
+      "read_more_url": "https://alphasignal.ai/model/lm-studio-brings-alibaba-s-qwen3-5-9b-to-apple-silicon-for-6-gb?utm_source=alphasignal&utm_campaign=ea54a22ef2221013"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Paper",
+      "headline": "Samsung's CCNN Fixes 3D Gaussian Splatting's Blurry Detail Problem",
+      "likes": 2708,
+      "body": "You know how 3D scenes rendered from photos can look blurry around fences, leaves, or thin wires? That's the problem Samsung's new CCNN module is solving for Gaussian Splatting. Gaussian Splatting works by placing thousands of tiny colored blobs in 3D space to recreate a scene. The obvious fix for blurriness is adding more blobs. But here's the catch: past 4 million blobs , quality actually drops. The model starts memorizing the training photos instead of learning the real scene. CCNN plugs in after your existing renderer and cleans up the image using three things: It predicts what's wrong and adds the fix on top. No rebuilding your pipeline. The gains are modest, around +0.32 dB PSNR , but consistent across six benchmarks. Biggest wins show up in foliage, text, and wires. Flat surfaces? Not much difference. Code is live under the Samsung Labs GitHub.",
+      "bullets": [
+        "The rough render your Gaussian Splatting already produced",
+        "The exact pixel coordinates being reconstructed",
+        "Nearby pixel patterns to recover edges and fine textures"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795784409034-dxbxvs.png",
+      "read_more_url": "https://alphasignal.ai/paper/samsung-s-ccnn-fixes-3d-gaussian-splatting-s-blurry-detail-problem?utm_source=alphasignal&utm_campaign=ea54a22ef2221013"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Paper",
+      "headline": "Voice AI Assistants Fail Group Meetings Without Explicit Turn-Taking Training",
+      "likes": 2267,
+      "body": "Your voice AI works fine in a one-on-one call. Put it in a group meeting, and it starts interrupting people or going completely silent. Why? It has no idea whose turn it is to speak. A new paper drops a 120,000-decision benchmark to test exactly this. The task is simple: at every pause, should the AI speak or stay quiet? Turns out, that's really hard. Here's the core problem. In a group chat, a pause doesn't mean \"your turn.\" Someone might be thinking mid-sentence. Or the question was aimed at someone else. The AI needs to read social context, not just silence. Results from testing eight top AI models were rough: The fix: train your model on labeled examples that explain why to speak or stay silent. The dataset is on Hugging Face under Apache 2.0 , ready to use.",
+      "bullets": [
+        "Random guessing scores 50%. Most open-source models stayed right there.",
+        "Best zero-shot result (Gemini 3.1 Pro): only 64.45%",
+        "Fine-tuning with reasoning examples pushed accuracy up 23 percentage points",
+        "Fine-tuned models hit 71.73%, beating human annotators at 60-66%"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795784409659-mh6nmk.png",
+      "read_more_url": "https://alphasignal.ai/paper/voice-ai-assistants-fail-group-meetings-without-explicit-turn-taking-training?utm_source=alphasignal&utm_campaign=ea54a22ef2221013"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Tencent Open-Sources DFly2, Hitting 4.2x Speed on Long-Context AI",
+      "stat": {
+        "type": "likes",
+        "value": 814
+      },
+      "url": "https://alphasignal.ai/news/tencent-open-sources-dfly2-hitting-4-2x-speed-on-long-context-ai?utm_source=alphasignal&utm_campaign=ea54a22ef2221013"
+    },
+    {
+      "rank": 2,
+      "headline": "llm.asm Runs Qwen3 35% Faster Than llama.cpp in Pure Assembly",
+      "stat": {
+        "type": "likes",
+        "value": 633
+      },
+      "url": "https://alphasignal.ai/repo/llm-asm-runs-qwen3-35-faster-than-llama-cpp-in-pure-assembly?utm_source=alphasignal&utm_campaign=ea54a22ef2221013"
+    },
+    {
+      "rank": 3,
+      "headline": "Harvard's Model Carving Cuts AI Inference Costs by 34% During Pretraining",
+      "stat": {
+        "type": "likes",
+        "value": 363
+      },
+      "url": "https://alphasignal.ai/paper/harvard-s-model-carving-cuts-ai-inference-costs-by-34-during-pretraining?utm_source=alphasignal&utm_campaign=ea54a22ef2221013"
+    },
+    {
+      "rank": 4,
+      "headline": "University of Tokyo's QDD-MM Builds Open-Source Robot Muscles Without Force Sensors",
+      "stat": {
+        "type": "likes",
+        "value": 340
+      },
+      "url": "https://alphasignal.ai/paper/university-of-tokyo-s-qdd-mm-builds-open-source-robot-muscles-without-force?utm_source=alphasignal&utm_campaign=ea54a22ef2221013"
+    },
+    {
+      "rank": 5,
+      "headline": "Together AI Opens Hurdle to Test if Coding Agents Can Use Your API",
+      "stat": {
+        "type": "likes",
+        "value": 290
+      },
+      "url": "https://alphasignal.ai/news/together-ai-opens-hurdle-to-test-if-coding-agents-can-use-your-api?utm_source=alphasignal&utm_campaign=ea54a22ef2221013"
+    }
+  ]
+}
