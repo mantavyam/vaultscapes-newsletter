@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "25-11-2026",
+  "iso_date": "2026-11-25",
+  "subject": "🖥️ Claude Artifacts become desktop apps with one click (beta)",
+  "intro": "Anthropic had a very busy Monday. Claude artifacts can now live on your desktop as real apps, and MCP just got Skills, Tasks, and Elicitation baked in. The pattern is clear: Anthropic is quietly building a full app platform. Not just a chat interface. We're watching the distribution layer of AI agents take shape. The real question isn't whether these tools work. It's who owns the runtime when every app needs a live Claude session to open.",
+  "read_time": "5 min 58 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic Turns Claude Artifacts Into Real Desktop Apps With One Click",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "Anthropic Expands MCP With Skills, Background Tasks, and Direct File Transfers",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI's GPT-6.2 Designs Real Proteins That Bind Drug Targets in the Lab",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic Turns Claude Artifacts Into Real Desktop Apps With One Click",
+      "likes": 46629,
+      "body": "Claude just let your AI-built tools escape the chat window. \"Install as app\" is now in beta, and it does exactly what it sounds like: any Claude artifact becomes a real Mac or Windows desktop app with its own icon, its own window, and real OS features. No packaging. No code signing. No API key setup. You describe your app to Claude, test it as an artifact, then hit \"Install as app\" from the Share menu. Done. Here's what these apps can actually do: One catch: apps need an active internet connection and a signed-in Claude session to open. Also, every update resets permissions , so users re-approve access each time. Anthropic does not review apps before install, so that responsibility lands on you.",
+      "bullets": [
+        "Send desktop notifications and register global keyboard shortcuts",
+        "Live in your Mac menu bar or Windows system tray",
+        "Connect to external services through Claude connectors",
+        "Read, modify, or run files locally with full computer access (your apps only)"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795611612533-wfhzg5.png",
+      "read_more_url": "https://alphasignal.ai/news/anthropic-turns-claude-artifacts-into-real-desktop-apps-with-one-click"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "Anthropic Expands MCP With Skills, Background Tasks, and Direct File Transfers",
+      "likes": 8203,
+      "body": "MCP, the open standard that lets AI connect to external tools and data, just got four big upgrades. Here's what changed and what you can now build. Skills let your MCP server ship step-by-step instructions alongside its tools. Think of it like sending a recipe with the ingredients. Claude loads the skill only when needed, so it doesn't eat up memory. Updates go live server-side, no reinstall required. Tool search also now cuts context usage by over 85% in multi-server setups. Skills are live in beta for Pro, Max, and Ultra plans today.",
+      "bullets": [
+        "Tasks : run long background jobs (research, pipelines, agent loops) without blocking Claude. It keeps working and picks up results when ready.",
+        "Elicitation : pause mid-workflow to ask the user for approval before spending money or deleting data. Supabase and Railway already use this.",
+        "File Uploads : send PDFs, spreadsheets, and images directly to your server, skipping the context window entirely. Cuts memory waste on large docs."
+      ],
+      "image_url": "https://alphasignal.ai/image/1795611611192-pzkd64.png",
+      "read_more_url": "https://alphasignal.ai/news/anthropic-expands-mcp-with-skills-background-tasks-and-direct-file-transfers"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "OpenAI's GPT-6.2 Designs Real Proteins That Bind Drug Targets in the Lab",
+      "likes": 6694,
+      "body": "Designing proteins used to need a whole team of specialized AI tools. One for structure, one for sequences, one for docking. Now GPT-6.2 handles all of that through plain prompts and Python code it writes itself. OpenAI tested this with a biotech partner in actual lab experiments, not just simulations. The results: What this opens up: you can describe a protein constraint in plain English, let the model generate candidate structures as code, then filter and test the best ones. No specialized ML training required. Big caveat: full protein structure prediction is still weak compared to tools like ESMFold2. And binding in a lab dish is not the same as a working drug. Independent review is pending.",
+      "bullets": [
+        "Out of 322 candidates, 35 bound their targets across five different proteins including PD-L1, a key cancer immunotherapy target",
+        "In a second test, 14 of 107 proteins bound their targets using sequences GPT-6.2 designed from scratch",
+        "For antibody redesign, 70% of redesigned fragments kept their binding ability after modification",
+        "On molecule docking benchmarks, it hit 93% accuracy , beating the previous best of 50%"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795611611339-u2nlpt.png",
+      "read_more_url": "https://alphasignal.ai/news/openai-s-gpt-6-2-designs-real-proteins-that-bind-drug-targets-in-the-lab"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Inworld Drops Open-Source Voice Isolator v1 Beating Krisp at 48 kHz",
+      "stat": {
+        "type": "likes",
+        "value": 4500
+      },
+      "url": "https://alphasignal.ai/model/inworld-drops-open-source-voice-isolator-v1-beating-krisp-at-48-khz"
+    },
+    {
+      "rank": 2,
+      "headline": "OpenCode Adds Gemini 4 Neon as Its Default Coding Model",
+      "stat": {
+        "type": "likes",
+        "value": 4338
+      },
+      "url": "https://alphasignal.ai/news/opencode-adds-gemini-4-neon-as-its-default-coding-model"
+    },
+    {
+      "rank": 3,
+      "headline": "Basalt Bundles Qwen3.8-Flash-Next Into One Local File at 700 Tokens per Second",
+      "stat": {
+        "type": "likes",
+        "value": 4085
+      },
+      "url": "https://alphasignal.ai/model/basalt-bundles-qwen3-8-flash-next-into-one-local-file-at-700-tokens-per-second"
+    },
+    {
+      "rank": 4,
+      "headline": "IBM's GIST Scales Graph Transformers to 500,000-Node Meshes Linearly",
+      "stat": {
+        "type": "likes",
+        "value": 3853
+      },
+      "url": "https://alphasignal.ai/paper/ibm-s-gist-scales-graph-transformers-to-500-000-node-meshes-linearly"
+    },
+    {
+      "rank": 5,
+      "headline": "Google's Gemma 4 E4B Doubles Mobile AI Speed to 49 Tokens per Second",
+      "stat": {
+        "type": "likes",
+        "value": 3816
+      },
+      "url": "https://alphasignal.ai/model/google-s-gemma-4-e4b-doubles-mobile-ai-speed-to-49-tokens-per-second"
+    }
+  ]
+}

@@ -2,9 +2,9 @@
 
 The email body is one giant nested-table layout with almost no CSS classes.
 The one exploitable invariant: a single <td> holds ~20 direct child <table>
-elements, one per visual section. This module finds that container, classifies
-each child table by its leading text, drops the junk (header nav, sponsor
-blocks, author card, footer, feedback poll, tracking pixels), and returns the
+elements, one per visual section. This module finds that container, detects which
+template the email uses (scripts/templates/), lets that template classify each
+child table and scrub sponsor fragments, validates, and returns the
 surviving sections both as parsed objects and as a standalone cleaned HTML
 document (the audit artifact).
 """
@@ -12,34 +12,42 @@ document (the audit artifact).
 from __future__ import annotations
 
 import email
-import re
 from dataclasses import dataclass, field
 from email import policy
 from pathlib import Path
 
 from bs4 import BeautifulSoup, Tag
 
-from utils import markers
+import inspection
+import templates
+from inspection import Fingerprint
+from templates.base import EmailTemplate
 from utils.helpers import is_tracking_pixel, squash_ws
 
 # Minimum direct child tables for a td to qualify as the section container.
 _MIN_SECTION_TABLES = 5
 
-# Sponsored signal-preview row in the Summary outline: "2. ngrok: ..."
-_SPONSOR_PREVIEW_RE = re.compile(r"^\d+\.\s*\S{1,24}:\s")
-
 
 class FormatDriftError(RuntimeError):
-    """Raised when the email HTML no longer matches the expected structure."""
+    """Email looks like newsletter content but no template could parse it —
+    most likely AlphaSignal launched a new layout (they never announce it).
+
+    Carries what the pipeline saw, for the `new-template` issue.
+    """
+
+    def __init__(self, message: str, fingerprint: Fingerprint | None = None,
+                 template: str | None = None, leads: list[str] | None = None):
+        super().__init__(message)
+        self.fingerprint = fingerprint
+        self.template = template
+        self.leads = leads or []
 
 
 class NotADigestError(RuntimeError):
-    """Raised when the email is not a daily digest at all.
+    """Email carries no newsletter content (announcement, upsell, ad send).
 
-    AlphaSignal also sends single-topic sponsored pieces from the same address.
-    They carry none of the digest landmarks, so they are skipped rather than
-    quarantined — treating them as drift would bury a genuine template change
-    under routine noise.
+    Decided by inspection.fingerprint(), not by template landmarks, so a
+    redesigned digest can never be mistaken for one and silently skipped.
     """
 
 
@@ -64,6 +72,8 @@ class Section:
 class CleanResult:
     sections: list[Section] = field(default_factory=list)
     cleaned_html: str = ""
+    template: EmailTemplate | None = None
+    fingerprint: Fingerprint | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -106,103 +116,6 @@ def _find_section_container(soup: BeautifulSoup) -> Tag:
     return best
 
 
-def _classify(table: Tag) -> str | None:
-    """Return section kind to keep, or None to drop the table."""
-    text = squash_ws(table.get_text(" ", strip=True))
-    if not text:
-        return None
-    if text.startswith(markers.GREETING):
-        return "intro"
-    if text.startswith(markers.SUMMARY_HEADING):
-        return "summary"
-    if text.startswith(markers.SIGNALS_HEADING):
-        return "signals"
-    if text.startswith(markers.NEWS_CATEGORY_PREFIX):
-        return "news"
-    # Long-form sends: the kicker opens the table, e.g. "Sunday Deep Dive".
-    # Bounded lookahead so a digest merely mentioning the phrase can't match.
-    if markers.ARTICLE_KICKER_SUFFIX in text[:40]:
-        return "article"
-    if text.startswith(markers.AUTHOR_HEADING):
-        # Junk in a digest, byline in an article; kept here and dropped at
-        # render time for digests.
-        return "author"
-    # Everything else is junk: header nav, sponsor blocks,
-    # "forward →" / "partner with us →" rows, footer, poll, unsubscribe.
-    return None
-
-
-def _scrub_intro(table: Tag) -> None:
-    """Remove the trailing 'In Partnership with' fragment inside the intro table."""
-    for el in table.find_all(string=lambda s: s and markers.SPONSOR_PARTNERSHIP in s):
-        row = el.find_parent("tr")
-        (row or el.parent or el).extract()
-    # partnership sponsor logo (and any other stray img) has no place in the intro
-    for img in table.find_all("img"):
-        img.decompose()
-
-
-def _scrub_summary(table: Tag) -> None:
-    """Drop sponsor outline entries from the Summary section.
-
-    Summary rows alternate: a short category row ("Top Repo" / "Top News" /
-    sponsor name / "Signals") followed by an item row. A category row that is
-    neither "Top ..." nor "Signals" is a sponsor name — remove it and its item.
-    Numbered signal-preview rows after the "Signals" category are kept; the
-    parser dedups them against the full Signals section.
-    """
-    rows = table.find_all("tr")
-    drop_next_items = False
-    for row in rows:
-        text = squash_ws(row.get_text(" ", strip=True))
-        if not text:
-            continue
-        is_category = len(text) < 40 and not row.find("a") and not text[0].isdigit()
-        if is_category:
-            if text.startswith(markers.NEWS_CATEGORY_PREFIX) or text in (
-                markers.SUMMARY_HEADING,
-                markers.SIGNALS_HEADING,
-            ) or text.startswith(markers.READ_TIME_PREFIX):
-                drop_next_items = False
-            else:
-                drop_next_items = True  # sponsor name row
-                row.decompose()
-            continue
-        if drop_next_items:
-            row.decompose()
-        elif text[0].isdigit() and _SPONSOR_PREVIEW_RE.match(text):
-            # sponsored signal-preview row: "2. ngrok: Your self-hosted models..."
-            # (sponsor name + colon right after the rank; organic headlines don't
-            # lead with a colon-suffixed name)
-            row.decompose()
-
-
-def _scrub_signals(table: Tag) -> None:
-    """Drop sponsored items from the full Signals section.
-
-    Each signal item lives in its own sub-table; a sponsored one carries a
-    'Presented by <name>' line. Remove the smallest ancestor table that
-    contains the sponsor line but not the 'Signals' heading.
-    """
-    for el in table.find_all(string=lambda s: s and markers.SPONSOR_PRESENTED_BY in s):
-        node = el.find_parent("table")
-        while node is not None:
-            text = node.get_text(" ", strip=True)
-            parent = node.find_parent("table")
-            if parent is None or markers.SIGNALS_HEADING in squash_ws(
-                parent.get_text(" ", strip=True)
-            )[:20]:
-                break
-            # climb while the parent is still item-scoped (no heading in it)
-            if squash_ws(parent.get_text(" ", strip=True)).startswith(
-                markers.SIGNALS_HEADING
-            ):
-                break
-            node = parent
-        if node is not None:
-            node.decompose()
-
-
 def _strip_tracking_pixels(soup: BeautifulSoup) -> None:
     for img in soup.find_all("img"):
         src = img.get("src", "")
@@ -217,19 +130,35 @@ def _strip_tracking_pixels(soup: BeautifulSoup) -> None:
 def clean(html: str) -> CleanResult:
     soup = BeautifulSoup(html, "lxml")
     _strip_tracking_pixels(soup)
-    container = _find_section_container(soup)
+    fp = inspection.fingerprint(soup)
+
+    def unparsed(reason: str, template: EmailTemplate | None = None,
+                 leads: list[str] | None = None) -> Exception:
+        """Content -> potential new template; no content -> skip."""
+        if fp.verdict == inspection.PROMO:
+            return NotADigestError(f"no newsletter content ({fp.summary_line()})")
+        return FormatDriftError(reason, fingerprint=fp,
+                                template=template.name if template else None,
+                                leads=leads)
+
+    try:
+        container = _find_section_container(soup)
+    except FormatDriftError as exc:
+        raise unparsed(str(exc)) from None
+
+    tables = container.find_all("table", recursive=False)
+    texts = [squash_ws(t.get_text(" ", strip=True)) for t in tables]
+    leads = [t[:100] for t in texts if t]
+    template = templates.detect(tables, texts)
+    if template is None:
+        raise unparsed("no registered template recognises this layout", leads=leads)
 
     sections: list[Section] = []
-    for table in container.find_all("table", recursive=False):
-        kind = _classify(table)
+    for table, text in zip(tables, texts):
+        kind = template.classify(table, text) if text else None
         if kind is None:
             continue
-        if kind == "intro":
-            _scrub_intro(table)
-        elif kind == "summary":
-            _scrub_summary(table)
-        elif kind == "signals":
-            _scrub_signals(table)
+        template.scrub(kind, table)
         lead = squash_ws(table.get_text(" ", strip=True))[:80]
         sections.append(Section(kind=kind, table=table, lead=lead))
 
@@ -239,27 +168,18 @@ def clean(html: str) -> CleanResult:
     if not any(s.kind == "article" for s in sections):
         sections = [s for s in sections if s.kind != "author"]
 
-    _validate(sections)
-    return CleanResult(sections=sections, cleaned_html=_render(sections))
+    problems = _validate(sections)
+    if problems:
+        raise unparsed(f"{template.name} template matched but: " + "; ".join(problems),
+                       template, leads)
+    return CleanResult(sections=sections, cleaned_html=_render(sections),
+                       template=template, fingerprint=fp)
 
 
-def _validate(sections: list[Section]) -> None:
+def _validate(sections: list[Section]) -> list[str]:
     kinds = [s.kind for s in sections]
-
-    # Long-form send: validated on its own terms, not the digest's.
     if "article" in kinds:
-        if "intro" not in kinds:
-            raise FormatDriftError("article is missing its intro section")
-        return
-
-    # Neither a digest nor an article => some other send from the same address.
-    # A digest missing only *some* landmarks still falls through to the drift
-    # check below, which is the alarm that matters.
-    if not {"summary", "news", "signals"} & set(kinds):
-        raise NotADigestError(
-            "no summary, news, signals or article sections — not a known format"
-        )
-
+        return [] if "intro" in kinds else ["article is missing its intro section"]
     problems = []
     if "intro" not in kinds:
         problems.append("intro section missing")
@@ -269,10 +189,7 @@ def _validate(sections: list[Section]) -> None:
         problems.append("no news blocks found")
     if "signals" not in kinds:
         problems.append("signals section missing")
-    if problems:
-        raise FormatDriftError(
-            "Cleaned email failed validation: " + "; ".join(problems)
-        )
+    return problems
 
 
 def _render(sections: list[Section]) -> str:

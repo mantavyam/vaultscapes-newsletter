@@ -23,6 +23,7 @@ import requests
 from google.auth.transport.requests import Request
 from google.oauth2 import service_account
 
+import alerts
 from utils.helpers import DATA_DIR
 
 SCOPE = "https://www.googleapis.com/auth/firebase.messaging"
@@ -78,8 +79,12 @@ def main() -> int:
     headline = (issue.get("title") or issue.get("subject") or "New issue").strip()
     title = f"📖 {issue.get('kicker', 'Deep Dive')}" if is_article else "Your daily AI intelligence briefing has landed."
 
-    token, project_id = _access_token(raw)
     topic = os.environ.get("FCM_TOPIC", "news-feed")
+    try:
+        token, project_id = _access_token(raw)
+    except Exception as exc:  # bad/expired service account JSON
+        _report_failure(iso_date, f"Could not mint an FCM access token: {type(exc).__name__}: {exc}")
+        return 0
 
     message = {
         "message": {
@@ -115,13 +120,24 @@ def main() -> int:
     if response.status_code != 200:
         print(f"FCM push failed: {response.status_code} {response.text}",
               file=sys.stderr)
+        _report_failure(iso_date, f"FCM answered {response.status_code}: {response.text[:500]}")
         # Non-fatal: the issue is published and the app's poll will still find
         # it. Failing the job here would bury a successful publish.
         return 0
 
     print(f"Pushed {iso_date} to /topics/{topic}: {title} — {headline}")
     _record_pushed(iso_date)
+    alerts.close_issues("push-failed", f"Pushed {iso_date}: {alerts.run_link()}")
     return 0
+
+
+def _report_failure(iso_date: str, detail: str) -> None:
+    alerts.open_issue(
+        "push-failed", "FCM push notification not delivered",
+        f"Issue **{iso_date}** was published but the app notification failed.\n\n"
+        f"{detail}\n\nRun: {alerts.run_link()}\n\nThe feed itself is fine; the "
+        "app still finds the issue on its next fetch. Check the FCM_SERVICE_ACCOUNT secret.",
+    )
 
 
 if __name__ == "__main__":

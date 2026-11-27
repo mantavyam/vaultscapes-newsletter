@@ -123,15 +123,17 @@ def test_a_digest_missing_sections_is_still_reported_as_drift():
     payload = cleaner.load_eml(DIGEST)
     broken = payload.html.replace("Signals", "Sig_nals").replace(
         "Summary", "Sum_mary")
-    with pytest.raises((cleaner.FormatDriftError, cleaner.NotADigestError)):
+    with pytest.raises(cleaner.FormatDriftError):
         cleaner.clean(broken)
 
 
-def test_an_unknown_send_is_skipped_not_quarantined():
+def test_a_digest_with_unknown_headings_is_never_skipped():
+    """Every landmark renamed, but the content (likes, headline links) remains:
+    that is a redesigned digest, not a promo — it must raise, not be skipped."""
     payload = cleaner.load_eml(DIGEST)
     stripped = (
         payload.html.replace("Signals", "x").replace("Summary", "x")
         .replace("Top ", "x").replace("Deep Dive", "x")
     )
-    with pytest.raises(cleaner.NotADigestError):
+    with pytest.raises(cleaner.FormatDriftError):
         cleaner.clean(stripped)

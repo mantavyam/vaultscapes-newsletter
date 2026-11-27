@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "23-11-2026",
+  "iso_date": "2026-11-23",
+  "subject": "🧪 OpenAI MedChemBench: GPT-6 Astra fails drug selection at 50%",
+  "intro": "OpenAI had a big Thursday. A drug discovery benchmark and a safety paper dropped the same day. Two very different problems, one common thread: AI is only as useful as what you can trust it to do. MedChemBench grades models on chemistry they can't fake. Adversarial distillation research shows how bad actors clone those same models, guardrails stripped out. Meanwhile NVIDIA quietly published CPU-ARC, caching LLM reasoning as plain CPU code at up to 291x lower cost. Capability, safety, efficiency. One news cycle.",
+  "read_time": "6 min 39 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "OpenAI releases benchmark measuring how well models find new drug candidates",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI reveals how model distillation bypasses safety guardrails and how to stop it",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Google Antigravity upgrades its CLI tool to let you fork and explore agent threads mid-task",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "OpenAI releases benchmark measuring how well models find new drug candidates",
+      "likes": 4956,
+      "body": "Drug discovery is slow, expensive, and brutal. Finding one viable drug candidate can take years of lab work. OpenAI just released MedChemBench to measure how well AI can speed that up. Think of it as a chemistry exam for AI. It pulls from 117 papers and patents, with 761 molecular structures across 99 problems. Models had to reconstruct compounds, explain findings, choose candidates, and predict properties. Here is what the benchmark actually tests: The results are uneven. GPT-6 Astra scored 95.4% on structure tasks, but only about half on compound selection and numerical prediction. MedChemBench is a capability signal, not proof AI can independently identify viable drug candidates. But it gives you a clear, honest picture of where AI actually helps in chemistry workflows today.",
+      "bullets": [
+        "Reading molecular structures (think: decoding a chemical blueprint)",
+        "Reasoning from experimental results",
+        "Picking which compounds to test next",
+        "Predicting how a drug behaves in the body"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795410384613-ks1pj0.png",
+      "read_more_url": "https://openai.com/index/introducing-medchembench/"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "OpenAI reveals how model distillation bypasses safety guardrails and how to stop it",
+      "likes": 4803,
+      "body": "Here is something worth knowing about. OpenAI just published research on a sneaky attack called adversarial distillation , where someone uses a powerful AI's outputs to train a cheaper copy, but without any of the safety rules baked in. Think of it like photocopying a locked book and removing all the warning labels. The copied model can reproduce advanced capabilities without the safety restrictions, meaning it could help with things the original would have refused. Here is what the numbers look like: Older model families with weaker safeguards are now blocked from reading GPT-6.2's protected reasoning. This matters because it shapes how AI APIs get locked down going forward.",
+      "bullets": [
+        "Attack success rate dropped from 54% on GPT-6 Astra to just 0.2% on GPT-6.2 Astra.",
+        "Defenses combine model training, automated classifiers, and API-level restrictions.",
+        "Weekly enforcement actions have hit thousands to tens of thousands of accounts running distillation campaigns."
+      ],
+      "image_url": "https://alphasignal.ai/image/1795410415973-rhe3vq.png",
+      "read_more_url": "https://openai.com/index/combatting-adversarial-distillation/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Google Antigravity upgrades its CLI tool to let you fork and explore agent threads mid-task",
+      "likes": 4077,
+      "body": "Google Antigravity just upgraded /btw , and it is way more useful now. Before, /btw let you sneak in a quick question while your AI agent was busy working. Think of it like tapping a colleague on the shoulder mid-task. Handy, but limited. Now, /btw spins up a full forked conversation , meaning a separate copy of your chat that runs in parallel, with all your existing context included. You explore a side idea, and your main task keeps running untouched. Here is what you can do with it now: To try it, run agy update in your terminal, then type /btw followed by your question inside any active session. Works in the app, CLI, and IDE extensions.",
+      "bullets": [
+        "Ask a side question without breaking your agent's flow",
+        "Explore a rabbit hole in a parallel thread, then promote it back to your main conversation",
+        "Use /copy btw to pull the side answer back into your main thread"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795410476440-x3mg6d.png",
+      "read_more_url": "https://x.com/antigravity/status/2123921833883840650"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Thinking Machines drops 26B open-source model that runs on 16GB RAM",
+      "stat": {
+        "type": "likes",
+        "value": 3495
+      },
+      "url": "https://github.com/unslothai/unsloth"
+    },
+    {
+      "rank": 2,
+      "headline": "NVIDIA method caches LLM reasoning as CPU code, cutting costs up to 291x",
+      "stat": {
+        "type": "likes",
+        "value": 1268
+      },
+      "url": "https://arxiv.org/abs/2611.09891"
+    },
+    {
+      "rank": 3,
+      "headline": "Study explains why AI-generated text feels harder to read than human writing",
+      "stat": {
+        "type": "likes",
+        "value": 748
+      },
+      "url": "https://arxiv.org/abs/2610.29162"
+    },
+    {
+      "rank": 4,
+      "headline": "AtomicChat releases uncensored GGUF model you can run locally",
+      "stat": {
+        "type": "downloads",
+        "value": 129693
+      },
+      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF"
+    },
+    {
+      "rank": 5,
+      "headline": "Dev open-sources 30 SEO skills and 4 MCP servers for Claude Code and Cursor",
+      "stat": {
+        "type": "likes",
+        "value": 2563
+      },
+      "url": "https://github.com/Illyism/seo-skills"
+    }
+  ]
+}

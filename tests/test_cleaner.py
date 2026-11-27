@@ -74,6 +74,15 @@ def test_content_preserved(result):
     assert "Prefect" in html            # signal 3 (kept)
 
 
-def test_format_drift_raises():
-    with pytest.raises(cleaner.FormatDriftError):
+def test_layout_without_content_is_not_a_digest():
+    # No container and no newsletter content: skipped, not a template alert.
+    with pytest.raises(cleaner.NotADigestError):
         cleaner.clean("<html><body><p>totally different layout</p></body></html>")
+
+
+def test_content_in_unknown_container_raises_drift():
+    payload = cleaner.load_eml(FIXTURE)
+    # a div-based redesign: content stays, the table container is gone
+    flat = payload.html.replace("<table", "<div").replace("</table>", "</div>")
+    with pytest.raises(cleaner.FormatDriftError):
+        cleaner.clean(flat)

@@ -1,0 +1,2318 @@
+Delivered-To: vaultscapes@gmail.com
+Received: by 2002:a17:504:9f88:b0:1f04:f1d8:fd78 with SMTP id ki8csp8427113njc;
+        Thu, 26 Nov 2026 06:07:46 -0800 (PST)
+X-Received: by 2002:a05:6808:13ce:b0:53c:7298:3598 with SMTP id 5614622812f47-57a0a100248mr22757793b6e.31.1795702066083;
+        Thu, 26 Nov 2026 06:07:46 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1795702066; cv=none;
+        d=google.com; s=arc-20260327;
+        b=N/uRfgK8tlWLJiYC7T3W5g890U28MnQ9QbcQibfNnkqXoQIBqAaGGUMmWTiYhznDJs
+         FSNfNojF6Hz/z7LX4kJn4oofLDNv2vmF5rpC/gzUsddgRGMSvuQZqjsCBFxM6CA2CDkm
+         zBFYh6imoSoDAcNbZvshgyj4IXPcSGIjDDoUbeb9zrqBhWlnWgVIKjfB9V40tV5Z7ZwO
+         MBKTVEemfs21A31Y9K/g1RLSfbP7AKO9zipoSlTzFdmvT18As1Eh1QF5WmSxkb7veFee
+         3weQPv0UJrXYZXq7V6FNNLs5NiBdT4GnDiYTyejp/55bE3Cp5tUPrILlDd/Ae+tvTx4A
+         Fijg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=date:message-id:list-help:abuse-reports-to:archived-at:organization
+         :auto-submitted:precedence:feedback-id:list-id:list-unsubscribe-post
+         :list-unsubscribe:mime-version:subject:to:from:dkim-signature
+         :dkim-signature;
+        bh=B1JVhIfbq580SdFsZ6SxVANrhbORDlVyRvhYKhN41ro=;
+        fh=8G0ZOTAlRwwLltMm/X15mRXT5TIPjfL6UJZG8Prad60=;
+        b=gxVH9zIsZ9T/3423x1ClTXEUFAaS9N1AudXvrgTMHnEw50th49PfPkZheGpd/47ufu
+         3wq4jkcXUvJo2XfPvSu0o/2w0+NPH0bqRVWTnZDjTL30OXN5o3IHZf9h67oIiyyfcWzr
+         vViY66M8NBSx1o7ua7k/7fqOZlj67fJ4AQMiFnHrt1SrJ2tdN3uhq0O4qT3a5P+TtGVu
+         gwCxV1LNLj+8eWrbcLvI2BDZ9xScM04kK7iYRByaV2qDKFHa7C5DcBUCTvCNP+i2exQq
+         hAUBtz6/bsbCyKSaMDjE6H6lZJ4q2O9Vv2p3b8oKi/XI37Op1LTySMKldv7gyT1QlmOw
+         gOqQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@alphasignal.ai header.s=yass3qdefwttiurf54cklhcyf2sz5d6f header.b="lA8/KPxB";
+       dkim=pass header.i=@amazonses.com header.s=kra23psoka5qyyh6gdejiiuof3nluwuz header.b=T5QxAq0J;
+       spf=pass (google.com: domain of 010f01a2182f0a4a-9f6fe593-cc12-4d77-ad62-3a9cad29cc90-000000@news.alphasignal.ai designates 54.240.115.228 as permitted sender) smtp.mailfrom=010f01a2182f0a4a-9f6fe593-cc12-4d77-ad62-3a9cad29cc90-000000@news.alphasignal.ai;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alphasignal.ai
+Return-Path: <010f01a2182f0a4a-9f6fe593-cc12-4d77-ad62-3a9cad29cc90-000000@news.alphasignal.ai>
+Received: from a115-228.smtp-out.us-east-2.amazonses.com (a115-228.smtp-out.us-east-2.amazonses.com. [54.240.115.228])
+        by mx.google.com with ESMTPS id 5614622812f47-57a2df508bbsi26870759b6e.0.2026.11.26.06.07.45
+        for <vaultscapes@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 26 Nov 2026 06:07:46 -0800 (PST)
+Received-SPF: pass (google.com: domain of 010f01a2182f0a4a-9f6fe593-cc12-4d77-ad62-3a9cad29cc90-000000@news.alphasignal.ai designates 54.240.115.228 as permitted sender) client-ip=54.240.115.228;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@alphasignal.ai header.s=yass3qdefwttiurf54cklhcyf2sz5d6f header.b="lA8/KPxB";
+       dkim=pass header.i=@amazonses.com header.s=kra23psoka5qyyh6gdejiiuof3nluwuz header.b=T5QxAq0J;
+       spf=pass (google.com: domain of 010f01a2182f0a4a-9f6fe593-cc12-4d77-ad62-3a9cad29cc90-000000@news.alphasignal.ai designates 54.240.115.228 as permitted sender) smtp.mailfrom=010f01a2182f0a4a-9f6fe593-cc12-4d77-ad62-3a9cad29cc90-000000@news.alphasignal.ai;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alphasignal.ai
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yass3qdefwttiurf54cklhcyf2sz5d6f; d=alphasignal.ai; t=1795702065;
+	h=From:To:Subject:MIME-Version:Content-Type:List-Unsubscribe:List-Unsubscribe-Post:List-Id:List-Help:Message-ID:Date;
+	bh=Efwaujol8TVpckActmRGy27ZFs0RSk0Hl6OMD6ji7ck=;
+	b=lA8/KPxB+5aIqO6jNXUpJHWQiDQECdI0F6MsayUC5tfN7ywMf3UOQMoPOlId6c8k
+	R2iI7qR4guT25Nm2TDsBPjU1w0cajBXm8BCDYRa64KY/AQklp7K8dY1hE7TITMQmd44
+	QSVLY59Q7U0s+QAJZbkvAMVTw+az+a7VY+l1HCUPgZPCqsXXD52PYCWyfwrVkkvlM5M
+	udX6yiLAAEEIf9n9FbukuJ760UOiI4sCt3GwdrXOf2BAYPOG/fOlc7BkPj1GaVmnAQb
+	F70Z6GeQwlaaDzXf+JiStKDJ6BwSTbKIzALEXJ76uR2KHOy7+QPm384pkZGx93JTaOY
+	jJMX7jg41w==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=kra23psoka5qyyh6gdejiiuof3nluwuz; d=amazonses.com; t=1795702065;
+	h=From:To:Subject:MIME-Version:Content-Type:List-Unsubscribe:List-Unsubscribe-Post:List-Id:Feedback-ID:List-Help:Message-ID:Date;
+	bh=Efwaujol8TVpckActmRGy27ZFs0RSk0Hl6OMD6ji7ck=;
+	b=T5QxAq0JdMrwaYWkRL7rayHpdKOf83Nd1kAO3+2sMKw58EXYooNcbQS8GohYIhnn
+	mrdIMlKuTh9JWCXTJMkhyOK9wtyuoGpULkdS6h+RpHYsEAvNzUF6pMe8j0Bf8G1pF3V
+	1T+6J/im8fhRf9wh6psk+Un0SWfzJ7/Kn2f1f41g=
+From: AlphaSignal <news@alphasignal.ai>
+To: vaultscapes@gmail.com
+Subject: =?UTF-8?Q?=F0=9F=94=8D_NVIDIA_Nemotron_Parse_2.0?=
+ =?UTF-8?Q?:_OCR_jumps_44%=E2=86=9291%,_2GB_RAM?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1993687_1481956277.1795702065738"
+List-Unsubscribe: <mailto:news@alphasignal.ai?subject=unsubscribe%206cecf12a6dbe2e64>, <https://alphasignal.ai/us?uid=DhS8ajH7NeRZK5Ns&cid=6cecf12a6dbe2e64>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: AlphaSignal Newsletter <news.alphasignal.ai>
+Feedback-ID: ::1.us-east-2.jAR5U7QBOAP7Zz6aQYGcElD40cTATkRIc5pck9uHLa4=:AmazonSES
+Precedence: bulk
+Auto-Submitted: auto-generated
+Organization: AlphaSignal
+Archived-At: https://alphasignal.ai/email/6cecf12a6dbe2e64
+X-Report-Abuse: mailto:news@alphasignal.ai
+X-Report-Spam: mailto:news@alphasignal.ai
+Abuse-Reports-To: mailto:news@alphasignal.ai
+List-Help: <mailto:news@alphasignal.ai?subject=help>
+Message-ID: <010f01a2182f0a4a-9f6fe593-cc12-4d77-ad62-3a9cad29cc90-000000@us-east-2.amazonses.com>
+Date: Thu, 26 Nov 2026 14:07:45 +0000
+X-SES-Outgoing: 2026.11.26-54.240.115.228
+
+------=_Part_1993687_1481956277.1795702065738
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+AlphaSignal
+Stay updated with today's top AI news, papers, and repos.
+Hey Vaultscapes,
+Google shipped a 17-guide Gemma 4 fine-tuning hub and regional voices for G=
+emini, while NVIDIA quietly dropped a sub-1B document parser. Three release=
+s, one pattern: the infra layer is getting polished fast.
+We're past the "models are getting smarter" era. The race now is making the=
+m usable by more people, on cheaper hardware, in more languages.
+Accessibility is the new benchmark.
+In Partnership with
+=C2=B7
+Summary
+6 min 0 sec read
+=E2=86=92
+NVIDIA's Nemotron Parse 2.0 Turns Any
+Scanned Page Into
+Structured Data
+=C2=B7=C2=A0TOP MODEL
+=E2=86=92
+LLM Inference API Optimized for Cost & Performance
+=C2=B7=C2=A0VERDA
+=E2=86=92
+Maximilian228's Qwen3 125B Squeeze Runs on a 12 GB
+Consumer GPU
+=C2=B7=C2=A0TOP MODEL
+=E2=86=92
+A GPU in under 30 seconds. Back to building.
+=C2=B7=C2=A0RUNPOD
+=E2=86=92
+Compendium Labs'
+BGE Base En
+v1.5 GGUF Build Hits 800,000 Downloads
+=C2=B7=C2=A0TOP MODEL
+SIGNALS
+=E2=86=92
+University of Catania Beats Gemini 1.5 Pro at
+Predicting Your Next
+Touch
+=E2=86=92
+Give Claude Code or Codex an H100, H200 or B200 by API call, billed by the =
+second across 1,600+ GPUs
+=C2=B7=C2=A0LIUM.IO
+=E2=86=92
+KET-RAG Audit Finds 84% of
+AI Errors Happen
+After Retrieval
+=E2=86=92
+KD-ML Turns
+Fuzzy Expert Rules
+Into AI Training Signals Without Equations
+=E2=86=92
+Google Builds a Single Gemma 4
+Fine-Tuning Hub
+With 17 Guides
+=E2=86=92
+Video Fine-Tuning Secretly
+Destroys Image Skills
+in Qwen2.5-VL
+Your feed, built around your preferences
+Upgrade to PRO and connect X, GitHub or Hugging Face. We=E2=80=99ll build y=
+our newsletter and website feed around your preferences: the topics and com=
+panies you care about.
+UPGRADE
+PRO can be expensed through your employer.
+Top Model
+NVIDIA's Nemotron Parse 2.0 Turns Any Scanned Page Into Structured Data
+=E2=96=B2
+3,714 Likes
+NVIDIA just dropped
+Nemotron Parse 2.0
+, a small but capable model that turns scanned pages and PDFs into clean, s=
+tructured data you can actually use.
+Here's the deal: you feed it a page image, it spits back text with labels, =
+coordinates, and reading order. Think of it like a super-powered scanner th=
+at also understands layout.
+What's new in v2.0:
+Charts are now supported, it can convert chart visuals into tables
+Handwriting recognition improved dramatically (error rate dropped from 0.97=
+ to 0.34)
+Indic script accuracy jumped from 6% to 72%
+Multilingual OCR score went from 44% to 91%
+The model runs on a
+single A100 GPU
+and uses under 2GB of memory. You load it via Hugging Face Transformers, po=
+int it at a PNG of your page, and get back Markdown, JSON, CSV, or HTML.
+This opens up local document pipelines with no per-page API costs. Perfect =
+for building search indexes, feeding RAG systems, or extracting tables into=
+ databases. Weights are
+commercially licensed
+under OpenMDW 1.1.
+Forward
+Read more
+Presented by Verda
+LLM Inference API Optimized for Cost & Performance
+Inference API for
+frontier open-weight LLMs
+, hosted in the EU. Run Kimi K3.1 Pro and DeepSeek V4.1 Flash through one O=
+penAI-compatible API.
+10x faster time to first token than standard caching on long-context agenti=
+c workloads.
+1M-token context window. Tool calling supported.
+Pay-per-token, cached input at lower prices.
+Performance engineered for every request, from one prompt to agents that ru=
+n for hours.
+Partner with us
+Try the API
+Top Model
+Maximilian228's Qwen3 125B Squeeze Runs on a 12 GB Consumer GPU
+=E2=96=B2
+3,617 Likes
+A
+125-billion parameter AI model
+just got squeezed onto a regular gaming GPU. Here is how it works.
+Normally a model this size needs a server rack. A community contributor fig=
+ured out how to split the workload:
+your GPU handles active computation
+, while the bulk of model weights sit in regular system RAM and get pulled =
+in as needed. Think of it like streaming from RAM instead of loading everyt=
+hing at once.
+The model is a
+Mixture-of-Experts
+(MoE), meaning it only activates a small slice of its 125B parameters per r=
+esponse. That is what makes the RAM split feasible.
+Minimum setup: 12 GB VRAM + 64 GB RAM, Windows only, NVIDIA driver 580+
+Decodes at
+177 tokens per second
+with 93.6% accuracy vs. the reference model
+More VRAM unlocks longer context, up to 262K tokens on a 32 GB card
+Only runs on Strata, not llama.cpp, vLLM, or Transformers
+The tradeoff is real: you are locked into one Windows-only runtime. But run=
+ning a 125B model on desktop hardware opens up local AI at a scale that was=
+ not possible before.
+Forward
+Read more
+Presented by Runpod
+A GPU in under 30 seconds. Back to building.
+Runpod
+gets you a GPU in under 30 seconds, so the first hour goes to your code. St=
+art from a community template, build on a Pod, then put it behind a Serverl=
+ess endpoint that scales from zero. No Dockerfile needed with Flash. Pay on=
+ly for the compute you use.
+Partner with us
+Deploy Today
+Top Model
+Compendium Labs' BGE Base En v1.5 GGUF Build Hits 800,000 Downloads
+=E2=96=B2
+3,400 Likes
+You know how AI apps need to understand text meaning, not just keywords? Th=
+at's what an
+embedding model
+does: it converts text into numbers your app can compare. BGE Base is one o=
+f the best English embedding models out there, and now it runs fully local,=
+ no Python, no PyTorch.
+Compendium Labs packaged it into
+GGUF format
+, the same format you use for local LLMs, so one runtime handles both your =
+generator and your embedder. It hit 800,000 downloads.
+Pick your size:
+Q4_K_M at 66 MB
+: small enough to bundle inside a desktop app
+Q8_0 at 113 MB: better accuracy, still CPU-friendly
+F16 at 209 MB: near-perfect precision for servers
+Spin it up with llama.cpp or Ollama and hit a local OpenAI-compatible endpo=
+int. Works with LangChain too. Two things to remember: prefix search querie=
+s with "Represent this sentence for searching relevant passages:", and chun=
+k your text before 512 tokens or it gets cut off.
+Forward
+Read more
+Our Events
+From Vulnerable Dependencies to Tested Pull Requests with Snyk
+Dec 9, 10a PT =C2=B7 Online =C2=B7
+Register now
+How to Design a Software Factory
+Dec 15, 10a PT =C2=B7 Online =C2=B7
+Register now
+When AI Agents Ship Faster Than Security Can Review
+Dec 17, 10a PT =C2=B7 Online =C2=B7
+Register now
+Signals
+University of Catania Beats Gemini 1.5 Pro at Predicting Your Next Touch
+=E2=96=B2
+3,117 Likes
+Presented by Lium.io
+Give Claude Code or Codex an H100, H200 or B200 by API call, billed by the =
+second across 1,600+ GPUs
+KET-RAG Audit Finds 84% of AI Errors Happen After Retrieval
+=E2=96=B2
+3,088 Likes
+KD-ML Turns Fuzzy Expert Rules Into AI Training Signals Without Equations
+=E2=96=B2
+3,032 Likes
+Google Builds a Single Gemma 4 Fine-Tuning Hub With 17 Guides
+=E2=96=B2
+2,606 Likes
+Video Fine-Tuning Secretly Destroys Image Skills in Qwen2.5-VL
+=E2=96=B2
+2,491 Likes
+AlphaSignal PRO
+You are not getting all of AlphaSignal.
+Upgrade to PRO for an edition built around the topics, subtopics and compan=
+ies you follow,
+              with personal picks across news, models, papers and repos.
+Unlock everything
+How was today's email?
+Awesome
+Decent
+Not great
+=C2=A92026 AlphaSignal =C2=B7 214 Barton Springs Rd, Austin, USA
+Unsubscribe
+Advertise with AlphaSignal
+X
+Archive
+Sign up
+Upgrade
+
+Stop receiving emails here: https://app.alphasignal.ai/unsubscribe/u/DhS8aj=
+H7NeRZK5Ns?cid=3D6cecf12a6dbe2e64
+------=_Part_1993687_1481956277.1795702065738
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+<!DOCTYPE html>
+
+<html lang=3D"en">
+<head>
+<meta charset=3D"utf-8"/>
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"/>
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewpor=
+t"/>
+<meta content=3D"light" name=3D"color-scheme"/>
+<meta content=3D"light dark" name=3D"supported-color-schemes"/>
+<title>AlphaSignal</title>
+<style type=3D"text/css">
+      /* Reset text resizing */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      li:last-child {
+        margin-bottom: 0; /* remove margin from last item */
+      }
+
+      img {
+        border: 0;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+        display: block;
+      }
+
+      .h1 {
+        font-size: 17px !important;
+      }
+
+      .p {
+        font-size: 15px !important;
+      }
+
+      p {
+        margin-top: 10px;
+        padding: 0;
+      }
+
+
+      .menu-bar {
+        text-align: center !important;
+        font-size: 14px !important;
+        line-height: 20px !important;
+      }
+
+      .menu-bar a {
+        display: inline-block !important;
+        padding: 3px 8px !important;
+      }
+
+      /* Mobile styles */
+      @media only screen and (max-width: 600px) {
+
+        .mobile-hidden {
+          display: none !important;
+          mso-hide: all !important;
+        }
+       =20
+
+        .signal-img-cell {
+          width: 90px !important;
+          padding-left: 10px !important;
+        }
+
+        .signal-img {
+          width: 90px !important;
+          height: 90px !important;
+          min-width: 90px !important;
+          min-height: 90px !important;
+          max-width: 90px !important;
+          max-height: 90px !important;
+        }
+
+        .h1 {
+          font-size: 17px !important;
+          line-height: 22px !important;
+        }
+
+        .p {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .btn {
+          font-size: 12px !important;
+          padding: 7px 16px !important;
+        }
+
+        .ul li {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .menu-bar {
+          text-align: center !important;
+        }
+
+        .menu-bar a {
+          display: inline-block !important;
+          padding: 6px 8px !important;
+        }
+
+        .feedback-box {
+          padding: 20px !important;
+        }
+
+        .feedback-title {
+          font-size: 16px !important;
+          line-height: 22px !important;
+        }
+
+        .feedback-link {
+          font-size: 15px !important;
+          line-height: 20px !important;
+        }
+
+        .feedback-btn {
+          display: block !important;
+          width: 100% !important;
+          margin: 0 0 10px 0 !important;
+          box-sizing: border-box !important;
+          text-align: center !important;
+        }
+
+.feedback-btn-last {
+          margin-bottom: 0 !important;
+        }
+
+        /* "Your Signal" preferences block =E2=80=94 stack columns on mobil=
+e */
+        .ys-col {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          max-width: 100% !important;
+        }
+
+        .ys-divider-cell {
+          display: none !important;
+          mso-hide: all !important;
+        }
+
+    .ys-col-right {
+          padding-top: 18px !important;
+          margin-top: 18px !important;
+        }
+      }
+    </style>
+<!--[if mso]>
+    <style type=3D"text/css">
+      .h1,
+      .p,
+      .btn,
+      .ul li {
+        font-family: Arial, sans-serif !important;
+      }
+    </style>
+    <![endif]-->
+</head><img src=3D"https://app.alphasignal.ai/o?uid=3DDhS8ajH7NeRZK5Ns&cid=
+=3D6cecf12a6dbe2e64&mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1&s=3D%F0%9F%9=
+4%8D%20NVIDIA%20Nemotron%20Parse%202.0%3A%20OCR%20jumps%2044%25%E2%86%9291%=
+25%2C%202GB%20RAM&t=3D1795702055" width=3D"1" height=3D"1" alt=3D"" aria-hi=
+dden=3D"true" role=3D"presentation" style=3D"display:block;border:0;outline=
+:none;text-decoration:none;opacity:0;"><div style=3D"display:none!important=
+;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;op=
+acity:0;color:transparent;">Nemotron Parse 2.0: Indic script accuracy 6%=E2=
+=86=9272%, sub-1B weights, A100-only, OpenMDW licensed.</div>
+<body bgcolor=3D"#ffffff" style=3D"margin:0; padding:0; background-color:#f=
+fffff;">
+<table bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"background-color:#ffffff;" width=3D"100%">
+<tr>
+<td align=3D"center" style=3D"padding:0 10px;">
+<!-- all your inner tables start here -->
+<!-- Hidden Preheader -->
+<div style=3D"display:none !important;font-family:Helvetica, Arial, sans-se=
+rif;font-size:1px;color:#ffffff;line-height:1px;
+                  max-height:0px;max-width:0px;overflow:hidden;opacity:0;">
+        Stay updated with today's top AI news, papers, and repos.
+      </div>
+<!-- Space above the banner (where the header menu used to sit) -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:0 auto;" width=3D"100%">
+<tr><td height=3D"12" style=3D"height:12px;font-size:0;line-height:0;">=C2=
+=A0</td></tr>
+</table>
+<!-- Header Image -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:0 auto;margin-bottom:0;" width=3D"100%">
+<tr>
+<td style=3D"padding:0;border-bottom:none;">
+<img alt=3D"AlphaSignal" border=3D"0" src=3D"https://alphasignal.ai/image/1=
+774379296454-hg8tkk.png" style=3D"display:block;width:100%;max-width:600px;=
+height:auto;" width=3D"600"/>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:auto;margin-top:10px;background-color:#f=
+fffff;margin-bottom:20px;" width=3D"100%">
+<tr>
+<td style=3D"padding:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"padding:20px 20px 0 20px;">
+<!-- Greeting -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                   font-size:16px;
+                   line-height:24px;
+                   font-weight:bold;
+                   color:#000000;
+                   padding:0 0 10px 0;">
+<p style=3D"margin:0;">Hey Vaultscapes,</p>
+</td>
+</tr>
+</table>
+<!-- Intro text -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                   font-size:15px;
+                   line-height:22px;
+                   font-weight:400;
+                   color:#000000;">
+          Google shipped a 17-guide Gemma 4 fine-tuning hub and regional vo=
+ices for Gemini, while NVIDIA quietly dropped a sub-1B document parser. Thr=
+ee releases, one pattern: the infra layer is getting polished fast.<br/><br=
+/>We're past the "models are getting smarter" era. The race now is making t=
+hem usable by more people, on cheaper hardware, in more languages.<br/><br/=
+>Accessibility is the new benchmark.
+        </td>
+</tr>
+</table>
+<!-- Ad block -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;" width=3D"100%">
+<tr>
+<td style=3D"padding:30px 0 0 0;">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                         font-size:13px;
+                         line-height:24px;
+                         color:#868686;
+                         vertical-align:middle;
+                         padding-right:8px;">
+               =20
+In Partnership with
+              </td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                         font-size:13px;
+                         line-height:24px;
+                         color:#868686;
+                         vertical-align:middle;
+                         padding-right:8px;">
+                =C2=B7
+              </td>
+<td style=3D"vertical-align:middle;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DRm8wtdR1JFs46OVB&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"text-decoration:none;" target=3D"_blank"><img alt=
+=3D"partner_image" src=3D"https://alphasignal.ai/image/1795669295259-ejkfxq=
+.png" style=3D"max-height:100%;width:150px;max-width:150px;vertical-align:m=
+iddle;"/></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- No divider under the intro (owner, 2026-11-19): just the space it left=
+ -->
+<tr><td style=3D"padding:6px 0 0 0;font-size:0;line-height:0;">=C2=A0</td><=
+/tr>
+</table>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:auto;background-color:#ffffff;margin-bot=
+tom:30px;" width=3D"100%">
+<tr>
+<td style=3D"padding:18px 20px;background-color:#F5F5F5;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"padding:0 0 10px 0;font-family:Helvetica, Arial, sans-serif;fo=
+nt-size:15px;line-height:20px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-te=
+xtfill-fill-color:#000000;">
+    Summary<span style=3D"font-weight:normal;font-size:12px;color:#868686 !=
+important;">=C2=A0=C2=A06 min 0 sec read</span>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D4M82EeKdzoXHvVX9&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>NVIDIA's Nemotron Parse 2.0 Turns Any <span style=3D"font-weight:bold;colo=
+r:#000000 !important;">Scanned Page Into</span> Structured Data</a> <span s=
+tyle=3D"font-size:10px;letter-spacing:1px;color:#868686 !important;white-sp=
+ace:nowrap;">=C2=B7=C2=A0TOP MODEL</span>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DRm8wtdR1JFs46OVB&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>LLM Inference API Optimized for Cost &amp; Performance</a> <span style=3D"=
+font-size:10px;letter-spacing:1px;color:#868686 !important;white-space:nowr=
+ap;">=C2=B7=C2=A0VERDA</span>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DpJaHb0kkhppwNzny&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>Maximilian228's Qwen3 125B Squeeze Runs on a 12 GB <span style=3D"font-wei=
+ght:bold;color:#000000 !important;">Consumer GPU</span></a> <span style=3D"=
+font-size:10px;letter-spacing:1px;color:#868686 !important;white-space:nowr=
+ap;">=C2=B7=C2=A0TOP MODEL</span>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3Dbk9FtAL1TATm6OiW&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>A GPU in under 30 seconds. Back to building.</a> <span style=3D"font-size:=
+10px;letter-spacing:1px;color:#868686 !important;white-space:nowrap;">=C2=
+=B7=C2=A0RUNPOD</span>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D1aWSnAMfS8Z7AnoFT&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>Compendium Labs' <span style=3D"font-weight:bold;color:#000000 !important;=
+">BGE Base En</span> v1.5 GGUF Build Hits 800,000 Downloads</a> <span style=
+=3D"font-size:10px;letter-spacing:1px;color:#868686 !important;white-space:=
+nowrap;">=C2=B7=C2=A0TOP MODEL</span>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:12px 0 3px 0;font-family:Helvetica, Arial, sans-serif;=
+font-size:10px;line-height:14px;letter-spacing:2px;
+             font-weight:bold;color:#868686 !important;">SIGNALS</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DYrLP5okXVMBQDacw&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>University of Catania Beats Gemini 1.5 Pro at <span style=3D"font-weight:b=
+old;color:#000000 !important;">Predicting Your Next</span> Touch</a>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D1v5Go1aC9f7u6NZpg&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>Give Claude Code or Codex an H100, H200 or B200 by API call, billed by the=
+ second across 1,600+ GPUs</a> <span style=3D"font-size:10px;letter-spacing=
+:1px;color:#868686 !important;white-space:nowrap;">=C2=B7=C2=A0LIUM.IO</spa=
+n>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3Dq7szj29OXcMS7iVM&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>KET-RAG Audit Finds 84% of <span style=3D"font-weight:bold;color:#000000 !=
+important;">AI Errors Happen</span> After Retrieval</a>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D182fhLdihKJVZBRWe&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>KD-ML Turns <span style=3D"font-weight:bold;color:#000000 !important;">Fuz=
+zy Expert Rules</span> Into AI Training Signals Without Equations</a>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D1nyTqFJueJ4ShiRyH&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>Google Builds a Single Gemma 4 <span style=3D"font-weight:bold;color:#0000=
+00 !important;">Fine-Tuning Hub</span> With 17 Guides</a>
+</td>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:4px 0 5px 0;"> <!-- row pitch 29px (was 26px): ~10% mo=
+re space between items -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;
+                 color:#868686 !important;" valign=3D"top" width=3D"20">=E2=
+=86=92</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000 !important;" valign=3D"top">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D21tpiqZf6yytEH9A&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;
+           mso-color-alt:windowtext;mso-style-textfill-fill-color:#000000;"=
+>Video Fine-Tuning Secretly <span style=3D"font-weight:bold;color:#000000 !=
+important;">Destroys Image Skills</span> in Qwen2.5-VL</a>
+</td>
+</tr></table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Your feed, built around your preferences (free, Thursdays only) -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:0 auto 0 auto;border:1px solid #000000;
+             background-color:#ffffff;" width=3D"100%">
+<tr><td style=3D"padding:22px 20px 20px 20px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;font=
+-size:22px;line-height:28px;font-weight:bold;
+                       text-align:center;color:#000000;padding:0 0 6px 0;">
+              Your feed, built around your preferences
+            </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;font=
+-size:14px;line-height:20px;text-align:center;
+                       color:#000000;padding:0 0 18px 0;">
+              Upgrade to PRO and connect X, GitHub or Hugging Face. We=E2=
+=80=99ll build your newsletter and website feed around your preferences: th=
+e topics and companies you care about.
+            </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"margin:0 auto;">
+<tr>
+<td bgcolor=3D"#000000" style=3D"background-color:#000000;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DFh7al3bvREwBfXrR&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"display:inline-block;font-family:Helvetica, Arial, =
+sans-serif;font-size:13px;line-height:18px;font-weight:bold;
+                              color:#ffffff !important;text-decoration:none=
+;padding:11px 22px;" target=3D"_blank">UPGRADE</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;font=
+-size:12px;line-height:16px;text-align:center;
+                       color:#868686;padding:10px 0 0 0;">
+              PRO can be expensed through your employer.
+            </td>
+</tr>
+</table>
+</td></tr>
+</table>
+<!-- Outer Box -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:30px auto 0 auto;border:1px solid #00000=
+0;background-color:#ffffff;padding:16px 20px 16px 20px;" width=3D"100%">
+<!-- Section Title -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px;line-h=
+eight:20px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-te=
+xtfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top Model
+    </td>
+</tr>
+<!-- Divider (same black as the box border) -->
+<tr>
+<td style=3D"padding:0 0 10px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #000000;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class=3D"h1" style=3D"font-family:Helvetica, Arial, sans-serif;font-siz=
+e:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D4M82EeKdzoXHvVX9&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;mso-c=
+olor-alt:windowtext;" target=3D"_blank"><span style=3D"color:#000000 !impor=
+tant;text-decoration:none;">NVIDIA's Nemotron Parse 2.0 Turns Any Scanned P=
+age Into Structured Data</span></a>
+</td>
+</tr>
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#000000 !important;
+                  mso-color-alt:#000000;
+                  mso-style-textfill-fill-color:#000000;">
+<span style=3D"font-size:10px;font-weight:bold;">=E2=96=B2</span>=C2=A03,71=
+4 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style=3D"padding:0 0 18px 0;"> <!-- bottom only: matches the gap under =
+the story text -->
+<img alt=3D"NVIDIA's Nemotron Parse 2.0 Turns Any Scanned Page" border=3D"0=
+" src=3D"https://alphasignal.ai/image/1795698006217-nw1clb.png" style=3D"di=
+splay:block;width:100%;max-width:560px;height:auto;" width=3D"560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-h=
+eight:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfi=
+ll-fill-color:#000000;
+         padding:0;">
+<div style=3D"margin-top:0;">
+<p style=3D"margin:0 0 15px 0;">NVIDIA just dropped <b>Nemotron Parse 2.0</=
+b>, a small but capable model that turns scanned pages and PDFs into clean,=
+ structured data you can actually use.</p><p style=3D"margin:0 0 15px 0;">H=
+ere's the deal: you feed it a page image, it spits back text with labels, c=
+oordinates, and reading order. Think of it like a super-powered scanner tha=
+t also understands layout.</p><p style=3D"margin:0 0 15px 0;">What's new in=
+ v2.0:</p><ul><li>Charts are now supported, it can convert chart visuals in=
+to tables</li><li>Handwriting recognition improved dramatically (error rate=
+ dropped from 0.97 to 0.34)</li><li>Indic script accuracy jumped from 6% to=
+ 72%</li><li>Multilingual OCR score went from 44% to 91%</li></ul><p style=
+=3D"margin:0 0 15px 0;">The model runs on a <b>single A100 GPU</b> and uses=
+ under 2GB of memory. You load it via Hugging Face Transformers, point it a=
+t a PNG of your page, and get back Markdown, JSON, CSV, or HTML.</p><p styl=
+e=3D"margin:0;">This opens up local document pipelines with no per-page API=
+ costs. Perfect for building search indexes, feeding RAG systems, or extrac=
+ting tables into databases. Weights are <b>commercially licensed</b> under =
+OpenMDW 1.1.</p>
+</div>
+</td>
+</tr>
+<!-- Button row -->
+<tr>
+<td style=3D"padding:20px 0 0 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td align=3D"left" style=3D"width:25%;white-space:nowrap;" valign=3D"middle=
+" width=3D"25%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">
+<tr>
+<td align=3D"center" class=3D"btn" style=3D"font-family:Helvetica, Arial, s=
+ans-serif;font-size:12px;line-height:20px;font-weight:normal;
+                   padding:7px 16px 7px 0;color:#868686 !important;border:1=
+px solid #ffffff;white-space:nowrap;">
+<a href=3D"mailto:?subject=3DFwd%3A%20NVIDIA%27s%20Nemotron%20Parse%202.0%2=
+0Turns%20Any%20Scanned%20Page%20Into%20Structured%20Data&amp;body=3DThought=
+%20you%27d%20find%20this%20interesting%3A%0D%0A%0D%0A%22NVIDIA%20just%20dro=
+pped%20Nemotron%20Parse%202.0%2C%20a%20small%20but%20capable%20model%20that=
+%20turns%20scanned%20pages%20and%20PDFs%20into%20clean%2C%20structured%20da=
+ta%20you%20can%20actually%20use.%0D%0A%0D%0AHere%27s%20the%20deal%3A%20you%=
+20feed%20it%20a%20page%20image%2C%20it%20spits%20back%20text%20with%20label=
+s%2C%20coordinates%2C%20and%20reading%20order.%20Think%20of%20it%20like%20a=
+%20super-powered%20scanner%20that%20also%20understands%20layout.%0D%0A%0D%0=
+AWhat%27s%20new%20in%20v2.0%3A%0D%0A%0D%0ACharts...%22%0D%0A%0D%0ARead%20it=
+%20here%3A%20https%3A%2F%2Falphasignal.ai%2Femail%2F6cecf12a6dbe2e64%3Futm_=
+source%3Dforward" style=3D"text-decoration:none;color:#868686 !important;di=
+splay:inline-block;font-size:12px;font-weight:normal;white-space:nowrap;" t=
+arget=3D"_blank">
+<span style=3D"color:#868686 !important;font-weight:normal;">Forward</span>
+</a>
+</td></tr>
+</table>
+</td>
+<td align=3D"center" valign=3D"middle">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"margin:0 auto;">
+<tr>
+<td align=3D"center" bgcolor=3D"#000000" class=3D"btn" style=3D"font-family=
+:Helvetica, Arial, sans-serif;font-size:12px;line-height:20px;font-weight:b=
+old;
+                   padding:7px 16px;background-color:#000000;color:#ffffff =
+!important;border:1px solid #000000;white-space:nowrap;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D4M82EeKdzoXHvVX9&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"text-decoration:none;color:#ffffff !important;displ=
+ay:inline-block;font-size:12px;font-weight:bold;white-space:nowrap;" target=
+=3D"_blank">
+<span style=3D"color:#ffffff !important;font-weight:bold;">Read more</span>
+</a>
+</td></tr>
+</table>
+</td>
+<td style=3D"width:25%;font-size:0;line-height:0;" width=3D"25%">=C2=A0</td=
+>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:30px auto 0 auto;border:1px solid #00000=
+0;background-color:#ffffff;padding:16px 20px 16px 20px;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 4px 0;
+                  color:#868686 !important;
+                  mso-color-alt:#868686;
+                  mso-style-textfill-fill-color:#868686;">
+          Presented by Verda
+        </td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class=3D"h1" style=3D"font-family:Helvetica, Arial, sans-serif;font-siz=
+e:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 14px 0;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DRm8wtdR1JFs46OVB&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;mso-c=
+olor-alt:windowtext;" target=3D"_blank"><span style=3D"color:#000000 !impor=
+tant;text-decoration:none;">LLM Inference API Optimized for Cost &amp; Perf=
+ormance</span></a>
+</td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style=3D"padding:0 0 18px 0;"> <!-- bottom only: matches the gap under =
+the story text -->
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DRm8wtdR1JFs46OVB&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"text-decoration:none;" target=3D"_blank"><img alt=
+=3D"" border=3D"0" src=3D"https://alphasignal.ai/image/1795669311898-xtwvdz=
+.png" style=3D"display:block;width:100%;max-width:560px;height:auto;" width=
+=3D"560"/></a>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-h=
+eight:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfi=
+ll-fill-color:#000000;
+         padding:0;">
+<div style=3D"margin-top:0;">
+<p style=3D"margin:0 0 15px 0;">Inference API for <a href=3D"https://app.al=
+phasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D=
+Rm8wtdR1JFs46OVB&amp;mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1" style=3D"c=
+olor:#000000 !important;text-decoration:none;"><span style=3D"color:#000000=
+ !important;border-bottom:1px solid #000000;display:inline;"><strong>fronti=
+er open-weight LLMs</strong></span></a>, hosted in the EU. Run Kimi K3.1 Pr=
+o and DeepSeek V4.1 Flash through one OpenAI-compatible API.</p><ul><li>10x=
+ faster time to first token than standard caching on long-context agentic w=
+orkloads.</li><li>1M-token context window. Tool calling supported.</li><li>=
+Pay-per-token, cached input at lower prices.</li></ul><p style=3D"margin:0;=
+">Performance engineered for every request, from one prompt to agents that =
+run for hours.</p>
+</div>
+</td>
+</tr>
+<!-- Button row -->
+<tr>
+<td style=3D"padding:20px 0 0 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td align=3D"left" style=3D"width:25%;white-space:nowrap;" valign=3D"middle=
+" width=3D"25%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">
+<tr>
+<td align=3D"center" class=3D"btn" style=3D"font-family:Helvetica, Arial, s=
+ans-serif;font-size:12px;line-height:20px;font-weight:normal;
+                   padding:7px 16px 7px 0;color:#868686 !important;border:1=
+px solid #ffffff;white-space:nowrap;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D1F1ITzaMg6Jy6wRX0&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"text-decoration:none;color:#868686 !important;disp=
+lay:inline-block;font-size:12px;font-weight:normal;white-space:nowrap;" tar=
+get=3D"_blank">
+<span style=3D"color:#868686 !important;font-weight:normal;">Partner with u=
+s</span>
+</a>
+</td></tr>
+</table>
+</td>
+<td align=3D"center" valign=3D"middle">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"margin:0 auto;">
+<tr>
+<td align=3D"center" bgcolor=3D"#000000" class=3D"btn" style=3D"font-family=
+:Helvetica, Arial, sans-serif;font-size:12px;line-height:20px;font-weight:b=
+old;
+                   padding:7px 16px;background-color:#000000;color:#ffffff =
+!important;border:1px solid #000000;white-space:nowrap;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DRm8wtdR1JFs46OVB&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"text-decoration:none;color:#ffffff !important;displ=
+ay:inline-block;font-size:12px;font-weight:bold;white-space:nowrap;" target=
+=3D"_blank">
+<span style=3D"color:#ffffff !important;font-weight:bold;">Try the API</spa=
+n>
+</a>
+</td></tr>
+</table>
+</td>
+<td style=3D"width:25%;font-size:0;line-height:0;" width=3D"25%">=C2=A0</td=
+>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:30px auto 0 auto;border:1px solid #00000=
+0;background-color:#ffffff;padding:16px 20px 16px 20px;" width=3D"100%">
+<!-- Section Title -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px;line-h=
+eight:20px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-te=
+xtfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top Model
+    </td>
+</tr>
+<!-- Divider (same black as the box border) -->
+<tr>
+<td style=3D"padding:0 0 10px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #000000;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class=3D"h1" style=3D"font-family:Helvetica, Arial, sans-serif;font-siz=
+e:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DpJaHb0kkhppwNzny&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;mso-c=
+olor-alt:windowtext;" target=3D"_blank"><span style=3D"color:#000000 !impor=
+tant;text-decoration:none;">Maximilian228's Qwen3 125B Squeeze Runs on a 12=
+ GB Consumer GPU</span></a>
+</td>
+</tr>
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#000000 !important;
+                  mso-color-alt:#000000;
+                  mso-style-textfill-fill-color:#000000;">
+<span style=3D"font-size:10px;font-weight:bold;">=E2=96=B2</span>=C2=A03,61=
+7 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style=3D"padding:0 0 18px 0;"> <!-- bottom only: matches the gap under =
+the story text -->
+<img alt=3D"Maximilian228's Qwen3 125B Squeeze Runs on a 12 GB" border=3D"0=
+" src=3D"https://alphasignal.ai/image/1795698006053-scjlks.png" style=3D"di=
+splay:block;width:100%;max-width:560px;height:auto;" width=3D"560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-h=
+eight:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfi=
+ll-fill-color:#000000;
+         padding:0;">
+<div style=3D"margin-top:0;">
+<p style=3D"margin:0 0 15px 0;">A <b>125-billion parameter AI model</b> jus=
+t got squeezed onto a regular gaming GPU. Here is how it works.</p><p style=
+=3D"margin:0 0 15px 0;">Normally a model this size needs a server rack. A c=
+ommunity contributor figured out how to split the workload: <b>your GPU han=
+dles active computation</b>, while the bulk of model weights sit in regular=
+ system RAM and get pulled in as needed. Think of it like streaming from RA=
+M instead of loading everything at once.</p><p style=3D"margin:0 0 15px 0;"=
+>The model is a <b>Mixture-of-Experts</b> (MoE), meaning it only activates =
+a small slice of its 125B parameters per response. That is what makes the R=
+AM split feasible.</p><ul><li>Minimum setup: 12 GB VRAM + 64 GB RAM, Window=
+s only, NVIDIA driver 580+</li><li>Decodes at <b>177 tokens per second</b> =
+with 93.6% accuracy vs. the reference model</li><li>More VRAM unlocks longe=
+r context, up to 262K tokens on a 32 GB card</li><li>Only runs on Strata, n=
+ot llama.cpp, vLLM, or Transformers</li></ul><p style=3D"margin:0;">The tra=
+deoff is real: you are locked into one Windows-only runtime. But running a =
+125B model on desktop hardware opens up local AI at a scale that was not po=
+ssible before.</p>
+</div>
+</td>
+</tr>
+<!-- Button row -->
+<tr>
+<td style=3D"padding:20px 0 0 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td align=3D"left" style=3D"width:25%;white-space:nowrap;" valign=3D"middle=
+" width=3D"25%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">
+<tr>
+<td align=3D"center" class=3D"btn" style=3D"font-family:Helvetica, Arial, s=
+ans-serif;font-size:12px;line-height:20px;font-weight:normal;
+                   padding:7px 16px 7px 0;color:#868686 !important;border:1=
+px solid #ffffff;white-space:nowrap;">
+<a href=3D"mailto:?subject=3DFwd%3A%20Maximilian228%27s%20Qwen3%20125B%20Sq=
+ueeze%20Runs%20on%20a%2012%20GB%20Consumer%20GPU&amp;body=3DThought%20you%2=
+7d%20find%20this%20interesting%3A%0D%0A%0D%0A%22A%20125-billion%20parameter=
+%20AI%20model%20just%20got%20squeezed%20onto%20a%20regular%20gaming%20GPU.%=
+20Here%20is%20how%20it%20works.%0D%0A%0D%0ANormally%20a%20model%20this%20si=
+ze%20needs%20a%20server%20rack.%20A%20community%20contributor%20figured%20o=
+ut%20how%20to%20split%20the%20workload%3A%20your%20GPU%20handles%20active%2=
+0computation%2C%20while%20the%20bulk%20of%20model%20weights%20sit%20in%20re=
+gular%20system%20RAM%20and%20get%20pulled%20in%20as%20needed.%20Think...%22=
+%0D%0A%0D%0ARead%20it%20here%3A%20https%3A%2F%2Falphasignal.ai%2Femail%2F6c=
+ecf12a6dbe2e64%3Futm_source%3Dforward" style=3D"text-decoration:none;color:=
+#868686 !important;display:inline-block;font-size:12px;font-weight:normal;w=
+hite-space:nowrap;" target=3D"_blank">
+<span style=3D"color:#868686 !important;font-weight:normal;">Forward</span>
+</a>
+</td></tr>
+</table>
+</td>
+<td align=3D"center" valign=3D"middle">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"margin:0 auto;">
+<tr>
+<td align=3D"center" bgcolor=3D"#000000" class=3D"btn" style=3D"font-family=
+:Helvetica, Arial, sans-serif;font-size:12px;line-height:20px;font-weight:b=
+old;
+                   padding:7px 16px;background-color:#000000;color:#ffffff =
+!important;border:1px solid #000000;white-space:nowrap;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DpJaHb0kkhppwNzny&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"text-decoration:none;color:#ffffff !important;displ=
+ay:inline-block;font-size:12px;font-weight:bold;white-space:nowrap;" target=
+=3D"_blank">
+<span style=3D"color:#ffffff !important;font-weight:bold;">Read more</span>
+</a>
+</td></tr>
+</table>
+</td>
+<td style=3D"width:25%;font-size:0;line-height:0;" width=3D"25%">=C2=A0</td=
+>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:30px auto 0 auto;border:1px solid #00000=
+0;background-color:#ffffff;padding:16px 20px 16px 20px;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 4px 0;
+                  color:#868686 !important;
+                  mso-color-alt:#868686;
+                  mso-style-textfill-fill-color:#868686;">
+          Presented by Runpod
+        </td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class=3D"h1" style=3D"font-family:Helvetica, Arial, sans-serif;font-siz=
+e:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 14px 0;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3Dbk9FtAL1TATm6OiW&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;mso-c=
+olor-alt:windowtext;" target=3D"_blank"><span style=3D"color:#000000 !impor=
+tant;text-decoration:none;">A GPU in under 30 seconds. Back to building.</s=
+pan></a>
+</td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style=3D"padding:0 0 18px 0;"> <!-- bottom only: matches the gap under =
+the story text -->
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3Dbk9FtAL1TATm6OiW&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"text-decoration:none;" target=3D"_blank"><img alt=
+=3D"" border=3D"0" src=3D"https://alphasignal.ai/image/1795669314294-wjm02c=
+.png" style=3D"display:block;width:100%;max-width:560px;height:auto;" width=
+=3D"560"/></a>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-h=
+eight:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfi=
+ll-fill-color:#000000;
+         padding:0;">
+<div style=3D"margin-top:0;">
+<p style=3D"margin:0;"><a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8aj=
+H7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3Dbk9FtAL1TATm6OiW&amp;mid=3D=
+373e6d20-057c-4637-8c17-5bd7354c31a1" style=3D"color:#000000 !important;tex=
+t-decoration:none;"><span style=3D"color:#000000 !important;border-bottom:1=
+px solid #000000;display:inline;">Runpod</span></a> gets you a GPU in under=
+ 30 seconds, so the first hour goes to your code. Start from a community te=
+mplate, build on a Pod, then put it behind a Serverless endpoint that scale=
+s from zero. No Dockerfile needed with Flash. Pay only for the compute you =
+use.</p>
+</div>
+</td>
+</tr>
+<!-- Button row -->
+<tr>
+<td style=3D"padding:20px 0 0 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td align=3D"left" style=3D"width:25%;white-space:nowrap;" valign=3D"middle=
+" width=3D"25%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">
+<tr>
+<td align=3D"center" class=3D"btn" style=3D"font-family:Helvetica, Arial, s=
+ans-serif;font-size:12px;line-height:20px;font-weight:normal;
+                   padding:7px 16px 7px 0;color:#868686 !important;border:1=
+px solid #ffffff;white-space:nowrap;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D1F1ITzaMg6Jy6wRX0&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"text-decoration:none;color:#868686 !important;disp=
+lay:inline-block;font-size:12px;font-weight:normal;white-space:nowrap;" tar=
+get=3D"_blank">
+<span style=3D"color:#868686 !important;font-weight:normal;">Partner with u=
+s</span>
+</a>
+</td></tr>
+</table>
+</td>
+<td align=3D"center" valign=3D"middle">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"margin:0 auto;">
+<tr>
+<td align=3D"center" bgcolor=3D"#000000" class=3D"btn" style=3D"font-family=
+:Helvetica, Arial, sans-serif;font-size:12px;line-height:20px;font-weight:b=
+old;
+                   padding:7px 16px;background-color:#000000;color:#ffffff =
+!important;border:1px solid #000000;white-space:nowrap;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3Dbk9FtAL1TATm6OiW&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"text-decoration:none;color:#ffffff !important;displ=
+ay:inline-block;font-size:12px;font-weight:bold;white-space:nowrap;" target=
+=3D"_blank">
+<span style=3D"color:#ffffff !important;font-weight:bold;">Deploy Today</sp=
+an>
+</a>
+</td></tr>
+</table>
+</td>
+<td style=3D"width:25%;font-size:0;line-height:0;" width=3D"25%">=C2=A0</td=
+>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Outer Box -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:30px auto 0 auto;border:1px solid #00000=
+0;background-color:#ffffff;padding:16px 20px 16px 20px;" width=3D"100%">
+<!-- Section Title -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px;line-h=
+eight:20px;font-weight:bold;
+             color:#000000 !important;mso-color-alt:windowtext;mso-style-te=
+xtfill-fill-color:#000000;
+             padding:0 0 10px 0;">
+    Top Model
+    </td>
+</tr>
+<!-- Divider (same black as the box border) -->
+<tr>
+<td style=3D"padding:0 0 10px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #000000;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Headline -->
+<tr>
+<td class=3D"h1" style=3D"font-family:Helvetica, Arial, sans-serif;font-siz=
+e:17px;line-height:22px;font-weight:bold;
+           color:#000000 !important;mso-color-alt:windowtext;
+           mso-style-textfill-fill-color:#000000;
+           padding:0 0 5px 0;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D1aWSnAMfS8Z7AnoFT&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"color:#000000 !important;text-decoration:none;mso-=
+color-alt:windowtext;" target=3D"_blank"><span style=3D"color:#000000 !impo=
+rtant;text-decoration:none;">Compendium Labs' BGE Base En v1.5 GGUF Build H=
+its 800,000 Downloads</span></a>
+</td>
+</tr>
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:18px;
+                  font-weight:normal;
+                  padding:0 0 10px 0;
+                  color:#000000 !important;
+                  mso-color-alt:#000000;
+                  mso-style-textfill-fill-color:#000000;">
+<span style=3D"font-size:10px;font-weight:bold;">=E2=96=B2</span>=C2=A03,40=
+0 Likes
+        </td>
+</tr>
+<!-- Feature Image -->
+<tr>
+<td style=3D"padding:0 0 18px 0;"> <!-- bottom only: matches the gap under =
+the story text -->
+<img alt=3D"Compendium Labs' BGE Base En v1.5 GGUF Build Hits " border=3D"0=
+" src=3D"https://alphasignal.ai/image/1795698006301-2yscwv.png" style=3D"di=
+splay:block;width:100%;max-width:560px;height:auto;" width=3D"560"/>
+</td>
+</tr>
+<!-- Body Text (processed with code highlighting) -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-h=
+eight:22px;font-weight:normal;
+         color:#000000 !important;mso-color-alt:windowtext;mso-style-textfi=
+ll-fill-color:#000000;
+         padding:0;">
+<div style=3D"margin-top:0;">
+<p style=3D"margin:0 0 15px 0;">You know how AI apps need to understand tex=
+t meaning, not just keywords? That's what an <b>embedding model</b> does: i=
+t converts text into numbers your app can compare. BGE Base is one of the b=
+est English embedding models out there, and now it runs fully local, no Pyt=
+hon, no PyTorch.</p><p style=3D"margin:0 0 15px 0;">Compendium Labs package=
+d it into <b>GGUF format</b>, the same format you use for local LLMs, so on=
+e runtime handles both your generator and your embedder. It hit 800,000 dow=
+nloads.</p><p style=3D"margin:0 0 15px 0;">Pick your size:</p><ul><li><b>Q4=
+_K_M at 66 MB</b>: small enough to bundle inside a desktop app</li><li>Q8_0=
+ at 113 MB: better accuracy, still CPU-friendly</li><li>F16 at 209 MB: near=
+-perfect precision for servers</li></ul><p style=3D"margin:0;">Spin it up w=
+ith llama.cpp or Ollama and hit a local OpenAI-compatible endpoint. Works w=
+ith LangChain too. Two things to remember: prefix search queries with "Repr=
+esent this sentence for searching relevant passages:", and chunk your text =
+before 512 tokens or it gets cut off.</p>
+</div>
+</td>
+</tr>
+<!-- Button row -->
+<tr>
+<td style=3D"padding:20px 0 0 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td align=3D"left" style=3D"width:25%;white-space:nowrap;" valign=3D"middle=
+" width=3D"25%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">
+<tr>
+<td align=3D"center" class=3D"btn" style=3D"font-family:Helvetica, Arial, s=
+ans-serif;font-size:12px;line-height:20px;font-weight:normal;
+                   padding:7px 16px 7px 0;color:#868686 !important;border:1=
+px solid #ffffff;white-space:nowrap;">
+<a href=3D"mailto:?subject=3DFwd%3A%20Compendium%20Labs%27%20BGE%20Base%20E=
+n%20v1.5%20GGUF%20Build%20Hits%20800%2C000%20Downloads&amp;body=3DThought%2=
+0you%27d%20find%20this%20interesting%3A%0D%0A%0D%0A%22You%20know%20how%20AI=
+%20apps%20need%20to%20understand%20text%20meaning%2C%20not%20just%20keyword=
+s%3F%20That%27s%20what%20an%20embedding%20model%20does%3A%20it%20converts%2=
+0text%20into%20numbers%20your%20app%20can%20compare.%20BGE%20Base%20is%20on=
+e%20of%20the%20best%20English%20embedding%20models%20out%20there%2C%20and%2=
+0now%20it%20runs%20fully%20local%2C%20no%20Python%2C%20no%20PyTorch.%0D%0A%=
+0D%0ACompendium%20Labs%20packaged%20it%20into%20GGUF%20format%2C%20the%20sa=
+me%20format...%22%0D%0A%0D%0ARead%20it%20here%3A%20https%3A%2F%2Falphasigna=
+l.ai%2Femail%2F6cecf12a6dbe2e64%3Futm_source%3Dforward" style=3D"text-decor=
+ation:none;color:#868686 !important;display:inline-block;font-size:12px;fon=
+t-weight:normal;white-space:nowrap;" target=3D"_blank">
+<span style=3D"color:#868686 !important;font-weight:normal;">Forward</span>
+</a>
+</td></tr>
+</table>
+</td>
+<td align=3D"center" valign=3D"middle">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"margin:0 auto;">
+<tr>
+<td align=3D"center" bgcolor=3D"#000000" class=3D"btn" style=3D"font-family=
+:Helvetica, Arial, sans-serif;font-size:12px;line-height:20px;font-weight:b=
+old;
+                   padding:7px 16px;background-color:#000000;color:#ffffff =
+!important;border:1px solid #000000;white-space:nowrap;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D1aWSnAMfS8Z7AnoFT&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"text-decoration:none;color:#ffffff !important;disp=
+lay:inline-block;font-size:12px;font-weight:bold;white-space:nowrap;" targe=
+t=3D"_blank">
+<span style=3D"color:#ffffff !important;font-weight:bold;">Read more</span>
+</a>
+</td></tr>
+</table>
+</td>
+<td style=3D"width:25%;font-size:0;line-height:0;" width=3D"25%">=C2=A0</td=
+>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:30px auto 0 auto;border:1px solid #00000=
+0;background-color:#ffffff;" width=3D"100%"><tr><td style=3D"padding:0 20px=
+;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" width=3D"100%">
+<!-- Section Title -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px;line-h=
+eight:20px;font-weight:bold;
+             margin:0;padding:16px 0 10px 0;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;">
+    Our Events
+   =20
+  </td>
+</tr>
+<tr>
+<td>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #000000;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Item 1 -->
+<tr>
+<td style=3D"padding:20px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"vertical-align:middle;" valign=3D"middle"> <!-- text centred a=
+gainst the image -->
+<!--[if mso]><table role=3D"presentation" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0"><tr><td valign=3D"middle"><![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px !impor=
+tant;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtex=
+t;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class=3D"h1" href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns=
+&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D13AkZLkf0qFB90KjK&amp;mid=3D373e6d20-=
+057c-4637-8c17-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-se=
+rif;
+                            font-size:16px !important;font-weight:bold;line=
+-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowte=
+xt;
+                            text-decoration:none;display:block;margin:0;">
+                    From Vulnerable Dependencies to Tested Pull Requests wi=
+th Snyk
+                  </a>
+</td>
+</tr>
+<tr><td><span style=3D"font-family:Helvetica, Arial, sans-serif;color:#8686=
+86;font-weight:normal;font-size:13px;line-height:22.5px;margin:0;padding:0;=
+display:block;">Dec 9, 10a PT =C2=B7 Online =C2=B7 <a href=3D"https://app.a=
+lphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=
+=3D13AkZLkf0qFB90KjK&amp;mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1" style=
+=3D"color:#868686;text-decoration:underline;" target=3D"_blank">Register no=
+w</a></span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #dddddd;"></td></tr>
+</table></td></tr>
+<!-- Item 2 -->
+<tr>
+<td style=3D"padding:20px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"vertical-align:middle;" valign=3D"middle"> <!-- text centred a=
+gainst the image -->
+<!--[if mso]><table role=3D"presentation" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0"><tr><td valign=3D"middle"><![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px !impor=
+tant;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtex=
+t;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class=3D"h1" href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns=
+&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D1j4vLiwVTDa31teyX&amp;mid=3D373e6d20-=
+057c-4637-8c17-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-se=
+rif;
+                            font-size:16px !important;font-weight:bold;line=
+-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowte=
+xt;
+                            text-decoration:none;display:block;margin:0;">
+                    How to Design a Software Factory
+                  </a>
+</td>
+</tr>
+<tr><td><span style=3D"font-family:Helvetica, Arial, sans-serif;color:#8686=
+86;font-weight:normal;font-size:13px;line-height:22.5px;margin:0;padding:0;=
+display:block;">Dec 15, 10a PT =C2=B7 Online =C2=B7 <a href=3D"https://app.=
+alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=
+=3D1j4vLiwVTDa31teyX&amp;mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1" style=
+=3D"color:#868686;text-decoration:underline;" target=3D"_blank">Register no=
+w</a></span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #dddddd;"></td></tr>
+</table></td></tr>
+<!-- Item 3 -->
+<tr>
+<td style=3D"padding:20px 0 15px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"vertical-align:middle;" valign=3D"middle"> <!-- text centred a=
+gainst the image -->
+<!--[if mso]><table role=3D"presentation" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0"><tr><td valign=3D"middle"><![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px !impor=
+tant;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtex=
+t;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class=3D"h1" href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns=
+&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3Dxsy7NvDbuLVlI17w&amp;mid=3D373e6d20-0=
+57c-4637-8c17-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-ser=
+if;
+                            font-size:16px !important;font-weight:bold;line=
+-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowte=
+xt;
+                            text-decoration:none;display:block;margin:0;">
+                    When AI Agents Ship Faster Than Security Can Review
+                  </a>
+</td>
+</tr>
+<tr><td><span style=3D"font-family:Helvetica, Arial, sans-serif;color:#8686=
+86;font-weight:normal;font-size:13px;line-height:22.5px;margin:0;padding:0;=
+display:block;">Dec 17, 10a PT =C2=B7 Online =C2=B7 <a href=3D"https://app.=
+alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=
+=3Dxsy7NvDbuLVlI17w&amp;mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1" style=
+=3D"color:#868686;text-decoration:underline;" target=3D"_blank">Register no=
+w</a></span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"max-width:600px;margin:30px auto 0 au=
+to;border:1px solid #000000;background-color:#ffffff;" width=3D"100%"><tr><=
+td style=3D"padding:0 20px;"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" width=3D"100%">
+<!-- Section Title -->
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px;line-h=
+eight:20px;font-weight:bold;
+             margin:0;padding:16px 0 10px 0;
+             color:#000000 !important;mso-color-alt:windowtext;
+             mso-style-textfill-fill-color:#000000;">
+    Signals
+   =20
+  </td>
+</tr>
+<tr>
+<td>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #000000;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- Item 1 -->
+<tr>
+<td style=3D"padding:20px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"vertical-align:middle;" valign=3D"middle"> <!-- text centred a=
+gainst the image -->
+<!--[if mso]><table role=3D"presentation" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0"><tr><td valign=3D"middle"><![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px !impor=
+tant;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtex=
+t;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class=3D"h1" href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns=
+&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3DYrLP5okXVMBQDacw&amp;mid=3D373e6d20-0=
+57c-4637-8c17-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-ser=
+if;
+                            font-size:16px !important;font-weight:bold;line=
+-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowte=
+xt;
+                            text-decoration:none;display:block;margin:0;">
+                    University of Catania Beats Gemini 1.5 Pro at Predictin=
+g Your Next Touch
+                  </a>
+</td>
+</tr>
+<tr><td><span style=3D"font-family:Helvetica, Arial, sans-serif;color:#0000=
+00;font-weight:normal;font-size:13px;line-height:22.5px;margin:0;padding:0;=
+display:block;"><span style=3D"font-size:10px;font-weight:bold;">=E2=96=B2<=
+/span>=C2=A03,117 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+<td align=3D"right" class=3D"signal-img-cell" style=3D"width:90px;padding-l=
+eft:20px;" valign=3D"middle" width=3D"90"><a href=3D"https://app.alphasigna=
+l.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3DYrLP5okX=
+VMBQDacw&amp;mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1" style=3D"text-deco=
+ration:none;"><img alt=3D"" border=3D"0" class=3D"signal-img" height=3D"90"=
+ src=3D"https://alphasignal.ai/image/1795698006458-xycio2.png" style=3D"dis=
+play:block;outline:none;text-decoration:none;border:none;-ms-interpolation-=
+mode:bicubic;width:90px;height:90px;min-width:90px;min-height:90px;max-widt=
+h:90px;max-height:90px;object-fit:cover;" width=3D"90"/></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #dddddd;"></td></tr>
+</table></td></tr>
+<!-- Item 2 -->
+<tr>
+<td style=3D"padding:20px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"vertical-align:middle;" valign=3D"middle"> <!-- text centred a=
+gainst the image -->
+<!--[if mso]><table role=3D"presentation" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0"><tr><td valign=3D"middle"><![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tr><td style=3D"padding:0 0 4px 0;"><span style=3D"font-family:Helvetica, =
+Arial, sans-serif;color:#868686;font-weight:normal;font-size:13px;line-heig=
+ht:22.5px;margin:0;padding:0;display:block;">Presented by Lium.io</span></t=
+d></tr>
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px !impor=
+tant;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtex=
+t;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class=3D"h1" href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns=
+&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D1v5Go1aC9f7u6NZpg&amp;mid=3D373e6d20-=
+057c-4637-8c17-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-se=
+rif;
+                            font-size:16px !important;font-weight:bold;line=
+-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowte=
+xt;
+                            text-decoration:none;display:block;margin:0;">
+                    Give Claude Code or Codex an H100, H200 or B200 by API =
+call, billed by the second across 1,600+ GPUs
+                  </a>
+</td>
+</tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #dddddd;"></td></tr>
+</table></td></tr>
+<!-- Item 3 -->
+<tr>
+<td style=3D"padding:20px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"vertical-align:middle;" valign=3D"middle"> <!-- text centred a=
+gainst the image -->
+<!--[if mso]><table role=3D"presentation" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0"><tr><td valign=3D"middle"><![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px !impor=
+tant;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtex=
+t;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class=3D"h1" href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns=
+&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3Dq7szj29OXcMS7iVM&amp;mid=3D373e6d20-0=
+57c-4637-8c17-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-ser=
+if;
+                            font-size:16px !important;font-weight:bold;line=
+-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowte=
+xt;
+                            text-decoration:none;display:block;margin:0;">
+                    KET-RAG Audit Finds 84% of AI Errors Happen After Retri=
+eval
+                  </a>
+</td>
+</tr>
+<tr><td><span style=3D"font-family:Helvetica, Arial, sans-serif;color:#0000=
+00;font-weight:normal;font-size:13px;line-height:22.5px;margin:0;padding:0;=
+display:block;"><span style=3D"font-size:10px;font-weight:bold;">=E2=96=B2<=
+/span>=C2=A03,088 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+<td align=3D"right" class=3D"signal-img-cell" style=3D"width:90px;padding-l=
+eft:20px;" valign=3D"middle" width=3D"90"><a href=3D"https://app.alphasigna=
+l.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3Dq7szj29O=
+XcMS7iVM&amp;mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1" style=3D"text-deco=
+ration:none;"><img alt=3D"" border=3D"0" class=3D"signal-img" height=3D"90"=
+ src=3D"https://alphasignal.ai/image/1795698006323-a2q66c.png" style=3D"dis=
+play:block;outline:none;text-decoration:none;border:none;-ms-interpolation-=
+mode:bicubic;width:90px;height:90px;min-width:90px;min-height:90px;max-widt=
+h:90px;max-height:90px;object-fit:cover;" width=3D"90"/></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #dddddd;"></td></tr>
+</table></td></tr>
+<!-- Item 4 -->
+<tr>
+<td style=3D"padding:20px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"vertical-align:middle;" valign=3D"middle"> <!-- text centred a=
+gainst the image -->
+<!--[if mso]><table role=3D"presentation" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0"><tr><td valign=3D"middle"><![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px !impor=
+tant;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtex=
+t;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class=3D"h1" href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns=
+&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D182fhLdihKJVZBRWe&amp;mid=3D373e6d20-=
+057c-4637-8c17-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-se=
+rif;
+                            font-size:16px !important;font-weight:bold;line=
+-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowte=
+xt;
+                            text-decoration:none;display:block;margin:0;">
+                    KD-ML Turns Fuzzy Expert Rules Into AI Training Signals=
+ Without Equations
+                  </a>
+</td>
+</tr>
+<tr><td><span style=3D"font-family:Helvetica, Arial, sans-serif;color:#0000=
+00;font-weight:normal;font-size:13px;line-height:22.5px;margin:0;padding:0;=
+display:block;"><span style=3D"font-size:10px;font-weight:bold;">=E2=96=B2<=
+/span>=C2=A03,032 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+<td align=3D"right" class=3D"signal-img-cell" style=3D"width:90px;padding-l=
+eft:20px;" valign=3D"middle" width=3D"90"><a href=3D"https://app.alphasigna=
+l.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D182fhLdi=
+hKJVZBRWe&amp;mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1" style=3D"text-dec=
+oration:none;"><img alt=3D"" border=3D"0" class=3D"signal-img" height=3D"90=
+" src=3D"https://alphasignal.ai/image/1795698006133-4l2at9.png" style=3D"di=
+splay:block;outline:none;text-decoration:none;border:none;-ms-interpolation=
+-mode:bicubic;width:90px;height:90px;min-width:90px;min-height:90px;max-wid=
+th:90px;max-height:90px;object-fit:cover;" width=3D"90"/></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #dddddd;"></td></tr>
+</table></td></tr>
+<!-- Item 5 -->
+<tr>
+<td style=3D"padding:20px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"vertical-align:middle;" valign=3D"middle"> <!-- text centred a=
+gainst the image -->
+<!--[if mso]><table role=3D"presentation" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0"><tr><td valign=3D"middle"><![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px !impor=
+tant;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtex=
+t;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class=3D"h1" href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns=
+&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D1nyTqFJueJ4ShiRyH&amp;mid=3D373e6d20-=
+057c-4637-8c17-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-se=
+rif;
+                            font-size:16px !important;font-weight:bold;line=
+-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowte=
+xt;
+                            text-decoration:none;display:block;margin:0;">
+                    Google Builds a Single Gemma 4 Fine-Tuning Hub With 17 =
+Guides
+                  </a>
+</td>
+</tr>
+<tr><td><span style=3D"font-family:Helvetica, Arial, sans-serif;color:#0000=
+00;font-weight:normal;font-size:13px;line-height:22.5px;margin:0;padding:0;=
+display:block;"><span style=3D"font-size:10px;font-weight:bold;">=E2=96=B2<=
+/span>=C2=A02,606 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+<td align=3D"right" class=3D"signal-img-cell" style=3D"width:90px;padding-l=
+eft:20px;" valign=3D"middle" width=3D"90"><a href=3D"https://app.alphasigna=
+l.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D1nyTqFJu=
+eJ4ShiRyH&amp;mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1" style=3D"text-dec=
+oration:none;"><img alt=3D"" border=3D"0" class=3D"signal-img" height=3D"90=
+" src=3D"https://alphasignal.ai/image/1795698006298-iu8iqc.png" style=3D"di=
+splay:block;outline:none;text-decoration:none;border:none;-ms-interpolation=
+-mode:bicubic;width:90px;height:90px;min-width:90px;min-height:90px;max-wid=
+th:90px;max-height:90px;object-fit:cover;" width=3D"90"/></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" width=3D"100%">
+<tr><td style=3D"border-top:1px solid #dddddd;"></td></tr>
+</table></td></tr>
+<!-- Item 6 -->
+<tr>
+<td style=3D"padding:20px 0 15px 0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"vertical-align:middle;" valign=3D"middle"> <!-- text centred a=
+gainst the image -->
+<!--[if mso]><table role=3D"presentation" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0"><tr><td valign=3D"middle"><![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px !impor=
+tant;
+                           font-weight:bold;line-height:22.5px;
+                           color:#000000 !important;mso-color-alt:windowtex=
+t;
+                           mso-style-textfill-fill-color:#000000;
+                           margin:0;padding:0 0 5px 0;">
+<a class=3D"h1" href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns=
+&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D21tpiqZf6yytEH9A&amp;mid=3D373e6d20-0=
+57c-4637-8c17-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-ser=
+if;
+                            font-size:16px !important;font-weight:bold;line=
+-height:22.5px;
+                            color:#000000 !important;mso-color-alt:windowte=
+xt;
+                            text-decoration:none;display:block;margin:0;">
+                    Video Fine-Tuning Secretly Destroys Image Skills in Qwe=
+n2.5-VL
+                  </a>
+</td>
+</tr>
+<tr><td><span style=3D"font-family:Helvetica, Arial, sans-serif;color:#0000=
+00;font-weight:normal;font-size:13px;line-height:22.5px;margin:0;padding:0;=
+display:block;"><span style=3D"font-size:10px;font-weight:bold;">=E2=96=B2<=
+/span>=C2=A02,491 Likes</span></td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+<td align=3D"right" class=3D"signal-img-cell" style=3D"width:90px;padding-l=
+eft:20px;" valign=3D"middle" width=3D"90"><a href=3D"https://app.alphasigna=
+l.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6cecf12a6dbe2e64&amp;lid=3D21tpiqZf=
+6yytEH9A&amp;mid=3D373e6d20-057c-4637-8c17-5bd7354c31a1" style=3D"text-deco=
+ration:none;"><img alt=3D"" border=3D"0" class=3D"signal-img" height=3D"90"=
+ src=3D"https://alphasignal.ai/image/1795698006285-j1o3o8.png" style=3D"dis=
+play:block;outline:none;text-decoration:none;border:none;-ms-interpolation-=
+mode:bicubic;width:90px;height:90px;min-width:90px;min-height:90px;max-widt=
+h:90px;max-height:90px;object-fit:cover;" width=3D"90"/></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table>
+<!-- PRO upsell (free) -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:30px auto 0 auto;border:1px solid #00000=
+0;background-color:#ffffff;" width=3D"100%">
+<tr><td style=3D"padding:26px 28px 28px 28px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;font=
+-size:11px;line-height:16px;letter-spacing:2px;
+                                      font-weight:bold;text-transform:upper=
+case;color:#000000;padding:0 0 8px 0;">
+              AlphaSignal PRO
+            </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;font=
+-size:24px;line-height:30px;font-weight:bold;
+                                      color:#000000;padding:0 0 10px 0;">
+              You are not getting all of AlphaSignal.
+            </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;font=
+-size:15px;line-height:22px;color:#000000;
+                                      padding:0 0 18px 0;">
+              Upgrade to PRO for an edition built around the topics, subtop=
+ics and companies you follow,
+              with personal picks across news, models, papers and repos.
+            </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation">
+<tr>
+<td align=3D"center" bgcolor=3D"#000000" style=3D"background-color:#000000;=
+border:1px solid #000000;padding:0;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3Dr7BdibhvtXUTo72g&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"display:inline-block;padding:9px 22px;font-family:H=
+elvetica, Arial, sans-serif;font-size:12px;line-height:20px;
+                              font-weight:bold;letter-spacing:1px;text-tran=
+sform:uppercase;
+                              color:#ffffff !important;text-decoration:none=
+;" target=3D"_blank">Unlock everything</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+<!-- Alpha Description -->
+<!-- Mission/privacy copy removed. Marker kept: PRO swaps in the "Your Sign=
+al" block here. -->
+<!-- Work with us -->
+<!-- Footer grid (feedback / legal / advertise / links). The comment above =
+is
+         the anchor PRO uses to insert the "Your Signal" block before the f=
+ooter. -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;width:100%;margin:30px auto 0 auto;border-colla=
+pse:collapse;background-color:#ffffff;" width=3D"100%">
+<!-- Row 1: feedback -->
+<tr>
+<td align=3D"center" colspan=3D"4" style=3D"border:1px solid #000000;paddin=
+g:24px 16px;">
+<div style=3D"font-family:Helvetica, Arial, sans-serif;font-size:16px;line-=
+height:20px;font-weight:bold;
+                      color:#000000;padding:0 0 14px 0;">
+            How was today's email?
+          </div>
+<div style=3D"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-=
+height:22px;">
+<a class=3D"feedback-btn" href=3D"https://app.alphasignal.ai/fb/DhS8ajH7NeR=
+ZK5Ns?cid=3D6cecf12a6dbe2e64&amp;feedback=3DAwesome" style=3D"display:inlin=
+e-block;
+                      width:96px;
+                      text-align:center;
+                      font-family:Helvetica, Arial, sans-serif;
+                      font-size:12px;
+                      line-height:20px;
+                      font-weight:bold;
+                      text-decoration:none;
+                      color:#000000 !important;
+                      border:1px solid #000000;
+                      padding:7px 0;
+                      margin:0 4px;" target=3D"_blank">
+              Awesome
+            </a>
+<a class=3D"feedback-btn" href=3D"https://app.alphasignal.ai/fb/DhS8ajH7NeR=
+ZK5Ns?cid=3D6cecf12a6dbe2e64&amp;feedback=3DDecent" style=3D"display:inline=
+-block;
+                      width:96px;
+                      text-align:center;
+                      font-family:Helvetica, Arial, sans-serif;
+                      font-size:12px;
+                      line-height:20px;
+                      font-weight:bold;
+                      text-decoration:none;
+                      color:#000000 !important;
+                      border:1px solid #000000;
+                      padding:7px 0;
+                      margin:0 4px;" target=3D"_blank">
+              Decent
+            </a>
+<a class=3D"feedback-btn feedback-btn-last" href=3D"https://app.alphasignal=
+.ai/fb/DhS8ajH7NeRZK5Ns?cid=3D6cecf12a6dbe2e64&amp;feedback=3DNot%20Great" =
+style=3D"display:inline-block;
+                      width:96px;
+                      text-align:center;
+                      font-family:Helvetica, Arial, sans-serif;
+                      font-size:12px;
+                      line-height:20px;
+                      font-weight:bold;
+                      text-decoration:none;
+                      color:#000000 !important;
+                      border:1px solid #000000;
+                      padding:7px 0;
+                      margin:0 4px;" target=3D"_blank">
+              Not great
+            </a>
+</div>
+</td>
+</tr>
+<!-- Row 2: legal + unsubscribe -->
+<tr>
+<td align=3D"center" colspan=3D"4" style=3D"border:1px solid #000000;paddin=
+g:22px 16px;font-family:Helvetica, Arial, sans-serif;font-size:14px;line-he=
+ight:20px;color:#000000;">
+          =C2=A92026 AlphaSignal =C2=B7 214 Barton Springs Rd, Austin, USA<=
+br/>
+<a href=3D"https://app.alphasignal.ai/unsubscribe/u/DhS8ajH7NeRZK5Ns?cid=3D=
+6cecf12a6dbe2e64" style=3D"font-family:Helvetica, Arial, sans-serif;font-si=
+ze:14px;line-height:20px;font-weight:bold;color:#000000 !important;text-dec=
+oration:none;" target=3D"_blank">Unsubscribe</a>
+</td>
+</tr>
+<!-- Row 3: advertise -->
+<tr>
+<td align=3D"center" colspan=3D"4" style=3D"border:1px solid #000000;paddin=
+g:12px 16px;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D1F1ITzaMg6Jy6wRX0&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-serif;font-size=
+:14px;line-height:20px;font-weight:bold;color:#000000 !important;text-decor=
+ation:none;" target=3D"_blank">Advertise with AlphaSignal</a>
+</td>
+</tr>
+<!-- Row 4: links (Upgrade only in the free email; Pro readers keep three c=
+olumns) -->
+<tr>
+<td align=3D"center" style=3D"border:1px solid #000000;width:25%;padding:12=
+px 8px;" width=3D"25%">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3DE2dpNqPsUGtC4xkd&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;font-weight:bold;color:#000000 !important;text-decora=
+tion:none;" target=3D"_blank">X</a>
+</td>
+<td align=3D"center" style=3D"border:1px solid #000000;width:25%;padding:12=
+px 8px;" width=3D"25%">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D109ubzOpKl2dzEX90&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-serif;font-size=
+:14px;line-height:20px;font-weight:bold;color:#000000 !important;text-decor=
+ation:none;" target=3D"_blank">Archive</a>
+</td>
+<td align=3D"center" style=3D"border:1px solid #000000;width:25%;padding:12=
+px 8px;" width=3D"25%">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3D1onqY6XI8alSeGrFY&amp;mid=3D373e6d20-057c-4637-8c1=
+7-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-serif;font-size=
+:14px;line-height:20px;font-weight:bold;color:#000000 !important;text-decor=
+ation:none;" target=3D"_blank">Sign up</a>
+</td>
+<td align=3D"center" style=3D"border:1px solid #000000;width:25%;padding:12=
+px 8px;" width=3D"25%">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3D6c=
+ecf12a6dbe2e64&amp;lid=3Dr7BdibhvtXUTo72g&amp;mid=3D373e6d20-057c-4637-8c17=
+-5bd7354c31a1" style=3D"font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;font-weight:bold;color:#000000 !important;text-decora=
+tion:none;" target=3D"_blank">Upgrade</a>
+</td>
+</tr>
+</table>
+<div style=3D"height:30px;line-height:30px;font-size:0;">=C2=A0</div>
+</td>
+</tr>
+</table>
+</body></html>
+------=_Part_1993687_1481956277.1795702065738--

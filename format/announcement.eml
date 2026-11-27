@@ -1,0 +1,969 @@
+Delivered-To: vaultscapes@gmail.com
+Received: by 2002:a17:504:9f88:b0:1f04:f1d8:fd78 with SMTP id ki8csp5629134njc;
+        Tue, 24 Nov 2026 08:35:27 -0800 (PST)
+X-Received: by 2002:a05:6808:2f12:b0:53a:1c29:cb37 with SMTP id 5614622812f47-5797dc957f9mr12322849b6e.38.1795538127466;
+        Tue, 24 Nov 2026 08:35:27 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1795538127; cv=none;
+        d=google.com; s=arc-20260327;
+        b=lAjElczKVy9HQkYeXK5PAhIW8H+U61uFYER6YawYZmQ0o3I4M8z/yn6nDjVUJsNmJG
+         taxSXpyUfFiEdPK/7dMh1TduXIo0ZfA2TrVmiY+AKQzfeWlBOoKa5I9VAGcyDCHwyhSF
+         FVSbGCjXpdyZ/ddU1vEHjD4HY26IeukQs3r78FlAXBluSDhd+HlhXYqComRAQmbsLCxM
+         b8XZKDIKbOeO5zF32yg7o388qwo0h1XJZnauj49PFN4cc6ojOlaXUYEtQOJ901DCv/gd
+         BYQQ4UzHO8GTonZy/0i0cSL68+N3asqk1sKpEeccHgs4xHbO9iLfYmL9gaWlQdSnlYxZ
+         Kx9Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=date:message-id:list-help:abuse-reports-to:archived-at:organization
+         :auto-submitted:precedence:feedback-id:list-id:list-unsubscribe-post
+         :list-unsubscribe:mime-version:subject:to:from:dkim-signature
+         :dkim-signature;
+        bh=BAbqUGhqFKch+N18Gc1UkTDSHMfEWjuYMScZ1J2EOVg=;
+        fh=8G0ZOTAlRwwLltMm/X15mRXT5TIPjfL6UJZG8Prad60=;
+        b=XmVa1ZaZTMU3J8Y1a+IgUuHmZFW6nuWDOPDcRs2fla2J3UwlQPtsQdt/uuqiGKs00H
+         MKLAX+28sMVLP6EFbFPg7W/cR4ym7MPKuc8PzpxM6gahDN7CQ+Ywt116gntGVu+ECZoN
+         hPsqvXaxiRLWlAxITDrRBaugoqc+9H102qNjB83YTAOxhuNaztTX49ykA7n0scfSi2gv
+         VBRRkREYXTNZN9wjRGHtVQtHxOJNfuFmhRWsAQs7StyqmcvGhEY3g50nRhL6ZjSMvqzL
+         sFF2z0Z1ilI95B1kponCn45VNrPS6iT+819umME0atw38yOyEW0pefiiHGowShe3I7e+
+         dziw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@alphasignal.ai header.s=yass3qdefwttiurf54cklhcyf2sz5d6f header.b=MvWrxBl9;
+       dkim=pass header.i=@amazonses.com header.s=kra23psoka5qyyh6gdejiiuof3nluwuz header.b=C1FNz0OW;
+       spf=pass (google.com: domain of 010f01a20e6988e6-08dc99d4-7fb8-4dcb-a07e-8075148135ed-000000@news.alphasignal.ai designates 54.240.115.227 as permitted sender) smtp.mailfrom=010f01a20e6988e6-08dc99d4-7fb8-4dcb-a07e-8075148135ed-000000@news.alphasignal.ai;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alphasignal.ai
+Return-Path: <010f01a20e6988e6-08dc99d4-7fb8-4dcb-a07e-8075148135ed-000000@news.alphasignal.ai>
+Received: from a115-227.smtp-out.us-east-2.amazonses.com (a115-227.smtp-out.us-east-2.amazonses.com. [54.240.115.227])
+        by mx.google.com with ESMTPS id 5614622812f47-57a3132fe82si19080000b6e.7.2026.11.24.08.35.27
+        for <vaultscapes@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 24 Nov 2026 08:35:27 -0800 (PST)
+Received-SPF: pass (google.com: domain of 010f01a20e6988e6-08dc99d4-7fb8-4dcb-a07e-8075148135ed-000000@news.alphasignal.ai designates 54.240.115.227 as permitted sender) client-ip=54.240.115.227;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@alphasignal.ai header.s=yass3qdefwttiurf54cklhcyf2sz5d6f header.b=MvWrxBl9;
+       dkim=pass header.i=@amazonses.com header.s=kra23psoka5qyyh6gdejiiuof3nluwuz header.b=C1FNz0OW;
+       spf=pass (google.com: domain of 010f01a20e6988e6-08dc99d4-7fb8-4dcb-a07e-8075148135ed-000000@news.alphasignal.ai designates 54.240.115.227 as permitted sender) smtp.mailfrom=010f01a20e6988e6-08dc99d4-7fb8-4dcb-a07e-8075148135ed-000000@news.alphasignal.ai;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alphasignal.ai
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yass3qdefwttiurf54cklhcyf2sz5d6f; d=alphasignal.ai; t=1795538127;
+	h=From:To:Subject:MIME-Version:Content-Type:List-Unsubscribe:List-Unsubscribe-Post:List-Id:List-Help:Message-ID:Date;
+	bh=XpTmNgB8J7nrAK9y6rOUndRTzmT8n1trdiiL20q+wr4=;
+	b=MvWrxBl9Ixb/bU9xYXr3XjRKj9ngMnsog2w2+ZDRyy7J4zoyQXbSguKs+n1bgO04
+	IulzqRbBL4IaG3jAN+L5kJZ/WceDh17dU05qdHFoE18nZ8fw9xkzeVtGsvcShPgjZ21
+	EnbBfLfNRGwJvG25xzG4Pl2ojQ1Y84e3lRf/raCx4YTZ/NVoZi+BvrpSdTneeID5o/2
+	Q7z7afDF68AMXPAJHvIju0v27v6Syii/z5sbl3iNFLBLDhdm26b2Kc2gg7IwOHp9Xr9
+	KbgzQv1XkuKs97YxGEKI9K+kZTf+erva/vEcbXjrBpWC2xxDdtwh2Twr7avpi1sR6sW
+	Be2l5QZaJg==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=kra23psoka5qyyh6gdejiiuof3nluwuz; d=amazonses.com; t=1795538127;
+	h=From:To:Subject:MIME-Version:Content-Type:List-Unsubscribe:List-Unsubscribe-Post:List-Id:Feedback-ID:List-Help:Message-ID:Date;
+	bh=XpTmNgB8J7nrAK9y6rOUndRTzmT8n1trdiiL20q+wr4=;
+	b=C1FNz0OW5ixAPo7omXNy6Ak0UiM5Nb5u8ugu5+TX5cQRnoTIQOaa4U+8ObuhRyuu
+	+YSi7nhWwXECPC7P0R3y+RZ7BawfuP6I4KtFgvSX3u0EBSrkmufroX+Dl581HRskP46
+	pz+UvAzDOmQoQ1goDtWx5g6kVZhwz6dB7+jg01t4=
+From: AlphaSignal <news@alphasignal.ai>
+To: vaultscapes@gmail.com
+Subject: AlphaSignal will never be the same.
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2531004_467078590.1795538127078"
+List-Unsubscribe: <mailto:news@alphasignal.ai?subject=unsubscribe%20seq_c4cef5afd84ec4e2_e1>, <https://alphasignal.ai/us?uid=DhS8ajH7NeRZK5Ns&cid=seq_c4cef5afd84ec4e2_e1>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: AlphaSignal Newsletter <news.alphasignal.ai>
+Feedback-ID: ::1.us-east-2.jAR5U7QBOAP7Zz6aQYGcElD40cTATkRIc5pck9uHLa4=:AmazonSES
+Precedence: bulk
+Auto-Submitted: auto-generated
+Organization: AlphaSignal
+Archived-At: https://alphasignal.ai/email/seq_c4cef5afd84ec4e2_e1
+X-Report-Abuse: mailto:news@alphasignal.ai
+X-Report-Spam: mailto:news@alphasignal.ai
+Abuse-Reports-To: mailto:news@alphasignal.ai
+List-Help: <mailto:news@alphasignal.ai?subject=help>
+Message-ID: <010f01a20e6988e6-08dc99d4-7fb8-4dcb-a07e-8075148135ed-000000@us-east-2.amazonses.com>
+Date: Tue, 24 Nov 2026 16:35:27 +0000
+X-SES-Outgoing: 2026.11.24-54.240.115.227
+
+------=_Part_2531004_467078590.1795538127078
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+AlphaSignal
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=
+=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=
+=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=
+=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C
+TL;DR
+=E2=86=92
+AlphaSignal is now a website that keeps track of
+the entire AI industry in real time
+.
+=E2=86=92
+New
+Newsletter Pro
+: a newsletter tailored to your topics, on your schedule.
+=E2=86=92
+Existing readers get
+20% off
+, for a few days only.
+Hey Vaultscapes,
+Lior here, founder of AlphaSignal.
+Got some big news.
+As you may feel, we're in the middle of the biggest technological shift of =
+our generation. New models, breakthroughs, and tools change what's possible=
+ almost every day.
+But keeping up with it all has become nearly impossible.
+In 2025 alone,
+280,000 papers
+hit arXiv. Add new models, repos, and a constant stream of announcements, a=
+nd staying up to date with AI has become a full-time job.
+Except you already have one.
+And the information is scattered everywhere. Important breakthroughs get bu=
+ried, engineers rebuild things that already exist, and nobody knows what th=
+ey're missing.
+I know the feeling.
+Back in 2020, while working at an AI research lab, I was struggling to keep=
+ up with research papers myself.
+So I started AlphaSignal, a small newsletter to stay up to date with AI.
+Then AI exploded, we grew to 350,000 readers, and became the morning read e=
+very dev relies on.
+But over the years, you kept asking us for three things:
+1.
+Personalization:
+I want only what's relevant to me.
+2.
+Speed:
+I want to know what's happening right now.
+3.
+Depth:
+I want to go beyond the headlines.
+So we spent months building something new, and even dropped out of YC to fo=
+cus on it.
+Meet the new AlphaSignal.
+The front page of AI. Personalized for you.
+One place for everything happening in AI. We track over 150 AI companies in=
+ real time, alongside new papers, models, open-source projects, and announc=
+ements, all ranked by relevance and personalized around what you care about=
+.
+Last week alone, we tracked 1,725 AI announcements.
+Here's what you can do:
+=E2=86=92
+Keep up with the industry.
+See new papers, models, repos, and announcements as soon as they're release=
+d.
+=E2=86=92
+See what matters.
+Everything is categorized and ranked by relevance, so you don't have to dig=
+ through the noise.
+=E2=86=92
+Make it yours.
+Follow the topics and companies you care about. Your feed is built around y=
+our interests.
+=E2=86=92
+Import your stack.
+Connect GitHub, Hugging Face, and X to get recommendations based on what yo=
+u actually work on.
+And that's just the website.
+TRY IT HERE
+We're also launching a fully personalized newsletter.
+Until today, all 350,000 subscribers received the same newsletter.
+With Newsletter Pro, no two newsletters are the same.
+You choose the topics, companies, and content you care about.
+AlphaSignal learns from what you read and what you skip, both in your inbox=
+ and on the website. It gives more weight to your recent interests and adap=
+ts as your work changes.
+So instead of five articles covering the same announcement, you get the few=
+ updates that actually deserve your attention.
+Your newsletter. Your interests. Your schedule.
+Two ways to use the new AlphaSignal
+Full Access
+(Personalized Website + Newsletter)
+=E2=80=A2
+Real-time coverage of papers, models, repos, and AI news
+=E2=80=A2
+Custom feeds and advanced subtopics for your specific interests
+=E2=80=A2
+Recommendations based on your GitHub, Hugging Face, and X activity
+=E2=80=A2
+Personalized Pro newsletter, with no ads
+=E2=80=A2
+$500+ in credits from ElevenLabs, Wispr Flow, Render, Sentry, Neo4j, and mo=
+re
+Newsletter Pro
+(Personalized Newsletter)
+=E2=80=A2
+An ad-free newsletter built around your interests
+=E2=80=A2
+Learns from what you read and skip, so every issue fits you better
+=E2=80=A2
+Delivered on the days you choose
+=E2=80=A2
+Stays in sync with the topics and companies you follow on the website
+Both plans are work tools
+, so
+you can expense them through your employer
+.
+Prefer the free newsletter? It's not going anywhere. It'll keep landing in =
+your inbox just like it does today, with the same issue for every reader.
+One more thing
+As a thank-you for being here, we're giving you
+20% off
+your subscription.
+Your discount will be applied automatically when you sign in.
+I'd encourage you to start a trial. If it isn't for you, you can cancel.
+Here's how:
+1.
+Click here to sign in
+. Your coupon will already be applied.
+2.
+Start your trial.
+3.
+Connect your X, GitHub, or Hugging Face.
+4.
+Follow your favorite companies and topics.
+5.
+Expense it through your employer (
+click here
+).
+6.
+Enjoy.
+GET STARTED
+Thanks for being part of the journey,
+Lior
+Founder, AlphaSignal
+=C2=A92026 AlphaSignal =C2=B7 214 Barton Springs Rd, Austin, USA
+Unsubscribe
+X
+Archive
+Sign up
+Upgrade
+
+Stop receiving emails here: https://app.alphasignal.ai/unsubscribe/u/DhS8aj=
+H7NeRZK5Ns?cid=3Dseq_c4cef5afd84ec4e2_e1
+------=_Part_2531004_467078590.1795538127078
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+<!DOCTYPE html>
+
+<html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:sch=
+emas-microsoft-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:vml"=
+>
+<head>
+<meta charset=3D"utf-8"/>
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"/>
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewpor=
+t"/>
+<meta content=3D"light" name=3D"color-scheme"/>
+<meta content=3D"light" name=3D"supported-color-schemes"/>
+<meta content=3D"telephone=3Dno, date=3Dno, address=3Dno, email=3Dno, url=
+=3Dno" name=3D"format-detection"/>
+<meta name=3D"x-apple-disable-message-reformatting"/>
+<title>AlphaSignal</title>
+<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPer=
+Inch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+<style type=3D"text/css">
+      /* Reset text resizing */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      li:last-child {
+        margin-bottom: 0; /* remove margin from last item */
+      }
+
+      img {
+        border: 0;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+        display: block;
+      }
+
+      .h1 {
+        font-size: 17px !important;
+      }
+
+      .p {
+        font-size: 15px !important;
+      }
+
+      p {
+        margin-top: 10px;
+        padding: 0;
+      }
+
+
+      .menu-bar {
+        text-align: center !important;
+        font-size: 14px !important;
+        line-height: 20px !important;
+      }
+
+      .menu-bar a {
+        display: inline-block !important;
+        padding: 3px 8px !important;
+      }
+
+      /* Mobile styles */
+      @media only screen and (max-width: 600px) {
+
+        .mobile-hidden {
+          display: none !important;
+          mso-hide: all !important;
+        }
+       =20
+
+        .signal-img-cell {
+          width: 90px !important;
+          padding-left: 10px !important;
+        }
+
+        .signal-img {
+          width: 90px !important;
+          height: 90px !important;
+          min-width: 90px !important;
+          min-height: 90px !important;
+          max-width: 90px !important;
+          max-height: 90px !important;
+        }
+
+        .h1 {
+          font-size: 17px !important;
+          line-height: 22px !important;
+        }
+
+        .p {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .btn {
+          font-size: 12px !important;
+          padding: 7px 16px !important;
+        }
+
+        .ul li {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .menu-bar {
+          text-align: center !important;
+        }
+
+        .menu-bar a {
+          display: inline-block !important;
+          padding: 6px 8px !important;
+        }
+
+        .feedback-box {
+          padding: 20px !important;
+        }
+
+        .feedback-title {
+          font-size: 16px !important;
+          line-height: 22px !important;
+        }
+
+        .feedback-link {
+          font-size: 15px !important;
+          line-height: 20px !important;
+        }
+
+        .feedback-btn {
+          display: block !important;
+          width: 100% !important;
+          margin: 0 0 10px 0 !important;
+          box-sizing: border-box !important;
+          text-align: center !important;
+        }
+
+.feedback-btn-last {
+          margin-bottom: 0 !important;
+        }
+
+        /* "Your Signal" preferences block =E2=80=94 stack columns on mobil=
+e */
+        .ys-col {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          max-width: 100% !important;
+        }
+
+        .ys-divider-cell {
+          display: none !important;
+          mso-hide: all !important;
+        }
+
+    .ys-col-right {
+          padding-top: 18px !important;
+          margin-top: 18px !important;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+    .plan-right { margin-top:18px !important; }
+  }
+</style>
+<style type=3D"text/css">
+      a[x-apple-data-detectors] { color: inherit !important; text-decoratio=
+n: none !important; font-size: inherit !important; font-family: inherit !im=
+portant; font-weight: inherit !important; line-height: inherit !important; =
+}
+      :root { color-scheme: light; supported-color-schemes: light; }
+    </style>
+<!--[if mso]>
+    <style type=3D"text/css">
+      .h1,
+      .p,
+      .btn,
+      .ul li,
+      body, table, td, p, a, span, b, u, li {
+        font-family: Arial, sans-serif !important;
+      }
+      td, p { mso-line-height-rule: exactly; }
+    </style>
+    <![endif]-->
+</head><img src=3D"https://app.alphasignal.ai/o?uid=3DDhS8ajH7NeRZK5Ns&cid=
+=3Dseq_c4cef5afd84ec4e2_e1&mid=3D85cfbd64-fb0a-48d5-98d5-51e91b409186&s=3DA=
+lphaSignal%20will%20never%20be%20the%20same.&t=3D1795538115" width=3D"1" he=
+ight=3D"1" alt=3D"" aria-hidden=3D"true" role=3D"presentation" style=3D"dis=
+play:block;border:0;outline:none;text-decoration:none;opacity:0;"><div styl=
+e=3D"display:none!important;max-height:0;overflow:hidden;mso-hide:all;font-=
+size:1px;line-height:1px;opacity:0;color:transparent;">Introducing the fron=
+t page of AI. The entire industry, tracked in real time.</div>
+<body bgcolor=3D"#ffffff" style=3D"margin:0; padding:0; background-color:#f=
+fffff;">
+<table bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"background-color:#ffffff;" width=3D"100%">
+<tr>
+<td align=3D"center" style=3D"padding:0 10px;">
+<!--[if mso]><table role=3D"presentation" align=3D"center" width=3D"600" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td width=3D"600"><![end=
+if]-->
+<!-- all your inner tables start here -->
+<!-- Hidden Preheader -->
+<div style=3D"display:none !important;font-family:Helvetica, Arial, sans-se=
+rif;font-size:1px;color:#ffffff;line-height:1px;
+                  max-height:0px;max-width:0px;overflow:hidden;opacity:0;">
+        =CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=
+=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=
+=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=
+=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0
+      </div>
+<!-- Space above the banner (where the header menu used to sit) -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:0 auto;" width=3D"100%">
+<tr><td height=3D"12" style=3D"height:12px;font-size:0;line-height:0;">=C2=
+=A0</td></tr>
+</table>
+<!-- Header Image -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:0 auto;margin-bottom:0;" width=3D"100%">
+<tr>
+<td style=3D"padding:0;border-bottom:none;">
+<img alt=3D"AlphaSignal" border=3D"0" src=3D"https://alphasignal.ai/image/1=
+795495026979-header-launch.jpg" style=3D"display:block;width:100%;max-width=
+:600px;height:auto;" width=3D"600"/>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:20px auto 0 auto;" width=3D"100%">
+<tr><td bgcolor=3D"#F5F5F5" style=3D"padding:18px 20px 18px 18px;background=
+-color:#F5F5F5;border-left:3px solid #000000;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr><td style=3D"padding:0 0 10px 0;font-family:Helvetica, Arial, sans-seri=
+f;font-size:15px;line-height:20px;font-weight:bold;color:#000000;">TL;DR</t=
+d></tr>
+<tr><td style=3D"padding:4px 0 5px 0;"><table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;color:#868686;" valign=3D"top" width=3D"20">=E2=86=92=
+</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000;" valign=3D"top"><a href=3D"https://app.alphasigna=
+l.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dseq_c4cef5afd84ec4e2_e1&amp;lid=3D1=
+rYoIchdLFxhGpgM4&amp;mid=3D85cfbd64-fb0a-48d5-98d5-51e91b409186" style=3D"c=
+olor:#000000 !important;text-decoration:none;" target=3D"_blank">AlphaSigna=
+l is now a website that keeps track of <b style=3D"text-decoration:underlin=
+e;">the entire AI industry in real time</b>.</a></td>
+</tr></table></td></tr>
+<tr><td style=3D"padding:4px 0 5px 0;"><table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;color:#868686;" valign=3D"top" width=3D"20">=E2=86=92=
+</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000;" valign=3D"top"><a href=3D"https://app.alphasigna=
+l.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dseq_c4cef5afd84ec4e2_e1&amp;lid=3D1=
+84UaOduH195m9SY8&amp;mid=3D85cfbd64-fb0a-48d5-98d5-51e91b409186" style=3D"c=
+olor:#000000 !important;text-decoration:none;" target=3D"_blank">New <b sty=
+le=3D"text-decoration:underline;">Newsletter Pro</b>: a newsletter tailored=
+ to your topics, on your schedule.</a></td>
+</tr></table></td></tr>
+<tr><td style=3D"padding:4px 0 5px 0;"><table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tr>
+<td style=3D"width:20px;font-family:Helvetica, Arial, sans-serif;font-size:=
+14px;line-height:20px;color:#868686;" valign=3D"top" width=3D"20">=E2=86=92=
+</td>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-h=
+eight:20px;color:#000000;" valign=3D"top"><a href=3D"https://app.alphasigna=
+l.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dseq_c4cef5afd84ec4e2_e1&amp;lid=3DU=
+hnXdTWPn27nRCrg&amp;mid=3D85cfbd64-fb0a-48d5-98d5-51e91b409186" style=3D"co=
+lor:#000000 !important;text-decoration:none;" target=3D"_blank">Existing re=
+aders get <b style=3D"text-decoration:underline;">20% off</b>, for a few da=
+ys only.</a></td>
+</tr></table></td></tr>
+</table>
+</td></tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;margin:auto;margin-top:10px;background-color:#f=
+fffff;margin-bottom:20px;" width=3D"100%">
+<tr>
+<td style=3D"padding:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"padding:20px 20px 0 20px;">
+<!-- Greeting -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                   font-size:16px;
+                   line-height:24px;
+                   font-weight:bold;
+                   color:#000000;
+                   padding:0 0 10px 0;">
+<p style=3D"margin:0;">Hey Vaultscapes,</p>
+</td>
+</tr>
+</table>
+<!-- Intro text -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tr>
+<td style=3D"font-family:Helvetica, Arial, sans-serif;
+                   font-size:15px;
+                   line-height:22px;
+                   font-weight:400;
+                   color:#000000;">
+<p style=3D"margin:0 0 16px 0;">Lior here, founder of AlphaSignal.</p>
+<p style=3D"margin:0 0 16px 0;">Got some big news.</p>
+<p style=3D"margin:0 0 16px 0;">As you may feel, we're in the middle of the=
+ biggest technological shift of our generation. New models, breakthroughs, =
+and tools change what's possible almost every day.</p>
+<p style=3D"margin:0 0 16px 0;">But keeping up with it all has become nearl=
+y impossible.</p>
+<p style=3D"margin:0 0 16px 0;">In 2025 alone, <u>280,000 papers</u> hit ar=
+Xiv. Add new models, repos, and a constant stream of announcements, and sta=
+ying up to date with AI has become a full-time job.</p>
+<p style=3D"margin:0 0 16px 0;">Except you already have one.</p>
+<p style=3D"margin:0 0 16px 0;">And the information is scattered everywhere=
+. Important breakthroughs get buried, engineers rebuild things that already=
+ exist, and nobody knows what they're missing.</p>
+<p style=3D"margin:0 0 16px 0;">I know the feeling.</p>
+<p style=3D"margin:0 0 16px 0;">Back in 2020, while working at an AI resear=
+ch lab, I was struggling to keep up with research papers myself.</p>
+<p style=3D"margin:0 0 16px 0;">So I started AlphaSignal, a small newslette=
+r to stay up to date with AI.</p>
+<p style=3D"margin:0 0 16px 0;">Then AI exploded, we grew to 350,000 reader=
+s, and became the morning read every dev relies on.</p>
+<p style=3D"margin:0 0 16px 0;">But over the years, you kept asking us for =
+three things:</p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"margin:0 0 6px 0;" width=3D"100%"><tr><td style=3D"font-family:=
+Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10=
+px 0;vertical-align:top;color:#000000;" width=3D"22">1.</td><td style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padd=
+ing:0 0 10px 0;vertical-align:top;color:#000000;"><b>Personalization:</b> I=
+ want only what's relevant to me.</td></tr><tr><td style=3D"font-family:Hel=
+vetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10px =
+0;vertical-align:top;color:#000000;" width=3D"22">2.</td><td style=3D"font-=
+family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding=
+:0 0 10px 0;vertical-align:top;color:#000000;"><b>Speed:</b> I want to know=
+ what's happening right now.</td></tr><tr><td style=3D"font-family:Helvetic=
+a, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10px 0;ver=
+tical-align:top;color:#000000;" width=3D"22">3.</td><td style=3D"font-famil=
+y:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 =
+10px 0;vertical-align:top;color:#000000;"><b>Depth:</b> I want to go beyond=
+ the headlines.</td></tr></table>
+<p style=3D"margin:0 0 16px 0;">So we spent months building something new, =
+and even dropped out of YC to focus on it.</p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr><td height=3D"12" style=3D"height:12px;font-size:0;li=
+ne-height:0;">=C2=A0</td></tr><tr><td height=3D"1" style=3D"height:1px;bord=
+er-top:1px solid #000000;font-size:0;line-height:0;">=C2=A0</td></tr><tr><t=
+d height=3D"22" style=3D"height:22px;font-size:0;line-height:0;">=C2=A0</td=
+></tr></table>
+<p style=3D"margin:0 0 6px 0;font-family:Helvetica, Arial, sans-serif;font-=
+size:22px;line-height:28px;font-weight:bold;color:#000000;">Meet the new Al=
+phaSignal.</p>
+<p style=3D"margin:0 0 18px 0;font-size:17px;line-height:24px;color:#000000=
+;">The front page of AI. Personalized for you.</p>
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dse=
+q_c4cef5afd84ec4e2_e1&amp;lid=3D1rYoIchdLFxhGpgM4&amp;mid=3D85cfbd64-fb0a-4=
+8d5-98d5-51e91b409186" style=3D"display:block;text-decoration:none;margin:0=
+ 0 18px 0;" target=3D"_blank"><img alt=3D"The AlphaSignal front page: the l=
+ive feed and this week's most upvoted stories" src=3D"https://alphasignal.a=
+i/image/1795495026978-launch-front-page-v2.gif" style=3D"display:block;widt=
+h:100%;max-width:560px;height:auto;border:0;" width=3D"560"/></a>
+<p style=3D"margin:0 0 16px 0;">One place for everything happening in AI. W=
+e track over 150 AI companies in real time, alongside new papers, models, o=
+pen-source projects, and announcements, all ranked by relevance and persona=
+lized around what you care about.</p>
+<!-- Week of Nov 13-19, 2026 (tweet_time): sources.twitter_news 169 + twitt=
+er_github 1,171 + twitter_huggingface 218 + twitter_arxiv 167 =3D 1,725 (no=
+n-AI excluded); content.articles published 186. Refresh before send. -->
+<p style=3D"margin:0 0 16px 0;">Last week alone, we tracked 1,725 AI announ=
+cements.</p>
+<p style=3D"margin:0 0 16px 0;">Here's what you can do:</p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"margin:0 0 6px 0;" width=3D"100%"><tr><td style=3D"font-family:=
+Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10=
+px 0;vertical-align:top;color:#000000;" width=3D"22">=E2=86=92</td><td styl=
+e=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22=
+px;padding:0 0 10px 0;vertical-align:top;color:#000000;"><b>Keep up with th=
+e industry.</b> See new papers, models, repos, and announcements as soon as=
+ they're released.</td></tr><tr><td style=3D"font-family:Helvetica, Arial, =
+sans-serif;font-size:15px;line-height:22px;padding:0 0 10px 0;vertical-alig=
+n:top;color:#000000;" width=3D"22">=E2=86=92</td><td style=3D"font-family:H=
+elvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10p=
+x 0;vertical-align:top;color:#000000;"><b>See what matters.</b> Everything =
+is categorized and ranked by relevance, so you don't have to dig through th=
+e noise.</td></tr><tr><td style=3D"font-family:Helvetica, Arial, sans-serif=
+;font-size:15px;line-height:22px;padding:0 0 10px 0;vertical-align:top;colo=
+r:#000000;" width=3D"22">=E2=86=92</td><td style=3D"font-family:Helvetica, =
+Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10px 0;vertic=
+al-align:top;color:#000000;"><b>Make it yours.</b> Follow the topics and co=
+mpanies you care about. Your feed is built around your interests.</td></tr>=
+<tr><td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;li=
+ne-height:22px;padding:0 0 10px 0;vertical-align:top;color:#000000;" width=
+=3D"22">=E2=86=92</td><td style=3D"font-family:Helvetica, Arial, sans-serif=
+;font-size:15px;line-height:22px;padding:0 0 10px 0;vertical-align:top;colo=
+r:#000000;"><b>Import your stack.</b> Connect GitHub, Hugging Face, and X t=
+o get recommendations based on what you actually work on.</td></tr></table>
+<p style=3D"margin:0 0 16px 0;">And that's just the website.</p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"margin:4px 0 22px 0;">
+<tr><td bgcolor=3D"#000000" style=3D"font-family:Helvetica, Arial, sans-ser=
+if;font-size:12px;line-height:20px;font-weight:bold;padding:7px 16px;border=
+:1px solid #000000;background-color:#000000;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dse=
+q_c4cef5afd84ec4e2_e1&amp;lid=3DhP8ADRjsJ2OLkaKF&amp;mid=3D85cfbd64-fb0a-48=
+d5-98d5-51e91b409186" style=3D"color:#ffffff !important;text-decoration:non=
+e;display:inline-block;" target=3D"_blank">TRY IT HERE</a>
+</td></tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr><td height=3D"12" style=3D"height:12px;font-size:0;li=
+ne-height:0;">=C2=A0</td></tr><tr><td height=3D"1" style=3D"height:1px;bord=
+er-top:1px solid #000000;font-size:0;line-height:0;">=C2=A0</td></tr><tr><t=
+d height=3D"22" style=3D"height:22px;font-size:0;line-height:0;">=C2=A0</td=
+></tr></table>
+<p style=3D"margin:0 0 12px 0;font-family:Helvetica, Arial, sans-serif;font=
+-size:18px;line-height:24px;font-weight:bold;color:#000000;">We're also lau=
+nching a fully personalized newsletter.</p>
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dse=
+q_c4cef5afd84ec4e2_e1&amp;lid=3D184UaOduH195m9SY8&amp;mid=3D85cfbd64-fb0a-4=
+8d5-98d5-51e91b409186" style=3D"display:block;text-decoration:none;margin:0=
+ 0 18px 0;" target=3D"_blank"><img alt=3D"Pick your topics and companies: L=
+LMs, Security, Development, Claude, OpenAI, Cognition" src=3D"https://alpha=
+signal.ai/image/1795495026980-newsletter-topics.png" style=3D"display:block=
+;width:100%;max-width:560px;height:auto;border:0;" width=3D"560"/></a>
+<p style=3D"margin:0 0 16px 0;">Until today, all 350,000 subscribers receiv=
+ed the same newsletter.</p>
+<p style=3D"margin:0 0 16px 0;">With Newsletter Pro, no two newsletters are=
+ the same.</p>
+<p style=3D"margin:0 0 16px 0;">You choose the topics, companies, and conte=
+nt you care about.</p>
+<p style=3D"margin:0 0 16px 0;">AlphaSignal learns from what you read and w=
+hat you skip, both in your inbox and on the website. It gives more weight t=
+o your recent interests and adapts as your work changes.</p>
+<p style=3D"margin:0 0 16px 0;">So instead of five articles covering the sa=
+me announcement, you get the few updates that actually deserve your attenti=
+on.</p>
+<p style=3D"margin:0 0 16px 0;"><b>Your newsletter. Your interests. Your sc=
+hedule.</b></p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr><td height=3D"12" style=3D"height:12px;font-size:0;li=
+ne-height:0;">=C2=A0</td></tr><tr><td height=3D"1" style=3D"height:1px;bord=
+er-top:1px solid #000000;font-size:0;line-height:0;">=C2=A0</td></tr><tr><t=
+d height=3D"22" style=3D"height:22px;font-size:0;line-height:0;">=C2=A0</td=
+></tr></table>
+<p style=3D"margin:0 0 12px 0;font-family:Helvetica, Arial, sans-serif;font=
+-size:18px;line-height:24px;font-weight:bold;color:#000000;">Two ways to us=
+e the new AlphaSignal</p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border:1px solid #000000;margin:0 0 16px 0;" width=3D"100%"><tr=
+><td style=3D"padding:18px 20px 2px 20px;font-family:Helvetica, Arial, sans=
+-serif;font-size:15px;line-height:22px;color:#000000;">
+<p style=3D"margin:0 0 8px 0;"><b style=3D"font-size:17px;">Full Access</b>=
+ (Personalized Website + Newsletter)</p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"margin:0 0 6px 0;" width=3D"100%"><tr><td style=3D"font-family:=
+Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10=
+px 0;vertical-align:top;color:#000000;" width=3D"18">=E2=80=A2</td><td styl=
+e=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22=
+px;padding:0 0 10px 0;vertical-align:top;color:#000000;">Real-time coverage=
+ of papers, models, repos, and AI news</td></tr><tr><td style=3D"font-famil=
+y:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 =
+10px 0;vertical-align:top;color:#000000;" width=3D"18">=E2=80=A2</td><td st=
+yle=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:=
+22px;padding:0 0 10px 0;vertical-align:top;color:#000000;">Custom feeds and=
+ advanced subtopics for your specific interests</td></tr><tr><td style=3D"f=
+ont-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;pad=
+ding:0 0 10px 0;vertical-align:top;color:#000000;" width=3D"18">=E2=80=A2</=
+td><td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;lin=
+e-height:22px;padding:0 0 10px 0;vertical-align:top;color:#000000;">Recomme=
+ndations based on your GitHub, Hugging Face, and X activity</td></tr><tr><t=
+d style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-hei=
+ght:22px;padding:0 0 10px 0;vertical-align:top;color:#000000;" width=3D"18"=
+>=E2=80=A2</td><td style=3D"font-family:Helvetica, Arial, sans-serif;font-s=
+ize:15px;line-height:22px;padding:0 0 10px 0;vertical-align:top;color:#0000=
+00;">Personalized Pro newsletter, with no ads</td></tr><tr><td style=3D"fon=
+t-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;paddi=
+ng:0 0 10px 0;vertical-align:top;color:#000000;" width=3D"18">=E2=80=A2</td=
+><td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-=
+height:22px;padding:0 0 10px 0;vertical-align:top;color:#000000;">$500+ in =
+credits from ElevenLabs, Wispr Flow, Render, Sentry, Neo4j, and more</td></=
+tr></table>
+</td></tr></table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border:1px solid #000000;margin:0 0 16px 0;" width=3D"100%"><tr=
+><td style=3D"padding:18px 20px 2px 20px;font-family:Helvetica, Arial, sans=
+-serif;font-size:15px;line-height:22px;color:#000000;">
+<p style=3D"margin:0 0 8px 0;"><b style=3D"font-size:17px;">Newsletter Pro<=
+/b> (Personalized Newsletter)</p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"margin:0 0 6px 0;" width=3D"100%"><tr><td style=3D"font-family:=
+Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10=
+px 0;vertical-align:top;color:#000000;" width=3D"18">=E2=80=A2</td><td styl=
+e=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22=
+px;padding:0 0 10px 0;vertical-align:top;color:#000000;">An ad-free newslet=
+ter built around your interests</td></tr><tr><td style=3D"font-family:Helve=
+tica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10px 0;=
+vertical-align:top;color:#000000;" width=3D"18">=E2=80=A2</td><td style=3D"=
+font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;pa=
+dding:0 0 10px 0;vertical-align:top;color:#000000;">Learns from what you re=
+ad and skip, so every issue fits you better</td></tr><tr><td style=3D"font-=
+family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding=
+:0 0 10px 0;vertical-align:top;color:#000000;" width=3D"18">=E2=80=A2</td><=
+td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-he=
+ight:22px;padding:0 0 10px 0;vertical-align:top;color:#000000;">Delivered o=
+n the days you choose</td></tr><tr><td style=3D"font-family:Helvetica, Aria=
+l, sans-serif;font-size:15px;line-height:22px;padding:0 0 10px 0;vertical-a=
+lign:top;color:#000000;" width=3D"18">=E2=80=A2</td><td style=3D"font-famil=
+y:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 =
+10px 0;vertical-align:top;color:#000000;">Stays in sync with the topics and=
+ companies you follow on the website</td></tr></table>
+</td></tr></table>
+<p style=3D"margin:0 0 16px 0;"><b>Both plans are work tools</b>, so <u>you=
+ can expense them through your employer</u>.</p>
+<p style=3D"margin:0 0 16px 0;">Prefer the free newsletter? It's not going =
+anywhere. It'll keep landing in your inbox just like it does today, with th=
+e same issue for every reader.</p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tr><td height=3D"12" style=3D"height:12px;font-size:0;li=
+ne-height:0;">=C2=A0</td></tr><tr><td height=3D"1" style=3D"height:1px;bord=
+er-top:1px solid #000000;font-size:0;line-height:0;">=C2=A0</td></tr><tr><t=
+d height=3D"22" style=3D"height:22px;font-size:0;line-height:0;">=C2=A0</td=
+></tr></table>
+<p style=3D"margin:0 0 12px 0;font-family:Helvetica, Arial, sans-serif;font=
+-size:18px;line-height:24px;font-weight:bold;color:#000000;">One more thing=
+</p>
+<p style=3D"margin:0 0 16px 0;">As a thank-you for being here, we're giving=
+ you <b>20% off</b> your subscription.</p>
+<p style=3D"margin:0 0 16px 0;">Your discount will be applied automatically=
+ when you sign in.</p>
+<p style=3D"margin:0 0 16px 0;">I'd encourage you to start a trial. If it i=
+sn't for you, you can cancel.</p>
+<p style=3D"margin:0 0 8px 0;">Here's how:</p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"margin:0 0 6px 0;" width=3D"100%"><tr><td style=3D"font-family:=
+Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10=
+px 0;vertical-align:top;color:#000000;" width=3D"22">1.</td><td style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padd=
+ing:0 0 10px 0;vertical-align:top;color:#000000;"><a href=3D"https://app.al=
+phasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dseq_c4cef5afd84ec4e2_e1&amp=
+;lid=3DUhnXdTWPn27nRCrg&amp;mid=3D85cfbd64-fb0a-48d5-98d5-51e91b409186" sty=
+le=3D"color:#000000 !important;text-decoration:underline;font-weight:bold;"=
+ target=3D"_blank">Click here to sign in</a>. Your coupon will already be a=
+pplied.</td></tr><tr><td style=3D"font-family:Helvetica, Arial, sans-serif;=
+font-size:15px;line-height:22px;padding:0 0 10px 0;vertical-align:top;color=
+:#000000;" width=3D"22">2.</td><td style=3D"font-family:Helvetica, Arial, s=
+ans-serif;font-size:15px;line-height:22px;padding:0 0 10px 0;vertical-align=
+:top;color:#000000;">Start your trial.</td></tr><tr><td style=3D"font-famil=
+y:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 =
+10px 0;vertical-align:top;color:#000000;" width=3D"22">3.</td><td style=3D"=
+font-family:Helvetica, Arial, sans-serif;font-size:15px;line-height:22px;pa=
+dding:0 0 10px 0;vertical-align:top;color:#000000;">Connect your X, GitHub,=
+ or Hugging Face.</td></tr><tr><td style=3D"font-family:Helvetica, Arial, s=
+ans-serif;font-size:15px;line-height:22px;padding:0 0 10px 0;vertical-align=
+:top;color:#000000;" width=3D"22">4.</td><td style=3D"font-family:Helvetica=
+, Arial, sans-serif;font-size:15px;line-height:22px;padding:0 0 10px 0;vert=
+ical-align:top;color:#000000;">Follow your favorite companies and topics.</=
+td></tr><tr><td style=3D"font-family:Helvetica, Arial, sans-serif;font-size=
+:15px;line-height:22px;padding:0 0 10px 0;vertical-align:top;color:#000000;=
+" width=3D"22">5.</td><td style=3D"font-family:Helvetica, Arial, sans-serif=
+;font-size:15px;line-height:22px;padding:0 0 10px 0;vertical-align:top;colo=
+r:#000000;">Expense it through your employer (<a href=3D"mailto:?subject=3D=
+Can%20I%20expense%20AlphaSignal%20Full%20Access%3F&amp;body=3DHi%20%5BManag=
+er%5D%2C%0D%0A%0D%0AI%27d%20like%20to%20use%20our%20learning%20budget%20for=
+%20AlphaSignal%20Full%20Access.%20It%27s%20a%20daily%20feed%20and%20newslet=
+ter%20that%20tracks%20new%20AI%20models%2C%20papers%2C%20and%20repos%20in%2=
+0the%20areas%20I%20work%20on%2C%20so%20I%20can%20keep%20up%20with%20what%20=
+changes%20and%20use%20it%20in%20my%20work.%0D%0A%0D%0AIt%27s%20%2430%20a%20=
+month.%20I%20can%20start%20with%20a%20free%20trial%2C%20so%20nothing%20is%2=
+0charged%20until%20it%20ends.%0D%0A%0D%0ACan%20you%20approve%20it%3F%0D%0A%=
+0D%0AThanks%2C%0D%0A%5BYour%20name%5D" style=3D"color:#000000 !important;te=
+xt-decoration:underline;" target=3D"_blank">click here</a>).</td></tr><tr><=
+td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15px;line-he=
+ight:22px;padding:0 0 10px 0;vertical-align:top;color:#000000;" width=3D"22=
+">6.</td><td style=3D"font-family:Helvetica, Arial, sans-serif;font-size:15=
+px;line-height:22px;padding:0 0 10px 0;vertical-align:top;color:#000000;">E=
+njoy.</td></tr></table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"margin:4px 0 22px 0;">
+<tr><td bgcolor=3D"#000000" style=3D"font-family:Helvetica, Arial, sans-ser=
+if;font-size:12px;line-height:20px;font-weight:bold;padding:7px 16px;border=
+:1px solid #000000;background-color:#000000;">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dse=
+q_c4cef5afd84ec4e2_e1&amp;lid=3DUhnXdTWPn27nRCrg&amp;mid=3D85cfbd64-fb0a-48=
+d5-98d5-51e91b409186" style=3D"color:#ffffff !important;text-decoration:non=
+e;display:inline-block;" target=3D"_blank">GET STARTED</a>
+</td></tr>
+</table>
+<p style=3D"margin:0 0 16px 0;">Thanks for being part of the journey,</p>
+<p style=3D"margin:0;"><b>Lior</b><br/>Founder, AlphaSignal</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- No divider under the intro (owner, 2026-11-19): just the space it left=
+ -->
+<tr><td style=3D"padding:6px 0 0 0;font-size:0;line-height:0;">=C2=A0</td><=
+/tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Alpha Description -->
+<!-- Mission/privacy copy removed. Marker kept: PRO swaps in the "Your Sign=
+al" block here. -->
+<!-- Work with us -->
+<!-- Footer grid (feedback / legal / advertise / links). The comment above =
+is
+         the anchor PRO uses to insert the "Your Signal" block before the f=
+ooter. -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"max-width:600px;width:100%;margin:30px auto 0 auto;border-colla=
+pse:collapse;background-color:#ffffff;" width=3D"100%">
+<!-- Row 2: legal + unsubscribe -->
+<tr>
+<td align=3D"center" colspan=3D"4" style=3D"border:1px solid #000000;paddin=
+g:22px 16px;font-family:Helvetica, Arial, sans-serif;font-size:14px;line-he=
+ight:20px;color:#000000;">
+          =C2=A92026 AlphaSignal =C2=B7 214 Barton Springs Rd, Austin, USA<=
+br/>
+<a href=3D"https://app.alphasignal.ai/unsubscribe/u/DhS8ajH7NeRZK5Ns?cid=3D=
+seq_c4cef5afd84ec4e2_e1" style=3D"font-family:Helvetica, Arial, sans-serif;=
+font-size:14px;line-height:20px;font-weight:bold;color:#000000 !important;t=
+ext-decoration:none;" target=3D"_blank">Unsubscribe</a>
+</td>
+</tr>
+<!-- Row 4: links (Upgrade only in the free email; Pro readers keep three c=
+olumns) -->
+<tr>
+<td align=3D"center" style=3D"border:1px solid #000000;width:25%;padding:12=
+px 8px;" width=3D"25%">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dse=
+q_c4cef5afd84ec4e2_e1&amp;lid=3D2TahU8q6SXf08HD5&amp;mid=3D85cfbd64-fb0a-48=
+d5-98d5-51e91b409186" style=3D"font-family:Helvetica, Arial, sans-serif;fon=
+t-size:14px;line-height:20px;font-weight:bold;color:#000000 !important;text=
+-decoration:none;" target=3D"_blank">X</a>
+</td>
+<td align=3D"center" style=3D"border:1px solid #000000;width:25%;padding:12=
+px 8px;" width=3D"25%">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dse=
+q_c4cef5afd84ec4e2_e1&amp;lid=3D1kGK8FjX32M6Y6NdX&amp;mid=3D85cfbd64-fb0a-4=
+8d5-98d5-51e91b409186" style=3D"font-family:Helvetica, Arial, sans-serif;fo=
+nt-size:14px;line-height:20px;font-weight:bold;color:#000000 !important;tex=
+t-decoration:none;" target=3D"_blank">Archive</a>
+</td>
+<td align=3D"center" style=3D"border:1px solid #000000;width:25%;padding:12=
+px 8px;" width=3D"25%">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dse=
+q_c4cef5afd84ec4e2_e1&amp;lid=3DBtN4dEJsgXPYvaiF&amp;mid=3D85cfbd64-fb0a-48=
+d5-98d5-51e91b409186" style=3D"font-family:Helvetica, Arial, sans-serif;fon=
+t-size:14px;line-height:20px;font-weight:bold;color:#000000 !important;text=
+-decoration:none;" target=3D"_blank">Sign up</a>
+</td>
+<td align=3D"center" style=3D"border:1px solid #000000;width:25%;padding:12=
+px 8px;" width=3D"25%">
+<a href=3D"https://app.alphasignal.ai/c?uid=3DDhS8ajH7NeRZK5Ns&amp;cid=3Dse=
+q_c4cef5afd84ec4e2_e1&amp;lid=3Dlj35UEw4OfDSrt0s&amp;mid=3D85cfbd64-fb0a-48=
+d5-98d5-51e91b409186" style=3D"font-family:Helvetica, Arial, sans-serif;fon=
+t-size:14px;line-height:20px;font-weight:bold;color:#000000 !important;text=
+-decoration:none;" target=3D"_blank">Upgrade</a>
+</td>
+</tr>
+</table>
+<div style=3D"height:30px;line-height:30px;font-size:0;">=C2=A0</div>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</body></html>
+------=_Part_2531004_467078590.1795538127078--

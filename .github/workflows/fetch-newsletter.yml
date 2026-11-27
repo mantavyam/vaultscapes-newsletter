@@ -11,7 +11,13 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write
+  contents: write   # commit feed data
+  issues: write     # open / comment / close alert issues (scripts/alerts.py)
+
+env:
+  # Every alert issue and every published issue is mirrored to Discord.
+  DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+  GH_TOKEN: ${{ github.token }}
 
 jobs:
   fetch:
@@ -62,3 +68,12 @@ jobs:
             git commit -m "feed: $(date -u +%d-%m-%Y) update"
             git push
           fi
+
+      - name: Report run status (GitHub issue + Discord)
+        # Opens `run-failed` when the job failed for a reason no specific alert
+        # already explained (IMAP login, test gate, crash); closes it after a
+        # clean run.
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+        run: python scripts/alerts.py run-status

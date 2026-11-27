@@ -33,7 +33,8 @@ MAX_INDEX_HEADLINES = 5
 
 
 def publish_issue(payload_json: dict, cleaned_html: str, message_id: str,
-                  date_header: str) -> None:
+                  date_header: str) -> dict:
+    """Write the issue's artifacts; return its index.json entry."""
     dt = issue_date_ist(date_header)
     paths = issue_paths(dt)
     repo_paths = issue_repo_paths(dt)
@@ -88,6 +89,15 @@ def publish_issue(payload_json: dict, cleaned_html: str, message_id: str,
     mark_processed(message_id)
 
     print(f"published {repo_paths['json']} (+html, index.json, latest.json)")
+    return entry
+
+
+def latest_iso_date() -> str | None:
+    """iso_date of the newest published issue, from the manifest."""
+    if not INDEX_FILE.exists():
+        return None
+    issues = json.loads(INDEX_FILE.read_text(encoding="utf-8")).get("issues", [])
+    return issues[0]["iso_date"] if issues else None
 
 
 def mark_processed(message_id: str) -> None:

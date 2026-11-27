@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "26-11-2026",
+  "iso_date": "2026-11-26",
+  "subject": "🔍 NVIDIA Nemotron Parse 2.0: OCR jumps 44%→91%, 2GB RAM",
+  "intro": "Google shipped a 17-guide Gemma 4 fine-tuning hub and regional voices for Gemini, while NVIDIA quietly dropped a sub-1B document parser. Three releases, one pattern: the infra layer is getting polished fast. We're past the \"models are getting smarter\" era. The race now is making them usable by more people, on cheaper hardware, in more languages. Accessibility is the new benchmark.",
+  "read_time": "6 min 0 sec",
+  "summary": [
+    {
+      "category": "Top Model",
+      "headline": "NVIDIA's Nemotron Parse 2.0 Turns Any Scanned Page Into Structured Data",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top Model",
+      "headline": "Maximilian228's Qwen3 125B Squeeze Runs on a 12 GB Consumer GPU",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top Model",
+      "headline": "Compendium Labs' BGE Base En v1.5 GGUF Build Hits 800,000 Downloads",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top Model",
+      "headline": "NVIDIA's Nemotron Parse 2.0 Turns Any Scanned Page Into Structured Data",
+      "likes": 3714,
+      "body": "NVIDIA just dropped Nemotron Parse 2.0 , a small but capable model that turns scanned pages and PDFs into clean, structured data you can actually use. Here's the deal: you feed it a page image, it spits back text with labels, coordinates, and reading order. Think of it like a super-powered scanner that also understands layout. What's new in v2.0: The model runs on a single A100 GPU and uses under 2GB of memory. You load it via Hugging Face Transformers, point it at a PNG of your page, and get back Markdown, JSON, CSV, or HTML. This opens up local document pipelines with no per-page API costs. Perfect for building search indexes, feeding RAG systems, or extracting tables into databases. Weights are commercially licensed under OpenMDW 1.1.",
+      "bullets": [
+        "Charts are now supported, it can convert chart visuals into tables",
+        "Handwriting recognition improved dramatically (error rate dropped from 0.97 to 0.34)",
+        "Indic script accuracy jumped from 6% to 72%",
+        "Multilingual OCR score went from 44% to 91%"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795698006217-nw1clb.png",
+      "read_more_url": "https://alphasignal.ai/model/nvidia-s-nemotron-parse-2-0-turns-any-scanned-page-into-structured-data"
+    },
+    {
+      "id": "news-2",
+      "category": "Top Model",
+      "headline": "Maximilian228's Qwen3 125B Squeeze Runs on a 12 GB Consumer GPU",
+      "likes": 3617,
+      "body": "A 125-billion parameter AI model just got squeezed onto a regular gaming GPU. Here is how it works. Normally a model this size needs a server rack. A community contributor figured out how to split the workload: your GPU handles active computation , while the bulk of model weights sit in regular system RAM and get pulled in as needed. Think of it like streaming from RAM instead of loading everything at once. The model is a Mixture-of-Experts (MoE), meaning it only activates a small slice of its 125B parameters per response. That is what makes the RAM split feasible. The tradeoff is real: you are locked into one Windows-only runtime. But running a 125B model on desktop hardware opens up local AI at a scale that was not possible before.",
+      "bullets": [
+        "Minimum setup: 12 GB VRAM + 64 GB RAM, Windows only, NVIDIA driver 580+",
+        "Decodes at 177 tokens per second with 93.6% accuracy vs. the reference model",
+        "More VRAM unlocks longer context, up to 262K tokens on a 32 GB card",
+        "Only runs on Strata, not llama.cpp, vLLM, or Transformers"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795698006053-scjlks.png",
+      "read_more_url": "https://alphasignal.ai/model/maximilian228-s-qwen3-125b-squeeze-runs-on-a-12-gb-consumer-gpu"
+    },
+    {
+      "id": "news-3",
+      "category": "Top Model",
+      "headline": "Compendium Labs' BGE Base En v1.5 GGUF Build Hits 800,000 Downloads",
+      "likes": 3400,
+      "body": "You know how AI apps need to understand text meaning, not just keywords? That's what an embedding model does: it converts text into numbers your app can compare. BGE Base is one of the best English embedding models out there, and now it runs fully local, no Python, no PyTorch. Compendium Labs packaged it into GGUF format , the same format you use for local LLMs, so one runtime handles both your generator and your embedder. It hit 800,000 downloads. Pick your size: Spin it up with llama.cpp or Ollama and hit a local OpenAI-compatible endpoint. Works with LangChain too. Two things to remember: prefix search queries with \"Represent this sentence for searching relevant passages:\", and chunk your text before 512 tokens or it gets cut off.",
+      "bullets": [
+        "Q4_K_M at 66 MB : small enough to bundle inside a desktop app",
+        "Q8_0 at 113 MB: better accuracy, still CPU-friendly",
+        "F16 at 209 MB: near-perfect precision for servers"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795698006301-2yscwv.png",
+      "read_more_url": "https://alphasignal.ai/model/compendium-labs-bge-base-en-v1-5-gguf-build-hits-800-000-downloads"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "University of Catania Beats Gemini 1.5 Pro at Predicting Your Next Touch",
+      "stat": {
+        "type": "likes",
+        "value": 3117
+      },
+      "url": "https://alphasignal.ai/paper/university-of-catania-beats-gemini-1-5-pro-at-predicting-your-next-touch"
+    },
+    {
+      "rank": 2,
+      "headline": "KET-RAG Audit Finds 84% of AI Errors Happen After Retrieval",
+      "stat": {
+        "type": "likes",
+        "value": 3088
+      },
+      "url": "https://alphasignal.ai/paper/ket-rag-audit-finds-84-of-ai-errors-happen-after-retrieval"
+    },
+    {
+      "rank": 3,
+      "headline": "KD-ML Turns Fuzzy Expert Rules Into AI Training Signals Without Equations",
+      "stat": {
+        "type": "likes",
+        "value": 3032
+      },
+      "url": "https://alphasignal.ai/paper/kd-ml-turns-fuzzy-expert-rules-into-ai-training-signals-without-equations"
+    },
+    {
+      "rank": 4,
+      "headline": "Google Builds a Single Gemma 4 Fine-Tuning Hub With 17 Guides",
+      "stat": {
+        "type": "likes",
+        "value": 2606
+      },
+      "url": "https://alphasignal.ai/news/google-builds-a-single-gemma-4-fine-tuning-hub-with-17-guides"
+    },
+    {
+      "rank": 5,
+      "headline": "Video Fine-Tuning Secretly Destroys Image Skills in Qwen2.5-VL",
+      "stat": {
+        "type": "likes",
+        "value": 2491
+      },
+      "url": "https://alphasignal.ai/paper/video-fine-tuning-secretly-destroys-image-skills-in-qwen2-5-vl"
+    }
+  ]
+}

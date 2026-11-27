@@ -1,7 +1,79 @@
 {
-  "updated_at": "2026-11-20T22:06:10Z",
+  "updated_at": "2026-11-27T03:45:03Z",
   "latest_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/latest.json",
   "issues": [
+    {
+      "date": "26-11-2026",
+      "iso_date": "2026-11-26",
+      "type": "digest",
+      "subject": "🔍 NVIDIA Nemotron Parse 2.0: OCR jumps 44%→91%, 2GB RAM",
+      "path": "data/2026/11-November/26-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/26-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/26-11-2026.html",
+      "headlines": [
+        "NVIDIA's Nemotron Parse 2.0 Turns Any Scanned Page Into Structured Data",
+        "Maximilian228's Qwen3 125B Squeeze Runs on a 12 GB Consumer GPU",
+        "Compendium Labs' BGE Base En v1.5 GGUF Build Hits 800,000 Downloads"
+      ]
+    },
+    {
+      "date": "25-11-2026",
+      "iso_date": "2026-11-25",
+      "type": "digest",
+      "subject": "🖥️ Claude Artifacts become desktop apps with one click (beta)",
+      "path": "data/2026/11-November/25-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/25-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/25-11-2026.html",
+      "headlines": [
+        "Anthropic Turns Claude Artifacts Into Real Desktop Apps With One Click",
+        "Anthropic Expands MCP With Skills, Background Tasks, and Direct File Transfers",
+        "OpenAI's GPT-6.2 Designs Real Proteins That Bind Drug Targets in the Lab"
+      ]
+    },
+    {
+      "date": "24-11-2026",
+      "iso_date": "2026-11-24",
+      "type": "digest",
+      "subject": "🔧 Claude Ship auto-reviews PRs, Shirudo patches Linux live",
+      "path": "data/2026/11-November/24-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/24-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/24-11-2026.html",
+      "headlines": [
+        "Anthropic ships Claude Code feature that reviews and fixes your pull requests",
+        "OpenAI and Cisco release open-source tool that lets agents patch Linux systems live",
+        "Z.ai's GLM-5.4 loops transformer layers to code games, 3D shaders, and CAD models"
+      ]
+    },
+    {
+      "date": "23-11-2026",
+      "iso_date": "2026-11-23",
+      "type": "digest",
+      "subject": "🧪 OpenAI MedChemBench: GPT-6 Astra fails drug selection at 50%",
+      "path": "data/2026/11-November/23-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/23-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/23-11-2026.html",
+      "headlines": [
+        "OpenAI releases benchmark measuring how well models find new drug candidates",
+        "OpenAI reveals how model distillation bypasses safety guardrails and how to stop it",
+        "Google Antigravity upgrades its CLI tool to let you fork and explore agent threads mid-task"
+      ]
+    },
+    {
+      "date": "22-11-2026",
+      "iso_date": "2026-11-22",
+      "type": "article",
+      "subject": "🔧 Meta fixes RAG’s huge clustering bottleneck with e-means",
+      "path": "data/2026/11-November/22-11-2026.json",
+      "json_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/22-11-2026.json",
+      "html_url": "https://raw.githubusercontent.com/mantavyam/vaultscapes-newsletter/main/data/2026/11-November/html/22-11-2026.html",
+      "headlines": [
+        "How clustering became a bottleneck for RAG pipelines",
+        "How e-means works",
+        "Where you can use e-means today and where you cannot"
+      ],
+      "title": "RAG gets a 70-year upgrade with Meta’s e-means algorithm",
+      "kicker": "Sunday Deep Dive"
+    },
     {
       "date": "20-11-2026",
       "iso_date": "2026-11-20",

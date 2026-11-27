@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "type": "digest",
+  "date": "24-11-2026",
+  "iso_date": "2026-11-24",
+  "subject": "🔧 Claude Ship auto-reviews PRs, Shirudo patches Linux live",
+  "intro": "AI agents just took over two more jobs humans didn't love anyway: babysitting pull requests and patching live Linux servers. Meanwhile DeepMind's Gemini agents quietly did something wilder: they proved better quantum algorithms exist, up to 290x cheaper, with math no human had to verify. Agents writing code, agents securing infra, agents doing science. The pattern is clear. We're not building tools anymore. We're hiring.",
+  "read_time": "6 min 40 sec",
+  "summary": [
+    {
+      "category": "Top News",
+      "headline": "Anthropic ships Claude Code feature that reviews and fixes your pull requests",
+      "news_id": "news-1"
+    },
+    {
+      "category": "Top News",
+      "headline": "OpenAI and Cisco release open-source tool that lets agents patch Linux systems live",
+      "news_id": "news-2"
+    },
+    {
+      "category": "Top News",
+      "headline": "Z.ai's GLM-5.4 loops transformer layers to code games, 3D shaders, and CAD models",
+      "news_id": "news-3"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "category": "Top News",
+      "headline": "Anthropic ships Claude Code feature that reviews and fixes your pull requests",
+      "likes": 17936,
+      "body": "You open a PR, then spend the next hour context-switching back to fix review comments. That loop is the real productivity killer. Claude Ship is here to break it. It's a set of 3 agents that take your GitHub PR from review all the way to approval, without you babysitting it. To try it: update Claude Code and type /ship. It commits, opens the PR, reviews it, and watches it for up to 7 days. Your branch rules still control what actually merges. On Team and Enterprise, admins can enable it repo-wide so it runs on every PR automatically.",
+      "bullets": [
+        "Code Review reads your diff and flags bugs, already live for everyone.",
+        "PR Steward (beta) watches the PR and pushes fixes for failing CI checks, merge conflicts, and reviewer comments automatically.",
+        "Claude Approvals (beta) reads a policy file you write in your repo and approves routine PRs that pass it, no human needed."
+      ],
+      "image_url": "https://alphasignal.ai/image/1795496697573-v3ya93.png",
+      "read_more_url": "https://claude.com/resources/articles/introducing-claude-ship"
+    },
+    {
+      "id": "news-2",
+      "category": "Top News",
+      "headline": "OpenAI and Cisco release open-source tool that lets agents patch Linux systems live",
+      "likes": 12228,
+      "body": "Every Linux server has a scary window: a vulnerability is found, but the patch isn't ready yet. Your system sits exposed. That's the exact problem Shirudo solves. Built by Cisco and OpenAI, Shirudo is a free, open-source runtime that lets AI agents drop temporary security shields onto a live Linux system , no restart needed. Think of it as a bouncer blocking a specific door while you fix the lock. The magic is eBPF , a Linux feature that runs tiny programs inside the operating system without touching its source code. Shirudo uses those programs as shields that block the exact path an attacker would use. Here's what you can actually do with it: It's on GitHub under a BSD 2-Clause license . It doesn't replace patches. It just keeps the lights on until they ship.",
+      "bullets": [
+        "Let AI agents scan for vulnerable systems and auto-generate shields",
+        "Test shields against real exploits before deploying",
+        "Deploy protections fleet-wide without disrupting running workloads",
+        "Try it locally via a VM quickstart on x86-64 or arm64"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795496736538-ipt3cd.png",
+      "read_more_url": "https://openai.com/index/introducing-shirudo/"
+    },
+    {
+      "id": "news-3",
+      "category": "Top News",
+      "headline": "Z.ai's GLM-5.4 loops transformer layers to code games, 3D shaders, and CAD models",
+      "likes": 11201,
+      "body": "Z.ai just shipped GLM-5.4 , and the most interesting thing about it is how it gets smarter without getting bigger. Normal AI models add more layers to reason better. GLM-5.4 takes a different path: it runs the same 28 layers twice . Think of it like reading a problem, drafting an answer, then re-reading the problem with fresh eyes before finalizing. Same brain, deeper thinking. The result? A 750B-parameter model that Z.ai claims performs like models 3x its size. What you can actually build with it now goes well beyond writing functions: It is live now on the GLM Coding Plan with 50% more weekly quota than the previous version. API access and open weights are coming after safety review.",
+      "bullets": [
+        "Video, games, and 3D shaders using code as the creative tool",
+        "CAD modeling and visual coding with the new built-in vision support",
+        "Long context tasks with a 1 million token context window"
+      ],
+      "image_url": "https://alphasignal.ai/image/1795496780065-i7nxz2.png",
+      "read_more_url": "https://z.ai/blog/glm-5.4"
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "headline": "Anthropic launches Claude plugins with 10,000+ tools across all plans",
+      "stat": {
+        "type": "likes",
+        "value": 6231
+      },
+      "url": "https://claude.ai/plugins"
+    },
+    {
+      "rank": 2,
+      "headline": "DeepMind's Gemini agents discover quantum algorithms up to 290x cheaper, formally verified",
+      "stat": {
+        "type": "likes",
+        "value": 686
+      },
+      "url": "https://arxiv.org/abs/2611.09822"
+    },
+    {
+      "rank": 3,
+      "headline": "Claude and GPT models write self-replicating genomes that spawn evolving offspring",
+      "stat": {
+        "type": "likes",
+        "value": 550
+      },
+      "url": "https://arxiv.org/abs/2611.25839"
+    },
+    {
+      "rank": 4,
+      "headline": "Neon and Jane Street build a Socratic tutor that actually teaches instead of just answering",
+      "stat": {
+        "type": "likes",
+        "value": 4369
+      },
+      "url": "https://github.com/janestreet/agent_skills"
+    },
+    {
+      "rank": 5,
+      "headline": "Anthropic's Claude reverse-engineers a Panasonic AC protocol to control it via microcontroller",
+      "stat": {
+        "type": "likes",
+        "value": 3371
+      },
+      "url": "https://github.com/hugojm/panasonic-rd-bus"
+    }
+  ]
+}
